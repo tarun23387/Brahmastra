@@ -127,6 +127,61 @@ void main() {
     });
   });
 
+  group('सूची-मिलान — ऊपर सिर्फ़ intro, सूचियाँ सारणी में', () {
+    // `question` में दोनों सूचियाँ सादे पाठ में भी रहती हैं ताकि पुरानी APK
+    // में प्रश्न अधूरा न दिखे. नई APK को उन्हें दो बार नहीं छापना चाहिए.
+    Map<String, dynamic> matchRow() => {
+          'subject': 'itihas',
+          'question': 'सूची-I को सूची-II से सुमेलित कीजिए:\nकूट (A, B, C, D):\n'
+              'सूची-I (पुस्तक)\nA. मिरात-ए-सिकन्दरी\nB. बुरहान-ए-माशिर\n'
+              'सूची-II (विषय)\n1. बंगाल का इतिहास\n2. गुजरात विजय',
+          'options': ['2, 1', '1, 2', '2, 2', '1, 1'],
+          'answer': 0,
+          'explanation': 'मिरात-ए-सिकन्दरी गुजरात का इतिहास है।',
+          'year': 2023,
+          'match': {
+            'intro': 'सूची-I को सूची-II से सुमेलित कीजिए:\nकूट (A, B, C, D):',
+            'leftTitle': 'सूची-I (पुस्तक)',
+            'rightTitle': 'सूची-II (विषय)',
+            'left': ['A. मिरात-ए-सिकन्दरी', 'B. बुरहान-ए-माशिर'],
+            'right': ['1. बंगाल का इतिहास', '2. गुजरात विजय'],
+          },
+        };
+
+    test('match पढ़ लिया जाता है', () {
+      final q = Question.fromMap('m1', matchRow());
+      expect(q?.match, isNotNull);
+      expect(q!.match!.left.length, 2);
+      expect(q.match!.rows, 2);
+      expect(q.match!.leftTitle, 'सूची-I (पुस्तक)');
+    });
+
+    test('कैश में जाकर वापस आने पर सारणी बची रहती है', () {
+      final q = Question.fromMap('m2', matchRow());
+      final back = Question.fromMap('m2', q!.toMap());
+      expect(back?.match?.right.last, '2. गुजरात विजय');
+      expect(back?.year, 2023);
+    });
+
+    testWidgets('कार्ड पर सूचियाँ दो बार नहीं छपतीं', (tester) async {
+      await tester.pumpWidget(MaterialApp(
+        home: Scaffold(
+          body: QuestionCard(
+            q: Question.fromMap('m3', matchRow())!,
+            number: 1,
+            total: 1,
+            selected: null,
+            onSelect: (_) {},
+          ),
+        ),
+      ));
+      // सारणी में एक बार — प्रश्न के पाठ में दोबारा नहीं
+      expect(find.text('A. मिरात-ए-सिकन्दरी'), findsOneWidget);
+      expect(find.text('1. बंगाल का इतिहास'), findsOneWidget);
+      expect(find.text('2023'), findsOneWidget);
+    });
+  });
+
   group('Entitlement — हर परीक्षा की अपनी अवधि', () {
     Entitlement make(Map<String, DateTime?> exams, {bool active = true}) =>
         Entitlement(
