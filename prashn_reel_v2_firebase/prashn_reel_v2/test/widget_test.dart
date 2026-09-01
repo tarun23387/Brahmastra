@@ -1,8 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:prashn_reel/auth.dart';
 import 'package:prashn_reel/exams.dart';
 import 'package:prashn_reel/models.dart';
+import 'package:prashn_reel/question_card.dart';
 
 void main() {
   group('Question.fromMap — ख़राब प्रश्न रुकने चाहिए', () {
@@ -49,6 +51,79 @@ void main() {
     test('अनजान विषय ca बन जाता है', () {
       final q = Question.fromMap('t8', good()..['subject'] = 'kuch-bhi');
       expect(q?.subject, 'ca');
+    });
+  });
+
+  group('PYQ का वर्ष — ठप्पा इसी से लगता है', () {
+    Map<String, dynamic> good() => {
+          'subject': 'itihas',
+          'question': 'हाथीगुम्फा अभिलेख किस शासक से जुड़ा है?',
+          'options': ['खारवेल', 'अशोक', 'हर्षवर्धन', 'कनिष्क'],
+          'answer': 0,
+          'explanation': 'उदयगिरि, ओडिशा.',
+        };
+
+    test('वर्ष दिया हो तो पढ़ लेता है', () {
+      final q = Question.fromMap('y1', good()..['year'] = 2018);
+      expect(q?.year, 2018);
+    });
+
+    test('वर्ष टेक्स्ट में आए तो भी पढ़ लेता है', () {
+      final q = Question.fromMap('y2', good()..['year'] = '2023');
+      expect(q?.year, 2023);
+    });
+
+    // पुराने कैश और बिना-वर्ष वाले प्रश्नों का रास्ता — प्रश्न बनना चाहिए,
+    // बस ठप्पा नहीं दिखेगा.
+    test('वर्ष न हो तो प्रश्न फिर भी बनता है', () {
+      final q = Question.fromMap('y3', good());
+      expect(q, isNotNull);
+      expect(q!.year, isNull);
+    });
+
+    test('बेतुका वर्ष चुपचाप गिर जाता है, प्रश्न नहीं रुकता', () {
+      for (final bad in [1800, 3000, 'कुछ भी', '']) {
+        final q = Question.fromMap('y4', good()..['year'] = bad);
+        expect(q, isNotNull, reason: 'year=$bad पर प्रश्न रुकना नहीं चाहिए');
+        expect(q!.year, isNull, reason: 'year=$bad स्वीकार नहीं होना चाहिए');
+      }
+    });
+
+    // कैश यही रास्ता लेता है — toMap से लिखा, fromMap से पढ़ा.
+    test('कैश में जाकर वापस आने पर वर्ष बचा रहता है', () {
+      final q = Question.fromMap('y5', good()..['year'] = 2014);
+      final back = Question.fromMap('y5', q!.toMap());
+      expect(back?.year, 2014);
+    });
+
+    test('वर्ष न हो तो toMap में फ़ील्ड जाती ही नहीं', () {
+      final q = Question.fromMap('y6', good());
+      expect(q!.toMap().containsKey('year'), isFalse);
+    });
+
+    // कार्ड पर ठप्पा सचमुच छपता है या नहीं — मॉडल तक सही होना काफ़ी नहीं.
+    Widget card(Question q) => MaterialApp(
+          home: Scaffold(
+            body: QuestionCard(
+              q: q,
+              number: 1,
+              total: 1,
+              selected: null,
+              onSelect: (_) {},
+            ),
+          ),
+        );
+
+    testWidgets('वर्ष हो तो कार्ड पर ठप्पा दिखता है', (tester) async {
+      await tester.pumpWidget(card(Question.fromMap('y7', good()..['year'] = 2018)!));
+      expect(find.text('2018'), findsOneWidget);
+      expect(find.text('Q.1'), findsOneWidget);
+    });
+
+    testWidgets('वर्ष न हो तो सिर्फ़ Q.N दिखता है', (tester) async {
+      await tester.pumpWidget(card(Question.fromMap('y8', good())!));
+      expect(find.text('Q.1'), findsOneWidget);
+      expect(find.textContaining(RegExp(r'^\d{4}$')), findsNothing);
     });
   });
 

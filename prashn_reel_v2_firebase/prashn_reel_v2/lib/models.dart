@@ -72,6 +72,10 @@ class Question {
   /// सिर्फ़ सूची-मिलान वाले प्रश्नों में — बाक़ी में null.
   final MatchTable? match;
 
+  /// किस वर्ष की परीक्षा में यह प्रश्न आया था — सिर्फ़ PYQ में, बाक़ी में null.
+  /// कार्ड पर "2023" का ठप्पा इसी से लगता है.
+  final int? year;
+
   const Question({
     required this.id,
     required this.subject,
@@ -80,6 +84,7 @@ class Question {
     required this.answer,
     required this.explanation,
     this.match,
+    this.year,
   });
 
   static Question? fromMap(String id, Map<String, dynamic> m) {
@@ -105,7 +110,16 @@ class Question {
       answer: answer,
       explanation: '${m['explanation'] ?? ''}'.trim(),
       match: MatchTable.fromMap(m['match']),
+      year: _year(m['year']),
     );
+  }
+
+  /// बेतुका वर्ष चुपचाप गिरा देते हैं — ठप्पा न दिखना, ग़लत ठप्पा दिखने से
+  /// बेहतर है. पुराने कैश में यह फ़ील्ड होती ही नहीं, वहाँ null आता है.
+  static int? _year(dynamic raw) {
+    final y = raw is int ? raw : int.tryParse('${raw ?? ''}');
+    if (y == null || y < 1900 || y > 2100) return null;
+    return y;
   }
 
   Map<String, dynamic> toMap() => {
@@ -117,6 +131,8 @@ class Question {
         'explanation': explanation,
         // सिर्फ़ मिलान वाले प्रश्नों में — बाक़ी का कैश हल्का रहे
         if (match != null) 'match': match!.toMap(),
+        // वैसे ही सिर्फ़ PYQ में
+        if (year != null) 'year': year,
       };
 }
 
