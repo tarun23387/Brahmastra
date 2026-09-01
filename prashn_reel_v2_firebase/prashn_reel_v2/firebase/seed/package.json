@@ -1,0 +1,11 @@
+{
+  "name": "prashn-reel-seed",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "upload": "node upload.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.5.0"
+  }
+}

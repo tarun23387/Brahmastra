@@ -1,0 +1,1517 @@
+[
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct article: She is ____ honest woman.",
+  "options": [
+   "a",
+   "the",
+   "an",
+   "no article"
+  ],
+  "answer": 2,
+  "explanation": "'Honest' में 'h' मौन है और उच्चारण स्वर से शुरू होता है, इसलिए 'an' लगेगा — लेखन नहीं, उच्चारण देखा जाता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct article: He is ____ university student.",
+  "options": [
+   "a",
+   "an",
+   "the",
+   "no article"
+  ],
+  "answer": 0,
+  "explanation": "'University' का उच्चारण 'yu' से होता है, जो व्यंजन ध्वनि है, इसलिए 'a' लगेगा।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: The Ganga is ____ holy river.",
+  "options": [
+   "no article",
+   "the",
+   "an",
+   "a"
+  ],
+  "answer": 3,
+  "explanation": "'A holy river' में 'holy' का 'h' उच्चरित है, इसलिए 'a' सही है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct preposition: He has been ill ____ Monday.",
+  "options": [
+   "from",
+   "since",
+   "for",
+   "by"
+  ],
+  "answer": 1,
+  "explanation": "'Since' किसी निश्चित समय-बिंदु के लिए और 'for' अवधि के लिए आता है — Monday एक बिंदु है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct preposition: She has been waiting ____ two hours.",
+  "options": [
+   "from",
+   "since",
+   "for",
+   "at"
+  ],
+  "answer": 2,
+  "explanation": "'Two hours' एक अवधि है, इसलिए 'for' सही है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: The book is ____ the table.",
+  "options": [
+   "on",
+   "into",
+   "in",
+   "at"
+  ],
+  "answer": 0,
+  "explanation": "किसी सतह के ऊपर रखी वस्तु के लिए 'on' आता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct preposition: He is good ____ mathematics.",
+  "options": [
+   "in",
+   "at",
+   "on",
+   "with"
+  ],
+  "answer": 1,
+  "explanation": "'Good at' किसी विषय या कौशल में निपुणता दर्शाता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: She is married ____ a doctor.",
+  "options": [
+   "by",
+   "for",
+   "with",
+   "to"
+  ],
+  "answer": 3,
+  "explanation": "अंग्रेज़ी में 'married to' सही प्रयोग है, 'married with' नहीं।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct form: He ____ to school every day.",
+  "options": [
+   "goes",
+   "go",
+   "going",
+   "gone"
+  ],
+  "answer": 0,
+  "explanation": "Simple present में एकवचन तृतीय पुरुष (he/she/it) के साथ क्रिया में 's' या 'es' जुड़ता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct form: They ____ playing cricket now.",
+  "options": [
+   "is",
+   "are",
+   "was",
+   "am"
+  ],
+  "answer": 1,
+  "explanation": "'They' बहुवचन है, इसलिए present continuous में 'are' आएगा।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct form: I ____ my homework yesterday.",
+  "options": [
+   "does",
+   "done",
+   "do",
+   "did"
+  ],
+  "answer": 3,
+  "explanation": "'Yesterday' बीता समय दर्शाता है, इसलिए simple past 'did' सही है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct form: She has ____ her lunch.",
+  "options": [
+   "eat",
+   "ate",
+   "eaten",
+   "eating"
+  ],
+  "answer": 2,
+  "explanation": "Present perfect में 'has/have' के बाद क्रिया का third form (past participle) आता है — eat, ate, eaten।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct form: If it rains, we ____ at home.",
+  "options": [
+   "will stay",
+   "stayed",
+   "would stay",
+   "stay"
+  ],
+  "answer": 0,
+  "explanation": "First conditional में 'if' वाले भाग में present tense और मुख्य भाग में 'will' आता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct verb: Neither of the boys ____ present.",
+  "options": [
+   "were",
+   "was",
+   "are",
+   "have"
+  ],
+  "answer": 1,
+  "explanation": "'Neither of' के बाद एकवचन क्रिया आती है, इसलिए 'was' सही है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct verb: The news ____ shocking.",
+  "options": [
+   "were",
+   "have",
+   "is",
+   "are"
+  ],
+  "answer": 2,
+  "explanation": "'News' दिखने में बहुवचन है पर व्याकरण में एकवचन माना जाता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct verb: Each of the students ____ a book.",
+  "options": [
+   "were",
+   "are having",
+   "have",
+   "has"
+  ],
+  "answer": 3,
+  "explanation": "'Each of' के बाद हमेशा एकवचन क्रिया आती है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct verb: Ten kilometres ____ a long distance.",
+  "options": [
+   "were",
+   "are",
+   "is",
+   "have"
+  ],
+  "answer": 2,
+  "explanation": "दूरी, समय और धन को एक इकाई माना जाता है, इसलिए एकवचन क्रिया आती है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Change into passive voice: 'He writes a letter.'",
+  "options": [
+   "A letter is written by him.",
+   "A letter was written by him.",
+   "A letter writes by him.",
+   "A letter has written by him."
+  ],
+  "answer": 0,
+  "explanation": "Simple present का passive — is/am/are + past participle।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Change into passive voice: 'She sang a song.'",
+  "options": [
+   "A song has sung by her.",
+   "A song was sung by her.",
+   "A song is sung by her.",
+   "A song were sung by her."
+  ],
+  "answer": 1,
+  "explanation": "Simple past का passive — was/were + past participle।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Change into passive voice: 'They are building a house.'",
+  "options": [
+   "A house has been built by them.",
+   "A house was being built by them.",
+   "A house is built by them.",
+   "A house is being built by them."
+  ],
+  "answer": 3,
+  "explanation": "Present continuous का passive — is/am/are + being + past participle।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Change into indirect speech: He said, 'I am busy.'",
+  "options": [
+   "He says that he was busy.",
+   "He said that he is busy.",
+   "He said that he was busy.",
+   "He said that I was busy."
+  ],
+  "answer": 2,
+  "explanation": "Reporting verb past में हो तो indirect speech में tense एक क़दम पीछे चला जाता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Change into indirect speech: She said to me, 'Please help me.'",
+  "options": [
+   "She requested me to help her.",
+   "She told to help her.",
+   "She ordered me help her.",
+   "She said me to help her."
+  ],
+  "answer": 0,
+  "explanation": "'Please' वाले वाक्य में reporting verb 'requested' होता है और 'to + verb' आता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Which sentence uses the comparative degree correctly?",
+  "options": [
+   "He is most tallest.",
+   "He is more tall than me.",
+   "He is more taller than me.",
+   "He is taller than me."
+  ],
+  "answer": 3,
+  "explanation": "'Taller' पहले से comparative है, इसलिए उसके साथ 'more' नहीं लगता — यह double comparative कहलाता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Which of the following sentences is grammatically correct?",
+  "options": [
+   "One of my friends are a doctor.",
+   "One of my friends is a doctor.",
+   "One of my friend is a doctor.",
+   "One of my friend are doctor."
+  ],
+  "answer": 1,
+  "explanation": "'One of' के बाद बहुवचन संज्ञा (friends) पर क्रिया एकवचन (is) आती है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Pick the sentence with the correct use of since/for.",
+  "options": [
+   "I am living here since five years.",
+   "I have been living here for five years.",
+   "I live here for five years.",
+   "I have been living here since five years."
+  ],
+  "answer": 1,
+  "explanation": "अवधि के साथ 'for' और समय-बिंदु के साथ 'since' आता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Find the error: 'He did not came yesterday.'",
+  "options": [
+   "yesterday",
+   "did not",
+   "came",
+   "no error"
+  ],
+  "answer": 2,
+  "explanation": "'Did' के बाद क्रिया का first form आता है, इसलिए 'came' की जगह 'come' होना चाहिए।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Find the error: 'She is knowing the answer.'",
+  "options": [
+   "no error",
+   "the answer",
+   "She",
+   "is knowing"
+  ],
+  "answer": 3,
+  "explanation": "'Know' एक stative verb है, जिसका continuous रूप नहीं बनता — सही वाक्य 'She knows the answer' है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Find the error: 'The furnitures are new.'",
+  "options": [
+   "furnitures",
+   "are new",
+   "no error",
+   "The"
+  ],
+  "answer": 0,
+  "explanation": "'Furniture' uncountable noun है, इसका बहुवचन नहीं बनता — 'The furniture is new' सही है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Find the error: 'He discussed about the problem.'",
+  "options": [
+   "He",
+   "discussed",
+   "about",
+   "the problem"
+  ],
+  "answer": 2,
+  "explanation": "'Discuss' के बाद 'about' नहीं लगता — 'He discussed the problem' सही है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the synonym of 'BRAVE'.",
+  "options": [
+   "Foolish",
+   "Courageous",
+   "Weak",
+   "Timid"
+  ],
+  "answer": 1,
+  "explanation": "'Brave' और 'courageous' दोनों का अर्थ साहसी है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the synonym of 'HUGE'.",
+  "options": [
+   "Narrow",
+   "Tiny",
+   "Shallow",
+   "Enormous"
+  ],
+  "answer": 3,
+  "explanation": "'Huge' और 'enormous' दोनों बहुत बड़े के अर्थ में आते हैं।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the synonym of 'ANCIENT'.",
+  "options": [
+   "Old",
+   "Modern",
+   "Recent",
+   "Fresh"
+  ],
+  "answer": 0,
+  "explanation": "'Ancient' का अर्थ प्राचीन या पुराना होता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the synonym of 'RAPID'.",
+  "options": [
+   "Heavy",
+   "Slow",
+   "Steady",
+   "Swift"
+  ],
+  "answer": 3,
+  "explanation": "'Rapid' और 'swift' दोनों का अर्थ तेज़ है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the synonym of 'GENEROUS'.",
+  "options": [
+   "Selfish",
+   "Liberal",
+   "Cruel",
+   "Greedy"
+  ],
+  "answer": 1,
+  "explanation": "'Generous' यानी उदार; 'liberal' यहाँ उसी अर्थ में है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the antonym of 'VICTORY'.",
+  "options": [
+   "Defeat",
+   "Triumph",
+   "Success",
+   "Win"
+  ],
+  "answer": 0,
+  "explanation": "'Victory' का विलोम 'defeat' है; बाक़ी तीनों उसके पर्याय हैं।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the antonym of 'ARTIFICIAL'.",
+  "options": [
+   "False",
+   "Fake",
+   "Natural",
+   "Synthetic"
+  ],
+  "answer": 2,
+  "explanation": "'Artificial' यानी कृत्रिम, जिसका विलोम 'natural' है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the antonym of 'ANCIENT'.",
+  "options": [
+   "Antique",
+   "Aged",
+   "Modern",
+   "Old"
+  ],
+  "answer": 2,
+  "explanation": "'Ancient' का विलोम 'modern' है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the antonym of 'PERMANENT'.",
+  "options": [
+   "Fixed",
+   "Stable",
+   "Lasting",
+   "Temporary"
+  ],
+  "answer": 3,
+  "explanation": "'Permanent' यानी स्थायी और 'temporary' यानी अस्थायी।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the antonym of 'HUMBLE'.",
+  "options": [
+   "Simple",
+   "Arrogant",
+   "Gentle",
+   "Modest"
+  ],
+  "answer": 1,
+  "explanation": "'Humble' यानी विनम्र और 'arrogant' यानी घमंडी।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "One word for 'a person who writes books'.",
+  "options": [
+   "Author",
+   "Editor",
+   "Publisher",
+   "Reader"
+  ],
+  "answer": 0,
+  "explanation": "पुस्तक लिखने वाला 'author' कहलाता है; प्रकाशित करने वाला 'publisher'।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "One word for 'a person who cannot read or write'.",
+  "options": [
+   "Innocent",
+   "Illiterate",
+   "Illegal",
+   "Ignorant"
+  ],
+  "answer": 1,
+  "explanation": "पढ़ना-लिखना न जानने वाला 'illiterate' कहलाता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "One word for 'one who loves mankind'.",
+  "options": [
+   "Physician",
+   "Philosopher",
+   "Politician",
+   "Philanthropist"
+  ],
+  "answer": 3,
+  "explanation": "मानव मात्र से प्रेम करने और परोपकार करने वाला 'philanthropist' होता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "One word for 'a place where medicines are prepared and sold'.",
+  "options": [
+   "Library",
+   "Factory",
+   "Pharmacy",
+   "Laboratory"
+  ],
+  "answer": 2,
+  "explanation": "दवाइयाँ बनाने और बेचने की जगह 'pharmacy' कहलाती है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "One word for 'something that cannot be believed'.",
+  "options": [
+   "Incredible",
+   "Incapable",
+   "Invisible",
+   "Inevitable"
+  ],
+  "answer": 0,
+  "explanation": "जिस पर विश्वास न किया जा सके, वह 'incredible' है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "One word for 'a speech made without preparation'.",
+  "options": [
+   "Extempore",
+   "Eloquent",
+   "Epitaph",
+   "Elegy"
+  ],
+  "answer": 0,
+  "explanation": "बिना तैयारी के दिया गया भाषण 'extempore' कहलाता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "One word for 'a person who does not believe in God'.",
+  "options": [
+   "Pessimist",
+   "Optimist",
+   "Atheist",
+   "Theist"
+  ],
+  "answer": 2,
+  "explanation": "ईश्वर में विश्वास न करने वाला 'atheist' और करने वाला 'theist' कहलाता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "What does the idiom 'a piece of cake' mean?",
+  "options": [
+   "Very tasty",
+   "Very difficult",
+   "Very costly",
+   "Very easy"
+  ],
+  "answer": 3,
+  "explanation": "'A piece of cake' का अर्थ है बहुत आसान काम।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "What does the idiom 'to break the ice' mean?",
+  "options": [
+   "To make something cold",
+   "To start a conversation",
+   "To fight",
+   "To finish work"
+  ],
+  "answer": 1,
+  "explanation": "अजनबियों के बीच बातचीत शुरू करने को 'break the ice' कहते हैं।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "What does the idiom 'once in a blue moon' mean?",
+  "options": [
+   "Very rarely",
+   "Very often",
+   "At night",
+   "Never"
+  ],
+  "answer": 0,
+  "explanation": "बहुत कम या कभी-कभार होने वाली बात के लिए यह मुहावरा आता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "What does the idiom 'to let the cat out of the bag' mean?",
+  "options": [
+   "To lose something",
+   "To run away",
+   "To reveal a secret",
+   "To buy a pet"
+  ],
+  "answer": 2,
+  "explanation": "राज़ खोल देने के अर्थ में यह मुहावरा प्रयुक्त होता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "What does the idiom 'to burn the midnight oil' mean?",
+  "options": [
+   "To light a lamp",
+   "To waste money",
+   "To sleep early",
+   "To work late into the night"
+  ],
+  "answer": 3,
+  "explanation": "देर रात तक कड़ी मेहनत करने के अर्थ में यह मुहावरा आता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correctly spelt word.",
+  "options": [
+   "Comittee",
+   "Committee",
+   "Commitee",
+   "Comitee"
+  ],
+  "answer": 1,
+  "explanation": "सही वर्तनी 'Committee' है — दो 'm', दो 't' और दो 'e'।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Which word is spelt correctly?",
+  "options": [
+   "Receeve",
+   "Recieve",
+   "Receive",
+   "Receve"
+  ],
+  "answer": 2,
+  "explanation": "नियम याद रखिए — 'i' before 'e' except after 'c'. इसलिए 'receive' सही है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Pick the word with correct spelling.",
+  "options": [
+   "Occurrance",
+   "Occurrence",
+   "Ocurrence",
+   "Occurence"
+  ],
+  "answer": 1,
+  "explanation": "सही वर्तनी 'Occurrence' है — दो 'c', दो 'r' और अंत में 'ence'।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Identify the correctly spelt word.",
+  "options": [
+   "Necessary",
+   "Neccessary",
+   "Necesary",
+   "Necessery"
+  ],
+  "answer": 0,
+  "explanation": "'Necessary' में एक 'c' और दो 's' आते हैं।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Select the word with the right spelling.",
+  "options": [
+   "Defenitely",
+   "Definately",
+   "Definetely",
+   "Definitely"
+  ],
+  "answer": 3,
+  "explanation": "'Definitely' में 'finite' शब्द छिपा है — यही याद रखने का सहारा है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct plural of 'child'.",
+  "options": [
+   "Childrens",
+   "Children",
+   "Childes",
+   "Childs"
+  ],
+  "answer": 1,
+  "explanation": "'Child' का बहुवचन 'children' है; 'childrens' कोई शब्द नहीं होता।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct plural of 'mouse'.",
+  "options": [
+   "Mice",
+   "Mices",
+   "Mouses",
+   "Mouse"
+  ],
+  "answer": 0,
+  "explanation": "'Mouse' का बहुवचन 'mice' है — यह अनियमित बहुवचन है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct plural of 'leaf'.",
+  "options": [
+   "Leafes",
+   "Leave",
+   "Leaves",
+   "Leafs"
+  ],
+  "answer": 2,
+  "explanation": "'f' या 'fe' पर ख़त्म होने वाले कई शब्दों में वह 'ves' बन जाता है — leaf, leaves।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct plural of 'datum'.",
+  "options": [
+   "Datums",
+   "Datas",
+   "Datae",
+   "Data"
+  ],
+  "answer": 3,
+  "explanation": "'Datum' लातिनी शब्द है, जिसका बहुवचन 'data' होता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: He is the tallest boy ____ the class.",
+  "options": [
+   "in",
+   "among",
+   "at",
+   "of"
+  ],
+  "answer": 0,
+  "explanation": "स्थान या समूह के भीतर तुलना के लिए superlative के साथ 'in' आता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: She is senior ____ me.",
+  "options": [
+   "of",
+   "to",
+   "than",
+   "from"
+  ],
+  "answer": 1,
+  "explanation": "'Senior', 'junior', 'superior', 'inferior' के साथ 'than' नहीं, 'to' आता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: He prefers tea ____ coffee.",
+  "options": [
+   "from",
+   "over",
+   "to",
+   "than"
+  ],
+  "answer": 2,
+  "explanation": "'Prefer' के साथ हमेशा 'to' आता है, 'than' नहीं।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: Hardly had he left ____ it started raining.",
+  "options": [
+   "that",
+   "than",
+   "then",
+   "when"
+  ],
+  "answer": 3,
+  "explanation": "'Hardly … when' और 'no sooner … than' — ये निश्चित जोड़ियाँ हैं।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: No sooner did he arrive ____ the bell rang.",
+  "options": [
+   "than",
+   "then",
+   "when",
+   "that"
+  ],
+  "answer": 0,
+  "explanation": "'No sooner' के साथ हमेशा 'than' आता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct question tag: She is a teacher, ____?",
+  "options": [
+   "doesn't she",
+   "is she",
+   "does she",
+   "isn't she"
+  ],
+  "answer": 3,
+  "explanation": "सकारात्मक वाक्य के साथ नकारात्मक question tag आता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct question tag: He doesn't play cricket, ____?",
+  "options": [
+   "is he",
+   "isn't he",
+   "does he",
+   "doesn't he"
+  ],
+  "answer": 2,
+  "explanation": "नकारात्मक वाक्य के साथ सकारात्मक question tag आता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct word: The teacher gave good ____ to the students.",
+  "options": [
+   "advise",
+   "advice",
+   "advices",
+   "advises"
+  ],
+  "answer": 1,
+  "explanation": "'Advice' संज्ञा है और 'advise' क्रिया; 'advice' uncountable है इसलिए बहुवचन नहीं बनता।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct word: The weather will ____ our plans.",
+  "options": [
+   "affect",
+   "afect",
+   "effect",
+   "effects"
+  ],
+  "answer": 0,
+  "explanation": "'Affect' क्रिया है (प्रभावित करना) और 'effect' संज्ञा (प्रभाव)।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct word: ____ going to the market.",
+  "options": [
+   "Their",
+   "Theirs",
+   "They're",
+   "There"
+  ],
+  "answer": 2,
+  "explanation": "'They're' का अर्थ 'they are' है; 'their' अधिकार दर्शाता है और 'there' स्थान।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct word: The dog wagged ____ tail.",
+  "options": [
+   "it",
+   "its'",
+   "it's",
+   "its"
+  ],
+  "answer": 3,
+  "explanation": "'Its' अधिकारवाचक है और 'it's' का अर्थ 'it is' होता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: Neither Ram ____ Shyam was present.",
+  "options": [
+   "or",
+   "nor",
+   "and",
+   "but"
+  ],
+  "answer": 1,
+  "explanation": "'Neither' के साथ 'nor' और 'either' के साथ 'or' आता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: Not only he came, ____ he also helped us.",
+  "options": [
+   "but",
+   "and",
+   "or",
+   "so"
+  ],
+  "answer": 0,
+  "explanation": "'Not only … but also' एक निश्चित जोड़ी है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: He works hard ____ he may succeed.",
+  "options": [
+   "although",
+   "because",
+   "unless",
+   "so that"
+  ],
+  "answer": 3,
+  "explanation": "उद्देश्य बताने के लिए 'so that' आता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: ____ he is poor, he is honest.",
+  "options": [
+   "Unless",
+   "Because",
+   "Although",
+   "So"
+  ],
+  "answer": 2,
+  "explanation": "विरोधाभास दिखाने के लिए 'although' आता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct modal: You ____ obey your parents.",
+  "options": [
+   "would",
+   "should",
+   "might",
+   "could"
+  ],
+  "answer": 1,
+  "explanation": "कर्तव्य या सलाह के लिए 'should' आता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct modal: ____ I come in, sir?",
+  "options": [
+   "Would",
+   "Shall",
+   "Will",
+   "May"
+  ],
+  "answer": 3,
+  "explanation": "अनुमति माँगने के लिए 'may' का प्रयोग होता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "What is the past participle of 'go'?",
+  "options": [
+   "Going",
+   "Gone",
+   "Went",
+   "Goes"
+  ],
+  "answer": 1,
+  "explanation": "Go, went, gone — तीसरा रूप 'gone' है, जो perfect tense और passive में आता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "What is the past tense of 'begin'?",
+  "options": [
+   "Begin",
+   "Beginned",
+   "Began",
+   "Begun"
+  ],
+  "answer": 2,
+  "explanation": "Begin, began, begun — दूसरा रूप 'began' है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "What is the past participle of 'write'?",
+  "options": [
+   "Written",
+   "Writed",
+   "Writing",
+   "Wrote"
+  ],
+  "answer": 0,
+  "explanation": "Write, wrote, written — तीसरा रूप 'written' है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Identify the noun in: 'Honesty is the best policy.'",
+  "options": [
+   "the",
+   "Honesty",
+   "is",
+   "best"
+  ],
+  "answer": 1,
+  "explanation": "'Honesty' भाववाचक संज्ञा (abstract noun) है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Identify the adjective in: 'She wore a beautiful dress.'",
+  "options": [
+   "beautiful",
+   "wore",
+   "dress",
+   "She"
+  ],
+  "answer": 0,
+  "explanation": "'Beautiful' संज्ञा 'dress' की विशेषता बता रहा है, इसलिए यह विशेषण है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Identify the adverb in: 'He runs quickly.'",
+  "options": [
+   "none",
+   "He",
+   "runs",
+   "quickly"
+  ],
+  "answer": 3,
+  "explanation": "'Quickly' क्रिया 'runs' के बारे में बता रहा है, इसलिए यह क्रिया-विशेषण है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Identify the pronoun in: 'They are my friends.'",
+  "options": [
+   "are",
+   "my",
+   "They",
+   "friends"
+  ],
+  "answer": 2,
+  "explanation": "'They' संज्ञा के स्थान पर आया है, इसलिए यह सर्वनाम है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "What type of noun is 'crowd'?",
+  "options": [
+   "Proper noun",
+   "Collective noun",
+   "Abstract noun",
+   "Material noun"
+  ],
+  "answer": 1,
+  "explanation": "समूह दर्शाने वाली संज्ञा collective noun कहलाती है — crowd, team, army।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "What type of noun is 'Delhi'?",
+  "options": [
+   "Abstract noun",
+   "Common noun",
+   "Collective noun",
+   "Proper noun"
+  ],
+  "answer": 3,
+  "explanation": "किसी विशेष व्यक्ति, स्थान या वस्तु का नाम proper noun होता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct comparative form of 'good'.",
+  "options": [
+   "More good",
+   "Best",
+   "Better",
+   "Gooder"
+  ],
+  "answer": 2,
+  "explanation": "Good, better, best — यह अनियमित तुलना है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct superlative form of 'bad'.",
+  "options": [
+   "Worst",
+   "Badder",
+   "Worse",
+   "Most bad"
+  ],
+  "answer": 0,
+  "explanation": "Bad, worse, worst — 'worst' superlative रूप है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: There is ____ water in the glass.",
+  "options": [
+   "few",
+   "little",
+   "many",
+   "a few"
+  ],
+  "answer": 1,
+  "explanation": "'Water' uncountable है, इसलिए 'little' आएगा; 'few' countable के लिए होता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: I have ____ books in my bag.",
+  "options": [
+   "little",
+   "much",
+   "less",
+   "a few"
+  ],
+  "answer": 3,
+  "explanation": "'Books' गिनने योग्य हैं, इसलिए 'a few' सही है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: How ____ sugar do you need?",
+  "options": [
+   "few",
+   "several",
+   "much",
+   "many"
+  ],
+  "answer": 2,
+  "explanation": "'Sugar' uncountable है, इसलिए 'how much' आएगा।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Which sentence is correct in its use of the verb?",
+  "options": [
+   "I agree with you.",
+   "I am agree with you.",
+   "I agrees with you.",
+   "I am agreeing with you."
+  ],
+  "answer": 0,
+  "explanation": "'Agree' स्वयं क्रिया है, इसलिए उसके साथ 'am' नहीं लगता।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Which sentence is free from unnecessary repetition?",
+  "options": [
+   "He returned home.",
+   "He returned back home.",
+   "He return back home.",
+   "He returns back home."
+  ],
+  "answer": 0,
+  "explanation": "'Return' में ही 'back' का भाव है, इसलिए 'returned back' दोहराव है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Which of these sentences avoids a redundant word?",
+  "options": [
+   "Please repeat it again.",
+   "Please repeat it.",
+   "Please repeat again it.",
+   "Please again repeat it."
+  ],
+  "answer": 1,
+  "explanation": "'Repeat' का अर्थ ही दोहराना है, इसलिए 'again' जोड़ना अनावश्यक दोहराव है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: The sun ____ in the east.",
+  "options": [
+   "rise",
+   "rose",
+   "rising",
+   "rises"
+  ],
+  "answer": 3,
+  "explanation": "सार्वभौमिक सत्य के लिए हमेशा simple present आता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: Water ____ at 100 degrees Celsius.",
+  "options": [
+   "boil",
+   "boiled",
+   "boils",
+   "boiling"
+  ],
+  "answer": 2,
+  "explanation": "वैज्ञानिक तथ्य के लिए simple present का प्रयोग होता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct form: He said he ____ come tomorrow.",
+  "options": [
+   "will",
+   "would",
+   "can",
+   "shall"
+  ],
+  "answer": 1,
+  "explanation": "Indirect speech में 'will' बदलकर 'would' हो जाता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: It has been raining ____ morning.",
+  "options": [
+   "for",
+   "by",
+   "since",
+   "from"
+  ],
+  "answer": 2,
+  "explanation": "'Morning' एक निश्चित समय-बिंदु है, इसलिए 'since' आएगा।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct word: He is the ____ of the two brothers.",
+  "options": [
+   "oldest",
+   "older",
+   "eldest",
+   "elder"
+  ],
+  "answer": 3,
+  "explanation": "दो में तुलना पर comparative आता है, और परिवार के भीतर 'elder' का प्रयोग होता है।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Fill in the blank: She said, 'I will go tomorrow.' — In indirect speech, 'tomorrow' becomes ____.",
+  "options": [
+   "the next day",
+   "yesterday",
+   "that day",
+   "today"
+  ],
+  "answer": 0,
+  "explanation": "Indirect speech में tomorrow → the next day, today → that day, yesterday → the previous day।"
+ },
+ {
+  "subject": "english",
+  "exams": [
+   "pet"
+  ],
+  "question": "Choose the correct preposition: The train is ____ time.",
+  "options": [
+   "at",
+   "on",
+   "by",
+   "in"
+  ],
+  "answer": 1,
+  "explanation": "'On time' यानी ठीक समय पर; 'in time' का अर्थ है समय रहते।"
+ }
+]

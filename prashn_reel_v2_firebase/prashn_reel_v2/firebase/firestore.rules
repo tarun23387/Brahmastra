@@ -1,0 +1,101 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function userPath() {
+      return /databases/$(database)/documents/users/$(request.auth.uid);
+    }
+
+    // Subscription check runs on the server, so a patched APK cannot bypass it.
+    //
+    // NOTE: per-exam expiry lives inside courses.<exam>.expiresAt, and rules
+    // cannot loop over a map. So the admin also writes `maxExpiresAt` at the
+    // top level - the latest date across all that user's courses - purely so
+    // this rule can check it. Once every course has lapsed, the server itself
+    // stops serving paid questions; the app's per-exam check then only decides
+    // WHICH exam is open, not whether anything is.
+    //
+    // Do NOT use the old `expiresAt` here: that field is gone, and the rule
+    // would deny every paying user.
+    function isSubscribed() {
+      return request.auth != null
+        && exists(userPath())
+        && get(userPath()).data.active == true
+        && get(userPath()).data.maxExpiresAt > request.time;
+    }
+
+    // Free sample questions are readable by anyone (free: true).
+    // Everything else needs an active subscription.
+    //
+    // The client must filter to match this rule:
+    //   free:       .where('free', isEqualTo: true)
+    //   subscriber: full collection, allowed by isSubscribed()
+    match /questions/{questionId} {
+      allow read: if resource.data.free == true || isSubscribed();
+      allow write: if false;
+    }
+
+    // प्रश्नों के बँधे हुए पुलिंदे — वही प्रश्न, कम दस्तावेज़ों में.
+    //
+    // Firestore हर दस्तावेज़ अलग गिनता है, इसलिए 1333 प्रश्नों वाला पेपर
+    // उतारने में 1333 reads लगते थे — Spark की रोज़ की 50,000 वाली हद पर
+    // सिर्फ़ ~37 छात्र. अब वही पेपर 2 pack में है, यानी 2 reads.
+    //
+    // ध्यान: नियम पूरे दस्तावेज़ पर लगते हैं, प्रश्न पर नहीं. इसीलिए
+    // `build-packs.js` मुफ़्त pack सिर्फ़ तभी बनाता है जब उसका हर प्रश्न
+    // मुफ़्त हो — आधा-अधूरा मुफ़्त pack बिना सदस्यता के बँट जाता.
+    match /packs/{packId} {
+      allow read: if resource.data.free == true || isSubscribed();
+      allow write: if false;
+    }
+
+    // पढ़ने वाली सामग्री — अध्याय, प्रश्न नहीं.
+    //
+    // यह `packs` में जानबूझकर नहीं रखी: build-packs.js उस collection में
+    // अपने लिखे के अलावा हर doc मिटा देता है, इसलिए पाठ वहाँ रखते ही
+    // अगली बार प्रश्न बनाने पर उड़ जाता.
+    match /lessons/{lessonId} {
+      allow read: if resource.data.free == true || isSubscribed();
+      allow write: if false;
+    }
+
+    match /maps/{mapId} {
+      allow read: if resource.data.free == true || isSubscribed();
+      allow write: if false;
+    }
+
+    // Each user reads only their own doc. Nobody can write - subscriptions
+    // are created and extended only by the admin panel via the Admin SDK,
+    // so no one can push their own expiry date forward from the app.
+    match /users/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow create, delete: if false;
+
+      // The app may register ITS OWN device, once, and nothing else.
+      //
+      // Only these three fields may change, and only while deviceId is still
+      // empty - so a patched app cannot move its own expiry date, grant itself
+      // another exam, or kick someone else's phone off the subscription.
+      // Freeing a device is an admin action (Admin SDK bypasses these rules).
+      allow update: if request.auth != null
+        && request.auth.uid == uid
+        && !("deviceId" in resource.data)
+        && request.resource.data.diff(resource.data).affectedKeys()
+             .hasOnly(["deviceId", "deviceName", "deviceBoundAt"])
+        && request.resource.data.deviceId is string
+        && request.resource.data.deviceId.size() > 0
+        && request.resource.data.deviceId.size() < 200;
+    }
+
+    // UPI id, phone, price, app version - public read.
+    match /config/{docId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

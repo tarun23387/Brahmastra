@@ -1,0 +1,206 @@
+{
+  "_note": "Yeh file exam/paper taxonomy ka source of truth hai. Iska Dart roop lib/exams.dart me hai — ek badlein to doosri bhi badlein.",
+  "exams": {
+    "uppcs": {
+      "label": "यूपीपीसीएस (प्रारंभिक)",
+      "shortLabel": "UPPCS",
+      "authority": "UPPSC",
+      "negative": "1/3",
+      "papers": [
+        "uppcs-gs1",
+        "uppcs-csat"
+      ]
+    },
+    "roaro": {
+      "label": "समीक्षा अधिकारी / सहायक समीक्षा अधिकारी",
+      "shortLabel": "RO/ARO",
+      "authority": "UPPSC",
+      "negative": "1/3",
+      "papers": [
+        "roaro-gs",
+        "roaro-hindi"
+      ]
+    },
+    "pet": {
+      "label": "यूपी पीईटी",
+      "shortLabel": "PET",
+      "authority": "UPSSSC",
+      "negative": "1/4",
+      "papers": [
+        "pet-main"
+      ]
+    }
+  },
+  "papers": {
+    "uppcs-gs1": {
+      "exam": "uppcs",
+      "label": "सामान्य अध्ययन — प्रथम प्रश्नपत्र",
+      "questions": 150,
+      "marks": 200,
+      "note": "मेरिट सिर्फ़ इसी पेपर से बनती है",
+      "subjects": [
+        "itihas",
+        "polity",
+        "bhugol",
+        "arth",
+        "vigyan",
+        "paryavaran",
+        "up",
+        "ca"
+      ]
+    },
+    "uppcs-csat": {
+      "exam": "uppcs",
+      "label": "सी-सैट — द्वितीय प्रश्नपत्र",
+      "questions": 100,
+      "marks": 200,
+      "note": "क्वालिफाइंग — कम से कम 33% ज़रूरी",
+      "subjects": [
+        "comprehension",
+        "reasoning",
+        "ganit",
+        "hindi",
+        "english"
+      ]
+    },
+    "roaro-gs": {
+      "exam": "roaro",
+      "label": "सामान्य अध्ययन",
+      "questions": 140,
+      "marks": 140,
+      "subjects": [
+        "itihas",
+        "polity",
+        "bhugol",
+        "arth",
+        "vigyan",
+        "paryavaran",
+        "up",
+        "ca"
+      ]
+    },
+    "roaro-hindi": {
+      "exam": "roaro",
+      "label": "सामान्य हिंदी",
+      "questions": 60,
+      "marks": 60,
+      "subjects": [
+        "hindi"
+      ]
+    },
+    "pet-main": {
+      "exam": "pet",
+      "label": "प्रारंभिक अर्हता परीक्षा",
+      "questions": 100,
+      "marks": 100,
+      "note": "15 खंड, कुल 2 घंटे",
+      "subjects": [
+        "itihas",
+        "polity",
+        "bhugol",
+        "arth",
+        "vigyan",
+        "paryavaran",
+        "ca",
+        "up",
+        "hindi",
+        "english",
+        "ganit",
+        "reasoning",
+        "comprehension",
+        "graph"
+      ]
+    }
+  },
+  "_petSections": {
+    "_note": "PET ke 15 khand aur unke ank — content planning ke liye.",
+    "itihas": 5,
+    "swatantrata-andolan": 5,
+    "bhugol": 5,
+    "arth": 5,
+    "polity": 5,
+    "vigyan": 5,
+    "ganit": 5,
+    "hindi": 5,
+    "english": 5,
+    "reasoning": 5,
+    "ca": 10,
+    "up": 10,
+    "comprehension": 10,
+    "graph": 10,
+    "table": 10
+  },
+  "subjects": {
+    "itihas": {
+      "label": "इतिहास",
+      "color": "B4522E"
+    },
+    "polity": {
+      "label": "राजव्यवस्था",
+      "color": "3A55B8"
+    },
+    "bhugol": {
+      "label": "भूगोल",
+      "color": "10786B"
+    },
+    "arth": {
+      "label": "अर्थव्यवस्था",
+      "color": "9A6B12"
+    },
+    "vigyan": {
+      "label": "विज्ञान",
+      "color": "6B3FA0"
+    },
+    "paryavaran": {
+      "label": "पर्यावरण",
+      "color": "2F6B34"
+    },
+    "up": {
+      "label": "यूपी विशेष",
+      "color": "B62B4E"
+    },
+    "ca": {
+      "label": "करेंट अफेयर्स",
+      "color": "C2680C"
+    },
+    "hindi": {
+      "label": "सामान्य हिंदी",
+      "color": "0E6B8C"
+    },
+    "english": {
+      "label": "General English",
+      "color": "1F6F8B",
+      "new": true
+    },
+    "ganit": {
+      "label": "प्रारंभिक गणित",
+      "color": "8A5A2B",
+      "new": true
+    },
+    "reasoning": {
+      "label": "तर्कशक्ति",
+      "color": "5B4B8A",
+      "new": true
+    },
+    "comprehension": {
+      "label": "गद्यांश",
+      "color": "2E6B4F",
+      "new": true
+    },
+    "graph": {
+      "label": "ग्राफ़ व सारणी",
+      "color": "A03E5E",
+      "new": true
+    }
+  },
+  "_contentGaps": {
+    "_note": "Kis paper me kitne prashn hain — Firestore ki asli ginti, 24 अगस्त 2026. Saare paper bhare hue hain.",
+    "uppcs-gs1": "150 / 150 — POORA BHARA. itihas 27, polity 25, bhugol 25, arth 24, vigyan 25, up 24. ca abhi 0 — wo weekly AI pipeline ka kaam hai, purani CA daalna galat hoga.",
+    "uppcs-csat": "100 / 100 — POORA BHARA. hindi 20, comprehension 20, reasoning 25, ganit 25, english 10.",
+    "pet-main": "100 / 100 — POORA BHARA. sarni/graph wale prashn graph subject me hain (uska label hi \"ग्राफ़ व सारणी\" hai) — table naam ka koi alag subject taxonomy me hai hi nahi.",
+    "roaro-gs": "598 — bhara hua.",
+    "roaro-hindi": "61 / 60 — bhara hua.",
+    "warning": "graph/table wale prashn chart ke bina banaye ja sakte hain — sankhyaen prashn me hi likh dijiye (gaanv A — 1200, gaanv B — 1800 …). pet-main ke saare 20 aise prashn isi tarike se bane hain, kisi image ki zaroorat nahi padi.",
+    "retagWarning": "retag.js poore collection par exams badal deta hai, sirf id-prefix se chhaant sakta hai. uppcs-gs1 bharne ke liye subject/paper se chhaantne wala filter chahiye — warna pet aur uppcs-csat ke prashn bhi bigad jayenge."
+  }
+}

@@ -1,0 +1,60 @@
+name: prashn_reel
+description: "ब्रह्मास्त्र — UPPCS, RO/ARO aur PET ke liye reel-style question practice app."
+publish_to: 'none'
+version: 2.0.2+4
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^3.6.0
+  cloud_firestore: ^5.4.4
+  firebase_auth: ^5.3.1
+  shared_preferences: ^2.3.2
+
+  # App Check — Firebase को यक़ीन दिलाता है कि request असली ऐप से आई है.
+  # ध्यान: अभी सिर्फ़ monitoring के लिए है, enforce नहीं (main.dart देखिए).
+  firebase_app_check: ^0.3.1
+
+  # आइकन, फ़ॉन्ट और आवाज़
+  font_awesome_flutter: ^11.0.0
+  flutter_tts: ^4.0.2
+  flutter_animate: ^4.5.0
+
+  # हर प्रश्न पर छोटा साउंड (KBC जैसा गंभीर cue — अपना बनाया, copyright-free)
+  audioplayers: ^6.1.0
+
+  # फ़ोन की पहचान — एक आईडी एक ही फ़ोन में चले
+  device_info_plus: ^10.1.2
+  android_id: ^0.4.0
+
+dev_dependencies:
+  flutter_lints: ^4.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  # लोगो — tools/gen-icons.js से बनता है, हाथ से न बदलें.
+  assets:
+    - assets/images/
+    - assets/sounds/
+
+  # Mukta — देवनागरी के लिए बना फ़ॉन्ट (Ek Type, OFL लाइसेंस).
+  # ऐप में बंडल है ताकि बिना इंटरनेट भी वैसा ही दिखे.
+  fonts:
+    - family: Mukta
+      fonts:
+        - asset: assets/fonts/Mukta-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Mukta-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Mukta-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Mukta-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Mukta-ExtraBold.ttf
+          weight: 800

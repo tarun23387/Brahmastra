@@ -1,0 +1,60 @@
+# ═════════ राज़ की फ़ाइलें — ये कभी git में नहीं जानी चाहिए ═════════
+#
+# इनमें से कोई एक भी सार्वजनिक हुई तो:
+#   • .jks + key.properties  → कोई और आपके ऐप का update चढ़ा सकता है
+#   • serviceAccountKey.json → पूरे Firestore तक admin पहुँच
+#
+# अंदर prashn_reel_v2/.gitignore में भी यही नियम हैं; यह उसके ऊपर की
+# परत है, क्योंकि repo की जड़ यहाँ है.
+
+keystore-backup-*/
+*.jks
+*.keystore
+key.properties
+serviceAccountKey.json
+google-services.json
+GoogleService-Info.plist
+.env
+.env.*
+*.7z
+
+# चैट के पुराने लॉग — इनमें पासवर्ड और कुंजियाँ लिखी हुई मिलीं
+_chat-backup/
+
+# ═════════ बड़ी बनी-बनाई फ़ाइलें ═════════
+# ये कोड नहीं हैं, कोड से बनती हैं. git में रखने से repo भारी होता है
+# और हर build पर पूरा इतिहास बढ़ता जाता है.
+
+*.apk
+*.aab
+/dist/
+**/dist/
+build/
+**/build/
+.dart_tool/
+**/.dart_tool/
+
+# ═════════ Node ═════════
+node_modules/
+**/node_modules/
+npm-debug.log*
+package-lock.json
+
+# ═════════ औज़ारों का कचरा ═════════
+.gradle/
+**/.gradle/
+.kotlin/
+**/.kotlin/
+local.properties
+**/local.properties
+*.iml
+.idea/
+.vscode/
+captures/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+
+# ═════════ Windows ═════════
+Thumbs.db
+desktop.ini

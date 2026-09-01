@@ -1,0 +1,83 @@
+name: Build Android release
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      # NOTE: yahan `flutter create` NAHI chalta. android/ folder ab git me
+      # track hota hai — usme package name aur signing config rehti hai.
+      # `flutter create` use dobara bana kar sab mita dega.
+
+      - name: Firebase config likhein
+        env:
+          GS_JSON: ${{ secrets.GOOGLE_SERVICES_JSON }}
+        run: |
+          if [ -z "$GS_JSON" ]; then
+            echo "::error::GOOGLE_SERVICES_JSON secret set nahi hai."
+            echo "::error::google-services plugin bina iske build fail kar dega."
+            echo "::error::Banane ke liye:  base64 -w0 google-services.json"
+            exit 1
+          fi
+          echo "$GS_JSON" | base64 -d > android/app/google-services.json
+          # package name match hona zaroori hai, warna gradle plugin rukega
+          grep -q "com.brahmastra.app" android/app/google-services.json || {
+            echo "::error::google-services.json me com.brahmastra.app client nahi mila."
+            exit 1
+          }
+
+      - name: Upload key set karein
+        env:
+          KEYSTORE_B64: ${{ secrets.KEYSTORE_BASE64 }}
+          STORE_PASSWORD: ${{ secrets.KEYSTORE_STORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEYSTORE_KEY_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEYSTORE_KEY_ALIAS }}
+        run: |
+          if [ -z "$KEYSTORE_B64" ]; then
+            echo "::warning::KEYSTORE_BASE64 secret nahi hai — build DEBUG key se sign hogi."
+            echo "::warning::Yeh APK Play Store par upload nahi ho sakti."
+            exit 0
+          fi
+          echo "$KEYSTORE_B64" | base64 -d > android/upload-keystore.jks
+          cat > android/key.properties <<EOF
+          storeFile=upload-keystore.jks
+          storePassword=$STORE_PASSWORD
+          keyAlias=$KEY_ALIAS
+          keyPassword=$KEY_PASSWORD
+          EOF
+
+      - run: flutter pub get
+      - run: flutter analyze --no-fatal-infos
+
+      # Play Store ke liye AAB chahiye; APK sirf side-loading/testing ke liye.
+      - run: flutter build appbundle --release
+      - run: flutter build apk --release
+
+      - name: Secrets mitayein
+        if: always()
+        run: rm -f android/key.properties android/upload-keystore.jks android/app/google-services.json
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prashn-reel-release
+          path: |
+            build/app/outputs/bundle/release/app-release.aab
+            build/app/outputs/flutter-apk/app-release.apk
+          if-no-files-found: error

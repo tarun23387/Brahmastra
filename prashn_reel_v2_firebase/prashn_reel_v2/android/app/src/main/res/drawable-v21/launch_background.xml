@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ⚠️  यही फ़ाइल असल में चलती है. Android 5 और उसके बाद वाले हर फ़ोन पर
+     drawable-v21/ वाली drawable/ वाली को दबा देती है — इसलिए दोनों को एक
+     जैसा रखिए, वरना बदलाव किसी को दिखेगा ही नहीं.
+
+     पहले यहाँ ?android:colorBackground था, यानी सादा सफ़ेद — खुलते वक़्त
+     वही सफ़ेद परदा चमकता था. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/splash_bg" />
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/splash_logo" />
+    </item>
+</layer-list>

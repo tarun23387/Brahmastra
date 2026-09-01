@@ -1,0 +1,13 @@
+{
+  "name": "prashn-reel-admin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local admin panel — haath se prashn jodne, badalne aur hatane ke liye.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "firebase-admin": "^12.5.0"
+  }
+}

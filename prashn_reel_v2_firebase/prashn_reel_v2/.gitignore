@@ -1,0 +1,42 @@
+# ───────── Flutter / Dart ─────────
+.dart_tool/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+*.iml
+.idea/
+
+# ───────── Android ─────────
+# NOTE: android/ khud track hota hai — usme package name, signing config
+# aur manifest rehte hain. Sirf build artifacts aur secrets ignore karte hain.
+android/.gradle/
+android/.kotlin/
+android/app/build/
+android/build/
+android/local.properties
+android/captures/
+
+# ───────── Secrets — inhe kabhi commit mat karna ─────────
+android/key.properties
+*.jks
+*.keystore
+serviceAccountKey.json
+google-services.json
+GoogleService-Info.plist
+.env
+.env.*
+
+# ───────── Node ─────────
+node_modules/
+npm-debug.log*
+
+# ───────── Baaki platforms (abhi use nahi ho rahe) ─────────
+ios/
+web/
+windows/
+linux/
+macos/
+
+# बाँटने वाली APK — git में नहीं जाती
+/dist/

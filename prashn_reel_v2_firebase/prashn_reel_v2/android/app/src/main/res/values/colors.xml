@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ऐप खुलते समय की पृष्ठभूमि — lib/models.dart के P.bg जैसी ही क्रीम.
+         दोनों एक जैसी रहें, वरना Flutter का पहला frame आते ही रंग बदलता दिखता है. -->
+    <color name="splash_bg">#F7F3EC</color>
+    <color name="ic_launcher_background">#241A11</color>
+</resources>

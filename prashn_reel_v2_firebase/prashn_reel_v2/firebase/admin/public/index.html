@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>प्रश्न रील — एडमिन</title>
+<style>
+  :root{
+    --bg:#f2f5f9; --card:#fff; --ink:#16202e; --muted:#6b7789;
+    --line:#e1e7ef; --right:#1b8a5a; --wrong:#d1463f; --accent:#3a55b8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Nirmala UI","Noto Sans Devanagari",system-ui,sans-serif;font-size:15px}
+  header{background:var(--card);padding:14px 20px;border-bottom:1px solid var(--line);
+    display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:5}
+  header .bar{width:4px;height:30px;background:var(--accent);border-radius:3px}
+  header h1{font-size:18px;margin:0;font-weight:800}
+  header .sub{font-size:12px;color:var(--muted)}
+  .wrap{max-width:1100px;margin:0 auto;padding:18px 16px 60px;
+    display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:18px}
+  @media(max-width:880px){.wrap{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .card h2{font-size:15px;margin:0 0 14px;font-weight:800}
+  label{display:block;font-size:12.5px;color:var(--muted);margin:12px 0 5px;font-weight:600}
+  input,textarea,select{width:100%;padding:10px 12px;border:1px solid var(--line);
+    border-radius:10px;font:inherit;background:#fff;color:var(--ink)}
+  textarea{resize:vertical;min-height:70px}
+  input:focus,textarea:focus,select:focus{outline:2px solid var(--accent);outline-offset:-1px}
+  .opt{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+  .opt .letter{width:30px;height:30px;flex:none;border-radius:50%;border:1px solid var(--line);
+    display:grid;place-items:center;font-weight:800;font-size:13px;cursor:pointer;
+    background:#fff;user-select:none}
+  .opt.correct .letter{background:var(--right);border-color:var(--right);color:#fff}
+  .opt.correct input{border-color:var(--right)}
+  .hint{font-size:11.5px;color:var(--muted);margin-top:6px}
+  button{font:inherit;font-weight:700;border:0;border-radius:11px;padding:11px 16px;cursor:pointer}
+  .primary{background:var(--accent);color:#fff;width:100%;margin-top:16px}
+  .primary:disabled{opacity:.5;cursor:not-allowed}
+  .ghost{background:#fff;border:1px solid var(--line);color:var(--muted);padding:7px 12px;
+    font-size:12.5px;border-radius:9px}
+  .ghost.danger{color:var(--wrong);border-color:#f3c9c7}
+  .msg{margin-top:12px;padding:10px 12px;border-radius:10px;font-size:13px;display:none}
+  .msg.ok{background:#e6f5ee;color:var(--right);display:block}
+  .msg.err{background:#fdecea;color:var(--wrong);display:block}
+  .msg ul{margin:4px 0 0;padding-inline-start:18px}
+  .toolbar{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+  .toolbar select,.toolbar input{width:auto;flex:1;min-width:140px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+  .chip{font-size:11.5px;padding:4px 10px;border-radius:20px;background:var(--bg);
+    border:1px solid var(--line);color:var(--muted)}
+  .q{border:1px solid var(--line);border-radius:13px;padding:13px;margin-bottom:10px}
+  .q .top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+  .q .txt{font-weight:600;line-height:1.5}
+  .q .meta{font-size:11px;color:var(--muted);margin-top:7px}
+  .q ol{margin:9px 0 0;padding-inline-start:20px;font-size:13.5px;color:#374357}
+  .q ol li.right{color:var(--right);font-weight:700}
+  .q .acts{display:flex;gap:6px;flex:none}
+  .empty{text-align:center;color:var(--muted);padding:34px 10px;font-size:14px}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar"></div>
+  <div>
+    <h1>प्रश्न रील — एडमिन</h1>
+    <div class="sub" id="count">लोड हो रहा है…</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <!-- ───── फ़ॉर्म ───── -->
+  <div class="card">
+    <h2 id="formTitle">नया प्रश्न जोड़ें</h2>
+
+    <label for="subject">विषय</label>
+    <select id="subject"></select>
+
+    <label for="question">प्रश्न</label>
+    <textarea id="question" placeholder="प्रश्न यहाँ लिखें…"></textarea>
+
+    <label>विकल्प — सही वाले पर गोले को दबाएँ</label>
+    <div id="options"></div>
+    <div class="hint">चारों विकल्प भरना ज़रूरी है, और सही उत्तर चुनना ज़रूरी है।</div>
+
+    <label for="explanation">व्याख्या</label>
+    <textarea id="explanation" placeholder="1–2 वाक्य, साथ में एक अतिरिक्त तथ्य…"></textarea>
+
+    <button class="primary" id="save">सेव करें</button>
+    <button class="ghost" id="cancel" style="width:100%;margin-top:8px;display:none">रद्द करें</button>
+    <div class="msg" id="msg"></div>
+  </div>
+
+  <!-- ───── सूची ───── -->
+  <div class="card">
+    <h2>सभी प्रश्न</h2>
+    <div class="toolbar">
+      <select id="filterSubject"><option value="">सभी विषय</option></select>
+      <input id="search" placeholder="खोजें…">
+    </div>
+    <div class="chips" id="chips"></div>
+    <div id="list"><div class="empty">लोड हो रहा है…</div></div>
+  </div>
+</div>
+
+<script>
+const LETTERS = ['अ','ब','स','द'];
+let SUBJECTS = {};
+let editingId = null;
+let cache = {};
+
+const $ = (id) => document.getElementById(id);
+
+/* ───── विकल्पों के खाने बनाएँ ───── */
+function buildOptions() {
+  $('options').innerHTML = LETTERS.map((L, i) =>
+    '<div class="opt" data-i="' + i + '">' +
+      '<div class="letter" title="सही उत्तर चुनें">' + L + '</div>' +
+      '<input type="text" placeholder="विकल्प ' + L + '">' +
+    '</div>').join('');
+
+  $('options').querySelectorAll('.letter').forEach((el) => {
+    el.onclick = () => {
+      $('options').querySelectorAll('.opt').forEach((o) => o.classList.remove('correct'));
+      el.parentElement.classList.add('correct');
+    };
+  });
+}
+
+function readForm() {
+  const opts = [...$('options').querySelectorAll('.opt input')].map((i) => i.value);
+  const correct = $('options').querySelector('.opt.correct');
+  return {
+    subject: $('subject').value,
+    question: $('question').value,
+    options: opts,
+    answer: correct ? Number(correct.dataset.i) : -1,
+    explanation: $('explanation').value,
+  };
+}
+
+function resetForm() {
+  editingId = null;
+  $('formTitle').textContent = 'नया प्रश्न जोड़ें';
+  $('question').value = '';
+  $('explanation').value = '';
+  buildOptions();
+  $('cancel').style.display = 'none';
+  $('msg').className = 'msg';
+}
+
+function show(kind, text, list) {
+  const m = $('msg');
+  m.className = 'msg ' + kind;
+  let html = text;
+  if (list && list.length) {
+    html += '<ul>' + list.map((e) => '<li>' + esc(e) + '</li>').join('') + '</ul>';
+  }
+  m.innerHTML = html;
+}
+
+function esc(s) {
+  return String(s === null || s === undefined ? '' : s).replace(/[&<>"]/g, (c) => {
+    if (c === '&') return '&amp;';
+    if (c === '<') return '&lt;';
+    if (c === '>') return '&gt;';
+    return '&quot;';
+  });
+}
+
+/* ───── सेव ───── */
+$('save').onclick = async () => {
+  const body = readForm();
+  $('save').disabled = true;
+  try {
+    const url = editingId ? '/api/questions/' + editingId : '/api/questions';
+    const res = await fetch(url, {
+      method: editingId ? 'PUT' : 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      show('err', 'सेव नहीं हुआ:', data.errors || [data.error]);
+    } else {
+      show('ok', editingId ? '✅ बदलाव सेव हो गया।' : '✅ जुड़ गया — ' + data.id);
+      resetForm();
+      load();
+    }
+  } catch (e) {
+    show('err', 'सर्वर से जुड़ नहीं पाए: ' + esc(e.message));
+  } finally {
+    $('save').disabled = false;
+  }
+};
+
+$('cancel').onclick = resetForm;
+
+/* ───── सूची ───── */
+async function load() {
+  const params = new URLSearchParams();
+  if ($('filterSubject').value) params.set('subject', $('filterSubject').value);
+  if ($('search').value.trim()) params.set('search', $('search').value.trim());
+
+  const res = await fetch('/api/questions?' + params);
+  const data = await res.json();
+
+  $('count').textContent = 'कुल ' + data.total + ' प्रश्न';
+  $('chips').innerHTML = Object.entries(data.counts)
+    .sort((a, b) => b[1] - a[1])
+    .map(([s, n]) => '<span class="chip">' + esc(SUBJECTS[s] || s) + ' · ' + n + '</span>')
+    .join('');
+
+  if (!data.questions.length) {
+    $('list').innerHTML = '<div class="empty">कोई प्रश्न नहीं मिला।</div>';
+    return;
+  }
+
+  $('list').innerHTML = data.questions.map((q) => {
+    const opts = (q.options || []).map((o, i) =>
+      '<li class="' + (i === q.answer ? 'right' : '') + '">' + esc(o) + '</li>').join('');
+    return '<div class="q">' +
+      '<div class="top">' +
+        '<div class="txt">' + esc(q.question) + '</div>' +
+        '<div class="acts">' +
+          '<button class="ghost" data-edit="' + esc(q.id) + '">बदलें</button>' +
+          '<button class="ghost danger" data-del="' + esc(q.id) + '">हटाएँ</button>' +
+        '</div>' +
+      '</div>' +
+      '<ol>' + opts + '</ol>' +
+      '<div class="meta">' + esc(SUBJECTS[q.subject] || q.subject) + ' · ' +
+        esc(q.id) + ' · ' + esc(q.source || 'seed') + '</div>' +
+    '</div>';
+  }).join('');
+
+  cache = Object.fromEntries(data.questions.map((q) => [q.id, q]));
+
+  $('list').querySelectorAll('[data-edit]').forEach((b) => {
+    b.onclick = () => edit(b.dataset.edit);
+  });
+  $('list').querySelectorAll('[data-del]').forEach((b) => {
+    b.onclick = () => del(b.dataset.del);
+  });
+}
+
+function edit(id) {
+  const q = cache[id];
+  if (!q) return;
+  editingId = id;
+  $('formTitle').textContent = 'प्रश्न बदलें — ' + id;
+  $('subject').value = q.subject;
+  $('question').value = q.question;
+  $('explanation').value = q.explanation || '';
+  buildOptions();
+  const inputs = $('options').querySelectorAll('.opt input');
+  (q.options || []).forEach((o, i) => { if (inputs[i]) inputs[i].value = o; });
+  const opt = $('options').querySelector('.opt[data-i="' + q.answer + '"]');
+  if (opt) opt.classList.add('correct');
+  $('cancel').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+async function del(id) {
+  if (!confirm(id + ' — यह प्रश्न हटा दें?\n\nयह वापस नहीं आएगा।')) return;
+  await fetch('/api/questions/' + id, { method: 'DELETE' });
+  if (editingId === id) resetForm();
+  load();
+}
+
+let t;
+$('search').oninput = () => { clearTimeout(t); t = setTimeout(load, 300); };
+$('filterSubject').onchange = load;
+
+/* ───── शुरुआत ───── */
+(async () => {
+  SUBJECTS = await (await fetch('/api/subjects')).json();
+  const opts = Object.entries(SUBJECTS)
+    .map(([k, v]) => '<option value="' + k + '">' + v + '</option>').join('');
+  $('subject').innerHTML = opts;
+  $('filterSubject').innerHTML = '<option value="">सभी विषय</option>' + opts;
+  buildOptions();
+  load();
+})();
+</script>
+</body>
+</html>
