@@ -79,6 +79,8 @@ function slim(id, d) {
     explanation: String(d.explanation ?? '').trim(),
     // सूची-मिलान वाले प्रश्नों में ही — बाक़ी में यह फ़ील्ड होती ही नहीं
     ...(d.match ? { match: d.match } : {}),
+    // वैसे ही सिर्फ़ PYQ में — कार्ड पर "2023" का ठप्पा इसी से लगता है
+    ...(typeof d.year === 'number' ? { year: d.year } : {}),
   };
 }
 

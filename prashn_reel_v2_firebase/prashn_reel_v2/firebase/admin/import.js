@@ -101,6 +101,19 @@ function check(row, index) {
     }
   }
 
+  // PYQ का वर्ष — वैकल्पिक. दिया हो तो ठीक होना चाहिए, क्योंकि कार्ड पर
+  // "2023" का ठप्पा इसी से लगता है और ग़लत ठप्पा छात्र को भरमाएगा.
+  let year = null;
+  if (row.year != null && `${row.year}`.trim() !== '') {
+    const y = Number.isInteger(row.year) ? row.year : parseInt(row.year, 10);
+    const nextYear = new Date().getFullYear() + 1;
+    if (!Number.isInteger(y) || y < 1900 || y > nextYear) {
+      errors.push(`year 1900 से ${nextYear} के बीच होना चाहिए, मिला "${row.year}"`);
+    } else {
+      year = y;
+    }
+  }
+
   // सूची-मिलान वाला प्रश्न — दोनों सूचियाँ अलग रखी जाती हैं ताकि ऐप उन्हें
   // आमने-सामने सारणी में दिखा सके. `match` दिया हो तो पूरा-सही होना चाहिए,
   // अधूरा हो तो कार्ड में आधी सारणी दिखेगी — इसलिए यहीं रोक देते हैं.
@@ -149,6 +162,7 @@ function check(row, index) {
       papers: papers.sort(),
       difficulty: row.difficulty || 'moderate',
       ...(match ? { match } : {}),
+      ...(year ? { year } : {}),
     },
   };
 }
@@ -307,6 +321,22 @@ async function main() {
     for (const [p, n] of Object.entries(byPaper).sort((a, b) => b[1] - a[1])) {
       console.log(`   ${p.padEnd(14)} ${n}`);
     }
+  }
+
+  // वर्ष-वार — PYQ फ़ाइल चढ़ाते समय यहीं दिख जाता है कि कौन-सा साल
+  // छूट गया या किसी एक साल का बोझ ज़्यादा है.
+  const byYear = {};
+  let noYear = 0;
+  for (const r of [...toAdd, ...toUpdate]) {
+    if (r.value.year) byYear[r.value.year] = (byYear[r.value.year] || 0) + 1;
+    else noYear++;
+  }
+  if (Object.keys(byYear).length) {
+    console.log('\nवर्ष-वार:');
+    for (const [y, n] of Object.entries(byYear).sort((a, b) => a[0] - b[0])) {
+      console.log(`   ${y}  ${n}`);
+    }
+    if (noYear) console.log(`   (${noYear} में वर्ष नहीं — ठप्पा नहीं दिखेगा)`);
   }
 
   if (!COMMIT) {

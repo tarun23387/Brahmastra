@@ -119,27 +119,11 @@ class QuestionCard extends StatelessWidget {
                 ),
                 child: Text.rich(
                   TextSpan(children: [
-                    WidgetSpan(
-                      alignment: PlaceholderAlignment.middle,
-                      child: Padding(
-                        padding: const EdgeInsets.only(right: 8, bottom: 3),
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 7, vertical: 2),
-                          decoration: BoxDecoration(
-                            color: sub.color.withOpacity(0.13),
-                            borderRadius: BorderRadius.circular(7),
-                          ),
-                          child: Text(
-                            'Q.$number',
-                            style: TextStyle(
-                                fontSize: 11.5,
-                                fontWeight: FontWeight.w700,
-                                color: sub.color),
-                          ),
-                        ),
-                      ),
-                    ),
+                    _chip('Q.$number', sub.color),
+                    // PYQ का ठप्पा — "यह सचमुच परीक्षा में आया था" वाली बात
+                    // छात्र को पहली नज़र में दिखनी चाहिए. सोना, ताकि विषय के
+                    // रंग वाले Q.N से अलग पढ़ा जाए.
+                    if (q.year != null) _chip('${q.year}', P.gold),
                     TextSpan(text: _tight(head)),
                   ]),
                   style: TextStyle(
@@ -412,6 +396,27 @@ class QuestionCard extends StatelessWidget {
   /// प्रश्न बनाते समय व्याख्या के अंत में `ट्रिक:` लिखकर हल का तरीक़ा
   /// जोड़ा जाता है. जिन प्रश्नों में यह नहीं है, वहाँ कुछ नहीं बदलता.
   static const String _trickTag = 'ट्रिक:';
+
+  /// प्रश्न के पाठ से पहले लगने वाला छोटा ठप्पा — Q.N और PYQ का वर्ष.
+  /// पाठ के बीच में बैठता है, इसलिए WidgetSpan.
+  static InlineSpan _chip(String text, Color color) => WidgetSpan(
+        alignment: PlaceholderAlignment.middle,
+        child: Padding(
+          padding: const EdgeInsets.only(right: 8, bottom: 3),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+            decoration: BoxDecoration(
+              color: color.withOpacity(0.13),
+              borderRadius: BorderRadius.circular(7),
+            ),
+            child: Text(
+              text,
+              style: TextStyle(
+                  fontSize: 11.5, fontWeight: FontWeight.w700, color: color),
+            ),
+          ),
+        ),
+      );
 
   Widget _explanation(bool correct) {
     final c = correct ? P.right : P.wrong;
