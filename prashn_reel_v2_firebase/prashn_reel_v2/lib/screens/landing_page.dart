@@ -6,6 +6,7 @@ import '../models.dart';
 import '../widgets/study_art.dart';
 import 'exam_picker_page.dart';
 import 'login_page.dart';
+import 'sources_page.dart';
 
 /// पहला पन्ना — दो कार्ड: मुफ़्त नमूना और पूरा एक्सेस.
 class LandingPage extends StatelessWidget {
@@ -67,6 +68,15 @@ class LandingPage extends StatelessWidget {
                   ),
                 ],
               ),
+
+              const SizedBox(height: 14),
+
+              // ── अस्वीकरण की पट्टी ──
+              //
+              // ऊपर, कार्डों से पहले — क्योंकि Play की Misleading Claims नीति
+              // माँगती है कि "यह सरकारी ऐप नहीं है" पहली नज़र में दिखे, किसी
+              // भीतरी पन्ने में छिपा न हो. छूने पर पूरा ब्योरा खुलता है.
+              const _NotGovernmentStrip(),
 
               const SizedBox(height: 18),
 
@@ -190,6 +200,59 @@ class LandingPage extends StatelessWidget {
                   ),
                 ),
               ],
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// "यह सरकारी ऐप नहीं है" — पहले पन्ने की पट्टी.
+///
+/// छूने पर `SourcesPage` खुलता है, जहाँ पूरा अस्वीकरण और हर आयोग की
+/// आधिकारिक वेबसाइट है. दोनों एक ही नीति-रोक के जवाब में बने हैं —
+/// वजह `sources_page.dart` की टिप्पणी में लिखी है.
+class _NotGovernmentStrip extends StatelessWidget {
+  const _NotGovernmentStrip();
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Tint.peach,
+      borderRadius: BorderRadius.circular(11),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(11),
+        onTap: () => Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => const SourcesPage()),
+        ),
+        child: Container(
+          padding: const EdgeInsets.fromLTRB(12, 11, 12, 11),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(11),
+            border: Border.all(color: Tint.peachInk.withOpacity(0.22)),
+          ),
+          child: Row(
+            children: [
+              const FaIcon(FontAwesomeIcons.circleInfo,
+                  size: 13, color: Tint.peachInk),
+              const SizedBox(width: 9),
+              const Expanded(
+                child: Text(
+                  'यह सरकारी ऐप नहीं है। प्रश्न आयोगों के पिछले प्रश्नपत्रों पर '
+                  'आधारित निजी अभ्यास सामग्री हैं।',
+                  style: TextStyle(fontSize: 12, height: 1.4, color: P.ink),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Text('स्रोत',
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w800,
+                      color: Tint.peachInk)),
+              const SizedBox(width: 3),
+              const FaIcon(FontAwesomeIcons.chevronRight,
+                  size: 10, color: Tint.peachInk),
             ],
           ),
         ),

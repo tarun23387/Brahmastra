@@ -5,6 +5,8 @@
       "label": "यूपीपीसीएस (प्रारंभिक)",
       "shortLabel": "UPPCS",
       "authority": "UPPSC",
+      "authorityFullName": "उत्तर प्रदेश लोक सेवा आयोग (UPPSC)",
+      "sourceUrl": "https://uppsc.up.nic.in",
       "negative": "1/3",
       "papers": [
         "uppcs-gs1",
@@ -15,6 +17,8 @@
       "label": "समीक्षा अधिकारी / सहायक समीक्षा अधिकारी",
       "shortLabel": "RO/ARO",
       "authority": "UPPSC",
+      "authorityFullName": "उत्तर प्रदेश लोक सेवा आयोग (UPPSC)",
+      "sourceUrl": "https://uppsc.up.nic.in",
       "negative": "1/3",
       "papers": [
         "roaro-gs",
@@ -25,6 +29,8 @@
       "label": "यूपी पीईटी",
       "shortLabel": "PET",
       "authority": "UPSSSC",
+      "authorityFullName": "उत्तर प्रदेश अधीनस्थ सेवा चयन आयोग (UPSSSC)",
+      "sourceUrl": "https://upsssc.gov.in",
       "negative": "1/4",
       "papers": [
         "pet-main"

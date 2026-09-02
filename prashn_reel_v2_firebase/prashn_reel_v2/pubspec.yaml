@@ -1,7 +1,7 @@
 name: prashn_reel
 description: "ब्रह्मास्त्र — UPPCS, RO/ARO aur PET ke liye reel-style question practice app."
 publish_to: 'none'
-version: 2.0.3+5
+version: 2.0.4+6
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -29,6 +29,11 @@ dependencies:
   # फ़ोन की पहचान — एक आईडी एक ही फ़ोन में चले
   device_info_plus: ^10.1.2
   android_id: ^0.4.0
+
+  # सरकारी स्रोत के लिंक ब्राउज़र में खोलने के लिए — screens/sources_page.dart.
+  # Play की Misleading Claims नीति चाहती है कि स्रोत का लिंक छूने लायक हो,
+  # सिर्फ़ लिखा हुआ पता न हो.
+  url_launcher: ^6.3.0
 
 dev_dependencies:
   flutter_lints: ^4.0.0
