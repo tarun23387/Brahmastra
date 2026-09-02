@@ -14,6 +14,7 @@ import 'models.dart';
 import 'question_card.dart';
 import 'auth.dart';
 import 'repository.dart';
+import 'screens/sources_page.dart';
 import 'sfx.dart';
 import 'speech.dart';
 import 'study_timer.dart';
@@ -957,6 +958,18 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
                 Navigator.pop(sheetCtx);
                 await Sfx.toggle();
                 if (mounted) setState(() {});
+              },
+            ),
+            // प्रश्नों की स्क्रीन से भी स्रोत तक रास्ता चाहिए — बहुत से छात्र
+            // पहला पन्ना एक ही बार देखते हैं और फिर सीधे यहीं रहते हैं.
+            _menuRow(
+              icon: FontAwesomeIcons.circleInfo,
+              label: 'स्रोत और अस्वीकरण',
+              onTap: () {
+                Navigator.pop(sheetCtx);
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => const SourcesPage()),
+                );
               },
             ),
             if (paid)

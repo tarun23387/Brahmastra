@@ -41,5 +41,13 @@
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>
         </intent>
+
+        <!-- सरकारी स्रोत के लिंक ब्राउज़र में खोलने के लिए (url_launcher).
+             Android 11 से यह घोषणा न हो तो canLaunchUrl हमेशा false लौटाता है
+             और लिंक चुपचाप काम करना बंद कर देता है. -->
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="https"/>
+        </intent>
     </queries>
 </manifest>

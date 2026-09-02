@@ -34,6 +34,16 @@ class Exam {
   final String negative;
   final List<String> paperIds;
 
+  /// यह परीक्षा कराने वाले आयोग का पूरा नाम — जैसा उसकी अपनी साइट पर लिखा है.
+  final String authorityFullName;
+
+  /// उसी आयोग की आधिकारिक वेबसाइट.
+  ///
+  /// Play की Misleading Claims नीति के लिए ज़रूरी है: सरकारी जानकारी देने
+  /// वाले ऐप को हर जानकारी का असली सरकारी स्रोत साफ़-साफ़ दिखाना होता है.
+  /// इसे बदलें तो पहले खोलकर देख लीजिए — टूटा लिंक होने पर ऐप फिर अटकेगा.
+  final String sourceUrl;
+
   /// इस परीक्षा के प्रश्न तैयार हैं या नहीं.
   ///
   /// ख़ाली परीक्षा बेचना धोखा होगा — कोई ₹100 देकर देखे कि एक भी प्रश्न
@@ -46,6 +56,8 @@ class Exam {
     required this.label,
     required this.shortLabel,
     required this.authority,
+    required this.authorityFullName,
+    required this.sourceUrl,
     required this.negative,
     required this.paperIds,
     this.ready = false,
@@ -61,6 +73,8 @@ const Map<String, Exam> kExams = {
     label: 'यूपीपीसीएस (प्रारंभिक)',
     shortLabel: 'UPPCS',
     authority: 'UPPSC',
+    authorityFullName: 'उत्तर प्रदेश लोक सेवा आयोग (UPPSC)',
+    sourceUrl: 'https://uppsc.up.nic.in',
     negative: '1/3',
     paperIds: ['uppcs-gs1', 'uppcs-csat'],
   ),
@@ -69,6 +83,8 @@ const Map<String, Exam> kExams = {
     label: 'समीक्षा अधिकारी / सहायक समीक्षा अधिकारी',
     shortLabel: 'RO/ARO',
     authority: 'UPPSC',
+    authorityFullName: 'उत्तर प्रदेश लोक सेवा आयोग (UPPSC)',
+    sourceUrl: 'https://uppsc.up.nic.in',
     negative: '1/3',
     paperIds: ['roaro-gs', 'roaro-hindi'],
     ready: true, // 243 सामान्य अध्ययन + 61 सामान्य हिंदी
@@ -78,6 +94,8 @@ const Map<String, Exam> kExams = {
     label: 'UPPET',
     shortLabel: 'UPPET',
     authority: 'UPSSSC',
+    authorityFullName: 'उत्तर प्रदेश अधीनस्थ सेवा चयन आयोग (UPSSSC)',
+    sourceUrl: 'https://upsssc.gov.in',
     negative: '1/4',
     paperIds: ['pet-main'],
     ready: true, // सभी 15 खंडों पर प्रश्न तैयार — 1300 से ऊपर
