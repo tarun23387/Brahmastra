@@ -362,6 +362,17 @@ class _SubscriptionNote extends StatelessWidget {
             'यूपी पीईटी का पूरा प्रश्नपत्र बिना सदस्यता के भी खुला है।',
             style: TextStyle(fontSize: 12.5, color: P.muted, height: 1.45),
           ),
+          SizedBox(height: 6),
+          // आईडी कैसे मिलेगी, यह पहले लिखा ही नहीं था — छात्र यहीं अटकते थे.
+          //
+          // सिर्फ़ संपर्क का पता है, जानबूझकर. क़ीमत, UPI या "ख़रीदिए" जैसा
+          // कोई इशारा यहाँ मत जोड़िए — Play वाली build में ऐप के बाहर
+          // भुगतान की तरफ़ इशारा करना भी नीति तोड़ता है, सिर्फ़ बटन नहीं.
+          // पूरी वजह build_flags.dart में लिखी है.
+          Text(
+            'आईडी के लिए संपर्क कीजिए — ts23387@gmail.com',
+            style: TextStyle(fontSize: 12.5, color: P.muted, height: 1.45),
+          ),
         ],
       ),
     );
