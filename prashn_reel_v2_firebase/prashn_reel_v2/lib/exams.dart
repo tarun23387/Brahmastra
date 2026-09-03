@@ -77,6 +77,7 @@ const Map<String, Exam> kExams = {
     sourceUrl: 'https://uppsc.up.nic.in',
     negative: '1/3',
     paperIds: ['uppcs-gs1', 'uppcs-csat'],
+    ready: true, // 642 सामान्य अध्ययन + 100 सी-सैट
   ),
   'roaro': Exam(
     id: 'roaro',
