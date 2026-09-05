@@ -35,6 +35,39 @@
       "papers": [
         "pet-main"
       ]
+    },
+    "prog-sr": {
+      "label": "वरिष्ठ प्रोग्रामर / प्रोग्रामर ग्रेड-2",
+      "shortLabel": "वरि. प्रोग्रामर",
+      "authority": "UPPSC",
+      "authorityFullName": "उत्तर प्रदेश लोक सेवा आयोग (UPPSC)",
+      "sourceUrl": "https://uppsc.up.nic.in",
+      "negative": "1/3",
+      "papers": [
+        "prog-sr-main"
+      ]
+    },
+    "mgr-system": {
+      "label": "प्रबंधक (सिस्टम) — औद्योगिक विकास विभाग",
+      "shortLabel": "प्रबंधक (सिस्टम)",
+      "authority": "UPPSC",
+      "authorityFullName": "उत्तर प्रदेश लोक सेवा आयोग (UPPSC)",
+      "sourceUrl": "https://uppsc.up.nic.in",
+      "negative": "1/3",
+      "papers": [
+        "mgr-system-main"
+      ]
+    },
+    "prog-fin": {
+      "label": "प्रोग्रामर ग्रेड-2 — वित्तीय योजना एवं संसाधन निदेशालय",
+      "shortLabel": "प्रोग्रामर (वित्त)",
+      "authority": "UPPSC",
+      "authorityFullName": "उत्तर प्रदेश लोक सेवा आयोग (UPPSC)",
+      "sourceUrl": "https://uppsc.up.nic.in",
+      "negative": "1/3",
+      "papers": [
+        "prog-fin-main"
+      ]
     }
   },
   "papers": {
@@ -116,6 +149,45 @@
         "comprehension",
         "graph"
       ]
+    },
+    "prog-sr-main": {
+      "exam": "prog-sr",
+      "label": "पूरा पेपर",
+      "questions": 85,
+      "marks": 170,
+      "note": "4 खंड, कुल 2 घंटे",
+      "subjects": [
+        "computer",
+        "reasoning",
+        "ganit",
+        "english"
+      ]
+    },
+    "mgr-system-main": {
+      "exam": "mgr-system",
+      "label": "पूरा पेपर",
+      "questions": 110,
+      "marks": 220,
+      "note": "4 खंड, कुल 2 घंटे 30 मिनट",
+      "subjects": [
+        "computer",
+        "reasoning",
+        "ganit",
+        "english"
+      ]
+    },
+    "prog-fin-main": {
+      "exam": "prog-fin",
+      "label": "पूरा पेपर",
+      "questions": 85,
+      "marks": 170,
+      "note": "4 खंड, कुल 2 घंटे",
+      "subjects": [
+        "computer",
+        "reasoning",
+        "ganit",
+        "english"
+      ]
     }
   },
   "_petSections": {
@@ -196,6 +268,11 @@
     "graph": {
       "label": "ग्राफ़ व सारणी",
       "color": "A03E5E",
+      "new": true
+    },
+    "computer": {
+      "label": "कंप्यूटर अनुप्रयोग",
+      "color": "334155",
       "new": true
     }
   },
