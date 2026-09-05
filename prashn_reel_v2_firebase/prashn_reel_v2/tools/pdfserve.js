@@ -45,10 +45,11 @@ if (!DIR || !fs.existsSync(DIR)) {
 
 const PDFJS = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174';
 
-const viewer = (file, from, to, scale) => `<!doctype html><html><head><meta charset="utf-8">
+const viewer = (file, from, to, scale, extra, up) => `<!doctype html><html><head><meta charset="utf-8">
 <style>body{margin:0;background:#fff}canvas{display:block;margin:0 auto 8px;border-bottom:2px solid #c00}</style>
 <script src="${PDFJS}/pdf.min.js"></script></head><body>
 <div id="c"></div><script>
+const ctx0 = (cv) => { const c = cv.getContext("2d"); c.fillStyle = "#fff"; c.fillRect(0, 0, cv.width, cv.height); return c; };
 pdfjsLib.GlobalWorkerOptions.workerSrc='${PDFJS}/pdf.worker.min.js';
 (async () => {
   const pdf = await pdfjsLib.getDocument('/raw/${encodeURIComponent(file)}').promise;
@@ -59,9 +60,17 @@ pdfjsLib.GlobalWorkerOptions.workerSrc='${PDFJS}/pdf.worker.min.js';
     const p = await pdf.getPage(n);
     const vp = p.getViewport({ scale: ${scale} });
     const cv = document.createElement('canvas');
-    cv.width = vp.width; cv.height = vp.height;
+    cv.width = vp.width;
+    // कुछ PDF में पाठ पन्ने की सीमा से नीचे बह जाता है और सामान्य render
+    // में चुपचाप कट जाता है. transform वही रखकर canvas को नीचे से लंबा कर
+    // देने पर वह बहा हुआ हिस्सा भी दिख जाता है — ?extra=1200 से माँगिए.
+    cv.height = vp.height + ${extra} + ${up};
+    const ctx = ctx0(cv);
     document.getElementById('c').appendChild(cv);
-    await p.render({ canvasContext: cv.getContext('2d'), viewport: vp }).promise;
+    // ?up= से पन्ने के ऊपर बहा हुआ हिस्सा दिखता है, ?extra= से नीचे वाला.
+    ctx.translate(0, ${up});
+    await p.render({ canvasContext: ctx, viewport: vp }).promise;
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
   }
   document.body.dataset.done = '1';
 })();
@@ -93,5 +102,7 @@ http.createServer((req, res) => {
     Number(u.searchParams.get('from') || 1),
     Number(u.searchParams.get('to') || 1),
     Number(u.searchParams.get('scale') || 1.7),
+    Number(u.searchParams.get('extra') || 0),
+    Number(u.searchParams.get('up') || 0),
   ));
 }).listen(PORT, () => console.log(`pdf server: http://localhost:${PORT}`));

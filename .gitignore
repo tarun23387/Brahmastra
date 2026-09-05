@@ -58,3 +58,8 @@ captures/
 # ═════════ Windows ═════════
 Thumbs.db
 desktop.ini
+
+# ═════════ Claude Code का स्थानीय config ═════════
+# `.claude/launch.json` में अक्सर इसी मशीन के पूरे पथ होते हैं (जैसे PDF
+# वाला फ़ोल्डर), इसलिए इसे साझा करने का कोई मतलब नहीं.
+.claude/
