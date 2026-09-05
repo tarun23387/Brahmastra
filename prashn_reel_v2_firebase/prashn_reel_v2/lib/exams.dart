@@ -119,6 +119,7 @@ const Map<String, Exam> kExams = {
     sourceUrl: 'https://uppsc.up.nic.in',
     negative: '1/3',
     paperIds: ['prog-sr-main'],
+    ready: true, // 85 प्रश्न — मॉक टेस्ट-1
   ),
   'mgr-system': Exam(
     id: 'mgr-system',
@@ -129,6 +130,7 @@ const Map<String, Exam> kExams = {
     sourceUrl: 'https://uppsc.up.nic.in',
     negative: '1/3',
     paperIds: ['mgr-system-main'],
+    ready: true, // 110 प्रश्न — मॉक टेस्ट-2
   ),
   'prog-fin': Exam(
     id: 'prog-fin',
@@ -139,6 +141,7 @@ const Map<String, Exam> kExams = {
     sourceUrl: 'https://uppsc.up.nic.in',
     negative: '1/3',
     paperIds: ['prog-fin-main'],
+    ready: true, // 85 प्रश्न — मॉक टेस्ट-3
   ),
 };
 

@@ -350,7 +350,7 @@ opt-in किए हुए** रहें — गिनती opt-in की ह�
 
 ### 7.8 अगली build चढ़ानी हो तो
 
-`pubspec.yaml` में versionCode ज़रूर बढ़ाइए (अभी `2.0.5+7` → अगली बार `+8`)।
+`pubspec.yaml` में versionCode ज़रूर बढ़ाइए (अभी `2.1.0+8` → अगली बार `+9`)।
 वही versionCode दोबारा चढ़ाने पर Play साफ़ मना कर देता है।
 
 ---
@@ -363,4 +363,4 @@ flutter build appbundle --release --dart-define=STORE=play
 
 `--dart-define=STORE=play` भूले तो UPI वाला पन्ना AAB में चला जाएगा और
 Play नीति टूटेगी। हर बार `pubspec.yaml` में versionCode भी बढ़ाना है
-(अभी `2.0.5+7`)।
+(अभी `2.1.0+8`)।
