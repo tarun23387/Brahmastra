@@ -101,6 +101,48 @@ const Map<String, Exam> kExams = {
     paperIds: ['pet-main'],
     ready: true, // सभी 15 खंडों पर प्रश्न तैयार — 1300 से ऊपर
   ),
+
+  // ── UPPSC की तकनीकी भर्तियाँ, विज्ञापन A-2/E-1/2026 ──
+  //
+  // ये तीनों अलग-अलग पद हैं, एक परीक्षा के तीन पेपर नहीं. प्रोग्रामर की
+  // तैयारी करने वाले को प्रबंधक (सिस्टम) के प्रश्न परोसना बेमतलब होगा —
+  // प्रश्न-संख्या, समय और पाठ्यक्रम तीनों अलग हैं (परिशिष्ट-3).
+  //
+  // ऊपर वाली तीन परीक्षाओं से इनका मिज़ाज भी अलग है: वहाँ सामान्य अध्ययन
+  // है, यहाँ आधे से ज़्यादा अंक कंप्यूटर के हैं.
+  'prog-sr': Exam(
+    id: 'prog-sr',
+    label: 'वरिष्ठ प्रोग्रामर / प्रोग्रामर ग्रेड-2',
+    shortLabel: 'वरि. प्रोग्रामर',
+    authority: 'UPPSC',
+    authorityFullName: 'उत्तर प्रदेश लोक सेवा आयोग (UPPSC)',
+    sourceUrl: 'https://uppsc.up.nic.in',
+    negative: '1/3',
+    paperIds: ['prog-sr-main'],
+    ready: true, // 85 प्रश्न — मॉक टेस्ट-1
+  ),
+  'mgr-system': Exam(
+    id: 'mgr-system',
+    label: 'प्रबंधक (सिस्टम) — औद्योगिक विकास विभाग',
+    shortLabel: 'प्रबंधक (सिस्टम)',
+    authority: 'UPPSC',
+    authorityFullName: 'उत्तर प्रदेश लोक सेवा आयोग (UPPSC)',
+    sourceUrl: 'https://uppsc.up.nic.in',
+    negative: '1/3',
+    paperIds: ['mgr-system-main'],
+    ready: true, // 110 प्रश्न — मॉक टेस्ट-2
+  ),
+  'prog-fin': Exam(
+    id: 'prog-fin',
+    label: 'प्रोग्रामर ग्रेड-2 — वित्तीय योजना एवं संसाधन निदेशालय',
+    shortLabel: 'प्रोग्रामर (वित्त)',
+    authority: 'UPPSC',
+    authorityFullName: 'उत्तर प्रदेश लोक सेवा आयोग (UPPSC)',
+    sourceUrl: 'https://uppsc.up.nic.in',
+    negative: '1/3',
+    paperIds: ['prog-fin-main'],
+    ready: true, // 85 प्रश्न — मॉक टेस्ट-3
+  ),
 };
 
 const Map<String, Paper> kPapers = {
@@ -150,6 +192,39 @@ const Map<String, Paper> kPapers = {
       'hindi', 'english', 'ganit', 'reasoning', 'comprehension', 'graph',
     ],
   ),
+
+  // तीनों तकनीकी पदों में एक ही पेपर है और चारों खंड उसी में आते हैं.
+  // अंकों का बँटवारा नीचे टिप्पणी में है — UI में सिर्फ़ कुल दिखता है.
+  'prog-sr-main': Paper(
+    id: 'prog-sr-main',
+    examId: 'prog-sr',
+    label: 'पूरा पेपर',
+    questions: 85,
+    marks: 170,
+    note: '4 खंड, कुल 2 घंटे',
+    // कंप्यूटर 100 · तार्किक 30 · गणित 20 · अंग्रेज़ी 20
+    subjects: ['computer', 'reasoning', 'ganit', 'english'],
+  ),
+  'mgr-system-main': Paper(
+    id: 'mgr-system-main',
+    examId: 'mgr-system',
+    label: 'पूरा पेपर',
+    questions: 110,
+    marks: 220,
+    note: '4 खंड, कुल 2 घंटे 30 मिनट',
+    // कंप्यूटर 150 · तार्किक 30 · गणित 20 · अंग्रेज़ी 20
+    subjects: ['computer', 'reasoning', 'ganit', 'english'],
+  ),
+  'prog-fin-main': Paper(
+    id: 'prog-fin-main',
+    examId: 'prog-fin',
+    label: 'पूरा पेपर',
+    questions: 85,
+    marks: 170,
+    note: '4 खंड, कुल 2 घंटे',
+    // कंप्यूटर 100 · तार्किक 30 · गणित 20 · अंग्रेज़ी 20
+    subjects: ['computer', 'reasoning', 'ganit', 'english'],
+  ),
 };
 
 Exam? examOf(String id) => kExams[id];
@@ -184,6 +259,10 @@ const Map<String, List<String>> kSubjectToPapers = {
   'reasoning': ['pet-main', 'uppcs-csat'],
   'comprehension': ['pet-main', 'uppcs-csat'],
   'graph': ['pet-main'],
+
+  // तकनीकी पदों का अपना विषय — इन्हीं तीन पेपरों में जाता है, ऊपर वाली
+  // सामान्य अध्ययन की परीक्षाओं में कहीं नहीं.
+  'computer': ['prog-sr-main', 'mgr-system-main', 'prog-fin-main'],
 };
 
 /// नए रंग — `models.dart` के kSubjects में जो विषय नहीं हैं उनके लिए.

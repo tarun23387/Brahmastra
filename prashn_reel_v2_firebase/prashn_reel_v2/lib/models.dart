@@ -171,6 +171,12 @@ const Map<String, Subject> kSubjects = {
       Subject('गद्यांश', Color(0xFF2E6B4F), Icons.menu_book_outlined),
   'graph':
       Subject('ग्राफ़ व सारणी', Color(0xFFA03E5E), Icons.bar_chart_outlined),
+
+  // UPPSC की तकनीकी भर्तियों (प्रोग्रामर, प्रबंधक-सिस्टम) का सबसे बड़ा
+  // हिस्सा — तीनों पेपरों में आधे से ज़्यादा अंक इसी के हैं. रंग जानबूझकर
+  // फीका स्लेटी रखा है: बाक़ी सारे विषय चटख हैं, और यह उनसे अलग दिखे.
+  'computer':
+      Subject('कंप्यूटर अनुप्रयोग', Color(0xFF334155), Icons.memory_outlined),
 };
 
 Subject subjectOf(String id) => kSubjects[id] ?? kSubjects['ca']!;

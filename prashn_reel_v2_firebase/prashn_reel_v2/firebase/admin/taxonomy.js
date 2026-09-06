@@ -33,6 +33,18 @@ function paperFor(exam, subject) {
       return LANGUAGE_ISH.has(subject) ? 'uppcs-csat' : 'uppcs-gs1';
     case 'pet':
       return 'pet-main';
+
+    // तकनीकी पद — हर एक में एक ही पेपर है, इसलिए विषय देखने की ज़रूरत नहीं.
+    // इनके प्रश्न आपस में भी साझा नहीं होते: तीनों का पाठ्यक्रम अलग है
+    // (विज्ञापन A-2/E-1/2026, परिशिष्ट-3). इसीलिए JSON में `exams` साफ़-साफ़
+    // बताना ज़रूरी है — विषय से अपने आप ये कभी नहीं लगेंगे.
+    case 'prog-sr':
+      return 'prog-sr-main';
+    case 'mgr-system':
+      return 'mgr-system-main';
+    case 'prog-fin':
+      return 'prog-fin-main';
+
     default:
       return null;
   }
