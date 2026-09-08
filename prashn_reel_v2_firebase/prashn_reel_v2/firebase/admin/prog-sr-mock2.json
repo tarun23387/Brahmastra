@@ -1,0 +1,1362 @@
+[
+ {
+  "id": "progsr-m2-001",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The 2's complement of the 8-bit binary number 0101 1100 is —",
+  "options": [
+   "1010 0011",
+   "1010 0101",
+   "1010 0100",
+   "0101 1101"
+  ],
+  "answer": 2,
+  "explanation": "2's complement = 1's complement + 1। 0101 1100 का 1's complement 1010 0011 है; उसमें 1 जोड़ने पर 1010 0100 मिलता है।"
+ },
+ {
+  "id": "progsr-m2-002",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which of the following is a characteristic of RISC architecture?",
+  "options": [
+   "A small set of simple instructions, most executed in one cycle",
+   "A large instruction set with variable-length instructions",
+   "Complex addressing modes with microprogrammed control",
+   "Instructions that directly operate on memory operands"
+  ],
+  "answer": 0,
+  "explanation": "RISC का मूल विचार है — थोड़े, सरल और एक-समान लंबाई के निर्देश, जिनमें से अधिकांश एक ही घड़ी-चक्र में पूरे हों। जटिल निर्देश-समुच्चय और अनेक एड्रेसिंग मोड CISC की पहचान हैं।"
+ },
+ {
+  "id": "progsr-m2-003",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In which addressing mode is the operand given directly within the instruction itself?",
+  "options": [
+   "Register",
+   "Indirect",
+   "Direct",
+   "Immediate"
+  ],
+  "answer": 3,
+  "explanation": "तात्कालिक (immediate) मोड में संख्या स्वयं निर्देश के भीतर लिखी होती है, जैसे MOV A, #5। प्रत्यक्ष मोड में पता दिया जाता है, अप्रत्यक्ष में पते का पता।"
+ },
+ {
+  "id": "progsr-m2-004",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The decimal equivalent of the binary number (1101.101)₂ is —",
+  "options": [
+   "13.75",
+   "13.625",
+   "13.5",
+   "14.625"
+  ],
+  "answer": 1,
+  "explanation": "पूर्णांक भाग 1101 = 13। भिन्न भाग .101 = 1×½ + 0×¼ + 1×⅛ = 0.5 + 0.125 = 0.625। इसलिए 13.625।"
+ },
+ {
+  "id": "progsr-m2-005",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A running process moves to the ready state when —",
+  "options": [
+   "it finishes execution",
+   "it requests an I/O operation",
+   "its time quantum (time slice) expires",
+   "it waits for a semaphore"
+  ],
+  "answer": 2,
+  "explanation": "समय-खंड समाप्त होने पर प्रक्रिया CPU छोड़कर तैयार (ready) कतार में लौटती है। I/O माँगने या सेमाफ़ोर पर रुकने पर वह प्रतीक्षारत (waiting) अवस्था में जाती है, ready में नहीं।"
+ },
+ {
+  "id": "progsr-m2-006",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Three processes arrive at time 0 with burst times 6, 8 and 4 ms. Under non-preemptive SJF scheduling, the average waiting time is —",
+  "options": [
+   "4.67 ms",
+   "10 ms",
+   "6 ms",
+   "8 ms"
+  ],
+  "answer": 0,
+  "explanation": "SJF सबसे छोटा काम पहले चलाता है — क्रम 4, 6, 8। प्रतीक्षा समय क्रमशः 0, 4, 10 ms। औसत = (0 + 4 + 10) ÷ 3 = 14/3 ≈ 4.67 ms।"
+ },
+ {
+  "id": "progsr-m2-007",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The 'circular wait' condition for deadlock can be prevented by —",
+  "options": [
+   "allowing a process to hold and wait indefinitely",
+   "imposing a total ordering on resource types and requesting them in increasing order",
+   "using a single global lock for everything",
+   "increasing the size of main memory"
+  ],
+  "answer": 1,
+  "explanation": "संसाधनों को क्रमांक देकर हर प्रक्रिया से बढ़ते क्रम में ही माँगवाने पर कोई चक्र नहीं बन पाता — यही चक्रीय प्रतीक्षा तोड़ने का मानक उपाय है।"
+ },
+ {
+  "id": "progsr-m2-008",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A binary semaphore can take the values —",
+  "options": [
+   "any integer from −1 to +1",
+   "0 to n, where n is the number of resources",
+   "any non-negative integer",
+   "only 0 and 1"
+  ],
+  "answer": 3,
+  "explanation": "द्विआधारी सेमाफ़ोर केवल 0 या 1 हो सकता है, इसलिए वह ताले (mutex) की तरह काम करता है। गिनती वाला (counting) सेमाफ़ोर कोई भी अऋणात्मक पूर्णांक ले सकता है।"
+ },
+ {
+  "id": "progsr-m2-009",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "For the reference string 7 0 1 2 0 3 with 3 frames, the number of page faults under the FIFO policy is —",
+  "options": [
+   "5",
+   "4",
+   "6",
+   "3"
+  ],
+  "answer": 0,
+  "explanation": "7, 0, 1 तीनों फ़ॉल्ट; 2 आने पर सबसे पुराना 7 हटता है (फ़ॉल्ट); 0 पहले से मौजूद (हिट); 3 आने पर सबसे पुराना 0 हटता है (फ़ॉल्ट)। कुल 5 पेज फ़ॉल्ट।"
+ },
+ {
+  "id": "progsr-m2-010",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In demand paging, a page is brought into main memory —",
+  "options": [
+   "when the system boots",
+   "only when it is referenced and not already present (on a page fault)",
+   "all at once when the process starts",
+   "at fixed time intervals"
+  ],
+  "answer": 1,
+  "explanation": "माँग-पेजिंग में पेज तभी लाया जाता है जब उसका संदर्भ आए और वह मेमोरी में न हो — यही पेज फ़ॉल्ट है। इससे केवल ज़रूरी पेज ही मेमोरी घेरते हैं।"
+ },
+ {
+  "id": "progsr-m2-011",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which file allocation method suffers from external fragmentation?",
+  "options": [
+   "Indexed allocation",
+   "File allocation table (FAT)",
+   "Linked allocation",
+   "Contiguous allocation"
+  ],
+  "answer": 3,
+  "explanation": "सतत (contiguous) आवंटन में फ़ाइल को लगातार ब्लॉक चाहिए; फ़ाइलें बनती-मिटती रहने पर बीच-बीच में छोटे खाली टुकड़े रह जाते हैं जिनमें बड़ी फ़ाइल नहीं समाती — यही बाह्य विखंडन है।"
+ },
+ {
+  "id": "progsr-m2-012",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which UNIX command displays the first 10 lines of a file by default?",
+  "options": [
+   "cat",
+   "tail",
+   "head",
+   "grep"
+  ],
+  "answer": 2,
+  "explanation": "head डिफ़ॉल्ट रूप से फ़ाइल की पहली 10 पंक्तियाँ दिखाता है; tail अंतिम 10। cat पूरी फ़ाइल छापता है और grep पंक्तियाँ छाँटता है।"
+ },
+ {
+  "id": "progsr-m2-013",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Compared with a process, a thread —",
+  "options": [
+   "shares the code and data segment of its parent process",
+   "cannot be scheduled by the operating system",
+   "is always slower to create than a process",
+   "has its own completely separate address space"
+  ],
+  "answer": 0,
+  "explanation": "एक ही प्रक्रिया के थ्रेड कोड, डेटा और खुली फ़ाइलें साझा करते हैं; केवल स्टैक और रजिस्टर अलग रखते हैं। यही कारण है कि थ्रेड बनाना और उनके बीच स्विच करना प्रक्रिया की तुलना में सस्ता है।"
+ },
+ {
+  "id": "progsr-m2-014",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The postfix (Reverse Polish) form of the infix expression (A + B) * C is —",
+  "options": [
+   "A + B C *",
+   "A B + C *",
+   "A B C + *",
+   "A B * C +"
+  ],
+  "answer": 1,
+  "explanation": "कोष्ठक के कारण A + B पहले, इसलिए वह A B + बनता है; फिर उस पूरे परिणाम को C से गुणा — A B + C *।"
+ },
+ {
+  "id": "progsr-m2-015",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In a circular queue of size n, the queue is full when —",
+  "options": [
+   "front = 0",
+   "rear = n − 1",
+   "(rear + 1) mod n = front",
+   "rear = front"
+  ],
+  "answer": 2,
+  "explanation": "वृत्ताकार कतार में एक स्थान जान-बूझकर खाली रखा जाता है ताकि 'भरी' और 'खाली' में भेद रहे। इसलिए भरी होने की शर्त है (rear + 1) mod n = front; खाली होने की rear = front।"
+ },
+ {
+  "id": "progsr-m2-016",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A full binary tree with 15 nodes has how many levels?",
+  "options": [
+   "15",
+   "5",
+   "3",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "पूर्ण द्विआधारी वृक्ष में स्तर L पर अधिकतम नोड होने पर कुल नोड 2^L − 1 होते हैं। 15 = 2⁴ − 1, इसलिए 4 स्तर।"
+ },
+ {
+  "id": "progsr-m2-017",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which traversal of a Binary Search Tree visits the nodes in ascending sorted order?",
+  "options": [
+   "Post-order",
+   "Pre-order",
+   "In-order",
+   "Level-order"
+  ],
+  "answer": 2,
+  "explanation": "BST में हर नोड के बाएँ छोटे और दाएँ बड़े होते हैं, इसलिए 'बायाँ → मूल → दायाँ' यानी इन-ऑर्डर क्रम मानों को बढ़ते क्रम में देता है।"
+ },
+ {
+  "id": "progsr-m2-018",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In open addressing (as a collision-resolution technique), when a collision occurs the algorithm —",
+  "options": [
+   "probes for the next free slot within the table itself",
+   "stores the element in a linked list attached to that slot",
+   "discards the colliding element",
+   "immediately doubles the table and stops"
+  ],
+  "answer": 0,
+  "explanation": "ओपन एड्रेसिंग में टकराव होने पर तालिका के भीतर ही अगला खाली स्थान खोजा जाता है (लीनियर/क्वाड्रैटिक प्रोबिंग)। स्लॉट से जुड़ी लिंक्ड लिस्ट में रखना अलग तरीक़ा — पृथक शृंखलन (separate chaining) — है।"
+ },
+ {
+  "id": "progsr-m2-019",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The worst-case time complexity of Quick Sort is —",
+  "options": [
+   "O(n)",
+   "O(n²)",
+   "O(n log n)",
+   "O(log n)"
+  ],
+  "answer": 1,
+  "explanation": "जब विभाजक (pivot) हर बार सबसे छोटा या सबसे बड़ा तत्व निकले (जैसे पहले से क्रमित ऐरे में), तब विभाजन असंतुलित हो जाता है और तुलना n² के क्रम की हो जाती है। औसत स्थिति O(n log n) है।"
+ },
+ {
+  "id": "progsr-m2-020",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What is the output of printf(\"%d\", 5 & 3); in C?",
+  "options": [
+   "8",
+   "2",
+   "7",
+   "1"
+  ],
+  "answer": 3,
+  "explanation": "& बिटवार AND है। 5 = 101, 3 = 011; बिट-दर-बिट AND = 001 = 1। (यदि | होता तो 111 = 7 आता।)"
+ },
+ {
+  "id": "progsr-m2-021",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In C, for an array declared as int arr[5];, the expression arr[2] is equivalent to —",
+  "options": [
+   "*(arr) + 2",
+   "*arr + 2",
+   "*(arr + 2)",
+   "&arr + 2"
+  ],
+  "answer": 2,
+  "explanation": "ऐरे का नाम पहले तत्व का पता है, इसलिए arr[2] का अर्थ है 'तीसरे तत्व पर जाकर वहाँ का मान लो' — यानी *(arr + 2)। *arr + 2 तो पहले तत्व के मान में 2 जोड़ देगा।"
+ },
+ {
+  "id": "progsr-m2-022",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The default storage class of a local variable declared inside a function in C is —",
+  "options": [
+   "auto",
+   "register",
+   "extern",
+   "static"
+  ],
+  "answer": 0,
+  "explanation": "फलन के भीतर बिना किसी कीवर्ड के घोषित चर स्वतः auto वर्ग का होता है — वह फलन में प्रवेश पर बनता है और बाहर निकलते ही नष्ट हो जाता है।"
+ },
+ {
+  "id": "progsr-m2-023",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A derived class redefining a base-class function with the same signature is an example of —",
+  "options": [
+   "encapsulation",
+   "data abstraction",
+   "compile-time polymorphism (overloading)",
+   "run-time polymorphism (overriding)"
+  ],
+  "answer": 3,
+  "explanation": "व्युत्पन्न वर्ग में आधार वर्ग के फलन को वही हस्ताक्षर देकर फिर से लिखना ओवरराइडिंग है; virtual फलन के साथ यह रन-टाइम पर तय होता है — रन-टाइम बहुरूपता। समान नाम, भिन्न प्राचल वाला ओवरलोडिंग संकलन-कालीन है।"
+ },
+ {
+  "id": "progsr-m2-024",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In C++, a pure virtual function is declared by —",
+  "options": [
+   "using the keyword friend",
+   "assigning = 0 in its declaration inside the class",
+   "using the keyword static",
+   "marking it as const"
+  ],
+  "answer": 1,
+  "explanation": "virtual void draw() = 0; लिखने पर फलन शुद्ध आभासी (pure virtual) बन जाता है और वर्ग अमूर्त (abstract) हो जाता है — उसकी वस्तु नहीं बनाई जा सकती, केवल व्युत्पन्न वर्ग में उसे परिभाषित करना पड़ता है।"
+ },
+ {
+  "id": "progsr-m2-025",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In Java, which keyword is used to inherit from a class?",
+  "options": [
+   "inherits",
+   "extends",
+   "super",
+   "implements"
+  ],
+  "answer": 1,
+  "explanation": "वर्ग से वर्ग की विरासत के लिए extends लगता है; इंटरफ़ेस लागू करने के लिए implements। inherits जावा का कीवर्ड ही नहीं, और super मूल वर्ग के सदस्यों तक पहुँचने के लिए है।"
+ },
+ {
+  "id": "progsr-m2-026",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which of the following is a checked exception in Java?",
+  "options": [
+   "ArithmeticException",
+   "NullPointerException",
+   "IOException",
+   "ArrayIndexOutOfBoundsException"
+  ],
+  "answer": 2,
+  "explanation": "IOException जाँची जाने वाली (checked) अपवाद है — उसे या तो try-catch में पकड़ना पड़ता है या throws में घोषित करना। शेष तीनों RuntimeException की संतानें, यानी अनचेक्ड हैं।"
+ },
+ {
+  "id": "progsr-m2-027",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In Python, which of the following is an immutable data type?",
+  "options": [
+   "set",
+   "dictionary",
+   "list",
+   "tuple"
+  ],
+  "answer": 3,
+  "explanation": "टपल एक बार बन जाने पर बदला नहीं जा सकता — वह अपरिवर्तनीय (immutable) है। सूची, शब्दकोश और समुच्चय परिवर्तनीय हैं।"
+ },
+ {
+  "id": "progsr-m2-028",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The C language (in its classic form) primarily follows which programming paradigm?",
+  "options": [
+   "Procedural (structured)",
+   "Logic",
+   "Purely functional",
+   "Object-oriented"
+  ],
+  "answer": 0,
+  "explanation": "C प्रक्रियात्मक/संरचित भाषा है — कार्य को फलनों के क्रम में बाँटकर हल किया जाता है। वर्ग और वस्तु इसमें नहीं होते; वे C++ जैसी वस्तु-उन्मुख भाषाओं में आते हैं।"
+ },
+ {
+  "id": "progsr-m2-029",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A relation is in BCNF if, for every non-trivial functional dependency X → Y, X is —",
+  "options": [
+   "a candidate key",
+   "a foreign key",
+   "a superkey",
+   "a prime attribute"
+  ],
+  "answer": 2,
+  "explanation": "BCNF की कसौटी है कि हर अतुच्छ निर्भरता X → Y में X सुपर-कुंजी हो। यह 3NF से कड़ी शर्त है, इसलिए हर BCNF संबंध 3NF में तो होता है, पर उलटा ज़रूरी नहीं।"
+ },
+ {
+  "id": "progsr-m2-030",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "An attribute in one relation that refers to the primary key of another relation is called a —",
+  "options": [
+   "composite key",
+   "foreign key",
+   "super key",
+   "candidate key"
+  ],
+  "answer": 1,
+  "explanation": "किसी तालिका का वह गुण जो दूसरी तालिका की प्राथमिक कुंजी की ओर संकेत करता है, विदेशी कुंजी (foreign key) कहलाता है — यही दो तालिकाओं के बीच संबंध बनाए रखता है।"
+ },
+ {
+  "id": "progsr-m2-031",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which SQL clause is used to sort the rows of a result set?",
+  "options": [
+   "SORT BY",
+   "GROUP BY",
+   "HAVING",
+   "ORDER BY"
+  ],
+  "answer": 3,
+  "explanation": "ORDER BY परिणाम को किसी स्तंभ के अनुसार आरोही (ASC) या अवरोही (DESC) क्रम में लगाता है। GROUP BY समूह बनाता है और HAVING उन समूहों पर शर्त लगाता है।"
+ },
+ {
+  "id": "progsr-m2-032",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A join that returns all rows from the left table and only the matching rows from the right table is a —",
+  "options": [
+   "LEFT OUTER JOIN",
+   "INNER JOIN",
+   "CROSS JOIN",
+   "RIGHT OUTER JOIN"
+  ],
+  "answer": 0,
+  "explanation": "LEFT OUTER JOIN बाईं तालिका की सभी पंक्तियाँ रखता है; दाईं ओर मेल न मिलने पर वहाँ NULL भर देता है। INNER JOIN केवल मेल खाती पंक्तियाँ देता है।"
+ },
+ {
+  "id": "progsr-m2-033",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The ACID property that guarantees committed changes survive a subsequent system crash is —",
+  "options": [
+   "Isolation",
+   "Atomicity",
+   "Consistency",
+   "Durability"
+  ],
+  "answer": 3,
+  "explanation": "टिकाऊपन (durability) का अर्थ है — एक बार commit हो जाने के बाद परिवर्तन स्थायी हैं, बिजली जाने या सिस्टम गिरने पर भी बने रहेंगे। इसके लिए उन्हें अस्थायी मेमोरी से हटाकर डिस्क पर लिख दिया जाता है।"
+ },
+ {
+  "id": "progsr-m2-034",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In an ER diagram, an ellipse (oval) represents a —",
+  "options": [
+   "entity",
+   "attribute",
+   "relationship",
+   "weak entity"
+  ],
+  "answer": 1,
+  "explanation": "ER आरेख में दीर्घवृत्त गुण (attribute) दिखाता है, आयत इकाई, और विषमकोण (rhombus) संबंध। दोहरा आयत दुर्बल इकाई के लिए है।"
+ },
+ {
+  "id": "progsr-m2-035",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The SQL command GRANT belongs to which category?",
+  "options": [
+   "DCL",
+   "DML",
+   "DDL",
+   "TCL"
+  ],
+  "answer": 0,
+  "explanation": "GRANT और REVOKE उपयोगकर्ता के अधिकार देने-लेने का काम करते हैं, इसलिए वे डेटा नियंत्रण भाषा (DCL) में आते हैं। COMMIT/ROLLBACK TCL में, CREATE/ALTER DDL में।"
+ },
+ {
+  "id": "progsr-m2-036",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which constraint allows a column to reject duplicate values while still accepting one NULL value?",
+  "options": [
+   "CHECK",
+   "PRIMARY KEY",
+   "UNIQUE",
+   "NOT NULL"
+  ],
+  "answer": 2,
+  "explanation": "UNIQUE अद्वितीयता तो लागू करता है पर एक NULL स्वीकार कर लेता है। PRIMARY KEY अद्वितीय होने के साथ-साथ NULL को भी मना करती है — यही दोनों का अंतर है।"
+ },
+ {
+  "id": "progsr-m2-037",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which OSI layer is responsible for routing and logical (IP) addressing?",
+  "options": [
+   "Transport layer",
+   "Session layer",
+   "Network layer",
+   "Data Link layer"
+  ],
+  "answer": 2,
+  "explanation": "पथ-निर्धारण और तार्किक (IP) पता नेटवर्क परत का काम है — राउटर यहीं काम करता है। डेटा-लिंक परत भौतिक (MAC) पते और फ़्रेम सँभालती है।"
+ },
+ {
+  "id": "progsr-m2-038",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "HTTP, by default, uses —",
+  "options": [
+   "UDP and port 80",
+   "TCP and port 25",
+   "UDP and port 53",
+   "TCP and port 80"
+  ],
+  "answer": 3,
+  "explanation": "HTTP भरोसेमंद संबंध चाहता है, इसलिए TCP पर चलता है और उसका डिफ़ॉल्ट पोर्ट 80 है। पोर्ट 53 DNS का, 25 SMTP का और 443 HTTPS का है।"
+ },
+ {
+  "id": "progsr-m2-039",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The IP address 192.168.1.1 belongs to which class?",
+  "options": [
+   "Class B",
+   "Class C",
+   "Class D",
+   "Class A"
+  ],
+  "answer": 1,
+  "explanation": "पहला ऑक्टेट 192 है, जो 192–223 की परास में आता है — यह श्रेणी C है। श्रेणी A 1–126, B 128–191 और D (मल्टीकास्ट) 224–239 है।"
+ },
+ {
+  "id": "progsr-m2-040",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which device operates at the Data Link layer and forwards frames based on MAC addresses?",
+  "options": [
+   "Switch",
+   "Hub",
+   "Repeater",
+   "Router"
+  ],
+  "answer": 0,
+  "explanation": "स्विच MAC पता देखकर फ़्रेम केवल सही पोर्ट पर भेजता है, इसलिए वह डेटा-लिंक परत का उपकरण है। हब हर पोर्ट पर नक़ल कर देता है और राउटर IP पते पर काम करता है।"
+ },
+ {
+  "id": "progsr-m2-041",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Transmission in which one bit is sent at a time over a single channel is called —",
+  "options": [
+   "Simplex transmission",
+   "Serial transmission",
+   "Broadcast",
+   "Parallel transmission"
+  ],
+  "answer": 1,
+  "explanation": "क्रमिक (serial) संचरण में बिट एक-एक करके एक ही तार पर जाते हैं — दूर तक सस्ता और विश्वसनीय। समानांतर संचरण में कई बिट एक साथ कई तारों पर जाते हैं।"
+ },
+ {
+  "id": "progsr-m2-042",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which protocol automatically assigns IP addresses to hosts on a network?",
+  "options": [
+   "FTP",
+   "DNS",
+   "SMTP",
+   "DHCP"
+  ],
+  "answer": 3,
+  "explanation": "DHCP नेटवर्क में जुड़ते ही उपकरण को IP पता, गेटवे और DNS की जानकारी अपने आप दे देता है। DNS नाम को IP में बदलता है, यह उससे अलग काम है।"
+ },
+ {
+  "id": "progsr-m2-043",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which HTML tag is used to create an unordered (bulleted) list?",
+  "options": [
+   "<li>",
+   "<dl>",
+   "<ul>",
+   "<ol>"
+  ],
+  "answer": 2,
+  "explanation": "<ul> अक्रमित (बुलेट) सूची बनाता है और <ol> क्रमित (संख्या वाली)। दोनों के भीतर हर मद <li> से लिखी जाती है।"
+ },
+ {
+  "id": "progsr-m2-044",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In CSS, which property changes the text colour of an element?",
+  "options": [
+   "color",
+   "foreground",
+   "font-color",
+   "text-color"
+  ],
+  "answer": 0,
+  "explanation": "पाठ का रंग बदलने के लिए CSS में केवल color गुण है; font-color और text-color जैसे नाम मान्य नहीं हैं। पृष्ठभूमि के लिए background-color आता है।"
+ },
+ {
+  "id": "progsr-m2-045",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which HTTP method is generally used to submit data to be processed by the server?",
+  "options": [
+   "POST",
+   "GET",
+   "TRACE",
+   "HEAD"
+  ],
+  "answer": 0,
+  "explanation": "POST आँकड़े अनुरोध के शरीर (body) में भेजता है, इसलिए वह फ़ॉर्म जमा करने या नई प्रविष्टि बनाने के लिए उपयुक्त है। GET आँकड़े URL में जोड़ता है और मुख्यतः पढ़ने के लिए है।"
+ },
+ {
+  "id": "progsr-m2-046",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which of the following is designed to store and transport data (rather than display it) and is self-descriptive?",
+  "options": [
+   "CSS",
+   "JPEG",
+   "XML",
+   "HTML"
+  ],
+  "answer": 2,
+  "explanation": "XML का उद्देश्य आँकड़े रखना और भेजना है; उसके टैग स्वयं गढ़े जाते हैं, इसलिए वह स्व-वर्णनकारी है। HTML आँकड़े दिखाने के लिए है और CSS दिखावट के लिए।"
+ },
+ {
+  "id": "progsr-m2-047",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In which SDLC model do phases flow strictly downward, requiring requirements to be fixed and clear at the start?",
+  "options": [
+   "Agile model",
+   "Spiral model",
+   "Prototype model",
+   "Waterfall model"
+  ],
+  "answer": 3,
+  "explanation": "जलप्रपात (waterfall) मॉडल में हर चरण अगले में झरने की तरह उतरता है और पीछे लौटना कठिन होता है, इसलिए वह तभी ठीक बैठता है जब आवश्यकताएँ आरंभ में ही स्पष्ट और स्थिर हों।"
+ },
+ {
+  "id": "progsr-m2-048",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Testing an individual module or component in isolation is called —",
+  "options": [
+   "System testing",
+   "Unit testing",
+   "Integration testing",
+   "Acceptance testing"
+  ],
+  "answer": 1,
+  "explanation": "इकाई (unit) परीक्षण में हर मॉड्यूल को अलग से जाँचा जाता है। मॉड्यूलों को जोड़कर देखना एकीकरण परीक्षण, पूरे तंत्र को देखना सिस्टम परीक्षण कहलाता है।"
+ },
+ {
+  "id": "progsr-m2-049",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A program that appears legitimate but performs malicious actions when it is run is called a —",
+  "options": [
+   "Trojan horse",
+   "Firewall",
+   "Compiler",
+   "Cookie"
+  ],
+  "answer": 0,
+  "explanation": "ट्रोजन उपयोगी दिखने वाला प्रोग्राम है जो चलते ही छिपा हुआ नुक़सान करता है। यह वायरस की तरह अपनी नक़ल नहीं बनाता, इसी में उससे भिन्न है।"
+ },
+ {
+  "id": "progsr-m2-050",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In cloud computing, the service model that delivers ready-to-use application software over the internet is —",
+  "options": [
+   "PaaS",
+   "DaaS",
+   "SaaS",
+   "IaaS"
+  ],
+  "answer": 2,
+  "explanation": "SaaS में तैयार सॉफ़्टवेयर ब्राउज़र से ही इस्तेमाल होता है (जैसे Gmail), उपयोगकर्ता को कुछ स्थापित नहीं करना पड़ता। IaaS कच्चा अवसंरचना देता है और PaaS विकास का मंच।"
+ },
+ {
+  "id": "progsr-m2-051",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Find the next term of the series : 5, 11, 23, 47, 95, ?",
+  "options": [
+   "189",
+   "190",
+   "192",
+   "191"
+  ],
+  "answer": 3,
+  "explanation": "हर पद को दुगना करके 1 जोड़ने पर अगला पद मिलता है: 5×2+1=11, 11×2+1=23 … 95×2+1=191।"
+ },
+ {
+  "id": "progsr-m2-052",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which term replaces the question mark : AZ, CX, EV, ?, IR ?",
+  "options": [
+   "GU",
+   "GT",
+   "HT",
+   "FS"
+  ],
+  "answer": 1,
+  "explanation": "पहला अक्षर दो-दो आगे बढ़ता है — A, C, E, G, I; दूसरा दो-दो पीछे — Z, X, V, T, R। इसलिए लुप्त पद GT है।"
+ },
+ {
+  "id": "progsr-m2-053",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "If each letter is coded by its position in the alphabet, then the word ROSE is coded as —",
+  "options": [
+   "17-15-19-5",
+   "18-16-19-5",
+   "18-15-19-5",
+   "18-15-18-5"
+  ],
+  "answer": 2,
+  "explanation": "R वर्णमाला का 18वाँ, O 15वाँ, S 19वाँ और E 5वाँ अक्षर है, इसलिए ROSE = 18-15-19-5।"
+ },
+ {
+  "id": "progsr-m2-054",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Pointing to a man, a woman said, \"His mother is the only daughter of my mother.\" How is the woman related to the man?",
+  "options": [
+   "Grandmother",
+   "Mother",
+   "Aunt",
+   "Sister"
+  ],
+  "answer": 1,
+  "explanation": "'मेरी माँ की इकलौती बेटी' स्वयं वही स्त्री है। इसलिए उस पुरुष की माँ वही स्त्री हुई — यानी वह पुरुष की माँ है।"
+ },
+ {
+  "id": "progsr-m2-055",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A man walks 4 km towards East, turns left and walks 3 km, then turns left again and walks 4 km. How far is he from the starting point?",
+  "options": [
+   "3 km",
+   "4 km",
+   "5 km",
+   "7 km"
+  ],
+  "answer": 0,
+  "explanation": "पूर्व की 4 किमी और बाद में पश्चिम की 4 किमी एक-दूसरे को काट देती हैं। बचती है केवल उत्तर की ओर की 3 किमी, इसलिए आरंभ-बिंदु से दूरी 3 किमी है।"
+ },
+ {
+  "id": "progsr-m2-056",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Statements : All pens are books. No book is red.\n\nConclusions :\nI. No pen is red.\nII. Some books are pens.",
+  "options": [
+   "Neither I nor II follows",
+   "Only I follows",
+   "Only II follows",
+   "Both I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "सभी कलम किताबें हैं और कोई किताब लाल नहीं, इसलिए कोई कलम लाल नहीं — I निकलता है। 'सभी कलम किताबें हैं' का वैध परिवर्तन है 'कुछ किताबें कलम हैं' — II भी निकलता है।"
+ },
+ {
+  "id": "progsr-m2-057",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "At what time between 3 and 4 o'clock do the two hands of a clock exactly coincide (overlap)?",
+  "options": [
+   "3 : 17 2/11",
+   "3 : 16 4/11",
+   "3 : 16",
+   "3 : 15"
+  ],
+  "answer": 1,
+  "explanation": "H और H+1 बजे के बीच सुइयाँ (60H/11) मिनट पर मिलती हैं। H = 3 रखने पर 180/11 = 16 4/11 मिनट, यानी 3 : 16 4/11 बजे।"
+ },
+ {
+  "id": "progsr-m2-058",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "If today is Monday, what day of the week will it be after 62 days?",
+  "options": [
+   "Sunday",
+   "Monday",
+   "Saturday",
+   "Tuesday"
+  ],
+  "answer": 0,
+  "explanation": "62 को 7 से भाग देने पर शेष 6 बचता है (62 = 7×8 + 6)। सोमवार से 6 दिन आगे यानी रविवार।"
+ },
+ {
+  "id": "progsr-m2-059",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Six friends A, B, C, D, E and F sit in a row facing north. B is at the extreme left end. C is third from the left. A is immediately to the right of C. D sits between A and E. Who sits at the extreme right end?",
+  "options": [
+   "F",
+   "A",
+   "E",
+   "D"
+  ],
+  "answer": 2,
+  "explanation": "B पहले स्थान पर, C तीसरे पर, A चौथे पर। D को A और E के बीच होना है, सो A(4)-D(5)-E(6)। बचा दूसरा स्थान F का। क्रम B, F, C, A, D, E — सबसे दाएँ E है।"
+ },
+ {
+  "id": "progsr-m2-060",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Doctor : Patient :: Lawyer : ?",
+  "options": [
+   "Judge",
+   "Court",
+   "Criminal",
+   "Client"
+  ],
+  "answer": 3,
+  "explanation": "डॉक्टर जिसकी सेवा करता है वह रोगी है; उसी तरह वकील जिसकी ओर से पैरवी करता है वह मुवक्किल (client) है। न्यायाधीश और न्यायालय सेवा-ग्राही नहीं।"
+ },
+ {
+  "id": "progsr-m2-061",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Find the odd one out : 3, 5, 7, 9, 11, 13",
+  "options": [
+   "9",
+   "7",
+   "5",
+   "11"
+  ],
+  "answer": 0,
+  "explanation": "3, 5, 7, 11, 13 सभी अभाज्य संख्याएँ हैं; केवल 9 = 3×3 अभाज्य नहीं है, इसलिए वही विषम है।"
+ },
+ {
+  "id": "progsr-m2-062",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In a row of 25 students, A is 11th from the left and B is 9th from the right. How many students are sitting between A and B?",
+  "options": [
+   "7",
+   "5",
+   "6",
+   "4"
+  ],
+  "answer": 1,
+  "explanation": "B दाएँ से 9वाँ है, यानी बाएँ से 25 − 9 + 1 = 17वाँ। A बाएँ से 11वाँ है, इसलिए बीच में 17 − 11 − 1 = 5 विद्यार्थी हैं।"
+ },
+ {
+  "id": "progsr-m2-063",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Find the missing number :\n\n(4, 6, 10)\n(5, 8, 13)\n(7, 9, ?)",
+  "options": [
+   "14",
+   "17",
+   "16",
+   "15"
+  ],
+  "answer": 2,
+  "explanation": "हर पंक्ति में पहले दो अंकों का योग तीसरा है: 4+6=10, 5+8=13, इसलिए 7+9 = 16।"
+ },
+ {
+  "id": "progsr-m2-064",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "If '+' means '×', '−' means '+', '×' means '÷' and '÷' means '−', then 8 + 2 − 4 × 2 ÷ 1 = ?",
+  "options": [
+   "15",
+   "18",
+   "16",
+   "17"
+  ],
+  "answer": 3,
+  "explanation": "चिह्न बदलने पर व्यंजक बनता है 8 × 2 + 4 ÷ 2 − 1। BODMAS से: 8×2 = 16, 4÷2 = 2 → 16 + 2 − 1 = 17।"
+ },
+ {
+  "id": "progsr-m2-065",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Arrange the following words in dictionary order :\n1. Present  2. Prefer  3. Precise  4. Prevent",
+  "options": [
+   "3, 2, 1, 4",
+   "3, 2, 4, 1",
+   "2, 3, 1, 4",
+   "1, 2, 3, 4"
+  ],
+  "answer": 0,
+  "explanation": "चारों 'Pre' से शुरू होते हैं; चौथा अक्षर देखिए — Precise (c), Prefer (f), Present (s), Prevent (v)। c < f < s < v, इसलिए क्रम 3, 2, 1, 4।"
+ },
+ {
+  "id": "progsr-m2-066",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A man buys an article for ₹500 and sells it at a loss of 12%. The selling price is —",
+  "options": [
+   "₹450",
+   "₹560",
+   "₹444",
+   "₹440"
+  ],
+  "answer": 3,
+  "explanation": "12% हानि पर विक्रय मूल्य = क्रय मूल्य का 88% = 500 × 0.88 = ₹440।"
+ },
+ {
+  "id": "progsr-m2-067",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The ratio of the present ages of A and B is 5 : 7. After 6 years the ratio becomes 3 : 4. The present age of A is —",
+  "options": [
+   "24 years",
+   "42 years",
+   "30 years",
+   "35 years"
+  ],
+  "answer": 2,
+  "explanation": "आयु 5x और 7x मानिए। (5x+6)/(7x+6) = 3/4 → 20x + 24 = 21x + 18 → x = 6। इसलिए A की आयु = 5 × 6 = 30 वर्ष।"
+ },
+ {
+  "id": "progsr-m2-068",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A train 150 m long, running at 54 km/h, crosses a pole in —",
+  "options": [
+   "12 seconds",
+   "10 seconds",
+   "15 seconds",
+   "9 seconds"
+  ],
+  "answer": 1,
+  "explanation": "54 किमी/घंटा = 54 × 5/18 = 15 मी/से। खंभा पार करने में केवल रेल की लंबाई तय होती है: 150 ÷ 15 = 10 सेकंड।"
+ },
+ {
+  "id": "progsr-m2-069",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The compound interest on ₹5,000 at 10% per annum for 2 years is —",
+  "options": [
+   "₹1,050",
+   "₹1,100",
+   "₹1,000",
+   "₹500"
+  ],
+  "answer": 0,
+  "explanation": "मिश्रधन = 5000 × (1.1)² = 5000 × 1.21 = ₹6,050। इसलिए चक्रवृद्धि ब्याज = 6050 − 5000 = ₹1,050 (साधारण ब्याज ₹1,000 होता, अंतर दूसरे वर्ष के ब्याज पर ब्याज है)।"
+ },
+ {
+  "id": "progsr-m2-070",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The average of the first five multiples of 6 is —",
+  "options": [
+   "15",
+   "21",
+   "18",
+   "20"
+  ],
+  "answer": 2,
+  "explanation": "पहले पाँच गुणज 6, 12, 18, 24, 30 हैं; योग 90, औसत 90 ÷ 5 = 18 (जो बीच वाला पद भी है)।"
+ },
+ {
+  "id": "progsr-m2-071",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A can do a piece of work in 10 days and B in 15 days. Working together, they will finish it in —",
+  "options": [
+   "12 days",
+   "8 days",
+   "5 days",
+   "6 days"
+  ],
+  "answer": 3,
+  "explanation": "एक दिन का काम = 1/10 + 1/15 = 3/30 + 2/30 = 5/30 = 1/6। इसलिए मिलकर पूरा काम 6 दिन में होगा।"
+ },
+ {
+  "id": "progsr-m2-072",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The perimeter of a square is 48 cm. Its area is —",
+  "options": [
+   "121 cm²",
+   "144 cm²",
+   "96 cm²",
+   "288 cm²"
+  ],
+  "answer": 1,
+  "explanation": "भुजा = परिमाप ÷ 4 = 48 ÷ 4 = 12 सेमी। क्षेत्रफल = 12² = 144 वर्ग सेमी।"
+ },
+ {
+  "id": "progsr-m2-073",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A fair die is thrown once. The probability of getting a prime number is —",
+  "options": [
+   "1/2",
+   "1/3",
+   "2/3",
+   "1/6"
+  ],
+  "answer": 0,
+  "explanation": "पासे पर अभाज्य संख्याएँ 2, 3 और 5 हैं — तीन अनुकूल परिणाम। प्रायिकता = 3/6 = 1/2।"
+ },
+ {
+  "id": "progsr-m2-074",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "If 2^x = 32, then the value of x is —",
+  "options": [
+   "6",
+   "4",
+   "3",
+   "5"
+  ],
+  "answer": 3,
+  "explanation": "32 को 2 की घात में लिखिए: 32 = 2⁵। आधार समान होने पर घातांक बराबर, इसलिए x = 5।"
+ },
+ {
+  "id": "progsr-m2-075",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The HCF of two numbers is 8 and their LCM is 96. If one number is 32, the other number is —",
+  "options": [
+   "48",
+   "12",
+   "24",
+   "16"
+  ],
+  "answer": 2,
+  "explanation": "दो संख्याओं का गुणनफल = म.स. × ल.स. = 8 × 96 = 768। दूसरी संख्या = 768 ÷ 32 = 24।"
+ },
+ {
+  "id": "progsr-m2-076",
+  "subject": "english",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"The spread of the smartphone has done something that decades of policy could not: it has put a computer in the hands of people who never owned one. In small towns and villages across India, a farmer now checks crop prices, a student watches a lecture, and a shopkeeper accepts a payment — all on the same small screen. Enthusiasts call this a revolution, and in reach it certainly is.\n\nYet reach is not the same as skill. Owning a device teaches a person to tap and swipe; it does not teach them to judge whether a message is true, to protect a password, or to recognise a fraud dressed as an offer. A tool powerful enough to connect a village to the world is also powerful enough to deceive it, and the same network that carries a lecture carries a rumour just as fast.\n\nThe answer is not to slow the spread of devices but to pair it with instruction. Digital literacy — the habit of questioning what one sees on a screen — must be taught as deliberately as reading itself. A citizen who can use a phone but cannot doubt it is only half-equipped.\"\n\nAccording to the passage, what has the smartphone achieved that decades of policy could not?",
+  "options": [
+   "It lowered the price of computers",
+   "It put a computer in the hands of people who never owned one",
+   "It replaced classroom lectures",
+   "It raised crop prices for farmers"
+  ],
+  "answer": 1,
+  "explanation": "पहले ही वाक्य में लिखा है: \"…it has put a computer in the hands of people who never owned one.\" शेष विकल्प गद्यांश में कहीं नहीं आते।"
+ },
+ {
+  "id": "progsr-m2-077",
+  "subject": "english",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"The spread of the smartphone has done something that decades of policy could not: it has put a computer in the hands of people who never owned one. In small towns and villages across India, a farmer now checks crop prices, a student watches a lecture, and a shopkeeper accepts a payment — all on the same small screen. Enthusiasts call this a revolution, and in reach it certainly is.\n\nYet reach is not the same as skill. Owning a device teaches a person to tap and swipe; it does not teach them to judge whether a message is true, to protect a password, or to recognise a fraud dressed as an offer. A tool powerful enough to connect a village to the world is also powerful enough to deceive it, and the same network that carries a lecture carries a rumour just as fast.\n\nThe answer is not to slow the spread of devices but to pair it with instruction. Digital literacy — the habit of questioning what one sees on a screen — must be taught as deliberately as reading itself. A citizen who can use a phone but cannot doubt it is only half-equipped.\"\n\nThe central distinction the author draws is between —",
+  "options": [
+   "phones and computers",
+   "towns and villages",
+   "farmers and students",
+   "reach and skill"
+  ],
+  "answer": 3,
+  "explanation": "दूसरे अनुच्छेद की पहली पंक्ति ही कहती है \"Yet reach is not the same as skill.\" पूरा तर्क इसी अंतर पर टिका है — उपकरण पहुँच गया, पर कौशल नहीं।"
+ },
+ {
+  "id": "progsr-m2-078",
+  "subject": "english",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"The spread of the smartphone has done something that decades of policy could not: it has put a computer in the hands of people who never owned one. In small towns and villages across India, a farmer now checks crop prices, a student watches a lecture, and a shopkeeper accepts a payment — all on the same small screen. Enthusiasts call this a revolution, and in reach it certainly is.\n\nYet reach is not the same as skill. Owning a device teaches a person to tap and swipe; it does not teach them to judge whether a message is true, to protect a password, or to recognise a fraud dressed as an offer. A tool powerful enough to connect a village to the world is also powerful enough to deceive it, and the same network that carries a lecture carries a rumour just as fast.\n\nThe answer is not to slow the spread of devices but to pair it with instruction. Digital literacy — the habit of questioning what one sees on a screen — must be taught as deliberately as reading itself. A citizen who can use a phone but cannot doubt it is only half-equipped.\"\n\nAccording to the passage, owning a device does NOT teach a person to —",
+  "options": [
+   "watch a lecture",
+   "judge whether a message is true",
+   "tap and swipe the screen",
+   "accept a payment"
+  ],
+  "answer": 1,
+  "explanation": "गद्यांश कहता है owning a device \"does not teach them to judge whether a message is true…\"। टैप-स्वाइप, व्याख्यान देखना और भुगतान लेना — ये सब उपकरण से हो जाते हैं।"
+ },
+ {
+  "id": "progsr-m2-079",
+  "subject": "english",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"The spread of the smartphone has done something that decades of policy could not: it has put a computer in the hands of people who never owned one. In small towns and villages across India, a farmer now checks crop prices, a student watches a lecture, and a shopkeeper accepts a payment — all on the same small screen. Enthusiasts call this a revolution, and in reach it certainly is.\n\nYet reach is not the same as skill. Owning a device teaches a person to tap and swipe; it does not teach them to judge whether a message is true, to protect a password, or to recognise a fraud dressed as an offer. A tool powerful enough to connect a village to the world is also powerful enough to deceive it, and the same network that carries a lecture carries a rumour just as fast.\n\nThe answer is not to slow the spread of devices but to pair it with instruction. Digital literacy — the habit of questioning what one sees on a screen — must be taught as deliberately as reading itself. A citizen who can use a phone but cannot doubt it is only half-equipped.\"\n\nThe phrase \"only half-equipped\" describes a citizen who —",
+  "options": [
+   "owns more than one device",
+   "cannot read or write",
+   "can use a phone but cannot doubt what it shows",
+   "does not own a phone"
+  ],
+  "answer": 2,
+  "explanation": "अंतिम वाक्य के अनुसार ऐसा नागरिक जो \"can use a phone but cannot doubt it\" — फ़ोन चला तो लेता है पर उस पर दिखे को परख नहीं पाता — अधूरा तैयार है।"
+ },
+ {
+  "id": "progsr-m2-080",
+  "subject": "english",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"The spread of the smartphone has done something that decades of policy could not: it has put a computer in the hands of people who never owned one. In small towns and villages across India, a farmer now checks crop prices, a student watches a lecture, and a shopkeeper accepts a payment — all on the same small screen. Enthusiasts call this a revolution, and in reach it certainly is.\n\nYet reach is not the same as skill. Owning a device teaches a person to tap and swipe; it does not teach them to judge whether a message is true, to protect a password, or to recognise a fraud dressed as an offer. A tool powerful enough to connect a village to the world is also powerful enough to deceive it, and the same network that carries a lecture carries a rumour just as fast.\n\nThe answer is not to slow the spread of devices but to pair it with instruction. Digital literacy — the habit of questioning what one sees on a screen — must be taught as deliberately as reading itself. A citizen who can use a phone but cannot doubt it is only half-equipped.\"\n\nWhat solution does the author propose?",
+  "options": [
+   "Pairing the spread of devices with digital-literacy instruction",
+   "Banning smartphones in villages",
+   "Reducing the speed of the network",
+   "Slowing down the spread of devices"
+  ],
+  "answer": 0,
+  "explanation": "लेखक साफ़ कहता है \"The answer is not to slow the spread of devices but to pair it with instruction\" — उपकरणों के प्रसार के साथ डिजिटल साक्षरता सिखाना।"
+ },
+ {
+  "id": "progsr-m2-081",
+  "subject": "english",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"For a long time, the wind and the sun were thought of as unreliable helpers — useful when they were available, useless when they were not. A cloudy week or a still day could leave a solar or wind plant idle, and no grid could be built on a source that kept its own hours. This single objection, more than cost, kept renewable energy at the margin for decades.\n\nWhat has changed is not the weather but the battery. Large-scale storage now allows the electricity generated at noon to be kept and released after dark, and the surplus of a windy night to be spent in a calm morning. The sun and the wind have not become steadier; the grid has simply learned to remember them. As storage grows cheaper each year, the old objection weakens, and countries that once treated renewables as a supplement now plan their grids around them.\n\nThe lesson reaches beyond energy. A resource dismissed as impractical is often not the problem; the missing piece is the means to store, move or manage it. Solve that, and the impractical quietly becomes ordinary.\"\n\nAccording to the passage, what kept renewable energy at the margin for decades?",
+  "options": [
+   "A shortage of sunlight",
+   "Its unreliability — its dependence on the weather",
+   "Its high cost alone",
+   "Government policy"
+  ],
+  "answer": 1,
+  "explanation": "गद्यांश कहता है \"This single objection, more than cost, kept renewable energy at the margin\" — और वह आपत्ति है मौसम पर निर्भरता यानी अविश्वसनीयता, लागत नहीं।"
+ },
+ {
+  "id": "progsr-m2-082",
+  "subject": "english",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"For a long time, the wind and the sun were thought of as unreliable helpers — useful when they were available, useless when they were not. A cloudy week or a still day could leave a solar or wind plant idle, and no grid could be built on a source that kept its own hours. This single objection, more than cost, kept renewable energy at the margin for decades.\n\nWhat has changed is not the weather but the battery. Large-scale storage now allows the electricity generated at noon to be kept and released after dark, and the surplus of a windy night to be spent in a calm morning. The sun and the wind have not become steadier; the grid has simply learned to remember them. As storage grows cheaper each year, the old objection weakens, and countries that once treated renewables as a supplement now plan their grids around them.\n\nThe lesson reaches beyond energy. A resource dismissed as impractical is often not the problem; the missing piece is the means to store, move or manage it. Solve that, and the impractical quietly becomes ordinary.\"\n\nAccording to the passage, what has changed the situation for renewable energy?",
+  "options": [
+   "Large-scale battery storage",
+   "A fall in the price of solar panels alone",
+   "The building of new power grids",
+   "The weather has become steadier"
+  ],
+  "answer": 0,
+  "explanation": "लेखक कहता है \"What has changed is not the weather but the battery.\" बड़े पैमाने के भंडारण ने ही दिन में बनी बिजली रात में देना संभव किया।"
+ },
+ {
+  "id": "progsr-m2-083",
+  "subject": "english",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"For a long time, the wind and the sun were thought of as unreliable helpers — useful when they were available, useless when they were not. A cloudy week or a still day could leave a solar or wind plant idle, and no grid could be built on a source that kept its own hours. This single objection, more than cost, kept renewable energy at the margin for decades.\n\nWhat has changed is not the weather but the battery. Large-scale storage now allows the electricity generated at noon to be kept and released after dark, and the surplus of a windy night to be spent in a calm morning. The sun and the wind have not become steadier; the grid has simply learned to remember them. As storage grows cheaper each year, the old objection weakens, and countries that once treated renewables as a supplement now plan their grids around them.\n\nThe lesson reaches beyond energy. A resource dismissed as impractical is often not the problem; the missing piece is the means to store, move or manage it. Solve that, and the impractical quietly becomes ordinary.\"\n\nThe sentence \"the grid has simply learned to remember them\" means that the grid can now —",
+  "options": [
+   "reduce the demand for power",
+   "predict the weather in advance",
+   "run without any electricity",
+   "store the electricity generated and release it later"
+  ],
+  "answer": 3,
+  "explanation": "'याद रखना' यहाँ रूपक है — भंडारण के कारण ग्रिड अब बनी हुई बिजली रोककर बाद में छोड़ सकता है, जैसा अगले-पिछले वाक्य स्पष्ट करते हैं।"
+ },
+ {
+  "id": "progsr-m2-084",
+  "subject": "english",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"For a long time, the wind and the sun were thought of as unreliable helpers — useful when they were available, useless when they were not. A cloudy week or a still day could leave a solar or wind plant idle, and no grid could be built on a source that kept its own hours. This single objection, more than cost, kept renewable energy at the margin for decades.\n\nWhat has changed is not the weather but the battery. Large-scale storage now allows the electricity generated at noon to be kept and released after dark, and the surplus of a windy night to be spent in a calm morning. The sun and the wind have not become steadier; the grid has simply learned to remember them. As storage grows cheaper each year, the old objection weakens, and countries that once treated renewables as a supplement now plan their grids around them.\n\nThe lesson reaches beyond energy. A resource dismissed as impractical is often not the problem; the missing piece is the means to store, move or manage it. Solve that, and the impractical quietly becomes ordinary.\"\n\nThe wider lesson the author draws is that —",
+  "options": [
+   "renewable energy is ultimately impractical",
+   "the weather can never be predicted",
+   "an apparently impractical resource often only lacks the means to store or manage it",
+   "batteries are too expensive to be useful"
+  ],
+  "answer": 2,
+  "explanation": "अंतिम अनुच्छेद कहता है कि जिसे अव्यावहारिक मान लिया जाता है, अक्सर समस्या वह नहीं होती — कमी उसे रखने, ढोने या सँभालने के साधन की होती है।"
+ },
+ {
+  "id": "progsr-m2-085",
+  "subject": "english",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"For a long time, the wind and the sun were thought of as unreliable helpers — useful when they were available, useless when they were not. A cloudy week or a still day could leave a solar or wind plant idle, and no grid could be built on a source that kept its own hours. This single objection, more than cost, kept renewable energy at the margin for decades.\n\nWhat has changed is not the weather but the battery. Large-scale storage now allows the electricity generated at noon to be kept and released after dark, and the surplus of a windy night to be spent in a calm morning. The sun and the wind have not become steadier; the grid has simply learned to remember them. As storage grows cheaper each year, the old objection weakens, and countries that once treated renewables as a supplement now plan their grids around them.\n\nThe lesson reaches beyond energy. A resource dismissed as impractical is often not the problem; the missing piece is the means to store, move or manage it. Solve that, and the impractical quietly becomes ordinary.\"\n\nThe tone of the passage is best described as —",
+  "options": [
+   "angry and accusing",
+   "explanatory and optimistic",
+   "sorrowful and nostalgic",
+   "mocking and sarcastic"
+  ],
+  "answer": 1,
+  "explanation": "लेखक शांति से कारण समझाता है और अंत में आशा भरा निष्कर्ष देता है (\"the impractical quietly becomes ordinary\") — इसलिए स्वर व्याख्यात्मक और आशावादी है।"
+ }
+]
