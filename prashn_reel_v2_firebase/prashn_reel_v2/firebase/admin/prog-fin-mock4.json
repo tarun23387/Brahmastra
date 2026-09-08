@@ -1,0 +1,1362 @@
+[
+ {
+  "id": "progfin-m4-001",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "डेडलॉक की चार आवश्यक शर्तों में निम्न में से कौन-सी शामिल नहीं है?",
+  "options": [
+   "पारस्परिक अपवर्जन (mutual exclusion)",
+   "होल्ड एंड वेट",
+   "प्रीएम्पशन (preemption)",
+   "चक्रीय प्रतीक्षा (circular wait)"
+  ],
+  "answer": 2,
+  "explanation": "डेडलॉक की चार शर्तें हैं — पारस्परिक अपवर्जन, होल्ड-एंड-वेट, नो-प्रीएम्पशन और चक्रीय प्रतीक्षा। यानी शर्त प्रीएम्पशन नहीं, उसका न होना है; इसीलिए संसाधन छीन लेना डेडलॉक तोड़ने का उपाय भी है।"
+ },
+ {
+  "id": "progfin-m4-002",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "किस CPU शेड्यूलिंग एल्गोरिद्म में प्रत्येक प्रक्रिया को बारी-बारी एक निश्चित समय-खंड (time quantum) दिया जाता है?",
+  "options": [
+   "राउंड रॉबिन",
+   "FCFS",
+   "SJF",
+   "प्राथमिकता शेड्यूलिंग"
+  ],
+  "answer": 0,
+  "explanation": "राउंड रॉबिन में हर प्रक्रिया को एक तयशुदा समय-खंड मिलता है; उतने में काम पूरा न हो तो वह कतार के अंत में लग जाती है। यही समय-साझा (time-sharing) तंत्रों का आधार है।"
+ },
+ {
+  "id": "progfin-m4-003",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "सेमाफ़ोर पर wait (P) संक्रिया सेमाफ़ोर के मान को —",
+  "options": [
+   "दुगना कर देती है",
+   "शून्य कर देती है",
+   "एक से बढ़ाती है",
+   "एक से घटाती है"
+  ],
+  "answer": 3,
+  "explanation": "wait (P) मान को घटाती है और signal (V) बढ़ाती है। मान ऋणात्मक होने पर प्रक्रिया रुक जाती है, इसी से आपसी अपवर्जन लागू होता है।"
+ },
+ {
+  "id": "progfin-m4-004",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "बैंकर्स एल्गोरिद्म का प्रयोग डेडलॉक के किस उपाय के लिए होता है?",
+  "options": [
+   "पहचान (detection)",
+   "परिवर्जन (avoidance)",
+   "निवारण (prevention)",
+   "रिकवरी"
+  ],
+  "answer": 1,
+  "explanation": "बैंकर्स एल्गोरिद्म हर संसाधन-अनुरोध से पहले जाँचता है कि तंत्र सुरक्षित अवस्था में रहेगा या नहीं, और असुरक्षित होने पर अनुरोध टाल देता है — यह परिवर्जन है।"
+ },
+ {
+  "id": "progfin-m4-005",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "वह प्रक्रिया जो निष्पादन पूरा कर चुकी है पर जिसकी प्रविष्टि अब भी प्रोसेस टेबल में बनी है, कहलाती है —",
+  "options": [
+   "डेमन प्रक्रिया",
+   "अनाथ (orphan) प्रक्रिया",
+   "ज़ॉम्बी प्रक्रिया",
+   "चाइल्ड प्रक्रिया"
+  ],
+  "answer": 2,
+  "explanation": "ज़ॉम्बी वह प्रक्रिया है जो मर चुकी है पर पैरेंट ने अभी उसका exit status नहीं पढ़ा, इसलिए प्रविष्टि बची है। अनाथ इसके उलट है — वह ज़िंदा है पर उसका पैरेंट पहले मर गया।"
+ },
+ {
+  "id": "progfin-m4-006",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "संदर्भ-शृंखला 3, 2, 1, 0, 3, 2, 4, 3, 2, 1, 0, 4 तथा 3 फ़्रेम के लिए FIFO नीति से पेज फ़ॉल्ट की संख्या है —",
+  "options": [
+   "9",
+   "12",
+   "10",
+   "8"
+  ],
+  "answer": 0,
+  "explanation": "क्रम से लगाने पर 3,2,1,0,3,2,4 सात फ़ॉल्ट देते हैं; फिर 3 और 2 हिट; 1 और 0 फिर फ़ॉल्ट; अंत में 4 हिट। कुल 9 पेज फ़ॉल्ट।"
+ },
+ {
+  "id": "progfin-m4-007",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "थ्रैशिंग (thrashing) की स्थिति उत्पन्न होती है जब —",
+  "options": [
+   "पेज फ़ॉल्ट दर बहुत कम हो",
+   "अत्यधिक पेजिंग के कारण पेज फ़ॉल्ट दर बहुत ऊँची हो जाए",
+   "CPU रजिस्टरों का अधिक उपयोग हो",
+   "मेमोरी में बहुत कम प्रक्रियाएँ हों"
+  ],
+  "answer": 1,
+  "explanation": "थ्रैशिंग में तंत्र का अधिकांश समय पेज अंदर-बाहर करने में बीतता है और असली काम लगभग ठप हो जाता है; कारण यह है कि प्रक्रियाओं को उनके वर्किंग सेट से कम फ़्रेम मिले हैं।"
+ },
+ {
+  "id": "progfin-m4-008",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "पेजिंग (paging) में किस प्रकार का विखंडन (fragmentation) होता है?",
+  "options": [
+   "बाह्य विखंडन",
+   "आंतरिक विखंडन",
+   "दोनों बाह्य और आंतरिक",
+   "कोई विखंडन नहीं"
+  ],
+  "answer": 1,
+  "explanation": "पेजिंग बाह्य विखंडन मिटा देती है क्योंकि कोई भी खाली फ़्रेम किसी भी पेज को दिया जा सकता है; पर अंतिम पेज प्रायः पूरा नहीं भरता, इसलिए आंतरिक विखंडन रह जाता है।"
+ },
+ {
+  "id": "progfin-m4-009",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "यूनिक्स में नई प्रक्रिया बनाने वाला सिस्टम कॉल है —",
+  "options": [
+   "wait( )",
+   "exit( )",
+   "exec( )",
+   "fork( )"
+  ],
+  "answer": 3,
+  "explanation": "fork( ) चलती प्रक्रिया की हूबहू प्रति बनाकर नई चाइल्ड प्रक्रिया जन्माता है; exec( ) नई प्रक्रिया नहीं बनाता, मौजूदा के भीतर ही नया प्रोग्राम चढ़ा देता है।"
+ },
+ {
+  "id": "progfin-m4-010",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "वह फ़ाइल एक्सेस विधि जिसमें रिकॉर्ड एक के बाद एक क्रम से ही पढ़े जाते हैं, कहलाती है —",
+  "options": [
+   "अनुक्रमिक (sequential) एक्सेस",
+   "प्रत्यक्ष (direct) एक्सेस",
+   "अनुक्रमित (indexed) एक्सेस",
+   "यादृच्छिक एक्सेस"
+  ],
+  "answer": 0,
+  "explanation": "अनुक्रमिक एक्सेस में किसी रिकॉर्ड तक पहुँचने के लिए उससे पहले के सभी रिकॉर्ड पार करने पड़ते हैं — जैसे टेप में। प्रत्यक्ष एक्सेस में किसी भी रिकॉर्ड पर सीधे जाया जा सकता है।"
+ },
+ {
+  "id": "progfin-m4-011",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "यूनिक्स/लिनक्स में chmod 755 file किस अनुमति को दर्शाता है?",
+  "options": [
+   "rw- r-- r--",
+   "r-x r-x r-x",
+   "rwx r-x r-x",
+   "rwx rw- rw-"
+  ],
+  "answer": 2,
+  "explanation": "हर अंक तीन बिट है — पढ़ना 4, लिखना 2, चलाना 1। 7 = rwx (मालिक), 5 = r-x (समूह), 5 = r-x (अन्य)।"
+ },
+ {
+  "id": "progfin-m4-012",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "निम्न में से कौन-सी अंतर-प्रक्रिया संचार (IPC) की विधि नहीं है?",
+  "options": [
+   "साझा मेमोरी",
+   "संदेश कतार (message queue)",
+   "पाइप (pipe)",
+   "पेज टेबल"
+  ],
+  "answer": 3,
+  "explanation": "पाइप, साझा मेमोरी और संदेश कतार तीनों प्रक्रियाओं के बीच सूचना आदान-प्रदान की विधियाँ हैं। पेज टेबल तो आभासी पते को भौतिक पते में बदलने के लिए है, संचार से उसका कोई नाता नहीं।"
+ },
+ {
+  "id": "progfin-m4-013",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "C भाषा में निम्न कोड का निर्गत क्या होगा?\n\nint x = 4;\nprintf(\"%d\", x++ + ++x);",
+  "options": [
+   "11",
+   "9",
+   "8",
+   "10"
+  ],
+  "answer": 3,
+  "explanation": "x++ पहले 4 देता है फिर x को 5 करता है; ++x पहले x को 6 करता है फिर 6 देता है। इसलिए 4 + 6 = 10।"
+ },
+ {
+  "id": "progfin-m4-014",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "C में एक पूर्णांक सूचक (int pointer) को 1 बढ़ाने पर वह कितने बाइट आगे बढ़ता है (यदि int 4 बाइट का हो)?",
+  "options": [
+   "4 बाइट",
+   "2 बाइट",
+   "8 बाइट",
+   "1 बाइट"
+  ],
+  "answer": 0,
+  "explanation": "सूचक अंकगणित प्रकार के आकार के हिसाब से चलता है। int 4 बाइट का हो तो int सूचक को 1 बढ़ाने पर वह 4 बाइट आगे — यानी अगले पूर्णांक पर — पहुँचता है।"
+ },
+ {
+  "id": "progfin-m4-015",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "C में किसी फलन के भीतर घोषित उस चर की डिफ़ॉल्ट स्टोरेज क्लास क्या होती है जिसे कोई कीवर्ड नहीं लगाया गया?",
+  "options": [
+   "register",
+   "auto",
+   "static",
+   "extern"
+  ],
+  "answer": 1,
+  "explanation": "फलन के भीतर बिना कीवर्ड के घोषित चर स्वतः auto वर्ग का होता है — वह फलन में प्रवेश पर बनता है और बाहर निकलते ही नष्ट हो जाता है।"
+ },
+ {
+  "id": "progfin-m4-016",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "ऑब्जेक्ट ओरिएंटेड प्रोग्रामिंग में डेटा और उस पर काम करने वाले फलनों को एक इकाई में बाँधना कहलाता है —",
+  "options": [
+   "पॉलीमॉर्फ़िज़्म",
+   "अमूर्तन (abstraction)",
+   "एनकैप्सुलेशन",
+   "इनहेरिटेंस"
+  ],
+  "answer": 2,
+  "explanation": "डेटा और उससे जुड़े फलनों को एक वर्ग में समेट देना संवृतिकरण (encapsulation) है; इससे डेटा बाहरी दख़ल से सुरक्षित रहता है। विरासत और बहुरूपता अलग स्तंभ हैं।"
+ },
+ {
+  "id": "progfin-m4-017",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "C++ में समान नाम के कई फलन, जिनके प्राचल भिन्न हों, बनाना कहलाता है —",
+  "options": [
+   "रिकर्शन",
+   "फंक्शन ओवरलोडिंग",
+   "इनहेरिटेंस",
+   "फंक्शन ओवरराइडिंग"
+  ],
+  "answer": 1,
+  "explanation": "एक ही नाम पर भिन्न प्राचलों वाले कई फलन बनाना ओवरलोडिंग है — कौन-सा चलेगा यह कंपाइलर संकलन के समय तय कर देता है। ओवरराइडिंग व्युत्पन्न वर्ग में आधार-फलन को फिर से लिखना है।"
+ },
+ {
+  "id": "progfin-m4-018",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "C++ में कंस्ट्रक्टर के संबंध में सही कथन है —",
+  "options": [
+   "यह वस्तु के नष्ट होने पर चलता है",
+   "यह सदैव void लौटाता है",
+   "एक वर्ग में केवल एक कंस्ट्रक्टर हो सकता है",
+   "इसका नाम वर्ग जैसा होता है और कोई प्रतिफल प्रकार नहीं होता"
+  ],
+  "answer": 3,
+  "explanation": "कंस्ट्रक्टर का नाम वर्ग के नाम जैसा ही होता है और उसका कोई प्रतिफल प्रकार नहीं होता — void भी नहीं। वह वस्तु बनते समय चलता है और ओवरलोड भी किया जा सकता है।"
+ },
+ {
+  "id": "progfin-m4-019",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "जावा में किसी वर्ग से विरासत लेने के लिए प्रयुक्त कीवर्ड है —",
+  "options": [
+   "extends",
+   "implements",
+   "import",
+   "inherits"
+  ],
+  "answer": 0,
+  "explanation": "वर्ग से वर्ग की विरासत के लिए extends लगता है; इंटरफ़ेस लागू करने के लिए implements। inherits जावा का कीवर्ड ही नहीं।"
+ },
+ {
+  "id": "progfin-m4-020",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "जावा में बाइटकोड को चलाने वाला घटक है —",
+  "options": [
+   "गार्बेज कलेक्टर",
+   "कंपाइलर (javac)",
+   "JVM (Java Virtual Machine)",
+   "क्लास लोडर"
+  ],
+  "answer": 2,
+  "explanation": "javac स्रोत को बाइटकोड में बदलता है, और उस बाइटकोड को हर मंच पर वहाँ का JVM चलाता है — यही जावा की मंच-स्वतंत्रता की जड़ है।"
+ },
+ {
+  "id": "progfin-m4-021",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "जावास्क्रिप्ट में DOM (Document Object Model) का उपयोग होता है —",
+  "options": [
+   "फ़ाइल संपीड़न में",
+   "सर्वर चलाने में",
+   "डेटाबेस से जुड़ने में",
+   "HTML पेज के तत्वों तक पहुँचने और उन्हें बदलने में"
+  ],
+  "answer": 3,
+  "explanation": "DOM पेज को वस्तुओं के वृक्ष के रूप में दिखाता है, जिससे जावास्क्रिप्ट किसी तत्व को खोज, बदल या हटा सकती है — जैसे document.getElementById()।"
+ },
+ {
+  "id": "progfin-m4-022",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "पर्ल (Perl) में हैश (hash) चर किस चिह्न से आरंभ होता है?",
+  "options": [
+   "@",
+   "%",
+   "$",
+   "&"
+  ],
+  "answer": 1,
+  "explanation": "पर्ल में चिह्न से ही प्रकार पता चलता है — $ स्केलर, @ ऐरे और % हैश (कुंजी-मान युग्मों का संग्रह)।"
+ },
+ {
+  "id": "progfin-m4-023",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "क्लाइंट-साइड स्क्रिप्टिंग भाषा का उदाहरण है —",
+  "options": [
+   "जावास्क्रिप्ट",
+   "ASP.NET",
+   "JSP",
+   "PHP"
+  ],
+  "answer": 0,
+  "explanation": "जावास्क्रिप्ट मुख्यतः ब्राउज़र (क्लाइंट) में चलती है; PHP, ASP.NET और JSP सर्वर पर चलकर तैयार HTML भेजते हैं।"
+ },
+ {
+  "id": "progfin-m4-024",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "समस्या-समाधान में चरणों को चित्रों (आयत, समचतुर्भुज आदि) से दर्शाने वाली विधि है —",
+  "options": [
+   "स्यूडोकोड",
+   "डिबगिंग",
+   "फ़्लोचार्ट",
+   "एल्गोरिद्म"
+  ],
+  "answer": 2,
+  "explanation": "फ़्लोचार्ट (प्रवाह-चित्र) चरणों को मानक संकेतों से दिखाता है — आयत प्रक्रमण, समचतुर्भुज निर्णय, समांतर चतुर्भुज इनपुट/आउटपुट। एल्गोरिद्म शब्दों में लिखा क्रम है।"
+ },
+ {
+  "id": "progfin-m4-025",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "निम्न में से कौन-सी डेटा संरचना LIFO सिद्धांत पर काम करती है?",
+  "options": [
+   "लिंक्ड लिस्ट",
+   "कतार (queue)",
+   "ट्री",
+   "स्टैक"
+  ],
+  "answer": 3,
+  "explanation": "स्टैक 'अंत में आया, पहले गया' (LIFO) पर चलता है — push और pop दोनों एक ही सिरे से होते हैं। कतार FIFO पर चलती है।"
+ },
+ {
+  "id": "progfin-m4-026",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "पूर्णतः भरे हुए n तत्वों के क्रमित (sorted) ऐरे में द्विआधारी खोज (binary search) की सबसे खराब स्थिति में जटिलता है —",
+  "options": [
+   "O(log n)",
+   "O(n log n)",
+   "O(1)",
+   "O(n)"
+  ],
+  "answer": 0,
+  "explanation": "द्विआधारी खोज हर चरण में खोज-क्षेत्र आधा कर देती है, इसलिए सबसे खराब स्थिति में भी लगभग log₂n तुलनाएँ लगती हैं — O(log n)। पर इसके लिए ऐरे का क्रमित होना ज़रूरी है।"
+ },
+ {
+  "id": "progfin-m4-027",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "डेटाबेस में वह गुण जो किसी अन्य तालिका की प्राथमिक कुंजी की ओर संकेत करता है, कहलाता है —",
+  "options": [
+   "सुपर कुंजी",
+   "कैंडिडेट कुंजी",
+   "विदेशी कुंजी (foreign key)",
+   "संयुक्त कुंजी"
+  ],
+  "answer": 2,
+  "explanation": "किसी तालिका का वह गुण जो दूसरी तालिका की प्राथमिक कुंजी की ओर इंगित करता है, विदेशी कुंजी है — यही दो तालिकाओं के बीच संबंध बनाए रखता है।"
+ },
+ {
+  "id": "progfin-m4-028",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "एक संबंध 2NF में है और उसमें कोई सकर्मक (transitive) निर्भरता नहीं है — तो वह किस सामान्य रूप में है?",
+  "options": [
+   "4NF",
+   "3NF",
+   "BCNF",
+   "1NF"
+  ],
+  "answer": 1,
+  "explanation": "3NF की परिभाषा यही है — संबंध 2NF में हो और कोई अकुंजी गुण कुंजी पर सकर्मक रूप से निर्भर न हो।"
+ },
+ {
+  "id": "progfin-m4-029",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "किसी लेनदेन (transaction) का 'या तो पूरा हो या बिलकुल न हो' वाला गुण कहलाता है —",
+  "options": [
+   "विलगन (isolation)",
+   "परमाणुकता (atomicity)",
+   "टिकाऊपन (durability)",
+   "संगति (consistency)"
+  ],
+  "answer": 1,
+  "explanation": "परमाणुकता का अर्थ है — लेनदेन अविभाज्य है; बीच में बिजली जाए तो अधूरा काम पलट दिया जाता है। यह ACID गुणों में पहला है।"
+ },
+ {
+  "id": "progfin-m4-030",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "SQL में समूह (GROUP BY से बने) पर शर्त लगाने के लिए प्रयुक्त उपवाक्य है —",
+  "options": [
+   "WHERE",
+   "ORDER BY",
+   "HAVING",
+   "GROUP"
+  ],
+  "answer": 2,
+  "explanation": "WHERE समूह बनने से पहले पंक्तियाँ छाँटता है; समूह बन जाने के बाद उन पर शर्त लगानी हो तो HAVING लगता है — इसीलिए समुच्चय फलन WHERE में नहीं चलते।"
+ },
+ {
+  "id": "progfin-m4-031",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "दो तालिकाओं की केवल मेल खाती पंक्तियाँ लौटाने वाला जॉइन है —",
+  "options": [
+   "INNER JOIN",
+   "FULL OUTER JOIN",
+   "RIGHT OUTER JOIN",
+   "LEFT OUTER JOIN"
+  ],
+  "answer": 0,
+  "explanation": "INNER JOIN केवल वे पंक्तियाँ देता है जिनका दोनों तालिकाओं में मेल हो। OUTER जॉइन बेमेल पंक्तियों को भी NULL भरकर रखते हैं।"
+ },
+ {
+  "id": "progfin-m4-032",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "SQL में तालिका से पंक्तियाँ हटाने पर उसकी संरचना बनाए रखते हुए, प्रयुक्त कमांड है —",
+  "options": [
+   "REMOVE",
+   "DROP",
+   "ERASE",
+   "DELETE"
+  ],
+  "answer": 3,
+  "explanation": "DELETE पंक्तियाँ हटाता है पर तालिका की संरचना बनी रहती है (और शर्त के साथ चुनी पंक्तियाँ भी हटाई जा सकती हैं)। DROP तो पूरी तालिका ही मिटा देता है।"
+ },
+ {
+  "id": "progfin-m4-033",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "MS-Access में डेटा वास्तव में किस ऑब्जेक्ट में संग्रहीत होता है?",
+  "options": [
+   "फ़ॉर्म",
+   "क्वेरी",
+   "रिपोर्ट",
+   "टेबल"
+  ],
+  "answer": 3,
+  "explanation": "तालिका (table) ही आँकड़े रखती है; क्वेरी छाँटती है, फ़ॉर्म प्रविष्टि के लिए है और रिपोर्ट छपाई-योग्य प्रस्तुति देती है।"
+ },
+ {
+  "id": "progfin-m4-034",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "PHP में प्रत्येक चर का नाम किस चिह्न से आरंभ होता है?",
+  "options": [
+   "@",
+   "#",
+   "$",
+   "&"
+  ],
+  "answer": 2,
+  "explanation": "PHP में हर चर $ से शुरू होता है, जैसे $name। यह भाषा का नियम है।"
+ },
+ {
+  "id": "progfin-m4-035",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "MVC आर्किटेक्चर में उपयोगकर्ता के इनपुट को लेकर मॉडल को बदलने वाला घटक है —",
+  "options": [
+   "कंट्रोलर",
+   "मॉडल",
+   "व्यू",
+   "राउटर"
+  ],
+  "answer": 0,
+  "explanation": "मॉडल आँकड़े और नियम रखता है, व्यू उन्हें दिखाता है, और उपयोगकर्ता का इनपुट लेकर मॉडल बदलने का काम कंट्रोलर करता है।"
+ },
+ {
+  "id": "progfin-m4-036",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "ASP.NET और IIS किस कंपनी की प्रौद्योगिकियाँ हैं?",
+  "options": [
+   "Apache Foundation",
+   "Microsoft",
+   "Oracle",
+   "Google"
+  ],
+  "answer": 1,
+  "explanation": "ASP.NET (.NET मंच) और IIS वेब सर्वर — दोनों माइक्रोसॉफ़्ट के हैं और विंडोज़ सर्वर के साथ आते हैं।"
+ },
+ {
+  "id": "progfin-m4-037",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "HTTPS की डिफ़ॉल्ट पोर्ट संख्या है —",
+  "options": [
+   "25",
+   "443",
+   "80",
+   "21"
+  ],
+  "answer": 1,
+  "explanation": "HTTP का डिफ़ॉल्ट पोर्ट 80 है और HTTPS का 443। 21 FTP का, 25 SMTP का है।"
+ },
+ {
+  "id": "progfin-m4-038",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "निम्न में से कौन-सा प्रोटोकॉल ई-मेल भेजने के लिए प्रयुक्त होता है?",
+  "options": [
+   "IMAP",
+   "SNMP",
+   "SMTP",
+   "POP3"
+  ],
+  "answer": 2,
+  "explanation": "SMTP डाक भेजने का प्रोटोकॉल है; सर्वर से डाक उतारने के लिए POP3 या IMAP प्रयोग होते हैं।"
+ },
+ {
+  "id": "progfin-m4-039",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "DNS का मुख्य कार्य है —",
+  "options": [
+   "डेटा एन्क्रिप्ट करना",
+   "गतिशील रूप से IP पते बाँटना",
+   "IP पते को MAC पते में बदलना",
+   "डोमेन नाम को IP पते में बदलना"
+  ],
+  "answer": 3,
+  "explanation": "DNS डोमेन नाम को IP पते में बदलता है। IP से MAC निकालना ARP का काम है और IP पते बाँटना DHCP का।"
+ },
+ {
+  "id": "progfin-m4-040",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "सॉकेट प्रोग्रामिंग में संबंध-रहित (connectionless) संचार किसके द्वारा उपलब्ध होता है?",
+  "options": [
+   "UDP",
+   "ICMP",
+   "ARP",
+   "TCP"
+  ],
+  "answer": 0,
+  "explanation": "UDP संबंध-रहित है — हाथ मिलाए बिना डेटाग्राम भेज देता है, इसलिए तेज़ पर अविश्वसनीय। TCP पहले संबंध बनाता है।"
+ },
+ {
+  "id": "progfin-m4-041",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "किसी नेटवर्क में उपकरणों को अपने आप IP पता बाँटने वाला प्रोटोकॉल है —",
+  "options": [
+   "DNS",
+   "HTTP",
+   "DHCP",
+   "FTP"
+  ],
+  "answer": 2,
+  "explanation": "DHCP नेटवर्क में जुड़ते ही उपकरण को IP पता, गेटवे और DNS की जानकारी अपने आप दे देता है।"
+ },
+ {
+  "id": "progfin-m4-042",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "HTML में हाइपरलिंक बनाने वाला टैग है —",
+  "options": [
+   "<href>",
+   "<a>",
+   "<url>",
+   "<link>"
+  ],
+  "answer": 1,
+  "explanation": "<a> (anchor) टैग हाइपरलिंक बनाता है, और उसका href गुण बताता है कि कड़ी कहाँ ले जाएगी। <link> बाहरी संसाधन (जैसे CSS) जोड़ने के लिए है।"
+ },
+ {
+  "id": "progfin-m4-043",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "HTML में क्रमित (numbered) सूची बनाने वाला टैग है —",
+  "options": [
+   "<li>",
+   "<ul>",
+   "<dl>",
+   "<ol>"
+  ],
+  "answer": 3,
+  "explanation": "<ol> क्रमित (संख्या वाली) सूची बनाता है और <ul> अक्रमित (बुलेट)। दोनों के भीतर हर मद <li> से लिखी जाती है।"
+ },
+ {
+  "id": "progfin-m4-044",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "HTML दस्तावेज़ में तालिका बनाने वाला मुख्य टैग है —",
+  "options": [
+   "<table>",
+   "<grid>",
+   "<tr>",
+   "<tab>"
+  ],
+  "answer": 0,
+  "explanation": "तालिका <table> से बनती है; उसके भीतर <tr> पंक्ति, <th> शीर्ष-कोष्ठ और <td> सामान्य कोष्ठ बनाते हैं।"
+ },
+ {
+  "id": "progfin-m4-045",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "MS-Excel में सेल संदर्भ $A$1 किस प्रकार का है?",
+  "options": [
+   "निरपेक्ष (absolute)",
+   "वृत्तीय (circular)",
+   "सापेक्ष (relative)",
+   "मिश्रित (mixed)"
+  ],
+  "answer": 0,
+  "explanation": "$ चिह्न स्तंभ और पंक्ति दोनों को जमा देता है, इसलिए $A$1 निरपेक्ष संदर्भ है — सूत्र कहीं भी नक़ल कीजिए, संदर्भ वही रहेगा। $A1 या A$1 मिश्रित होते।"
+ },
+ {
+  "id": "progfin-m4-046",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "MS-Word में चयनित पाठ को इटैलिक (तिरछा) करने का शॉर्टकट है —",
+  "options": [
+   "Ctrl + B",
+   "Ctrl + I",
+   "Ctrl + T",
+   "Ctrl + U"
+  ],
+  "answer": 1,
+  "explanation": "Ctrl + I इटैलिक करता है, Ctrl + B बोल्ड और Ctrl + U रेखांकित।"
+ },
+ {
+  "id": "progfin-m4-047",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "किस SDLC मॉडल में चरण सख़्ती से नीचे की ओर बहते हैं और आवश्यकताओं का आरंभ में ही स्पष्ट व स्थिर होना अपेक्षित है?",
+  "options": [
+   "एजाइल मॉडल",
+   "प्रोटोटाइप मॉडल",
+   "स्पाइरल मॉडल",
+   "वॉटरफ़ॉल मॉडल"
+  ],
+  "answer": 3,
+  "explanation": "जलप्रपात (waterfall) मॉडल में हर चरण अगले में झरने की तरह उतरता है और पीछे लौटना कठिन है, इसलिए वह तभी ठीक बैठता है जब आवश्यकताएँ आरंभ में ही स्पष्ट हों।"
+ },
+ {
+  "id": "progfin-m4-048",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "नक़ली ईमेल या वेबसाइट के ज़रिए किसी की गोपनीय जानकारी निकालना कहलाता है —",
+  "options": [
+   "स्पूलिंग",
+   "स्पूफ़िंग",
+   "फ़िशिंग",
+   "कैशिंग"
+  ],
+  "answer": 2,
+  "explanation": "फ़िशिंग में हमलावर किसी विश्वसनीय संस्था का रूप धरकर नक़ली संदेश या पन्ने से पासवर्ड, OTP आदि उगलवा लेता है।"
+ },
+ {
+  "id": "progfin-m4-049",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "भारत में इलेक्ट्रॉनिक अभिलेखों और डिजिटल हस्ताक्षर को कानूनी मान्यता देने वाला अधिनियम है —",
+  "options": [
+   "भारतीय टेलीग्राफ अधिनियम, 1885",
+   "सूचना का अधिकार अधिनियम, 2005",
+   "सूचना प्रौद्योगिकी अधिनियम, 2000",
+   "कॉपीराइट अधिनियम, 1957"
+  ],
+  "answer": 2,
+  "explanation": "सूचना प्रौद्योगिकी अधिनियम, 2000 (IT Act) इलेक्ट्रॉनिक अभिलेखों और डिजिटल हस्ताक्षर को कानूनी दर्जा देता है और साइबर अपराधों के लिए दंड तय करता है।"
+ },
+ {
+  "id": "progfin-m4-050",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "क्लाउड कंप्यूटिंग में तैयार सॉफ़्टवेयर इंटरनेट पर उपलब्ध कराने वाला सेवा-मॉडल है —",
+  "options": [
+   "SaaS",
+   "IaaS",
+   "PaaS",
+   "DaaS"
+  ],
+  "answer": 0,
+  "explanation": "SaaS में तैयार सॉफ़्टवेयर ब्राउज़र से ही इस्तेमाल होता है (जैसे Gmail), कुछ स्थापित नहीं करना पड़ता। IaaS कच्चा अवसंरचना देता है और PaaS विकास का मंच।"
+ },
+ {
+  "id": "progfin-m4-051",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "शृंखला का अगला पद ज्ञात कीजिए: 2, 5, 10, 17, 26, ?",
+  "options": [
+   "35",
+   "38",
+   "36",
+   "37"
+  ],
+  "answer": 3,
+  "explanation": "अंतर क्रमशः 3, 5, 7, 9 हैं, इसलिए अगला अंतर 11 होगा — 26 + 11 = 37। (पद n² + 1 के रूप में भी हैं: छठा पद 6² + 1 = 37।)"
+ },
+ {
+  "id": "progfin-m4-052",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "यदि CAT को 3-1-20 लिखा जाता है, तो DOG को लिखा जाएगा —",
+  "options": [
+   "3-15-7",
+   "4-15-7",
+   "4-14-7",
+   "4-15-8"
+  ],
+  "answer": 1,
+  "explanation": "हर अक्षर उसकी वर्णमाला-स्थिति से लिखा गया है: D=4, O=15, G=7, इसलिए DOG = 4-15-7।"
+ },
+ {
+  "id": "progfin-m4-053",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "किसी सांकेतिक भाषा में यदि '+' का अर्थ '−', '−' का अर्थ '×', '×' का अर्थ '÷' और '÷' का अर्थ '+' हो, तो 6 ÷ 2 + 3 × 3 = ?",
+  "options": [
+   "8",
+   "6",
+   "9",
+   "7"
+  ],
+  "answer": 3,
+  "explanation": "चिह्न बदलने पर व्यंजक बनता है 6 + 2 − 3 ÷ 3। BODMAS से: 3÷3 = 1 → 6 + 2 − 1 = 7।"
+ },
+ {
+  "id": "progfin-m4-054",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "A, B का पिता है। C, A की पत्नी है। D, C का इकलौता पुत्र है। D का B से क्या संबंध है?",
+  "options": [
+   "पुत्र",
+   "भाई",
+   "पिता",
+   "चाचा"
+  ],
+  "answer": 1,
+  "explanation": "A और C माता-पिता हैं; B और D दोनों उनकी संतानें हैं। इसलिए D, B का भाई है।"
+ },
+ {
+  "id": "progfin-m4-055",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "एक व्यक्ति पूर्व की ओर 10 मीटर चलता है, फिर दाएँ मुड़कर 10 मीटर, फिर दाएँ मुड़कर 10 मीटर चलता है। अब उसका मुख किस दिशा में है?",
+  "options": [
+   "पूर्व",
+   "दक्षिण",
+   "पश्चिम",
+   "उत्तर"
+  ],
+  "answer": 2,
+  "explanation": "पूर्व की ओर मुँह करके दाएँ मुड़ने पर दक्षिण, फिर दाएँ मुड़ने पर पश्चिम — तीसरी बार चलने के बाद उसका मुख पश्चिम की ओर है।"
+ },
+ {
+  "id": "progfin-m4-056",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "कथन: सभी शिक्षक विद्वान हैं। कुछ विद्वान लेखक हैं।\n\nनिष्कर्ष:\nI. कुछ शिक्षक लेखक हैं।\nII. कुछ विद्वान शिक्षक हैं।",
+  "options": [
+   "केवल I निकलता है",
+   "केवल II निकलता है",
+   "दोनों निकलते हैं",
+   "कोई नहीं निकलता"
+  ],
+  "answer": 1,
+  "explanation": "जो विद्वान लेखक हैं वे शिक्षक भी हों, यह ज़रूरी नहीं — इसलिए I नहीं निकलता। 'सभी शिक्षक विद्वान हैं' का वैध परिवर्तन है 'कुछ विद्वान शिक्षक हैं' — II निकलता है।"
+ },
+ {
+  "id": "progfin-m4-057",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "6 बजे घड़ी की दोनों सुइयों के बीच का कोण है —",
+  "options": [
+   "180°",
+   "150°",
+   "90°",
+   "120°"
+  ],
+  "answer": 0,
+  "explanation": "6 बजे घंटे की सुई 6 पर और मिनट की सुई 12 पर होती है — दोनों ठीक आमने-सामने, इसलिए बीच का कोण 180° है।"
+ },
+ {
+  "id": "progfin-m4-058",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "यदि किसी माह की 3 तारीख़ को रविवार है, तो उसी माह की 24 तारीख़ को कौन-सा दिन होगा?",
+  "options": [
+   "शुक्रवार",
+   "शनिवार",
+   "सोमवार",
+   "रविवार"
+  ],
+  "answer": 3,
+  "explanation": "24 − 3 = 21 दिन का अंतर है, और 21, 7 से पूरा-पूरा विभाजित है, इसलिए वही दिन दोहराएगा — रविवार।"
+ },
+ {
+  "id": "progfin-m4-059",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "पाँच मित्र P, Q, R, S, T एक पंक्ति में उत्तर की ओर मुँह करके बैठे हैं। R ठीक बीच में है। P, R के तुरंत बाएँ है। T सबसे दाएँ छोर पर है। Q, P के बाएँ है। सबसे बाएँ छोर पर कौन है?",
+  "options": [
+   "Q",
+   "T",
+   "S",
+   "P"
+  ],
+  "answer": 0,
+  "explanation": "R बीच (तीसरे) स्थान पर; P उसके तुरंत बाएँ (दूसरे) पर; Q, P के बाएँ यानी पहले स्थान पर; T सबसे दाएँ (पाँचवें) पर; बचा S चौथे पर। क्रम Q, P, R, S, T — सबसे बाएँ Q है।"
+ },
+ {
+  "id": "progfin-m4-060",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "सादृश्य पूर्ण कीजिए: कवि : कविता :: मूर्तिकार : ?",
+  "options": [
+   "छेनी",
+   "पत्थर",
+   "मूर्ति",
+   "कला"
+  ],
+  "answer": 2,
+  "explanation": "कवि जो रचता है वह कविता है; उसी तरह मूर्तिकार जो रचता है वह मूर्ति है। पत्थर और छेनी तो साधन हैं, रचना नहीं।"
+ },
+ {
+  "id": "progfin-m4-061",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "विषम को पहचानिए: 8, 27, 64, 100, 125",
+  "options": [
+   "27",
+   "100",
+   "125",
+   "64"
+  ],
+  "answer": 1,
+  "explanation": "8 = 2³, 27 = 3³, 64 = 4³, 125 = 5³ — सभी पूर्ण घन हैं; केवल 100 पूर्ण घन नहीं (वह पूर्ण वर्ग है), इसलिए वही विषम है।"
+ },
+ {
+  "id": "progfin-m4-062",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "30 विद्यार्थियों की पंक्ति में सीता ऊपर से 12वें स्थान पर है। नीचे से उसका स्थान क्या है?",
+  "options": [
+   "18वाँ",
+   "20वाँ",
+   "19वाँ",
+   "17वाँ"
+  ],
+  "answer": 2,
+  "explanation": "नीचे से स्थान = कुल − ऊपर से स्थान + 1 = 30 − 12 + 1 = 19वाँ। एक जोड़ना इसलिए ज़रूरी है कि सीता दोनों गिनतियों में आती है।"
+ },
+ {
+  "id": "progfin-m4-063",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "लुप्त संख्या ज्ञात कीजिए:\n\n(6, 4, 24)\n(8, 5, 40)\n(7, 3, ?)",
+  "options": [
+   "21",
+   "18",
+   "28",
+   "24"
+  ],
+  "answer": 0,
+  "explanation": "हर पंक्ति में पहले दो अंकों का गुणनफल तीसरा है: 6×4 = 24, 8×5 = 40, इसलिए 7×3 = 21।"
+ },
+ {
+  "id": "progfin-m4-064",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "किसी कूट में COMPUTER को RFUVQNPC लिखा जाता है, तो इसी कूट में शब्द को उलटकर लिखने का नियम है — MEDICINE को कैसे लिखा जाएगा?",
+  "options": [
+   "EDICINEM",
+   "MEDICINE",
+   "NICIDEME",
+   "ENICIDEM"
+  ],
+  "answer": 3,
+  "explanation": "COMPUTER → RFUVQNPC में अक्षरों का क्रम उलटा है (R…E→…) — यानी नियम है 'शब्द को उल्टा लिखो'। इसलिए MEDICINE का उल्टा ENICIDEM होगा।"
+ },
+ {
+  "id": "progfin-m4-065",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "निम्न शब्दों को शब्दकोश (dictionary) क्रम में लगाइए:\n1. Market  2. Marble  3. March  4. Margin",
+  "options": [
+   "2, 3, 4, 1",
+   "1, 2, 3, 4",
+   "2, 4, 3, 1",
+   "3, 2, 4, 1"
+  ],
+  "answer": 0,
+  "explanation": "चारों 'Mar' से शुरू होते हैं; चौथा अक्षर देखिए — Marble (b), March (c), Margin (g), Market (k)। b < c < g < k, इसलिए क्रम 2, 3, 4, 1।"
+ },
+ {
+  "id": "progfin-m4-066",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "एक वस्तु ₹800 में ख़रीदकर ₹920 में बेची जाती है। लाभ प्रतिशत है —",
+  "options": [
+   "18%",
+   "12%",
+   "15%",
+   "20%"
+  ],
+  "answer": 2,
+  "explanation": "लाभ = 920 − 800 = ₹120। लाभ प्रतिशत = (120 ÷ 800) × 100 = 15%।"
+ },
+ {
+  "id": "progfin-m4-067",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "दो संख्याओं का अनुपात 4 : 5 है और उनका योग 63 है। बड़ी संख्या है —",
+  "options": [
+   "30",
+   "35",
+   "28",
+   "40"
+  ],
+  "answer": 1,
+  "explanation": "भाग 4x और 5x मानिए; 9x = 63 → x = 7। बड़ी संख्या = 5x = 35।"
+ },
+ {
+  "id": "progfin-m4-068",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "एक कार 60 किमी/घंटा की चाल से 2.5 घंटे में कितनी दूरी तय करेगी?",
+  "options": [
+   "135 किमी",
+   "120 किमी",
+   "180 किमी",
+   "150 किमी"
+  ],
+  "answer": 3,
+  "explanation": "दूरी = चाल × समय = 60 × 2.5 = 150 किमी।"
+ },
+ {
+  "id": "progfin-m4-069",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "₹6,000 पर 8% वार्षिक दर से 3 वर्ष का साधारण ब्याज है —",
+  "options": [
+   "₹1,480",
+   "₹1,500",
+   "₹1,400",
+   "₹1,440"
+  ],
+  "answer": 3,
+  "explanation": "साधारण ब्याज = (मूलधन × दर × समय) ÷ 100 = (6000 × 8 × 3) ÷ 100 = ₹1,440।"
+ },
+ {
+  "id": "progfin-m4-070",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "पहली 10 प्राकृत संख्याओं का औसत है —",
+  "options": [
+   "5",
+   "6",
+   "5.5",
+   "4.5"
+  ],
+  "answer": 2,
+  "explanation": "1 से 10 का योग = 55; औसत = 55 ÷ 10 = 5.5।"
+ },
+ {
+  "id": "progfin-m4-071",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "A किसी कार्य को 20 दिन में और B उसे 30 दिन में पूरा करता है। दोनों मिलकर उसे कितने दिन में पूरा करेंगे?",
+  "options": [
+   "12 दिन",
+   "15 दिन",
+   "10 दिन",
+   "18 दिन"
+  ],
+  "answer": 0,
+  "explanation": "एक दिन का काम = 1/20 + 1/30 = 3/60 + 2/60 = 5/60 = 1/12। इसलिए मिलकर पूरा काम 12 दिन में होगा।"
+ },
+ {
+  "id": "progfin-m4-072",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "एक आयत की लंबाई 12 सेमी और चौड़ाई 5 सेमी है। इसका विकर्ण है —",
+  "options": [
+   "17 सेमी",
+   "13 सेमी",
+   "11 सेमी",
+   "15 सेमी"
+  ],
+  "answer": 1,
+  "explanation": "विकर्ण = √(लंबाई² + चौड़ाई²) = √(144 + 25) = √169 = 13 सेमी (5-12-13 पाइथागोरस त्रिक)।"
+ },
+ {
+  "id": "progfin-m4-073",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "52 पत्तों की गड्डी से एक पत्ता निकाला जाता है। उसके इक्का (ace) होने की प्रायिकता है —",
+  "options": [
+   "4/13",
+   "1/4",
+   "1/52",
+   "1/13"
+  ],
+  "answer": 3,
+  "explanation": "गड्डी में 4 इक्के हैं, इसलिए प्रायिकता = 4/52 = 1/13।"
+ },
+ {
+  "id": "progfin-m4-074",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "यदि 5x − 3 = 2x + 12 हो, तो x का मान है —",
+  "options": [
+   "5",
+   "4",
+   "6",
+   "3"
+  ],
+  "answer": 0,
+  "explanation": "5x − 2x = 12 + 3 → 3x = 15 → x = 5।"
+ },
+ {
+  "id": "progfin-m4-075",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "दो संख्याओं का म.स. (HCF) 6 और ल.स. (LCM) 72 है। यदि एक संख्या 24 है, तो दूसरी है —",
+  "options": [
+   "12",
+   "18",
+   "36",
+   "9"
+  ],
+  "answer": 1,
+  "explanation": "दो संख्याओं का गुणनफल = म.स. × ल.स. = 6 × 72 = 432। दूसरी संख्या = 432 ÷ 24 = 18।"
+ },
+ {
+  "id": "progfin-m4-076",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"When a government moves a service online, it usually measures success by counting transactions — how many forms were filed, how many payments made. By that measure, almost every such project can be called a success. But a number that only ever rises tells you little about the people it leaves out.\n\nConsider a pension paid into a bank account rather than handed over a counter. For most, this is faster and safer. But for an elderly claimant in a village with no nearby branch, no smartphone and no relative to help, the same reform can turn a simple monthly ritual into a day-long journey. The transaction is still counted as completed; the hardship behind it is not.\n\nA fair test of digital government, then, is not how many people it serves well, but how it treats the few it serves badly. A system designed only for the confident user quietly punishes everyone else, and calls the result progress.\"\n\nBy what measure do governments usually judge an online service, according to the passage?",
+  "options": [
+   "the cost of running the service",
+   "the satisfaction of elderly users",
+   "the number of transactions completed",
+   "the speed of the internet connection"
+  ],
+  "answer": 2,
+  "explanation": "पहले अनुच्छेद में लिखा है सरकार सफलता 'by counting transactions' नापती है — कितने फ़ॉर्म भरे, कितने भुगतान हुए।"
+ },
+ {
+  "id": "progfin-m4-077",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"When a government moves a service online, it usually measures success by counting transactions — how many forms were filed, how many payments made. By that measure, almost every such project can be called a success. But a number that only ever rises tells you little about the people it leaves out.\n\nConsider a pension paid into a bank account rather than handed over a counter. For most, this is faster and safer. But for an elderly claimant in a village with no nearby branch, no smartphone and no relative to help, the same reform can turn a simple monthly ritual into a day-long journey. The transaction is still counted as completed; the hardship behind it is not.\n\nA fair test of digital government, then, is not how many people it serves well, but how it treats the few it serves badly. A system designed only for the confident user quietly punishes everyone else, and calls the result progress.\"\n\nThe example of the pension is used to show that —",
+  "options": [
+   "elderly people dislike technology",
+   "banks are always safer than counters",
+   "a reform helpful to most can create hardship for some",
+   "villages should not have bank accounts"
+  ],
+  "answer": 2,
+  "explanation": "पेंशन का उदाहरण यही दिखाता है कि जो सुधार अधिकांश के लिए सुविधाजनक है, वही किसी बुज़ुर्ग ग्रामीण के लिए कठिनाई बन सकता है।"
+ },
+ {
+  "id": "progfin-m4-078",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"When a government moves a service online, it usually measures success by counting transactions — how many forms were filed, how many payments made. By that measure, almost every such project can be called a success. But a number that only ever rises tells you little about the people it leaves out.\n\nConsider a pension paid into a bank account rather than handed over a counter. For most, this is faster and safer. But for an elderly claimant in a village with no nearby branch, no smartphone and no relative to help, the same reform can turn a simple monthly ritual into a day-long journey. The transaction is still counted as completed; the hardship behind it is not.\n\nA fair test of digital government, then, is not how many people it serves well, but how it treats the few it serves badly. A system designed only for the confident user quietly punishes everyone else, and calls the result progress.\"\n\nWhat does the phrase \"the hardship behind it is not\" imply?",
+  "options": [
+   "the difficulty faced by the claimant goes unrecorded",
+   "the pension is never actually paid",
+   "the journey is enjoyable",
+   "the bank charges a hidden fee"
+  ],
+  "answer": 0,
+  "explanation": "आशय यह है कि लेनदेन तो 'पूर्ण' गिन लिया जाता है, पर उसके पीछे की कठिनाई किसी आँकड़े में दर्ज नहीं होती।"
+ },
+ {
+  "id": "progfin-m4-079",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"When a government moves a service online, it usually measures success by counting transactions — how many forms were filed, how many payments made. By that measure, almost every such project can be called a success. But a number that only ever rises tells you little about the people it leaves out.\n\nConsider a pension paid into a bank account rather than handed over a counter. For most, this is faster and safer. But for an elderly claimant in a village with no nearby branch, no smartphone and no relative to help, the same reform can turn a simple monthly ritual into a day-long journey. The transaction is still counted as completed; the hardship behind it is not.\n\nA fair test of digital government, then, is not how many people it serves well, but how it treats the few it serves badly. A system designed only for the confident user quietly punishes everyone else, and calls the result progress.\"\n\nAccording to the author, a fair test of digital government is —",
+  "options": [
+   "how fast the forms are processed",
+   "how many people it serves well",
+   "how much money it saves",
+   "how it treats the few it serves badly"
+  ],
+  "answer": 3,
+  "explanation": "अंतिम अनुच्छेद स्पष्ट कहता है कि सच्ची कसौटी यह है कि तंत्र उन थोड़े लोगों के साथ कैसा बर्ताव करता है जिन्हें वह ठीक से सेवा नहीं दे पाता।"
+ },
+ {
+  "id": "progfin-m4-080",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"When a government moves a service online, it usually measures success by counting transactions — how many forms were filed, how many payments made. By that measure, almost every such project can be called a success. But a number that only ever rises tells you little about the people it leaves out.\n\nConsider a pension paid into a bank account rather than handed over a counter. For most, this is faster and safer. But for an elderly claimant in a village with no nearby branch, no smartphone and no relative to help, the same reform can turn a simple monthly ritual into a day-long journey. The transaction is still counted as completed; the hardship behind it is not.\n\nA fair test of digital government, then, is not how many people it serves well, but how it treats the few it serves badly. A system designed only for the confident user quietly punishes everyone else, and calls the result progress.\"\n\nThe phrase \"the confident user\" refers to a person who —",
+  "options": [
+   "works for the government",
+   "is comfortable and able with the online system",
+   "distrusts all technology",
+   "lives only in a city"
+  ],
+  "answer": 1,
+  "explanation": "'confident user' वह है जो ऑनलाइन तंत्र को सहजता से चला सकता है; लेखक कहता है केवल उसी के लिए बना तंत्र बाक़ी सबको चुपचाप दंडित करता है।"
+ },
+ {
+  "id": "progfin-m4-081",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"It is often said that practice makes perfect, but the saying hides an important condition. Repetition alone does not improve a skill; a typist who has typed carelessly for twenty years is not twenty years better than a beginner. What improves performance is practice of a particular kind — attempted at the edge of one's ability, watched closely for mistakes, and corrected at once.\n\nThis is why a coach matters. Left to ourselves, we tend to practise what we can already do, because it is pleasant to succeed and uncomfortable to fail. A good coach pushes the learner into the zone of difficulty and provides the feedback that turns a repeated error into a corrected one. The effort feels worse and produces more.\n\nTalent, then, is less a gift than a habit — the habit of practising in the one way that actually works.\"\n\nAccording to the passage, why does repetition alone not improve a skill?",
+  "options": [
+   "because talent cannot be changed",
+   "because it requires expensive equipment",
+   "because it is too tiring",
+   "because careless repetition merely fixes existing mistakes"
+  ],
+  "answer": 3,
+  "explanation": "गद्यांश का उदाहरण — बीस साल से लापरवाही से टाइप करने वाला बेहतर नहीं होता — दिखाता है कि केवल दोहराव मौजूदा ग़लतियों को ही पक्का करता है।"
+ },
+ {
+  "id": "progfin-m4-082",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"It is often said that practice makes perfect, but the saying hides an important condition. Repetition alone does not improve a skill; a typist who has typed carelessly for twenty years is not twenty years better than a beginner. What improves performance is practice of a particular kind — attempted at the edge of one's ability, watched closely for mistakes, and corrected at once.\n\nThis is why a coach matters. Left to ourselves, we tend to practise what we can already do, because it is pleasant to succeed and uncomfortable to fail. A good coach pushes the learner into the zone of difficulty and provides the feedback that turns a repeated error into a corrected one. The effort feels worse and produces more.\n\nTalent, then, is less a gift than a habit — the habit of practising in the one way that actually works.\"\n\nWhat kind of practice actually improves performance, according to the passage?",
+  "options": [
+   "practice at the edge of one's ability, with mistakes corrected at once",
+   "practice done only under a coach's praise",
+   "practice without any feedback",
+   "easy, comfortable practice repeated often"
+  ],
+  "answer": 0,
+  "explanation": "लेखक कहता है सुधार उसी अभ्यास से होता है जो अपनी सामर्थ्य की सीमा पर किया जाए, ग़लतियों पर नज़र रखी जाए और उन्हें तुरंत सुधारा जाए।"
+ },
+ {
+  "id": "progfin-m4-083",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"It is often said that practice makes perfect, but the saying hides an important condition. Repetition alone does not improve a skill; a typist who has typed carelessly for twenty years is not twenty years better than a beginner. What improves performance is practice of a particular kind — attempted at the edge of one's ability, watched closely for mistakes, and corrected at once.\n\nThis is why a coach matters. Left to ourselves, we tend to practise what we can already do, because it is pleasant to succeed and uncomfortable to fail. A good coach pushes the learner into the zone of difficulty and provides the feedback that turns a repeated error into a corrected one. The effort feels worse and produces more.\n\nTalent, then, is less a gift than a habit — the habit of practising in the one way that actually works.\"\n\nWhy, according to the passage, do learners left to themselves make slow progress?",
+  "options": [
+   "they have no natural talent",
+   "they practise what they can already do because success is pleasant",
+   "they lack the right equipment",
+   "they practise for too many hours"
+  ],
+  "answer": 1,
+  "explanation": "गद्यांश कहता है — अपने भरोसे छोड़ दिए जाने पर हम वही अभ्यास करते हैं जो पहले से आता है, क्योंकि सफल होना सुखद और असफल होना असहज लगता है।"
+ },
+ {
+  "id": "progfin-m4-084",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"It is often said that practice makes perfect, but the saying hides an important condition. Repetition alone does not improve a skill; a typist who has typed carelessly for twenty years is not twenty years better than a beginner. What improves performance is practice of a particular kind — attempted at the edge of one's ability, watched closely for mistakes, and corrected at once.\n\nThis is why a coach matters. Left to ourselves, we tend to practise what we can already do, because it is pleasant to succeed and uncomfortable to fail. A good coach pushes the learner into the zone of difficulty and provides the feedback that turns a repeated error into a corrected one. The effort feels worse and produces more.\n\nTalent, then, is less a gift than a habit — the habit of practising in the one way that actually works.\"\n\n\"The effort feels worse and produces more\" is an example of —",
+  "options": [
+   "an exaggeration for humour",
+   "a factual error",
+   "an apparent paradox that the passage explains",
+   "a contradiction that cannot be true"
+  ],
+  "answer": 2,
+  "explanation": "यह देखने में विरोधाभासी लगता है — कठिन लगने वाला अभ्यास ज़्यादा फल देता है — पर गद्यांश इसे समझाता है, इसलिए यह आभासी विरोधाभास है।"
+ },
+ {
+  "id": "progfin-m4-085",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"It is often said that practice makes perfect, but the saying hides an important condition. Repetition alone does not improve a skill; a typist who has typed carelessly for twenty years is not twenty years better than a beginner. What improves performance is practice of a particular kind — attempted at the edge of one's ability, watched closely for mistakes, and corrected at once.\n\nThis is why a coach matters. Left to ourselves, we tend to practise what we can already do, because it is pleasant to succeed and uncomfortable to fail. A good coach pushes the learner into the zone of difficulty and provides the feedback that turns a repeated error into a corrected one. The effort feels worse and produces more.\n\nTalent, then, is less a gift than a habit — the habit of practising in the one way that actually works.\"\n\nWhat is the author's view of talent, as stated in the last line?",
+  "options": [
+   "it depends only on a coach",
+   "it is a rare inborn gift",
+   "it is less a gift than a habit of practising the right way",
+   "it cannot be developed at all"
+  ],
+  "answer": 2,
+  "explanation": "अंतिम पंक्ति कहती है — प्रतिभा उपहार से अधिक एक आदत है: सही ढंग से अभ्यास करते रहने की आदत।"
+ }
+]
