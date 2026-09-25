@@ -169,12 +169,23 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
   }
 
   Future<void> _load({bool forceRemote = false}) async {
-    final res = await QuestionRepo.load(
-      forceRemote: forceRemote,
-      freeOnly: widget.freeOnly,
-      paperId: widget.paperId,
-      subject: widget.subject,
-    );
+    // "सब मिलाकर" — सिर्फ़ उन्हीं परीक्षाओं के पेपर जो चालू हैं
+    final mixAll =
+        widget.paperId == null && !widget.freeOnly && Session.isSubscribed;
+    final res = mixAll
+        ? await QuestionRepo.loadMany(
+            [
+              for (final c in Session.entitlement.activeCourses)
+                ...?kExams[c.examId]?.paperIds,
+            ],
+            forceRemote: forceRemote,
+          )
+        : await QuestionRepo.load(
+            forceRemote: forceRemote,
+            freeOnly: widget.freeOnly,
+            paperId: widget.paperId,
+            subject: widget.subject,
+          );
     if (!mounted) return;
     final list = List<Question>.from(res.questions)..shuffle(Random());
     setState(() {

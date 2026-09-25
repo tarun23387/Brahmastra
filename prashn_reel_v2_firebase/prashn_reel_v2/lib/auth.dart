@@ -205,6 +205,10 @@ class Session {
     if (trace.length > 12) trace.removeAt(0);
   }
 
+  /// ऐप ने ख़ुद लॉगआउट किया हो तो उसकी वजह — AppGate एक बार दिखाकर
+  /// मिटा देता है.
+  static String? signedOutReason;
+
   static bool get isLoggedIn => user != null;
   static bool get isSubscribed => entitlement.isSubscribed;
 
@@ -238,10 +242,14 @@ class Session {
 
     // सदस्यता का doc लगातार सुनते हैं — एडमिन एक्सपायरी बदले या
     // active=false करे, तो ऐप में तुरंत असर दिखे.
+    //
+    // `includeMetadataChanges` इसलिए कि कैश और सर्वर का doc एक जैसा हो तो
+    // Firestore सर्वर वाला snapshot अलग से देता ही नहीं — और नीचे फ़ोन वाली
+    // जाँच सिर्फ़ सर्वर वाले snapshot पर होती है. इससे reads नहीं बढ़ते.
     _docSub = FirebaseFirestore.instance
         .collection('users')
         .doc(u.uid)
-        .snapshots()
+        .snapshots(includeMetadataChanges: true)
         .listen(
       (snap) {
         _loadedUid = u.uid;
@@ -251,9 +259,28 @@ class Session {
         _note(data == null
             ? 'doc आया पर ख़ाली (users/${u.uid} बना ही नहीं?)'
             : 'doc आया: active=${data['active']} expires=${data['expiresAt']}');
-        _set(data == null
-            ? Entitlement.none
-            : Entitlement.fromDoc(u.uid, data));
+        final e =
+            data == null ? Entitlement.none : Entitlement.fromDoc(u.uid, data);
+
+        // यह आईडी अब किसी और फ़ोन पर दर्ज है — इस फ़ोन को बाहर करो.
+        //
+        // पहले यह जाँच सिर्फ़ लॉगिन के वक़्त होती थी. एडमिन फ़ोन छुड़ाता,
+        // छात्र नए फ़ोन पर लॉगिन करता, और पुराना फ़ोन — जिस पर लॉगिन बना
+        // हुआ था — एक्सपायरी तक चलता रहता. यानी एक आईडी, दो फ़ोन.
+        //
+        // फ़ैसला सिर्फ़ सर्वर वाले snapshot पर: कैश में पुराना deviceId पड़ा
+        // हो सकता है (auth.dart का `_bindDevice` देखिए), उस पर बाहर करना
+        // सही छात्र को भी निकाल देता.
+        if (!snap.metadata.isFromCache && e.boundElsewhere) {
+          _note('फ़ोन किसी और पर दर्ज — लॉगआउट');
+          signedOutReason = 'यह आईडी किसी और फ़ोन पर दर्ज है, इसलिए इस फ़ोन '
+              'पर नहीं चल सकती। फ़ोन बदला हो तो हमें बताइए, हम छुड़ा देंगे।';
+          _set(Entitlement.none);
+          signOut();
+          return;
+        }
+
+        _set(e);
       },
       onError: (e) {
         _loadedUid = u.uid;

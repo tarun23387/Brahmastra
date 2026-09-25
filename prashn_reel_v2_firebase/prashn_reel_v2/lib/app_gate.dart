@@ -40,8 +40,34 @@ class _AppGateState extends State<AppGate> {
   void initState() {
     super.initState();
     _sub = Session.onChange.listen((_) {
-      if (mounted) setState(() {});
+      if (!mounted) return;
+      if (Session.signedOutReason != null) {
+        _onKicked();
+        return;
+      }
+      setState(() {});
     });
+  }
+
+  /// ऐप ने ख़ुद लॉगआउट किया (आईडी किसी और फ़ोन पर दर्ज) — ऊपर खुले सारे
+  /// पन्ने बंद करके पहले पन्ने पर लौटो और वजह बताओ.
+  ///
+  /// लॉगिन वाला पन्ना खुला हो तो वह भी बंद हो जाता है; उसका बचा हुआ काम
+  /// `mounted` देखकर अपने आप रुक जाता है.
+  void _onKicked() {
+    final reason = Session.signedOutReason!;
+    Session.signedOutReason = null;
+    Navigator.of(context).popUntil((r) => r.isFirst);
+    setState(() {
+      _sampleMode = false;
+      _practising = false;
+      _paperId = null;
+      _subject = null;
+    });
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text(reason),
+      duration: const Duration(seconds: 8),
+    ));
   }
 
   @override

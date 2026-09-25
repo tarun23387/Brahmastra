@@ -239,6 +239,11 @@ class QuestionRepo {
     required bool freeOnly,
     String? paperId,
   }) async {
+    // बिना छाँट पूरी collection कभी नहीं — वह हर परीक्षा के प्रश्न है
+    // (जो ख़रीदी भी नहीं) और एक बार में ढाई हज़ार से ऊपर reads. "सब
+    // मिलाकर" वाला रास्ता अब [loadMany] से चलता है.
+    if (!freeOnly && paperId == null) return null;
+
     Query<Map<String, dynamic>> query =
         FirebaseFirestore.instance.collection(collection);
 
@@ -386,6 +391,51 @@ class QuestionRepo {
     // बंडल किए प्रश्न — यही मुफ़्त पीईटी वाला सेट है, इसलिए पूरे के पूरे देते हैं
     final seed = seedQuestions();
     return LoadResult(seed, SourceKind.seed, null);
+  }
+
+  /// कई प्रश्नपत्र एक साथ — "सब मिलाकर हल करें" के लिए.
+  ///
+  /// हर पेपर [load] से ही आता है, इसलिए अपने pack, कैश और संस्करण के साथ:
+  /// पेपर खोलकर देखे हों तो यहाँ कोई नया read नहीं लगता. पहले यह रास्ता
+  /// पूरी `questions` collection उतारता था — ख़रीदी न हुई परीक्षाओं समेत.
+  ///
+  /// एक के बाद एक चलाते हैं, साथ-साथ नहीं — तब पहला ही manifest पढ़ लेता
+  /// है और बाक़ी उसी से काम चलाते हैं.
+  static Future<LoadResult> loadMany(
+    List<String> paperIds, {
+    bool forceRemote = false,
+  }) async {
+    final results = <LoadResult>[];
+    for (final p in paperIds) {
+      results.add(await load(paperId: p, forceRemote: forceRemote));
+    }
+
+    // बंडल वाले प्रश्न किसी पेपर के नहीं — असली प्रश्नों में न मिलाएँ
+    final real = results.where((r) => r.source != SourceKind.seed).toList();
+    if (real.isEmpty) {
+      return results.isNotEmpty
+          ? results.first
+          : LoadResult(seedQuestions(), SourceKind.seed, null);
+    }
+
+    // एक प्रश्न कई पेपर में होता है (यूपी का इतिहास — GS1, RO/ARO, PET)
+    final seen = <String>{};
+    final out = <Question>[];
+    for (final r in real) {
+      for (final q in r.questions) {
+        if (seen.add(q.id)) out.add(q);
+      }
+    }
+
+    // कोई भी पेपर कैश से आया हो तो पूरा सेट "कैश" — और उसकी तारीख़ सबसे पुरानी
+    final anyCache = real.any((r) => r.source == SourceKind.cache);
+    DateTime? at;
+    for (final r in real) {
+      final t = r.syncedAt;
+      if (t != null && (at == null || t.isBefore(at))) at = t;
+    }
+    return LoadResult(
+        out, anyCache ? SourceKind.cache : SourceKind.firebase, at);
   }
 }
 
