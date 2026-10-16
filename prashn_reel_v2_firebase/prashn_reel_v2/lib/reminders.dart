@@ -26,8 +26,11 @@ import 'models.dart';
 /// (`cancelPending`) और पीछे जाने पर फिर से. यानी घंटी तभी बजती है जब
 /// सचमुच इतनी देर से ऐप न खुला हो.
 ///
-/// रात 10 से सुबह 8 के बीच का समय सुबह 8 पर खिसका दिया जाता है — आधी
-/// रात को बजा notification छात्र को चिढ़ाता है, लौटाता नहीं.
+/// रात 9 से सुबह 8 के बीच का समय सुबह 8 पर खिसका दिया जाता है — आधी
+/// रात को बजा notification छात्र को चिढ़ाता है, लौटाता नहीं. 9 इसलिए, 10
+/// नहीं: inexact alarm को Android एक घंटे तक आगे खिसका देता है (फ़ोन पर
+/// `dumpsys alarm` में window=+1h दिखा), तो 9:50 वाली घंटी 10:50 तक बजती.
+/// Exact alarm की अनुमति के बिना यही रास्ता है.
 class Reminders {
   static final FlutterLocalNotificationsPlugin _plugin =
       FlutterLocalNotificationsPlugin();
@@ -179,9 +182,9 @@ class Reminders {
         ),
       );
 
-  /// रात 10 से सुबह 8 तक का समय सुबह 8 बजे पर.
+  /// रात 9 से सुबह 8 तक का समय सुबह 8 बजे पर (ऊपर की टिप्पणी देखिए).
   static tz.TZDateTime _awake(tz.TZDateTime t) {
-    if (t.hour >= 22) {
+    if (t.hour >= 21) {
       final next = t.add(const Duration(days: 1));
       return tz.TZDateTime(tz.local, next.year, next.month, next.day, 8);
     }
