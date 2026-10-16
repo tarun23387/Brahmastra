@@ -1,230 +1,119 @@
 /**
- * ऐप का चिह्न (icon) और खुलने वाले पन्ने का लोगो बनाता है.
+ * ऐप का चिह्न (icon), खुलने वाले पन्ने का लोगो और Play Store का चिह्न बनाता है.
  *
  *   node tools/gen-icons.js
  *
- * कोई बाहरी पैकेज नहीं चाहिए — PNG यहीं बनती है, zlib Node में पहले से है.
- * इसीलिए ImageMagick या Python लगाने की ज़रूरत नहीं पड़ी.
+ * चिह्न का भाव: खुली किताब से ऊपर उठता बाण — "ज्ञान जो लक्ष्य भेदे".
+ * बाण की नोक मंदिर-शिखर जैसी, किताब की सुनहरी जिल्द नीचे से झाँकती.
+ * क्रीम पर मैरून और सोना — वही रंग जो ऐप के भीतर हैं (lib/models.dart की P).
  *
- * चिह्न का भाव: ब्रह्मास्त्र यानी दिव्य अस्त्र — इसलिए ऊपर जाता सुनहरा बाण,
- * गहरे ink पर. रंग वही हैं जो ऐप के भीतर हैं (lib/models.dart की P श्रेणी),
- * ताकि चिह्न और ऐप एक ही चीज़ लगें.
+ * ── अक्टूबर 2026 का बदलाव ──
  *
- * किनारे smooth रखने के लिए supersampling नहीं, signed distance की गणना है —
- * हर बिंदु की आकृति से दूरी निकालकर उसी से alpha तय होता है. इससे छोटे
- * आकार (48px) पर भी बाण की नोक फटती नहीं.
+ * पहले यहाँ गहरे ink की तख़्ती पर अकेला सुनहरा बाण था. काली पृष्ठभूमि
+ * क्रीम ऐप के साथ मेल नहीं खाती थी और बाण से यह पता नहीं चलता था कि यह
+ * पढ़ाई का ऐप है. design/logo-2026-10/ में तीन विकल्प बने, "A" चुना गया.
+ *
+ * ── एक ही स्रोत ──
+ *
+ * आकृति नीचे SHAPES में है (1024×1024 की जगह में, SVG path). उसी से:
+ *   • PNG (लॉन्चर, splash, ऐप के भीतर, Play Store) — Chrome headless से
+ *   • Android के vector (adaptive चिह्न, Android 13 का monochrome, notification)
+ * यानी आकृति बदलनी हो तो सिर्फ़ SHAPES बदलिए, सब साथ बदलेगा.
+ *
+ * Chrome ज़रूरी है (PNG उसी से बनती है). पहले यह script बिना किसी बाहरी
+ * चीज़ के अपने हिसाब से PNG बनाती थी, पर वह तरीक़ा सिर्फ़ एक बहुभुज बाण
+ * खींच सकता था — घुमावदार किताब के लिए SVG ही ठीक है.
  */
 
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
-const zlib = require('zlib');
+const { execFileSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
+const RES = 'android/app/src/main/res';
 
-/* ───────────────────────── PNG लिखना ───────────────────────── */
+const CREAM = '#F7F3EC';
+const MAROON = '#8C3A1E';
+const MAROON_DEEP = '#76301A';
+const GOLD = '#C9A227';
 
-const CRC_TABLE = (() => {
-  const t = new Int32Array(256);
-  for (let n = 0; n < 256; n++) {
-    let c = n;
-    for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1;
-    t[n] = c;
-  }
-  return t;
-})();
+/* ───────────────────────── आकृति ───────────────────────── */
 
-function crc32(buf) {
-  let c = -1;
-  for (let i = 0; i < buf.length; i++) c = CRC_TABLE[(c ^ buf[i]) & 0xff] ^ (c >>> 8);
-  return (c ^ -1) >>> 0;
-}
-
-function chunk(type, data) {
-  const len = Buffer.alloc(4);
-  len.writeUInt32BE(data.length);
-  const body = Buffer.concat([Buffer.from(type, 'latin1'), data]);
-  const crc = Buffer.alloc(4);
-  crc.writeUInt32BE(crc32(body));
-  return Buffer.concat([len, body, crc]);
-}
-
-/** RGBA बाइट्स को PNG फ़ाइल में बदलता है. */
-function encodePng(width, height, rgba) {
-  const ihdr = Buffer.alloc(13);
-  ihdr.writeUInt32BE(width, 0);
-  ihdr.writeUInt32BE(height, 4);
-  ihdr[8] = 8;   // हर रंग 8 बिट
-  ihdr[9] = 6;   // RGBA
-  // 10,11,12 = deflate, कोई filter नहीं, interlace नहीं — तीनों 0
-
-  // हर पंक्ति के आगे एक filter बाइट लगती है
-  const raw = Buffer.alloc((width * 4 + 1) * height);
-  for (let y = 0; y < height; y++) {
-    raw[y * (width * 4 + 1)] = 0;
-    rgba.copy(raw, y * (width * 4 + 1) + 1, y * width * 4, (y + 1) * width * 4);
-  }
-
-  return Buffer.concat([
-    Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]),
-    chunk('IHDR', ihdr),
-    chunk('IDAT', zlib.deflateSync(raw, { level: 9 })),
-    chunk('IEND', Buffer.alloc(0)),
-  ]);
-}
-
-/* ───────────────────────── आकृति की दूरी ───────────────────────── */
-
-const clamp = (v, a, b) => (v < a ? a : v > b ? b : v);
-const mix = (a, b, t) => a + (b - a) * t;
-
-/** बिंदु से रेखाखंड की दूरी. */
-function segDist(px, py, ax, ay, bx, by) {
-  const vx = bx - ax, vy = by - ay;
-  const wx = px - ax, wy = py - ay;
-  const t = clamp((wx * vx + wy * vy) / (vx * vx + vy * vy), 0, 1);
-  const dx = wx - vx * t, dy = wy - vy * t;
-  return Math.hypot(dx, dy);
-}
-
-/**
- * बहुभुज की signed distance — भीतर ऋणात्मक, बाहर धनात्मक.
- * (उत्तल-अवतल दोनों पर चलती है, इसलिए बाण को टुकड़ों में तोड़ना नहीं पड़ा.)
- */
-function polyDist(px, py, pts) {
-  let d = Infinity;
-  let inside = false;
-  for (let i = 0, j = pts.length - 1; i < pts.length; j = i++) {
-    const [xi, yi] = pts[i];
-    const [xj, yj] = pts[j];
-    d = Math.min(d, segDist(px, py, xi, yi, xj, yj));
-    if ((yi > py) !== (yj > py) && px < ((xj - xi) * (py - yi)) / (yj - yi) + xi) {
-      inside = !inside;
-    }
-  }
-  return inside ? -d : d;
-}
-
-/** गोल कोनों वाले वर्ग की signed distance. */
-function roundRectDist(px, py, cx, cy, half, r) {
-  const qx = Math.abs(px - cx) - (half - r);
-  const qy = Math.abs(py - cy) - (half - r);
-  return Math.hypot(Math.max(qx, 0), Math.max(qy, 0)) + Math.min(Math.max(qx, qy), 0) - r;
-}
-
-/**
- * बाण — 100×100 की जगह में, ऊपर नोक.
- *
- * नीचे का V उसी बहुभुज का हिस्सा है (पंख जैसा), इसलिए अलग से घटाना नहीं पड़ता.
- */
-const ARROW = [
-  [50, 8],      // नोक
-  [61, 40],     // फल का दाहिना छोर
-  [55.5, 40],
-  [55.5, 58],   // डंडी
-  [67, 71],     // दाहिना पंख — पीछे की ओर झुका
-  [55.5, 66],
-  [55.5, 88],
-  [50, 93],     // नीचे की नोक
-  [44.5, 88],
-  [44.5, 66],
-  [33, 71],     // बायाँ पंख
-  [44.5, 58],
-  [44.5, 40],
-  [39, 40],     // फल का बायाँ छोर
+// 1024×1024 में. क्रम मायने रखता है — बाद वाली ऊपर चढ़ती है.
+const SHAPES = [
+  // किताब की सुनहरी जिल्द (पन्नों के नीचे से झाँकती)
+  { fill: GOLD, d: 'M512,640 C440,596 352,590 250,618 L250,782 C352,758 440,762 512,806 C584,762 672,758 774,782 L774,618 C672,590 584,596 512,640 Z' },
+  // पन्ने — बायाँ थोड़ा गहरा, ताकि किताब में गहराई दिखे
+  { fill: MAROON_DEEP, d: 'M502,620 C438,576 356,570 270,592 L270,752 C356,732 438,736 502,778 Z' },
+  { fill: MAROON, d: 'M522,620 C586,576 668,570 754,592 L754,752 C668,732 586,736 522,778 Z' },
+  // बाण का दंड
+  { fill: MAROON, d: 'M494,372 H530 Q538,372 538,380 V626 Q538,634 530,634 H494 Q486,634 486,626 V380 Q486,372 494,372 Z' },
+  // सुनहरा कंगन
+  { fill: GOLD, d: 'M479,372 H545 Q556,372 556,383 V395 Q556,406 545,406 H479 Q468,406 468,395 V383 Q468,372 479,372 Z' },
+  // फलक (नोक) — मंदिर-शिखर जैसा
+  { fill: MAROON, d: 'M512,188 C562,252 612,318 632,392 C594,370 556,364 512,374 C468,364 430,370 392,392 C412,318 462,252 512,188 Z' },
+  { fill: GOLD, d: 'M512,262 C540,298 562,334 572,368 C552,360 532,357 512,359 C492,357 472,360 452,368 C462,334 484,298 512,262 Z' },
 ];
 
-/* ───────────────────────── रंग ───────────────────────── */
+// आकृति का बीच (1024 की जगह में) — x 250…774, y 188…806
+const CX = 512;
+const CY = 497;
 
-// ये lib/models.dart की P श्रेणी से मेल खाते हैं
-const INK_DEEP = [0x17, 0x11, 0x0b];
-const INK_LIFT = [0x3a, 0x2b, 0x1c];
-const GOLD_HI = [0xf2, 0xcf, 0x6e];
-const GOLD_LO = [0xb0, 0x82, 0x1a];
-
-/**
- * एक चिह्न बनाता है.
- *
- * @param size        पिक्सेल में चौड़ाई/ऊँचाई
- * @param plate       true = गहरी गोल-कोनों वाली तख़्ती; false = सिर्फ़ बाण (पारदर्शी)
- */
-function render(size, { plate = true } = {}) {
-  const buf = Buffer.alloc(size * size * 4);
-
-  // बाण को तख़्ती के भीतर थोड़ा छोटा रखते हैं, ताकि किनारे से चिपके नहीं
-  const inset = plate ? 0.13 : 0.04;
-  const scale = size * (1 - 2 * inset) / 100;
-  const originX = size * inset + (size * (1 - 2 * inset) - 100 * scale) / 2;
-  const originY = originX;
-
-  const half = size / 2;
-  const plateRadius = size * 0.225;
-
-  for (let y = 0; y < size; y++) {
-    for (let x = 0; x < size; x++) {
-      const px = x + 0.5;
-      const py = y + 0.5;
-
-      let r = 0, g = 0, b = 0, a = 0;
-
-      if (plate) {
-        const dPlate = roundRectDist(px, py, half, half, half, plateRadius);
-        const cover = clamp(0.5 - dPlate, 0, 1);
-        if (cover > 0) {
-          // ऊपर-बाएँ से हल्की रोशनी — सपाट गहरा रंग मरा हुआ लगता है
-          const t = clamp(Math.hypot(px - size * 0.34, py - size * 0.28) / (size * 0.9), 0, 1);
-          r = mix(INK_LIFT[0], INK_DEEP[0], t);
-          g = mix(INK_LIFT[1], INK_DEEP[1], t);
-          b = mix(INK_LIFT[2], INK_DEEP[2], t);
-          a = cover;
-        }
-      }
-
-      // फल के पीछे हल्की आभा — अस्त्र का तेज. बहुत हल्की रखी है,
-      // वरना 48px पर धब्बे जैसी दिखने लगती है.
-      if (plate && a > 0) {
-        const gx = originX + 50 * scale;
-        const gy = originY + 38 * scale;
-        const gd = Math.hypot(px - gx, py - gy) / (size * 0.42);
-        const glow = Math.pow(clamp(1 - gd, 0, 1), 2.2) * 0.30;
-        r = mix(r, GOLD_LO[0], glow);
-        g = mix(g, GOLD_LO[1], glow);
-        b = mix(b, GOLD_LO[2], glow);
-      }
-
-      // बाण
-      const ax = (px - originX) / scale;
-      const ay = (py - originY) / scale;
-      const dArrow = polyDist(ax, ay, ARROW) * scale;
-      const arrowCover = clamp(0.5 - dArrow, 0, 1);
-
-      if (arrowCover > 0) {
-        const t = clamp((ay - 14) / 66, 0, 1);
-        const gr = mix(GOLD_HI[0], GOLD_LO[0], t);
-        const gg = mix(GOLD_HI[1], GOLD_LO[1], t);
-        const gb = mix(GOLD_HI[2], GOLD_LO[2], t);
-
-        // सोने को नीचे वाले रंग पर चढ़ाते हैं
-        const na = arrowCover + a * (1 - arrowCover);
-        if (na > 0) {
-          r = (gr * arrowCover + r * a * (1 - arrowCover)) / na;
-          g = (gg * arrowCover + g * a * (1 - arrowCover)) / na;
-          b = (gb * arrowCover + b * a * (1 - arrowCover)) / na;
-          a = na;
-        }
-      }
-
-      const i = (y * size + x) * 4;
-      buf[i] = Math.round(r);
-      buf[i + 1] = Math.round(g);
-      buf[i + 2] = Math.round(b);
-      buf[i + 3] = Math.round(a * 255);
-    }
-  }
-
-  return encodePng(size, size, buf);
+/** रंगीन आकृति का SVG. plate: 'square' | 'rounded' | null (पारदर्शी). */
+function svg({ plate }) {
+  const bg =
+    plate === 'square' ? `<rect width="1024" height="1024" fill="${CREAM}"/>`
+    : plate === 'rounded' ? `<rect width="1024" height="1024" rx="230" fill="${CREAM}"/>`
+    : '';
+  const body = SHAPES.map((s) => `<path fill="${s.fill}" d="${s.d}"/>`).join('');
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="100%" height="100%">${bg}${body}</svg>`;
 }
 
-/* ───────────────────────── लिखना ───────────────────────── */
+/* ───────────────────────── PNG — Chrome headless से ───────────────────────── */
+
+function findChrome() {
+  const candidates = [
+    process.env.CHROME,
+    'C:/Program Files/Google/Chrome/Application/chrome.exe',
+    'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
+    'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',
+    '/usr/bin/google-chrome',
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+  ].filter(Boolean);
+  const hit = candidates.find((c) => fs.existsSync(c));
+  if (!hit) throw new Error('Chrome/Edge नहीं मिला — CHROME=<path> देकर चलाइए');
+  return hit;
+}
+
+const CHROME = findChrome();
+const TMP = fs.mkdtempSync(path.join(os.tmpdir(), 'brahmastra-icons-'));
+
+function png(size, opts) {
+  const html = path.join(TMP, 'icon.html');
+  const out = path.join(TMP, 'icon.png');
+  fs.writeFileSync(
+    html,
+    `<!doctype html><html><head><style>html,body{margin:0;padding:0;background:transparent;overflow:hidden}` +
+      `div{width:${size}px;height:${size}px}</style></head><body><div>${svg(opts)}</div></body></html>`,
+  );
+  if (fs.existsSync(out)) fs.unlinkSync(out);
+  execFileSync(
+    CHROME,
+    [
+      '--headless=new',
+      '--disable-gpu',
+      '--hide-scrollbars',
+      '--force-device-scale-factor=1',
+      '--default-background-color=00000000',
+      `--window-size=${size},${size}`,
+      `--screenshot=${out}`,
+      'file:///' + html.replace(/\\/g, '/'),
+    ],
+    { stdio: 'ignore' },
+  );
+  return fs.readFileSync(out);
+}
 
 function write(rel, data) {
   const full = path.join(ROOT, rel);
@@ -233,86 +122,102 @@ function write(rel, data) {
   console.log(`   ${rel}  (${(data.length / 1024).toFixed(1)} KB)`);
 }
 
-const RES = 'android/app/src/main/res';
-
-// लॉन्चर चिह्न — पुराने फ़ोन इन्हीं PNG को दिखाते हैं
+// लॉन्चर चिह्न — adaptive न समझने वाले लॉन्चर इन्हीं PNG को दिखाते हैं
 const LAUNCHER = { mdpi: 48, hdpi: 72, xhdpi: 96, xxhdpi: 144, xxxhdpi: 192 };
-// खुलते समय दिखने वाला लोगो
+// खुलते समय दिखने वाला लोगो — lib/app_gate.dart का SplashPage 120 पर दिखाता है
 const SPLASH = { mdpi: 120, hdpi: 180, xhdpi: 240, xxhdpi: 360, xxxhdpi: 480 };
 
 console.log('\nलॉन्चर चिह्न:');
 for (const [d, s] of Object.entries(LAUNCHER)) {
-  write(`${RES}/mipmap-${d}/ic_launcher.png`, render(s, { plate: true }));
+  write(`${RES}/mipmap-${d}/ic_launcher.png`, png(s, { plate: 'rounded' }));
 }
 
 console.log('\nखुलने वाले पन्ने का लोगो:');
 for (const [d, s] of Object.entries(SPLASH)) {
-  write(`${RES}/drawable-${d}/splash_logo.png`, render(s, { plate: true }));
+  write(`${RES}/drawable-${d}/splash_logo.png`, png(s, { plate: 'rounded' }));
 }
 
 console.log('\nऐप के भीतर के लिए:');
-write('assets/images/logo.png', render(512, { plate: true }));
+write('assets/images/logo.png', png(512, { plate: 'rounded' }));
 
-/* ── Android 8+ का adaptive चिह्न — वही बाण, पर vector रूप में ──
- *
- * PNG और vector दोनों इसी ARROW से बनते हैं. इसलिए बाण बदलने पर दोनों साथ
- * बदलते हैं — एक पुराना, एक नया वाली गड़बड़ नहीं होती.
- */
+// Play Store — पूरा चौकोर, बिना पारदर्शिता; कोने Play ख़ुद गोल करता है.
+// (पारदर्शी pixel वाला चिह्न Play का uploader अस्वीकार कर देता है.)
+console.log('\nPlay Store:');
+write('play-listing/store-icon-512.png', png(512, { plate: 'square' }));
+write('play-listing/icon-512.png', png(512, { plate: 'rounded' }));
 
-// 108 की जगह में, बीच से 0.8 गुना. गोल mask वाले लॉन्चर किनारे काट देते हैं,
-// इसलिए बाण को safe zone (बीच से 35.6 त्रिज्या) के भीतर रखना पड़ता है.
-const vecPt = ([x, y]) =>
-  `${(54 + (x - 50) * 0.8).toFixed(1)},${(54 + (y - 50) * 0.8).toFixed(1)}`;
-const arrowPath = `M${ARROW.map(vecPt).join(' L')} Z`;
+/* ───────────────────────── Android vector ───────────────────────── */
 
-const hex = (c) => '#' + c.map((v) => v.toString(16).padStart(2, '0')).join('');
+// 1024 की आकृति को 108dp की adaptive जगह में. गोल mask वाले लॉन्चर सिर्फ़
+// बीच का 66dp व्यास पक्का दिखाते हैं; किताब के कोने बीच से ~387 दूर हैं,
+// इसलिए 387 → 33dp.
+const ADAPTIVE_SCALE = 33 / 387;
+
+function vectorGroup(scale, size, { mono = null } = {}) {
+  const tx = (size / 2 - CX * scale).toFixed(3);
+  const ty = (size / 2 - CY * scale).toFixed(3);
+  const paths = SHAPES.map(
+    (s) => `    <path android:fillColor="${mono || s.fill}" android:pathData="${s.d}" />`,
+  ).join('\n');
+  return `  <group android:translateX="${tx}" android:translateY="${ty}"
+      android:scaleX="${scale.toFixed(5)}" android:scaleY="${scale.toFixed(5)}">
+${paths}
+  </group>`;
+}
+
+function vector(size, body, comment) {
+  return Buffer.from(
+    `<?xml version="1.0" encoding="utf-8"?>
+<!-- tools/gen-icons.js से बनी — हाथ से न बदलें.${comment ? '\n     ' + comment : ''} -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="${size}dp" android:height="${size}dp"
+    android:viewportWidth="${size}" android:viewportHeight="${size}">
+${body}
+</vector>
+`,
+    'utf8',
+  );
+}
 
 console.log('\nadaptive चिह्न (Android 8+):');
-
 write(
   `${RES}/drawable/ic_launcher_background.xml`,
-  Buffer.from(
-    `<?xml version="1.0" encoding="utf-8"?>
-<!-- tools/gen-icons.js से बनी — हाथ से न बदलें. -->
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aapt="http://schemas.android.com/aapt"
-    android:width="108dp" android:height="108dp"
-    android:viewportWidth="108" android:viewportHeight="108">
-  <path android:pathData="M0,0 h108 v108 h-108 z">
-    <aapt:attr name="android:fillColor">
-      <gradient android:type="linear"
-          android:startX="20" android:startY="12"
-          android:endX="96" android:endY="104"
-          android:startColor="${hex(INK_LIFT)}" android:endColor="${hex(INK_DEEP)}" />
-    </aapt:attr>
-  </path>
-</vector>
-`,
-    'utf8',
-  ),
+  vector(108, `  <path android:fillColor="${CREAM}" android:pathData="M0,0 h108 v108 h-108 z" />`),
 );
-
+write(`${RES}/drawable/ic_launcher_foreground.xml`, vector(108, vectorGroup(ADAPTIVE_SCALE, 108)));
+// Android 13 के "themed icons" — फ़ोन अपने रंग में रँगता है, सिर्फ़ आकार चाहिए
 write(
-  `${RES}/drawable/ic_launcher_foreground.xml`,
+  `${RES}/drawable/ic_launcher_monochrome.xml`,
+  vector(108, vectorGroup(ADAPTIVE_SCALE, 108, { mono: '#FFFFFFFF' })),
+);
+write(
+  `${RES}/mipmap-anydpi-v26/ic_launcher.xml`,
   Buffer.from(
     `<?xml version="1.0" encoding="utf-8"?>
-<!-- tools/gen-icons.js से बनी — हाथ से न बदलें. -->
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aapt="http://schemas.android.com/aapt"
-    android:width="108dp" android:height="108dp"
-    android:viewportWidth="108" android:viewportHeight="108">
-  <path android:pathData="${arrowPath}">
-    <aapt:attr name="android:fillColor">
-      <gradient android:type="linear"
-          android:startX="54" android:startY="20"
-          android:endX="54" android:endY="89"
-          android:startColor="${hex(GOLD_HI)}" android:endColor="${hex(GOLD_LO)}" />
-    </aapt:attr>
-  </path>
-</vector>
+<!-- tools/gen-icons.js से बनी — हाथ से न बदलें.
+     Android 8 और उसके बाद वाले फ़ोन इसे इस्तेमाल करते हैं; पुराने
+     mipmap-*/ic_launcher.png लेते हैं. -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@drawable/ic_launcher_background" />
+    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+    <monochrome android:drawable="@drawable/ic_launcher_monochrome" />
+</adaptive-icon>
 `,
     'utf8',
   ),
 );
 
-console.log('\n✅ हो गया. नया APK बनाना न भूलें.\n');
+// Notification bar — एक-रंगी (Android सिर्फ़ alpha देखता है). 24dp में
+// आकृति पूरी भरती है; थोड़ी जगह किनारे पर छोड़ी है.
+console.log('\nnotification चिह्न:');
+write(
+  `${RES}/drawable/ic_stat_notify.xml`,
+  vector(
+    24,
+    vectorGroup(22 / 640, 24, { mono: '#FFFFFFFF' }),
+    'प्रश्न-घंटी (lib/reminders.dart) का छोटा चिह्न. रंगीन चिह्न वहाँ सफ़ेद\n     चौकोर बनकर दिखता है, इसलिए एक-रंगी. res/raw/keep.xml इसे R8 से बचाता है.',
+  ),
+);
+
+fs.rmSync(TMP, { recursive: true, force: true });
+console.log('\n✅ हो गया. नया APK/AAB बनाना न भूलें.\n');

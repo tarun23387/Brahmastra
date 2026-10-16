@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- C: मैरून मंडल में उठता सुनहरा बाण, पीछे उगते सूरज की किरणें — रोज़ का अभ्यास -->
+  <defs><clipPath id="disc"><circle cx="512" cy="512" r="292"/></clipPath></defs>
+  <rect width="1024" height="1024" fill="#F7F3EC"/>
+  <circle cx="512" cy="512" r="312" fill="#8C3A1E"/>
+  <!-- किरणें: बाण के फलक के पीछे से, मंडल के भीतर ही -->
+  <g clip-path="url(#disc)"><g fill="#9E4626" transform="translate(512 430)">
+    <path d="M0,0 L-30,-300 L30,-300 Z"/>
+    <path d="M0,0 L-30,-300 L30,-300 Z" transform="rotate(-36)"/>
+    <path d="M0,0 L-30,-300 L30,-300 Z" transform="rotate(36)"/>
+    <path d="M0,0 L-30,-300 L30,-300 Z" transform="rotate(-72)"/>
+    <path d="M0,0 L-30,-300 L30,-300 Z" transform="rotate(72)"/>
+  </g></g>
+  <circle cx="512" cy="512" r="312" fill="none" stroke="#8C3A1E" stroke-width="40"/>
+  <!-- दंड -->
+  <rect x="490" y="440" width="44" height="270" rx="8" fill="#C9A227"/>
+  <!-- पंख (मंडल के भीतर) -->
+  <path d="M490,640 L432,700 L432,752 L490,694 Z" fill="#E3C35A"/>
+  <path d="M534,640 L592,700 L592,752 L534,694 Z" fill="#E3C35A"/>
+  <!-- फलक -->
+  <path d="M512,236 C560,300 602,366 620,446 C584,424 548,418 512,428 C476,418 440,424 404,446 C422,366 464,300 512,236 Z" fill="#C9A227"/>
+  <path d="M512,306 C534,338 552,370 560,404 C544,398 528,396 512,398 C496,396 480,398 464,404 C472,370 490,338 512,306 Z" fill="#8C3A1E"/>
+</svg>
