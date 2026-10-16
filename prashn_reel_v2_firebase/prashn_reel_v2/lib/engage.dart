@@ -135,6 +135,20 @@ class Engage {
         .toList();
   }
 
+  /// आज के प्रश्न का चुना हुआ विकल्प — अभी हल न किया हो तो null.
+  static int? get dailyChoice => _p?.getInt('qod_$_today');
+
+  static Future<void> saveDailyChoice(int option) async {
+    final p = _p;
+    if (p == null) return;
+    // कल वाला हटा दो — एक ही key काफ़ी है
+    for (final k in p.getKeys().where((k) => k.startsWith('qod_')).toList()) {
+      if (k != 'qod_$_today') await p.remove(k);
+    }
+    await p.setInt('qod_$_today', option);
+    changes.value++;
+  }
+
   /// आज का प्रश्न — पूरे दिन वही रहता है, कल बदल जाता है.
   static Question? questionOfDay() {
     final all = pool();

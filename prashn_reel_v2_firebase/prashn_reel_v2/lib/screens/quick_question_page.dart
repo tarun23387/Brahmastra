@@ -14,10 +14,15 @@ class QuickQuestionPage extends StatefulWidget {
   final Question q;
   final String title;
 
+  /// "आज का प्रश्न" से खुला हो तो — उत्तर डैशबोर्ड के कार्ड पर ✓ बनकर
+  /// दिखता है, और दोबारा खोलने पर वही उत्तर भरा मिलता है.
+  final bool daily;
+
   const QuickQuestionPage({
     super.key,
     required this.q,
     this.title = 'आज का प्रश्न',
+    this.daily = false,
   });
 
   @override
@@ -27,10 +32,23 @@ class QuickQuestionPage extends StatefulWidget {
 class _QuickQuestionPageState extends State<QuickQuestionPage> {
   int? _selected;
 
+  /// पहले से हल किया हुआ खोला — गिनती दोबारा न बढ़े, बटन भी न उभरे.
+  bool _review = false;
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.daily) {
+      _selected = Engage.dailyChoice;
+      _review = _selected != null;
+    }
+  }
+
   void _select(int opt) {
     if (_selected != null) return;
     setState(() => _selected = opt);
     Engage.recordAnswer();
+    if (widget.daily) Engage.saveDailyChoice(opt);
   }
 
   @override
@@ -57,7 +75,7 @@ class _QuickQuestionPageState extends State<QuickQuestionPage> {
                 onSelect: _select,
               ),
             ),
-            if (_selected != null)
+            if (_selected != null && !_review)
               Padding(
                 padding: const EdgeInsets.fromLTRB(16, 4, 16, 14),
                 child: Column(

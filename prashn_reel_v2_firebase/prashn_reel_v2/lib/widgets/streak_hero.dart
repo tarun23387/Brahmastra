@@ -282,22 +282,34 @@ class DailyQuestionCard extends StatelessWidget {
     if (q == null) return const SizedBox.shrink();
     final sub = subjectOf(q.subject);
 
+    // हल होते ही कार्ड बदले — इसलिए Engage.changes सुनते हैं
+    return ValueListenableBuilder<int>(
+      valueListenable: Engage.changes,
+      builder: (context, _, __) => _card(context, q, sub, Engage.dailyChoice),
+    ).animate(delay: 150.ms).fadeIn(duration: 350.ms).slideY(begin: 0.1, end: 0);
+  }
+
+  Widget _card(BuildContext context, Question q, Subject sub, int? choice) {
+    final done = choice != null;
+    final right = choice == q.answer;
+    final accent = !done ? P.gold : (right ? P.right : P.wrong);
+
     return Material(
       color: Colors.transparent,
       child: InkWell(
         borderRadius: BorderRadius.circular(18),
         onTap: () => Navigator.of(context).push(MaterialPageRoute(
-          builder: (_) => QuickQuestionPage(q: q),
+          builder: (_) => QuickQuestionPage(q: q, daily: true),
         )),
         child: Container(
           padding: const EdgeInsets.all(15),
           decoration: BoxDecoration(
             color: P.card,
             borderRadius: BorderRadius.circular(18),
-            border: Border.all(color: P.gold.withOpacity(0.45), width: 1.3),
+            border: Border.all(color: accent.withOpacity(0.45), width: 1.3),
             boxShadow: [
               BoxShadow(
-                color: P.gold.withOpacity(0.14),
+                color: accent.withOpacity(0.14),
                 blurRadius: 16,
                 offset: const Offset(0, 7),
               ),
@@ -308,14 +320,22 @@ class DailyQuestionCard extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  const FaIcon(FontAwesomeIcons.solidLightbulb,
-                      size: 14, color: P.gold),
+                  // नीचे की पंक्ति पहले ही बताती है कि हल हुआ — ऊपर
+                  // बस सही/ग़लत का निशान, दोहरा ✓ नहीं
+                  FaIcon(
+                      !done
+                          ? FontAwesomeIcons.solidLightbulb
+                          : right
+                              ? FontAwesomeIcons.check
+                              : FontAwesomeIcons.xmark,
+                      size: 14,
+                      color: accent),
                   const SizedBox(width: 8),
-                  const Text('आज का प्रश्न',
+                  Text('आज का प्रश्न',
                       style: TextStyle(
                           fontSize: 13.5,
                           fontWeight: FontWeight.w800,
-                          color: P.gold)),
+                          color: accent)),
                   const Spacer(),
                   Container(
                     padding:
@@ -341,20 +361,50 @@ class DailyQuestionCard extends StatelessWidget {
                     fontSize: 15, height: 1.45, fontWeight: FontWeight.w600),
               ),
               const SizedBox(height: 10),
-              Row(
-                children: [
-                  Text('छूकर उत्तर दीजिए',
-                      style: TextStyle(fontSize: 12, color: P.muted)),
-                  const SizedBox(width: 6),
-                  FaIcon(FontAwesomeIcons.arrowRight, size: 11, color: P.muted)
-                      .animate(onPlay: (c) => c.repeat(reverse: true))
-                      .moveX(begin: 0, end: 5, duration: 700.ms),
-                ],
-              ),
+              if (!done)
+                Row(
+                  children: [
+                    Text('छूकर उत्तर दीजिए',
+                        style: TextStyle(fontSize: 12, color: P.muted)),
+                    const SizedBox(width: 6),
+                    FaIcon(FontAwesomeIcons.arrowRight,
+                            size: 11, color: P.muted)
+                        .animate(onPlay: (c) => c.repeat(reverse: true))
+                        .moveX(begin: 0, end: 5, duration: 700.ms),
+                  ],
+                )
+              else
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 3),
+                      child: FaIcon(
+                          right
+                              ? FontAwesomeIcons.solidCircleCheck
+                              : FontAwesomeIcons.solidCircleXmark,
+                          size: 13,
+                          color: accent),
+                    ),
+                    const SizedBox(width: 7),
+                    Expanded(
+                      child: Text(
+                        right
+                            ? 'हल हो गया — सही उत्तर! कल नया प्रश्न'
+                            : 'हल हो गया — सही उत्तर: '
+                                '(${kLetters[q.answer]}) ${q.options[q.answer]}',
+                        style: TextStyle(
+                            fontSize: 12.5,
+                            fontWeight: FontWeight.w700,
+                            color: accent),
+                      ),
+                    ),
+                  ],
+                ),
             ],
           ),
         ),
       ),
-    ).animate(delay: 150.ms).fadeIn(duration: 350.ms).slideY(begin: 0.1, end: 0);
+    );
   }
 }
