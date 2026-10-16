@@ -173,7 +173,7 @@ UPPSC RO/ARO, UP PET व UPSSSC के पिछले वर्षों के
 > वही आइकन है, गहरे ink पर बैठाया हुआ — 32-bit PNG, पर कहीं पारदर्शिता नहीं।
 > ऐप के अंदर का आइकन पहले जैसा ही है, यह सिर्फ़ Store listing के लिए है।
 
-आइकन `assets/images/logo.png` से आता है, जो `node tools/gen-icons.js` बनाता है।
+आइकन `design/logo-2026-10/user-sketch.webp` से आता है — `python tools/gen_icons.py` सब बनाता है।
 लोगो बदलें तो वहीं से बदलिए और यहाँ नई नक़ल रख दीजिए।
 
 screenshots **Play वाली build** से ली गई हैं, direct वाली से नहीं — इसलिए समीक्षक

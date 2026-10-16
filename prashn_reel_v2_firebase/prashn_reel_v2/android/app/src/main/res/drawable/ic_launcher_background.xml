@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- tools/gen-icons.js से बनी — हाथ से न बदलें. -->
+<!-- tools/gen_icons.py से बनी — हाथ से न बदलें. sketch के काग़ज़ का रंग. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp" android:height="108dp"
     android:viewportWidth="108" android:viewportHeight="108">
-  <path android:fillColor="#F7F3EC" android:pathData="M0,0 h108 v108 h-108 z" />
+  <path android:fillColor="#FDF6EB" android:pathData="M0,0 h108 v108 h-108 z" />
 </vector>

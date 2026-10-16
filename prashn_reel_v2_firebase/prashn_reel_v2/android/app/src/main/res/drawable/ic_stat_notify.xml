@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- tools/gen-icons.js से बनी — हाथ से न बदलें.
-     प्रश्न-घंटी (lib/reminders.dart) का छोटा चिह्न. रंगीन चिह्न वहाँ सफ़ेद
-     चौकोर बनकर दिखता है, इसलिए एक-रंगी. res/raw/keep.xml इसे R8 से बचाता है. -->
+<!-- Notification bar का छोटा चिह्न — प्रश्न-घंटी (lib/reminders.dart).
+     लोगो (धनुष, तिरछा बाण, सुनहरा लक्ष्य) का एक-रंगी, मोटी रेखाओं वाला रूप.
+     हाथ से बना है: pencil sketch से एक-रंगी चिह्न अपने आप नहीं बनता
+     (tools/gen_icons.py देखिए). Android यहाँ सिर्फ़ alpha देखता है —
+     रंगीन चिह्न सफ़ेद चौकोर बनकर दिखता है. res/raw/keep.xml इसे R8 से बचाता है. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp" android:height="24dp"
     android:viewportWidth="24" android:viewportHeight="24">
-  <group android:translateX="-5.600" android:translateY="-5.084"
-      android:scaleX="0.03438" android:scaleY="0.03438">
-    <path android:fillColor="#FFFFFFFF" android:pathData="M512,640 C440,596 352,590 250,618 L250,782 C352,758 440,762 512,806 C584,762 672,758 774,782 L774,618 C672,590 584,596 512,640 Z" />
-    <path android:fillColor="#FFFFFFFF" android:pathData="M502,620 C438,576 356,570 270,592 L270,752 C356,732 438,736 502,778 Z" />
-    <path android:fillColor="#FFFFFFFF" android:pathData="M522,620 C586,576 668,570 754,592 L754,752 C668,732 586,736 522,778 Z" />
-    <path android:fillColor="#FFFFFFFF" android:pathData="M494,372 H530 Q538,372 538,380 V626 Q538,634 530,634 H494 Q486,634 486,626 V380 Q486,372 494,372 Z" />
-    <path android:fillColor="#FFFFFFFF" android:pathData="M479,372 H545 Q556,372 556,383 V395 Q556,406 545,406 H479 Q468,406 468,395 V383 Q468,372 479,372 Z" />
-    <path android:fillColor="#FFFFFFFF" android:pathData="M512,188 C562,252 612,318 632,392 C594,370 556,364 512,374 C468,364 430,370 392,392 C412,318 462,252 512,188 Z" />
-    <path android:fillColor="#FFFFFFFF" android:pathData="M512,262 C540,298 562,334 572,368 C552,360 532,357 512,359 C492,357 472,360 452,368 C462,334 484,298 512,262 Z" />
-  </group>
+  <!-- धनुष -->
+  <path android:strokeColor="#FFFFFFFF" android:strokeWidth="2"
+      android:strokeLineCap="round" android:fillColor="#00000000"
+      android:pathData="M3.5,5.5 C9,4 16,9 18.5,20.5" />
+  <!-- डोरी -->
+  <path android:strokeColor="#FFFFFFFF" android:strokeWidth="0.9"
+      android:fillColor="#00000000"
+      android:pathData="M3.5,5.5 L18.5,20.5" />
+  <!-- बाण का दंड -->
+  <path android:strokeColor="#FFFFFFFF" android:strokeWidth="1.8"
+      android:strokeLineCap="round" android:fillColor="#00000000"
+      android:pathData="M4,20 L17,7" />
+  <!-- नोक -->
+  <path android:fillColor="#FFFFFFFF" android:pathData="M20.5,3.5 L14.5,6.2 L17.8,9.5 Z" />
+  <!-- पंख -->
+  <path android:fillColor="#FFFFFFFF" android:pathData="M4,20 L3,16.6 L5.2,18.8 Z M4,20 L7.4,21 L5.2,18.8 Z" />
+  <!-- लक्ष्य -->
+  <path android:fillColor="#FFFFFFFF" android:pathData="M20.5,1 a1.6,1.6 0 1,0 0.01,0 Z" />
 </vector>

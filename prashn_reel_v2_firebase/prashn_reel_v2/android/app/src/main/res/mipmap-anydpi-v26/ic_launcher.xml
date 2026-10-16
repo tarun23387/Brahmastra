@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- tools/gen-icons.js से बनी — हाथ से न बदलें.
+<!-- tools/gen_icons.py से बनी — हाथ से न बदलें.
      Android 8 और उसके बाद वाले फ़ोन इसे इस्तेमाल करते हैं; पुराने
-     mipmap-*/ic_launcher.png लेते हैं. -->
+     mipmap-*/ic_launcher.png लेते हैं. monochrome (Android 13 के themed
+     icons) नहीं है — pencil sketch का एक-रंगी रूप पहचान में नहीं आता. -->
 <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
     <background android:drawable="@drawable/ic_launcher_background" />
-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
-    <monochrome android:drawable="@drawable/ic_launcher_monochrome" />
+    <foreground android:drawable="@mipmap/ic_launcher_foreground" />
 </adaptive-icon>

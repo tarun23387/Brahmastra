@@ -45,7 +45,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  # लोगो — tools/gen-icons.js से बनता है, हाथ से न बदलें.
+  # लोगो — tools/gen_icons.py से बनता है, हाथ से न बदलें.
   assets:
     - assets/images/
     - assets/sounds/
