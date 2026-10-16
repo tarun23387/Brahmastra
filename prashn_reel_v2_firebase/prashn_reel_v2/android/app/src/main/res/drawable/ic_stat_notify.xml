@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Notification bar का छोटा icon — लॉन्चर वाले तीर की ही आकृति, पर एक-रंगी.
+     Android notification icon में सिर्फ़ alpha देखता है; रंगीन icon वहाँ
+     सफ़ेद चौकोर बनकर दिखता है. आकृति drawable/ic_launcher_foreground.xml से. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp"
+    android:viewportWidth="68" android:viewportHeight="68">
+  <group android:translateX="-20" android:translateY="-20.4">
+    <path android:fillColor="#FFFFFFFF"
+        android:pathData="M54.0,20.4 L62.8,46.0 L58.4,46.0 L58.4,60.4 L67.6,70.8 L58.4,66.8 L58.4,84.4 L54.0,88.4 L49.6,84.4 L49.6,66.8 L40.4,70.8 L49.6,60.4 L49.6,46.0 L45.2,46.0 Z" />
+  </group>
+</vector>

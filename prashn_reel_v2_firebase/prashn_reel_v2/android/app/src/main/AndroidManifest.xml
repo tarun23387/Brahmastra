@@ -1,4 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- प्रश्न-घंटी (lib/reminders.dart): फ़ोन restart होने पर भी तय
+         notification बने रहें. Exact alarm की अनुमति जानबूझकर नहीं ली —
+         5 घंटे में 10-15 मिनट आगे-पीछे से फ़र्क़ नहीं पड़ता, और Play उस
+         अनुमति पर अलग से सवाल पूछता है. -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <application
         android:label="ब्रह्मास्त्र"
         android:name="${applicationName}"
@@ -25,6 +30,17 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <!-- प्रश्न-घंटी — तय समय पर notification दिखाने और restart के बाद
+             दोबारा लगाने के लिए (flutter_local_notifications). -->
+        <receiver android:exported="false" android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver" />
+        <receiver android:exported="false" android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data

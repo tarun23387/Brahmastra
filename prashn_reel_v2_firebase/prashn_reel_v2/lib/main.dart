@@ -4,12 +4,17 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'dart:async';
+
 import 'app_config.dart';
 import 'app_gate.dart';
 import 'auth.dart';
 import 'device.dart';
+import 'engage.dart';
 import 'models.dart';
+import 'reminders.dart';
 import 'repository.dart';
+import 'screens/quick_question_page.dart';
 import 'speech.dart';
 import 'sfx.dart';
 import 'study_timer.dart';
@@ -34,6 +39,10 @@ Future<void> main() async {
   await DeviceId.init();
   await Session.init();
   await AppConfig.load();
+  await Engage.init();
+  await Reminders.init();
+  // ऐप खुला है — पहले से तय घंटियाँ अब नहीं बजनी चाहिए
+  await Reminders.cancelPending();
 
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
@@ -76,8 +85,51 @@ Future<void> _startAppCheck() async {
   }
 }
 
-class PrashnReelApp extends StatelessWidget {
+class PrashnReelApp extends StatefulWidget {
   const PrashnReelApp({super.key});
+
+  @override
+  State<PrashnReelApp> createState() => _PrashnReelAppState();
+}
+
+class _PrashnReelAppState extends State<PrashnReelApp> {
+  /// notification छूने पर प्रश्न का पन्ना किसी भी परदे के ऊपर खोलने के लिए.
+  final _nav = GlobalKey<NavigatorState>();
+
+  late final AppLifecycleListener _life;
+  StreamSubscription<Question>? _taps;
+
+  @override
+  void initState() {
+    super.initState();
+    // प्रश्न-घंटी: ऐप पीछे गया तो घंटियाँ तय, सामने आया तो रद्द —
+    // ताकि "5 घंटे" हमेशा आख़िरी बार खोलने से गिने जाएँ.
+    _life = AppLifecycleListener(
+      onHide: Reminders.schedule,
+      onShow: Reminders.cancelPending,
+    );
+    _taps = Reminders.onTap.listen(_openQuestion);
+
+    // ऐप बंद था और notification से ही खुला
+    final q = Reminders.launchQuestion;
+    if (q != null) {
+      Reminders.launchQuestion = null;
+      WidgetsBinding.instance.addPostFrameCallback((_) => _openQuestion(q));
+    }
+  }
+
+  void _openQuestion(Question q) {
+    _nav.currentState?.push(MaterialPageRoute(
+      builder: (_) => QuickQuestionPage(q: q, title: 'प्रश्न-घंटी'),
+    ));
+  }
+
+  @override
+  void dispose() {
+    _life.dispose();
+    _taps?.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -94,6 +146,7 @@ class PrashnReelApp extends StatelessWidget {
     );
 
     return MaterialApp(
+      navigatorKey: _nav,
       title: 'ब्रह्मास्त्र',
       debugShowCheckedModeBanner: false,
       theme: base.copyWith(

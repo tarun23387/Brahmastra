@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../auth.dart';
 import '../exams.dart';
 import '../models.dart';
-import '../widgets/study_art.dart';
+import '../widgets/streak_hero.dart';
 import 'exam_picker_page.dart';
 import 'paper_picker_page.dart';
 
@@ -102,17 +102,15 @@ class DashboardPage extends StatelessWidget {
               ],
             ),
 
-            // ── पढ़ाई का बैनर ──
+            // ── 🔥 लय, आज का लक्ष्य, हफ़्ता ──
+            // पहले यहाँ एक स्थिर बैनर था ("आज की तैयारी"), जो हर दिन वैसा ही
+            // दिखता था. अब यह रोज़ बदलता है — यही छात्र को लौटाता है.
             const SizedBox(height: 18),
-            StudyHero(
-              title: mine.isEmpty ? 'तैयारी शुरू कीजिए' : 'आज की तैयारी',
-              subtitle: mine.isEmpty
-                  ? 'परीक्षा चुनिए और रोज़ थोड़ा-थोड़ा हल कीजिए।'
-                  : 'रोज़ का अभ्यास ही मेरिट लाता है।',
-              tint: Tint.sky,
-              tintInk: Tint.skyInk,
-              motif: StudyMotif.target,
-            ),
+            const StreakHero(),
+
+            // ── आज का प्रश्न ──
+            const SizedBox(height: 14),
+            const DailyQuestionCard(),
 
             // ── मेरी परीक्षाएँ ──
             if (mine.isNotEmpty) ...[

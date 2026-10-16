@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- R8 सिर्फ़ नाम से माँगे जाने वाले resource नहीं पहचानता — notification का
+     icon Dart से "ic_stat_notify" नाम से माँगा जाता है, इसलिए उसे यहाँ
+     बचाकर रखा है. वरना release build में icon हट जाता और notification
+     चुपचाप दिखना बंद कर देता. -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/ic_stat_notify" />

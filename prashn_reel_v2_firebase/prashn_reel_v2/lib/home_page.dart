@@ -17,6 +17,8 @@ import 'repository.dart';
 import 'screens/sources_page.dart';
 import 'sfx.dart';
 import 'speech.dart';
+import 'engage.dart';
+import 'reminders.dart';
 import 'study_timer.dart';
 
 class HomePage extends StatefulWidget {
@@ -188,6 +190,8 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
           );
     if (!mounted) return;
     final list = List<Question>.from(res.questions)..shuffle(Random());
+    // प्रश्न-घंटी और "आज का प्रश्न" इसी परीक्षा के प्रश्नों से बनें
+    Engage.rememberPool(list);
     setState(() {
       questions = list;
       source = res.source;
@@ -237,6 +241,11 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
     _stopClock(); // जवाब आ गया, अब गिनने की ज़रूरत नहीं
     setState(() => answers[id] = option);
     AnswerStore.save(answers);
+
+    // 🔥 लय और आज की गिनती; तीसरे उत्तर पर घंटी की अनुमति (reminders.dart)
+    Engage.recordAnswer().then((_) {
+      if (Engage.todayCount == 3) Reminders.askOnce();
+    });
 
     // उत्तर चुनते ही व्याख्या सुना देते हैं
     if (Speaker.enabled) {
