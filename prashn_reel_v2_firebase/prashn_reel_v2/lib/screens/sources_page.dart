@@ -143,9 +143,10 @@ class SourcesPage extends StatelessWidget {
               url: 'https://www.india.gov.in',
             ),
             const _SourceCard(
-              authority: 'उत्तर प्रदेश सरकार का आधिकारिक पोर्टल',
-              exams: 'उत्तर प्रदेश विशेष — ज़िले, विभाग और राज्य की जानकारी',
-              url: 'https://up.gov.in',
+              authority: 'उत्तर प्रदेश सरकार के विभाग',
+              exams: 'उत्तर प्रदेश विशेष — भारत सरकार की आधिकारिक वेब-निर्देशिका '
+                  '(IGOD) में राज्य के विभाग',
+              url: 'https://igod.gov.in/sg/UP/categories',
             ),
             const _SourceCard(
               authority: 'भारतीय सर्वेक्षण विभाग (Survey of India)',

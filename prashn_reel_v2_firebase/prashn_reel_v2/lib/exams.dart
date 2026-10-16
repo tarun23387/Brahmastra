@@ -96,7 +96,7 @@ const Map<String, Exam> kExams = {
     shortLabel: 'UPPET',
     authority: 'UPSSSC',
     authorityFullName: 'उत्तर प्रदेश अधीनस्थ सेवा चयन आयोग (UPSSSC)',
-    sourceUrl: 'https://upsssc.gov.in',
+    sourceUrl: 'https://igod.gov.in/sg/UP/E013/organizations',
     negative: '1/4',
     paperIds: ['pet-main'],
     ready: true, // सभी 15 खंडों पर प्रश्न तैयार — 1300 से ऊपर
