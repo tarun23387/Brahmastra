@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../exam_dates.dart';
 import '../exams.dart';
 import '../models.dart';
 
@@ -41,6 +42,10 @@ const Map<String, ExamLook> kExamLooks = {
   'prog-fin': ExamLook([Color(0xFF7C3AED), Color(0xFF34116E)],
       FontAwesomeIcons.chartLine, 'Programmer (Finance)', 'कंप्यूटर · वित्त'),
 };
+
+/// thumbnail की चौड़ाई÷ऊँचाई — grid भी यही लेते हैं (landing, dashboard).
+/// तारीख़ वाली पट्टी के लिए थोड़ा लंबा रखा है.
+const double kThumbAspect = 0.86;
 
 ExamLook lookOf(String examId) =>
     kExamLooks[examId] ??
@@ -105,7 +110,7 @@ class ExamThumb extends StatelessWidget {
             onTap: onTap,
             // चमक clip के भीतर — बाहर लगाने पर कोनों पर चौकोर धब्बे दिखते थे
             child: AspectRatio(
-              aspectRatio: 1.05,
+              aspectRatio: kThumbAspect,
               child: Stack(
                 children: [
                   // सजावट: दो हल्के घेरे
@@ -123,7 +128,7 @@ class ExamThumb extends StatelessWidget {
                   // नीचे लिखे नाम के ऊपर न चढ़े.
                   Positioned(
                     right: 10,
-                    top: 34,
+                    top: 46,
                     child: FaIcon(look.icon,
                             size: 64, color: Colors.white.withOpacity(0.16))
                         .animate(onPlay: (c) => c.repeat(reverse: true))
@@ -158,6 +163,17 @@ class ExamThumb extends StatelessWidget {
                             if (free) _badge('मुफ़्त', P.goldBright, P.ink),
                             if (locked) _lock(),
                           ],
+                        ),
+                        const SizedBox(height: 9),
+                        // अधिसूचना / अंतिम तिथि / परीक्षा — exam_dates.dart
+                        ValueListenableBuilder<int>(
+                          valueListenable: ExamDates.changes,
+                          builder: (_, __, ___) {
+                            final st = ExamDates.stageOf(exam.id);
+                            return st == null
+                                ? const SizedBox.shrink()
+                                : _stage(st);
+                          },
                         ),
                         const Spacer(),
                         Text(
@@ -200,6 +216,50 @@ class ExamThumb extends StatelessWidget {
         .fadeIn(duration: 320.ms)
         .slideY(begin: 0.12, end: 0, curve: Curves.easeOutCubic);
   }
+
+  Widget _stage(ExamStage st) => Container(
+        width: double.infinity,
+        padding: const EdgeInsets.fromLTRB(8, 5, 8, 6),
+        decoration: BoxDecoration(
+          color: st.urgent
+              ? P.goldBright.withOpacity(0.95)
+              : Colors.white.withOpacity(0.16),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Row(
+              children: [
+                FaIcon(FontAwesomeIcons.calendarDays,
+                    size: 9.5,
+                    color: st.urgent ? P.ink : Colors.white.withOpacity(0.85)),
+                const SizedBox(width: 5),
+                Expanded(
+                  child: Text(st.label,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                          fontSize: 10.5,
+                          height: 1.2,
+                          color: st.urgent
+                              ? P.ink
+                              : Colors.white.withOpacity(0.85))),
+                ),
+              ],
+            ),
+            Text(st.value,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                    fontSize: 12.5,
+                    height: 1.25,
+                    fontWeight: FontWeight.w800,
+                    color: st.urgent ? P.ink : Colors.white)),
+          ],
+        ),
+      );
 
   Widget _ring(double size, Color c) => Container(
         width: size,

@@ -111,8 +111,10 @@ class DashboardPage extends StatelessWidget {
                     ExamThumb(
                       exam: kExams[c.examId]!,
                       index: i,
+                      // "दिन बचे" नहीं — thumbnail पर अब परीक्षा के बचे दिन
+                      // भी दिखते हैं, दोनों उलझते
                       footnote: '${kExams[c.examId]!.papers.length} पेपर · '
-                          '${c.daysLeft} दिन बचे',
+                          'सदस्यता ${c.daysLeft} दिन',
                       onTap: () => Navigator.of(context).push(MaterialPageRoute(
                         builder: (_) => PaperPickerPage(
                           exam: kExams[c.examId]!,
@@ -189,7 +191,7 @@ class DashboardPage extends StatelessWidget {
         physics: const NeverScrollableScrollPhysics(),
         mainAxisSpacing: 12,
         crossAxisSpacing: 12,
-        childAspectRatio: 1.05,
+        childAspectRatio: kThumbAspect,
         children: children,
       );
 

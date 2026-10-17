@@ -155,6 +155,18 @@ class SourcesPage extends StatelessWidget {
             ),
 
             const SizedBox(height: 24),
+            _heading('परीक्षा की तिथियाँ'),
+            const SizedBox(height: 8),
+            const Text(
+              'course के चित्र पर दिखने वाली अधिसूचना, आवेदन की अंतिम तिथि और '
+              'परीक्षा की तिथि ऊपर दिए आयोगों की प्रकाशित सूचना से ली जाती हैं। '
+              'आयोग इन्हें बदल सकते हैं — आवेदन या परीक्षा से पहले आयोग की '
+              'आधिकारिक वेबसाइट पर ज़रूर देख लें। कोई अंतर हो तो सही वही है जो '
+              'आयोग की वेबसाइट पर लिखा है।',
+              style: TextStyle(fontSize: 13.5, height: 1.65, color: P.muted),
+            ),
+
+            const SizedBox(height: 24),
             _heading('मानचित्रों के बारे में'),
             const SizedBox(height: 8),
             const Text(

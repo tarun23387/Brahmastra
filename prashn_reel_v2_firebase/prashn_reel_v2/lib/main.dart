@@ -11,6 +11,7 @@ import 'app_gate.dart';
 import 'auth.dart';
 import 'device.dart';
 import 'engage.dart';
+import 'exam_dates.dart';
 import 'models.dart';
 import 'reminders.dart';
 import 'repository.dart';
@@ -39,6 +40,7 @@ Future<void> main() async {
   await DeviceId.init();
   await Session.init();
   await AppConfig.load();
+  await ExamDates.load();
   await Engage.init();
   await Reminders.init();
   // ऐप खुला है — पहले से तय घंटियाँ अब नहीं बजनी चाहिए

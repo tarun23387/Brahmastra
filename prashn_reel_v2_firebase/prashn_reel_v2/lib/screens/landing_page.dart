@@ -134,7 +134,7 @@ class LandingPage extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 mainAxisSpacing: 12,
                 crossAxisSpacing: 12,
-                childAspectRatio: 1.05,
+                childAspectRatio: kThumbAspect,
                 children: [
                   for (final (i, x) in _ordered.indexed)
                     ExamThumb(
@@ -155,6 +155,24 @@ class LandingPage extends StatelessWidget {
                       },
                     ),
                 ],
+              ),
+
+              // तारीख़ें सरकारी जानकारी हैं — स्रोत और "बदल सकती हैं" साफ़
+              // दिखे (Misleading Claims नीति). छूने पर स्रोत वाला पन्ना.
+              const SizedBox(height: 12),
+              InkWell(
+                borderRadius: BorderRadius.circular(8),
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => const SourcesPage()),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 6, horizontal: 2),
+                  child: Text(
+                    '📅 तिथियाँ आयोगों की सूचना पर आधारित हैं और बदल सकती हैं — '
+                    'पक्की जानकारी आयोग की आधिकारिक साइट पर देखें। स्रोत ›',
+                    style: TextStyle(fontSize: 11.5, color: P.muted, height: 1.45),
+                  ),
+                ),
               ),
 
               const SizedBox(height: 24),
