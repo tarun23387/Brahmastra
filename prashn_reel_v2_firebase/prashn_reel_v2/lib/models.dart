@@ -207,11 +207,20 @@ class P {
   static const right = Color(0xFF1B7A50);
   static const wrong = Color(0xFFA83228);
 
-  /// सदस्यता और ख़ास चीज़ों के लिए — सोना
+  /// सदस्यता और ख़ास चीज़ों के लिए — सोना. यह क्रीम पर पढ़ने लायक़ गहरा
+  /// सोना है; चमक (बैज, घेरे, गहरी पृष्ठभूमि पर) के लिए [goldBright].
   static const gold = Color(0xFF9C7A16);
+  static const goldBright = Color(0xFFC9A227);
 
-  /// ऐप का अपना रंग — गहरा मैरून. जहाँ किसी विषय का रंग न हो वहाँ यही.
-  static const brand = Color(0xFF8C3A1E);
+  /// ऐप का अपना रंग — गहरा नीला. जहाँ किसी विषय का रंग न हो वहाँ यही.
+  ///
+  /// अक्टूबर 2026 तक यह मैरून (#8C3A1E) था. नया लोगो भूरे-मैरून रेखाओं
+  /// का है, तो ऐप भी वही रंग रखता तो सब एक-सा भूरा लगता — नीला उसके साथ
+  /// विरोधी पर मेल खाता रंग है, और पढ़ाई-परीक्षा में भरोसे का भाव देता है.
+  static const brand = Color(0xFF1F3A68);
+
+  /// [brand] का गहरा रूप — gradient के निचले सिरे के लिए.
+  static const brandDeep = Color(0xFF12254A);
 }
 
 const List<String> kLetters = ['अ', 'ब', 'स', 'द'];

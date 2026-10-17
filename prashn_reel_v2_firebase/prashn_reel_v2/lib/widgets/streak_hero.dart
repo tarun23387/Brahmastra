@@ -37,7 +37,7 @@ class StreakHero extends StatelessWidget {
             gradient: const LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [Color(0xFF8C3A1E), Color(0xFF5A1F0E)],
+              colors: [P.brand, P.brandDeep],
             ),
             boxShadow: [
               BoxShadow(
@@ -256,7 +256,7 @@ class _DayDot extends StatelessWidget {
           child: Center(
             child: done
                 ? const FaIcon(FontAwesomeIcons.fire,
-                    size: 13, color: Color(0xFF5A1F0E))
+                    size: 13, color: P.brandDeep)
                 : null,
           ),
         ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../auth.dart';
+import '../build_flags.dart';
 import '../models.dart';
 import 'forgot_password_sheet.dart';
 
@@ -148,7 +149,10 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 6),
               Text(
-                'पैसे भेजने के बाद जो आईडी-पासवर्ड मिला था, वही डालिए।',
+                // Play build में पैसे का ज़िक्र नहीं — build_flags.dart देखिए
+                kIsPlayBuild
+                    ? 'आपको जो आईडी-पासवर्ड मिला है, वही डालिए।'
+                    : 'पैसे भेजने के बाद जो आईडी-पासवर्ड मिला था, वही डालिए।',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 13, color: P.muted, height: 1.5),
               ),

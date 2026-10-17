@@ -65,5 +65,11 @@
             <action android:name="android.intent.action.VIEW"/>
             <data android:scheme="https"/>
         </intent>
+
+        <!-- ताले वाले course के popup में "कॉल करें" (lib/widgets/locked_sheet.dart) -->
+        <intent>
+            <action android:name="android.intent.action.DIAL"/>
+            <data android:scheme="tel"/>
+        </intent>
     </queries>
 </manifest>

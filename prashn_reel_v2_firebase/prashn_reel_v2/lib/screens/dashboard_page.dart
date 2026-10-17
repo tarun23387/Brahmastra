@@ -4,6 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../auth.dart';
 import '../exams.dart';
 import '../models.dart';
+import '../widgets/exam_thumb.dart';
+import '../widgets/locked_sheet.dart';
 import '../widgets/streak_hero.dart';
 import 'exam_picker_page.dart';
 import 'paper_picker_page.dart';
@@ -30,20 +32,6 @@ class DashboardPage extends StatelessWidget {
     required this.onFreeSample,
     required this.onSignOut,
   });
-
-  static const _examColors = {
-    'uppcs': Color(0xFF2A4494),
-    'roaro': Color(0xFF0B6357),
-    'pet': Color(0xFF97203E),
-  };
-
-  static const _examIcons = {
-    'uppcs': FontAwesomeIcons.landmarkDome,
-    'roaro': FontAwesomeIcons.penFancy,
-    'pet': FontAwesomeIcons.listCheck,
-  };
-
-  Color _colorOf(String id) => _examColors[id] ?? P.brand;
 
   @override
   Widget build(BuildContext context) {
@@ -117,7 +105,24 @@ class DashboardPage extends StatelessWidget {
               const SizedBox(height: 22),
               _heading('मेरी परीक्षाएँ'),
               const SizedBox(height: 10),
-              ...mine.map((c) => _myCourse(context, c)),
+              _grid([
+                for (final (i, c) in mine.indexed)
+                  if (kExams[c.examId] != null)
+                    ExamThumb(
+                      exam: kExams[c.examId]!,
+                      index: i,
+                      footnote: '${kExams[c.examId]!.papers.length} पेपर · '
+                          '${c.daysLeft} दिन बचे',
+                      onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (_) => PaperPickerPage(
+                          exam: kExams[c.examId]!,
+                          accent: lookOf(c.examId).colors.first,
+                          onPractise: onPractise,
+                        ),
+                      )),
+                    ),
+              ]),
+              const SizedBox(height: 4),
 
               const SizedBox(height: 8),
               OutlinedButton.icon(
@@ -147,9 +152,21 @@ class DashboardPage extends StatelessWidget {
             // ── और परीक्षाएँ ──
             if (others.isNotEmpty) ...[
               const SizedBox(height: 22),
-              _heading(mine.isEmpty ? 'परीक्षाएँ' : 'और परीक्षाएँ जोड़ें'),
+              _heading(mine.isEmpty ? 'परीक्षाएँ' : 'और courses'),
               const SizedBox(height: 10),
-              ...others.map((x) => _otherExam(context, x)),
+              // ली नहीं हैं — ताला; छूने पर "आईडी-पासवर्ड से खुलेगा"
+              _grid([
+                for (final (i, x) in others.indexed)
+                  ExamThumb(
+                    exam: x,
+                    index: i,
+                    locked: x.id != 'pet',
+                    free: x.id == 'pet',
+                    onTap: () => x.id == 'pet'
+                        ? onFreeSample()
+                        : showLockedCourse(context, x),
+                  ),
+              ]),
             ],
 
             // ── मुफ़्त नमूना ──
@@ -166,118 +183,22 @@ class DashboardPage extends StatelessWidget {
     );
   }
 
+  Widget _grid(List<Widget> children) => GridView.count(
+        crossAxisCount: 2,
+        shrinkWrap: true,
+        physics: const NeverScrollableScrollPhysics(),
+        mainAxisSpacing: 12,
+        crossAxisSpacing: 12,
+        childAspectRatio: 1.05,
+        children: children,
+      );
+
   Widget _heading(String t) => Text(t,
       style: TextStyle(
           fontSize: 12.5,
           fontWeight: FontWeight.w800,
           color: P.muted,
           letterSpacing: 0.3));
-
-  // ───────────── ली हुई परीक्षा ─────────────
-
-  Widget _myCourse(BuildContext context, Course c) {
-    final exam = kExams[c.examId];
-    if (exam == null) return const SizedBox.shrink();
-    final col = _colorOf(c.examId);
-
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 11),
-      child: Material(
-        color: Colors.transparent,
-        borderRadius: BorderRadius.circular(16),
-        child: InkWell(
-          borderRadius: BorderRadius.circular(16),
-          onTap: () => Navigator.of(context).push(MaterialPageRoute(
-            builder: (_) => PaperPickerPage(
-              exam: exam,
-              accent: col,
-              onPractise: onPractise,
-            ),
-          )),
-          child: Container(
-            padding: const EdgeInsets.all(15),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              gradient: const LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Color(0xFFFFFEFB), Color(0xFFFBF6EC)],
-              ),
-              border: Border.all(color: col.withOpacity(0.24)),
-              boxShadow: [
-                BoxShadow(
-                  color: col.withOpacity(0.12),
-                  blurRadius: 18,
-                  offset: const Offset(0, 9),
-                ),
-                BoxShadow(
-                  color: const Color(0xFF3B2A17).withOpacity(0.05),
-                  blurRadius: 6,
-                  offset: const Offset(0, 2),
-                ),
-              ],
-            ),
-            child: Row(
-              children: [
-                Container(
-                  width: 42,
-                  height: 42,
-                  decoration: BoxDecoration(
-                    color: col.withOpacity(0.10),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Center(
-                    child: FaIcon(
-                        _examIcons[c.examId] ?? FontAwesomeIcons.graduationCap,
-                        size: 17,
-                        color: col),
-                  ),
-                ),
-                const SizedBox(width: 13),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(exam.shortLabel,
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w800,
-                              color: col)),
-                      const SizedBox(height: 2),
-                      Text('${exam.papers.length} पेपर',
-                          style: const TextStyle(fontSize: 12.5)),
-                      const SizedBox(height: 3),
-                      Row(
-                        children: [
-                          FaIcon(FontAwesomeIcons.clock,
-                              size: 10,
-                              color: c.isExpiringSoon ? P.wrong : P.muted),
-                          const SizedBox(width: 5),
-                          Text(
-                            '${c.daysLeft} दिन बचे',
-                            style: TextStyle(
-                              fontSize: 11.5,
-                              color: c.isExpiringSoon ? P.wrong : P.muted,
-                              fontWeight: c.isExpiringSoon
-                                  ? FontWeight.w700
-                                  : FontWeight.w400,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                FaIcon(FontAwesomeIcons.chevronRight,
-                    size: 13, color: P.muted.withOpacity(0.7)),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
 
   // ───────────── अवधि पूरी ─────────────
 
@@ -337,81 +258,6 @@ class DashboardPage extends StatelessWidget {
                   style: TextStyle(fontSize: 13, fontWeight: FontWeight.w800)),
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  // ───────────── जो ली नहीं ─────────────
-
-  Widget _otherExam(BuildContext context, Exam x) {
-    final col = _colorOf(x.id);
-
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 11),
-      child: Opacity(
-        opacity: x.ready ? 1.0 : 0.5,
-        child: Container(
-          padding: const EdgeInsets.all(15),
-          decoration: BoxDecoration(
-            color: P.card,
-            borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: P.line),
-          ),
-          child: Row(
-            children: [
-              Container(
-                width: 38,
-                height: 38,
-                decoration: BoxDecoration(
-                  color: col.withOpacity(0.09),
-                  borderRadius: BorderRadius.circular(11),
-                ),
-                child: Center(
-                  child: FaIcon(
-                      _examIcons[x.id] ?? FontAwesomeIcons.graduationCap,
-                      size: 15,
-                      color: col),
-                ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(x.shortLabel,
-                        style: const TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.w700)),
-                    const SizedBox(height: 2),
-                    Text(x.ready ? x.label : 'प्रश्न तैयार हो रहे हैं',
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(fontSize: 11.5, color: P.muted)),
-                  ],
-                ),
-              ),
-              if (x.ready)
-                FilledButton(
-                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) => ExamPickerPage(startExamId: x.id),
-                  )),
-                  style: FilledButton.styleFrom(
-                    backgroundColor: P.gold,
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(11)),
-                  ),
-                  child: const Text('लें',
-                      style:
-                          TextStyle(fontSize: 13, fontWeight: FontWeight.w800)),
-                )
-              else
-                FaIcon(FontAwesomeIcons.clock,
-                    size: 13, color: P.muted.withOpacity(0.7)),
-            ],
-          ),
         ),
       ),
     );

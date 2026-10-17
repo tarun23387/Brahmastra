@@ -142,7 +142,10 @@ class Engage {
     final p = _p;
     if (p == null) return;
     // कल वाला हटा दो — एक ही key काफ़ी है
-    for (final k in p.getKeys().where((k) => k.startsWith('qod_')).toList()) {
+    // (qod_q_ वाला आज का प्रश्न है — उसे नहीं छूना)
+    for (final k in p.getKeys()
+        .where((k) => k.startsWith('qod_') && !k.startsWith('qod_q_'))
+        .toList()) {
       if (k != 'qod_$_today') await p.remove(k);
     }
     await p.setInt('qod_$_today', option);
@@ -151,14 +154,36 @@ class Engage {
 
   /// आज का प्रश्न — पूरे दिन वही रहता है, कल बदल जाता है.
   static Question? questionOfDay() {
+    final p = _p;
+    final key = 'qod_q_$_today';
+
+    // आज का चुना हुआ प्रश्न सहेजा हुआ है — वही. भंडार (pool) हर बार
+    // अभ्यास खोलने पर नए सिरे से भरता है; सिर्फ़ उससे चुनते तो दिन के बीच
+    // प्रश्न बदल जाता और सहेजा उत्तर किसी और प्रश्न पर दिखता (फ़ोन पर पकड़ा).
+    final saved = p?.getString(key);
+    if (saved != null) {
+      try {
+        final m = Map<String, dynamic>.from(jsonDecode(saved) as Map);
+        final q = Question.fromMap('${m['id']}', m);
+        if (q != null) return q;
+      } catch (_) {}
+    }
+
     final all = pool();
     if (all.isEmpty) return null;
-    // भंडार बदलने पर भी उसी दिन वही प्रश्न रहे, इसलिए id से छाँटकर चुनते हैं
     all.sort((a, b) => a.id.compareTo(b.id));
     final n = DateTime.now();
     final dayNo = DateTime(n.year, n.month, n.day)
-            .difference(DateTime(2026, 1, 1))
-            .inDays;
-    return all[dayNo.abs() % all.length];
+        .difference(DateTime(2026, 1, 1))
+        .inDays;
+    final q = all[dayNo.abs() % all.length];
+
+    if (p != null) {
+      for (final k in p.getKeys().where((k) => k.startsWith('qod_q_')).toList()) {
+        p.remove(k);
+      }
+      p.setString(key, jsonEncode(q.toMap()));
+    }
+    return q;
   }
 }

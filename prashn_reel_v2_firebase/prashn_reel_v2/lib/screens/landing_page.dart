@@ -3,8 +3,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../auth.dart';
 import '../models.dart';
+import '../exams.dart';
+import '../widgets/exam_thumb.dart';
+import '../widgets/locked_sheet.dart';
 import '../widgets/study_art.dart';
-import 'exam_picker_page.dart';
 import 'login_page.dart';
 import 'sources_page.dart';
 
@@ -27,8 +29,13 @@ class LandingPage extends StatelessWidget {
     this.onContinue,
   });
 
-  static const _green = Tint.mintInk;
   static const _gold = P.gold;
+
+  /// UP PET सबसे पहले — वही मुफ़्त है, नए छात्र को वहीं से शुरू करना है.
+  static List<Exam> get _ordered => [
+        kExams['pet']!,
+        ...kExams.values.where((x) => x.id != 'pet'),
+      ];
 
   @override
   Widget build(BuildContext context) {
@@ -43,13 +50,12 @@ class LandingPage extends StatelessWidget {
               // ── शीर्षक ──
               Row(
                 children: [
-                  Container(
-                    width: 4,
-                    height: 34,
-                    decoration: BoxDecoration(
-                        color: P.brand, borderRadius: BorderRadius.circular(3)),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Image.asset('assets/images/logo.png',
+                        width: 46, height: 46),
                   ),
-                  const SizedBox(width: 11),
+                  const SizedBox(width: 12),
                   const Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,9 +65,10 @@ class LandingPage extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 23,
                                 fontWeight: FontWeight.w800,
+                                color: P.brand,
                                 height: 1.1)),
                         SizedBox(height: 2),
-                        Text('यूपीपीसीएस · आरओ/एआरओ · पीईटी',
+                        Text('UPPCS · RO/ARO · PET · Programmer',
                             style: TextStyle(fontSize: 12.5, color: P.muted)),
                       ],
                     ),
@@ -109,42 +116,45 @@ class LandingPage extends StatelessWidget {
                 const SizedBox(height: 14),
               ],
 
-              // ── कार्ड 1: पूरा पीईटी मुफ़्त ──
-              _Card(
-                accent: _green,
-                icon: FontAwesomeIcons.listCheck,
-                title: 'UPPET — पूरा एक्सेस मुफ़्त',
-                subtitle: 'कोई आईडी नहीं, कोई पैसा नहीं',
-                bullets: const [
-                  'पूरा UP PET पेपर — सारे 15 खंड',
-                  'हर विषय के प्रश्न और सभी मानचित्र',
-                  'बिना इंटरनेट भी चलता है',
+              // ── सारे courses ──
+              //
+              // पहले यहाँ दो कार्ड थे (PET मुफ़्त / UPPCS·RO/ARO) और बाक़ी
+              // परीक्षाएँ भीतर छिपी थीं. अब सब सामने हैं: UP PET खुला, बाक़ी
+              // पर ताला — छूने पर बताया जाता है कि आईडी-पासवर्ड से खुलेगा.
+              const Text('सभी courses',
+                  style: TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.w800, color: P.ink)),
+              const SizedBox(height: 2),
+              const Text('UP PET मुफ़्त है · बाक़ी आईडी-पासवर्ड से खुलते हैं',
+                  style: TextStyle(fontSize: 12.5, color: P.muted)),
+              const SizedBox(height: 12),
+              GridView.count(
+                crossAxisCount: 2,
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                mainAxisSpacing: 12,
+                crossAxisSpacing: 12,
+                childAspectRatio: 1.05,
+                children: [
+                  for (final (i, x) in _ordered.indexed)
+                    ExamThumb(
+                      exam: x,
+                      index: i,
+                      free: x.id == 'pet',
+                      locked: x.id != 'pet' && onContinue == null,
+                      onTap: () async {
+                        if (x.id == 'pet') {
+                          onFreeSample();
+                          return;
+                        }
+                        if (onContinue != null) {
+                          onContinue!();
+                          return;
+                        }
+                        if (await showLockedCourse(context, x)) onLoggedIn();
+                      },
+                    ),
                 ],
-                cta: 'Click Here For PET Free Access',
-                filled: true,
-                onTap: onFreeSample,
-              ),
-
-              const SizedBox(height: 14),
-
-              // ── कार्ड 2: पूरा एक्सेस — सदस्य को नहीं दिखाना ──
-              if (onContinue == null) _Card(
-                accent: _gold,
-                icon: FontAwesomeIcons.crown,
-                title: 'यूपीपीसीएस · आरओ/एआरओ',
-                subtitle: 'बड़ी परीक्षा की तैयारी',
-                bullets: const [
-                  'दोनों पेपर के सारे प्रश्न व विषय',
-                  'सभी मानचित्र',
-                  'हर हफ़्ते नए करेंट अफेयर्स',
-                ],
-                cta: 'परीक्षा चुनें',
-                filled: false,
-                onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) => const ExamPickerPage(),
-                  ));
-                },
               ),
 
               const SizedBox(height: 24),
