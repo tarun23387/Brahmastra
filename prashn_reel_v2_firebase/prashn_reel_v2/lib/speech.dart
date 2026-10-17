@@ -47,6 +47,15 @@ class Speaker {
     enabled = _p?.getBool(_prefKey) ?? false;
     rate = _p?.getDouble(_rateKey) ?? 0.42;
 
+    // TTS इंजन जगाने में फ़ोन पर ~2 सेकंड लगते हैं (POCO M7 पर नापा) —
+    // ऐप खुलने को इसका इंतज़ार नहीं करना चाहिए. पीछे चलता है; आवाज़ का
+    // बटन दबाने पर toggle() इसके पूरा होने तक रुकता है.
+    _engine = _initEngine();
+  }
+
+  static Future<void>? _engine;
+
+  static Future<void> _initEngine() async {
     try {
       // हिंदी आवाज़ है या नहीं — देख लेते हैं
       final langs = await _tts.getLanguages;
@@ -93,6 +102,7 @@ class Speaker {
 
   /// बटन दबाने पर — चालू हो तो तुरंत बंद, बंद हो तो चालू.
   static Future<bool> toggle() async {
+    await _engine; // hindiAvailable उसी से पता चलता है
     enabled = !enabled;
     await _p?.setBool(_prefKey, enabled);
     if (!enabled) await stop();

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -35,6 +37,14 @@ class AppConfig {
 
     if (!QuestionRepo.firebaseReady) return;
 
+    // ताज़ा जानकारी पीछे से — ऐप खुलने को इसका इंतज़ार नहीं करना.
+    // पहले यहाँ await था, और Firestore न जवाब दे तो पूरा 10 सेकंड का
+    // timeout ऐप खुलने में जुड़ जाता था (फ़ोन पर नापा: 12 सेकंड में खुला).
+    // सेव की हुई जानकारी ऊपर भर ही चुकी है; नई अगली बार दिखेगी.
+    unawaited(_refresh(prefs));
+  }
+
+  static Future<void> _refresh(SharedPreferences prefs) async {
     try {
       final snap = await FirebaseFirestore.instance
           .collection('config')
