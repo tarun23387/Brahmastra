@@ -172,7 +172,7 @@ class ExamThumb extends StatelessWidget {
                             final st = ExamDates.stageOf(exam.id);
                             return st == null
                                 ? const SizedBox.shrink()
-                                : _stage(st);
+                                : _stage(st, look.colors.last);
                           },
                         ),
                         const Spacer(),
@@ -217,14 +217,15 @@ class ExamThumb extends StatelessWidget {
         .slideY(begin: 0.12, end: 0, curve: Curves.easeOutCubic);
   }
 
-  Widget _stage(ExamStage st) => Container(
+  // पट्टी ठोस रंग की — पारदर्शी रखने पर पीछे तैरता बड़ा चिह्न आर-पार
+  // दिखता था और तारीख़ धुँधली पढ़ी जाती थी (फ़ोन पर पकड़ा).
+  Widget _stage(ExamStage st, Color deep) => Container(
         width: double.infinity,
         padding: const EdgeInsets.fromLTRB(8, 5, 8, 6),
         decoration: BoxDecoration(
-          color: st.urgent
-              ? P.goldBright.withOpacity(0.95)
-              : Colors.white.withOpacity(0.16),
+          color: st.urgent ? P.goldBright : Color.lerp(deep, Colors.black, 0.15),
           borderRadius: BorderRadius.circular(10),
+          border: Border.all(color: Colors.white.withOpacity(0.18)),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
