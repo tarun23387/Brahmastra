@@ -147,7 +147,7 @@ class _PrashnReelAppState extends State<PrashnReelApp> {
 
     return MaterialApp(
       navigatorKey: _nav,
-      title: 'ब्रह्मास्त्र',
+      title: 'Brahmastra',
       debugShowCheckedModeBanner: false,
       theme: base.copyWith(
         textTheme: base.textTheme.apply(bodyColor: P.ink, displayColor: P.ink),
