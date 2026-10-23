@@ -1,0 +1,1202 @@
+[
+ {
+  "id": "mgrsys-m3-001",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A byte-addressable machine has 256 MB of main memory and a 512 KB, 8-way set-associative cache with 64-byte blocks. The number of tag bits in a physical address is —",
+  "options": [
+   "13",
+   "15",
+   "12",
+   "18"
+  ],
+  "answer": 2,
+  "explanation": "256 MB = 2²⁸, अतः पता 28 बिट। सेट = 2¹⁹ / (2⁶ × 2³) = 2¹⁰ → इंडेक्स 10 बिट; ऑफ़सेट 6 बिट। टैग = 28 − 10 − 6 = 12 बिट।"
+ },
+ {
+  "id": "mgrsys-m3-002",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "An L1 cache has a hit ratio of 0.8 and access time 2 ns. Of the L1 misses, 90% hit in L2 (access time 10 ns); the rest go to main memory (100 ns). Accesses are hierarchical. The average memory access time is —",
+  "options": [
+   "6 ns",
+   "5.6 ns",
+   "4 ns",
+   "12 ns"
+  ],
+  "answer": 0,
+  "explanation": "AMAT = T₁ + m₁ × (T₂ + m₂ × Tm) = 2 + 0.2 × (10 + 0.1 × 100) = 2 + 0.2 × 20 = 6 ns।"
+ },
+ {
+  "id": "mgrsys-m3-003",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In a pipelined processor with an ideal CPI of 1, 20% of instructions are branches and every branch causes a 3-cycle stall. The effective CPI is —",
+  "options": [
+   "0.6",
+   "3.6",
+   "1.2",
+   "1.6"
+  ],
+  "answer": 3,
+  "explanation": "प्रभावी CPI = आदर्श CPI + (शाखा-अनुपात × दंड) = 1 + 0.2 × 3 = 1.6। यानी 60% धीमापन केवल शाखाओं से — इसीलिए ब्रांच-प्रेडिक्शन ज़रूरी है।"
+ },
+ {
+  "id": "mgrsys-m3-004",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In a classic 5-stage RISC pipeline, which hazard CANNOT be completely removed by operand forwarding alone and still needs a one-cycle stall?",
+  "options": [
+   "Two independent ADD instructions",
+   "A load instruction followed immediately by an instruction that uses the loaded value",
+   "An ADD followed by a dependent SUB",
+   "A store followed by an unrelated ADD"
+  ],
+  "answer": 1,
+  "explanation": "लोड का डेटा MEM चरण के अंत में मिलता है, जबकि अगले निर्देश को वह EX की शुरुआत में चाहिए — फ़ॉरवर्डिंग समय में पीछे नहीं भेज सकती। इसे 'लोड-यूज़ हैज़र्ड' कहते हैं; एक बबल डालना पड़ता है।"
+ },
+ {
+  "id": "mgrsys-m3-005",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Which of the following additions overflows in 8-bit 2's complement arithmetic?",
+  "options": [
+   "100 + (−50)",
+   "−100 + 50",
+   "100 + 50",
+   "−60 + (−60)"
+  ],
+  "answer": 2,
+  "explanation": "8-बिट सीमा −128 से +127। 100 + 50 = 150 सीमा से बाहर — दो धनात्मक जोड़कर ऋणात्मक परिणाम (ओवरफ़्लो)। −60 − 60 = −120 सीमा में है। विपरीत चिह्नों के जोड़ में ओवरफ़्लो कभी नहीं होता।"
+ },
+ {
+  "id": "mgrsys-m3-006",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A 4-byte branch instruction at address 1000 uses PC-relative addressing with an offset of −20. If the PC holds the address of the next instruction when the offset is added, the branch target is —",
+  "options": [
+   "984",
+   "1024",
+   "980",
+   "1020"
+  ],
+  "answer": 0,
+  "explanation": "निर्देश पढ़ने के बाद PC = 1000 + 4 = 1004। लक्ष्य = 1004 + (−20) = 984। PC-सापेक्ष पता कोड को कहीं भी लोड करने (relocatable) में मदद करता है।"
+ },
+ {
+  "id": "mgrsys-m3-007",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A machine has 16-bit instructions and 6-bit address fields, and uses an expanding opcode. If there are 14 two-address instructions, the maximum number of one-address instructions is —",
+  "options": [
+   "64",
+   "128",
+   "256",
+   "96"
+  ],
+  "answer": 1,
+  "explanation": "दो-पते वाले निर्देश में ऑपकोड = 16 − 12 = 4 बिट → 16 संयोजन, 14 उपयोग, 2 बचे। एक-पते वाले निर्देश में ऑपकोड 10 बिट: पहले 4 बिट के 2 बचे मान × अगले 6 बिट के 64 मान = 128।"
+ },
+ {
+  "id": "mgrsys-m3-008",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A device transfers 100,000 bytes per second to memory using cycle-stealing DMA, one byte per stolen cycle. Each memory cycle takes 1 µs. The fraction of time the CPU is denied the memory bus is —",
+  "options": [
+   "50%",
+   "0.1%",
+   "1%",
+   "10%"
+  ],
+  "answer": 3,
+  "explanation": "हर सेकंड 10⁵ चक्र चुराए जाते हैं, हर एक 1 µs का: 10⁵ × 10⁻⁶ = 0.1 सेकंड। अतः 10% समय CPU को बस नहीं मिलती। बाक़ी 90% में CPU अपना काम जारी रखता है — यही DMA का लाभ है।"
+ },
+ {
+  "id": "mgrsys-m3-009",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In daisy-chain interrupt priority, the priority of a device is determined by —",
+  "options": [
+   "its physical position in the chain relative to the CPU",
+   "the size of its data buffer",
+   "the interrupt vector number it sends",
+   "the order in which devices were installed in software"
+  ],
+  "answer": 0,
+  "explanation": "इंटरप्ट-एक्नॉलेज संकेत CPU से श्रृंखला में एक-एक उपकरण से गुज़रता है; जो उपकरण पहले है और इंटरप्ट माँग रहा है, वही संकेत रोक लेता है। इसलिए CPU के पास वाला उपकरण सर्वोच्च प्राथमिकता पाता है।"
+ },
+ {
+  "id": "mgrsys-m3-010",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Memory access takes 100 ns and servicing a page fault takes 8 ms. To keep the effective access time below 200 ns, the page-fault rate p must be at most about —",
+  "options": [
+   "1.25 × 10⁻³",
+   "1.25 × 10⁻⁵",
+   "1 × 10⁻⁶",
+   "2.5 × 10⁻⁵"
+  ],
+  "answer": 1,
+  "explanation": "EAT = (1 − p) × 100 + p × 8,000,000 ≤ 200 ns → p × 7,999,900 ≤ 100 → p ≤ 1.25 × 10⁻⁵। यानी लगभग 80,000 में एक से अधिक फ़ॉल्ट नहीं — डिस्क कितनी धीमी है, यही दिखता है।"
+ },
+ {
+  "id": "mgrsys-m3-011",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "An asynchronous serial line runs at 9600 baud. Each character has 1 start bit, 8 data bits, 1 parity bit and 1 stop bit. The maximum number of characters transferred per second is about —",
+  "options": [
+   "1200",
+   "1066",
+   "960",
+   "872"
+  ],
+  "answer": 3,
+  "explanation": "हर अक्षर = 1 + 8 + 1 + 1 = 11 बिट। 9600 / 11 ≈ 872 अक्षर प्रति सेकंड। स्टार्ट-स्टॉप बिट ही असिंक्रोनस संचार का 'ओवरहेड' हैं।"
+ },
+ {
+  "id": "mgrsys-m3-012",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The keys 1, 2, 3, 4, 5, 6, 7 are inserted in that order into an initially empty AVL tree. The root of the final tree is —",
+  "options": [
+   "3",
+   "1",
+   "4",
+   "5"
+  ],
+  "answer": 2,
+  "explanation": "1,2,3 पर रोटेशन से रूट 2; 4,5 पर दाएँ हिस्से में रोटेशन; 6 डालने पर रूट-स्तर पर असंतुलन — बाएँ रोटेशन से रूट 4; 7 पर फिर स्थानीय रोटेशन। अंतिम वृक्ष पूर्ण संतुलित: रूट 4, फिर 2 और 6, पत्तियाँ 1, 3, 5, 7।"
+ },
+ {
+  "id": "mgrsys-m3-013",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A min-heap is stored in an array as [1, 3, 6, 5, 9, 8]. After one delete-min operation, the array becomes —",
+  "options": [
+   "[3, 5, 6, 8, 9]",
+   "[3, 5, 8, 6, 9]",
+   "[8, 3, 6, 5, 9]",
+   "[3, 6, 5, 9, 8]"
+  ],
+  "answer": 0,
+  "explanation": "रूट 1 हटाकर अंतिम तत्व 8 रूट पर: [8, 3, 6, 5, 9]। नीचे खिसकाएँ: बच्चे 3, 6 में छोटा 3 — अदला-बदली: [3, 8, 6, 5, 9]। 8 के बच्चे 5, 9 में छोटा 5 — अदला-बदली: [3, 5, 6, 8, 9]।"
+ },
+ {
+  "id": "mgrsys-m3-014",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The time complexity of building a binary heap from n unordered elements using the bottom-up heapify method is —",
+  "options": [
+   "O(log n)",
+   "O(n)",
+   "O(n log n)",
+   "O(n²)"
+  ],
+  "answer": 1,
+  "explanation": "नीचे के आधे नोड पत्ते हैं (0 काम), उनके ऊपर के नोड केवल 1 स्तर नीचे जाते हैं, इत्यादि। कुल काम Σ (n / 2^(h+1)) × h = O(n)। एक-एक डालकर बनाने पर O(n log n) लगता।"
+ },
+ {
+  "id": "mgrsys-m3-015",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Quick sort that always picks the first element as pivot is run on an already sorted array of 10 elements. The number of element comparisons made is —",
+  "options": [
+   "10",
+   "100",
+   "45",
+   "90"
+  ],
+  "answer": 2,
+  "explanation": "क्रमबद्ध इनपुट में हर बार पिवट सबसे छोटा होता है, विभाजन 0 और k − 1 का। तुलनाएँ = 9 + 8 + … + 1 = n(n − 1)/2 = 45। यही क्विक-सॉर्ट का O(n²) सबसे बुरा मामला है।"
+ },
+ {
+  "id": "mgrsys-m3-016",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The numbers 1, 2, 3, 4 are pushed onto a stack in this order, and pops may be done at any time. Which output sequence is NOT possible?",
+  "options": [
+   "2, 4, 3, 1",
+   "1, 2, 3, 4",
+   "3, 2, 4, 1",
+   "4, 1, 2, 3"
+  ],
+  "answer": 3,
+  "explanation": "4 पहले निकालने के लिए 1, 2, 3 स्टैक में होंगे और ऊपर 3 होगा — अगला पॉप केवल 3 हो सकता है, 1 नहीं। बाक़ी तीनों क्रम push/pop के किसी क्रम से बन जाते हैं।"
+ },
+ {
+  "id": "mgrsys-m3-017",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In open addressing with uniform hashing and load factor α = 0.75, the expected number of probes in an unsuccessful search is at most —",
+  "options": [
+   "2",
+   "1.33",
+   "4",
+   "3"
+  ],
+  "answer": 2,
+  "explanation": "असफल खोज में अपेक्षित प्रोब ≤ 1 / (1 − α) = 1 / 0.25 = 4। α जितना 1 के पास, प्रोब उतने तेज़ी से बढ़ते हैं — इसलिए टेबल को लगभग 70–75% भरने पर बड़ा किया जाता है।"
+ },
+ {
+  "id": "mgrsys-m3-018",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "100 keys are hashed into a table of 25 slots using separate chaining, with simple uniform hashing. The expected length of a chain is —",
+  "options": [
+   "4",
+   "25",
+   "2",
+   "100"
+  ],
+  "answer": 0,
+  "explanation": "लोड-फ़ैक्टर α = n / m = 100 / 25 = 4। सरल समान हैशिंग में हर श्रृंखला की अपेक्षित लंबाई α होती है, और खोज का औसत समय Θ(1 + α)।"
+ },
+ {
+  "id": "mgrsys-m3-019",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A binary tree has 20 nodes with exactly two children. The number of leaf nodes is —",
+  "options": [
+   "20",
+   "21",
+   "19",
+   "40"
+  ],
+  "answer": 1,
+  "explanation": "किसी भी बाइनरी ट्री में n0 = n2 + 1 (पत्ते = दो-बच्चों वाले नोड + 1)। अतः पत्ते = 20 + 1 = 21। एक बच्चे वाले नोड इस संबंध को नहीं बदलते।"
+ },
+ {
+  "id": "mgrsys-m3-020",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Which of the following functions is tail-recursive?",
+  "options": [
+   "int k(int n) { if (n < 2) return n; return k(n - 1) + k(n - 2); }",
+   "int h(int n) { if (n == 0) return 0; return 1 + h(n - 1); }",
+   "int f(int n) { if (n == 0) return 1; return n * f(n - 1); }",
+   "int g(int n, int acc) { if (n == 0) return acc; return g(n - 1, acc * n); }"
+  ],
+  "answer": 3,
+  "explanation": "टेल-रिकर्शन में पुनरावर्ती कॉल फ़ंक्शन का अंतिम काम होती है — लौटने के बाद कुछ गणना शेष नहीं रहती। g में संचायक (acc) से यही होता है; बाक़ी में कॉल के बाद गुणा/जोड़ बाक़ी है। टेल-कॉल को कंपाइलर लूप में बदल सकता है (स्टैक नहीं बढ़ता)।"
+ },
+ {
+  "id": "mgrsys-m3-021",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Which situation defeats a purely reference-counting garbage collector?",
+  "options": [
+   "An object that is never referenced",
+   "An object referenced by a single local variable",
+   "Two unreachable objects that refer to each other (a cycle)",
+   "An object referenced by many live objects"
+  ],
+  "answer": 2,
+  "explanation": "चक्र में हर वस्तु का संदर्भ-गणक कम से कम 1 रहता है, भले ही बाहर से कोई पहुँच न हो — वे कभी मुक्त नहीं होतीं। मार्क-एंड-स्वीप जैसे ट्रेसिंग संग्राहक यह समस्या हल करते हैं; कम्पैक्शन बिखरी ख़ाली जगह जोड़ता है।"
+ },
+ {
+  "id": "mgrsys-m3-022",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What is printed by the following C code?\n\nchar *s = \"GATE2026\";\nprintf(\"%s\", s + s[3] - s[1]);",
+  "options": [
+   "2026",
+   "TE2026",
+   "Garbage / undefined output",
+   "E2026"
+  ],
+  "answer": 0,
+  "explanation": "s[3] = 'E' (69) और s[1] = 'A' (65), अंतर 4। s + 4 पाँचवें अक्षर की ओर इशारा करता है, अतः \"2026\" छपता है।"
+ },
+ {
+  "id": "mgrsys-m3-023",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What is printed by the following C code?\n\nint a = 5, b = 3;\na = a ^ b; b = a ^ b; a = a ^ b;\nprintf(\"%d %d\", a, b);",
+  "options": [
+   "6 6",
+   "0 0",
+   "5 3",
+   "3 5"
+  ],
+  "answer": 3,
+  "explanation": "यह XOR से अदला-बदली है: a = 5^3 = 6; b = 6^3 = 5; a = 6^5 = 3। परिणाम '3 5' — बिना तीसरे चर के दो मान बदल गए।"
+ },
+ {
+  "id": "mgrsys-m3-024",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "On a typical system where int is 4 bytes and aligned on a 4-byte boundary, what is sizeof(struct S)?\n\nstruct S { char c; int i; char d; };",
+  "options": [
+   "9",
+   "12",
+   "6",
+   "8"
+  ],
+  "answer": 1,
+  "explanation": "c (1) + 3 बाइट पैडिंग ताकि i 4 के गुणज पर हो, i (4), d (1) + 3 बाइट अंतिम पैडिंग ताकि संरचना का आकार 4 का गुणज रहे = 12। सदस्य क्रम { int i; char c; char d; } करें तो 8 बाइट।"
+ },
+ {
+  "id": "mgrsys-m3-025",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What is the output of the following C++ program?\n\nclass A { public: A() { cout << \"A\"; } ~A() { cout << \"a\"; } };\nclass B : public A { public: B() { cout << \"B\"; } ~B() { cout << \"b\"; } };\nint main() { B obj; return 0; }",
+  "options": [
+   "ABab",
+   "ABba",
+   "BAba",
+   "BAab"
+  ],
+  "answer": 1,
+  "explanation": "कंस्ट्रक्टर आधार से व्युत्पन्न की ओर चलते हैं (A फिर B), डिस्ट्रक्टर उल्टे क्रम में (B फिर A)। अतः A B b a।"
+ },
+ {
+  "id": "mgrsys-m3-026",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What is printed by the following Java code?\n\nstatic void change(int[] x) { x[0] = 9; x = new int[]{7, 7, 7}; }\n// in main:\nint[] a = {1, 2, 3};\nchange(a);\nSystem.out.print(a[0]);",
+  "options": [
+   "7",
+   "1",
+   "9",
+   "Compilation error"
+  ],
+  "answer": 2,
+  "explanation": "Java में संदर्भ का मान (copy) जाता है। x[0] = 9 उसी सरणी को बदलता है जिसे a देख रहा है। फिर x को नई सरणी देना केवल स्थानीय प्रति बदलता है — a पर असर नहीं। अतः 9।"
+ },
+ {
+  "id": "mgrsys-m3-027",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What is printed by the following Python code?\n\ndef f(x, lst=[]):\n    lst.append(x)\n    return lst\nf(1)\nprint(f(2))",
+  "options": [
+   "An error is raised",
+   "[1]",
+   "[2]",
+   "[1, 2]"
+  ],
+  "answer": 3,
+  "explanation": "डिफ़ॉल्ट मान फ़ंक्शन परिभाषित होते समय एक बार बनता है, हर कॉल पर नया नहीं। दोनों कॉल एक ही सूची में जोड़ती हैं — [1, 2]। सही तरीक़ा: lst=None रखकर भीतर नई सूची बनाना।"
+ },
+ {
+  "id": "mgrsys-m3-028",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What does the Python expression  2 ** 3 ** 2  evaluate to?",
+  "options": [
+   "512",
+   "36",
+   "An error",
+   "64"
+  ],
+  "answer": 0,
+  "explanation": "घात-संचालक ** दाएँ से बाएँ जुड़ता है: 2 ** (3 ** 2) = 2 ** 9 = 512। (2 ** 3) ** 2 = 64 तभी आता जब कोष्ठक लगे हों।"
+ },
+ {
+  "id": "mgrsys-m3-029",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Relation R(A, B, C, D, E) has FDs A → BC, CD → E, B → D, E → A. Which of the following is NOT a candidate key?",
+  "options": [
+   "A",
+   "E",
+   "BD",
+   "CD"
+  ],
+  "answer": 2,
+  "explanation": "(A)+ = ABCDE; (E)+ = EA… = ABCDE; (CD)+ = CDE A B = ABCDE — तीनों कुंजी (और न्यूनतम)। (BD)+ = BD —इससे C, A, E नहीं मिलते, अतः यह कुंजी नहीं। (BC भी एक कुंजी है।)"
+ },
+ {
+  "id": "mgrsys-m3-030",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "R(A, B, C) with the FD A → B is decomposed into R1(A, B) and R2(A, C). The decomposition is —",
+  "options": [
+   "neither lossless nor dependency-preserving",
+   "lossless and dependency-preserving",
+   "lossless but not dependency-preserving",
+   "lossy but dependency-preserving"
+  ],
+  "answer": 1,
+  "explanation": "साझा गुण A, R1 की कुंजी है (A → B) — इसलिए जोड़ने पर अतिरिक्त टपल नहीं बनते: लॉसलेस। A → B पूरी तरह R1 में है: निर्भरता संरक्षित।"
+ },
+ {
+  "id": "mgrsys-m3-031",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Relation R(A, B, C, D) has candidate key AB and FDs AB → D and A → C. The highest normal form R satisfies is —",
+  "options": [
+   "3NF",
+   "2NF",
+   "BCNF",
+   "1NF"
+  ],
+  "answer": 3,
+  "explanation": "A → C में C (अप्राइम) कुंजी AB के केवल एक भाग पर निर्भर है — आंशिक निर्भरता, जो 2NF तोड़ती है। अतः उच्चतम 1NF। हल: R1(A, C) और R2(A, B, D)।"
+ },
+ {
+  "id": "mgrsys-m3-032",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "R has 5 tuples and S has 4 tuples. In R ⋈ S, exactly 3 tuples of R match, each with exactly one tuple of S. The number of tuples in the LEFT OUTER JOIN of R with S is —",
+  "options": [
+   "5",
+   "3",
+   "20",
+   "4"
+  ],
+  "answer": 0,
+  "explanation": "लेफ़्ट आउटर जॉइन में R की हर टपल रहती है: 3 मेल वाली (एक-एक मेल से) + 2 बिना मेल वाली (S के स्तंभ NULL) = 5।"
+ },
+ {
+  "id": "mgrsys-m3-033",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The tuple relational calculus query  { t | ∃s ∈ Student ( s.marks > 60 ∧ t.name = s.name ) }  is equivalent to —",
+  "options": [
+   "SELECT marks FROM Student WHERE name > 60",
+   "SELECT * FROM Student WHERE marks > 60",
+   "SELECT name FROM Student",
+   "SELECT name FROM Student WHERE marks > 60"
+  ],
+  "answer": 3,
+  "explanation": "t में केवल name गुण है, और वह उस छात्र s से आता है जिसके अंक 60 से अधिक हैं — यानी σ(marks > 60) के बाद π(name)।"
+ },
+ {
+  "id": "mgrsys-m3-034",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Column bonus of table Emp has the values 100, NULL, 200, NULL. What does  SELECT COUNT(*), COUNT(bonus), AVG(bonus) FROM Emp;  return?",
+  "options": [
+   "4, 4, 75",
+   "4, 2, 150",
+   "2, 2, 150",
+   "4, 2, 75"
+  ],
+  "answer": 1,
+  "explanation": "COUNT(*) सभी पंक्तियाँ गिनता है = 4। COUNT(bonus) और AVG(bonus) NULL छोड़ देते हैं: गिनती 2, औसत (100 + 200)/2 = 150।"
+ },
+ {
+  "id": "mgrsys-m3-035",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Table T has a column x with values 1, 2 and 3. How many rows does  SELECT * FROM T WHERE x NOT IN (1, NULL);  return?",
+  "options": [
+   "0",
+   "3",
+   "2",
+   "An error is raised"
+  ],
+  "answer": 0,
+  "explanation": "x NOT IN (1, NULL) का अर्थ x ≠ 1 AND x ≠ NULL। x ≠ NULL का परिणाम UNKNOWN होता है, इसलिए पूरी शर्त कभी TRUE नहीं होती — कोई पंक्ति नहीं। NOT IN वाली उप-क्वेरी में NULL आए तो यही जाल बनता है।"
+ },
+ {
+  "id": "mgrsys-m3-036",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Under basic timestamp ordering, TS(T1) = 5 and TS(T2) = 10. T2 has written item X, so W-timestamp(X) = 10. Now T1 issues read(X). What happens?",
+  "options": [
+   "T1 waits until T2 commits",
+   "T1 reads the value written by T2",
+   "T1's read is rejected and T1 is rolled back",
+   "T2 is rolled back"
+  ],
+  "answer": 2,
+  "explanation": "T1 'पुराना' है (TS 5) पर उससे नया T2 X लिख चुका है (W-TS 10 > 5)। T1 को वह मान पढ़ना चाहिए था जो T2 से पहले था — अब संभव नहीं, अतः T1 रद्द होकर नए टाइमस्टैम्प से फिर शुरू होता है।"
+ },
+ {
+  "id": "mgrsys-m3-037",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A sorted data file has 30,000 records with a blocking factor of 10 records per block. A primary index has one entry per data block, with 100 index entries per block. Using binary search on the index, the number of block accesses to fetch a record is —",
+  "options": [
+   "5",
+   "15",
+   "6",
+   "12"
+  ],
+  "answer": 2,
+  "explanation": "डेटा ब्लॉक = 3000, अतः इंडेक्स प्रविष्टियाँ 3000, इंडेक्स ब्लॉक = 30। इंडेक्स पर द्विआधारी खोज ⌈log₂30⌉ = 5 ब्लॉक, फिर 1 डेटा ब्लॉक = 6। बिना इंडेक्स डेटा फ़ाइल पर सीधे ⌈log₂3000⌉ = 12 लगते।"
+ },
+ {
+  "id": "mgrsys-m3-038",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The main weakness of the two-phase commit (2PC) protocol in distributed databases is —",
+  "options": [
+   "it does not use a log",
+   "it requires all sites to be in one building",
+   "it cannot commit any transaction",
+   "participants can remain blocked if the coordinator fails after they have voted 'ready'"
+  ],
+  "answer": 3,
+  "explanation": "'तैयार' वोट देने के बाद प्रतिभागी अपने आप न कमिट कर सकता है न रद्द — उसे समन्वयक का निर्णय चाहिए। समन्वयक गिर जाए तो वह लॉक पकड़े अटका रहता है (blocking)। थ्री-फ़ेज़ कमिट इसी को घटाने के लिए है।"
+ },
+ {
+  "id": "mgrsys-m3-039",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The disk head is at cylinder 53. The request queue is 98, 183, 37, 122, 14, 124, 65, 67. The total head movement under SSTF scheduling is —",
+  "options": [
+   "208 cylinders",
+   "236 cylinders",
+   "299 cylinders",
+   "640 cylinders"
+  ],
+  "answer": 1,
+  "explanation": "SSTF क्रम: 53 → 65 → 67 → 37 → 14 → 98 → 122 → 124 → 183। दूरियाँ: 12 + 2 + 30 + 23 + 84 + 24 + 2 + 59 = 236। इसी कतार पर FCFS से 640 सिलिंडर।"
+ },
+ {
+  "id": "mgrsys-m3-040",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Processes P1 (burst 24), P2 (burst 3) and P3 (burst 3) all arrive at time 0 in the order P1, P2, P3. Under FCFS, the average waiting time is —",
+  "options": [
+   "17",
+   "3",
+   "27",
+   "10"
+  ],
+  "answer": 0,
+  "explanation": "प्रतीक्षा: P1 = 0, P2 = 24, P3 = 27; औसत = 51 / 3 = 17। यदि क्रम P2, P3, P1 होता तो औसत (0 + 3 + 6)/3 = 3 — छोटी प्रक्रियाओं का लंबी के पीछे फँसना 'कॉन्वॉय प्रभाव' है।"
+ },
+ {
+  "id": "mgrsys-m3-041",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A logical address space has 64 pages of 1024 words each, mapped onto a physical memory of 32 frames. The number of bits in the logical and physical addresses are respectively —",
+  "options": [
+   "16 and 16",
+   "16 and 15",
+   "6 and 5",
+   "15 and 16"
+  ],
+  "answer": 1,
+  "explanation": "ऑफ़सेट = log₂1024 = 10 बिट। तार्किक = log₂64 + 10 = 6 + 10 = 16 बिट; भौतिक = log₂32 + 10 = 5 + 10 = 15 बिट।"
+ },
+ {
+  "id": "mgrsys-m3-042",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A spin lock built only with the TestAndSet instruction —",
+  "options": [
+   "ensures neither mutual exclusion nor progress",
+   "ensures bounded waiting but not mutual exclusion",
+   "needs no hardware support",
+   "ensures mutual exclusion but not bounded waiting"
+  ],
+  "answer": 3,
+  "explanation": "TestAndSet परमाणु है, अतः एक ही प्रक्रिया लॉक पाती है — परस्पर अपवर्जन मिलता है। पर लॉक छूटने पर कौन पाएगा यह संयोग है; कोई प्रक्रिया बार-बार हार सकती है — सीमित प्रतीक्षा की गारंटी नहीं।"
+ },
+ {
+  "id": "mgrsys-m3-043",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In the bounded-buffer producer–consumer solution with a buffer of N slots, the semaphores empty, full and mutex are initialised to —",
+  "options": [
+   "empty = N, full = N, mutex = 0",
+   "empty = 1, full = 0, mutex = N",
+   "empty = N, full = 0, mutex = 1",
+   "empty = 0, full = N, mutex = 1"
+  ],
+  "answer": 2,
+  "explanation": "आरंभ में सब N खाने ख़ाली (empty = N), भरा कोई नहीं (full = 0), और बफ़र तक एक समय एक ही पहुँचे इसलिए mutex = 1। उत्पादक wait(empty), wait(mutex); उपभोक्ता wait(full), wait(mutex)।"
+ },
+ {
+  "id": "mgrsys-m3-044",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A process of 72,766 bytes is loaded with a page size of 2048 bytes. The internal fragmentation in its last page is —",
+  "options": [
+   "962 bytes",
+   "2048 bytes",
+   "1086 bytes",
+   "0 bytes"
+  ],
+  "answer": 0,
+  "explanation": "72,766 = 35 × 2048 + 1086। 36 पेज चाहिए; आख़िरी पेज में केवल 1086 बाइट उपयोग, ख़ाली = 2048 − 1086 = 962 बाइट। पेजिंग में केवल आंतरिक विखंडन होता है, बाहरी नहीं।"
+ },
+ {
+  "id": "mgrsys-m3-045",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What does the following bash snippet print?\n\nx=5; y=3\necho $((x % y + x / y))",
+  "options": [
+   "3",
+   "2.67",
+   "2",
+   "8"
+  ],
+  "answer": 0,
+  "explanation": "$(( )) पूर्णांक अंकगणित करता है: 5 % 3 = 2, 5 / 3 = 1 (दशमलव कटता है)। योग 3।"
+ },
+ {
+  "id": "mgrsys-m3-046",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What does the pipeline  sort data.txt | uniq -c | sort -nr | head -1  output?",
+  "options": [
+   "The first line of data.txt",
+   "The longest line of data.txt",
+   "The most frequent line of data.txt along with its count",
+   "The number of distinct lines in data.txt"
+  ],
+  "answer": 2,
+  "explanation": "sort समान पंक्तियाँ पास लाता है; uniq -c हर अद्वितीय पंक्ति की गिनती जोड़ता है; sort -nr गिनती के घटते क्रम में; head -1 सबसे ऊपर वाली — यानी सबसे अधिक बार आने वाली पंक्ति, गिनती सहित।"
+ },
+ {
+  "id": "mgrsys-m3-047",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "When the input matches more than one LEX rule, which rule is applied?",
+  "options": [
+   "Always the rule listed last",
+   "Always the rule listed first",
+   "The rule with the shortest match",
+   "The rule giving the longest match; among equal-length matches, the rule listed first"
+  ],
+  "answer": 3,
+  "explanation": "LEX पहले सबसे लंबा मेल चुनता है (जैसे 'iffy' को कीवर्ड 'if' नहीं, पहचानकर्ता मानता है)। बराबर लंबाई हो तो फ़ाइल में पहले लिखा नियम जीतता है — इसीलिए कीवर्ड नियम पहचानकर्ता-नियम से ऊपर लिखे जाते हैं।"
+ },
+ {
+  "id": "mgrsys-m3-048",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "After a successful call to exec() (e.g. execvp) in a UNIX process —",
+  "options": [
+   "the parent process is terminated",
+   "the process keeps its PID but its code and data are replaced by the new program",
+   "a new child process with a new PID is created",
+   "the old program continues after the exec() call"
+  ],
+  "answer": 1,
+  "explanation": "exec नई प्रक्रिया नहीं बनाता — उसी प्रक्रिया की मेमोरी-छवि बदल देता है; PID और खुली फ़ाइलें (सामान्यतः) वही रहती हैं। सफल exec लौटता ही नहीं। शेल पहले fork फिर child में exec करता है।"
+ },
+ {
+  "id": "mgrsys-m3-049",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A Class C network must be divided into at least 6 subnets, each with as many hosts as possible. The subnet mask and usable hosts per subnet are —",
+  "options": [
+   "255.255.255.224 and 30",
+   "255.255.255.192 and 62",
+   "255.255.255.240 and 14",
+   "255.255.255.248 and 6"
+  ],
+  "answer": 0,
+  "explanation": "6 सबनेट के लिए 2³ = 8 ≥ 6, अतः 3 बिट उधार — /27 = 255.255.255.224। बचे 5 होस्ट-बिट: 2⁵ − 2 = 30 होस्ट। 2 बिट से केवल 4 सबनेट बनते।"
+ },
+ {
+  "id": "mgrsys-m3-050",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The networks 192.168.0.0/24, 192.168.1.0/24, 192.168.2.0/24 and 192.168.3.0/24 are summarised into a single route. The aggregate is —",
+  "options": [
+   "192.168.0.0/21",
+   "192.168.0.0/16",
+   "192.168.0.0/22",
+   "192.168.0.0/23"
+  ],
+  "answer": 2,
+  "explanation": "तीसरे ऑक्टेट 0–3 = 000000 00 से 000000 11 — पहले 6 बिट समान। साझा उपसर्ग = 8 + 8 + 6 = 22 बिट: 192.168.0.0/22, जो ठीक इन चार /24 को ढकता है।"
+ },
+ {
+  "id": "mgrsys-m3-051",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "For a Hamming code carrying 7 data bits with single-error correction, the minimum number of parity bits is —",
+  "options": [
+   "5",
+   "3",
+   "7",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "शर्त 2^r ≥ m + r + 1। m = 7: r = 3 पर 8 ≥ 11 नहीं; r = 4 पर 16 ≥ 12 सही। अतः 4 पैरिटी बिट, कुल 11-बिट कोड-शब्द।"
+ },
+ {
+  "id": "mgrsys-m3-052",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A 1 Gbps CSMA/CD network has a maximum cable length of 200 m, and signals travel at 2 × 10⁸ m/s. The minimum frame size needed to detect collisions is —",
+  "options": [
+   "125 bytes",
+   "250 bytes",
+   "500 bytes",
+   "64 bytes"
+  ],
+  "answer": 1,
+  "explanation": "Tp = 200 / (2 × 10⁸) = 1 µs। टक्कर पकड़ने के लिए फ़्रेम-संचरण-समय ≥ 2Tp = 2 µs। न्यूनतम फ़्रेम = 2 × 10⁻⁶ × 10⁹ = 2000 बिट = 250 बाइट।"
+ },
+ {
+  "id": "mgrsys-m3-053",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The maximum throughput of slotted ALOHA is about —",
+  "options": [
+   "50%",
+   "18.4%",
+   "36.8%",
+   "100%"
+  ],
+  "answer": 2,
+  "explanation": "स्लॉटेड ALOHA: S = G e^(−G), अधिकतम G = 1 पर 1/e ≈ 36.8%। शुद्ध ALOHA: S = G e^(−2G), अधिकतम G = 0.5 पर ≈ 18.4% — स्लॉट से टक्कर की 'असुरक्षित अवधि' आधी हो जाती है।"
+ },
+ {
+  "id": "mgrsys-m3-054",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "OSPF computes shortest paths using —",
+  "options": [
+   "flooding of data packets only",
+   "Dijkstra's algorithm on a link-state database",
+   "path-vector exchange between autonomous systems",
+   "the Bellman–Ford distance-vector algorithm"
+  ],
+  "answer": 1,
+  "explanation": "OSPF लिंक-स्टेट प्रोटोकॉल है: हर राउटर पूरे नेटवर्क का नक़्शा (LSDB) रखता है और डाइक्स्ट्रा से सबसे छोटे पथ निकालता है। RIP डिस्टेंस-वेक्टर (बेलमैन-फ़ोर्ड) और BGP पाथ-वेक्टर है।"
+ },
+ {
+  "id": "mgrsys-m3-055",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A token bucket has a capacity of 1 MB and a token rate of 10 MB/s; the maximum output rate is 50 MB/s. Starting with a full bucket, the maximum duration of a burst at 50 MB/s is —",
+  "options": [
+   "25 ms",
+   "20 ms",
+   "100 ms",
+   "50 ms"
+  ],
+  "answer": 0,
+  "explanation": "फ़ट-अवधि S = C / (M − ρ) = 1 / (50 − 10) = 1/40 सेकंड = 25 ms। फ़ट के दौरान नए टोकन भी आते रहते हैं, इसलिए केवल C / M = 20 ms नहीं।"
+ },
+ {
+  "id": "mgrsys-m3-056",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "An IPv4 datagram of total length 4000 bytes (20-byte header) is sent over a link with MTU 1500 bytes. The fragment-offset field of the third fragment is —",
+  "options": [
+   "1480",
+   "2960",
+   "185",
+   "370"
+  ],
+  "answer": 3,
+  "explanation": "डेटा = 3980 बाइट; हर खंड में अधिकतम 1480 बाइट डेटा (8 का गुणज)। खंड: 1480, 1480, 1020। तीसरे खंड का डेटा 2960वें बाइट से शुरू; ऑफ़सेट 8-बाइट इकाइयों में = 2960 / 8 = 370।"
+ },
+ {
+  "id": "mgrsys-m3-057",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A client sends a TCP SYN with initial sequence number 100. In the server's SYN-ACK, the acknowledgement number is —",
+  "options": [
+   "1",
+   "101",
+   "0",
+   "100"
+  ],
+  "answer": 1,
+  "explanation": "SYN कोई डेटा नहीं ले जाता, फिर भी एक क्रमांक खपाता है। सर्वर अगला अपेक्षित बाइट बताता है: 100 + 1 = 101।"
+ },
+ {
+  "id": "mgrsys-m3-058",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In Diffie–Hellman key exchange with p = 23 and g = 5, Alice chooses secret a = 4 and Bob chooses b = 3. The shared secret key is —",
+  "options": [
+   "18",
+   "10",
+   "4",
+   "2"
+  ],
+  "answer": 0,
+  "explanation": "A = 5⁴ mod 23 = 625 mod 23 = 4; B = 5³ mod 23 = 125 mod 23 = 10। साझा कुंजी = B^a mod 23 = 10⁴ mod 23 = 18 = A^b mod 23 = 4³ mod 23 = 64 mod 23 = 18।"
+ },
+ {
+  "id": "mgrsys-m3-059",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In a digital signature scheme, the sender signs a message digest with ___ and the receiver verifies it with ___.",
+  "options": [
+   "the sender's public key; the sender's private key",
+   "a shared secret key; the same shared key",
+   "the sender's private key; the sender's public key",
+   "the receiver's public key; the receiver's private key"
+  ],
+  "answer": 2,
+  "explanation": "हस्ताक्षर केवल वही बना सके जिसके पास निजी कुंजी है (प्रामाणिकता, अस्वीकार न कर पाना), और कोई भी सार्वजनिक कुंजी से जाँच सके। गोपनीयता के लिए उल्टा होता है — प्राप्तकर्ता की सार्वजनिक कुंजी से एन्क्रिप्ट।"
+ },
+ {
+  "id": "mgrsys-m3-060",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The total bit rate of an ISDN Basic Rate Interface (2B + D) is —",
+  "options": [
+   "128 kbps",
+   "192 kbps",
+   "64 kbps",
+   "144 kbps"
+  ],
+  "answer": 3,
+  "explanation": "BRI = 2 B-चैनल (हर एक 64 kbps) + 1 D-चैनल (16 kbps) = 144 kbps उपयोगकर्ता दर। फ़्रेमिंग जोड़कर लाइन-दर 192 kbps होती है; PRI = 23B + D (1.544 Mbps)।"
+ },
+ {
+  "id": "mgrsys-m3-061",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The most general unifier of P(x, f(y)) and P(a, f(b)), where a and b are constants, is —",
+  "options": [
+   "{x/a, y/b}",
+   "{a/x, b/y}",
+   "They cannot be unified",
+   "{x/b, y/a}"
+  ],
+  "answer": 0,
+  "explanation": "पहला तर्क: x = a; दूसरा: f(y) = f(b) से y = b। प्रतिस्थापन {x/a, y/b} दोनों को P(a, f(b)) बना देता है। स्थिरांक को चर से नहीं बदला जा सकता, इसलिए {a/x} ग़लत लेखन है।"
+ },
+ {
+  "id": "mgrsys-m3-062",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Which first-order logic sentence correctly represents \"Every student likes some subject\"?",
+  "options": [
+   "∀x ∃y (Student(x) ∧ Subject(y) ∧ Likes(x, y))",
+   "∀x (Student(x) → ∃y (Subject(y) ∧ Likes(x, y)))",
+   "∀x (Student(x) ∧ ∃y (Subject(y) → Likes(x, y)))",
+   "∃y ∀x (Student(x) → Likes(x, y))"
+  ],
+  "answer": 1,
+  "explanation": "∀ के साथ → और ∃ के साथ ∧ — यही सामान्य नियम है। तीसरा विकल्प कहता है कि एक ही विषय सबको पसंद है (अर्थ अलग)। चौथा कहता है कि हर वस्तु छात्र है।"
+ },
+ {
+  "id": "mgrsys-m3-063",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "For the 8-puzzle, compare h1 = number of misplaced tiles and h2 = sum of Manhattan distances. Which statement is correct?",
+  "options": [
+   "h1 dominates h2",
+   "h2 overestimates the true cost",
+   "Both are admissible and h2 dominates h1, so A* with h2 expands no more nodes",
+   "h1 is admissible but h2 is not"
+  ],
+  "answer": 2,
+  "explanation": "हर ग़लत टाइल को कम से कम उसकी मैनहट्टन दूरी जितनी चालें चाहिए, और वह दूरी ≥ 1 है — अतः h1 ≤ h2 ≤ वास्तविक लागत। दोनों स्वीकार्य; h2 अधिक सटीक (प्रभावी), इसलिए कम नोड खोलता है।"
+ },
+ {
+  "id": "mgrsys-m3-064",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "An agent that keeps an internal state, updated from the percept history, to handle a partially observable environment is called a —",
+  "options": [
+   "random agent",
+   "simple reflex agent",
+   "table-driven agent with no memory",
+   "model-based reflex agent"
+  ],
+  "answer": 3,
+  "explanation": "साधारण रिफ़्लेक्स एजेंट केवल वर्तमान अनुभूति (percept) पर नियम चलाता है। मॉडल-आधारित एजेंट दुनिया के बदलने का मॉडल रखकर अनदेखे हिस्से का अनुमान लगाता है। उससे आगे गोल-आधारित और यूटिलिटी-आधारित एजेंट आते हैं।"
+ },
+ {
+  "id": "mgrsys-m3-065",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Problem reduction, where a problem is split into sub-problems that must ALL be solved, is represented by an AND-OR graph and searched with —",
+  "options": [
+   "the AO* algorithm",
+   "breadth-first search only",
+   "the A* algorithm",
+   "the minimax algorithm"
+  ],
+  "answer": 0,
+  "explanation": "AND-आर्क बताते हैं कि सभी उप-समस्याएँ हल करनी हैं, OR-आर्क विकल्प देते हैं। A* केवल OR-ग्राफ़ (एक पथ) के लिए है; AND-OR ग्राफ़ में हल एक उप-ग्राफ़ होता है, जिसे AO* ढूँढता है।"
+ },
+ {
+  "id": "mgrsys-m3-066",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In a servlet, which call returns the existing HttpSession or null, without creating a new session?",
+  "options": [
+   "response.getSession()",
+   "request.getSession()",
+   "request.getSession(true)",
+   "request.getSession(false)"
+  ],
+  "answer": 3,
+  "explanation": "getSession() और getSession(true) सत्र न हो तो नया बना देते हैं। getSession(false) केवल मौजूदा सत्र लौटाता है, वरना null — लॉगिन जाँचने में यही काम आता है।"
+ },
+ {
+  "id": "mgrsys-m3-067",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The default port on which the Java RMI registry listens is —",
+  "options": [
+   "443",
+   "21",
+   "1099",
+   "8080"
+  ],
+  "answer": 2,
+  "explanation": "rmiregistry डिफ़ॉल्ट रूप से पोर्ट 1099 पर चलता है। सर्वर अपनी रिमोट वस्तु Naming.rebind() से यहाँ दर्ज करता है और क्लाइंट Naming.lookup() से स्टब पाता है।"
+ },
+ {
+  "id": "mgrsys-m3-068",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "HttpServletResponse.sendRedirect() sends the browser which HTTP status code by default?",
+  "options": [
+   "200 OK",
+   "302 Found",
+   "404 Not Found",
+   "500 Internal Server Error"
+  ],
+  "answer": 1,
+  "explanation": "sendRedirect() 302 (अस्थायी पुनर्निर्देशन) और Location हेडर भेजता है; ब्राउज़र नया अनुरोध करता है और URL बदल जाता है। RequestDispatcher.forward() सर्वर के भीतर होता है — ब्राउज़र को पता ही नहीं चलता।"
+ },
+ {
+  "id": "mgrsys-m3-069",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In the Secure Electronic Transaction (SET) protocol, the dual signature ensures that —",
+  "options": [
+   "the merchant cannot see the card details and the bank cannot see the order details, yet both are linked",
+   "two banks verify the payment",
+   "the customer signs twice to prevent errors",
+   "the transaction is sent twice for reliability"
+  ],
+  "answer": 0,
+  "explanation": "ड्युअल सिग्नेचर ऑर्डर-सूचना और भुगतान-सूचना के डाइजेस्ट को जोड़कर हस्ताक्षरित करता है। व्यापारी केवल ऑर्डर देखता है, बैंक केवल भुगतान — फिर भी दोनों प्रमाणित कर सकते हैं कि वे एक ही सौदे के हैं।"
+ },
+ {
+  "id": "mgrsys-m3-070",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In an IPsec VPN, which protocol provides confidentiality (encryption) of the payload?",
+  "options": [
+   "AH (Authentication Header)",
+   "ARP",
+   "ESP (Encapsulating Security Payload)",
+   "IKE alone"
+  ],
+  "answer": 2,
+  "explanation": "AH केवल प्रमाणीकरण और अखंडता देता है, एन्क्रिप्शन नहीं। ESP एन्क्रिप्शन (और वैकल्पिक प्रमाणीकरण) देता है — VPN में यही काम आता है। IKE कुंजियाँ तय करता है।"
+ },
+ {
+  "id": "mgrsys-m3-071",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Before release, a team found 90 defects; users reported 10 more defects after release. The Defect Removal Efficiency (DRE) is —",
+  "options": [
+   "100%",
+   "81%",
+   "10%",
+   "90%"
+  ],
+  "answer": 3,
+  "explanation": "DRE = रिलीज़ से पहले हटाए दोष / कुल दोष = 90 / (90 + 10) = 0.9 = 90%। जितना 100% के पास, गुणवत्ता-नियंत्रण उतना प्रभावी।"
+ },
+ {
+  "id": "mgrsys-m3-072",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Which statement about white-box coverage criteria is correct?",
+  "options": [
+   "100% statement coverage implies 100% branch coverage",
+   "100% branch coverage implies 100% statement coverage, but not the reverse",
+   "Statement and branch coverage are always equal",
+   "Path coverage is weaker than statement coverage"
+  ],
+  "answer": 1,
+  "explanation": "हर शाखा चलाने पर हर कथन भी चल जाता है। पर उल्टा नहीं: if बिना else के — केवल TRUE मामला चलाकर सभी कथन ढक जाते हैं, FALSE शाखा अनछुई रह जाती है। पाथ-कवरेज सबसे प्रबल है।"
+ },
+ {
+  "id": "mgrsys-m3-073",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Which software process model is explicitly risk-driven, with risk analysis in every cycle?",
+  "options": [
+   "Spiral model",
+   "Waterfall model",
+   "Incremental model",
+   "Code-and-fix model"
+  ],
+  "answer": 0,
+  "explanation": "बोहेम का स्पाइरल मॉडल हर चक्र में चार चरण रखता है: उद्देश्य तय करना, जोखिम विश्लेषण व निवारण, विकास व परीक्षण, अगले चक्र की योजना। बड़े और जोखिम-भरे प्रोजेक्ट के लिए उपयुक्त।"
+ },
+ {
+  "id": "mgrsys-m3-074",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Google App Engine, which lets developers deploy code without managing servers or operating systems, is an example of —",
+  "options": [
+   "SaaS",
+   "IaaS",
+   "DaaS",
+   "PaaS"
+  ],
+  "answer": 3,
+  "explanation": "PaaS में प्रदाता OS, रनटाइम और मिडलवेयर सँभालता है; उपयोगकर्ता केवल कोड और डेटा देता है। IaaS (जैसे EC2) में वर्चुअल मशीन मिलती है जिसका OS स्वयं सँभालना होता है; SaaS में तैयार सॉफ़्टवेयर।"
+ },
+ {
+  "id": "mgrsys-m3-075",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "By default, how many copies of each data block does Hadoop HDFS keep?",
+  "options": [
+   "5",
+   "1",
+   "3",
+   "2"
+  ],
+  "answer": 2,
+  "explanation": "HDFS डिफ़ॉल्ट रिप्लिकेशन फ़ैक्टर 3 रखता है — सामान्यतः एक प्रति स्थानीय नोड पर, दो किसी दूसरे रैक पर। इससे एक मशीन या पूरा रैक गिरने पर भी डेटा बचा रहता है।"
+ }
+]

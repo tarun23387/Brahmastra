@@ -1,112 +1,1762 @@
 [
-{"id":"mgrsys-m3-001","subject":"computer","exams":["mgr-system"],"question":"Which of the following orders computers by size and capacity in correct ascending order?","options":["Mini < Micro < Super < Mainframe","Super < Mainframe < Mini < Micro","Micro < Mini < Mainframe < Super","Mainframe < Super < Micro < Mini"],"answer":2,"explanation":"क्षमता के बढ़ते क्रम में — माइक्रो (पर्सनल), मिनी, मेनफ़्रेम और सबसे ऊपर सुपर कंप्यूटर।"},
-{"id":"mgrsys-m3-002","subject":"computer","exams":["mgr-system"],"question":"The two main components of a computer's Central Processing Unit (CPU) are —","options":["the ALU and the control unit","RAM and ROM","the input and output units","the cache and the registers"],"answer":0,"explanation":"CPU में अंकगणित-तार्किक इकाई (ALU) गणना करती है और नियंत्रण इकाई (CU) निर्देशों का क्रम व अन्य भागों का समन्वय सँभालती है। रजिस्टर सहायक होते हैं।"},
-{"id":"mgrsys-m3-003","subject":"computer","exams":["mgr-system"],"question":"The decimal value of the number (2AF)₁₆ is —","options":["703","559","675","687"],"answer":3,"explanation":"2×16² + A(10)×16 + F(15) = 512 + 160 + 15 = 687।"},
-{"id":"mgrsys-m3-004","subject":"computer","exams":["mgr-system"],"question":"The binary form of the decimal number 45 is —","options":["110101","101101","101011","100101"],"answer":1,"explanation":"45 = 32 + 8 + 4 + 1 = 101101₂ (बिट 5,3,2,0 पर 1)।"},
-{"id":"mgrsys-m3-005","subject":"computer","exams":["mgr-system"],"question":"The decimal value of the 8-bit number 1000 0000 in 2's complement form is —","options":["128","−0","−128","−127"],"answer":2,"explanation":"2's complement में सबसे बायाँ बिट चिह्न-बिट (ऋणात्मक) है; 8 बिट की परास −128 से +127 तक होती है और 1000 0000 उसमें सबसे छोटा, यानी −128 है।"},
-{"id":"mgrsys-m3-006","subject":"computer","exams":["mgr-system"],"question":"The BCD (Binary Coded Decimal) representation of the digit 6 is —","options":["0110","0011","0100","1010"],"answer":0,"explanation":"BCD में हर दशमलव अंक को उसके 4-बिट द्विआधारी रूप में लिखते हैं; 6 = 0110।"},
-{"id":"mgrsys-m3-007","subject":"computer","exams":["mgr-system"],"question":"The octal value of the hexadecimal number (1F)₁₆ is —","options":["31","37","36","17"],"answer":1,"explanation":"(1F)₁₆ = 31 दशमलव = 011111₂; तीन-तीन बिट के समूह बनाने पर 011 111 = 37 अष्टक।"},
-{"id":"mgrsys-m3-008","subject":"computer","exams":["mgr-system"],"question":"The basic circuit that gives the sum and carry of two 1-bit numbers is —","options":["a multiplexer","a decoder","a full adder","a half adder"],"answer":3,"explanation":"हाफ़ अडर दो बिट जोड़कर योग (XOR) और कैरी (AND) देता है, पर पिछला कैरी नहीं लेता। पिछला कैरी भी जोड़ना हो तो फुल अडर चाहिए।"},
-{"id":"mgrsys-m3-009","subject":"computer","exams":["mgr-system"],"question":"A multiplexer with n select lines can choose from how many inputs?","options":["2ⁿ","n","2n","n²"],"answer":0,"explanation":"मल्टिप्लेक्सर की n चयन-रेखाएँ 2ⁿ भिन्न संयोजन बनाती हैं, इसलिए वह 2ⁿ इनपुट में से एक चुनकर आउटपुट पर भेज सकता है।"},
-{"id":"mgrsys-m3-010","subject":"computer","exams":["mgr-system"],"question":"Which of the following logic gates is called a 'universal gate'?","options":["XOR","NAND","OR","AND"],"answer":1,"explanation":"NAND (और NOR) को यूनिवर्सल गेट कहते हैं क्योंकि केवल उन्हीं से AND, OR, NOT समेत कोई भी परिपथ बनाया जा सकता है।"},
-{"id":"mgrsys-m3-011","subject":"computer","exams":["mgr-system"],"question":"The basic sequential circuit that stores 1 bit is —","options":["a multiplexer","an encoder","an adder","a flip-flop"],"answer":3,"explanation":"फ्लिप-फ्लॉप एक बिट याद रखता है और घड़ी-संकेत (clock) पर अपनी अवस्था बदलता है — यही रजिस्टर और मेमोरी की मूल इकाई है।"},
-{"id":"mgrsys-m3-012","subject":"computer","exams":["mgr-system"],"question":"The first step of the instruction cycle is —","options":["execute","decode","fetch","store"],"answer":2,"explanation":"निर्देश चक्र क्रम है — फ़ेच (निर्देश मेमोरी से लाना), डिकोड (उसका अर्थ निकालना), एक्ज़ीक्यूट (चलाना)। इसलिए पहला चरण फ़ेच है।"},
-{"id":"mgrsys-m3-013","subject":"computer","exams":["mgr-system"],"question":"The register that holds the address of the next instruction to be executed is —","options":["the Program Counter (PC)","the MAR","the Instruction Register","the Accumulator"],"answer":0,"explanation":"प्रोग्राम काउंटर अगले निर्देश का पता रखता है और हर फ़ेच के बाद अपने आप बढ़ जाता है। इंस्ट्रक्शन रजिस्टर वर्तमान निर्देश रखता है।"},
-{"id":"mgrsys-m3-014","subject":"computer","exams":["mgr-system"],"question":"The addressing mode in which the operand is given within the instruction itself is —","options":["indirect","immediate","direct","register"],"answer":1,"explanation":"तात्कालिक मोड में संख्या स्वयं निर्देश में लिखी होती है (जैसे MOV A, #5)। प्रत्यक्ष में पता दिया जाता है, अप्रत्यक्ष में पते का पता।"},
-{"id":"mgrsys-m3-015","subject":"computer","exams":["mgr-system"],"question":"A characteristic of RISC architecture is —","options":["many complex addressing modes","a microprogrammed control unit is mandatory","few, simple instructions, most completing in one cycle","a very large, variable-length instruction set"],"answer":2,"explanation":"RISC का मूल विचार है — थोड़े, सरल, एक-समान लंबाई के निर्देश, जिनमें अधिकांश एक ही घड़ी-चक्र में पूरे हों। बड़ा जटिल निर्देश-समुच्चय CISC की पहचान है।"},
-{"id":"mgrsys-m3-016","subject":"computer","exams":["mgr-system"],"question":"The control-unit design in which each instruction runs as a sequence of small micro-instructions is called —","options":["parallel control","pipeline control","hardwired control","microprogrammed control"],"answer":3,"explanation":"माइक्रोप्रोग्राम्ड नियंत्रण में हर निर्देश को नियंत्रण-मेमोरी में रखे माइक्रो-निर्देशों के क्रम से लागू किया जाता है — यह लचीला पर अपेक्षाकृत धीमा है। हार्डवायर्ड नियंत्रण परिपथों से बनता है, तेज़ पर कठोर।"},
-{"id":"mgrsys-m3-017","subject":"computer","exams":["mgr-system"],"question":"The main advantage of a bit-slice microprocessor is —","options":["running without memory","working on only one bit","building a processor of any desired word length by combining several slices","only decimal computation"],"answer":2,"explanation":"बिट-स्लाइस प्रोसेसर छोटे (जैसे 4-बिट) खंडों में आते हैं; कई स्लाइस समानांतर जोड़कर 8, 16 या 32 बिट का प्रोसेसर बनाया जा सकता है।"},
-{"id":"mgrsys-m3-018","subject":"computer","exams":["mgr-system"],"question":"Which memory has the fastest access?","options":["registers","cache","hard disk","main memory (RAM)"],"answer":0,"explanation":"मेमोरी पदानुक्रम में गति का क्रम है — रजिस्टर > कैश > मुख्य मेमोरी > द्वितीयक भंडारण। रजिस्टर CPU के भीतर होते हैं, इसलिए सबसे तेज़।"},
-{"id":"mgrsys-m3-019","subject":"computer","exams":["mgr-system"],"question":"Cache memory is effective because of which principle?","options":["paging","locality of reference","virtual memory","interleaving"],"answer":1,"explanation":"कार्यक्रम प्रायः पास-पास के पते और हाल में प्रयुक्त डेटा बार-बार माँगते हैं (स्थानीयता); कैश उन्हीं को CPU के पास रखकर औसत पहुँच-समय घटाती है।"},
-{"id":"mgrsys-m3-020","subject":"computer","exams":["mgr-system"],"question":"The main purpose of virtual memory is —","options":["to reduce disk capacity","to encrypt data","to increase CPU speed","to run programs larger than the available physical memory"],"answer":3,"explanation":"वर्चुअल मेमोरी डिस्क के एक भाग को मेमोरी की तरह इस्तेमाल करके यह भ्रम देती है कि मेमोरी बहुत बड़ी है, जिससे भौतिक RAM से बड़े कार्यक्रम भी चल जाते हैं।"},
-{"id":"mgrsys-m3-021","subject":"computer","exams":["mgr-system"],"question":"The memory in which consecutive addresses are spread across separate banks so that parallel access increases speed is called —","options":["virtual memory","cache memory","interleaved memory","associative memory"],"answer":2,"explanation":"इंटरलीव्ड मेमोरी में क्रमागत पते भिन्न मॉड्यूलों में रखे जाते हैं, जिससे एक साथ कई मॉड्यूल पढ़े/लिखे जा सकते हैं और प्रभावी बैंडविड्थ बढ़ जाती है।"},
-{"id":"mgrsys-m3-022","subject":"computer","exams":["mgr-system"],"question":"The main advantage of DMA (Direct Memory Access) is —","options":["direct data transfer between I/O and memory without CPU intervention","encrypting instructions","increasing the clock frequency","increasing memory capacity"],"answer":0,"explanation":"DMA नियंत्रक बड़े डेटा-खंडों को सीधे उपकरण और मेमोरी के बीच ले जाता है; इस दौरान CPU दूसरा काम कर सकता है, इसलिए बड़े स्थानांतरण में यह programmed I/O से कहीं कुशल है।"},
-{"id":"mgrsys-m3-023","subject":"computer","exams":["mgr-system"],"question":"The I/O method in which the CPU keeps checking the device's status repeatedly is called —","options":["DMA","spooling","interrupt-based I/O","polling / programmed I/O"],"answer":3,"explanation":"programmed I/O (पोलिंग) में CPU लगातार उपकरण का status बिट जाँचता रहता है, जिससे उसका समय व्यर्थ बीतता है। इंटरप्ट में उपकरण तैयार होने पर स्वयं CPU को टोकता है।"},
-{"id":"mgrsys-m3-024","subject":"computer","exams":["mgr-system"],"question":"The algorithm complexity in which time grows in proportion to the square of the input size is —","options":["O(log n)","O(n²)","O(n)","O(1)"],"answer":1,"explanation":"O(n²) का अर्थ है — इनपुट दुगना करने पर समय लगभग चौगुना; बबल सॉर्ट और दोहरे नेस्टेड लूप इसी क्रम के होते हैं।"},
-{"id":"mgrsys-m3-025","subject":"computer","exams":["mgr-system"],"question":"A matrix with most elements zero, stored specially to save space, is called —","options":["an identity matrix","a sparse matrix","a diagonal matrix","a dense matrix"],"answer":1,"explanation":"विरल आव्यूह में अधिकांश प्रविष्टियाँ शून्य होती हैं; केवल अशून्य तत्वों को (पंक्ति, स्तंभ, मान) के रूप में रखकर बहुत मेमोरी बचाई जाती है।"},
-{"id":"mgrsys-m3-026","subject":"computer","exams":["mgr-system"],"question":"From a node in a singly linked list —","options":["one can move only to the next node","one can move to both the next and the previous node","any node can be reached directly in O(1)","one can move only to the first node"],"answer":0,"explanation":"अकेली लिंक्ड लिस्ट में हर नोड केवल अगले नोड का पता रखता है, इसलिए आगे ही बढ़ा जा सकता है। पीछे भी जाना हो तो दुहरी (doubly) लिंक्ड लिस्ट चाहिए।"},
-{"id":"mgrsys-m3-027","subject":"computer","exams":["mgr-system"],"question":"On which principle does a stack work?","options":["priority order","FIFO (first in, first out)","random order","LIFO (last in, first out)"],"answer":3,"explanation":"स्टैक में push और pop दोनों एक ही सिरे से होते हैं, इसलिए जो अंत में डाला गया वही पहले निकलता है — LIFO।"},
-{"id":"mgrsys-m3-028","subject":"computer","exams":["mgr-system"],"question":"The postfix form of the infix expression A*(B+C) is —","options":["A * B C +","A B C * +","A B C + *","A B + C *"],"answer":2,"explanation":"कोष्ठक के कारण B + C पहले (B C +), फिर उसे A से गुणा — A B C + *।"},
-{"id":"mgrsys-m3-029","subject":"computer","exams":["mgr-system"],"question":"A circular queue of size n is full when —","options":["front = 0","(rear + 1) mod n = front","rear = n","rear = front"],"answer":1,"explanation":"वृत्ताकार कतार में एक स्थान जान-बूझकर खाली रखा जाता है ताकि भरी और खाली में भेद रहे; इसलिए भरी होने की शर्त (rear + 1) mod n = front है और खाली होने की rear = front।"},
-{"id":"mgrsys-m3-030","subject":"computer","exams":["mgr-system"],"question":"The queue in which every element has a priority and the highest-priority element leaves first is —","options":["a circular queue","an ordinary queue","a priority queue","a deque"],"answer":2,"explanation":"प्राथमिकता कतार में निकास क्रम प्रविष्टि-क्रम से नहीं, प्राथमिकता से तय होता है; इसे प्रायः हीप (heap) से लागू किया जाता है।"},
-{"id":"mgrsys-m3-031","subject":"computer","exams":["mgr-system"],"question":"In a full binary tree, if the number of leaves is 12, the number of internal nodes is —","options":["11","24","13","12"],"answer":0,"explanation":"जिस पूर्ण द्विआधारी वृक्ष में हर आंतरिक नोड के ठीक 2 बच्चे हों, वहाँ आंतरिक नोड = पत्तियाँ − 1 = 12 − 1 = 11।"},
-{"id":"mgrsys-m3-032","subject":"computer","exams":["mgr-system"],"question":"Which traversal of a Binary Search Tree (BST) gives the nodes in ascending order?","options":["post-order","pre-order","level-order","in-order"],"answer":3,"explanation":"BST में हर नोड के बाएँ छोटे और दाएँ बड़े होते हैं, इसलिए 'बायाँ → मूल → दायाँ' यानी इन-ऑर्डर क्रम मानों को बढ़ते क्रम में देता है।"},
-{"id":"mgrsys-m3-033","subject":"computer","exams":["mgr-system"],"question":"The algorithm that compresses data by building minimum-length prefix-free codes is —","options":["Quick Sort","Binary Search","Dijkstra","Huffman coding"],"answer":3,"explanation":"हफ़मैन एल्गोरिद्म अधिक बार आने वाले प्रतीकों को छोटा कोड और कम बार आने वालों को बड़ा कोड देकर औसत लंबाई घटाता है — यही संपीड़न का आधार है।"},
-{"id":"mgrsys-m3-034","subject":"computer","exams":["mgr-system"],"question":"The 'Tower of Hanoi' problem is the best example of which technique?","options":["graph colouring","hashing","recursion","sorting"],"answer":2,"explanation":"टावर ऑफ़ हनोई में n चकतियों की समस्या को (n−1) चकतियों की छोटी समस्या के रूप में हल किया जाता है — यही पुनरावर्तन (recursion) की क्लासिक मिसाल है।"},
-{"id":"mgrsys-m3-035","subject":"computer","exams":["mgr-system"],"question":"The minimum number of moves to solve the Tower of Hanoi problem with n disks is —","options":["2ⁿ − 1","n²","2n","n!"],"answer":0,"explanation":"हर बार समस्या दुगनी होकर एक और चाल जुड़ती है, जिससे न्यूनतम चालें 2ⁿ − 1 हो जाती हैं; जैसे 3 चकतियों के लिए 7 चालें।"},
-{"id":"mgrsys-m3-036","subject":"computer","exams":["mgr-system"],"question":"When two keys map to the same slot in a hash table, it is called —","options":["underflow","collision","overflow","recursion"],"answer":1,"explanation":"दो भिन्न कुंजियों का एक ही इंडेक्स पर आना टकराव कहलाता है; इसे सुलझाने के लिए चेनिंग या ओपन एड्रेसिंग जैसी तकनीकें प्रयोग होती हैं।"},
-{"id":"mgrsys-m3-037","subject":"computer","exams":["mgr-system"],"question":"The number of comparisons in the worst case of linear search on an unsorted array of n elements is —","options":["1","n","log n","n/2"],"answer":1,"explanation":"रैखिक खोज तत्वों को एक-एक करके देखती है; खोजी वस्तु अंत में हो या हो ही न, तो पूरे n तत्व देखने पड़ते हैं।"},
-{"id":"mgrsys-m3-038","subject":"computer","exams":["mgr-system"],"question":"The average- and worst-case time complexity of merge sort is —","options":["O(n)","O(log n)","O(n log n)","O(n²)"],"answer":2,"explanation":"मर्ज सॉर्ट सूची को बार-बार आधा बाँटता (log n स्तर) और हर स्तर पर n तत्व मिलाता है, इसलिए हर स्थिति में O(n log n)।"},
-{"id":"mgrsys-m3-039","subject":"computer","exams":["mgr-system"],"question":"A convenient data structure to represent a polynomial in a computer is —","options":["a binary tree","a hash table","a stack","a linked list"],"answer":3,"explanation":"बहुपद के हर पद (गुणांक व घात) को एक नोड मानकर लिंक्ड लिस्ट में रखा जाता है; इससे विरल बहुपद भी बिना शून्य-पद रखे कुशलता से संग्रहीत और जोड़े जाते हैं।"},
-{"id":"mgrsys-m3-040","subject":"computer","exams":["mgr-system"],"question":"The process of reclaiming memory blocks that are no longer in use is called —","options":["garbage collection","paging","spooling","compilation"],"answer":0,"explanation":"गार्बेज कलेक्शन उन वस्तुओं की मेमोरी लौटा देता है जिन तक अब कोई संदर्भ नहीं पहुँचता; जावा और पायथन इसे स्वतः करते हैं।"},
-{"id":"mgrsys-m3-041","subject":"computer","exams":["mgr-system"],"question":"The attribute in a database whose value is unique for every row and cannot be NULL is —","options":["a foreign key","an alternate key","the primary key","a super key"],"answer":2,"explanation":"प्राथमिक कुंजी हर पंक्ति को विशिष्ट पहचान देती है — वह अद्वितीय होती है और NULL नहीं हो सकती।"},
-{"id":"mgrsys-m3-042","subject":"computer","exams":["mgr-system"],"question":"The relational-algebra operation that returns only selected rows (on a condition) from a relation is —","options":["join","selection","union","projection (π)"],"answer":1,"explanation":"चयन (selection) किसी संबंध से शर्त पर खरी उतरने वाली पंक्तियाँ छाँटता है; प्रक्षेपण (projection) चुने हुए स्तंभ देता है।"},
-{"id":"mgrsys-m3-043","subject":"computer","exams":["mgr-system"],"question":"A relation is in BCNF if, in each of its non-trivial dependencies X → Y, X is —","options":["a non-prime attribute","a foreign key","NULL","a superkey"],"answer":3,"explanation":"BCNF की कसौटी है कि हर अतुच्छ प्रकार्यात्मक निर्भरता का बायाँ पक्ष सुपर कुंजी हो — यह 3NF से कड़ी शर्त है।"},
-{"id":"mgrsys-m3-044","subject":"computer","exams":["mgr-system"],"question":"The SQL clause used to order the result by some column is —","options":["ORDER BY","HAVING","SORT BY","GROUP BY"],"answer":0,"explanation":"ORDER BY परिणाम को आरोही (ASC) या अवरोही (DESC) क्रम में लगाता है; GROUP BY समूह बनाता है।"},
-{"id":"mgrsys-m3-045","subject":"computer","exams":["mgr-system"],"question":"In an ER diagram, a rhombus (diamond) represents —","options":["a relationship","a weak entity","an entity","an attribute"],"answer":0,"explanation":"ER आरेख में समचतुर्भुज संबंध दिखाता है, आयत इकाई और दीर्घवृत्त गुण।"},
-{"id":"mgrsys-m3-046","subject":"computer","exams":["mgr-system"],"question":"The situation in which changing the conceptual schema does not require changing the external schema is called —","options":["physical data independence","logical data independence","data abstraction","data redundancy"],"answer":1,"explanation":"तार्किक डेटा स्वतंत्रता का अर्थ है — संकल्पनात्मक (तार्किक) स्तर बदलने पर बाहरी स्तर और अनुप्रयोगों को न बदलना पड़े। भौतिक स्वतंत्रता भंडारण स्तर से जुड़ी है।"},
-{"id":"mgrsys-m3-047","subject":"computer","exams":["mgr-system"],"question":"The main feature of a distributed database is —","options":["the data can only be read","the data stays only in memory","all the data resides on a single machine","the data is spread over many geographic sites yet appears as one system"],"answer":3,"explanation":"वितरित डेटाबेस में डेटा कई स्थलों/सर्वरों पर बँटा या प्रतिकृत होता है, फिर भी उपयोगकर्ता को एकल तार्किक डेटाबेस-सा दिखता है।"},
-{"id":"mgrsys-m3-048","subject":"computer","exams":["mgr-system"],"question":"The main purpose of multiprogramming is —","options":["to reduce users","to reduce memory","to maximize CPU utilization","to increase disk speed"],"answer":2,"explanation":"मल्टीप्रोग्रामिंग में एक प्रक्रिया के I/O में रुकते ही CPU दूसरी को दे दी जाती है, जिससे CPU कम बेकार बैठता है और उसका उपयोग बढ़ता है।"},
-{"id":"mgrsys-m3-049","subject":"computer","exams":["mgr-system"],"question":"What makes it possible to give the CPU to one process while another's I/O runs at the same time is —","options":["single programming","batch processing","overlapped processing / multitasking","removing the spool"],"answer":2,"explanation":"आधुनिक OS CPU और I/O को समांतर चलने देता है — जब एक प्रक्रिया I/O कर रही हो तब CPU दूसरी को मिल जाती है — इसी अध्यारोपण से तंत्र की कुल दक्षता बढ़ती है।"},
-{"id":"mgrsys-m3-050","subject":"computer","exams":["mgr-system"],"question":"Ensuring that only one process enters a critical section at a time is called —","options":["mutual exclusion","deadlock","thrashing","spooling"],"answer":0,"explanation":"साझा संसाधन पर एक बार में केवल एक प्रक्रिया के प्रवेश की शर्त पारस्परिक अपवर्जन है; इसे सेमाफ़ोर या ताले से लागू किया जाता है।"},
-{"id":"mgrsys-m3-051","subject":"computer","exams":["mgr-system"],"question":"The main function of the shell in UNIX/Linux is —","options":["to build hardware","only networking","to encrypt files","to interpret the user's commands and pass them to the kernel"],"answer":3,"explanation":"शेल आदेश-व्याख्याता (command interpreter) है — यह उपयोगकर्ता के टाइप किए आदेश पढ़कर कर्नेल से चलवाता है और परिणाम लौटाता है।"},
-{"id":"mgrsys-m3-052","subject":"computer","exams":["mgr-system"],"question":"In data communication, the measure of the number of bits sent per second is —","options":["hertz","bit rate (bps)","baud","byte"],"answer":1,"explanation":"बिट दर प्रति सेकंड भेजे गए बिट (bps) बताती है। बॉड प्रति सेकंड संकेत-परिवर्तन गिनता है, जो हर स्थिति में बिट दर के बराबर नहीं होता।"},
-{"id":"mgrsys-m3-053","subject":"computer","exams":["mgr-system"],"question":"Which layer of the OSI model handles routing and logical (IP) addressing?","options":["the data-link layer","the transport layer","the session layer","the network layer"],"answer":3,"explanation":"पथ-निर्धारण और तार्किक (IP) पता नेटवर्क परत का काम है — राउटर यहीं काम करता है। डेटा-लिंक परत भौतिक (MAC) पते और फ़्रेम सँभालती है।"},
-{"id":"mgrsys-m3-054","subject":"computer","exams":["mgr-system"],"question":"How many layers does the OSI model have in total?","options":["4","7","5","6"],"answer":1,"explanation":"OSI मॉडल की सात परतें हैं — भौतिक, डेटा-लिंक, नेटवर्क, परिवहन, सत्र, प्रस्तुति और अनुप्रयोग।"},
-{"id":"mgrsys-m3-055","subject":"computer","exams":["mgr-system"],"question":"The layer of the TCP/IP model that provides reliable, connection-oriented data delivery is —","options":["the network access layer","the internet layer","the Transport layer","the application layer"],"answer":2,"explanation":"परिवहन परत (TCP) क्रम, त्रुटि-जाँच और पुनःप्रेषण द्वारा विश्वसनीय, संबंध-उन्मुख वितरण देती है; UDP इसी परत पर पर संबंध-रहित है।"},
-{"id":"mgrsys-m3-056","subject":"computer","exams":["mgr-system"],"question":"The IP address 172.16.0.1 belongs to which class?","options":["Class B","Class A","Class C","Class D"],"answer":0,"explanation":"पहला ऑक्टेट 172 है, जो 128–191 की परास में आता है — यह श्रेणी B है (श्रेणी A 1–126, C 192–223)।"},
-{"id":"mgrsys-m3-057","subject":"computer","exams":["mgr-system"],"question":"The device that forwards a frame only to the correct port based on the MAC address is —","options":["a modem","a hub","a repeater","a switch"],"answer":3,"explanation":"स्विच डेटा-लिंक परत पर काम करता है और MAC पता देखकर फ़्रेम केवल गंतव्य पोर्ट पर भेजता है; हब हर पोर्ट पर नक़ल कर देता है।"},
-{"id":"mgrsys-m3-058","subject":"computer","exams":["mgr-system"],"question":"The technique in which several signals are sent together over a single medium is called —","options":["multiplexing","encoding","switching","modulation"],"answer":0,"explanation":"मल्टीप्लेक्सिंग कई संकेतों को (आवृत्ति या समय के आधार पर बाँटकर) एक ही माध्यम पर एक साथ भेजने देती है, जिससे माध्यम का पूरा उपयोग होता है।"},
-{"id":"mgrsys-m3-059","subject":"computer","exams":["mgr-system"],"question":"The Cyclic Redundancy Check (CRC), used for error checking, is mainly applied at which layer?","options":["the session layer","the data-link layer","the application layer","the presentation layer"],"answer":1,"explanation":"CRC फ़्रेम के साथ जाँच-बिट जोड़कर संचरण-त्रुटि पकड़ता है और यह डेटा-लिंक परत पर लगाया जाता है।"},
-{"id":"mgrsys-m3-060","subject":"computer","exams":["mgr-system"],"question":"Transforming a message so that it cannot be read without a key is called —","options":["modulation","multiplexing","encryption","compression"],"answer":2,"explanation":"एन्क्रिप्शन मूल संदेश (plaintext) को कुंजी की सहायता से अपठनीय रूप (ciphertext) में बदल देता है; सही कुंजी से ही उसे वापस पढ़ा जा सकता है।"},
-{"id":"mgrsys-m3-061","subject":"computer","exams":["mgr-system"],"question":"The cryptography in which the same key is used for both encryption and decryption is —","options":["asymmetric key","symmetric key","public key","hash-based"],"answer":1,"explanation":"सममित क्रिप्टोग्राफी में दोनों पक्ष एक ही गुप्त कुंजी साझा करते हैं (जैसे AES); असममित में सार्वजनिक और निजी दो भिन्न कुंजियाँ होती हैं।"},
-{"id":"mgrsys-m3-062","subject":"computer","exams":["mgr-system"],"question":"In artificial intelligence, an entity that perceives its environment and acts upon it is called —","options":["an intelligent agent","a scheduler","a router","a compiler"],"answer":0,"explanation":"बुद्धिमान अभिकर्ता संवेदकों से पर्यावरण को भाँपता है और प्रवर्तकों से उस पर क्रिया करता है, ताकि अपने लक्ष्य की दिशा में सर्वोत्तम निर्णय ले।"},
-{"id":"mgrsys-m3-063","subject":"computer","exams":["mgr-system"],"question":"In AI, 'best-first search' is which kind of search technique?","options":["binary search","uninformed (blind) search","heuristic (informed) search","linear search"],"answer":2,"explanation":"बेस्ट-फ़र्स्ट सर्च हेयुरिस्टिक (अनुमान) फलन से सबसे आशाजनक नोड पहले चुनती है, इसलिए यह सूचित (informed) खोज है; BFS/DFS अंधी खोज हैं।"},
-{"id":"mgrsys-m3-064","subject":"computer","exams":["mgr-system"],"question":"In propositional logic, P → Q is false only when —","options":["P is true and Q is false","P is false and Q is true","both are true","both are false"],"answer":0,"explanation":"निहितार्थ (implication) P → Q केवल तभी असत्य है जब पूर्वग P सत्य हो पर परिणाम Q असत्य; शेष तीनों स्थितियों में यह सत्य रहता है।"},
-{"id":"mgrsys-m3-065","subject":"computer","exams":["mgr-system"],"question":"The Java technology that runs on the server to build dynamic web pages is —","options":["AWT","Swing","Applet","Servlet"],"answer":3,"explanation":"सर्वलेट सर्वर पर चलकर अनुरोध के अनुसार गतिशील HTML बनाता है; एप्लेट (अब अप्रचलित) क्लाइंट के ब्राउज़र में चलता था।"},
-{"id":"mgrsys-m3-066","subject":"computer","exams":["mgr-system"],"question":"The protocol that provides secure communication on the web and, combined with HTTP, makes HTTPS is —","options":["ARP","FTP","SSL/TLS","SMTP"],"answer":2,"explanation":"SSL/TLS अनुप्रयोग और परिवहन परत के बीच लगकर आँकड़ों को एन्क्रिप्ट करता है; HTTP के साथ जुड़ने पर HTTPS बनता है।"},
-{"id":"mgrsys-m3-067","subject":"computer","exams":["mgr-system"],"question":"The system that protects a network from unauthorized external access is —","options":["a switch","a firewall","a router","a modem"],"answer":1,"explanation":"फ़ायरवॉल नियमों के आधार पर आने-जाने वाले नेटवर्क-यातायात को छानता है और अनधिकृत पहुँच रोकता है।"},
-{"id":"mgrsys-m3-068","subject":"computer","exams":["mgr-system"],"question":"In software engineering, the degree of interdependence between modules is called —","options":["iteration","cohesion","abstraction","coupling"],"answer":3,"explanation":"कपलिंग मॉड्यूलों के बीच निर्भरता नापता है — अच्छा डिज़ाइन कम कपलिंग चाहता है। कोहेशन किसी एक मॉड्यूल के भीतर के तत्वों का आपसी जुड़ाव है, जो अधिक होना चाहिए।"},
-{"id":"mgrsys-m3-069","subject":"computer","exams":["mgr-system"],"question":"Testing a single module in isolation is called —","options":["system testing","acceptance testing","integration testing","unit testing"],"answer":3,"explanation":"इकाई परीक्षण में हर मॉड्यूल अलग से जाँचा जाता है; मॉड्यूलों को जोड़कर देखना एकीकरण परीक्षण और पूरे तंत्र को देखना तंत्र परीक्षण है।"},
-{"id":"mgrsys-m3-070","subject":"computer","exams":["mgr-system"],"question":"The system that gives an organisation's management information and reports for decision-making is —","options":["a DBMS","an OS","an MIS (Management Information System)","CRC"],"answer":2,"explanation":"MIS विभिन्न स्रोतों से आँकड़े जुटाकर प्रबंधकों को नियमित रिपोर्ट और सारांश देती है, ताकि निर्णय तथ्यों पर आधारित हों।"},
-{"id":"mgrsys-m3-071","subject":"computer","exams":["mgr-system"],"question":"The system that integrates all of an organisation's processes (finance, HR, production, etc.) into one unified software is —","options":["ERP","DNS","CRC","RMI"],"answer":0,"explanation":"ERP (एंटरप्राइज़ रिसोर्स प्लानिंग) संगठन के विभिन्न विभागों को एक साझा डेटाबेस व तंत्र में जोड़ देती है, जिससे सूचना एक जगह से बहती है।"},
-{"id":"mgrsys-m3-072","subject":"computer","exams":["mgr-system"],"question":"Which cloud service model delivers ready-to-use software over the internet?","options":["IaaS","SaaS","DaaS","PaaS"],"answer":1,"explanation":"SaaS में तैयार सॉफ़्टवेयर ब्राउज़र से इस्तेमाल होता है (जैसे Gmail); IaaS कच्चा अवसंरचना और PaaS विकास-मंच देता है।"},
-{"id":"mgrsys-m3-073","subject":"computer","exams":["mgr-system"],"question":"The concept of connecting everyday objects (sensors, devices) to the internet to share data is —","options":["virtual memory","grid computing","big data","the Internet of Things (IoT)"],"answer":3,"explanation":"IoT में सेंसर लगे उपकरण इंटरनेट से जुड़कर आँकड़े इकट्ठा और साझा करते हैं — जैसे स्मार्ट घड़ी, स्मार्ट मीटर।"},
-{"id":"mgrsys-m3-074","subject":"computer","exams":["mgr-system"],"question":"The term used for very large, rapidly growing and varied data is —","options":["big data","cache","spool","register"],"answer":0,"explanation":"बिग डेटा की पहचान प्रायः तीन V से होती है — Volume (मात्रा), Velocity (गति) और Variety (विविधता); ऐसे आँकड़े पारंपरिक तंत्रों से नहीं सँभलते।"},
-{"id":"mgrsys-m3-075","subject":"computer","exams":["mgr-system"],"question":"The technique in which a machine learns from data by itself and makes predictions without explicit programming is —","options":["compilation","machine learning","spooling","multiplexing"],"answer":1,"explanation":"मशीन लर्निंग में मॉडल उदाहरण-आँकड़ों से पैटर्न सीखता है और फिर नए आँकड़ों पर भविष्यवाणी करता है — नियम हाथ से नहीं लिखे जाते।"},
-{"id":"mgrsys-m3-076","subject":"reasoning","exams":["mgr-system"],"question":"शृंखला का अगला पद ज्ञात कीजिए: 4, 9, 16, 25, 36, ?","options":["42","48","49","45"],"answer":2,"explanation":"ये क्रमशः 2², 3², 4², 5², 6² हैं, इसलिए अगला पद 7² = 49।"},
-{"id":"mgrsys-m3-077","subject":"reasoning","exams":["mgr-system"],"question":"यदि MOUSE को OQWUG लिखा जाता है, तो CAT को कैसे लिखा जाएगा?","options":["ECW","EBV","ECV","DCV"],"answer":2,"explanation":"हर अक्षर दो-दो आगे बढ़ा है: M→O, O→Q, U→W… इसी नियम से C→E, A→C, T→V, यानी ECV।"},
-{"id":"mgrsys-m3-078","subject":"reasoning","exams":["mgr-system"],"question":"किसी सांकेतिक भाषा में यदि '×' का अर्थ '+', '÷' का अर्थ '−', '+' का अर्थ '÷' और '−' का अर्थ '×' हो, तो 15 × 3 ÷ 5 = ?","options":["13","10","15","12"],"answer":0,"explanation":"चिह्न बदलने पर व्यंजक बनता है 15 + 3 − 5 = 13।"},
-{"id":"mgrsys-m3-079","subject":"reasoning","exams":["mgr-system"],"question":"किसी तस्वीर की ओर इशारा करते हुए राम ने कहा, \"यह मेरे पिता के इकलौते पुत्र का पुत्र है।\" तस्वीर में कौन है?","options":["राम का भतीजा","राम का भाई","राम का पिता","राम का पुत्र"],"answer":3,"explanation":"राम के पिता का इकलौता पुत्र स्वयं राम है; इसलिए 'उसका पुत्र' राम का पुत्र हुआ।"},
-{"id":"mgrsys-m3-080","subject":"reasoning","exams":["mgr-system"],"question":"एक व्यक्ति उत्तर की ओर 6 किमी चला, फिर दाएँ मुड़कर 8 किमी चला। अब वह आरंभ-बिंदु से कितनी दूर है?","options":["12 किमी","10 किमी","14 किमी","2 किमी"],"answer":1,"explanation":"उत्तर 6 और पूर्व 8 समकोण बनाते हैं; दूरी = √(6² + 8²) = √100 = 10 किमी (6-8-10 त्रिक)।"},
-{"id":"mgrsys-m3-081","subject":"reasoning","exams":["mgr-system"],"question":"कथन: सभी फूल सुंदर हैं। कोई सुंदर वस्तु सस्ती नहीं है।\n\nनिष्कर्ष:\nI. कोई फूल सस्ता नहीं है।\nII. कुछ सुंदर वस्तुएँ फूल हैं।","options":["दोनों निकलते हैं","केवल I निकलता है","केवल II निकलता है","कोई नहीं निकलता"],"answer":0,"explanation":"सभी फूल सुंदर और कोई सुंदर सस्ता नहीं — इसलिए कोई फूल सस्ता नहीं (I)। 'सभी फूल सुंदर हैं' का वैध परिवर्तन 'कुछ सुंदर फूल हैं' (II)। दोनों निकलते हैं।"},
-{"id":"mgrsys-m3-082","subject":"reasoning","exams":["mgr-system"],"question":"3 बजे घड़ी की दोनों सुइयों के बीच का कोण है —","options":["45°","120°","60°","90°"],"answer":3,"explanation":"3 बजे घंटे की सुई 3 पर और मिनट की 12 पर होती है; बीच में तीन घंटे-चिह्न, हर चिह्न 30° का, इसलिए 3 × 30° = 90°।"},
-{"id":"mgrsys-m3-083","subject":"reasoning","exams":["mgr-system"],"question":"यदि आज मंगलवार है, तो आज से 100 दिन बाद कौन-सा दिन होगा?","options":["शुक्रवार","गुरुवार","शनिवार","बुधवार"],"answer":1,"explanation":"100 ÷ 7 का शेष 2 है (100 = 98 + 2)। मंगलवार से 2 दिन आगे यानी गुरुवार।"},
-{"id":"mgrsys-m3-084","subject":"reasoning","exams":["mgr-system"],"question":"छह व्यक्ति A, B, C, D, E, F एक वृत्त में केंद्र की ओर मुँह करके बैठे हैं। A, B के दाएँ है। C, A के ठीक सामने है। D, E और F के बीच है। यदि B और D आमने-सामने हों, तो E के ठीक बाएँ कौन नहीं हो सकता — इस सूचना से निश्चित रूप से A के ठीक सामने कौन है?","options":["F","D","C","E"],"answer":2,"explanation":"प्रश्न में सीधे दिया है कि C, A के ठीक सामने है — शेष शर्तें विचलित करने के लिए हैं। इसलिए A के ठीक सामने C है।"},
-{"id":"mgrsys-m3-085","subject":"reasoning","exams":["mgr-system"],"question":"सादृश्य पूर्ण कीजिए: CPU : कंप्यूटर :: हृदय : ?","options":["मस्तिष्क","शरीर","फेफड़ा","रक्त"],"answer":1,"explanation":"जैसे CPU कंप्यूटर का केंद्रीय अंग है, वैसे ही हृदय शरीर का केंद्रीय अंग है — दोनों अपने-अपने तंत्र के मूल संचालक हैं।"},
-{"id":"mgrsys-m3-086","subject":"reasoning","exams":["mgr-system"],"question":"विषम को पहचानिए: 2, 3, 5, 7, 9, 11","options":["11","7","9","5"],"answer":2,"explanation":"2, 3, 5, 7, 11 सभी अभाज्य हैं; केवल 9 = 3×3 अभाज्य नहीं, इसलिए वही विषम है।"},
-{"id":"mgrsys-m3-087","subject":"reasoning","exams":["mgr-system"],"question":"लुप्त संख्या ज्ञात कीजिए: 7, 14, 28, 56, ?","options":["98","110","84","112"],"answer":3,"explanation":"हर पद पिछले का दुगना है: 7, 14, 28, 56, इसलिए अगला 56 × 2 = 112।"},
-{"id":"mgrsys-m3-088","subject":"reasoning","exams":["mgr-system"],"question":"40 विद्यार्थियों की कक्षा में मोहन का स्थान ऊपर से 16वाँ है। नीचे से उसका स्थान क्या है?","options":["25वाँ","24वाँ","26वाँ","23वाँ"],"answer":0,"explanation":"नीचे से स्थान = कुल − ऊपर से स्थान + 1 = 40 − 16 + 1 = 25वाँ।"},
-{"id":"mgrsys-m3-089","subject":"reasoning","exams":["mgr-system"],"question":"P, Q का भाई है। R, Q की माता है। S, R का पिता है। P का S से क्या संबंध है?","options":["पिता","पुत्र","भाई","नाती (दौहित्र)"],"answer":3,"explanation":"R, P और Q की माता है, और S, R का पिता यानी P का नाना। इसलिए P, S का नाती (दौहित्र) है।"},
-{"id":"mgrsys-m3-090","subject":"reasoning","exams":["mgr-system"],"question":"निम्न शब्दों को शब्दकोश क्रम में लगाइए:\n1. Data  2. Database  3. Date  4. Datum","options":["3, 1, 2, 4","1, 3, 4, 2","1, 3, 2, 4","1, 2, 3, 4"],"answer":2,"explanation":"तीनों 'Dat' से शुरू; चौथा अक्षर — Data (a), Date (e), Datum (u) और Database भी 'a' पर आगे 'b'। 'Data' बनाम 'Database': पाँचवाँ स्थान — Data पर शब्द समाप्त (छोटा पहले), फिर Database। इसलिए क्रम Data, Date? नहीं — पहले 'a' वाले Data व Database, फिर 'e' वाला Date, फिर 'u' वाला Datum → 1, 2, 3, 4? पर 'Data'(a) रुक जाता है और 'Database' में 'a' के बाद 'b', जबकि 'Date' में चौथे स्थान 'e' है। चौथा अक्षर a < e, इसलिए Data व Database (दोनों चौथे स्थान 'a') पहले, फिर Date; Data छोटा होने से Database से पहले। अतः 1, 2, 3, 4।"},
-{"id":"mgrsys-m3-091","subject":"ganit","exams":["mgr-system"],"question":"एक वस्तु ₹1,200 में ख़रीदकर 25% लाभ पर बेची जाती है। विक्रय मूल्य है —","options":["₹1,450","₹1,500","₹1,600","₹1,250"],"answer":1,"explanation":"25% लाभ पर विक्रय मूल्य = 1200 × 1.25 = ₹1,500।"},
-{"id":"mgrsys-m3-092","subject":"ganit","exams":["mgr-system"],"question":"A और B की वर्तमान आयु का अनुपात 3 : 4 है और उनकी आयु का योग 42 वर्ष है। A की आयु है —","options":["18 वर्ष","24 वर्ष","20 वर्ष","21 वर्ष"],"answer":0,"explanation":"भाग 3x और 4x; 7x = 42 → x = 6। A की आयु = 3x = 18 वर्ष।"},
-{"id":"mgrsys-m3-093","subject":"ganit","exams":["mgr-system"],"question":"एक रेल 20 मी/से की चाल से चल रही है। इसे किमी/घंटा में बदलिए।","options":["75 किमी/घंटा","60 किमी/घंटा","72 किमी/घंटा","80 किमी/घंटा"],"answer":2,"explanation":"मी/से को किमी/घंटा में बदलने के लिए 18/5 से गुणा कीजिए: 20 × 18/5 = 72 किमी/घंटा।"},
-{"id":"mgrsys-m3-094","subject":"ganit","exams":["mgr-system"],"question":"₹10,000 पर 10% वार्षिक दर से 2 वर्ष का चक्रवृद्धि ब्याज है —","options":["₹2,200","₹2,100","₹1,900","₹2,000"],"answer":1,"explanation":"मिश्रधन = 10000 × (1.1)² = ₹12,100, इसलिए चक्रवृद्धि ब्याज ₹2,100।"},
-{"id":"mgrsys-m3-095","subject":"ganit","exams":["mgr-system"],"question":"7 संख्याओं का औसत 15 है। यदि प्रत्येक संख्या में 3 जोड़ दिया जाए, तो नया औसत होगा —","options":["15","17","21","18"],"answer":3,"explanation":"हर संख्या में समान मान जोड़ने पर औसत भी उतना ही बढ़ता है: 15 + 3 = 18।"},
-{"id":"mgrsys-m3-096","subject":"ganit","exams":["mgr-system"],"question":"12 आदमी एक कार्य को 8 दिन में पूरा करते हैं। वही कार्य 16 आदमी कितने दिन में पूरा करेंगे?","options":["6 दिन","4 दिन","8 दिन","10 दिन"],"answer":0,"explanation":"कुल काम = 12 × 8 = 96 आदमी-दिन। 16 आदमी के लिए दिन = 96 ÷ 16 = 6 दिन (आदमी और दिन व्युत्क्रमानुपाती हैं)।"},
-{"id":"mgrsys-m3-097","subject":"ganit","exams":["mgr-system"],"question":"एक वृत्त की त्रिज्या 14 सेमी है। इसका क्षेत्रफल है (π = 22/7) —","options":["616 सेमी²","588 सेमी²","308 सेमी²","644 सेमी²"],"answer":0,"explanation":"क्षेत्रफल = πr² = (22/7) × 14 × 14 = 22 × 28 = 616 वर्ग सेमी।"},
-{"id":"mgrsys-m3-098","subject":"ganit","exams":["mgr-system"],"question":"एक थैले में 5 लाल और 3 हरी गेंदें हैं। यादृच्छिक रूप से निकाली गई गेंद के हरी होने की प्रायिकता है —","options":["5/8","3/5","3/8","1/3"],"answer":2,"explanation":"कुल 8 गेंदें, हरी 3, इसलिए प्रायिकता = 3/8।"},
-{"id":"mgrsys-m3-099","subject":"ganit","exams":["mgr-system"],"question":"यदि 2^(x+1) = 16 हो, तो x का मान है —","options":["4","3","2","5"],"answer":1,"explanation":"16 = 2⁴, इसलिए x + 1 = 4 → x = 3।"},
-{"id":"mgrsys-m3-100","subject":"ganit","exams":["mgr-system"],"question":"किसी संख्या का 40% यदि 60 हो, तो वह संख्या है —","options":["120","240","180","150"],"answer":3,"explanation":"संख्या का 40% = 60 → संख्या = 60 × 100 ÷ 40 = 150।"},
-{"id":"mgrsys-m3-101","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"An organisation that keeps every decision at the top will move only as fast as the few people at that top can think. For a while this looks like control, and control is comforting. But as the organisation grows, the queue of decisions waiting for a senior signature grows with it, and the very people meant to set direction spend their days approving small things.\n\nThe alternative is not the absence of rules but the delegation of judgement. When a clear principle is written down once, a junior employee can apply it to a hundred cases without asking. The senior's work then shifts from deciding each case to defining the principle and reviewing the exceptions. Authority is not surrendered; it is invested in advance.\n\nThe organisations that scale well are rarely those with the cleverest leaders. They are the ones whose leaders managed to put their judgement into rules that others could carry.\"\n\nAccording to the passage, what happens as an organisation that centralises every decision grows?","options":["senior leaders get more free time","the queue of decisions awaiting a senior signature grows","rules disappear","junior staff stop working"],"answer":1,"explanation":"पहले अनुच्छेद के अनुसार संगठन बढ़ने पर वरिष्ठ हस्ताक्षर की प्रतीक्षा में लगे निर्णयों की क़तार भी बढ़ती जाती है।"},
-{"id":"mgrsys-m3-102","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"An organisation that keeps every decision at the top will move only as fast as the few people at that top can think. For a while this looks like control, and control is comforting. But as the organisation grows, the queue of decisions waiting for a senior signature grows with it, and the very people meant to set direction spend their days approving small things.\n\nThe alternative is not the absence of rules but the delegation of judgement. When a clear principle is written down once, a junior employee can apply it to a hundred cases without asking. The senior's work then shifts from deciding each case to defining the principle and reviewing the exceptions. Authority is not surrendered; it is invested in advance.\n\nThe organisations that scale well are rarely those with the cleverest leaders. They are the ones whose leaders managed to put their judgement into rules that others could carry.\"\n\nThe author suggests the alternative to centralisation is —","options":["stopping all growth","hiring more senior leaders","having no rules at all","the delegation of judgement through clear principles"],"answer":3,"explanation":"लेखक कहता है विकल्प नियमों का अभाव नहीं, बल्कि स्पष्ट सिद्धांत लिखकर 'निर्णय-क्षमता का प्रत्यायोजन' है।"},
-{"id":"mgrsys-m3-103","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"An organisation that keeps every decision at the top will move only as fast as the few people at that top can think. For a while this looks like control, and control is comforting. But as the organisation grows, the queue of decisions waiting for a senior signature grows with it, and the very people meant to set direction spend their days approving small things.\n\nThe alternative is not the absence of rules but the delegation of judgement. When a clear principle is written down once, a junior employee can apply it to a hundred cases without asking. The senior's work then shifts from deciding each case to defining the principle and reviewing the exceptions. Authority is not surrendered; it is invested in advance.\n\nThe organisations that scale well are rarely those with the cleverest leaders. They are the ones whose leaders managed to put their judgement into rules that others could carry.\"\n\nThe phrase \"Authority is not surrendered; it is invested in advance\" means that the senior —","options":["gives up all power permanently","reviews every single case personally","embeds their judgement into rules applied later by others","refuses to delegate anything"],"answer":2,"explanation":"आशय यह है कि अधिकार छोड़ा नहीं जाता, बल्कि पहले से नियमों में लगा दिया जाता है, जिन्हें बाद में दूसरे लागू करते हैं।"},
-{"id":"mgrsys-m3-104","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"An organisation that keeps every decision at the top will move only as fast as the few people at that top can think. For a while this looks like control, and control is comforting. But as the organisation grows, the queue of decisions waiting for a senior signature grows with it, and the very people meant to set direction spend their days approving small things.\n\nThe alternative is not the absence of rules but the delegation of judgement. When a clear principle is written down once, a junior employee can apply it to a hundred cases without asking. The senior's work then shifts from deciding each case to defining the principle and reviewing the exceptions. Authority is not surrendered; it is invested in advance.\n\nThe organisations that scale well are rarely those with the cleverest leaders. They are the ones whose leaders managed to put their judgement into rules that others could carry.\"\n\nAfter delegation, the senior's work shifts to —","options":["defining the principle and reviewing the exceptions","doing the junior's tasks","stopping all decisions","approving every small decision"],"answer":0,"explanation":"गद्यांश कहता है वरिष्ठ का काम हर मामला तय करने से हटकर सिद्धांत गढ़ने और अपवादों की समीक्षा करने पर आ जाता है।"},
-{"id":"mgrsys-m3-105","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"An organisation that keeps every decision at the top will move only as fast as the few people at that top can think. For a while this looks like control, and control is comforting. But as the organisation grows, the queue of decisions waiting for a senior signature grows with it, and the very people meant to set direction spend their days approving small things.\n\nThe alternative is not the absence of rules but the delegation of judgement. When a clear principle is written down once, a junior employee can apply it to a hundred cases without asking. The senior's work then shifts from deciding each case to defining the principle and reviewing the exceptions. Authority is not surrendered; it is invested in advance.\n\nThe organisations that scale well are rarely those with the cleverest leaders. They are the ones whose leaders managed to put their judgement into rules that others could carry.\"\n\nAccording to the last paragraph, organisations that scale well are led by people who —","options":["are the cleverest individuals","make every decision themselves","avoid writing anything down","put their judgement into rules others can carry"],"answer":3,"explanation":"अंतिम अनुच्छेद कहता है कि अच्छे से बढ़ने वाले संगठनों के नेता वे होते हैं जो अपनी समझ को ऐसे नियमों में ढाल देते हैं जिन्हें दूसरे आगे ले जा सकें।"},
-{"id":"mgrsys-m3-106","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"A backup that has never been restored is not a backup; it is a hope. Many organisations copy their data faithfully every night and sleep soundly, never once checking whether those copies can actually be read back. The day a disk fails, they discover that the backup format changed, or the tapes were blank, or the one person who knew the procedure has left. The copying worked; the recovering was never tested.\n\nThe discipline that matters, therefore, is not backup but restore. A copy proves nothing until it has been turned back into a working system, and that test must be run on a schedule, not on the day of the disaster. It is dull work with no visible reward, which is exactly why it is so often skipped.\n\nThe cost of skipping it is paid only once, but it is paid in full.\"\n\nWhy does the author say a backup that has never been restored is \"a hope\"?","options":["because a copy proves nothing until it is shown it can be read back","because hoping is a good strategy","because backups are always unreliable","because restoring is impossible"],"answer":0,"explanation":"लेखक का तर्क है कि प्रति तब तक कुछ सिद्ध नहीं करती जब तक यह न दिखा दिया जाए कि उसे वापस पढ़कर चालू तंत्र बनाया जा सकता है।"},
-{"id":"mgrsys-m3-107","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"A backup that has never been restored is not a backup; it is a hope. Many organisations copy their data faithfully every night and sleep soundly, never once checking whether those copies can actually be read back. The day a disk fails, they discover that the backup format changed, or the tapes were blank, or the one person who knew the procedure has left. The copying worked; the recovering was never tested.\n\nThe discipline that matters, therefore, is not backup but restore. A copy proves nothing until it has been turned back into a working system, and that test must be run on a schedule, not on the day of the disaster. It is dull work with no visible reward, which is exactly why it is so often skipped.\n\nThe cost of skipping it is paid only once, but it is paid in full.\"\n\nAccording to the passage, the discipline that truly matters is —","options":["copying tapes","buying more disks","restore","backup"],"answer":2,"explanation":"गद्यांश स्पष्ट कहता है — जो अनुशासन मायने रखता है वह बैकअप नहीं, रिस्टोर है।"},
-{"id":"mgrsys-m3-108","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"A backup that has never been restored is not a backup; it is a hope. Many organisations copy their data faithfully every night and sleep soundly, never once checking whether those copies can actually be read back. The day a disk fails, they discover that the backup format changed, or the tapes were blank, or the one person who knew the procedure has left. The copying worked; the recovering was never tested.\n\nThe discipline that matters, therefore, is not backup but restore. A copy proves nothing until it has been turned back into a working system, and that test must be run on a schedule, not on the day of the disaster. It is dull work with no visible reward, which is exactly why it is so often skipped.\n\nThe cost of skipping it is paid only once, but it is paid in full.\"\n\nWhy, according to the passage, is the restore test so often skipped?","options":["it is illegal","it is dull work with no visible reward","it damages the data","it is too expensive to attempt"],"answer":1,"explanation":"गद्यांश कहता है यह उबाऊ काम है जिसका कोई दिखने वाला प्रतिफल नहीं, इसीलिए इसे अक्सर टाल दिया जाता है।"},
-{"id":"mgrsys-m3-109","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"A backup that has never been restored is not a backup; it is a hope. Many organisations copy their data faithfully every night and sleep soundly, never once checking whether those copies can actually be read back. The day a disk fails, they discover that the backup format changed, or the tapes were blank, or the one person who knew the procedure has left. The copying worked; the recovering was never tested.\n\nThe discipline that matters, therefore, is not backup but restore. A copy proves nothing until it has been turned back into a working system, and that test must be run on a schedule, not on the day of the disaster. It is dull work with no visible reward, which is exactly why it is so often skipped.\n\nThe cost of skipping it is paid only once, but it is paid in full.\"\n\nThe passage says the restore test must be run —","options":["on a schedule, before any disaster","only once when the system is built","only by the person who left","on the day of the disaster"],"answer":0,"explanation":"लेखक ज़ोर देता है कि यह जाँच नियमित समय-सारणी पर होनी चाहिए, आपदा वाले दिन नहीं।"},
-{"id":"mgrsys-m3-110","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"A backup that has never been restored is not a backup; it is a hope. Many organisations copy their data faithfully every night and sleep soundly, never once checking whether those copies can actually be read back. The day a disk fails, they discover that the backup format changed, or the tapes were blank, or the one person who knew the procedure has left. The copying worked; the recovering was never tested.\n\nThe discipline that matters, therefore, is not backup but restore. A copy proves nothing until it has been turned back into a working system, and that test must be run on a schedule, not on the day of the disaster. It is dull work with no visible reward, which is exactly why it is so often skipped.\n\nThe cost of skipping it is paid only once, but it is paid in full.\"\n\nThe closing line \"paid only once, but it is paid in full\" suggests that the failure —","options":["is repeated many times","costs nothing at all","is minor and easily fixed","happens rarely but its consequences are total"],"answer":3,"explanation":"आशय यह है कि यह चूक शायद एक ही बार पकड़ में आए, पर तब उसका नुक़सान पूरा-का-पूरा भुगतना पड़ता है।"}
+ {
+  "id": "mgrsys-m3-001",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A byte-addressable machine has 256 MB of main memory and a 512 KB, 8-way set-associative cache with 64-byte blocks. The number of tag bits in a physical address is —",
+  "options": [
+   "13",
+   "15",
+   "12",
+   "18"
+  ],
+  "answer": 2,
+  "explanation": "256 MB = 2²⁸, अतः पता 28 बिट। सेट = 2¹⁹ / (2⁶ × 2³) = 2¹⁰ → इंडेक्स 10 बिट; ऑफ़सेट 6 बिट। टैग = 28 − 10 − 6 = 12 बिट।"
+ },
+ {
+  "id": "mgrsys-m3-002",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "An L1 cache has a hit ratio of 0.8 and access time 2 ns. Of the L1 misses, 90% hit in L2 (access time 10 ns); the rest go to main memory (100 ns). Accesses are hierarchical. The average memory access time is —",
+  "options": [
+   "6 ns",
+   "5.6 ns",
+   "4 ns",
+   "12 ns"
+  ],
+  "answer": 0,
+  "explanation": "AMAT = T₁ + m₁ × (T₂ + m₂ × Tm) = 2 + 0.2 × (10 + 0.1 × 100) = 2 + 0.2 × 20 = 6 ns।"
+ },
+ {
+  "id": "mgrsys-m3-003",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In a pipelined processor with an ideal CPI of 1, 20% of instructions are branches and every branch causes a 3-cycle stall. The effective CPI is —",
+  "options": [
+   "0.6",
+   "3.6",
+   "1.2",
+   "1.6"
+  ],
+  "answer": 3,
+  "explanation": "प्रभावी CPI = आदर्श CPI + (शाखा-अनुपात × दंड) = 1 + 0.2 × 3 = 1.6। यानी 60% धीमापन केवल शाखाओं से — इसीलिए ब्रांच-प्रेडिक्शन ज़रूरी है।"
+ },
+ {
+  "id": "mgrsys-m3-004",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In a classic 5-stage RISC pipeline, which hazard CANNOT be completely removed by operand forwarding alone and still needs a one-cycle stall?",
+  "options": [
+   "Two independent ADD instructions",
+   "A load instruction followed immediately by an instruction that uses the loaded value",
+   "An ADD followed by a dependent SUB",
+   "A store followed by an unrelated ADD"
+  ],
+  "answer": 1,
+  "explanation": "लोड का डेटा MEM चरण के अंत में मिलता है, जबकि अगले निर्देश को वह EX की शुरुआत में चाहिए — फ़ॉरवर्डिंग समय में पीछे नहीं भेज सकती। इसे 'लोड-यूज़ हैज़र्ड' कहते हैं; एक बबल डालना पड़ता है।"
+ },
+ {
+  "id": "mgrsys-m3-005",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Which of the following additions overflows in 8-bit 2's complement arithmetic?",
+  "options": [
+   "100 + (−50)",
+   "−100 + 50",
+   "100 + 50",
+   "−60 + (−60)"
+  ],
+  "answer": 2,
+  "explanation": "8-बिट सीमा −128 से +127। 100 + 50 = 150 सीमा से बाहर — दो धनात्मक जोड़कर ऋणात्मक परिणाम (ओवरफ़्लो)। −60 − 60 = −120 सीमा में है। विपरीत चिह्नों के जोड़ में ओवरफ़्लो कभी नहीं होता।"
+ },
+ {
+  "id": "mgrsys-m3-006",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A 4-byte branch instruction at address 1000 uses PC-relative addressing with an offset of −20. If the PC holds the address of the next instruction when the offset is added, the branch target is —",
+  "options": [
+   "984",
+   "1024",
+   "980",
+   "1020"
+  ],
+  "answer": 0,
+  "explanation": "निर्देश पढ़ने के बाद PC = 1000 + 4 = 1004। लक्ष्य = 1004 + (−20) = 984। PC-सापेक्ष पता कोड को कहीं भी लोड करने (relocatable) में मदद करता है।"
+ },
+ {
+  "id": "mgrsys-m3-007",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A machine has 16-bit instructions and 6-bit address fields, and uses an expanding opcode. If there are 14 two-address instructions, the maximum number of one-address instructions is —",
+  "options": [
+   "64",
+   "128",
+   "256",
+   "96"
+  ],
+  "answer": 1,
+  "explanation": "दो-पते वाले निर्देश में ऑपकोड = 16 − 12 = 4 बिट → 16 संयोजन, 14 उपयोग, 2 बचे। एक-पते वाले निर्देश में ऑपकोड 10 बिट: पहले 4 बिट के 2 बचे मान × अगले 6 बिट के 64 मान = 128।"
+ },
+ {
+  "id": "mgrsys-m3-008",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A device transfers 100,000 bytes per second to memory using cycle-stealing DMA, one byte per stolen cycle. Each memory cycle takes 1 µs. The fraction of time the CPU is denied the memory bus is —",
+  "options": [
+   "50%",
+   "0.1%",
+   "1%",
+   "10%"
+  ],
+  "answer": 3,
+  "explanation": "हर सेकंड 10⁵ चक्र चुराए जाते हैं, हर एक 1 µs का: 10⁵ × 10⁻⁶ = 0.1 सेकंड। अतः 10% समय CPU को बस नहीं मिलती। बाक़ी 90% में CPU अपना काम जारी रखता है — यही DMA का लाभ है।"
+ },
+ {
+  "id": "mgrsys-m3-009",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In daisy-chain interrupt priority, the priority of a device is determined by —",
+  "options": [
+   "its physical position in the chain relative to the CPU",
+   "the size of its data buffer",
+   "the interrupt vector number it sends",
+   "the order in which devices were installed in software"
+  ],
+  "answer": 0,
+  "explanation": "इंटरप्ट-एक्नॉलेज संकेत CPU से श्रृंखला में एक-एक उपकरण से गुज़रता है; जो उपकरण पहले है और इंटरप्ट माँग रहा है, वही संकेत रोक लेता है। इसलिए CPU के पास वाला उपकरण सर्वोच्च प्राथमिकता पाता है।"
+ },
+ {
+  "id": "mgrsys-m3-010",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Memory access takes 100 ns and servicing a page fault takes 8 ms. To keep the effective access time below 200 ns, the page-fault rate p must be at most about —",
+  "options": [
+   "1.25 × 10⁻³",
+   "1.25 × 10⁻⁵",
+   "1 × 10⁻⁶",
+   "2.5 × 10⁻⁵"
+  ],
+  "answer": 1,
+  "explanation": "EAT = (1 − p) × 100 + p × 8,000,000 ≤ 200 ns → p × 7,999,900 ≤ 100 → p ≤ 1.25 × 10⁻⁵। यानी लगभग 80,000 में एक से अधिक फ़ॉल्ट नहीं — डिस्क कितनी धीमी है, यही दिखता है।"
+ },
+ {
+  "id": "mgrsys-m3-011",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "An asynchronous serial line runs at 9600 baud. Each character has 1 start bit, 8 data bits, 1 parity bit and 1 stop bit. The maximum number of characters transferred per second is about —",
+  "options": [
+   "1200",
+   "1066",
+   "960",
+   "872"
+  ],
+  "answer": 3,
+  "explanation": "हर अक्षर = 1 + 8 + 1 + 1 = 11 बिट। 9600 / 11 ≈ 872 अक्षर प्रति सेकंड। स्टार्ट-स्टॉप बिट ही असिंक्रोनस संचार का 'ओवरहेड' हैं।"
+ },
+ {
+  "id": "mgrsys-m3-012",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The keys 1, 2, 3, 4, 5, 6, 7 are inserted in that order into an initially empty AVL tree. The root of the final tree is —",
+  "options": [
+   "3",
+   "1",
+   "4",
+   "5"
+  ],
+  "answer": 2,
+  "explanation": "1,2,3 पर रोटेशन से रूट 2; 4,5 पर दाएँ हिस्से में रोटेशन; 6 डालने पर रूट-स्तर पर असंतुलन — बाएँ रोटेशन से रूट 4; 7 पर फिर स्थानीय रोटेशन। अंतिम वृक्ष पूर्ण संतुलित: रूट 4, फिर 2 और 6, पत्तियाँ 1, 3, 5, 7।"
+ },
+ {
+  "id": "mgrsys-m3-013",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A min-heap is stored in an array as [1, 3, 6, 5, 9, 8]. After one delete-min operation, the array becomes —",
+  "options": [
+   "[3, 5, 6, 8, 9]",
+   "[3, 5, 8, 6, 9]",
+   "[8, 3, 6, 5, 9]",
+   "[3, 6, 5, 9, 8]"
+  ],
+  "answer": 0,
+  "explanation": "रूट 1 हटाकर अंतिम तत्व 8 रूट पर: [8, 3, 6, 5, 9]। नीचे खिसकाएँ: बच्चे 3, 6 में छोटा 3 — अदला-बदली: [3, 8, 6, 5, 9]। 8 के बच्चे 5, 9 में छोटा 5 — अदला-बदली: [3, 5, 6, 8, 9]।"
+ },
+ {
+  "id": "mgrsys-m3-014",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The time complexity of building a binary heap from n unordered elements using the bottom-up heapify method is —",
+  "options": [
+   "O(log n)",
+   "O(n)",
+   "O(n log n)",
+   "O(n²)"
+  ],
+  "answer": 1,
+  "explanation": "नीचे के आधे नोड पत्ते हैं (0 काम), उनके ऊपर के नोड केवल 1 स्तर नीचे जाते हैं, इत्यादि। कुल काम Σ (n / 2^(h+1)) × h = O(n)। एक-एक डालकर बनाने पर O(n log n) लगता।"
+ },
+ {
+  "id": "mgrsys-m3-015",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Quick sort that always picks the first element as pivot is run on an already sorted array of 10 elements. The number of element comparisons made is —",
+  "options": [
+   "10",
+   "100",
+   "45",
+   "90"
+  ],
+  "answer": 2,
+  "explanation": "क्रमबद्ध इनपुट में हर बार पिवट सबसे छोटा होता है, विभाजन 0 और k − 1 का। तुलनाएँ = 9 + 8 + … + 1 = n(n − 1)/2 = 45। यही क्विक-सॉर्ट का O(n²) सबसे बुरा मामला है।"
+ },
+ {
+  "id": "mgrsys-m3-016",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The numbers 1, 2, 3, 4 are pushed onto a stack in this order, and pops may be done at any time. Which output sequence is NOT possible?",
+  "options": [
+   "2, 4, 3, 1",
+   "1, 2, 3, 4",
+   "3, 2, 4, 1",
+   "4, 1, 2, 3"
+  ],
+  "answer": 3,
+  "explanation": "4 पहले निकालने के लिए 1, 2, 3 स्टैक में होंगे और ऊपर 3 होगा — अगला पॉप केवल 3 हो सकता है, 1 नहीं। बाक़ी तीनों क्रम push/pop के किसी क्रम से बन जाते हैं।"
+ },
+ {
+  "id": "mgrsys-m3-017",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In open addressing with uniform hashing and load factor α = 0.75, the expected number of probes in an unsuccessful search is at most —",
+  "options": [
+   "2",
+   "1.33",
+   "4",
+   "3"
+  ],
+  "answer": 2,
+  "explanation": "असफल खोज में अपेक्षित प्रोब ≤ 1 / (1 − α) = 1 / 0.25 = 4। α जितना 1 के पास, प्रोब उतने तेज़ी से बढ़ते हैं — इसलिए टेबल को लगभग 70–75% भरने पर बड़ा किया जाता है।"
+ },
+ {
+  "id": "mgrsys-m3-018",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "100 keys are hashed into a table of 25 slots using separate chaining, with simple uniform hashing. The expected length of a chain is —",
+  "options": [
+   "4",
+   "25",
+   "2",
+   "100"
+  ],
+  "answer": 0,
+  "explanation": "लोड-फ़ैक्टर α = n / m = 100 / 25 = 4। सरल समान हैशिंग में हर श्रृंखला की अपेक्षित लंबाई α होती है, और खोज का औसत समय Θ(1 + α)।"
+ },
+ {
+  "id": "mgrsys-m3-019",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A binary tree has 20 nodes with exactly two children. The number of leaf nodes is —",
+  "options": [
+   "20",
+   "21",
+   "19",
+   "40"
+  ],
+  "answer": 1,
+  "explanation": "किसी भी बाइनरी ट्री में n0 = n2 + 1 (पत्ते = दो-बच्चों वाले नोड + 1)। अतः पत्ते = 20 + 1 = 21। एक बच्चे वाले नोड इस संबंध को नहीं बदलते।"
+ },
+ {
+  "id": "mgrsys-m3-020",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Which of the following functions is tail-recursive?",
+  "options": [
+   "int k(int n) { if (n < 2) return n; return k(n - 1) + k(n - 2); }",
+   "int h(int n) { if (n == 0) return 0; return 1 + h(n - 1); }",
+   "int f(int n) { if (n == 0) return 1; return n * f(n - 1); }",
+   "int g(int n, int acc) { if (n == 0) return acc; return g(n - 1, acc * n); }"
+  ],
+  "answer": 3,
+  "explanation": "टेल-रिकर्शन में पुनरावर्ती कॉल फ़ंक्शन का अंतिम काम होती है — लौटने के बाद कुछ गणना शेष नहीं रहती। g में संचायक (acc) से यही होता है; बाक़ी में कॉल के बाद गुणा/जोड़ बाक़ी है। टेल-कॉल को कंपाइलर लूप में बदल सकता है (स्टैक नहीं बढ़ता)।"
+ },
+ {
+  "id": "mgrsys-m3-021",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Which situation defeats a purely reference-counting garbage collector?",
+  "options": [
+   "An object that is never referenced",
+   "An object referenced by a single local variable",
+   "Two unreachable objects that refer to each other (a cycle)",
+   "An object referenced by many live objects"
+  ],
+  "answer": 2,
+  "explanation": "चक्र में हर वस्तु का संदर्भ-गणक कम से कम 1 रहता है, भले ही बाहर से कोई पहुँच न हो — वे कभी मुक्त नहीं होतीं। मार्क-एंड-स्वीप जैसे ट्रेसिंग संग्राहक यह समस्या हल करते हैं; कम्पैक्शन बिखरी ख़ाली जगह जोड़ता है।"
+ },
+ {
+  "id": "mgrsys-m3-022",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What is printed by the following C code?\n\nchar *s = \"GATE2026\";\nprintf(\"%s\", s + s[3] - s[1]);",
+  "options": [
+   "2026",
+   "TE2026",
+   "Garbage / undefined output",
+   "E2026"
+  ],
+  "answer": 0,
+  "explanation": "s[3] = 'E' (69) और s[1] = 'A' (65), अंतर 4। s + 4 पाँचवें अक्षर की ओर इशारा करता है, अतः \"2026\" छपता है।"
+ },
+ {
+  "id": "mgrsys-m3-023",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What is printed by the following C code?\n\nint a = 5, b = 3;\na = a ^ b; b = a ^ b; a = a ^ b;\nprintf(\"%d %d\", a, b);",
+  "options": [
+   "6 6",
+   "0 0",
+   "5 3",
+   "3 5"
+  ],
+  "answer": 3,
+  "explanation": "यह XOR से अदला-बदली है: a = 5^3 = 6; b = 6^3 = 5; a = 6^5 = 3। परिणाम '3 5' — बिना तीसरे चर के दो मान बदल गए।"
+ },
+ {
+  "id": "mgrsys-m3-024",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "On a typical system where int is 4 bytes and aligned on a 4-byte boundary, what is sizeof(struct S)?\n\nstruct S { char c; int i; char d; };",
+  "options": [
+   "9",
+   "12",
+   "6",
+   "8"
+  ],
+  "answer": 1,
+  "explanation": "c (1) + 3 बाइट पैडिंग ताकि i 4 के गुणज पर हो, i (4), d (1) + 3 बाइट अंतिम पैडिंग ताकि संरचना का आकार 4 का गुणज रहे = 12। सदस्य क्रम { int i; char c; char d; } करें तो 8 बाइट।"
+ },
+ {
+  "id": "mgrsys-m3-025",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What is the output of the following C++ program?\n\nclass A { public: A() { cout << \"A\"; } ~A() { cout << \"a\"; } };\nclass B : public A { public: B() { cout << \"B\"; } ~B() { cout << \"b\"; } };\nint main() { B obj; return 0; }",
+  "options": [
+   "ABab",
+   "ABba",
+   "BAba",
+   "BAab"
+  ],
+  "answer": 1,
+  "explanation": "कंस्ट्रक्टर आधार से व्युत्पन्न की ओर चलते हैं (A फिर B), डिस्ट्रक्टर उल्टे क्रम में (B फिर A)। अतः A B b a।"
+ },
+ {
+  "id": "mgrsys-m3-026",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What is printed by the following Java code?\n\nstatic void change(int[] x) { x[0] = 9; x = new int[]{7, 7, 7}; }\n// in main:\nint[] a = {1, 2, 3};\nchange(a);\nSystem.out.print(a[0]);",
+  "options": [
+   "7",
+   "1",
+   "9",
+   "Compilation error"
+  ],
+  "answer": 2,
+  "explanation": "Java में संदर्भ का मान (copy) जाता है। x[0] = 9 उसी सरणी को बदलता है जिसे a देख रहा है। फिर x को नई सरणी देना केवल स्थानीय प्रति बदलता है — a पर असर नहीं। अतः 9।"
+ },
+ {
+  "id": "mgrsys-m3-027",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What is printed by the following Python code?\n\ndef f(x, lst=[]):\n    lst.append(x)\n    return lst\nf(1)\nprint(f(2))",
+  "options": [
+   "An error is raised",
+   "[1]",
+   "[2]",
+   "[1, 2]"
+  ],
+  "answer": 3,
+  "explanation": "डिफ़ॉल्ट मान फ़ंक्शन परिभाषित होते समय एक बार बनता है, हर कॉल पर नया नहीं। दोनों कॉल एक ही सूची में जोड़ती हैं — [1, 2]। सही तरीक़ा: lst=None रखकर भीतर नई सूची बनाना।"
+ },
+ {
+  "id": "mgrsys-m3-028",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What does the Python expression  2 ** 3 ** 2  evaluate to?",
+  "options": [
+   "512",
+   "36",
+   "An error",
+   "64"
+  ],
+  "answer": 0,
+  "explanation": "घात-संचालक ** दाएँ से बाएँ जुड़ता है: 2 ** (3 ** 2) = 2 ** 9 = 512। (2 ** 3) ** 2 = 64 तभी आता जब कोष्ठक लगे हों।"
+ },
+ {
+  "id": "mgrsys-m3-029",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Relation R(A, B, C, D, E) has FDs A → BC, CD → E, B → D, E → A. Which of the following is NOT a candidate key?",
+  "options": [
+   "A",
+   "E",
+   "BD",
+   "CD"
+  ],
+  "answer": 2,
+  "explanation": "(A)+ = ABCDE; (E)+ = EA… = ABCDE; (CD)+ = CDE A B = ABCDE — तीनों कुंजी (और न्यूनतम)। (BD)+ = BD —इससे C, A, E नहीं मिलते, अतः यह कुंजी नहीं। (BC भी एक कुंजी है।)"
+ },
+ {
+  "id": "mgrsys-m3-030",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "R(A, B, C) with the FD A → B is decomposed into R1(A, B) and R2(A, C). The decomposition is —",
+  "options": [
+   "neither lossless nor dependency-preserving",
+   "lossless and dependency-preserving",
+   "lossless but not dependency-preserving",
+   "lossy but dependency-preserving"
+  ],
+  "answer": 1,
+  "explanation": "साझा गुण A, R1 की कुंजी है (A → B) — इसलिए जोड़ने पर अतिरिक्त टपल नहीं बनते: लॉसलेस। A → B पूरी तरह R1 में है: निर्भरता संरक्षित।"
+ },
+ {
+  "id": "mgrsys-m3-031",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Relation R(A, B, C, D) has candidate key AB and FDs AB → D and A → C. The highest normal form R satisfies is —",
+  "options": [
+   "3NF",
+   "2NF",
+   "BCNF",
+   "1NF"
+  ],
+  "answer": 3,
+  "explanation": "A → C में C (अप्राइम) कुंजी AB के केवल एक भाग पर निर्भर है — आंशिक निर्भरता, जो 2NF तोड़ती है। अतः उच्चतम 1NF। हल: R1(A, C) और R2(A, B, D)।"
+ },
+ {
+  "id": "mgrsys-m3-032",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "R has 5 tuples and S has 4 tuples. In R ⋈ S, exactly 3 tuples of R match, each with exactly one tuple of S. The number of tuples in the LEFT OUTER JOIN of R with S is —",
+  "options": [
+   "5",
+   "3",
+   "20",
+   "4"
+  ],
+  "answer": 0,
+  "explanation": "लेफ़्ट आउटर जॉइन में R की हर टपल रहती है: 3 मेल वाली (एक-एक मेल से) + 2 बिना मेल वाली (S के स्तंभ NULL) = 5।"
+ },
+ {
+  "id": "mgrsys-m3-033",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The tuple relational calculus query  { t | ∃s ∈ Student ( s.marks > 60 ∧ t.name = s.name ) }  is equivalent to —",
+  "options": [
+   "SELECT marks FROM Student WHERE name > 60",
+   "SELECT * FROM Student WHERE marks > 60",
+   "SELECT name FROM Student",
+   "SELECT name FROM Student WHERE marks > 60"
+  ],
+  "answer": 3,
+  "explanation": "t में केवल name गुण है, और वह उस छात्र s से आता है जिसके अंक 60 से अधिक हैं — यानी σ(marks > 60) के बाद π(name)।"
+ },
+ {
+  "id": "mgrsys-m3-034",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Column bonus of table Emp has the values 100, NULL, 200, NULL. What does  SELECT COUNT(*), COUNT(bonus), AVG(bonus) FROM Emp;  return?",
+  "options": [
+   "4, 4, 75",
+   "4, 2, 150",
+   "2, 2, 150",
+   "4, 2, 75"
+  ],
+  "answer": 1,
+  "explanation": "COUNT(*) सभी पंक्तियाँ गिनता है = 4। COUNT(bonus) और AVG(bonus) NULL छोड़ देते हैं: गिनती 2, औसत (100 + 200)/2 = 150।"
+ },
+ {
+  "id": "mgrsys-m3-035",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Table T has a column x with values 1, 2 and 3. How many rows does  SELECT * FROM T WHERE x NOT IN (1, NULL);  return?",
+  "options": [
+   "0",
+   "3",
+   "2",
+   "An error is raised"
+  ],
+  "answer": 0,
+  "explanation": "x NOT IN (1, NULL) का अर्थ x ≠ 1 AND x ≠ NULL। x ≠ NULL का परिणाम UNKNOWN होता है, इसलिए पूरी शर्त कभी TRUE नहीं होती — कोई पंक्ति नहीं। NOT IN वाली उप-क्वेरी में NULL आए तो यही जाल बनता है।"
+ },
+ {
+  "id": "mgrsys-m3-036",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Under basic timestamp ordering, TS(T1) = 5 and TS(T2) = 10. T2 has written item X, so W-timestamp(X) = 10. Now T1 issues read(X). What happens?",
+  "options": [
+   "T1 waits until T2 commits",
+   "T1 reads the value written by T2",
+   "T1's read is rejected and T1 is rolled back",
+   "T2 is rolled back"
+  ],
+  "answer": 2,
+  "explanation": "T1 'पुराना' है (TS 5) पर उससे नया T2 X लिख चुका है (W-TS 10 > 5)। T1 को वह मान पढ़ना चाहिए था जो T2 से पहले था — अब संभव नहीं, अतः T1 रद्द होकर नए टाइमस्टैम्प से फिर शुरू होता है।"
+ },
+ {
+  "id": "mgrsys-m3-037",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A sorted data file has 30,000 records with a blocking factor of 10 records per block. A primary index has one entry per data block, with 100 index entries per block. Using binary search on the index, the number of block accesses to fetch a record is —",
+  "options": [
+   "5",
+   "15",
+   "6",
+   "12"
+  ],
+  "answer": 2,
+  "explanation": "डेटा ब्लॉक = 3000, अतः इंडेक्स प्रविष्टियाँ 3000, इंडेक्स ब्लॉक = 30। इंडेक्स पर द्विआधारी खोज ⌈log₂30⌉ = 5 ब्लॉक, फिर 1 डेटा ब्लॉक = 6। बिना इंडेक्स डेटा फ़ाइल पर सीधे ⌈log₂3000⌉ = 12 लगते।"
+ },
+ {
+  "id": "mgrsys-m3-038",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The main weakness of the two-phase commit (2PC) protocol in distributed databases is —",
+  "options": [
+   "it does not use a log",
+   "it requires all sites to be in one building",
+   "it cannot commit any transaction",
+   "participants can remain blocked if the coordinator fails after they have voted 'ready'"
+  ],
+  "answer": 3,
+  "explanation": "'तैयार' वोट देने के बाद प्रतिभागी अपने आप न कमिट कर सकता है न रद्द — उसे समन्वयक का निर्णय चाहिए। समन्वयक गिर जाए तो वह लॉक पकड़े अटका रहता है (blocking)। थ्री-फ़ेज़ कमिट इसी को घटाने के लिए है।"
+ },
+ {
+  "id": "mgrsys-m3-039",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The disk head is at cylinder 53. The request queue is 98, 183, 37, 122, 14, 124, 65, 67. The total head movement under SSTF scheduling is —",
+  "options": [
+   "208 cylinders",
+   "236 cylinders",
+   "299 cylinders",
+   "640 cylinders"
+  ],
+  "answer": 1,
+  "explanation": "SSTF क्रम: 53 → 65 → 67 → 37 → 14 → 98 → 122 → 124 → 183। दूरियाँ: 12 + 2 + 30 + 23 + 84 + 24 + 2 + 59 = 236। इसी कतार पर FCFS से 640 सिलिंडर।"
+ },
+ {
+  "id": "mgrsys-m3-040",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Processes P1 (burst 24), P2 (burst 3) and P3 (burst 3) all arrive at time 0 in the order P1, P2, P3. Under FCFS, the average waiting time is —",
+  "options": [
+   "17",
+   "3",
+   "27",
+   "10"
+  ],
+  "answer": 0,
+  "explanation": "प्रतीक्षा: P1 = 0, P2 = 24, P3 = 27; औसत = 51 / 3 = 17। यदि क्रम P2, P3, P1 होता तो औसत (0 + 3 + 6)/3 = 3 — छोटी प्रक्रियाओं का लंबी के पीछे फँसना 'कॉन्वॉय प्रभाव' है।"
+ },
+ {
+  "id": "mgrsys-m3-041",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A logical address space has 64 pages of 1024 words each, mapped onto a physical memory of 32 frames. The number of bits in the logical and physical addresses are respectively —",
+  "options": [
+   "16 and 16",
+   "16 and 15",
+   "6 and 5",
+   "15 and 16"
+  ],
+  "answer": 1,
+  "explanation": "ऑफ़सेट = log₂1024 = 10 बिट। तार्किक = log₂64 + 10 = 6 + 10 = 16 बिट; भौतिक = log₂32 + 10 = 5 + 10 = 15 बिट।"
+ },
+ {
+  "id": "mgrsys-m3-042",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A spin lock built only with the TestAndSet instruction —",
+  "options": [
+   "ensures neither mutual exclusion nor progress",
+   "ensures bounded waiting but not mutual exclusion",
+   "needs no hardware support",
+   "ensures mutual exclusion but not bounded waiting"
+  ],
+  "answer": 3,
+  "explanation": "TestAndSet परमाणु है, अतः एक ही प्रक्रिया लॉक पाती है — परस्पर अपवर्जन मिलता है। पर लॉक छूटने पर कौन पाएगा यह संयोग है; कोई प्रक्रिया बार-बार हार सकती है — सीमित प्रतीक्षा की गारंटी नहीं।"
+ },
+ {
+  "id": "mgrsys-m3-043",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In the bounded-buffer producer–consumer solution with a buffer of N slots, the semaphores empty, full and mutex are initialised to —",
+  "options": [
+   "empty = N, full = N, mutex = 0",
+   "empty = 1, full = 0, mutex = N",
+   "empty = N, full = 0, mutex = 1",
+   "empty = 0, full = N, mutex = 1"
+  ],
+  "answer": 2,
+  "explanation": "आरंभ में सब N खाने ख़ाली (empty = N), भरा कोई नहीं (full = 0), और बफ़र तक एक समय एक ही पहुँचे इसलिए mutex = 1। उत्पादक wait(empty), wait(mutex); उपभोक्ता wait(full), wait(mutex)।"
+ },
+ {
+  "id": "mgrsys-m3-044",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A process of 72,766 bytes is loaded with a page size of 2048 bytes. The internal fragmentation in its last page is —",
+  "options": [
+   "962 bytes",
+   "2048 bytes",
+   "1086 bytes",
+   "0 bytes"
+  ],
+  "answer": 0,
+  "explanation": "72,766 = 35 × 2048 + 1086। 36 पेज चाहिए; आख़िरी पेज में केवल 1086 बाइट उपयोग, ख़ाली = 2048 − 1086 = 962 बाइट। पेजिंग में केवल आंतरिक विखंडन होता है, बाहरी नहीं।"
+ },
+ {
+  "id": "mgrsys-m3-045",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What does the following bash snippet print?\n\nx=5; y=3\necho $((x % y + x / y))",
+  "options": [
+   "3",
+   "2.67",
+   "2",
+   "8"
+  ],
+  "answer": 0,
+  "explanation": "$(( )) पूर्णांक अंकगणित करता है: 5 % 3 = 2, 5 / 3 = 1 (दशमलव कटता है)। योग 3।"
+ },
+ {
+  "id": "mgrsys-m3-046",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What does the pipeline  sort data.txt | uniq -c | sort -nr | head -1  output?",
+  "options": [
+   "The first line of data.txt",
+   "The longest line of data.txt",
+   "The most frequent line of data.txt along with its count",
+   "The number of distinct lines in data.txt"
+  ],
+  "answer": 2,
+  "explanation": "sort समान पंक्तियाँ पास लाता है; uniq -c हर अद्वितीय पंक्ति की गिनती जोड़ता है; sort -nr गिनती के घटते क्रम में; head -1 सबसे ऊपर वाली — यानी सबसे अधिक बार आने वाली पंक्ति, गिनती सहित।"
+ },
+ {
+  "id": "mgrsys-m3-047",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "When the input matches more than one LEX rule, which rule is applied?",
+  "options": [
+   "Always the rule listed last",
+   "Always the rule listed first",
+   "The rule with the shortest match",
+   "The rule giving the longest match; among equal-length matches, the rule listed first"
+  ],
+  "answer": 3,
+  "explanation": "LEX पहले सबसे लंबा मेल चुनता है (जैसे 'iffy' को कीवर्ड 'if' नहीं, पहचानकर्ता मानता है)। बराबर लंबाई हो तो फ़ाइल में पहले लिखा नियम जीतता है — इसीलिए कीवर्ड नियम पहचानकर्ता-नियम से ऊपर लिखे जाते हैं।"
+ },
+ {
+  "id": "mgrsys-m3-048",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "After a successful call to exec() (e.g. execvp) in a UNIX process —",
+  "options": [
+   "the parent process is terminated",
+   "the process keeps its PID but its code and data are replaced by the new program",
+   "a new child process with a new PID is created",
+   "the old program continues after the exec() call"
+  ],
+  "answer": 1,
+  "explanation": "exec नई प्रक्रिया नहीं बनाता — उसी प्रक्रिया की मेमोरी-छवि बदल देता है; PID और खुली फ़ाइलें (सामान्यतः) वही रहती हैं। सफल exec लौटता ही नहीं। शेल पहले fork फिर child में exec करता है।"
+ },
+ {
+  "id": "mgrsys-m3-049",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A Class C network must be divided into at least 6 subnets, each with as many hosts as possible. The subnet mask and usable hosts per subnet are —",
+  "options": [
+   "255.255.255.224 and 30",
+   "255.255.255.192 and 62",
+   "255.255.255.240 and 14",
+   "255.255.255.248 and 6"
+  ],
+  "answer": 0,
+  "explanation": "6 सबनेट के लिए 2³ = 8 ≥ 6, अतः 3 बिट उधार — /27 = 255.255.255.224। बचे 5 होस्ट-बिट: 2⁵ − 2 = 30 होस्ट। 2 बिट से केवल 4 सबनेट बनते।"
+ },
+ {
+  "id": "mgrsys-m3-050",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The networks 192.168.0.0/24, 192.168.1.0/24, 192.168.2.0/24 and 192.168.3.0/24 are summarised into a single route. The aggregate is —",
+  "options": [
+   "192.168.0.0/21",
+   "192.168.0.0/16",
+   "192.168.0.0/22",
+   "192.168.0.0/23"
+  ],
+  "answer": 2,
+  "explanation": "तीसरे ऑक्टेट 0–3 = 000000 00 से 000000 11 — पहले 6 बिट समान। साझा उपसर्ग = 8 + 8 + 6 = 22 बिट: 192.168.0.0/22, जो ठीक इन चार /24 को ढकता है।"
+ },
+ {
+  "id": "mgrsys-m3-051",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "For a Hamming code carrying 7 data bits with single-error correction, the minimum number of parity bits is —",
+  "options": [
+   "5",
+   "3",
+   "7",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "शर्त 2^r ≥ m + r + 1। m = 7: r = 3 पर 8 ≥ 11 नहीं; r = 4 पर 16 ≥ 12 सही। अतः 4 पैरिटी बिट, कुल 11-बिट कोड-शब्द।"
+ },
+ {
+  "id": "mgrsys-m3-052",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A 1 Gbps CSMA/CD network has a maximum cable length of 200 m, and signals travel at 2 × 10⁸ m/s. The minimum frame size needed to detect collisions is —",
+  "options": [
+   "125 bytes",
+   "250 bytes",
+   "500 bytes",
+   "64 bytes"
+  ],
+  "answer": 1,
+  "explanation": "Tp = 200 / (2 × 10⁸) = 1 µs। टक्कर पकड़ने के लिए फ़्रेम-संचरण-समय ≥ 2Tp = 2 µs। न्यूनतम फ़्रेम = 2 × 10⁻⁶ × 10⁹ = 2000 बिट = 250 बाइट।"
+ },
+ {
+  "id": "mgrsys-m3-053",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The maximum throughput of slotted ALOHA is about —",
+  "options": [
+   "50%",
+   "18.4%",
+   "36.8%",
+   "100%"
+  ],
+  "answer": 2,
+  "explanation": "स्लॉटेड ALOHA: S = G e^(−G), अधिकतम G = 1 पर 1/e ≈ 36.8%। शुद्ध ALOHA: S = G e^(−2G), अधिकतम G = 0.5 पर ≈ 18.4% — स्लॉट से टक्कर की 'असुरक्षित अवधि' आधी हो जाती है।"
+ },
+ {
+  "id": "mgrsys-m3-054",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "OSPF computes shortest paths using —",
+  "options": [
+   "flooding of data packets only",
+   "Dijkstra's algorithm on a link-state database",
+   "path-vector exchange between autonomous systems",
+   "the Bellman–Ford distance-vector algorithm"
+  ],
+  "answer": 1,
+  "explanation": "OSPF लिंक-स्टेट प्रोटोकॉल है: हर राउटर पूरे नेटवर्क का नक़्शा (LSDB) रखता है और डाइक्स्ट्रा से सबसे छोटे पथ निकालता है। RIP डिस्टेंस-वेक्टर (बेलमैन-फ़ोर्ड) और BGP पाथ-वेक्टर है।"
+ },
+ {
+  "id": "mgrsys-m3-055",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A token bucket has a capacity of 1 MB and a token rate of 10 MB/s; the maximum output rate is 50 MB/s. Starting with a full bucket, the maximum duration of a burst at 50 MB/s is —",
+  "options": [
+   "25 ms",
+   "20 ms",
+   "100 ms",
+   "50 ms"
+  ],
+  "answer": 0,
+  "explanation": "फ़ट-अवधि S = C / (M − ρ) = 1 / (50 − 10) = 1/40 सेकंड = 25 ms। फ़ट के दौरान नए टोकन भी आते रहते हैं, इसलिए केवल C / M = 20 ms नहीं।"
+ },
+ {
+  "id": "mgrsys-m3-056",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "An IPv4 datagram of total length 4000 bytes (20-byte header) is sent over a link with MTU 1500 bytes. The fragment-offset field of the third fragment is —",
+  "options": [
+   "1480",
+   "2960",
+   "185",
+   "370"
+  ],
+  "answer": 3,
+  "explanation": "डेटा = 3980 बाइट; हर खंड में अधिकतम 1480 बाइट डेटा (8 का गुणज)। खंड: 1480, 1480, 1020। तीसरे खंड का डेटा 2960वें बाइट से शुरू; ऑफ़सेट 8-बाइट इकाइयों में = 2960 / 8 = 370।"
+ },
+ {
+  "id": "mgrsys-m3-057",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A client sends a TCP SYN with initial sequence number 100. In the server's SYN-ACK, the acknowledgement number is —",
+  "options": [
+   "1",
+   "101",
+   "0",
+   "100"
+  ],
+  "answer": 1,
+  "explanation": "SYN कोई डेटा नहीं ले जाता, फिर भी एक क्रमांक खपाता है। सर्वर अगला अपेक्षित बाइट बताता है: 100 + 1 = 101।"
+ },
+ {
+  "id": "mgrsys-m3-058",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In Diffie–Hellman key exchange with p = 23 and g = 5, Alice chooses secret a = 4 and Bob chooses b = 3. The shared secret key is —",
+  "options": [
+   "18",
+   "10",
+   "4",
+   "2"
+  ],
+  "answer": 0,
+  "explanation": "A = 5⁴ mod 23 = 625 mod 23 = 4; B = 5³ mod 23 = 125 mod 23 = 10। साझा कुंजी = B^a mod 23 = 10⁴ mod 23 = 18 = A^b mod 23 = 4³ mod 23 = 64 mod 23 = 18।"
+ },
+ {
+  "id": "mgrsys-m3-059",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In a digital signature scheme, the sender signs a message digest with ___ and the receiver verifies it with ___.",
+  "options": [
+   "the sender's public key; the sender's private key",
+   "a shared secret key; the same shared key",
+   "the sender's private key; the sender's public key",
+   "the receiver's public key; the receiver's private key"
+  ],
+  "answer": 2,
+  "explanation": "हस्ताक्षर केवल वही बना सके जिसके पास निजी कुंजी है (प्रामाणिकता, अस्वीकार न कर पाना), और कोई भी सार्वजनिक कुंजी से जाँच सके। गोपनीयता के लिए उल्टा होता है — प्राप्तकर्ता की सार्वजनिक कुंजी से एन्क्रिप्ट।"
+ },
+ {
+  "id": "mgrsys-m3-060",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The total bit rate of an ISDN Basic Rate Interface (2B + D) is —",
+  "options": [
+   "128 kbps",
+   "192 kbps",
+   "64 kbps",
+   "144 kbps"
+  ],
+  "answer": 3,
+  "explanation": "BRI = 2 B-चैनल (हर एक 64 kbps) + 1 D-चैनल (16 kbps) = 144 kbps उपयोगकर्ता दर। फ़्रेमिंग जोड़कर लाइन-दर 192 kbps होती है; PRI = 23B + D (1.544 Mbps)।"
+ },
+ {
+  "id": "mgrsys-m3-061",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The most general unifier of P(x, f(y)) and P(a, f(b)), where a and b are constants, is —",
+  "options": [
+   "{x/a, y/b}",
+   "{a/x, b/y}",
+   "They cannot be unified",
+   "{x/b, y/a}"
+  ],
+  "answer": 0,
+  "explanation": "पहला तर्क: x = a; दूसरा: f(y) = f(b) से y = b। प्रतिस्थापन {x/a, y/b} दोनों को P(a, f(b)) बना देता है। स्थिरांक को चर से नहीं बदला जा सकता, इसलिए {a/x} ग़लत लेखन है।"
+ },
+ {
+  "id": "mgrsys-m3-062",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Which first-order logic sentence correctly represents \"Every student likes some subject\"?",
+  "options": [
+   "∀x ∃y (Student(x) ∧ Subject(y) ∧ Likes(x, y))",
+   "∀x (Student(x) → ∃y (Subject(y) ∧ Likes(x, y)))",
+   "∀x (Student(x) ∧ ∃y (Subject(y) → Likes(x, y)))",
+   "∃y ∀x (Student(x) → Likes(x, y))"
+  ],
+  "answer": 1,
+  "explanation": "∀ के साथ → और ∃ के साथ ∧ — यही सामान्य नियम है। तीसरा विकल्प कहता है कि एक ही विषय सबको पसंद है (अर्थ अलग)। चौथा कहता है कि हर वस्तु छात्र है।"
+ },
+ {
+  "id": "mgrsys-m3-063",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "For the 8-puzzle, compare h1 = number of misplaced tiles and h2 = sum of Manhattan distances. Which statement is correct?",
+  "options": [
+   "h1 dominates h2",
+   "h2 overestimates the true cost",
+   "Both are admissible and h2 dominates h1, so A* with h2 expands no more nodes",
+   "h1 is admissible but h2 is not"
+  ],
+  "answer": 2,
+  "explanation": "हर ग़लत टाइल को कम से कम उसकी मैनहट्टन दूरी जितनी चालें चाहिए, और वह दूरी ≥ 1 है — अतः h1 ≤ h2 ≤ वास्तविक लागत। दोनों स्वीकार्य; h2 अधिक सटीक (प्रभावी), इसलिए कम नोड खोलता है।"
+ },
+ {
+  "id": "mgrsys-m3-064",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "An agent that keeps an internal state, updated from the percept history, to handle a partially observable environment is called a —",
+  "options": [
+   "random agent",
+   "simple reflex agent",
+   "table-driven agent with no memory",
+   "model-based reflex agent"
+  ],
+  "answer": 3,
+  "explanation": "साधारण रिफ़्लेक्स एजेंट केवल वर्तमान अनुभूति (percept) पर नियम चलाता है। मॉडल-आधारित एजेंट दुनिया के बदलने का मॉडल रखकर अनदेखे हिस्से का अनुमान लगाता है। उससे आगे गोल-आधारित और यूटिलिटी-आधारित एजेंट आते हैं।"
+ },
+ {
+  "id": "mgrsys-m3-065",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Problem reduction, where a problem is split into sub-problems that must ALL be solved, is represented by an AND-OR graph and searched with —",
+  "options": [
+   "the AO* algorithm",
+   "breadth-first search only",
+   "the A* algorithm",
+   "the minimax algorithm"
+  ],
+  "answer": 0,
+  "explanation": "AND-आर्क बताते हैं कि सभी उप-समस्याएँ हल करनी हैं, OR-आर्क विकल्प देते हैं। A* केवल OR-ग्राफ़ (एक पथ) के लिए है; AND-OR ग्राफ़ में हल एक उप-ग्राफ़ होता है, जिसे AO* ढूँढता है।"
+ },
+ {
+  "id": "mgrsys-m3-066",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In a servlet, which call returns the existing HttpSession or null, without creating a new session?",
+  "options": [
+   "response.getSession()",
+   "request.getSession()",
+   "request.getSession(true)",
+   "request.getSession(false)"
+  ],
+  "answer": 3,
+  "explanation": "getSession() और getSession(true) सत्र न हो तो नया बना देते हैं। getSession(false) केवल मौजूदा सत्र लौटाता है, वरना null — लॉगिन जाँचने में यही काम आता है।"
+ },
+ {
+  "id": "mgrsys-m3-067",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The default port on which the Java RMI registry listens is —",
+  "options": [
+   "443",
+   "21",
+   "1099",
+   "8080"
+  ],
+  "answer": 2,
+  "explanation": "rmiregistry डिफ़ॉल्ट रूप से पोर्ट 1099 पर चलता है। सर्वर अपनी रिमोट वस्तु Naming.rebind() से यहाँ दर्ज करता है और क्लाइंट Naming.lookup() से स्टब पाता है।"
+ },
+ {
+  "id": "mgrsys-m3-068",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "HttpServletResponse.sendRedirect() sends the browser which HTTP status code by default?",
+  "options": [
+   "200 OK",
+   "302 Found",
+   "404 Not Found",
+   "500 Internal Server Error"
+  ],
+  "answer": 1,
+  "explanation": "sendRedirect() 302 (अस्थायी पुनर्निर्देशन) और Location हेडर भेजता है; ब्राउज़र नया अनुरोध करता है और URL बदल जाता है। RequestDispatcher.forward() सर्वर के भीतर होता है — ब्राउज़र को पता ही नहीं चलता।"
+ },
+ {
+  "id": "mgrsys-m3-069",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In the Secure Electronic Transaction (SET) protocol, the dual signature ensures that —",
+  "options": [
+   "the merchant cannot see the card details and the bank cannot see the order details, yet both are linked",
+   "two banks verify the payment",
+   "the customer signs twice to prevent errors",
+   "the transaction is sent twice for reliability"
+  ],
+  "answer": 0,
+  "explanation": "ड्युअल सिग्नेचर ऑर्डर-सूचना और भुगतान-सूचना के डाइजेस्ट को जोड़कर हस्ताक्षरित करता है। व्यापारी केवल ऑर्डर देखता है, बैंक केवल भुगतान — फिर भी दोनों प्रमाणित कर सकते हैं कि वे एक ही सौदे के हैं।"
+ },
+ {
+  "id": "mgrsys-m3-070",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In an IPsec VPN, which protocol provides confidentiality (encryption) of the payload?",
+  "options": [
+   "AH (Authentication Header)",
+   "ARP",
+   "ESP (Encapsulating Security Payload)",
+   "IKE alone"
+  ],
+  "answer": 2,
+  "explanation": "AH केवल प्रमाणीकरण और अखंडता देता है, एन्क्रिप्शन नहीं। ESP एन्क्रिप्शन (और वैकल्पिक प्रमाणीकरण) देता है — VPN में यही काम आता है। IKE कुंजियाँ तय करता है।"
+ },
+ {
+  "id": "mgrsys-m3-071",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Before release, a team found 90 defects; users reported 10 more defects after release. The Defect Removal Efficiency (DRE) is —",
+  "options": [
+   "100%",
+   "81%",
+   "10%",
+   "90%"
+  ],
+  "answer": 3,
+  "explanation": "DRE = रिलीज़ से पहले हटाए दोष / कुल दोष = 90 / (90 + 10) = 0.9 = 90%। जितना 100% के पास, गुणवत्ता-नियंत्रण उतना प्रभावी।"
+ },
+ {
+  "id": "mgrsys-m3-072",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Which statement about white-box coverage criteria is correct?",
+  "options": [
+   "100% statement coverage implies 100% branch coverage",
+   "100% branch coverage implies 100% statement coverage, but not the reverse",
+   "Statement and branch coverage are always equal",
+   "Path coverage is weaker than statement coverage"
+  ],
+  "answer": 1,
+  "explanation": "हर शाखा चलाने पर हर कथन भी चल जाता है। पर उल्टा नहीं: if बिना else के — केवल TRUE मामला चलाकर सभी कथन ढक जाते हैं, FALSE शाखा अनछुई रह जाती है। पाथ-कवरेज सबसे प्रबल है।"
+ },
+ {
+  "id": "mgrsys-m3-073",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Which software process model is explicitly risk-driven, with risk analysis in every cycle?",
+  "options": [
+   "Spiral model",
+   "Waterfall model",
+   "Incremental model",
+   "Code-and-fix model"
+  ],
+  "answer": 0,
+  "explanation": "बोहेम का स्पाइरल मॉडल हर चक्र में चार चरण रखता है: उद्देश्य तय करना, जोखिम विश्लेषण व निवारण, विकास व परीक्षण, अगले चक्र की योजना। बड़े और जोखिम-भरे प्रोजेक्ट के लिए उपयुक्त।"
+ },
+ {
+  "id": "mgrsys-m3-074",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Google App Engine, which lets developers deploy code without managing servers or operating systems, is an example of —",
+  "options": [
+   "SaaS",
+   "IaaS",
+   "DaaS",
+   "PaaS"
+  ],
+  "answer": 3,
+  "explanation": "PaaS में प्रदाता OS, रनटाइम और मिडलवेयर सँभालता है; उपयोगकर्ता केवल कोड और डेटा देता है। IaaS (जैसे EC2) में वर्चुअल मशीन मिलती है जिसका OS स्वयं सँभालना होता है; SaaS में तैयार सॉफ़्टवेयर।"
+ },
+ {
+  "id": "mgrsys-m3-075",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "By default, how many copies of each data block does Hadoop HDFS keep?",
+  "options": [
+   "5",
+   "1",
+   "3",
+   "2"
+  ],
+  "answer": 2,
+  "explanation": "HDFS डिफ़ॉल्ट रिप्लिकेशन फ़ैक्टर 3 रखता है — सामान्यतः एक प्रति स्थानीय नोड पर, दो किसी दूसरे रैक पर। इससे एक मशीन या पूरा रैक गिरने पर भी डेटा बचा रहता है।"
+ },
+ {
+  "id": "mgrsys-m3-076",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "शृंखला का अगला पद ज्ञात कीजिए: 4, 9, 16, 25, 36, ?",
+  "options": [
+   "42",
+   "48",
+   "49",
+   "45"
+  ],
+  "answer": 2,
+  "explanation": "ये क्रमशः 2², 3², 4², 5², 6² हैं, इसलिए अगला पद 7² = 49।"
+ },
+ {
+  "id": "mgrsys-m3-077",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "यदि MOUSE को OQWUG लिखा जाता है, तो CAT को कैसे लिखा जाएगा?",
+  "options": [
+   "ECW",
+   "EBV",
+   "ECV",
+   "DCV"
+  ],
+  "answer": 2,
+  "explanation": "हर अक्षर दो-दो आगे बढ़ा है: M→O, O→Q, U→W… इसी नियम से C→E, A→C, T→V, यानी ECV।"
+ },
+ {
+  "id": "mgrsys-m3-078",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "किसी सांकेतिक भाषा में यदि '×' का अर्थ '+', '÷' का अर्थ '−', '+' का अर्थ '÷' और '−' का अर्थ '×' हो, तो 15 × 3 ÷ 5 = ?",
+  "options": [
+   "13",
+   "10",
+   "15",
+   "12"
+  ],
+  "answer": 0,
+  "explanation": "चिह्न बदलने पर व्यंजक बनता है 15 + 3 − 5 = 13।"
+ },
+ {
+  "id": "mgrsys-m3-079",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "किसी तस्वीर की ओर इशारा करते हुए राम ने कहा, \"यह मेरे पिता के इकलौते पुत्र का पुत्र है।\" तस्वीर में कौन है?",
+  "options": [
+   "राम का भतीजा",
+   "राम का भाई",
+   "राम का पिता",
+   "राम का पुत्र"
+  ],
+  "answer": 3,
+  "explanation": "राम के पिता का इकलौता पुत्र स्वयं राम है; इसलिए 'उसका पुत्र' राम का पुत्र हुआ।"
+ },
+ {
+  "id": "mgrsys-m3-080",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "एक व्यक्ति उत्तर की ओर 6 किमी चला, फिर दाएँ मुड़कर 8 किमी चला। अब वह आरंभ-बिंदु से कितनी दूर है?",
+  "options": [
+   "12 किमी",
+   "10 किमी",
+   "14 किमी",
+   "2 किमी"
+  ],
+  "answer": 1,
+  "explanation": "उत्तर 6 और पूर्व 8 समकोण बनाते हैं; दूरी = √(6² + 8²) = √100 = 10 किमी (6-8-10 त्रिक)।"
+ },
+ {
+  "id": "mgrsys-m3-081",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "कथन: सभी फूल सुंदर हैं। कोई सुंदर वस्तु सस्ती नहीं है।\n\nनिष्कर्ष:\nI. कोई फूल सस्ता नहीं है।\nII. कुछ सुंदर वस्तुएँ फूल हैं।",
+  "options": [
+   "दोनों निकलते हैं",
+   "केवल I निकलता है",
+   "केवल II निकलता है",
+   "कोई नहीं निकलता"
+  ],
+  "answer": 0,
+  "explanation": "सभी फूल सुंदर और कोई सुंदर सस्ता नहीं — इसलिए कोई फूल सस्ता नहीं (I)। 'सभी फूल सुंदर हैं' का वैध परिवर्तन 'कुछ सुंदर फूल हैं' (II)। दोनों निकलते हैं।"
+ },
+ {
+  "id": "mgrsys-m3-082",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "3 बजे घड़ी की दोनों सुइयों के बीच का कोण है —",
+  "options": [
+   "45°",
+   "120°",
+   "60°",
+   "90°"
+  ],
+  "answer": 3,
+  "explanation": "3 बजे घंटे की सुई 3 पर और मिनट की 12 पर होती है; बीच में तीन घंटे-चिह्न, हर चिह्न 30° का, इसलिए 3 × 30° = 90°।"
+ },
+ {
+  "id": "mgrsys-m3-083",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "यदि आज मंगलवार है, तो आज से 100 दिन बाद कौन-सा दिन होगा?",
+  "options": [
+   "शुक्रवार",
+   "गुरुवार",
+   "शनिवार",
+   "बुधवार"
+  ],
+  "answer": 1,
+  "explanation": "100 ÷ 7 का शेष 2 है (100 = 98 + 2)। मंगलवार से 2 दिन आगे यानी गुरुवार।"
+ },
+ {
+  "id": "mgrsys-m3-084",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "छह व्यक्ति A, B, C, D, E, F एक वृत्त में केंद्र की ओर मुँह करके बैठे हैं। A, B के दाएँ है। C, A के ठीक सामने है। D, E और F के बीच है। यदि B और D आमने-सामने हों, तो E के ठीक बाएँ कौन नहीं हो सकता — इस सूचना से निश्चित रूप से A के ठीक सामने कौन है?",
+  "options": [
+   "F",
+   "D",
+   "C",
+   "E"
+  ],
+  "answer": 2,
+  "explanation": "प्रश्न में सीधे दिया है कि C, A के ठीक सामने है — शेष शर्तें विचलित करने के लिए हैं। इसलिए A के ठीक सामने C है।"
+ },
+ {
+  "id": "mgrsys-m3-085",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "सादृश्य पूर्ण कीजिए: CPU : कंप्यूटर :: हृदय : ?",
+  "options": [
+   "मस्तिष्क",
+   "शरीर",
+   "फेफड़ा",
+   "रक्त"
+  ],
+  "answer": 1,
+  "explanation": "जैसे CPU कंप्यूटर का केंद्रीय अंग है, वैसे ही हृदय शरीर का केंद्रीय अंग है — दोनों अपने-अपने तंत्र के मूल संचालक हैं।"
+ },
+ {
+  "id": "mgrsys-m3-086",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "विषम को पहचानिए: 2, 3, 5, 7, 9, 11",
+  "options": [
+   "11",
+   "7",
+   "9",
+   "5"
+  ],
+  "answer": 2,
+  "explanation": "2, 3, 5, 7, 11 सभी अभाज्य हैं; केवल 9 = 3×3 अभाज्य नहीं, इसलिए वही विषम है।"
+ },
+ {
+  "id": "mgrsys-m3-087",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "लुप्त संख्या ज्ञात कीजिए: 7, 14, 28, 56, ?",
+  "options": [
+   "98",
+   "110",
+   "84",
+   "112"
+  ],
+  "answer": 3,
+  "explanation": "हर पद पिछले का दुगना है: 7, 14, 28, 56, इसलिए अगला 56 × 2 = 112।"
+ },
+ {
+  "id": "mgrsys-m3-088",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "40 विद्यार्थियों की कक्षा में मोहन का स्थान ऊपर से 16वाँ है। नीचे से उसका स्थान क्या है?",
+  "options": [
+   "25वाँ",
+   "24वाँ",
+   "26वाँ",
+   "23वाँ"
+  ],
+  "answer": 0,
+  "explanation": "नीचे से स्थान = कुल − ऊपर से स्थान + 1 = 40 − 16 + 1 = 25वाँ।"
+ },
+ {
+  "id": "mgrsys-m3-089",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "P, Q का भाई है। R, Q की माता है। S, R का पिता है। P का S से क्या संबंध है?",
+  "options": [
+   "पिता",
+   "पुत्र",
+   "भाई",
+   "नाती (दौहित्र)"
+  ],
+  "answer": 3,
+  "explanation": "R, P और Q की माता है, और S, R का पिता यानी P का नाना। इसलिए P, S का नाती (दौहित्र) है।"
+ },
+ {
+  "id": "mgrsys-m3-090",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "निम्न शब्दों को शब्दकोश क्रम में लगाइए:\n1. Data  2. Database  3. Date  4. Datum",
+  "options": [
+   "3, 1, 2, 4",
+   "1, 3, 4, 2",
+   "1, 3, 2, 4",
+   "1, 2, 3, 4"
+  ],
+  "answer": 2,
+  "explanation": "तीनों 'Dat' से शुरू; चौथा अक्षर — Data (a), Date (e), Datum (u) और Database भी 'a' पर आगे 'b'। 'Data' बनाम 'Database': पाँचवाँ स्थान — Data पर शब्द समाप्त (छोटा पहले), फिर Database। इसलिए क्रम Data, Date? नहीं — पहले 'a' वाले Data व Database, फिर 'e' वाला Date, फिर 'u' वाला Datum → 1, 2, 3, 4? पर 'Data'(a) रुक जाता है और 'Database' में 'a' के बाद 'b', जबकि 'Date' में चौथे स्थान 'e' है। चौथा अक्षर a < e, इसलिए Data व Database (दोनों चौथे स्थान 'a') पहले, फिर Date; Data छोटा होने से Database से पहले। अतः 1, 2, 3, 4।"
+ },
+ {
+  "id": "mgrsys-m3-091",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "एक वस्तु ₹1,200 में ख़रीदकर 25% लाभ पर बेची जाती है। विक्रय मूल्य है —",
+  "options": [
+   "₹1,450",
+   "₹1,500",
+   "₹1,600",
+   "₹1,250"
+  ],
+  "answer": 1,
+  "explanation": "25% लाभ पर विक्रय मूल्य = 1200 × 1.25 = ₹1,500।"
+ },
+ {
+  "id": "mgrsys-m3-092",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A और B की वर्तमान आयु का अनुपात 3 : 4 है और उनकी आयु का योग 42 वर्ष है। A की आयु है —",
+  "options": [
+   "18 वर्ष",
+   "24 वर्ष",
+   "20 वर्ष",
+   "21 वर्ष"
+  ],
+  "answer": 0,
+  "explanation": "भाग 3x और 4x; 7x = 42 → x = 6। A की आयु = 3x = 18 वर्ष।"
+ },
+ {
+  "id": "mgrsys-m3-093",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "एक रेल 20 मी/से की चाल से चल रही है। इसे किमी/घंटा में बदलिए।",
+  "options": [
+   "75 किमी/घंटा",
+   "60 किमी/घंटा",
+   "72 किमी/घंटा",
+   "80 किमी/घंटा"
+  ],
+  "answer": 2,
+  "explanation": "मी/से को किमी/घंटा में बदलने के लिए 18/5 से गुणा कीजिए: 20 × 18/5 = 72 किमी/घंटा।"
+ },
+ {
+  "id": "mgrsys-m3-094",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "₹10,000 पर 10% वार्षिक दर से 2 वर्ष का चक्रवृद्धि ब्याज है —",
+  "options": [
+   "₹2,200",
+   "₹2,100",
+   "₹1,900",
+   "₹2,000"
+  ],
+  "answer": 1,
+  "explanation": "मिश्रधन = 10000 × (1.1)² = ₹12,100, इसलिए चक्रवृद्धि ब्याज ₹2,100।"
+ },
+ {
+  "id": "mgrsys-m3-095",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "7 संख्याओं का औसत 15 है। यदि प्रत्येक संख्या में 3 जोड़ दिया जाए, तो नया औसत होगा —",
+  "options": [
+   "15",
+   "17",
+   "21",
+   "18"
+  ],
+  "answer": 3,
+  "explanation": "हर संख्या में समान मान जोड़ने पर औसत भी उतना ही बढ़ता है: 15 + 3 = 18।"
+ },
+ {
+  "id": "mgrsys-m3-096",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "12 आदमी एक कार्य को 8 दिन में पूरा करते हैं। वही कार्य 16 आदमी कितने दिन में पूरा करेंगे?",
+  "options": [
+   "6 दिन",
+   "4 दिन",
+   "8 दिन",
+   "10 दिन"
+  ],
+  "answer": 0,
+  "explanation": "कुल काम = 12 × 8 = 96 आदमी-दिन। 16 आदमी के लिए दिन = 96 ÷ 16 = 6 दिन (आदमी और दिन व्युत्क्रमानुपाती हैं)।"
+ },
+ {
+  "id": "mgrsys-m3-097",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "एक वृत्त की त्रिज्या 14 सेमी है। इसका क्षेत्रफल है (π = 22/7) —",
+  "options": [
+   "616 सेमी²",
+   "588 सेमी²",
+   "308 सेमी²",
+   "644 सेमी²"
+  ],
+  "answer": 0,
+  "explanation": "क्षेत्रफल = πr² = (22/7) × 14 × 14 = 22 × 28 = 616 वर्ग सेमी।"
+ },
+ {
+  "id": "mgrsys-m3-098",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "एक थैले में 5 लाल और 3 हरी गेंदें हैं। यादृच्छिक रूप से निकाली गई गेंद के हरी होने की प्रायिकता है —",
+  "options": [
+   "5/8",
+   "3/5",
+   "3/8",
+   "1/3"
+  ],
+  "answer": 2,
+  "explanation": "कुल 8 गेंदें, हरी 3, इसलिए प्रायिकता = 3/8।"
+ },
+ {
+  "id": "mgrsys-m3-099",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "यदि 2^(x+1) = 16 हो, तो x का मान है —",
+  "options": [
+   "4",
+   "3",
+   "2",
+   "5"
+  ],
+  "answer": 1,
+  "explanation": "16 = 2⁴, इसलिए x + 1 = 4 → x = 3।"
+ },
+ {
+  "id": "mgrsys-m3-100",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "किसी संख्या का 40% यदि 60 हो, तो वह संख्या है —",
+  "options": [
+   "120",
+   "240",
+   "180",
+   "150"
+  ],
+  "answer": 3,
+  "explanation": "संख्या का 40% = 60 → संख्या = 60 × 100 ÷ 40 = 150।"
+ },
+ {
+  "id": "mgrsys-m3-101",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"An organisation that keeps every decision at the top will move only as fast as the few people at that top can think. For a while this looks like control, and control is comforting. But as the organisation grows, the queue of decisions waiting for a senior signature grows with it, and the very people meant to set direction spend their days approving small things.\n\nThe alternative is not the absence of rules but the delegation of judgement. When a clear principle is written down once, a junior employee can apply it to a hundred cases without asking. The senior's work then shifts from deciding each case to defining the principle and reviewing the exceptions. Authority is not surrendered; it is invested in advance.\n\nThe organisations that scale well are rarely those with the cleverest leaders. They are the ones whose leaders managed to put their judgement into rules that others could carry.\"\n\nAccording to the passage, what happens as an organisation that centralises every decision grows?",
+  "options": [
+   "senior leaders get more free time",
+   "the queue of decisions awaiting a senior signature grows",
+   "rules disappear",
+   "junior staff stop working"
+  ],
+  "answer": 1,
+  "explanation": "पहले अनुच्छेद के अनुसार संगठन बढ़ने पर वरिष्ठ हस्ताक्षर की प्रतीक्षा में लगे निर्णयों की क़तार भी बढ़ती जाती है।"
+ },
+ {
+  "id": "mgrsys-m3-102",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"An organisation that keeps every decision at the top will move only as fast as the few people at that top can think. For a while this looks like control, and control is comforting. But as the organisation grows, the queue of decisions waiting for a senior signature grows with it, and the very people meant to set direction spend their days approving small things.\n\nThe alternative is not the absence of rules but the delegation of judgement. When a clear principle is written down once, a junior employee can apply it to a hundred cases without asking. The senior's work then shifts from deciding each case to defining the principle and reviewing the exceptions. Authority is not surrendered; it is invested in advance.\n\nThe organisations that scale well are rarely those with the cleverest leaders. They are the ones whose leaders managed to put their judgement into rules that others could carry.\"\n\nThe author suggests the alternative to centralisation is —",
+  "options": [
+   "stopping all growth",
+   "hiring more senior leaders",
+   "having no rules at all",
+   "the delegation of judgement through clear principles"
+  ],
+  "answer": 3,
+  "explanation": "लेखक कहता है विकल्प नियमों का अभाव नहीं, बल्कि स्पष्ट सिद्धांत लिखकर 'निर्णय-क्षमता का प्रत्यायोजन' है।"
+ },
+ {
+  "id": "mgrsys-m3-103",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"An organisation that keeps every decision at the top will move only as fast as the few people at that top can think. For a while this looks like control, and control is comforting. But as the organisation grows, the queue of decisions waiting for a senior signature grows with it, and the very people meant to set direction spend their days approving small things.\n\nThe alternative is not the absence of rules but the delegation of judgement. When a clear principle is written down once, a junior employee can apply it to a hundred cases without asking. The senior's work then shifts from deciding each case to defining the principle and reviewing the exceptions. Authority is not surrendered; it is invested in advance.\n\nThe organisations that scale well are rarely those with the cleverest leaders. They are the ones whose leaders managed to put their judgement into rules that others could carry.\"\n\nThe phrase \"Authority is not surrendered; it is invested in advance\" means that the senior —",
+  "options": [
+   "gives up all power permanently",
+   "reviews every single case personally",
+   "embeds their judgement into rules applied later by others",
+   "refuses to delegate anything"
+  ],
+  "answer": 2,
+  "explanation": "आशय यह है कि अधिकार छोड़ा नहीं जाता, बल्कि पहले से नियमों में लगा दिया जाता है, जिन्हें बाद में दूसरे लागू करते हैं।"
+ },
+ {
+  "id": "mgrsys-m3-104",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"An organisation that keeps every decision at the top will move only as fast as the few people at that top can think. For a while this looks like control, and control is comforting. But as the organisation grows, the queue of decisions waiting for a senior signature grows with it, and the very people meant to set direction spend their days approving small things.\n\nThe alternative is not the absence of rules but the delegation of judgement. When a clear principle is written down once, a junior employee can apply it to a hundred cases without asking. The senior's work then shifts from deciding each case to defining the principle and reviewing the exceptions. Authority is not surrendered; it is invested in advance.\n\nThe organisations that scale well are rarely those with the cleverest leaders. They are the ones whose leaders managed to put their judgement into rules that others could carry.\"\n\nAfter delegation, the senior's work shifts to —",
+  "options": [
+   "defining the principle and reviewing the exceptions",
+   "doing the junior's tasks",
+   "stopping all decisions",
+   "approving every small decision"
+  ],
+  "answer": 0,
+  "explanation": "गद्यांश कहता है वरिष्ठ का काम हर मामला तय करने से हटकर सिद्धांत गढ़ने और अपवादों की समीक्षा करने पर आ जाता है।"
+ },
+ {
+  "id": "mgrsys-m3-105",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"An organisation that keeps every decision at the top will move only as fast as the few people at that top can think. For a while this looks like control, and control is comforting. But as the organisation grows, the queue of decisions waiting for a senior signature grows with it, and the very people meant to set direction spend their days approving small things.\n\nThe alternative is not the absence of rules but the delegation of judgement. When a clear principle is written down once, a junior employee can apply it to a hundred cases without asking. The senior's work then shifts from deciding each case to defining the principle and reviewing the exceptions. Authority is not surrendered; it is invested in advance.\n\nThe organisations that scale well are rarely those with the cleverest leaders. They are the ones whose leaders managed to put their judgement into rules that others could carry.\"\n\nAccording to the last paragraph, organisations that scale well are led by people who —",
+  "options": [
+   "are the cleverest individuals",
+   "make every decision themselves",
+   "avoid writing anything down",
+   "put their judgement into rules others can carry"
+  ],
+  "answer": 3,
+  "explanation": "अंतिम अनुच्छेद कहता है कि अच्छे से बढ़ने वाले संगठनों के नेता वे होते हैं जो अपनी समझ को ऐसे नियमों में ढाल देते हैं जिन्हें दूसरे आगे ले जा सकें।"
+ },
+ {
+  "id": "mgrsys-m3-106",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"A backup that has never been restored is not a backup; it is a hope. Many organisations copy their data faithfully every night and sleep soundly, never once checking whether those copies can actually be read back. The day a disk fails, they discover that the backup format changed, or the tapes were blank, or the one person who knew the procedure has left. The copying worked; the recovering was never tested.\n\nThe discipline that matters, therefore, is not backup but restore. A copy proves nothing until it has been turned back into a working system, and that test must be run on a schedule, not on the day of the disaster. It is dull work with no visible reward, which is exactly why it is so often skipped.\n\nThe cost of skipping it is paid only once, but it is paid in full.\"\n\nWhy does the author say a backup that has never been restored is \"a hope\"?",
+  "options": [
+   "because a copy proves nothing until it is shown it can be read back",
+   "because hoping is a good strategy",
+   "because backups are always unreliable",
+   "because restoring is impossible"
+  ],
+  "answer": 0,
+  "explanation": "लेखक का तर्क है कि प्रति तब तक कुछ सिद्ध नहीं करती जब तक यह न दिखा दिया जाए कि उसे वापस पढ़कर चालू तंत्र बनाया जा सकता है।"
+ },
+ {
+  "id": "mgrsys-m3-107",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"A backup that has never been restored is not a backup; it is a hope. Many organisations copy their data faithfully every night and sleep soundly, never once checking whether those copies can actually be read back. The day a disk fails, they discover that the backup format changed, or the tapes were blank, or the one person who knew the procedure has left. The copying worked; the recovering was never tested.\n\nThe discipline that matters, therefore, is not backup but restore. A copy proves nothing until it has been turned back into a working system, and that test must be run on a schedule, not on the day of the disaster. It is dull work with no visible reward, which is exactly why it is so often skipped.\n\nThe cost of skipping it is paid only once, but it is paid in full.\"\n\nAccording to the passage, the discipline that truly matters is —",
+  "options": [
+   "copying tapes",
+   "buying more disks",
+   "restore",
+   "backup"
+  ],
+  "answer": 2,
+  "explanation": "गद्यांश स्पष्ट कहता है — जो अनुशासन मायने रखता है वह बैकअप नहीं, रिस्टोर है।"
+ },
+ {
+  "id": "mgrsys-m3-108",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"A backup that has never been restored is not a backup; it is a hope. Many organisations copy their data faithfully every night and sleep soundly, never once checking whether those copies can actually be read back. The day a disk fails, they discover that the backup format changed, or the tapes were blank, or the one person who knew the procedure has left. The copying worked; the recovering was never tested.\n\nThe discipline that matters, therefore, is not backup but restore. A copy proves nothing until it has been turned back into a working system, and that test must be run on a schedule, not on the day of the disaster. It is dull work with no visible reward, which is exactly why it is so often skipped.\n\nThe cost of skipping it is paid only once, but it is paid in full.\"\n\nWhy, according to the passage, is the restore test so often skipped?",
+  "options": [
+   "it is illegal",
+   "it is dull work with no visible reward",
+   "it damages the data",
+   "it is too expensive to attempt"
+  ],
+  "answer": 1,
+  "explanation": "गद्यांश कहता है यह उबाऊ काम है जिसका कोई दिखने वाला प्रतिफल नहीं, इसीलिए इसे अक्सर टाल दिया जाता है।"
+ },
+ {
+  "id": "mgrsys-m3-109",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"A backup that has never been restored is not a backup; it is a hope. Many organisations copy their data faithfully every night and sleep soundly, never once checking whether those copies can actually be read back. The day a disk fails, they discover that the backup format changed, or the tapes were blank, or the one person who knew the procedure has left. The copying worked; the recovering was never tested.\n\nThe discipline that matters, therefore, is not backup but restore. A copy proves nothing until it has been turned back into a working system, and that test must be run on a schedule, not on the day of the disaster. It is dull work with no visible reward, which is exactly why it is so often skipped.\n\nThe cost of skipping it is paid only once, but it is paid in full.\"\n\nThe passage says the restore test must be run —",
+  "options": [
+   "on a schedule, before any disaster",
+   "only once when the system is built",
+   "only by the person who left",
+   "on the day of the disaster"
+  ],
+  "answer": 0,
+  "explanation": "लेखक ज़ोर देता है कि यह जाँच नियमित समय-सारणी पर होनी चाहिए, आपदा वाले दिन नहीं।"
+ },
+ {
+  "id": "mgrsys-m3-110",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"A backup that has never been restored is not a backup; it is a hope. Many organisations copy their data faithfully every night and sleep soundly, never once checking whether those copies can actually be read back. The day a disk fails, they discover that the backup format changed, or the tapes were blank, or the one person who knew the procedure has left. The copying worked; the recovering was never tested.\n\nThe discipline that matters, therefore, is not backup but restore. A copy proves nothing until it has been turned back into a working system, and that test must be run on a schedule, not on the day of the disaster. It is dull work with no visible reward, which is exactly why it is so often skipped.\n\nThe cost of skipping it is paid only once, but it is paid in full.\"\n\nThe closing line \"paid only once, but it is paid in full\" suggests that the failure —",
+  "options": [
+   "is repeated many times",
+   "costs nothing at all",
+   "is minor and easily fixed",
+   "happens rarely but its consequences are total"
+  ],
+  "answer": 3,
+  "explanation": "आशय यह है कि यह चूक शायद एक ही बार पकड़ में आए, पर तब उसका नुक़सान पूरा-का-पूरा भुगतना पड़ता है।"
+ }
 ]

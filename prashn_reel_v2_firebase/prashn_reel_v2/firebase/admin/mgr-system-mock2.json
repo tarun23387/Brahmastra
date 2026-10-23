@@ -1,112 +1,1762 @@
 [
-{"id":"mgrsys-m2-001","subject":"computer","exams":["mgr-system"],"question":"In a 4-bit ripple-carry adder, each full adder has a carry delay of 5 ns. After how long will the final carry output be stable?","options":["5 ns","10 ns","20 ns","15 ns"],"answer":2,"explanation":"रिपल कैरी अडर में प्रत्येक फुल अडर का कैरी अगले को जाता है, अतः विलंब जुड़ता चला जाता है। कुल विलंब = बिटों की संख्या × प्रति चरण कैरी विलंब = 4 × 5 = 20 ns। यही रिपल कैरी अडर की सबसे बड़ी कमज़ोरी है — n बिट के लिए विलंब O(n)।"},
-{"id":"mgrsys-m2-002","subject":"computer","exams":["mgr-system"],"question":"The main advantage of a Carry Look-ahead Adder is —","options":["fewer gates","lower power consumption","simplicity of the circuit","a significant reduction in carry-propagation delay"],"answer":3,"explanation":"CLA प्रत्येक चरण के लिए दो पद पहले से निकाल लेता है — Generate (Gᵢ = AᵢBᵢ) और Propagate (Pᵢ = Aᵢ ⊕ Bᵢ) — और सारे कैरी समानांतर में गणना कर लेता है। विलंब O(n) से घटकर लगभग स्थिर हो जाता है। क़ीमत यह है कि गेटों की संख्या बहुत बढ़ जाती है, इसलिए पहला विकल्प ग़लत है।"},
-{"id":"mgrsys-m2-003","subject":"computer","exams":["mgr-system"],"question":"The identifying feature of a microprogrammed control unit is —","options":["the control signals are stored in control memory","it is faster than a hardwired unit","it is difficult to modify","it is used only in RISC"],"answer":0,"explanation":"माइक्रोप्रोग्राम्ड नियंत्रण में प्रत्येक निर्देश के नियंत्रण संकेत नियंत्रण मेमोरी में माइक्रो-निर्देश के रूप में रखे रहते हैं। लाभ — बदलाव आसान (केवल माइक्रोप्रोग्राम बदलिए), इसीलिए CISC में प्रयुक्त। दोष — हार्डवायर्ड से धीमा, क्योंकि हर चरण पर मेमोरी पढ़नी पड़ती है। RISC में हार्डवायर्ड नियंत्रण होता है।"},
-{"id":"mgrsys-m2-004","subject":"computer","exams":["mgr-system"],"question":"In the IEEE 754 single-precision format, how many bits are reserved for the mantissa?","options":["8","23","24","52"],"answer":1,"explanation":"IEEE 754 एकल परिशुद्धता (32 बिट) = 1 चिह्न + 8 घातांक + 23 मैंटिसा। द्विक परिशुद्धता (64 बिट) = 1 + 11 + 52। जाल: प्रभावी परिशुद्धता 24 बिट होती है (छिपा हुआ अग्रणी 1 जोड़कर), पर संग्रहीत बिट 23 ही हैं — प्रश्न में \"आरक्षित\" शब्द इसीलिए है।"},
-{"id":"mgrsys-m2-005","subject":"computer","exams":["mgr-system"],"question":"The advantage of paged segmentation is —","options":["the need for address translation is eliminated","it combines the logical division of segmentation with the fixed allocation of paging","only internal fragmentation remains","it needs no documentation"],"answer":1,"explanation":"शुद्ध सेगमेंटेशन तार्किक विभाजन (कोड, डेटा, स्टैक) देता है पर बाह्य विखंडन पैदा करता है। शुद्ध पेजिंग विखंडन हल करता है पर तार्किक अर्थ नहीं देता। पेज्ड सेगमेंटेशन में हर सेगमेंट को पेजों में बाँट दिया जाता है — दोनों के लाभ मिल जाते हैं। यही आधुनिक x86 का मॉडल है।"},
-{"id":"mgrsys-m2-006","subject":"computer","exams":["mgr-system"],"question":"4-way interleaved memory means —","options":["the memory capacity becomes four times larger","there are four cache levels","consecutive addresses are spread across four different memory modules","there are four separate buses"],"answer":2,"explanation":"4-वे इंटरलीविंग में पता 0 मॉड्यूल-0 में, पता 1 मॉड्यूल-1 में, पता 2 मॉड्यूल-2 में, पता 3 मॉड्यूल-3 में, पता 4 फिर मॉड्यूल-0 में जाता है। चूँकि प्रोग्राम प्रायः क्रमागत पते पढ़ते हैं, चारों मॉड्यूल समानांतर काम कर पाते हैं और प्रभावी एक्सेस समय घट जाता है। क्षमता नहीं बढ़ती — केवल गति बढ़ती है।"},
-{"id":"mgrsys-m2-007","subject":"computer","exams":["mgr-system"],"question":"Compared with programmed I/O, the main advantage of interrupt-driven I/O is —","options":["the CPU need not repeatedly poll the device's status","the bus speed increases","less memory is used","the DMA controller is no longer needed"],"answer":0,"explanation":"प्रोग्राम्ड I/O में CPU लगातार उपकरण की स्थिति जाँचता रहता है (busy waiting / polling), जिसमें CPU चक्र बर्बाद होते हैं। इंटरप्ट-चालित I/O में उपकरण तैयार होने पर स्वयं संकेत भेजता है, तब तक CPU दूसरा काम करता है। क्रम याद रखें: Programmed I/O (सबसे धीमा) < Interrupt-driven I/O < DMA (सबसे तेज़, CPU की भागीदारी न्यूनतम)।"},
-{"id":"mgrsys-m2-008","subject":"computer","exams":["mgr-system"],"question":"The identifying feature of asynchronous serial transmission is —","options":["the sender and receiver share a common clock","start and stop bits are sent with each character","there is no framing","data travels on parallel lines"],"answer":1,"explanation":"असमकालिक संचरण में कोई साझा क्लॉक नहीं होता, इसलिए प्रत्येक वर्ण के आगे start बिट (0) और पीछे stop बिट (1) लगाया जाता है, जिससे प्राप्तकर्ता वर्ण की सीमा पहचान सके। यही कारण है कि इसमें ओवरहेड अधिक होता है — 7 डेटा बिट भेजने के लिए प्रायः 10 बिट लगते हैं।"},
-{"id":"mgrsys-m2-009","subject":"computer","exams":["mgr-system"],"question":"If main memory is 1 MB and the cache block size is 16 bytes, the total number of blocks in main memory is —","options":["4,096","16,384","65,536","1,024"],"answer":2,"explanation":"1 MB = 2²⁰ बाइट; ब्लॉक = 16 बाइट = 2⁴। ब्लॉकों की संख्या = 2²⁰ ÷ 2⁴ = 2¹⁶ = 65,536। सूत्र: ब्लॉक संख्या = मुख्य मेमोरी आकार ÷ ब्लॉक आकार। कैश मैपिंग (direct/associative/set-associative) के सभी प्रश्न इसी पहले चरण से शुरू होते हैं।"},
-{"id":"mgrsys-m2-010","subject":"computer","exams":["mgr-system"],"question":"The purpose of a bit-slice microprocessor is —","options":["to compress bits","to increase cache speed","to build a processor of the desired word length by combining several small units","to speed up I/O transfer"],"answer":2,"explanation":"बिट-स्लाइस प्रोसेसर (जैसे AM2901) 4-बिट का \"टुकड़ा\" होता है। चार ऐसे टुकड़े जोड़ने पर 16-बिट और आठ जोड़ने पर 32-बिट प्रोसेसर बन जाता है। यह उस दौर की तकनीक थी जब बड़े शब्द वाले प्रोसेसर एक ही चिप पर बनाना संभव नहीं था।"},
-{"id":"mgrsys-m2-011","subject":"computer","exams":["mgr-system"],"question":"In the Tower of Hanoi problem, the minimum number of moves for n disks is —","options":["2ⁿ","n²","n log n","2ⁿ − 1"],"answer":3,"explanation":"पुनरावृत्ति संबंध: T(n) = 2T(n−1) + 1, जहाँ T(1) = 1। हल करने पर T(n) = 2ⁿ − 1। तर्क: n−1 चकतियाँ सहायक खूँटे पर ले जाइए, सबसे बड़ी चकती गंतव्य पर रखिए, फिर n−1 चकतियाँ उस पर लाइए।"},
-{"id":"mgrsys-m2-012","subject":"computer","exams":["mgr-system"],"question":"The total number of moves in the Tower of Hanoi problem with 5 disks is —","options":["15","31","32","63"],"answer":1,"explanation":"2⁵ − 1 = 32 − 1 = 31।"},
-{"id":"mgrsys-m2-013","subject":"computer","exams":["mgr-system"],"question":"The main advantage of a threaded binary tree is —","options":["it uses less memory","in-order traversal is possible without a stack or recursion","insertion is faster","the tree stays automatically balanced"],"answer":1,"explanation":"सामान्य बाइनरी ट्री में n नोड पर 2n पॉइंटर होते हैं, जिनमें से (n+1) NULL रहते हैं — यह मेमोरी बेकार जाती है। थ्रेडेड ट्री उन्हीं NULL पॉइंटरों में इनऑर्डर पूर्ववर्ती/उत्तरवर्ती का पता भर देता है, जिससे बिना स्टैक और बिना रिकर्शन के ट्रैवर्सल हो जाता है। मेमोरी कम नहीं होती — वही पॉइंटर उपयोग में आ जाते हैं।"},
-{"id":"mgrsys-m2-014","subject":"computer","exams":["mgr-system"],"question":"What kind of code does Huffman coding produce?","options":["a fixed-length code","a cyclic redundancy code","a variable-length prefix-free code","an error-correcting code"],"answer":2,"explanation":"हफ़मैन कोडिंग बारंबारता के आधार पर कोड देती है — अधिक आने वाले वर्ण को छोटा कोड, कम आने वाले को बड़ा। यह उपसर्ग-मुक्त होती है, अर्थात् किसी कोड का आरंभिक भाग दूसरे कोड के बराबर नहीं होता, इसलिए विभाजक चिह्न के बिना ही डिकोडिंग हो जाती है। यह हानिरहित संपीड़न है।"},
-{"id":"mgrsys-m2-015","subject":"computer","exams":["mgr-system"],"question":"The advantage of storing a sparse matrix in triplet form is —","options":["multiplication becomes faster","the memory of the zero elements is saved","the matrix becomes sorted","traversal becomes simpler"],"answer":1,"explanation":"यदि 100 × 100 आव्यूह में केवल 50 अशून्य तत्व हों तो पूरा आव्यूह 10,000 स्थान लेगा, जबकि त्रिक रूप (पंक्ति, स्तंभ, मान) में केवल 50 × 3 = 150 स्थान। यही इसका एकमात्र उद्देश्य है।"},
-{"id":"mgrsys-m2-016","subject":"computer","exams":["mgr-system"],"question":"The maximum number of comparisons in binary search on a sorted list of n elements is —","options":["n","n/2","n log n","⌊log₂ n⌋ + 1"],"answer":3,"explanation":"हर तुलना पर खोज-क्षेत्र आधा हो जाता है → अधिकतम तुलनाएँ = ⌊log₂ n⌋ + 1। उदाहरण: n = 1000 → ⌊9.97⌋ + 1 = 10 तुलनाएँ (जबकि रैखिक खोज में 1000)।"},
-{"id":"mgrsys-m2-017","subject":"computer","exams":["mgr-system"],"question":"A hash function is h(k) = k mod 11. Into which bucket will the key 45 go?","options":["0","1","2","4"],"answer":1,"explanation":"45 ÷ 11 → 11 × 4 = 44, शेष 1 → 45 mod 11 = 1। संकेत: mod 11 जैसा अभाज्य विभाजक इसीलिए चुना जाता है कि कुंजियाँ बकेटों में अधिक समान रूप से बँटें।"},
-{"id":"mgrsys-m2-018","subject":"computer","exams":["mgr-system"],"question":"In which data structure is the activation record of a recursive call kept?","options":["queue","heap","stack","linked list"],"answer":2,"explanation":"प्रत्येक फंक्शन कॉल पर एक activation record (स्थानीय चर, पैरामीटर, वापसी पता) स्टैक पर धकेला जाता है और कॉल समाप्त होने पर हटा दिया जाता है। यही कारण है कि अनियंत्रित रिकर्शन से stack overflow होता है।"},
-{"id":"mgrsys-m2-019","subject":"computer","exams":["mgr-system"],"question":"What will be the output of the following C code?\n\nint arr[5] = {1, 2, 3, 4, 5}; printf(\"%d\", *(arr + 3));","options":["3","4","5","the address of the array"],"answer":1,"explanation":"arr ऐरे के पहले तत्व का पता है। arr + 3 तीसरे सूचकांक का पता, और *(arr + 3) उस स्थान का मान। *(arr + i) पूर्णतः arr[i] के समतुल्य है → arr[3] = 4।"},
-{"id":"mgrsys-m2-020","subject":"computer","exams":["mgr-system"],"question":"Which statement about a friend function in C++ is correct?","options":["it is a member of the class","it is inherited","it can access the private members of the class but is not a member","it is always virtual"],"answer":2,"explanation":"फ्रेंड फंक्शन क्लास के बाहर परिभाषित होता है पर उसे निजी (private) और संरक्षित (protected) सदस्यों तक पहुँच मिल जाती है। यह क्लास का सदस्य नहीं होता, इसलिए न इनहेरिट होता है, न ही उस पर this पॉइंटर लागू होता है। ऑपरेटर ओवरलोडिंग (विशेषकर <<) में इसका सबसे अधिक प्रयोग होता है।"},
-{"id":"mgrsys-m2-021","subject":"computer","exams":["mgr-system"],"question":"In Java, marking a class with the final keyword means —","options":["no object of that class can be created","that class cannot be inherited","its methods cannot be overloaded","the class automatically becomes abstract"],"answer":1,"explanation":"final क्लास पर → इनहेरिट नहीं की जा सकती (उदा. String)। final मेथड पर → ओवरराइड नहीं की जा सकती। final चर पर → स्थिरांक बन जाता है। ऑब्जेक्ट बनने से रोकने के लिए abstract या निजी कंस्ट्रक्टर प्रयोग होता है, final नहीं।"},
-{"id":"mgrsys-m2-022","subject":"computer","exams":["mgr-system"],"question":"The correct way to reverse a list in Python is —","options":["reverse(list)","list.invert()","list.sort(reverse)","list.reverse()"],"answer":3,"explanation":"यह सूची को यथास्थान (in-place) उलट देता है और कुछ लौटाता नहीं। यदि नई सूची चाहिए तो list[::-1] या reversed(list) का प्रयोग होता है।"},
-{"id":"mgrsys-m2-023","subject":"computer","exams":["mgr-system"],"question":"Which of the following is an example of Free and Open Source Software (FOSS)?","options":["MS-Windows","Adobe Photoshop","Linux","MS-Office"],"answer":2,"explanation":"FOSS के उदाहरण: Linux, Apache, MySQL, PHP (LAMP), Python, LibreOffice, Firefox। शेष तीनों स्वामित्वयुक्त (proprietary) सॉफ़्टवेयर हैं।"},
-{"id":"mgrsys-m2-024","subject":"computer","exams":["mgr-system"],"question":"In C, where does the memory allocated by malloc() come from?","options":["the stack","the heap","the data segment","the registers"],"answer":1,"explanation":"malloc, calloc, realloc गतिशील मेमोरी हीप से लेते हैं, जिसे free() द्वारा लौटाना प्रोग्रामर की ज़िम्मेदारी है — न लौटाने पर memory leak होता है। स्थानीय चर स्टैक पर बनते हैं और दायरा समाप्त होते ही स्वतः हट जाते हैं।"},
-{"id":"mgrsys-m2-025","subject":"computer","exams":["mgr-system"],"question":"Which of the following languages is mainly interpreted?","options":["C","C++","Fortran","Python"],"answer":3,"explanation":"Python स्रोत कोड को बाइटकोड में बदलकर इंटरप्रेटर चलाता है — अलग से संकलन आवश्यक नहीं। C, C++ और Fortran संकलित (compiled) भाषाएँ हैं, जो सीधे मशीन कोड बनाती हैं और इसीलिए तेज़ चलती हैं।"},
-{"id":"mgrsys-m2-026","subject":"computer","exams":["mgr-system"],"question":"If A → B and B → C, then A → C is obtained by which rule?","options":["Reflexivity","Augmentation","Transitivity","Decomposition"],"answer":2,"explanation":"आर्मस्ट्रांग के तीन मूल स्वयंसिद्ध — स्वतुल्यता (Reflexivity): यदि Y ⊆ X तो X → Y; संवर्धन (Augmentation): यदि X → Y तो XZ → YZ; संक्रामकता (Transitivity): यदि X → Y और Y → Z तो X → Z। शेष (union, decomposition, pseudo-transitivity) इन्हीं से व्युत्पन्न हैं।"},
-{"id":"mgrsys-m2-027","subject":"computer","exams":["mgr-system"],"question":"In relational algebra, the σ (sigma) operation performs —","options":["choosing columns","selecting rows based on a condition","renaming a relation","joining two relations"],"answer":1,"explanation":"σ (चयन) पंक्तियाँ शर्त के आधार पर छाँटता है — जैसे σ(salary > 5000)(EMP)। π (प्रक्षेपण) स्तंभ छाँटता है — जैसे π(name, salary)(EMP)। याद रखने का तरीक़ा: σ क्षैतिज काटता है, π ऊर्ध्वाधर।"},
-{"id":"mgrsys-m2-028","subject":"computer","exams":["mgr-system"],"question":"The Cartesian product of two relations is denoted by which symbol?","options":["σ","π","ρ","×"],"answer":3,"explanation":"कार्तीय गुणनफल R × S में R की प्रत्येक पंक्ति S की प्रत्येक पंक्ति से जुड़ती है → परिणामी पंक्तियाँ = |R| × |S|। ρ (rho) नाम बदलने की संक्रिया है।"},
-{"id":"mgrsys-m2-029","subject":"computer","exams":["mgr-system"],"question":"A relation is in BCNF if, for every non-trivial dependency X → Y —","options":["Y is a prime attribute","X is a superkey","X is a prime attribute","Y is a superkey"],"answer":1,"explanation":"3NF: X अधिकुंजी हो अथवा Y प्रमुख गुण हो। BCNF: X अधिकुंजी होना अनिवार्य है (कोई छूट नहीं)। इसीलिए BCNF 3NF से कठोर है। हर BCNF संबंध 3NF में होता है, उल्टा आवश्यक नहीं।"},
-{"id":"mgrsys-m2-030","subject":"computer","exams":["mgr-system"],"question":"The task of a query optimizer is —","options":["to check the syntax of the query","to encrypt the data","to choose the least-cost execution plan","to take a backup"],"answer":2,"explanation":"एक ही क्वेरी के लिए कई निष्पादन योजनाएँ संभव होती हैं (कौन-सी तालिका पहले पढ़ें, कौन-सा इंडेक्स लगाएँ, कौन-सा जॉइन एल्गोरिद्म चुनें)। ऑप्टिमाइज़र लागत का अनुमान लगाकर सबसे सस्ती योजना चुनता है। वाक्य-रचना की जाँच पार्सर करता है, ऑप्टिमाइज़र नहीं।"},
-{"id":"mgrsys-m2-031","subject":"computer","exams":["mgr-system"],"question":"The rule of Write-Ahead Logging (WAL) is —","options":["write the data to disk first, then the log","the log record is written to disk first, the data later","both are written together","no log is needed at all"],"answer":1,"explanation":"WAL नियम: लॉग पहले, डेटा बाद में। यदि डेटा पहले लिखकर सिस्टम क्रैश हो जाए तो लॉग में उसका रिकॉर्ड ही नहीं होगा और undo असंभव हो जाएगा। इसी नियम पर ARIES रिकवरी एल्गोरिद्म टिका है।"},
-{"id":"mgrsys-m2-032","subject":"computer","exams":["mgr-system"],"question":"In a distributed database, fragmentation transparency means —","options":["the user need not know that the data is split into fragments","copies of the data have been made","the data is encrypted","the query runs slowly"],"answer":0,"explanation":"वितरित DBMS की तीन पारदर्शिताएँ — Fragmentation transparency: डेटा टुकड़ों में बँटा है, उपयोगकर्ता को नहीं पता; Replication transparency: प्रतियाँ बनी हैं, उपयोगकर्ता को नहीं पता; Location transparency: डेटा कहाँ रखा है, उपयोगकर्ता को नहीं पता।"},
-{"id":"mgrsys-m2-033","subject":"computer","exams":["mgr-system"],"question":"The two types of data independence in a DBMS are —","options":["internal and external","static and dynamic","logical and physical","primary and secondary"],"answer":2,"explanation":"भौतिक डेटा स्वतंत्रता: भंडारण संरचना बदलने पर वैचारिक स्कीमा अप्रभावित रहती है (प्राप्त करना आसान)। तार्किक डेटा स्वतंत्रता: वैचारिक स्कीमा बदलने पर बाह्य स्कीमा/एप्लीकेशन अप्रभावित रहते हैं (प्राप्त करना कठिन)। यह तीन-स्तरीय ANSI/SPARC वास्तुकला का मूल है।"},
-{"id":"mgrsys-m2-034","subject":"computer","exams":["mgr-system"],"question":"In UNIX, the task of the LEX tool is —","options":["to generate a parser","to generate a lexical analyzer (tokenizer)","to link programs","to debug code"],"answer":1,"explanation":"LEX नियमित व्यंजकों (regular expressions) से टोकनाइज़र बनाता है — यह संकलन का पहला चरण है। YACC व्याकरण नियमों से पार्सर बनाता है — दूसरा चरण। दोनों प्रायः साथ प्रयुक्त होते हैं।"},
-{"id":"mgrsys-m2-035","subject":"computer","exams":["mgr-system"],"question":"The full form of YACC is —","options":["Yet Another Compiler Compiler","Yield And Compile Code","Your Advanced C Compiler","Yacc Analyses C Code"],"answer":0,"explanation":"नाम विनोदपूर्ण है, पर परीक्षा में सीधा तथ्यात्मक प्रश्न बनता है।"},
-{"id":"mgrsys-m2-036","subject":"computer","exams":["mgr-system"],"question":"In UNIX, the function of a pipe (|) is —","options":["to delete a file","to stop a process","to make the output of one command the input of the next","to rename a file"],"answer":2,"explanation":"cat file | grep \"error\" | wc -l — यहाँ प्रत्येक कमांड का निर्गत अगली का निवेश बनता है। यही UNIX का मूल दर्शन है: \"छोटे उपकरण बनाओ, उन्हें जोड़कर बड़ा काम करो।\""},
-{"id":"mgrsys-m2-037","subject":"computer","exams":["mgr-system"],"question":"Which of the following is a UNIX filter?","options":["mkdir","cd","chmod","grep"],"answer":3,"explanation":"फ़िल्टर वह कमांड है जो मानक निवेश से पढ़कर, संसाधित कर, मानक निर्गत पर लिखे। प्रमुख फ़िल्टर: grep, sort, wc, head, tail, cut, sed, uniq, tr। mkdir, cd और chmod फ़िल्टर नहीं हैं — वे कोई धारा संसाधित नहीं करते।"},
-{"id":"mgrsys-m2-038","subject":"computer","exams":["mgr-system"],"question":"What do the threads of a single process share with one another?","options":["the stack","the program counter","the registers","the code, data and open files"],"answer":3,"explanation":"साझा: कोड खंड, डेटा खंड, खुली फाइलें व संकेत। अलग-अलग: स्टैक, प्रोग्राम काउंटर, रजिस्टर समुच्चय। इसीलिए थ्रेड को \"हल्की प्रक्रिया\" कहते हैं और उनके बीच context switch सस्ता पड़ता है।"},
-{"id":"mgrsys-m2-039","subject":"computer","exams":["mgr-system"],"question":"The three necessary conditions for a solution to the critical-section problem are mutual exclusion, progress and —","options":["priority","bounded waiting","preemption","fairness"],"answer":1,"explanation":"तीन शर्तें: Mutual Exclusion (एक बार में एक ही प्रक्रिया), Progress (क्रिटिकल सेक्शन खाली हो तो निर्णय अनिश्चित काल न टले), Bounded Waiting (कोई प्रक्रिया अनंत काल तक प्रतीक्षा न करे — यानी starvation न हो)।"},
-{"id":"mgrsys-m2-040","subject":"computer","exams":["mgr-system"],"question":"The purpose of a system call is —","options":["for a user program to request a service from the kernel","to compile source code","to edit a file","to increase memory capacity"],"answer":0,"explanation":"उपयोगकर्ता प्रोग्राम सीधे हार्डवेयर नहीं छू सकता, इसलिए फाइल खोलने, प्रक्रिया बनाने या मेमोरी माँगने के लिए वह सिस्टम कॉल करता है और नियंत्रण user mode से kernel mode में चला जाता है (जैसे open(), read(), fork())।"},
-{"id":"mgrsys-m2-041","subject":"computer","exams":["mgr-system"],"question":"In a shell script, what does $? represent?","options":["the process ID","the number of arguments","the exit status of the previous command","the name of the script"],"answer":2,"explanation":"$? में पिछली चली कमांड का निकास कोड रहता है — 0 का अर्थ सफलता, कोई भी अशून्य मान विफलता। संबंधित चर: $$ = प्रक्रिया की ID, $# = तर्कों की संख्या, $0 = स्क्रिप्ट का नाम, $@ = सभी तर्क।"},
-{"id":"mgrsys-m2-042","subject":"computer","exams":["mgr-system"],"question":"The fundamental difference between multiprocessing and multiprogramming is —","options":["there is no difference","multiprocessing has more than one CPU","multiprogramming has more than one CPU","only one process runs in both"],"answer":1,"explanation":"मल्टीप्रोसेसिंग में सचमुच एक से अधिक CPU (या कोर) होते हैं, इसलिए प्रक्रियाएँ सही अर्थों में समानांतर चलती हैं। मल्टीप्रोग्रामिंग एक ही CPU पर कई प्रक्रियाएँ बारी-बारी चलाकर समानांतरता का आभास देती है।"},
-{"id":"mgrsys-m2-043","subject":"computer","exams":["mgr-system"],"question":"The unit for measuring the amount of information is —","options":["hertz","baud","bit","watt"],"answer":2,"explanation":"सूचना सिद्धांत में सूचना की मात्रा बिट में मापी जाती है — एक बिट वह सूचना है जो दो समसंभाव्य विकल्पों में से एक तय कर दे। हर्ट्ज़ आवृत्ति की, बॉड प्रति सेकंड संकेत-परिवर्तनों की और वाट शक्ति की इकाई है।"},
-{"id":"mgrsys-m2-044","subject":"computer","exams":["mgr-system"],"question":"FDDI is based on which medium and topology?","options":["copper wire, bus","optical fibre, dual ring","radio wave, star","coaxial cable, mesh"],"answer":1,"explanation":"FDDI (Fiber Distributed Data Interface) 100 Mbps पर चलता है और इसमें दो रिंग होती हैं — प्राथमिक और द्वितीयक। एक टूटने पर दूसरी संभाल लेती है, यही इसकी दोष-सहिष्णुता है।"},
-{"id":"mgrsys-m2-045","subject":"computer","exams":["mgr-system"],"question":"In MPLS, on what basis are packets forwarded?","options":["IP address","MAC address","label","port number"],"answer":2,"explanation":"MPLS में प्रवेश-राउटर पैकेट पर एक छोटा लेबल चिपका देता है; आगे के राउटर केवल लेबल देखकर अग्रेषण करते हैं, हर बार पूरी IP रूटिंग टेबल नहीं खोजते। इससे गति बढ़ती है और traffic engineering संभव होती है। यह परत-2 और परत-3 के बीच काम करता है, इसीलिए इसे \"परत-2.5\" कहा जाता है।"},
-{"id":"mgrsys-m2-046","subject":"computer","exams":["mgr-system"],"question":"The full form of ISDN is —","options":["International Standard Data Network","Integrated Services Digital Network","Internet Service Data Node","Integrated System Data Network"],"answer":1,"explanation":"यह एक ही डिजिटल लाइन पर आवाज़, डेटा और वीडियो — सभी सेवाएँ देता है। मूल दर इंटरफेस (BRI) = 2B + D।"},
-{"id":"mgrsys-m2-047","subject":"computer","exams":["mgr-system"],"question":"The standard technique to convert an analog signal into digital form is —","options":["amplitude modulation","multiplexing","Pulse Code Modulation (PCM)","Manchester encoding"],"answer":2,"explanation":"PCM के तीन चरण: प्रतिचयन (Sampling) → परिमाणीकरण (Quantization) → कूटलेखन (Encoding)। नाइक्विस्ट प्रमेय के अनुसार प्रतिचयन दर संकेत की उच्चतम आवृत्ति की कम-से-कम दोगुनी होनी चाहिए — इसीलिए 4 kHz की टेलीफोन आवाज़ 8000 बार/सेकंड नमूनी जाती है (8000 × 8 बिट = 64 kbps)।"},
-{"id":"mgrsys-m2-048","subject":"computer","exams":["mgr-system"],"question":"At which layer is the Cyclic Redundancy Check (CRC) performed?","options":["physical","data link","network","transport"],"answer":1,"explanation":"CRC फ्रेम के साथ जोड़ा जाता है और डेटा लिंक परत पर त्रुटि पहचान करता है (सुधार नहीं)। इसकी शक्ति अधिक होती है — यह प्रायः सभी बर्स्ट त्रुटियाँ पकड़ लेता है। परिवहन परत पर चेकसम प्रयुक्त होता है, जो कमज़ोर है।"},
-{"id":"mgrsys-m2-049","subject":"computer","exams":["mgr-system"],"question":"The algorithm that solves the problem of securely distributing a symmetric key is —","options":["DES","AES","MD5","Diffie-Hellman key exchange"],"answer":3,"explanation":"DES और AES सममित एल्गोरिद्म हैं — वे कुंजी वितरण की समस्या हल नहीं करते, बल्कि उसे उत्पन्न करते हैं। डिफी-हेलमैन दो पक्षों को असुरक्षित माध्यम पर भी एक साझा गुप्त कुंजी बनाने देता है, बिना उसे कभी भेजे। MD5 हैश फंक्शन है, कुंजी विनिमय नहीं।"},
-{"id":"mgrsys-m2-050","subject":"computer","exams":["mgr-system"],"question":"Which of the following is a lossless compression technique?","options":["JPEG","MP3","MPEG","Huffman coding"],"answer":3,"explanation":"हानिरहित: हफ़मैन, LZW, RLE, ZIP, PNG, GIF — मूल डेटा पूरी तरह वापस मिल जाता है। हानिपूर्ण: JPEG, MP3, MPEG — कुछ जानकारी स्थायी रूप से हट जाती है, पर संपीड़न कहीं अधिक।"},
-{"id":"mgrsys-m2-051","subject":"computer","exams":["mgr-system"],"question":"Compared with IPv4, what has been removed from the IPv6 header?","options":["the source address","the header checksum","the payload length","the destination address"],"answer":1,"explanation":"IPv6 में गति बढ़ाने हेतु चेकसम हटा दिया गया, क्योंकि डेटा लिंक (CRC) और परिवहन (TCP/UDP चेकसम) दोनों स्तरों पर पहले से जाँच हो रही होती है। TTL का नाम बदलकर Hop Limit कर दिया गया, पर वह मौजूद है। IPv6 हेडर नियत 40 बाइट का होता है।"},
-{"id":"mgrsys-m2-052","subject":"computer","exams":["mgr-system"],"question":"Best First Search falls into which category?","options":["blind search","heuristic search","exhaustive search","random search"],"answer":1,"explanation":"Best First Search प्रत्येक चरण पर सबसे आशाजनक नोड चुनने के लिए heuristic फलन h(n) का प्रयोग करती है। अंधी खोज (BFS, DFS, Uniform Cost) में कोई डोमेन-ज्ञान नहीं होता।"},
-{"id":"mgrsys-m2-053","subject":"computer","exams":["mgr-system"],"question":"The evaluation function of the A* algorithm is —","options":["f(n) = g(n)","f(n) = h(n)","f(n) = g(n) + h(n)","f(n) = g(n) × h(n)"],"answer":2,"explanation":"g(n) = आरंभिक नोड से n तक की वास्तविक लागत; h(n) = n से लक्ष्य तक की अनुमानित लागत। A* तभी इष्टतम होता है जब h(n) स्वीकार्य (admissible) हो, अर्थात् वास्तविक लागत से अधिक कभी न आँके।"},
-{"id":"mgrsys-m2-054","subject":"computer","exams":["mgr-system"],"question":"In Means-Ends Analysis —","options":["the difference between the current state and the goal is reduced step by step","a random move is made","the whole search tree is explored","no heuristic is used"],"answer":0,"explanation":"Means-Ends Analysis वर्तमान अवस्था और लक्ष्य अवस्था के अंतर को पहचानती है, फिर वह संक्रिया चुनती है जो उस अंतर को सबसे अधिक घटाए — और यही क्रम दोहराती रहती है। GPS (General Problem Solver) इसी पर आधारित था।"},
-{"id":"mgrsys-m2-055","subject":"computer","exams":["mgr-system"],"question":"In predicate logic, the process of finding a substitution that makes two expressions identical is called —","options":["Resolution","Unification","Inference","Induction"],"answer":1,"explanation":"Unification वह प्रक्रिया है जो दो व्यंजकों को समान बनाने वाला प्रतिस्थापन (substitution) खोजती है — जैसे P(x) और P(राम) के लिए x = राम। Resolution प्रमाण की विधि है और वह हर चरण पर unification का ही सहारा लेती है।"},
-{"id":"mgrsys-m2-056","subject":"computer","exams":["mgr-system"],"question":"Which of the following is a Constraint Satisfaction problem?","options":["8-puzzle","Travelling Salesman problem","N-Queens / map colouring","sorting"],"answer":2,"explanation":"बाधा-संतुष्टि समस्या में चरों को ऐसे मान देने होते हैं कि सारी बाधाएँ एक साथ पूरी हों। N-क्वीन (कोई दो रानियाँ एक-दूसरे पर वार न करें) और मानचित्र रंगना (सटे हुए क्षेत्रों का रंग अलग हो) इसके पाठ्यपुस्तकीय उदाहरण हैं।"},
-{"id":"mgrsys-m2-057","subject":"computer","exams":["mgr-system"],"question":"A rational agent is one that —","options":["moves the fastest","thinks like a human","never makes an error","chooses the action that maximizes its performance measure"],"answer":3,"explanation":"तर्कसंगतता की परिभाषा प्रदर्शन माप से बँधी है — एजेंट अपनी जानकारी और प्रत्यक्षण के आधार पर वह क्रिया चुने जिससे अपेक्षित प्रदर्शन अधिकतम हो। सर्वज्ञ होना या कभी न चूकना इसकी शर्त नहीं है।"},
-{"id":"mgrsys-m2-058","subject":"computer","exams":["mgr-system"],"question":"The full form of RMI is —","options":["Remote Method Invocation","Random Memory Interface","Remote Machine Instruction","Rapid Method Integration"],"answer":0,"explanation":"RMI जावा की वह सुविधा है जिससे एक JVM का प्रोग्राम दूसरी JVM (प्रायः दूसरी मशीन) पर पड़े ऑब्जेक्ट की विधि सीधे बुला सकता है, मानो वह स्थानीय हो।"},
-{"id":"mgrsys-m2-059","subject":"computer","exams":["mgr-system"],"question":"In RMI, the proxy on the client side is called —","options":["Skeleton","Registry","Stub","Marshaller"],"answer":2,"explanation":"Stub — क्लाइंट की ओर; तर्कों को marshalling करके नेटवर्क पर भेजता है। Skeleton — सर्वर की ओर; unmarshalling करके वास्तविक विधि बुलाता है। RMI Registry — नामकरण सेवा, जहाँ दूरस्थ ऑब्जेक्ट पंजीकृत होते हैं (डिफ़ॉल्ट पोर्ट 1099)।"},
-{"id":"mgrsys-m2-060","subject":"computer","exams":["mgr-system"],"question":"In the servlet life cycle, which method runs on every request?","options":["init()","service()","destroy()","getServletConfig()"],"answer":1,"explanation":"सर्वलेट का जीवन-चक्र: init() → service() → destroy()। init() और destroy() पूरे जीवन में एक-एक बार चलती हैं; service() प्रत्येक अनुरोध पर चलती है और अनुरोध के प्रकार के अनुसार doGet()/doPost() को बुलाती है।"},
-{"id":"mgrsys-m2-061","subject":"computer","exams":["mgr-system"],"question":"A JSP page is first converted by the server into —","options":["an HTML file","an applet","a servlet","bytecode directly"],"answer":2,"explanation":"JSP पहली बार माँगे जाने पर कंटेनर उसे सर्वलेट स्रोत कोड में अनूदित करता है, फिर संकलित कर .class बनाता है, और उसके बाद वह सामान्य सर्वलेट की तरह चलता है। इसीलिए पहली माँग धीमी और बाद की तेज़ होती है।"},
-{"id":"mgrsys-m2-062","subject":"computer","exams":["mgr-system"],"question":"The method used for an HTTP redirect in a servlet is —","options":["forward()","sendRedirect()","include()","dispatch()"],"answer":1,"explanation":"sendRedirect() क्लाइंट को नया अनुरोध भेजने को कहता है, ब्राउज़र का URL बदल जाता है, और यह सर्वर के बाहर भी जा सकता है। forward() नियंत्रण सर्वर के भीतर ही दूसरे संसाधन को देता है, URL नहीं बदलता।"},
-{"id":"mgrsys-m2-063","subject":"computer","exams":["mgr-system"],"question":"The SET protocol is used for —","options":["email security","file transfer","secure electronic transactions (card payments)","routing"],"answer":2,"explanation":"SET (Secure Electronic Transaction) को Visa और MasterCard ने कार्ड भुगतान के लिए विकसित किया था। इसकी विशेषता dual signature थी, जिससे व्यापारी को कार्ड नंबर नहीं दिखता और बैंक को खरीदी गई वस्तु नहीं। व्यवहार में यह जटिलता के कारण असफल रहा और SSL/TLS ने इसकी जगह ले ली।"},
-{"id":"mgrsys-m2-064","subject":"computer","exams":["mgr-system"],"question":"On what basis does a packet-filter firewall make its decision?","options":["the content of the application data","the identity of the user","the encryption key","the source/destination IP and port number"],"answer":3,"explanation":"पैकेट फ़िल्टर परत-3/4 पर हेडर देखता है — तेज़ पर सतही। Stateful inspection कनेक्शन की स्थिति भी याद रखता है। Application gateway (proxy) अंतर्वस्तु तक जाँचता है — सबसे सुरक्षित पर सबसे धीमा।"},
-{"id":"mgrsys-m2-065","subject":"computer","exams":["mgr-system"],"question":"In VoIP, voice is sent —","options":["by circuit switching","by packet switching over an IP network","over analog wires","only by satellite"],"answer":1,"explanation":"VoIP में आवाज़ को डिजिटल पैकेटों में तोड़कर IP नेटवर्क पर भेजा जाता है। इसीलिए यह सस्ता है, पर विलंब (latency), जिटर और पैकेट हानि से गुणवत्ता प्रभावित होती है — पारंपरिक सर्किट स्विचिंग में समर्पित पथ मिलने के कारण यह समस्या नहीं थी।"},
-{"id":"mgrsys-m2-066","subject":"computer","exams":["mgr-system"],"question":"PGP is mainly used to secure —","options":["web browsing","email","databases","wireless networks"],"answer":1,"explanation":"PGP (Pretty Good Privacy) ईमेल के लिए गोपनीयता (सममित कुंजी से) और प्रामाणिकता (डिजिटल हस्ताक्षर से) दोनों देता है — यह संकर (hybrid) क्रिप्टोग्राफी का उत्कृष्ट उदाहरण है। S/MIME इसका प्रतिद्वंद्वी मानक है।"},
-{"id":"mgrsys-m2-067","subject":"computer","exams":["mgr-system"],"question":"Which of the following should NOT be in an SRS document?","options":["functional requirements","non-functional requirements","description of external interfaces","detailed design and implementation details"],"answer":3,"explanation":"SRS बताता है कि सिस्टम \"क्या\" (what) करेगा, न कि \"कैसे\" (how)। \"कैसे\" डिज़ाइन दस्तावेज़ का विषय है। अच्छे SRS के गुण: पूर्ण, संगत, असंदिग्ध, सत्यापन-योग्य और अनुरेखणीय।"},
-{"id":"mgrsys-m2-068","subject":"computer","exams":["mgr-system"],"question":"The main feature of the incremental model is —","options":["the whole product is delivered at once","functionality is added in pieces and delivered progressively","it involves no testing","requirements must be completely fixed"],"answer":1,"explanation":"इंक्रीमेंटल मॉडल में उत्पाद को छोटे-छोटे वर्धनों (increments) में बाँटकर हर चरण में चलती-फिरती कार्यक्षमता सौंप दी जाती है। लाभ: ग्राहक को जल्दी कुछ काम का मिलता है और बाद के वर्धनों में उसकी प्रतिक्रिया जोड़ी जा सकती है — Waterfall में यह संभव नहीं।"},
-{"id":"mgrsys-m2-069","subject":"computer","exams":["mgr-system"],"question":"In software design, the purpose of abstraction is —","options":["to hide unnecessary detail and present only the essential information","to increase the amount of code","to increase execution speed","to save memory"],"answer":0,"explanation":"अमूर्तन (abstraction) उस स्तर की जानकारी सामने रखता है जिसकी उस समय ज़रूरत है और बाक़ी विवरण छिपा देता है। इसी से जटिल तंत्र समझने और बदलने लायक रहता है। गति या मेमोरी इसका उद्देश्य नहीं।"},
-{"id":"mgrsys-m2-070","subject":"computer","exams":["mgr-system"],"question":"The difference between Verification and Validation is —","options":["they are the same","Verification — 'are we building the product right'; Validation — 'are we building the right product'","Verification — 'are we building the right product'; Validation — 'are we building it right'","Validation is only code review"],"answer":1,"explanation":"Verification पूछता है कि क्या उत्पाद विशिष्टि (specification) के अनुरूप सही ढंग से बनाया जा रहा है — समीक्षा, निरीक्षण, स्थैतिक जाँच। Validation पूछता है कि क्या बना हुआ उत्पाद वही है जो ग्राहक को चाहिए — वास्तविक परीक्षण। संक्षेप में: Verification = सही ढंग से बनाना, Validation = सही चीज़ बनाना।"},
-{"id":"mgrsys-m2-071","subject":"computer","exams":["mgr-system"],"question":"The primary function of an MIS is —","options":["to do data entry","to provide network security","to give management processed information for decision-making","to write programs"],"answer":2,"explanation":"MIS (प्रबंधन सूचना प्रणाली) लेनदेन प्रणालियों से आए कच्चे डेटा को संसाधित कर नियमित रिपोर्टों के रूप में प्रबंधन के सामने रखता है, ताकि निर्णय तथ्यों पर टिके। डेटा प्रविष्टि TPS का काम है; MIS उससे ऊपर की परत है।"},
-{"id":"mgrsys-m2-072","subject":"computer","exams":["mgr-system"],"question":"The identifying feature of grid computing is —","options":["many tasks on a single machine","solving one large problem by combining geographically scattered resources","using only mobile devices","only a storage service"],"answer":1,"explanation":"ग्रिड कंप्यूटिंग में भिन्न स्थानों पर पड़े विषम (heterogeneous) कंप्यूटर मिलकर एक बड़ी वैज्ञानिक समस्या हल करते हैं (जैसे SETI@home, LHC ग्रिड)। क्लाउड से अंतर: क्लाउड सेवा-आधारित और मापनीय है (pay-per-use), ग्रिड समस्या-आधारित और प्रायः संस्थागत सहयोग होता है।"},
-{"id":"mgrsys-m2-073","subject":"computer","exams":["mgr-system"],"question":"In MapReduce, the task of the Reduce phase is —","options":["to split the data into pieces","to store the data","the aggregation of intermediate key-value pairs","to write the query"],"answer":2,"explanation":"MapReduce के दो चरण: Map — इनपुट को (कुंजी, मान) युग्मों में बदलता है; Reduce — समान कुंजी वाले सभी मानों को समेकित करता है। शब्द-गणना का उदाहरण: Map से (\"the\", 1), (\"the\", 1)… निकलता है; Reduce उन्हें जोड़कर (\"the\", 2) देता है। बीच में shuffle-and-sort चरण होता है।"},
-{"id":"mgrsys-m2-074","subject":"computer","exams":["mgr-system"],"question":"In mobile computing, handoff (handover) means —","options":["changing the battery","changing the SIM","data compression","the transfer of a moving device from one cell to another"],"answer":3,"explanation":"handoff में चलता हुआ मोबाइल एक बेस स्टेशन (सेल) से दूसरे के अधीन आ जाता है और कॉल बिना टूटे चलती रहती है। Soft handoff में नया संपर्क जुड़ने के बाद पुराना टूटता है; hard handoff में पहले टूटता है फिर जुड़ता है (इसमें कॉल ड्रॉप का जोखिम अधिक)।"},
-{"id":"mgrsys-m2-075","subject":"computer","exams":["mgr-system"],"question":"In Reinforcement Learning, the agent learns —","options":["from labelled data","from signals of reward and punishment","by clustering","without any feedback"],"answer":1,"explanation":"पर्यवेक्षित अधिगम लेबल किए डेटा से सीखता है (वर्गीकरण, प्रतिगमन); अपर्यवेक्षित बिना लेबल के (क्लस्टरिंग, PCA); प्रबलन अधिगम पुरस्कार/दंड के संकेतों से — जैसे खेल खेलना और रोबोटिक्स।"},
-{"id":"mgrsys-m2-076","subject":"reasoning","exams":["mgr-system"],"question":"शृंखला पूर्ण कीजिए: 7, 14, 28, 56, ?","options":["96","102","112","120"],"answer":2,"explanation":"प्रत्येक पद पिछले का दोगुना: 7 → 14 → 28 → 56 → 112।"},
-{"id":"mgrsys-m2-077","subject":"reasoning","exams":["mgr-system"],"question":"यदि CAT = 24 तथा DOG = 26 हो, तो BAT = ?","options":["21","22","23","24"],"answer":2,"explanation":"अक्षरों की स्थिति का योग: C(3) + A(1) + T(20) = 24 ✓; D(4) + O(15) + G(7) = 26 ✓। अतः BAT = B(2) + A(1) + T(20) = 23।"},
-{"id":"mgrsys-m2-078","subject":"reasoning","exams":["mgr-system"],"question":"एक पंक्ति में 25 लड़के हैं। राहुल बाएँ से 9वाँ तथा मोहन दाएँ से 12वाँ है। दोनों के बीच कितने लड़के हैं?","options":["3","4","5","6"],"answer":1,"explanation":"मोहन का बाएँ से स्थान = 25 − 12 + 1 = 14वाँ। राहुल 9वाँ → बीच के लड़के = 14 − 9 − 1 = 4। सूत्र: बीच की संख्या = (बड़ा स्थान − छोटा स्थान − 1)।"},
-{"id":"mgrsys-m2-079","subject":"reasoning","exams":["mgr-system"],"question":"7:20 बजे घड़ी की दोनों सुइयों के बीच का कोण है —","options":["90°","100°","110°","120°"],"answer":1,"explanation":"कोण = |30H − 5.5M| = |30(7) − 5.5(20)| = |210 − 110| = 100°। सूत्र का तर्क: घंटे की सुई 30°/घंटा + 0.5°/मिनट, मिनट की सुई 6°/मिनट → अंतर की दर 5.5°/मिनट।"},
-{"id":"mgrsys-m2-080","subject":"reasoning","exams":["mgr-system"],"question":"यदि किसी वर्ष 1 मार्च को सोमवार हो, तो उसी वर्ष 1 अप्रैल को कौन-सा दिन होगा?","options":["मंगलवार","बुधवार","गुरुवार","शुक्रवार"],"answer":2,"explanation":"मार्च में 31 दिन → 31 ÷ 7 = 4 सप्ताह और शेष 3 विषम दिन। सोमवार + 3 = गुरुवार। नियम: 30 दिन वाला माह → +2 दिन; 31 दिन वाला → +3 दिन; फरवरी (साधारण) → 0 दिन।"},
-{"id":"mgrsys-m2-081","subject":"reasoning","exams":["mgr-system"],"question":"सादृश्य पूर्ण कीजिए: पुस्तकालय : पुस्तकें :: संग्रहालय : ?","options":["चित्र","पर्यटक","भवन","पुरावशेष"],"answer":3,"explanation":"संबंध \"स्थान : उसमें संग्रहीत वस्तुएँ\" का है। पुस्तकालय में पुस्तकें रखी जाती हैं, संग्रहालय में पुरावशेष/कलाकृतियाँ। पर्यटक वहाँ आने वाले लोग हैं, संगृहीत वस्तु नहीं।"},
-{"id":"mgrsys-m2-082","subject":"reasoning","exams":["mgr-system"],"question":"विषम को पहचानिए —","options":["गेहूँ","चावल","मक्का","आम"],"answer":3,"explanation":"गेहूँ, चावल और मक्का अनाज (धान्य फसलें) हैं; आम एक फल है।"},
-{"id":"mgrsys-m2-083","subject":"reasoning","exams":["mgr-system"],"question":"कथन: सभी इंजीनियर स्नातक हैं। कुछ स्नातक बेरोज़गार हैं।\nनिष्कर्ष: (I) कुछ इंजीनियर बेरोज़गार हैं। (II) सभी बेरोज़गार स्नातक हैं।","options":["केवल I","केवल II","दोनों I व II","न तो I न II"],"answer":3,"explanation":"\"कुछ स्नातक बेरोज़गार हैं\" — यह निश्चित नहीं करता कि वे बेरोज़गार स्नातक इंजीनियर ही हों; वे कोई और स्नातक भी हो सकते हैं → निष्कर्ष I अमान्य। निष्कर्ष II भी अमान्य, क्योंकि बेरोज़गारों में ग़ैर-स्नातक भी हो सकते हैं। नियम: \"कुछ\" वाले कथन से \"कुछ\" का निश्चित निष्कर्ष तभी निकलता है जब मध्य पद वितरित हो।"},
-{"id":"mgrsys-m2-084","subject":"reasoning","exams":["mgr-system"],"question":"एक व्यक्ति उत्तर की ओर 4 किमी चलता है, फिर पूर्व की ओर 3 किमी। प्रारंभिक बिंदु से उसकी सीधी दूरी है —","options":["5 किमी","6 किमी","7 किमी","3.5 किमी"],"answer":0,"explanation":"उत्तर और पूर्व परस्पर लंब हैं → पाइथागोरस प्रमेय। दूरी = √(4² + 3²) = √25 = 5 किमी।"},
-{"id":"mgrsys-m2-085","subject":"reasoning","exams":["mgr-system"],"question":"यदि '+' का अर्थ '×', '−' का अर्थ '+', '×' का अर्थ '÷' तथा '÷' का अर्थ '−' हो, तो 8 + 4 − 6 × 3 ÷ 2 = ?","options":["30","32","34","36"],"answer":1,"explanation":"चिह्न बदलने पर: 8 + 4 − 6 × 3 ÷ 2 → 8 × 4 + 6 ÷ 3 − 2। BODMAS: पहले भाग → 6 ÷ 3 = 2; फिर गुणा → 8 × 4 = 32 → 32 + 2 − 2 = 32।"},
-{"id":"mgrsys-m2-086","subject":"reasoning","exams":["mgr-system"],"question":"P, Q से बड़ा है। R, P से बड़ा किंतु S से छोटा है। सबसे बड़ा कौन है?","options":["P","Q","R","S"],"answer":3,"explanation":"दिया है: P > Q; R > P; S > R। क्रम बनाएँ: S > R > P > Q → सबसे बड़ा S।"},
-{"id":"mgrsys-m2-087","subject":"reasoning","exams":["mgr-system"],"question":"शृंखला में लुप्त अक्षर ज्ञात कीजिए: B, D, G, K, ?","options":["N","O","P","Q"],"answer":2,"explanation":"अक्षरों की स्थिति: B(2), D(4), G(7), K(11)। अंतर: +2, +3, +4 → अगला अंतर +5 → 11 + 5 = 16 = P।"},
-{"id":"mgrsys-m2-088","subject":"reasoning","exams":["mgr-system"],"question":"एक घन को 64 समान छोटे घनों में काटा गया तथा सभी बाहरी फलक रंग दिए गए। कितने छोटे घनों पर कोई रंग नहीं होगा?","options":["4","8","16","24"],"answer":1,"explanation":"64 = 4³ → प्रत्येक भुजा पर 4 छोटे घन। बिना रंग वाले (भीतरी) घन = (n − 2)³ = (4 − 2)³ = 2³ = 8। संबंधित सूत्र: 3 फलक रंगे = 8 (कोने), 2 फलक = 12(n−2), 1 फलक = 6(n−2)²।"},
-{"id":"mgrsys-m2-089","subject":"reasoning","exams":["mgr-system"],"question":"निम्न में से कौन-सा शब्द 'GOVERNMENT' के अक्षरों से नहीं बनाया जा सकता?","options":["GOVERN","MENTOR","MOVER","MANGO"],"answer":3,"explanation":"'GOVERNMENT' में अक्षर हैं: G, O, V, E, R, N, M, E, N, T — इनमें A नहीं है, अतः MANGO नहीं बनेगा। जाँच: GOVERN ✓, MENTOR ✓ (M, E, N, T, O, R सभी उपलब्ध), MOVER ✓"},
-{"id":"mgrsys-m2-090","subject":"reasoning","exams":["mgr-system"],"question":"एक व्यक्ति ने कहा — \"यह लड़का मेरी माता के इकलौते पुत्र का पुत्र है।\" वह लड़का उस व्यक्ति का क्या लगता है?","options":["भतीजा","पुत्र","भाई","चचेरा भाई"],"answer":1,"explanation":"\"मेरी माता का इकलौता पुत्र\" = वह व्यक्ति स्वयं (क्योंकि वह अपनी माता का अकेला बेटा है)। अतः लड़का \"उस व्यक्ति का पुत्र\" हुआ। सावधानी: यदि कथन \"मेरे पिता के इकलौते पुत्र\" होता तब भी उत्तर वही रहता; पर \"मेरी माता के इकलौते पुत्र की पत्नी\" जैसे बदलाव उत्तर पलट देते हैं — कथन ध्यान से पढ़ें।"},
-{"id":"mgrsys-m2-091","subject":"ganit","exams":["mgr-system"],"question":"किसी संख्या का 40% = 120 है। उसी संख्या का 25% क्या होगा?","options":["60","75","80","90"],"answer":1,"explanation":"40% = 120 → 100% = (120 ÷ 40) × 100 = 300। 25% का 300 = 75। तेज़ तरीक़ा: 25% ÷ 40% = 5/8 → 120 × 5/8 = 75 (संख्या निकाले बिना)।"},
-{"id":"mgrsys-m2-092","subject":"ganit","exams":["mgr-system"],"question":"एक वस्तु 20% लाभ पर ₹720 में बेची गई। उसका क्रय मूल्य है —","options":["₹576","₹600","₹640","₹660"],"answer":1,"explanation":"विक्रय मूल्य = क्रय मूल्य × (1 + लाभ%) → 720 = C × 1.20 → C = 720 ÷ 1.2 = ₹600।"},
-{"id":"mgrsys-m2-093","subject":"ganit","exams":["mgr-system"],"question":"दो संख्याओं का अनुपात 5 : 7 है। यदि प्रत्येक में 6 जोड़ दिया जाए तो अनुपात 3 : 4 हो जाता है। छोटी संख्या है —","options":["25","30","35","42"],"answer":1,"explanation":"संख्याएँ 5x और 7x मानें। (5x + 6)/(7x + 6) = 3/4 → 4(5x + 6) = 3(7x + 6) → 20x + 24 = 21x + 18 → x = 6। छोटी संख्या = 5 × 6 = 30 (जाँच: 36/48 = 3/4 ✓)।"},
-{"id":"mgrsys-m2-094","subject":"ganit","exams":["mgr-system"],"question":"240 मीटर लंबी रेलगाड़ी 54 किमी/घंटा की चाल से 180 मीटर लंबे पुल को कितने समय में पार करेगी?","options":["24 सेकंड","26 सेकंड","28 सेकंड","30 सेकंड"],"answer":2,"explanation":"कुल दूरी = रेलगाड़ी की लंबाई + पुल की लंबाई = 240 + 180 = 420 मीटर। चाल = 54 × 5/18 = 15 मी/से। समय = 420 ÷ 15 = 28 सेकंड। याद रखें: खंभा पार करने में केवल रेलगाड़ी की लंबाई, पुल/प्लेटफ़ॉर्म पार करने में दोनों की लंबाई जुड़ती है।"},
-{"id":"mgrsys-m2-095","subject":"ganit","exams":["mgr-system"],"question":"₹12,000 पर 10% वार्षिक दर से 2 वर्ष के चक्रवृद्धि तथा साधारण ब्याज का अंतर है —","options":["₹100","₹120","₹150","₹240"],"answer":1,"explanation":"सूत्र: 2 वर्ष के लिए अंतर = P × (r/100)² = 12000 × (10/100)² = 12000 × 0.01 = ₹120। सत्यापन: SI = 2400; CI = 12000(1.1)² − 12000 = 14520 − 12000 = 2520; अंतर = 120 ✓"},
-{"id":"mgrsys-m2-096","subject":"ganit","exams":["mgr-system"],"question":"A किसी कार्य को 15 दिन में तथा B उसी कार्य को 20 दिन में करता है। दोनों 6 दिन साथ काम करने के बाद A चला जाता है। शेष कार्य B अकेले कितने दिन में पूरा करेगा?","options":["4 दिन","5 दिन","6 दिन","8 दिन"],"answer":2,"explanation":"A का एक दिन का कार्य = 1/15; B का = 1/20। साथ में = 1/15 + 1/20 = 4/60 + 3/60 = 7/60। 6 दिन में किया गया कार्य = 6 × 7/60 = 42/60 = 7/10। शेष कार्य = 3/10। B को लगने वाला समय = (3/10) ÷ (1/20) = (3/10) × 20 = 6 दिन।"},
-{"id":"mgrsys-m2-097","subject":"ganit","exams":["mgr-system"],"question":"एक समकोण त्रिभुज की दो भुजाएँ 6 सेमी तथा 8 सेमी हैं। कर्ण की लंबाई है —","options":["9 सेमी","10 सेमी","12 सेमी","14 सेमी"],"answer":1,"explanation":"कर्ण = √(6² + 8²) = √(36 + 64) = √100 = 10 सेमी। (3-4-5 त्रिक का दोगुना — ऐसे त्रिक याद रखें: 3-4-5, 5-12-13, 8-15-17, 7-24-25)।"},
-{"id":"mgrsys-m2-098","subject":"ganit","exams":["mgr-system"],"question":"पाँच क्रमागत सम संख्याओं का औसत 30 है। उनमें सबसे छोटी संख्या है —","options":["22","24","26","28"],"answer":2,"explanation":"पाँच क्रमागत सम संख्याओं में माध्य = बीच वाली संख्या → बीच वाली = 30। संख्याएँ: 26, 28, 30, 32, 34 → सबसे छोटी = 26।"},
-{"id":"mgrsys-m2-099","subject":"ganit","exams":["mgr-system"],"question":"8 व्यक्तियों में से 3 सदस्यों की समिति कितने प्रकार से बनाई जा सकती है?","options":["24","48","56","336"],"answer":2,"explanation":"यहाँ क्रम महत्त्वपूर्ण नहीं (समिति है) → संचय (combination)। C(8,3) = (8 × 7 × 6) ÷ (3 × 2 × 1) = 336 ÷ 6 = 56। जाल: विकल्प 336 क्रमचय P(8,3) है — यदि पद (अध्यक्ष, सचिव, कोषाध्यक्ष) निर्दिष्ट होते तब वही उत्तर होता।"},
-{"id":"mgrsys-m2-100","subject":"ganit","exams":["mgr-system"],"question":"एक वर्ग का क्षेत्रफल 144 वर्ग सेमी है। उसका परिमाप है —","options":["24 सेमी","36 सेमी","44 सेमी","48 सेमी"],"answer":3,"explanation":"क्षेत्रफल = भुजा² → 144 = a² → a = 12 सेमी। परिमाप = 4a = 4 × 12 = 48 सेमी।"},
-{"id":"mgrsys-m2-101","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"Machine learning models are increasingly used by governments to decide who receives a subsidy, whose tax return is audited and which neighbourhood gets extra policing. The appeal is obvious: a model can process millions of records without fatigue. What is less obvious is that a model learns from history, and history carries the biases of the people who made it. If past officers approved fewer loans for applicants from a particular district, a model trained on those decisions will quietly reproduce that pattern and present it as arithmetic. The remedy is not to abandon the technology but to insist on transparency — a citizen affected by an automated decision should be able to learn, in plain language, why the decision went against her.\"\n\nAccording to the passage, the obvious appeal of machine learning for governments is that —","options":["it is inexpensive","it can process millions of records without fatigue","it removes the need for officers","it is completely transparent"],"answer":1,"explanation":"\"The appeal is obvious: a model can process millions of records without fatigue.\" — 'appeal' शब्द के ठीक बाद वाला वाक्य ही उत्तर देता है।"},
-{"id":"mgrsys-m2-102","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"Machine learning models are increasingly used by governments to decide who receives a subsidy, whose tax return is audited and which neighbourhood gets extra policing. The appeal is obvious: a model can process millions of records without fatigue. What is less obvious is that a model learns from history, and history carries the biases of the people who made it. If past officers approved fewer loans for applicants from a particular district, a model trained on those decisions will quietly reproduce that pattern and present it as arithmetic. The remedy is not to abandon the technology but to insist on transparency — a citizen affected by an automated decision should be able to learn, in plain language, why the decision went against her.\"\n\nThe danger the author identifies is that a model may —","options":["work too slowly","consume too much electricity","reproduce historical biases and present them as arithmetic","fail to read records"],"answer":2,"explanation":"\"…a model trained on those decisions will quietly reproduce that pattern and present it as arithmetic.\" लेखक की चिंता यही है कि पूर्वाग्रह गणित का मुखौटा पहन लेता है।"},
-{"id":"mgrsys-m2-103","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"Machine learning models are increasingly used by governments to decide who receives a subsidy, whose tax return is audited and which neighbourhood gets extra policing. The appeal is obvious: a model can process millions of records without fatigue. What is less obvious is that a model learns from history, and history carries the biases of the people who made it. If past officers approved fewer loans for applicants from a particular district, a model trained on those decisions will quietly reproduce that pattern and present it as arithmetic. The remedy is not to abandon the technology but to insist on transparency — a citizen affected by an automated decision should be able to learn, in plain language, why the decision went against her.\"\n\nThe phrase \"quietly reproduce\" suggests that the bias is —","options":["loud and obvious","deliberately created","temporary","not easily noticed"],"answer":3,"explanation":"\"quietly\" का शाब्दिक अर्थ चुपचाप; यहाँ आशय यह है कि पक्षपात दिखाई नहीं देता, इसलिए पकड़ में नहीं आता। ध्यान दें, \"quietly\" का अर्थ जानबूझकर (deliberate) नहीं है, अतः दूसरा विकल्प ग़लत है।"},
-{"id":"mgrsys-m2-104","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"Machine learning models are increasingly used by governments to decide who receives a subsidy, whose tax return is audited and which neighbourhood gets extra policing. The appeal is obvious: a model can process millions of records without fatigue. What is less obvious is that a model learns from history, and history carries the biases of the people who made it. If past officers approved fewer loans for applicants from a particular district, a model trained on those decisions will quietly reproduce that pattern and present it as arithmetic. The remedy is not to abandon the technology but to insist on transparency — a citizen affected by an automated decision should be able to learn, in plain language, why the decision went against her.\"\n\nThe remedy proposed by the author is —","options":["abandoning the technology","hiring more officers","insisting on transparency","collecting still more data"],"answer":2,"explanation":"\"The remedy is not to abandon the technology but to insist on transparency.\" यहाँ 'not X but Y' रचना है — उत्तर सदैव Y होता है, X नहीं।"},
-{"id":"mgrsys-m2-105","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"Machine learning models are increasingly used by governments to decide who receives a subsidy, whose tax return is audited and which neighbourhood gets extra policing. The appeal is obvious: a model can process millions of records without fatigue. What is less obvious is that a model learns from history, and history carries the biases of the people who made it. If past officers approved fewer loans for applicants from a particular district, a model trained on those decisions will quietly reproduce that pattern and present it as arithmetic. The remedy is not to abandon the technology but to insist on transparency — a citizen affected by an automated decision should be able to learn, in plain language, why the decision went against her.\"\n\n\"In plain language\" implies that the explanation should be —","options":["highly technical","understandable to an ordinary citizen","written only in English","as short as possible"],"answer":1,"explanation":"\"in plain language\" अर्थात् सरल, बिना तकनीकी शब्दजाल वाली भाषा, जिसे प्रभावित नागरिक स्वयं समझ सके।"},
-{"id":"mgrsys-m2-106","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"Open source software is often described as free, but the word 'free' misleads. What is free is not necessarily the price; it is the liberty to read the source code, modify it and share the modified version. Many governments have adopted such software for exactly this reason. When the code of a system that stores citizens' data can be inspected by independent experts, hidden flaws are found sooner. Cost savings, where they occur, are a secondary benefit. Critics point out that adoption requires trained staff and a support ecosystem, without which an organisation may find itself holding software that nobody can maintain. That objection is fair, and it explains why the most successful migrations have been gradual rather than sudden.\"\n\nIn the context of open source, the word 'free' primarily refers to —","options":["zero price","free technical support","the liberty to read, modify and share the code","free hardware"],"answer":2,"explanation":"\"What is free is not necessarily the price; it is the liberty to read the source code, modify it and share…\"। लेखक स्पष्ट रूप से क़ीमत वाले अर्थ को नकार रहा है।"},
-{"id":"mgrsys-m2-107","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"Open source software is often described as free, but the word 'free' misleads. What is free is not necessarily the price; it is the liberty to read the source code, modify it and share the modified version. Many governments have adopted such software for exactly this reason. When the code of a system that stores citizens' data can be inspected by independent experts, hidden flaws are found sooner. Cost savings, where they occur, are a secondary benefit. Critics point out that adoption requires trained staff and a support ecosystem, without which an organisation may find itself holding software that nobody can maintain. That objection is fair, and it explains why the most successful migrations have been gradual rather than sudden.\"\n\nGovernments have adopted open source software mainly because —","options":["it costs nothing","independent experts can inspect the code and find hidden flaws sooner","it runs faster than commercial software","it requires no staff at all"],"answer":1,"explanation":"\"When the code… can be inspected by independent experts, hidden flaws are found sooner. Cost savings… are a secondary benefit.\" — \"mainly\" शब्द के कारण वही उत्तर होगा जिसे लेखक प्राथमिक बता रहा है।"},
-{"id":"mgrsys-m2-108","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"Open source software is often described as free, but the word 'free' misleads. What is free is not necessarily the price; it is the liberty to read the source code, modify it and share the modified version. Many governments have adopted such software for exactly this reason. When the code of a system that stores citizens' data can be inspected by independent experts, hidden flaws are found sooner. Cost savings, where they occur, are a secondary benefit. Critics point out that adoption requires trained staff and a support ecosystem, without which an organisation may find itself holding software that nobody can maintain. That objection is fair, and it explains why the most successful migrations have been gradual rather than sudden.\"\n\nIn the passage, cost saving is described as —","options":["the principal reason for adoption","a secondary benefit","impossible to achieve","a myth spread by critics"],"answer":1,"explanation":"गद्यांश में यही शब्द ज्यों के त्यों प्रयुक्त हुआ है: \"Cost savings, where they occur, are a secondary benefit.\""},
-{"id":"mgrsys-m2-109","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"Open source software is often described as free, but the word 'free' misleads. What is free is not necessarily the price; it is the liberty to read the source code, modify it and share the modified version. Many governments have adopted such software for exactly this reason. When the code of a system that stores citizens' data can be inspected by independent experts, hidden flaws are found sooner. Cost savings, where they occur, are a secondary benefit. Critics point out that adoption requires trained staff and a support ecosystem, without which an organisation may find itself holding software that nobody can maintain. That objection is fair, and it explains why the most successful migrations have been gradual rather than sudden.\"\n\nThe objection raised by critics is that open source adoption —","options":["is legally questionable","produces slow software","requires trained staff and a support ecosystem","hides the source code"],"answer":2,"explanation":"\"Critics point out that adoption requires trained staff and a support ecosystem…\""},
-{"id":"mgrsys-m2-110","subject":"english","exams":["mgr-system"],"question":"Read the passage and answer the question that follows.\n\n\"Open source software is often described as free, but the word 'free' misleads. What is free is not necessarily the price; it is the liberty to read the source code, modify it and share the modified version. Many governments have adopted such software for exactly this reason. When the code of a system that stores citizens' data can be inspected by independent experts, hidden flaws are found sooner. Cost savings, where they occur, are a secondary benefit. Critics point out that adoption requires trained staff and a support ecosystem, without which an organisation may find itself holding software that nobody can maintain. That objection is fair, and it explains why the most successful migrations have been gradual rather than sudden.\"\n\nThe author suggests that migrations to open source should be —","options":["sudden and complete","gradual","avoided altogether","outsourced fully"],"answer":1,"explanation":"\"…the most successful migrations have been gradual rather than sudden.\" — 'rather than' रचना में उत्तर उससे पहले वाला शब्द होता है।"}
+ {
+  "id": "mgrsys-m2-001",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A machine uses 32-bit physical addresses and a 64 KB direct-mapped cache with a block size of 32 bytes. How many bits are there in the tag field?",
+  "options": [
+   "15",
+   "14",
+   "16",
+   "17"
+  ],
+  "answer": 2,
+  "explanation": "ऑफ़सेट = log₂32 = 5 बिट। लाइनों की संख्या = 64 KB / 32 B = 2048 = 2¹¹, अतः इंडेक्स = 11 बिट। टैग = 32 − 11 − 5 = 16 बिट।"
+ },
+ {
+  "id": "mgrsys-m2-002",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A 16 KB, 4-way set-associative cache has a block size of 64 bytes and the machine uses 32-bit addresses. The number of tag bits is —",
+  "options": [
+   "20",
+   "18",
+   "22",
+   "24"
+  ],
+  "answer": 0,
+  "explanation": "ब्लॉक = 16 KB / 64 B = 256; सेट = 256 / 4 = 64 = 2⁶, अतः सेट-इंडेक्स 6 बिट। ऑफ़सेट = log₂64 = 6 बिट। टैग = 32 − 6 − 6 = 20 बिट।"
+ },
+ {
+  "id": "mgrsys-m2-003",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A cache has an access time of 10 ns and a hit ratio of 0.9; main memory has an access time of 100 ns. On a miss the cache is searched first and then main memory is accessed. The average memory access time is —",
+  "options": [
+   "110 ns",
+   "28 ns",
+   "19 ns",
+   "20 ns"
+  ],
+  "answer": 3,
+  "explanation": "मिस होने पर कुल समय = 10 + 100 = 110 ns (पहले कैश देखा गया, फिर मेमोरी)। औसत = 0.9 × 10 + 0.1 × 110 = 9 + 11 = 20 ns। अगर कैश और मेमोरी एक साथ खोजे जाते तो 0.9×10 + 0.1×100 = 19 ns आता — प्रश्न की शर्त पढ़कर ही सूत्र चुनिए।"
+ },
+ {
+  "id": "mgrsys-m2-004",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A 5-stage instruction pipeline has a stage delay of 2 ns per stage. Ignoring stalls, the time to execute 100 instructions is —",
+  "options": [
+   "1000 ns",
+   "208 ns",
+   "200 ns",
+   "210 ns"
+  ],
+  "answer": 1,
+  "explanation": "k चरण और n निर्देश के लिए चक्र = k + (n − 1) = 5 + 99 = 104। समय = 104 × 2 ns = 208 ns। पहला निर्देश 5 चक्र लेता है, उसके बाद हर चक्र में एक निर्देश पूरा होता है।"
+ },
+ {
+  "id": "mgrsys-m2-005",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A non-pipelined processor takes 12 ns per instruction. It is converted to a 4-stage pipeline with stage delays of 3, 2, 4 and 3 ns, and a latch delay of 1 ns between stages. For a very large number of instructions, the speedup is —",
+  "options": [
+   "4.0",
+   "3.0",
+   "2.4",
+   "2.0"
+  ],
+  "answer": 2,
+  "explanation": "पाइपलाइन का चक्र-काल = सबसे धीमा चरण + लैच = 4 + 1 = 5 ns। बहुत बड़े n के लिए हर 5 ns में एक निर्देश पूरा होता है, अतः स्पीडअप = 12 / 5 = 2.4। ध्यान दें — चरणों की संख्या (4) नहीं, असमान चरण और लैच विलंब स्पीडअप तय करते हैं।"
+ },
+ {
+  "id": "mgrsys-m2-006",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The 32-bit IEEE 754 single-precision pattern 0x40A00000 represents the decimal value —",
+  "options": [
+   "5.0",
+   "4.0",
+   "2.5",
+   "10.0"
+  ],
+  "answer": 0,
+  "explanation": "0x40A00000 = 0 | 10000001 | 0100…0। चिह्न 0 (धनात्मक), घातांक = 129 − 127 = 2, मैन्टिसा = 1.01₂ = 1.25। मान = 1.25 × 2² = 5.0।"
+ },
+ {
+  "id": "mgrsys-m2-007",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Using Booth's algorithm, the 8-bit multiplier 0110 1110 is scanned (with an implied 0 to the right of the LSB). How many additions and subtractions of the multiplicand are performed?",
+  "options": [
+   "3 additions and 1 subtraction",
+   "2 additions and 2 subtractions",
+   "1 addition and 3 subtractions",
+   "4 additions and 1 subtraction"
+  ],
+  "answer": 1,
+  "explanation": "बिट-जोड़े (Q(i), Q(i−1)) LSB से: (0,0) कुछ नहीं, (1,0) घटाओ, (1,1) कुछ नहीं, (1,1) कुछ नहीं, (0,1) जोड़ो, (1,0) घटाओ, (1,1) कुछ नहीं, (0,1) जोड़ो। कुल 2 जोड़ और 2 घटाव। नियम: 10 → घटाओ, 01 → जोड़ो, 00/11 → केवल शिफ़्ट।"
+ },
+ {
+  "id": "mgrsys-m2-008",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A horizontal microprogrammed control unit has 30 control signals, a 3-bit condition-select field and a next-address field. The control memory has 512 words. The width of each microinstruction is —",
+  "options": [
+   "44 bits",
+   "48 bits",
+   "39 bits",
+   "42 bits"
+  ],
+  "answer": 3,
+  "explanation": "हॉरिज़ॉन्टल माइक्रोप्रोग्रामिंग में हर नियंत्रण संकेत के लिए 1 बिट = 30 बिट। 512 शब्दों को पता करने के लिए अगला-पता क्षेत्र = log₂512 = 9 बिट। कुल = 30 + 3 + 9 = 42 बिट।"
+ },
+ {
+  "id": "mgrsys-m2-009",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Main memory is 4-way low-order interleaved. Each module has an access time of 40 ns and the bus takes 10 ns to transfer one word. Accesses to the modules overlap. The time to fetch a 4-word block is —",
+  "options": [
+   "80 ns",
+   "200 ns",
+   "160 ns",
+   "50 ns"
+  ],
+  "answer": 0,
+  "explanation": "लो-ऑर्डर इंटरलीविंग में चारों मॉड्यूल एक साथ पढ़ना शुरू करते हैं: 40 ns बाद चारों शब्द तैयार। फिर बस एक-एक कर भेजती है: 4 × 10 = 40 ns। कुल 80 ns। बिना इंटरलीविंग के 4 × (40 + 10) = 200 ns लगते।"
+ },
+ {
+  "id": "mgrsys-m2-010",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A system has a 32-bit virtual address, a page size of 4 KB and a page-table entry of 4 bytes. The size of a single-level page table per process is —",
+  "options": [
+   "1 MB",
+   "4 MB",
+   "8 MB",
+   "2 MB"
+  ],
+  "answer": 1,
+  "explanation": "पेज = 4 KB = 2¹², अतः पेज-संख्या के लिए 32 − 12 = 20 बिट, यानी 2²⁰ प्रविष्टियाँ। आकार = 2²⁰ × 4 B = 4 MB। इसी भारीपन से बचने के लिए बहु-स्तरीय पेज टेबल बनाई जाती है।"
+ },
+ {
+  "id": "mgrsys-m2-011",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A processor has 32-bit instructions with a 6-bit opcode and two register fields; there are 64 registers. The remaining bits hold a signed (2's complement) immediate. The range of the immediate is —",
+  "options": [
+   "−4096 to +4095",
+   "0 to 16383",
+   "−16384 to +16383",
+   "−8192 to +8191"
+  ],
+  "answer": 3,
+  "explanation": "64 रजिस्टर के लिए हर फ़ील्ड log₂64 = 6 बिट। इम्मीडिएट = 32 − 6 − 6 − 6 = 14 बिट। 14 बिट के 2's complement की सीमा −2¹³ से 2¹³ − 1, यानी −8192 से +8191।"
+ },
+ {
+  "id": "mgrsys-m2-012",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The value of the postfix expression  6 2 3 + − 3 8 2 / + *  is —",
+  "options": [
+   "49",
+   "1",
+   "7",
+   "−7"
+  ],
+  "answer": 2,
+  "explanation": "स्टैक से: 2 3 + = 5; 6 5 − = 1; 8 2 / = 4; 3 4 + = 7; 1 7 * = 7। हर ऑपरेटर ऊपर के दो मान निकालता है — दूसरा निकाला गया बायाँ ऑपरेण्ड होता है।"
+ },
+ {
+  "id": "mgrsys-m2-013",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The postfix form of the infix expression  A + B * (C − D) / E  is —",
+  "options": [
+   "A B C D − * E / +",
+   "A B + C D − * E /",
+   "A B C − D * E / +",
+   "A B C D − E / * +"
+  ],
+  "answer": 0,
+  "explanation": "कोष्ठक पहले: C D −। फिर * और / बराबर प्राथमिकता, बाएँ से दाएँ: B (C D −) * → B C D − *, फिर E /। अंत में A के साथ +: A B C D − * E / +।"
+ },
+ {
+  "id": "mgrsys-m2-014",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A circular queue is implemented in an array with indices 0 to 9. FRONT points to the first element and REAR to the last element. If FRONT = 7 and REAR = 3, the number of elements in the queue is —",
+  "options": [
+   "4",
+   "7",
+   "6",
+   "5"
+  ],
+  "answer": 1,
+  "explanation": "तत्व इन स्थानों पर हैं: 7, 8, 9, 0, 1, 2, 3 = 7 तत्व। सूत्र: (REAR − FRONT + n) mod n + 1 = (3 − 7 + 10) mod 10 + 1 = 7।"
+ },
+ {
+  "id": "mgrsys-m2-015",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "How many structurally different binary trees can be formed with 3 unlabelled nodes?",
+  "options": [
+   "6",
+   "8",
+   "5",
+   "3"
+  ],
+  "answer": 2,
+  "explanation": "n नोड वाले भिन्न बाइनरी ट्री की संख्या कैटलन संख्या C(n) = (2n)! / ((n+1)! n!) है। n = 3 के लिए C₃ = 720 / (24 × 6) = 5।"
+ },
+ {
+  "id": "mgrsys-m2-016",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The pre-order traversal of a binary search tree is 50, 30, 20, 40, 70, 60, 80. Its post-order traversal is —",
+  "options": [
+   "40, 20, 30, 80, 60, 70, 50",
+   "50, 70, 80, 60, 30, 40, 20",
+   "20, 30, 40, 50, 60, 70, 80",
+   "20, 40, 30, 60, 80, 70, 50"
+  ],
+  "answer": 3,
+  "explanation": "रूट 50; 50 से छोटे (30, 20, 40) बाएँ, बड़े (70, 60, 80) दाएँ। बायाँ उप-वृक्ष: 30 रूट, 20 बाएँ, 40 दाएँ। दायाँ: 70 रूट, 60 बाएँ, 80 दाएँ। पोस्ट-ऑर्डर (बायाँ-दायाँ-रूट): 20 40 30, 60 80 70, 50।"
+ },
+ {
+  "id": "mgrsys-m2-017",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A complete binary tree is stored in an array starting at index 1 (root at index 1). The parent of the node at index 37 is at index —",
+  "options": [
+   "19",
+   "17",
+   "18",
+   "36"
+  ],
+  "answer": 2,
+  "explanation": "1-आधारित सरणी में नोड i के बच्चे 2i और 2i + 1 पर होते हैं, अतः पैरेंट ⌊i/2⌋ = ⌊37/2⌋ = 18। (0-आधारित सरणी में सूत्र ⌊(i − 1)/2⌋ होता है।)"
+ },
+ {
+  "id": "mgrsys-m2-018",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Keys 12, 22, 32, 13, 23 are inserted in that order into an empty hash table of size 10 using h(k) = k mod 10 and linear probing. At which index is 23 stored?",
+  "options": [
+   "6",
+   "3",
+   "7",
+   "5"
+  ],
+  "answer": 0,
+  "explanation": "12 → 2; 22 → 2 भरा, 3; 32 → 2, 3 भरे, 4; 13 → 3, 4 भरे, 5; 23 → 3, 4, 5 भरे, 6। लीनियर प्रोबिंग से 'प्राइमरी क्लस्टरिंग' बनती है — यही उदाहरण में दिखता है।"
+ },
+ {
+  "id": "mgrsys-m2-019",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Characters a, b, c, d, e, f occur with frequencies 5, 9, 12, 13, 16, 45 in a file of 100 characters. Using Huffman coding, the total number of bits needed to encode the file is —",
+  "options": [
+   "200",
+   "224",
+   "300",
+   "250"
+  ],
+  "answer": 1,
+  "explanation": "हफ़मैन ट्री से कोड-लंबाई: f = 1, c = d = e = 3, a = b = 4। कुल = 45×1 + (12 + 13 + 16)×3 + (5 + 9)×4 = 45 + 123 + 56 = 224 बिट। स्थिर-लंबाई कोड (3 बिट) में 300 बिट लगते।"
+ },
+ {
+  "id": "mgrsys-m2-020",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The solution of the recurrence T(n) = 4T(n/2) + n² is —",
+  "options": [
+   "Θ(n log n)",
+   "Θ(n³)",
+   "Θ(n²)",
+   "Θ(n² log n)"
+  ],
+  "answer": 3,
+  "explanation": "मास्टर प्रमेय: a = 4, b = 2, n^(log_b a) = n²। f(n) = n² भी उतना ही है (केस 2), अतः T(n) = Θ(n² log n)।"
+ },
+ {
+  "id": "mgrsys-m2-021",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The naive recursive function fib(n) returns n for n ≤ 1, otherwise fib(n−1) + fib(n−2). How many calls to fib are made in total (including the first) when fib(5) is evaluated?",
+  "options": [
+   "9",
+   "8",
+   "15",
+   "31"
+  ],
+  "answer": 2,
+  "explanation": "कॉल-संख्या C(n) = C(n−1) + C(n−2) + 1, C(0) = C(1) = 1। C(2) = 3, C(3) = 5, C(4) = 9, C(5) = 9 + 5 + 1 = 15। यही घातीय वृद्धि बताती है कि मेमोइज़ेशन क्यों ज़रूरी है।"
+ },
+ {
+  "id": "mgrsys-m2-022",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A two-dimensional array A[1..10][1..15] is stored in row-major order starting at address 1000, and each element takes 4 bytes. The address of A[5][8] is —",
+  "options": [
+   "1268",
+   "1300",
+   "1272",
+   "1264"
+  ],
+  "answer": 0,
+  "explanation": "पता = आधार + [(i − 1) × स्तंभ + (j − 1)] × आकार = 1000 + [(4 × 15) + 7] × 4 = 1000 + 67 × 4 = 1268।"
+ },
+ {
+  "id": "mgrsys-m2-023",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What is printed by the following C code?\n\nint f(int n) { if (n <= 1) return 1; return n * f(n - 2); }\nint main() { printf(\"%d\", f(7)); return 0; }",
+  "options": [
+   "15",
+   "48",
+   "5040",
+   "105"
+  ],
+  "answer": 3,
+  "explanation": "f(7) = 7 × f(5) = 7 × 5 × f(3) = 7 × 5 × 3 × f(1) = 7 × 5 × 3 × 1 = 105। यह 7 का 'डबल फ़ैक्टोरियल' (7!!) है।"
+ },
+ {
+  "id": "mgrsys-m2-024",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What is printed by the following C code?\n\nint count() { static int c = 0; c += 2; return c; }\nint main() { count(); count(); printf(\"%d\", count()); return 0; }",
+  "options": [
+   "0",
+   "6",
+   "2",
+   "4"
+  ],
+  "answer": 1,
+  "explanation": "static चर एक ही बार 0 से आरंभ होता है और कॉल के बीच अपना मान रखता है। तीन कॉल के बाद c = 2, 4, 6 — अंतिम कॉल 6 लौटाती है।"
+ },
+ {
+  "id": "mgrsys-m2-025",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What is the output of the following C++ code?\n\nclass Base { public: virtual void show() { cout << \"B\"; } };\nclass Der : public Base { public: void show() { cout << \"D\"; } };\nint main() { Base *p = new Der; p->show(); return 0; }",
+  "options": [
+   "BD",
+   "D",
+   "Compilation error",
+   "B"
+  ],
+  "answer": 1,
+  "explanation": "show() वर्चुअल है, इसलिए कॉल रन-टाइम पर वस्तु के असली प्रकार (Der) से तय होती है — 'D' छपता है। virtual हटा दें तो पॉइंटर के प्रकार (Base) से तय होकर 'B' छपता।"
+ },
+ {
+  "id": "mgrsys-m2-026",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What is printed by the following Java code?\n\nString s1 = \"abc\";\nString s2 = new String(\"abc\");\nSystem.out.println((s1 == s2) + \" \" + s1.equals(s2));",
+  "options": [
+   "true false",
+   "true true",
+   "false true",
+   "false false"
+  ],
+  "answer": 2,
+  "explanation": "== संदर्भ (reference) की तुलना करता है: s1 स्ट्रिंग-पूल में है, s2 हीप पर नई वस्तु — अतः false। equals() सामग्री की तुलना करता है — true।"
+ },
+ {
+  "id": "mgrsys-m2-027",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What is printed by the following Python code?\n\na = [1, 2, 3]\nb = a\nb += [4]\nprint(len(a))",
+  "options": [
+   "An error is raised",
+   "7",
+   "3",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "b = a से दोनों एक ही सूची-वस्तु की ओर इशारा करते हैं। सूची पर += उसी वस्तु को बदलता है (in-place extend), इसलिए a भी [1, 2, 3, 4] हो जाती है — लंबाई 4।"
+ },
+ {
+  "id": "mgrsys-m2-028",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "What is printed by the following Java code?\n\nclass A { static void m() { System.out.print(\"A\"); } }\nclass B extends A { static void m() { System.out.print(\"B\"); } }\n// in main:\nA obj = new B();\nobj.m();",
+  "options": [
+   "A",
+   "AB",
+   "Compilation error",
+   "B"
+  ],
+  "answer": 0,
+  "explanation": "static विधियाँ ओवरराइड नहीं होतीं, केवल 'छिपती' (method hiding) हैं। कॉल संदर्भ के घोषित प्रकार (A) से कंपाइल-समय पर तय होती है — 'A' छपता है।"
+ },
+ {
+  "id": "mgrsys-m2-029",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Which open-source licence requires that any distributed modified version be released under the same licence terms (copyleft)?",
+  "options": [
+   "MIT",
+   "BSD (3-clause)",
+   "GNU GPL",
+   "Apache 2.0"
+  ],
+  "answer": 2,
+  "explanation": "GPL 'कॉपीलेफ़्ट' लाइसेंस है — संशोधित कार्य बाँटें तो उसी लाइसेंस में स्रोत-कोड सहित देना होगा। MIT, BSD और Apache 'परमिसिव' हैं: संशोधित कोड बंद (proprietary) भी रखा जा सकता है।"
+ },
+ {
+  "id": "mgrsys-m2-030",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Relation R(A, B, C, D) has the functional dependencies AB → C, C → D and D → A. The number of candidate keys of R is —",
+  "options": [
+   "4",
+   "3",
+   "2",
+   "1"
+  ],
+  "answer": 1,
+  "explanation": "B किसी FD के दाएँ नहीं है, अतः हर कुंजी में होगा, पर (B)+ = B। (AB)+ = ABCD, (BC)+ = BCDA, (BD)+ = BDAC —तीनों कुंजी हैं और न्यूनतम भी। अतः 3 उम्मीदवार कुंजियाँ: AB, BC, BD।"
+ },
+ {
+  "id": "mgrsys-m2-031",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Relation R(A, B, C) has the functional dependencies AB → C and C → B. The highest normal form that R satisfies is —",
+  "options": [
+   "BCNF",
+   "2NF",
+   "1NF",
+   "3NF"
+  ],
+  "answer": 3,
+  "explanation": "कुंजियाँ AB और AC हैं, अतः A, B, C तीनों प्राइम हैं। C → B में C सुपरकी नहीं — BCNF टूटता है। पर B प्राइम है, इसलिए 3NF की शर्त पूरी होती है। उच्चतम = 3NF।"
+ },
+ {
+  "id": "mgrsys-m2-032",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Relation R has 10 tuples and S has 20 tuples. They share one attribute B, which is the primary key of S. The maximum number of tuples in the natural join R ⋈ S is —",
+  "options": [
+   "10",
+   "20",
+   "30",
+   "200"
+  ],
+  "answer": 0,
+  "explanation": "B, S की प्राथमिक कुंजी है, अतः R की हर टपल S की अधिकतम एक टपल से मेल खाएगी। इसलिए जोड़ में अधिकतम 10 टपल। बिना इस शर्त के अधिकतम 10 × 20 = 200 हो सकते थे।"
+ },
+ {
+  "id": "mgrsys-m2-033",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Table Emp(name, dept) has 8 rows with dept values X, X, Y, X, Y, Z, Y, Y. How many rows does the following query return?\n\nSELECT dept, COUNT(*) FROM Emp GROUP BY dept HAVING COUNT(*) >= 3;",
+  "options": [
+   "0",
+   "1",
+   "3",
+   "2"
+  ],
+  "answer": 3,
+  "explanation": "गिनती: X = 3, Y = 4, Z = 1। HAVING समूह बनने के बाद छानता है: केवल X और Y शर्त पूरी करते हैं — 2 पंक्तियाँ।"
+ },
+ {
+  "id": "mgrsys-m2-034",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Consider the schedule  r1(X), r2(X), w1(X), w2(X). Which statement is correct?",
+  "options": [
+   "It is conflict-equivalent to T1 → T2",
+   "It is not conflict-serializable",
+   "It is conflict-equivalent to T2 → T1",
+   "It is a serial schedule"
+  ],
+  "answer": 1,
+  "explanation": "विरोधी जोड़े: r1(X)…w2(X) से T1 → T2; r2(X)…w1(X) से T2 → T1; w1(X)…w2(X) से T1 → T2। प्रेसिडेंस ग्राफ़ में चक्र (T1 ↔ T2) है, अतः यह कॉन्फ़्लिक्ट-सीरियलाइज़ेबल नहीं। यह 'लॉस्ट अपडेट' की स्थिति है।"
+ },
+ {
+  "id": "mgrsys-m2-035",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Strict two-phase locking (strict 2PL) guarantees —",
+  "options": [
+   "conflict-serializable and cascadeless (strict) schedules",
+   "freedom from starvation",
+   "freedom from deadlock",
+   "that no locks are ever needed for reads"
+  ],
+  "answer": 0,
+  "explanation": "2PL कॉन्फ़्लिक्ट-सीरियलाइज़ेबिलिटी देता है; 'स्ट्रिक्ट' में X-लॉक कमिट तक रखे जाते हैं, इसलिए कोई असमर्पित (uncommitted) डेटा नहीं पढ़ता — कैस्केडिंग रोलबैक नहीं होता। पर डेडलॉक 2PL में भी हो सकता है।"
+ },
+ {
+  "id": "mgrsys-m2-036",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "With immediate database modification, the log contains: <T1 start>, <T1 commit>, <checkpoint>, <T2 start>, <T3 start>, <T2 commit>, and then the system crashes. During recovery —",
+  "options": [
+   "T1, T2 and T3 are all undone",
+   "T1 and T2 are redone, T3 is undone",
+   "T2 is redone and T3 is undone",
+   "T3 is redone and T2 is undone"
+  ],
+  "answer": 2,
+  "explanation": "चेकपॉइंट से पहले कमिट हुआ T1 पहले ही डिस्क पर है — कुछ नहीं करना। T2 का commit लॉग में है → REDO। T3 का commit नहीं है → UNDO।"
+ },
+ {
+  "id": "mgrsys-m2-037",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In a B+ tree, a disk block is 1024 bytes, a search key is 9 bytes and a block pointer is 6 bytes. The maximum order p (number of pointers) of an internal node is —",
+  "options": [
+   "69",
+   "70",
+   "68",
+   "67"
+  ],
+  "answer": 2,
+  "explanation": "आंतरिक नोड में p पॉइंटर और p − 1 कुंजियाँ: 6p + 9(p − 1) ≤ 1024 → 15p ≤ 1033 → p ≤ 68.87, अतः p = 68।"
+ },
+ {
+  "id": "mgrsys-m2-038",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Which heuristic rule is applied by a query optimizer when transforming a relational-algebra query tree?",
+  "options": [
+   "Always evaluate the largest relation first",
+   "Postpone all joins until the final step",
+   "Perform Cartesian products before selections",
+   "Perform selection and projection as early as possible"
+  ],
+  "answer": 3,
+  "explanation": "σ और π को जितना हो सके नीचे (पत्तियों की ओर) धकेलने से मध्यवर्ती परिणाम छोटे रहते हैं, और महँगे जोड़ कम टपल पर चलते हैं। यही ह्यूरिस्टिक ऑप्टिमाइज़ेशन का पहला नियम है।"
+ },
+ {
+  "id": "mgrsys-m2-039",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Processes P1, P2, P3, P4 arrive at times 0, 1, 2, 3 with CPU bursts 8, 4, 9, 5 ms. Under preemptive SJF (SRTF), the average waiting time is —",
+  "options": [
+   "5.5 ms",
+   "6.5 ms",
+   "6.0 ms",
+   "7.75 ms"
+  ],
+  "answer": 1,
+  "explanation": "गैंट: P1 0–1, P2 1–5, P4 5–10, P1 10–17, P3 17–26। प्रतीक्षा = पूर्णता − आगमन − बर्स्ट: P1 = 17 − 0 − 8 = 9, P2 = 5 − 1 − 4 = 0, P3 = 26 − 2 − 9 = 15, P4 = 10 − 3 − 5 = 2। औसत = 26 / 4 = 6.5 ms।"
+ },
+ {
+  "id": "mgrsys-m2-040",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Processes P1, P2, P3 arrive at times 0, 1, 2 with bursts 5, 3, 1. Round Robin with a time quantum of 2 is used; a newly arrived process joins the ready queue before a preempted one. The completion time of P2 is —",
+  "options": [
+   "8",
+   "7",
+   "6",
+   "9"
+  ],
+  "answer": 0,
+  "explanation": "0–2 P1 (बचा 3); कतार: P2, P3, P1। 2–4 P2 (बचा 1); कतार: P3, P1, P2। 4–5 P3 पूरा। 5–7 P1 (बचा 1)। 7–8 P2 पूरा। 8–9 P1 पूरा। अतः P2 का पूर्णता-समय 8।"
+ },
+ {
+  "id": "mgrsys-m2-041",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A system has 12 instances of one resource. Processes P0, P1, P2 have maximum needs 10, 4, 9 and current allocations 5, 2, 2. Using the Banker's algorithm, which is a safe sequence?",
+  "options": [
+   "P2, P1, P0",
+   "P1, P0, P2",
+   "The state is unsafe",
+   "P0, P1, P2"
+  ],
+  "answer": 1,
+  "explanation": "उपलब्ध = 12 − 9 = 3। ज़रूरत: P0 = 5, P1 = 2, P2 = 7। P1 (2 ≤ 3) → उपलब्ध 5; P0 (5 ≤ 5) → 10; P2 (7 ≤ 10)। सुरक्षित क्रम P1, P0, P2। P0 या P2 से शुरू करना संभव नहीं।"
+ },
+ {
+  "id": "mgrsys-m2-042",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "For the reference string 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1 with 3 frames (initially empty), the number of page faults under LRU replacement is —",
+  "options": [
+   "15",
+   "9",
+   "10",
+   "12"
+  ],
+  "answer": 3,
+  "explanation": "LRU हर बार सबसे लंबे समय से अप्रयुक्त पेज हटाता है; गिनने पर 12 फ़ॉल्ट आते हैं। इसी स्ट्रिंग पर FIFO से 15 और Optimal से 9 फ़ॉल्ट — LRU इन दोनों के बीच रहता है।"
+ },
+ {
+  "id": "mgrsys-m2-043",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A counting semaphore S is initialised to 10. Then 6 P (wait) operations and 4 V (signal) operations are performed on it. The final value of S is —",
+  "options": [
+   "0",
+   "4",
+   "8",
+   "12"
+  ],
+  "answer": 2,
+  "explanation": "हर P मान 1 घटाता है, हर V 1 बढ़ाता है: 10 − 6 + 4 = 8। (मान कभी ऋणात्मक नहीं हुआ, इसलिए कोई प्रक्रिया अवरुद्ध नहीं हुई।)"
+ },
+ {
+  "id": "mgrsys-m2-044",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "With paging, a TLB lookup takes 20 ns and a memory access takes 100 ns. If the TLB hit ratio is 80%, the effective memory access time (single-level page table) is —",
+  "options": [
+   "140 ns",
+   "180 ns",
+   "120 ns",
+   "220 ns"
+  ],
+  "answer": 0,
+  "explanation": "हिट: 20 + 100 = 120 ns। मिस: 20 + 100 (पेज टेबल) + 100 (डेटा) = 220 ns। EMAT = 0.8 × 120 + 0.2 × 220 = 96 + 44 = 140 ns।"
+ },
+ {
+  "id": "mgrsys-m2-045",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "How many times is \"hello\" printed by the following C program?\n\nint main() { for (int i = 0; i < 3; i++) fork(); printf(\"hello\\n\"); return 0; }",
+  "options": [
+   "8",
+   "3",
+   "7",
+   "6"
+  ],
+  "answer": 0,
+  "explanation": "हर fork() चल रही प्रक्रियाओं की संख्या दोगुनी करता है: 3 बार के बाद 2³ = 8 प्रक्रियाएँ, हर एक printf चलाती है — 8 बार। नई (child) प्रक्रियाएँ 2³ − 1 = 7 बनती हैं।"
+ },
+ {
+  "id": "mgrsys-m2-046",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Three processes each need at most 4 units of a single resource type. The minimum number of units that guarantees the system can never deadlock is —",
+  "options": [
+   "12",
+   "4",
+   "10",
+   "9"
+  ],
+  "answer": 2,
+  "explanation": "सबसे बुरी स्थिति: हर प्रक्रिया के पास 4 − 1 = 3 इकाइयाँ और सब और माँगें — 3 × 3 = 9 पर डेडलॉक संभव। एक इकाई और हो तो कोई एक पूरी होकर छोड़ देगी। न्यूनतम = n(m − 1) + 1 = 3 × 3 + 1 = 10।"
+ },
+ {
+  "id": "mgrsys-m2-047",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "After running  chmod 754 report.sh  the permissions of report.sh are —",
+  "options": [
+   "rw-r-xr--",
+   "rwxr--r-x",
+   "rwxrw-r--",
+   "rwxr-xr--"
+  ],
+  "answer": 3,
+  "explanation": "हर अंक तीन बिट (r = 4, w = 2, x = 1): 7 = rwx (मालिक), 5 = r-x (समूह), 4 = r-- (अन्य)। अतः rwxr-xr--।"
+ },
+ {
+  "id": "mgrsys-m2-048",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The parser generated by the UNIX tool YACC is of which type?",
+  "options": [
+   "Recursive-descent parser",
+   "LALR(1) bottom-up parser",
+   "LL(1) top-down parser",
+   "Operator-precedence parser"
+  ],
+  "answer": 1,
+  "explanation": "YACC (और उसका GNU रूप Bison) व्याकरण से LALR(1) पार्सिंग टेबल बनाता है — यह बॉटम-अप शिफ़्ट-रिड्यूस पार्सर है। LEX टोकन देता है, YACC उनसे वाक्य-रचना जाँचता है।"
+ },
+ {
+  "id": "mgrsys-m2-049",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The network 200.10.5.0/24 is subnetted with mask 255.255.255.224. The broadcast address of the subnet containing host 200.10.5.77 is —",
+  "options": [
+   "200.10.5.95",
+   "200.10.5.127",
+   "200.10.5.79",
+   "200.10.5.64"
+  ],
+  "answer": 0,
+  "explanation": ".224 = /27, ब्लॉक-आकार 256 − 224 = 32। सबनेट: 0, 32, 64, 96 … 77 वाला सबनेट 64 से 95 तक है। नेटवर्क पता .64, ब्रॉडकास्ट .95।"
+ },
+ {
+  "id": "mgrsys-m2-050",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The number of usable host addresses in the block 172.16.0.0/20 is —",
+  "options": [
+   "2046",
+   "1022",
+   "4094",
+   "4096"
+  ],
+  "answer": 2,
+  "explanation": "होस्ट-बिट = 32 − 20 = 12; कुल पते 2¹² = 4096। नेटवर्क और ब्रॉडकास्ट पते घटाकर 4094 उपयोगी होस्ट।"
+ },
+ {
+  "id": "mgrsys-m2-051",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The data 1101011011 is sent using CRC with generator polynomial x⁴ + x + 1. The CRC (remainder) appended to the data is —",
+  "options": [
+   "1011",
+   "0111",
+   "0010",
+   "1110"
+  ],
+  "answer": 3,
+  "explanation": "जनक = 10011 (घात 4), अतः डेटा के पीछे चार 0 जोड़ें: 11010110110000। इसे 10011 से मॉड्यूलो-2 (XOR) भाग देने पर शेष 1110 आता है। भेजा गया फ़्रेम: 11010110111110।"
+ },
+ {
+  "id": "mgrsys-m2-052",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "To correct up to 2 bit errors in any codeword, the minimum Hamming distance of the code must be —",
+  "options": [
+   "3",
+   "5",
+   "4",
+   "2"
+  ],
+  "answer": 1,
+  "explanation": "t त्रुटियाँ सुधारने के लिए न्यूनतम दूरी 2t + 1 = 5 चाहिए; d त्रुटियाँ केवल पकड़ने के लिए d + 1 पर्याप्त है।"
+ },
+ {
+  "id": "mgrsys-m2-053",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A Selective Repeat ARQ protocol uses 3-bit sequence numbers. The maximum sender window size is —",
+  "options": [
+   "8",
+   "7",
+   "4",
+   "3"
+  ],
+  "answer": 2,
+  "explanation": "m बिट क्रमांक के लिए सिलेक्टिव रिपीट में विंडो ≤ 2^(m−1) = 4 होनी चाहिए, वरना नई और पुरानी फ़्रेम के क्रमांक आपस में उलझ जाते हैं। गो-बैक-N में यही सीमा 2^m − 1 = 7 है।"
+ },
+ {
+  "id": "mgrsys-m2-054",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Stop-and-wait is used on a 1 Mbps link with 1000-bit frames and a one-way propagation delay of 20 ms. Ignoring ACK size and processing time, the link utilisation is about —",
+  "options": [
+   "1%",
+   "2.4%",
+   "50%",
+   "4.8%"
+  ],
+  "answer": 1,
+  "explanation": "संचरण-काल Tt = 1000 / 10⁶ = 1 ms। a = Tp / Tt = 20। दक्षता = 1 / (1 + 2a) = 1 / 41 ≈ 2.4%। लंबी दूरी पर स्टॉप-एंड-वेट इसीलिए बेकार है — स्लाइडिंग विंडो चाहिए।"
+ },
+ {
+  "id": "mgrsys-m2-055",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A channel has a bandwidth of 3000 Hz and a signal-to-noise ratio of 30 dB. By Shannon's theorem, its capacity is approximately —",
+  "options": [
+   "30 kbps",
+   "6 kbps",
+   "3 kbps",
+   "90 kbps"
+  ],
+  "answer": 0,
+  "explanation": "30 dB → S/N = 10^(30/10) = 1000। C = B log₂(1 + S/N) = 3000 × log₂(1001) ≈ 3000 × 9.97 ≈ 30,000 bps।"
+ },
+ {
+  "id": "mgrsys-m2-056",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A source emits four symbols with probabilities 1/2, 1/4, 1/8 and 1/8. The entropy of the source is —",
+  "options": [
+   "1.25 bits/symbol",
+   "2 bits/symbol",
+   "1.5 bits/symbol",
+   "1.75 bits/symbol"
+  ],
+  "answer": 3,
+  "explanation": "H = Σ p log₂(1/p) = ½×1 + ¼×2 + ⅛×3 + ⅛×3 = 0.5 + 0.5 + 0.375 + 0.375 = 1.75 बिट/चिह्न। चारों समान-संभावी होते तो 2 बिट आता — असमान वितरण में सूचना कम होती है।"
+ },
+ {
+  "id": "mgrsys-m2-057",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "TCP starts with cwnd = 1 MSS and ssthresh = 8 MSS. cwnd doubles every RTT in slow start until it reaches ssthresh, and then grows by 1 MSS per RTT. With no loss, cwnd after 5 RTTs is —",
+  "options": [
+   "12 MSS",
+   "10 MSS",
+   "32 MSS",
+   "16 MSS"
+  ],
+  "answer": 1,
+  "explanation": "स्लो-स्टार्ट: 1 → 2 → 4 → 8 (3 RTT में ssthresh तक)। फिर कंजेशन-अवॉयडेंस: 9 (4था RTT), 10 (5वाँ RTT)। अतः 10 MSS।"
+ },
+ {
+  "id": "mgrsys-m2-058",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In RSA, p = 3, q = 11 and the public exponent e = 7. The private exponent d is —",
+  "options": [
+   "3",
+   "13",
+   "7",
+   "17"
+  ],
+  "answer": 0,
+  "explanation": "n = 33, φ(n) = (3 − 1)(11 − 1) = 20। d ऐसा कि e × d ≡ 1 (mod 20): 7 × 3 = 21 ≡ 1। अतः d = 3।"
+ },
+ {
+  "id": "mgrsys-m2-059",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In MPLS, how is a packet forwarded inside the MPLS domain?",
+  "options": [
+   "By the destination MAC address only",
+   "By the TCP port number",
+   "By swapping a short fixed-length label at each label-switching router",
+   "By a longest-prefix match on the destination IP address at every router"
+  ],
+  "answer": 2,
+  "explanation": "प्रवेश राउटर (LER) पैकेट पर लेबल लगाता है; बीच के LSR केवल लेबल-टेबल देखकर लेबल बदलते (swap) और आगे भेजते हैं — हर हॉप पर IP की लंबी-उपसर्ग खोज नहीं होती। इससे ट्रैफ़िक-इंजीनियरिंग और VPN आसान होते हैं।"
+ },
+ {
+  "id": "mgrsys-m2-060",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "DNS queries from a client to a resolver normally use —",
+  "options": [
+   "TCP port 25",
+   "UDP port 67",
+   "TCP port 110",
+   "UDP port 53"
+  ],
+  "answer": 3,
+  "explanation": "साधारण DNS प्रश्न-उत्तर छोटे होते हैं, इसलिए UDP पोर्ट 53 पर चलते हैं; बड़े उत्तर और ज़ोन-ट्रांसफ़र TCP 53 पर। 25 = SMTP, 67 = DHCP सर्वर, 110 = POP3।"
+ },
+ {
+  "id": "mgrsys-m2-061",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A* search is guaranteed to find an optimal path (tree search) when the heuristic h(n) is —",
+  "options": [
+   "admissible — it never overestimates the true cost to the goal",
+   "equal to zero only at the start node",
+   "chosen at random",
+   "always greater than the true cost"
+  ],
+  "answer": 0,
+  "explanation": "f(n) = g(n) + h(n)। अगर h कभी वास्तविक शेष लागत से अधिक नहीं बताता (admissible), तो A* इष्टतम हल देता है। h = 0 लेने पर A* यूनिफ़ॉर्म-कॉस्ट सर्च बन जाता है।"
+ },
+ {
+  "id": "mgrsys-m2-062",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "For a search tree with branching factor b and shallowest goal depth d, the space complexity of iterative deepening depth-first search is —",
+  "options": [
+   "O(b^(d/2))",
+   "O(bd)",
+   "O(b^d)",
+   "O(d)"
+  ],
+  "answer": 1,
+  "explanation": "IDDFS हर बार DFS चलाता है, इसलिए केवल वर्तमान पथ और उसके भाई-नोड रखता है — O(bd) स्थान। फिर भी BFS की तरह सबसे उथला हल ढूँढता है; समय O(b^d)।"
+ },
+ {
+  "id": "mgrsys-m2-063",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "To prove that a knowledge base KB entails a sentence α using resolution refutation, one —",
+  "options": [
+   "converts KB to DNF and checks every term",
+   "shows that α is satisfiable",
+   "adds ¬α to KB (in CNF) and derives the empty clause",
+   "adds α to KB and derives the empty clause"
+  ],
+  "answer": 2,
+  "explanation": "रेज़ोल्यूशन खंडन-आधारित है: KB ∧ ¬α असंतोषणीय है तो KB ⊨ α। इसलिए ¬α जोड़कर CNF में रेज़ोल्व करते हैं; खाली खंड (□) मिलना विरोधाभास का प्रमाण है।"
+ },
+ {
+  "id": "mgrsys-m2-064",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "The conjunctive normal form (CNF) of  ¬(P ∧ Q) → R  is —",
+  "options": [
+   "(P ∧ Q) ∨ ¬R",
+   "(¬P ∨ R) ∧ (¬Q ∨ R)",
+   "P ∨ Q ∨ R",
+   "(P ∨ R) ∧ (Q ∨ R)"
+  ],
+  "answer": 3,
+  "explanation": "X → R ≡ ¬X ∨ R, अतः ¬¬(P ∧ Q) ∨ R = (P ∧ Q) ∨ R। वितरण नियम से (P ∨ R) ∧ (Q ∨ R)।"
+ },
+ {
+  "id": "mgrsys-m2-065",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "With perfect move ordering, alpha-beta pruning examines about how many leaf nodes of a game tree with branching factor b and depth d?",
+  "options": [
+   "O(b^(d/2))",
+   "O(bd)",
+   "O(b^d)",
+   "O(d^b)"
+  ],
+  "answer": 0,
+  "explanation": "सर्वोत्तम क्रम में अल्फ़ा-बीटा O(b^(d/2)) नोड देखता है — यानी उतने ही समय में मिनिमैक्स से लगभग दोगुनी गहराई तक खोज। परिणाम मिनिमैक्स जैसा ही रहता है, केवल अनावश्यक शाखाएँ कटती हैं।"
+ },
+ {
+  "id": "mgrsys-m2-066",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A servlet is deployed and receives 100 client requests without being unloaded. How many times are init() and service() called?",
+  "options": [
+   "init() 100 times, service() once",
+   "init() 100 times, service() 100 times",
+   "init() once, service() once",
+   "init() once, service() 100 times"
+  ],
+  "answer": 3,
+  "explanation": "कंटेनर सर्वलेट का एक ही उदाहरण बनाता है: init() पहली बार लोड होने पर एक बार, फिर हर अनुरोध के लिए अलग थ्रेड में service()। destroy() अनलोड होने पर एक बार।"
+ },
+ {
+  "id": "mgrsys-m2-067",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In Java RMI, a remote interface must —",
+  "options": [
+   "be declared final",
+   "contain only static methods",
+   "extend java.rmi.Remote, and each of its methods must declare java.rmi.RemoteException",
+   "extend java.io.Serializable only"
+  ],
+  "answer": 2,
+  "explanation": "Remote एक 'मार्कर' इंटरफ़ेस है जो बताता है कि विधियाँ दूर की JVM से बुलाई जा सकती हैं। नेटवर्क विफल हो सकता है, इसलिए हर विधि को RemoteException घोषित करना अनिवार्य है।"
+ },
+ {
+  "id": "mgrsys-m2-068",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Which of the following is NOT an implicit object in JSP?",
+  "options": [
+   "application",
+   "httpContext",
+   "pageContext",
+   "exception"
+  ],
+  "answer": 1,
+  "explanation": "JSP के नौ अंतर्निहित ऑब्जेक्ट: request, response, out, session, application, config, pageContext, page, exception। 'httpContext' इनमें नहीं है।"
+ },
+ {
+  "id": "mgrsys-m2-069",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "In the SSL/TLS handshake, public-key cryptography is mainly used to —",
+  "options": [
+   "securely establish a shared session key, after which bulk data is encrypted with symmetric cipher",
+   "replace the TCP three-way handshake",
+   "encrypt every data packet of the session",
+   "compress the data before sending"
+  ],
+  "answer": 0,
+  "explanation": "असममित एन्क्रिप्शन धीमा है, इसलिए केवल सर्वर-प्रमाणन और सत्र-कुंजी तय करने में लगता है। इसके बाद सारा डेटा तेज़ सममित सिफ़र (जैसे AES) से जाता है — यह 'हाइब्रिड' तरीक़ा है।"
+ },
+ {
+  "id": "mgrsys-m2-070",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "How does a stateful inspection firewall differ from a simple packet-filter firewall?",
+  "options": [
+   "It inspects only the MAC address",
+   "It works only at the physical layer",
+   "It tracks the state of connections and allows packets that belong to an established session",
+   "It cannot filter by port number"
+  ],
+  "answer": 2,
+  "explanation": "साधारण पैकेट-फ़िल्टर हर पैकेट को अलग से नियमों पर परखता है। स्टेटफ़ुल फ़ायरवॉल कनेक्शन-तालिका रखता है — अंदर से शुरू हुए सत्र के उत्तर स्वतः आने देता है और बाहर से बिन बुलाए पैकेट रोकता है।"
+ },
+ {
+  "id": "mgrsys-m2-071",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A program's control-flow graph has 12 edges and 10 nodes and is a single connected component. Its cyclomatic complexity is —",
+  "options": [
+   "22",
+   "3",
+   "2",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "V(G) = E − N + 2P = 12 − 10 + 2 × 1 = 4। यही स्वतंत्र पथों की संख्या है — पूरे पथ-परीक्षण के लिए कम से कम 4 टेस्ट-केस चाहिए।"
+ },
+ {
+  "id": "mgrsys-m2-072",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Using Basic COCOMO in organic mode (Effort = 2.4 × KLOC^1.05 person-months), the effort for a 32 KLOC project is approximately —",
+  "options": [
+   "77 person-months",
+   "91 person-months",
+   "146 person-months",
+   "38 person-months"
+  ],
+  "answer": 1,
+  "explanation": "32^1.05 = 32 × 32^0.05 ≈ 32 × 1.19 ≈ 38.1। प्रयास = 2.4 × 38.1 ≈ 91 पर्सन-मंथ।"
+ },
+ {
+  "id": "mgrsys-m2-073",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A system has a mean time to failure (MTTF) of 450 hours and a mean time to repair (MTTR) of 50 hours. Its availability is —",
+  "options": [
+   "90%",
+   "88.9%",
+   "95%",
+   "10%"
+  ],
+  "answer": 0,
+  "explanation": "उपलब्धता = MTTF / (MTTF + MTTR) = 450 / 500 = 0.9 = 90%। (MTBF = MTTF + MTTR = 500 घंटे।)"
+ },
+ {
+  "id": "mgrsys-m2-074",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Robust boundary value analysis is applied to a function of one input variable with a valid range [1, 100]. The number of test cases generated is —",
+  "options": [
+   "4",
+   "5",
+   "9",
+   "7"
+  ],
+  "answer": 3,
+  "explanation": "रोबस्ट BVA में min−, min, min+, nominal, max−, max, max+ = 7 मान (यहाँ 0, 1, 2, 50, 99, 100, 101)। n चरों के लिए 6n + 1; साधारण BVA में 4n + 1।"
+ },
+ {
+  "id": "mgrsys-m2-075",
+  "subject": "computer",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A machine-learning model gives 99% accuracy on the training data but only 70% on unseen test data. This most likely indicates —",
+  "options": [
+   "insufficient training accuracy",
+   "underfitting (high bias)",
+   "overfitting (high variance)",
+   "a perfectly generalised model"
+  ],
+  "answer": 2,
+  "explanation": "प्रशिक्षण पर बहुत अच्छा और नए डेटा पर ख़राब — मॉडल ने डेटा का शोर तक रट लिया है: ओवरफ़िटिंग। उपाय: अधिक डेटा, रेग्युलराइज़ेशन, क्रॉस-वैलिडेशन, सरल मॉडल।"
+ },
+ {
+  "id": "mgrsys-m2-076",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "शृंखला पूर्ण कीजिए: 7, 14, 28, 56, ?",
+  "options": [
+   "96",
+   "102",
+   "112",
+   "120"
+  ],
+  "answer": 2,
+  "explanation": "प्रत्येक पद पिछले का दोगुना: 7 → 14 → 28 → 56 → 112।"
+ },
+ {
+  "id": "mgrsys-m2-077",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "यदि CAT = 24 तथा DOG = 26 हो, तो BAT = ?",
+  "options": [
+   "21",
+   "22",
+   "23",
+   "24"
+  ],
+  "answer": 2,
+  "explanation": "अक्षरों की स्थिति का योग: C(3) + A(1) + T(20) = 24 ✓; D(4) + O(15) + G(7) = 26 ✓। अतः BAT = B(2) + A(1) + T(20) = 23।"
+ },
+ {
+  "id": "mgrsys-m2-078",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "एक पंक्ति में 25 लड़के हैं। राहुल बाएँ से 9वाँ तथा मोहन दाएँ से 12वाँ है। दोनों के बीच कितने लड़के हैं?",
+  "options": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "answer": 1,
+  "explanation": "मोहन का बाएँ से स्थान = 25 − 12 + 1 = 14वाँ। राहुल 9वाँ → बीच के लड़के = 14 − 9 − 1 = 4। सूत्र: बीच की संख्या = (बड़ा स्थान − छोटा स्थान − 1)।"
+ },
+ {
+  "id": "mgrsys-m2-079",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "7:20 बजे घड़ी की दोनों सुइयों के बीच का कोण है —",
+  "options": [
+   "90°",
+   "100°",
+   "110°",
+   "120°"
+  ],
+  "answer": 1,
+  "explanation": "कोण = |30H − 5.5M| = |30(7) − 5.5(20)| = |210 − 110| = 100°। सूत्र का तर्क: घंटे की सुई 30°/घंटा + 0.5°/मिनट, मिनट की सुई 6°/मिनट → अंतर की दर 5.5°/मिनट।"
+ },
+ {
+  "id": "mgrsys-m2-080",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "यदि किसी वर्ष 1 मार्च को सोमवार हो, तो उसी वर्ष 1 अप्रैल को कौन-सा दिन होगा?",
+  "options": [
+   "मंगलवार",
+   "बुधवार",
+   "गुरुवार",
+   "शुक्रवार"
+  ],
+  "answer": 2,
+  "explanation": "मार्च में 31 दिन → 31 ÷ 7 = 4 सप्ताह और शेष 3 विषम दिन। सोमवार + 3 = गुरुवार। नियम: 30 दिन वाला माह → +2 दिन; 31 दिन वाला → +3 दिन; फरवरी (साधारण) → 0 दिन।"
+ },
+ {
+  "id": "mgrsys-m2-081",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "सादृश्य पूर्ण कीजिए: पुस्तकालय : पुस्तकें :: संग्रहालय : ?",
+  "options": [
+   "चित्र",
+   "पर्यटक",
+   "भवन",
+   "पुरावशेष"
+  ],
+  "answer": 3,
+  "explanation": "संबंध \"स्थान : उसमें संग्रहीत वस्तुएँ\" का है। पुस्तकालय में पुस्तकें रखी जाती हैं, संग्रहालय में पुरावशेष/कलाकृतियाँ। पर्यटक वहाँ आने वाले लोग हैं, संगृहीत वस्तु नहीं।"
+ },
+ {
+  "id": "mgrsys-m2-082",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "विषम को पहचानिए —",
+  "options": [
+   "गेहूँ",
+   "चावल",
+   "मक्का",
+   "आम"
+  ],
+  "answer": 3,
+  "explanation": "गेहूँ, चावल और मक्का अनाज (धान्य फसलें) हैं; आम एक फल है।"
+ },
+ {
+  "id": "mgrsys-m2-083",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "कथन: सभी इंजीनियर स्नातक हैं। कुछ स्नातक बेरोज़गार हैं।\nनिष्कर्ष: (I) कुछ इंजीनियर बेरोज़गार हैं। (II) सभी बेरोज़गार स्नातक हैं।",
+  "options": [
+   "केवल I",
+   "केवल II",
+   "दोनों I व II",
+   "न तो I न II"
+  ],
+  "answer": 3,
+  "explanation": "\"कुछ स्नातक बेरोज़गार हैं\" — यह निश्चित नहीं करता कि वे बेरोज़गार स्नातक इंजीनियर ही हों; वे कोई और स्नातक भी हो सकते हैं → निष्कर्ष I अमान्य। निष्कर्ष II भी अमान्य, क्योंकि बेरोज़गारों में ग़ैर-स्नातक भी हो सकते हैं। नियम: \"कुछ\" वाले कथन से \"कुछ\" का निश्चित निष्कर्ष तभी निकलता है जब मध्य पद वितरित हो।"
+ },
+ {
+  "id": "mgrsys-m2-084",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "एक व्यक्ति उत्तर की ओर 4 किमी चलता है, फिर पूर्व की ओर 3 किमी। प्रारंभिक बिंदु से उसकी सीधी दूरी है —",
+  "options": [
+   "5 किमी",
+   "6 किमी",
+   "7 किमी",
+   "3.5 किमी"
+  ],
+  "answer": 0,
+  "explanation": "उत्तर और पूर्व परस्पर लंब हैं → पाइथागोरस प्रमेय। दूरी = √(4² + 3²) = √25 = 5 किमी।"
+ },
+ {
+  "id": "mgrsys-m2-085",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "यदि '+' का अर्थ '×', '−' का अर्थ '+', '×' का अर्थ '÷' तथा '÷' का अर्थ '−' हो, तो 8 + 4 − 6 × 3 ÷ 2 = ?",
+  "options": [
+   "30",
+   "32",
+   "34",
+   "36"
+  ],
+  "answer": 1,
+  "explanation": "चिह्न बदलने पर: 8 + 4 − 6 × 3 ÷ 2 → 8 × 4 + 6 ÷ 3 − 2। BODMAS: पहले भाग → 6 ÷ 3 = 2; फिर गुणा → 8 × 4 = 32 → 32 + 2 − 2 = 32।"
+ },
+ {
+  "id": "mgrsys-m2-086",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "P, Q से बड़ा है। R, P से बड़ा किंतु S से छोटा है। सबसे बड़ा कौन है?",
+  "options": [
+   "P",
+   "Q",
+   "R",
+   "S"
+  ],
+  "answer": 3,
+  "explanation": "दिया है: P > Q; R > P; S > R। क्रम बनाएँ: S > R > P > Q → सबसे बड़ा S।"
+ },
+ {
+  "id": "mgrsys-m2-087",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "शृंखला में लुप्त अक्षर ज्ञात कीजिए: B, D, G, K, ?",
+  "options": [
+   "N",
+   "O",
+   "P",
+   "Q"
+  ],
+  "answer": 2,
+  "explanation": "अक्षरों की स्थिति: B(2), D(4), G(7), K(11)। अंतर: +2, +3, +4 → अगला अंतर +5 → 11 + 5 = 16 = P।"
+ },
+ {
+  "id": "mgrsys-m2-088",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "एक घन को 64 समान छोटे घनों में काटा गया तथा सभी बाहरी फलक रंग दिए गए। कितने छोटे घनों पर कोई रंग नहीं होगा?",
+  "options": [
+   "4",
+   "8",
+   "16",
+   "24"
+  ],
+  "answer": 1,
+  "explanation": "64 = 4³ → प्रत्येक भुजा पर 4 छोटे घन। बिना रंग वाले (भीतरी) घन = (n − 2)³ = (4 − 2)³ = 2³ = 8। संबंधित सूत्र: 3 फलक रंगे = 8 (कोने), 2 फलक = 12(n−2), 1 फलक = 6(n−2)²।"
+ },
+ {
+  "id": "mgrsys-m2-089",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "निम्न में से कौन-सा शब्द 'GOVERNMENT' के अक्षरों से नहीं बनाया जा सकता?",
+  "options": [
+   "GOVERN",
+   "MENTOR",
+   "MOVER",
+   "MANGO"
+  ],
+  "answer": 3,
+  "explanation": "'GOVERNMENT' में अक्षर हैं: G, O, V, E, R, N, M, E, N, T — इनमें A नहीं है, अतः MANGO नहीं बनेगा। जाँच: GOVERN ✓, MENTOR ✓ (M, E, N, T, O, R सभी उपलब्ध), MOVER ✓"
+ },
+ {
+  "id": "mgrsys-m2-090",
+  "subject": "reasoning",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "एक व्यक्ति ने कहा — \"यह लड़का मेरी माता के इकलौते पुत्र का पुत्र है।\" वह लड़का उस व्यक्ति का क्या लगता है?",
+  "options": [
+   "भतीजा",
+   "पुत्र",
+   "भाई",
+   "चचेरा भाई"
+  ],
+  "answer": 1,
+  "explanation": "\"मेरी माता का इकलौता पुत्र\" = वह व्यक्ति स्वयं (क्योंकि वह अपनी माता का अकेला बेटा है)। अतः लड़का \"उस व्यक्ति का पुत्र\" हुआ। सावधानी: यदि कथन \"मेरे पिता के इकलौते पुत्र\" होता तब भी उत्तर वही रहता; पर \"मेरी माता के इकलौते पुत्र की पत्नी\" जैसे बदलाव उत्तर पलट देते हैं — कथन ध्यान से पढ़ें।"
+ },
+ {
+  "id": "mgrsys-m2-091",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "किसी संख्या का 40% = 120 है। उसी संख्या का 25% क्या होगा?",
+  "options": [
+   "60",
+   "75",
+   "80",
+   "90"
+  ],
+  "answer": 1,
+  "explanation": "40% = 120 → 100% = (120 ÷ 40) × 100 = 300। 25% का 300 = 75। तेज़ तरीक़ा: 25% ÷ 40% = 5/8 → 120 × 5/8 = 75 (संख्या निकाले बिना)।"
+ },
+ {
+  "id": "mgrsys-m2-092",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "एक वस्तु 20% लाभ पर ₹720 में बेची गई। उसका क्रय मूल्य है —",
+  "options": [
+   "₹576",
+   "₹600",
+   "₹640",
+   "₹660"
+  ],
+  "answer": 1,
+  "explanation": "विक्रय मूल्य = क्रय मूल्य × (1 + लाभ%) → 720 = C × 1.20 → C = 720 ÷ 1.2 = ₹600।"
+ },
+ {
+  "id": "mgrsys-m2-093",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "दो संख्याओं का अनुपात 5 : 7 है। यदि प्रत्येक में 6 जोड़ दिया जाए तो अनुपात 3 : 4 हो जाता है। छोटी संख्या है —",
+  "options": [
+   "25",
+   "30",
+   "35",
+   "42"
+  ],
+  "answer": 1,
+  "explanation": "संख्याएँ 5x और 7x मानें। (5x + 6)/(7x + 6) = 3/4 → 4(5x + 6) = 3(7x + 6) → 20x + 24 = 21x + 18 → x = 6। छोटी संख्या = 5 × 6 = 30 (जाँच: 36/48 = 3/4 ✓)।"
+ },
+ {
+  "id": "mgrsys-m2-094",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "240 मीटर लंबी रेलगाड़ी 54 किमी/घंटा की चाल से 180 मीटर लंबे पुल को कितने समय में पार करेगी?",
+  "options": [
+   "24 सेकंड",
+   "26 सेकंड",
+   "28 सेकंड",
+   "30 सेकंड"
+  ],
+  "answer": 2,
+  "explanation": "कुल दूरी = रेलगाड़ी की लंबाई + पुल की लंबाई = 240 + 180 = 420 मीटर। चाल = 54 × 5/18 = 15 मी/से। समय = 420 ÷ 15 = 28 सेकंड। याद रखें: खंभा पार करने में केवल रेलगाड़ी की लंबाई, पुल/प्लेटफ़ॉर्म पार करने में दोनों की लंबाई जुड़ती है।"
+ },
+ {
+  "id": "mgrsys-m2-095",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "₹12,000 पर 10% वार्षिक दर से 2 वर्ष के चक्रवृद्धि तथा साधारण ब्याज का अंतर है —",
+  "options": [
+   "₹100",
+   "₹120",
+   "₹150",
+   "₹240"
+  ],
+  "answer": 1,
+  "explanation": "सूत्र: 2 वर्ष के लिए अंतर = P × (r/100)² = 12000 × (10/100)² = 12000 × 0.01 = ₹120। सत्यापन: SI = 2400; CI = 12000(1.1)² − 12000 = 14520 − 12000 = 2520; अंतर = 120 ✓"
+ },
+ {
+  "id": "mgrsys-m2-096",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "A किसी कार्य को 15 दिन में तथा B उसी कार्य को 20 दिन में करता है। दोनों 6 दिन साथ काम करने के बाद A चला जाता है। शेष कार्य B अकेले कितने दिन में पूरा करेगा?",
+  "options": [
+   "4 दिन",
+   "5 दिन",
+   "6 दिन",
+   "8 दिन"
+  ],
+  "answer": 2,
+  "explanation": "A का एक दिन का कार्य = 1/15; B का = 1/20। साथ में = 1/15 + 1/20 = 4/60 + 3/60 = 7/60। 6 दिन में किया गया कार्य = 6 × 7/60 = 42/60 = 7/10। शेष कार्य = 3/10। B को लगने वाला समय = (3/10) ÷ (1/20) = (3/10) × 20 = 6 दिन।"
+ },
+ {
+  "id": "mgrsys-m2-097",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "एक समकोण त्रिभुज की दो भुजाएँ 6 सेमी तथा 8 सेमी हैं। कर्ण की लंबाई है —",
+  "options": [
+   "9 सेमी",
+   "10 सेमी",
+   "12 सेमी",
+   "14 सेमी"
+  ],
+  "answer": 1,
+  "explanation": "कर्ण = √(6² + 8²) = √(36 + 64) = √100 = 10 सेमी। (3-4-5 त्रिक का दोगुना — ऐसे त्रिक याद रखें: 3-4-5, 5-12-13, 8-15-17, 7-24-25)।"
+ },
+ {
+  "id": "mgrsys-m2-098",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "पाँच क्रमागत सम संख्याओं का औसत 30 है। उनमें सबसे छोटी संख्या है —",
+  "options": [
+   "22",
+   "24",
+   "26",
+   "28"
+  ],
+  "answer": 2,
+  "explanation": "पाँच क्रमागत सम संख्याओं में माध्य = बीच वाली संख्या → बीच वाली = 30। संख्याएँ: 26, 28, 30, 32, 34 → सबसे छोटी = 26।"
+ },
+ {
+  "id": "mgrsys-m2-099",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "8 व्यक्तियों में से 3 सदस्यों की समिति कितने प्रकार से बनाई जा सकती है?",
+  "options": [
+   "24",
+   "48",
+   "56",
+   "336"
+  ],
+  "answer": 2,
+  "explanation": "यहाँ क्रम महत्त्वपूर्ण नहीं (समिति है) → संचय (combination)। C(8,3) = (8 × 7 × 6) ÷ (3 × 2 × 1) = 336 ÷ 6 = 56। जाल: विकल्प 336 क्रमचय P(8,3) है — यदि पद (अध्यक्ष, सचिव, कोषाध्यक्ष) निर्दिष्ट होते तब वही उत्तर होता।"
+ },
+ {
+  "id": "mgrsys-m2-100",
+  "subject": "ganit",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "एक वर्ग का क्षेत्रफल 144 वर्ग सेमी है। उसका परिमाप है —",
+  "options": [
+   "24 सेमी",
+   "36 सेमी",
+   "44 सेमी",
+   "48 सेमी"
+  ],
+  "answer": 3,
+  "explanation": "क्षेत्रफल = भुजा² → 144 = a² → a = 12 सेमी। परिमाप = 4a = 4 × 12 = 48 सेमी।"
+ },
+ {
+  "id": "mgrsys-m2-101",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Machine learning models are increasingly used by governments to decide who receives a subsidy, whose tax return is audited and which neighbourhood gets extra policing. The appeal is obvious: a model can process millions of records without fatigue. What is less obvious is that a model learns from history, and history carries the biases of the people who made it. If past officers approved fewer loans for applicants from a particular district, a model trained on those decisions will quietly reproduce that pattern and present it as arithmetic. The remedy is not to abandon the technology but to insist on transparency — a citizen affected by an automated decision should be able to learn, in plain language, why the decision went against her.\"\n\nAccording to the passage, the obvious appeal of machine learning for governments is that —",
+  "options": [
+   "it is inexpensive",
+   "it can process millions of records without fatigue",
+   "it removes the need for officers",
+   "it is completely transparent"
+  ],
+  "answer": 1,
+  "explanation": "\"The appeal is obvious: a model can process millions of records without fatigue.\" — 'appeal' शब्द के ठीक बाद वाला वाक्य ही उत्तर देता है।"
+ },
+ {
+  "id": "mgrsys-m2-102",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Machine learning models are increasingly used by governments to decide who receives a subsidy, whose tax return is audited and which neighbourhood gets extra policing. The appeal is obvious: a model can process millions of records without fatigue. What is less obvious is that a model learns from history, and history carries the biases of the people who made it. If past officers approved fewer loans for applicants from a particular district, a model trained on those decisions will quietly reproduce that pattern and present it as arithmetic. The remedy is not to abandon the technology but to insist on transparency — a citizen affected by an automated decision should be able to learn, in plain language, why the decision went against her.\"\n\nThe danger the author identifies is that a model may —",
+  "options": [
+   "work too slowly",
+   "consume too much electricity",
+   "reproduce historical biases and present them as arithmetic",
+   "fail to read records"
+  ],
+  "answer": 2,
+  "explanation": "\"…a model trained on those decisions will quietly reproduce that pattern and present it as arithmetic.\" लेखक की चिंता यही है कि पूर्वाग्रह गणित का मुखौटा पहन लेता है।"
+ },
+ {
+  "id": "mgrsys-m2-103",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Machine learning models are increasingly used by governments to decide who receives a subsidy, whose tax return is audited and which neighbourhood gets extra policing. The appeal is obvious: a model can process millions of records without fatigue. What is less obvious is that a model learns from history, and history carries the biases of the people who made it. If past officers approved fewer loans for applicants from a particular district, a model trained on those decisions will quietly reproduce that pattern and present it as arithmetic. The remedy is not to abandon the technology but to insist on transparency — a citizen affected by an automated decision should be able to learn, in plain language, why the decision went against her.\"\n\nThe phrase \"quietly reproduce\" suggests that the bias is —",
+  "options": [
+   "loud and obvious",
+   "deliberately created",
+   "temporary",
+   "not easily noticed"
+  ],
+  "answer": 3,
+  "explanation": "\"quietly\" का शाब्दिक अर्थ चुपचाप; यहाँ आशय यह है कि पक्षपात दिखाई नहीं देता, इसलिए पकड़ में नहीं आता। ध्यान दें, \"quietly\" का अर्थ जानबूझकर (deliberate) नहीं है, अतः दूसरा विकल्प ग़लत है।"
+ },
+ {
+  "id": "mgrsys-m2-104",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Machine learning models are increasingly used by governments to decide who receives a subsidy, whose tax return is audited and which neighbourhood gets extra policing. The appeal is obvious: a model can process millions of records without fatigue. What is less obvious is that a model learns from history, and history carries the biases of the people who made it. If past officers approved fewer loans for applicants from a particular district, a model trained on those decisions will quietly reproduce that pattern and present it as arithmetic. The remedy is not to abandon the technology but to insist on transparency — a citizen affected by an automated decision should be able to learn, in plain language, why the decision went against her.\"\n\nThe remedy proposed by the author is —",
+  "options": [
+   "abandoning the technology",
+   "hiring more officers",
+   "insisting on transparency",
+   "collecting still more data"
+  ],
+  "answer": 2,
+  "explanation": "\"The remedy is not to abandon the technology but to insist on transparency.\" यहाँ 'not X but Y' रचना है — उत्तर सदैव Y होता है, X नहीं।"
+ },
+ {
+  "id": "mgrsys-m2-105",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Machine learning models are increasingly used by governments to decide who receives a subsidy, whose tax return is audited and which neighbourhood gets extra policing. The appeal is obvious: a model can process millions of records without fatigue. What is less obvious is that a model learns from history, and history carries the biases of the people who made it. If past officers approved fewer loans for applicants from a particular district, a model trained on those decisions will quietly reproduce that pattern and present it as arithmetic. The remedy is not to abandon the technology but to insist on transparency — a citizen affected by an automated decision should be able to learn, in plain language, why the decision went against her.\"\n\n\"In plain language\" implies that the explanation should be —",
+  "options": [
+   "highly technical",
+   "understandable to an ordinary citizen",
+   "written only in English",
+   "as short as possible"
+  ],
+  "answer": 1,
+  "explanation": "\"in plain language\" अर्थात् सरल, बिना तकनीकी शब्दजाल वाली भाषा, जिसे प्रभावित नागरिक स्वयं समझ सके।"
+ },
+ {
+  "id": "mgrsys-m2-106",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Open source software is often described as free, but the word 'free' misleads. What is free is not necessarily the price; it is the liberty to read the source code, modify it and share the modified version. Many governments have adopted such software for exactly this reason. When the code of a system that stores citizens' data can be inspected by independent experts, hidden flaws are found sooner. Cost savings, where they occur, are a secondary benefit. Critics point out that adoption requires trained staff and a support ecosystem, without which an organisation may find itself holding software that nobody can maintain. That objection is fair, and it explains why the most successful migrations have been gradual rather than sudden.\"\n\nIn the context of open source, the word 'free' primarily refers to —",
+  "options": [
+   "zero price",
+   "free technical support",
+   "the liberty to read, modify and share the code",
+   "free hardware"
+  ],
+  "answer": 2,
+  "explanation": "\"What is free is not necessarily the price; it is the liberty to read the source code, modify it and share…\"। लेखक स्पष्ट रूप से क़ीमत वाले अर्थ को नकार रहा है।"
+ },
+ {
+  "id": "mgrsys-m2-107",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Open source software is often described as free, but the word 'free' misleads. What is free is not necessarily the price; it is the liberty to read the source code, modify it and share the modified version. Many governments have adopted such software for exactly this reason. When the code of a system that stores citizens' data can be inspected by independent experts, hidden flaws are found sooner. Cost savings, where they occur, are a secondary benefit. Critics point out that adoption requires trained staff and a support ecosystem, without which an organisation may find itself holding software that nobody can maintain. That objection is fair, and it explains why the most successful migrations have been gradual rather than sudden.\"\n\nGovernments have adopted open source software mainly because —",
+  "options": [
+   "it costs nothing",
+   "independent experts can inspect the code and find hidden flaws sooner",
+   "it runs faster than commercial software",
+   "it requires no staff at all"
+  ],
+  "answer": 1,
+  "explanation": "\"When the code… can be inspected by independent experts, hidden flaws are found sooner. Cost savings… are a secondary benefit.\" — \"mainly\" शब्द के कारण वही उत्तर होगा जिसे लेखक प्राथमिक बता रहा है।"
+ },
+ {
+  "id": "mgrsys-m2-108",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Open source software is often described as free, but the word 'free' misleads. What is free is not necessarily the price; it is the liberty to read the source code, modify it and share the modified version. Many governments have adopted such software for exactly this reason. When the code of a system that stores citizens' data can be inspected by independent experts, hidden flaws are found sooner. Cost savings, where they occur, are a secondary benefit. Critics point out that adoption requires trained staff and a support ecosystem, without which an organisation may find itself holding software that nobody can maintain. That objection is fair, and it explains why the most successful migrations have been gradual rather than sudden.\"\n\nIn the passage, cost saving is described as —",
+  "options": [
+   "the principal reason for adoption",
+   "a secondary benefit",
+   "impossible to achieve",
+   "a myth spread by critics"
+  ],
+  "answer": 1,
+  "explanation": "गद्यांश में यही शब्द ज्यों के त्यों प्रयुक्त हुआ है: \"Cost savings, where they occur, are a secondary benefit.\""
+ },
+ {
+  "id": "mgrsys-m2-109",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Open source software is often described as free, but the word 'free' misleads. What is free is not necessarily the price; it is the liberty to read the source code, modify it and share the modified version. Many governments have adopted such software for exactly this reason. When the code of a system that stores citizens' data can be inspected by independent experts, hidden flaws are found sooner. Cost savings, where they occur, are a secondary benefit. Critics point out that adoption requires trained staff and a support ecosystem, without which an organisation may find itself holding software that nobody can maintain. That objection is fair, and it explains why the most successful migrations have been gradual rather than sudden.\"\n\nThe objection raised by critics is that open source adoption —",
+  "options": [
+   "is legally questionable",
+   "produces slow software",
+   "requires trained staff and a support ecosystem",
+   "hides the source code"
+  ],
+  "answer": 2,
+  "explanation": "\"Critics point out that adoption requires trained staff and a support ecosystem…\""
+ },
+ {
+  "id": "mgrsys-m2-110",
+  "subject": "english",
+  "exams": [
+   "mgr-system"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Open source software is often described as free, but the word 'free' misleads. What is free is not necessarily the price; it is the liberty to read the source code, modify it and share the modified version. Many governments have adopted such software for exactly this reason. When the code of a system that stores citizens' data can be inspected by independent experts, hidden flaws are found sooner. Cost savings, where they occur, are a secondary benefit. Critics point out that adoption requires trained staff and a support ecosystem, without which an organisation may find itself holding software that nobody can maintain. That objection is fair, and it explains why the most successful migrations have been gradual rather than sudden.\"\n\nThe author suggests that migrations to open source should be —",
+  "options": [
+   "sudden and complete",
+   "gradual",
+   "avoided altogether",
+   "outsourced fully"
+  ],
+  "answer": 1,
+  "explanation": "\"…the most successful migrations have been gradual rather than sudden.\" — 'rather than' रचना में उत्तर उससे पहले वाला शब्द होता है।"
+ }
 ]

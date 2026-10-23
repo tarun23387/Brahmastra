@@ -1,77 +1,1202 @@
 [
-{"id":"progsr-pgm2-001","subject":"computer","exams":["prog-sr"],"question":"Which of the following is NOT a function of an operating system?","options":["Memory management","Process management","File management","Compilation of source code"],"answer":3,"explanation":"मेमोरी प्रबंधन, प्रक्रिया प्रबंधन और फ़ाइल प्रबंधन — तीनों ऑपरेटिंग सिस्टम के अपने काम हैं। स्रोत कोड का संकलन कंपाइलर करता है, जो OS के ऊपर चलने वाला अलग प्रोग्राम है।"},
-{"id":"progsr-pgm2-002","subject":"computer","exams":["prog-sr"],"question":"In UNIX, which system call is used to create a new process?","options":["create( )","new( )","fork( )","exec( )"],"answer":2,"explanation":"fork( ) चलती हुई प्रक्रिया की हूबहू प्रति बनाकर नई चाइल्ड प्रक्रिया जन्माता है। exec( ) नई प्रक्रिया नहीं बनाता — वह मौजूदा प्रक्रिया के भीतर ही नया प्रोग्राम चढ़ा देता है। create( ) और new( ) यूनिक्स के सिस्टम कॉल हैं ही नहीं।"},
-{"id":"progsr-pgm2-003","subject":"computer","exams":["prog-sr"],"question":"Which of the following is NOT stored in the Process Control Block (PCB)?","options":["Process ID","Program Counter","List of open files","Source code of the program"],"answer":3,"explanation":"PCB में वही सूचना रहती है जो प्रक्रिया को रोककर दोबारा चलाने के लिए चाहिए — प्रोसेस ID, प्रोग्राम काउंटर, रजिस्टरों की स्थिति, खुली फ़ाइलों की सूची। स्रोत कोड डिस्क पर किसी फ़ाइल में पड़ा रहता है, PCB में नहीं।"},
-{"id":"progsr-pgm2-004","subject":"computer","exams":["prog-sr"],"question":"A process that has completed execution but whose entry still remains in the process table is called —","options":["Orphan process","Zombie process","Daemon process","Child process"],"answer":1,"explanation":"ज़ॉम्बी वह प्रक्रिया है जो मर चुकी है, पर उसकी प्रविष्टि इसलिए बची है कि पैरेंट ने अभी उसका exit status नहीं पढ़ा। अनाथ (orphan) उलटा मामला है — वह ज़िंदा है, पर उसका पैरेंट पहले मर गया।"},
-{"id":"progsr-pgm2-005","subject":"computer","exams":["prog-sr"],"question":"Which CPU scheduling algorithm gives the minimum average waiting time?","options":["FCFS","Round Robin","SJF","Priority"],"answer":2,"explanation":"SJF (सबसे छोटा काम पहले) औसत प्रतीक्षा समय के लिहाज़ से सर्वोत्तम सिद्ध है। अड़चन यह है कि अगली CPU burst कितनी लंबी होगी यह पहले से पता नहीं होता, इसलिए व्यवहार में अनुमान लगाना पड़ता है।"},
-{"id":"progsr-pgm2-006","subject":"computer","exams":["prog-sr"],"question":"The semaphore operation which decrements the value of the semaphore is known as —","options":["signal / V operation","wait / P operation","release operation","post operation"],"answer":1,"explanation":"सेमाफ़ोर पर wait (P) मान घटाती है और signal (V) बढ़ाती है। P डच शब्द proberen (परखना) से बना है और V verhogen (बढ़ाना) से।"},
-{"id":"progsr-pgm2-007","subject":"computer","exams":["prog-sr"],"question":"Banker's algorithm is used for deadlock —","options":["Prevention","Detection","Avoidance","Recovery"],"answer":2,"explanation":"बैंकर्स एल्गोरिद्म हर संसाधन-अनुरोध से पहले देखता है कि सिस्टम सुरक्षित अवस्था में रहेगा या नहीं, और असुरक्षित होने पर अनुरोध टाल देता है। यह परिवर्जन (avoidance) है, निवारण नहीं — क्योंकि डेडलॉक की चार शर्तों में से कोई तोड़ी नहीं जाती।"},
-{"id":"progsr-pgm2-008","subject":"computer","exams":["prog-sr"],"question":"Which of the following is NOT a necessary condition for deadlock?","options":["Mutual exclusion","Hold and wait","Preemption","Circular wait"],"answer":2,"explanation":"डेडलॉक की चार आवश्यक शर्तें हैं — पारस्परिक अपवर्जन, होल्ड-एंड-वेट, नो-प्रीएम्पशन और चक्रीय प्रतीक्षा। यानी शर्त प्रीएम्पशन नहीं, उसका न होना है। इसीलिए संसाधन छीन लेने की सुविधा डेडलॉक तोड़ने का एक उपाय भी है।"},
-{"id":"progsr-pgm2-009","subject":"computer","exams":["prog-sr"],"question":"Belady's anomaly is exhibited by which page replacement algorithm?","options":["LRU","FIFO","Optimal","LFU"],"answer":1,"explanation":"बेलेडी की विसंगति यानी फ़्रेम बढ़ाने पर भी पेज फ़ॉल्ट का बढ़ जाना। यह FIFO में दिखती है। LRU और Optimal स्टैक एल्गोरिद्म हैं, इसलिए उनमें कभी नहीं होती।"},
-{"id":"progsr-pgm2-010","subject":"computer","exams":["prog-sr"],"question":"Thrashing in a system occurs due to —","options":["Very low page fault rate","Excessive paging activity and high page fault rate","Excessive use of CPU registers","Too few processes in memory"],"answer":1,"explanation":"थ्रैशिंग में सिस्टम का ज़्यादातर समय पेज अंदर-बाहर करने में बीतता है — पेज फ़ॉल्ट दर बहुत ऊँची और असली काम लगभग ठप। कारण यह है कि प्रक्रियाओं को उनके वर्किंग सेट से कम फ़्रेम मिले हैं।"},
-{"id":"progsr-pgm2-011","subject":"computer","exams":["prog-sr"],"question":"The UNIX command chmod 744 file.txt gives which permissions?","options":["rwx r-- r--","rw- r-x r-x","r-x rw- rw-","rwx rw- rw-"],"answer":0,"explanation":"हर अंक तीन बिट है — पढ़ना 4, लिखना 2, चलाना 1। इसलिए 7 = rwx (मालिक), 4 = r-- (समूह) और 4 = r-- (अन्य)।"},
-{"id":"progsr-pgm2-012","subject":"computer","exams":["prog-sr"],"question":"Which of the following is NOT a storage class in C?","options":["auto","register","volatile","static"],"answer":2,"explanation":"C में स्टोरेज क्लास चार हैं — auto, register, static और extern। volatile स्टोरेज क्लास नहीं, टाइप क्वालिफ़ायर है (const की तरह)।"},
-{"id":"progsr-pgm2-013","subject":"computer","exams":["prog-sr"],"question":"What will be the output of printf(\"%d\", 10/3*3); in C?","options":["10","9","3","3.33"],"answer":1,"explanation":"/ और * की प्राथमिकता समान है और साहचर्य बाएँ से दाएँ, इसलिए पहले 10/3 होता है। दोनों पूर्णांक हैं, सो भाग भी पूर्णांक — 3। फिर 3 × 3 = 9।"},
-{"id":"progsr-pgm2-014","subject":"computer","exams":["prog-sr"],"question":"Which of the following is an exit-controlled loop?","options":["for","while","do-while","nested for"],"answer":2,"explanation":"do-while में शर्त शरीर के बाद जाँची जाती है, इसलिए शरीर कम-से-कम एक बार ज़रूर चलता है। for और while प्रवेश-नियंत्रित हैं — शर्त झूठी हो तो शरीर एक बार भी नहीं चलता।"},
-{"id":"progsr-pgm2-015","subject":"computer","exams":["prog-sr"],"question":"In a flowchart, the diamond-shaped symbol represents —","options":["Input/Output","Processing","Decision","Terminator"],"answer":2,"explanation":"प्रवाह-चित्र में समचतुर्भुज निर्णय दिखाता है, समांतर चतुर्भुज इनपुट/आउटपुट, आयत प्रक्रमण और अंडाकार आरंभ या अंत।"},
-{"id":"progsr-pgm2-016","subject":"computer","exams":["prog-sr"],"question":"Function overloading in C++ is an example of —","options":["Run-time polymorphism","Compile-time polymorphism","Inheritance","Encapsulation"],"answer":1,"explanation":"एक ही नाम के कई फलन, जिनके प्राचल भिन्न हों — कौन-सा चलेगा यह कंपाइलर संकलन के समय ही तय कर देता है। इसीलिए यह संकलन-कालीन बहुरूपता है। रन-टाइम बहुरूपता virtual फलन से आती है।"},
-{"id":"progsr-pgm2-017","subject":"computer","exams":["prog-sr"],"question":"Which statement about a constructor is correct?","options":["It has the same name as the class and no return type","It must return void","It can be called explicitly like a normal function","It is executed when an object is destroyed"],"answer":0,"explanation":"कंस्ट्रक्टर का नाम वर्ग के नाम जैसा ही होता है और उसका कोई प्रतिफल प्रकार नहीं होता — void भी नहीं। वह वस्तु बनते समय चलता है; नष्ट होते समय डिस्ट्रक्टर चलता है।"},
-{"id":"progsr-pgm2-018","subject":"computer","exams":["prog-sr"],"question":"A friend function in C++ —","options":["is a member of the class","can access private members but is not a member of the class","can access only public members","is inherited by derived classes"],"answer":1,"explanation":"friend फलन वर्ग का सदस्य नहीं होता, फिर भी उसे private और protected सदस्यों तक पहुँच मिलती है। मित्रता न विरासत में मिलती है, न आपस में लौटती है।"},
-{"id":"progsr-pgm2-019","subject":"computer","exams":["prog-sr"],"question":"Which of the following is NOT supported by Java?","options":["Encapsulation","Inheritance","Multiple inheritance through classes","Polymorphism"],"answer":2,"explanation":"जावा में वर्गों के माध्यम से बहु-वंशानुक्रम नहीं है — 'डायमंड समस्या' से बचने के लिए। वही ज़रूरत इंटरफ़ेस से पूरी की जाती है।"},
-{"id":"progsr-pgm2-020","subject":"computer","exams":["prog-sr"],"question":"The .class file produced by the Java compiler contains —","options":["Machine code","Assembly code","Bytecode","Source code"],"answer":2,"explanation":"जावा कंपाइलर स्रोत को मशीन कोड नहीं, बाइटकोड में बदलता है, जो .class फ़ाइल में रहता है। उसे हर मंच पर वहाँ का JVM चलाता है — यही जावा की मंच-स्वतंत्रता की जड़ है।"},
-{"id":"progsr-pgm2-021","subject":"computer","exams":["prog-sr"],"question":"Which is the correct way to declare an array of 10 integers in C?","options":["array int [10];","integer arr [10];","int arr ( );","int arr [10];"],"answer":3,"explanation":"C में क्रम है — पहले प्रकार, फिर नाम, फिर वर्ग कोष्ठक में आकार। इसलिए int arr[10]; सही है। integer और array C के कीवर्ड हैं ही नहीं।"},
-{"id":"progsr-pgm2-022","subject":"computer","exams":["prog-sr"],"question":"In Perl, the symbol % before a variable name denotes a —","options":["Scalar","Array","Hash","Filehandle"],"answer":2,"explanation":"पर्ल में चिह्न से ही प्रकार पता चल जाता है — $ स्केलर, @ ऐरे और % हैश, यानी कुंजी-मान के युग्मों वाला संग्रह।"},
-{"id":"progsr-pgm2-023","subject":"computer","exams":["prog-sr"],"question":"In Perl, which function removes and returns the last element of an array?","options":["shift","pop","splice","chop"],"answer":1,"explanation":"pop ऐरे के अंत से तत्व निकालकर लौटाता है और shift आरंभ से। chop ऐरे का नहीं, स्ट्रिंग का आख़िरी अक्षर काटता है।"},
-{"id":"progsr-pgm2-024","subject":"computer","exams":["prog-sr"],"question":"getElementById( ) is a method of which JavaScript object?","options":["window","document","form","history"],"answer":1,"explanation":"यह document वस्तु का मेथड है — document.getElementById('id')। DOM का मूल document ही है, इसलिए पेज के तत्व वहीं से खोजे जाते हैं।"},
-{"id":"progsr-pgm2-025","subject":"computer","exams":["prog-sr"],"question":"Which of the following is a server-side scripting language?","options":["JavaScript","HTML","CSS","PHP"],"answer":3,"explanation":"PHP सर्वर पर चलकर तैयार HTML ब्राउज़र को भेजता है। JavaScript मुख्यतः ब्राउज़र में चलती है, और HTML व CSS स्क्रिप्टिंग भाषाएँ हैं ही नहीं।"},
-{"id":"progsr-pgm2-026","subject":"computer","exams":["prog-sr"],"question":"In an ER diagram, a double rectangle represents —","options":["Strong entity","Weak entity","Relationship","Derived attribute"],"answer":1,"explanation":"दोहरा आयत दुर्बल इकाई (weak entity) है — वह जिसकी अपनी पूर्ण कुंजी नहीं होती और जो किसी प्रबल इकाई पर टिकी रहती है। सामान्य आयत प्रबल इकाई है और विषम चतुर्भुज संबंध।"},
-{"id":"progsr-pgm2-027","subject":"computer","exams":["prog-sr"],"question":"A relation which is in 2NF and has no transitive dependency is in —","options":["1NF","3NF","BCNF","4NF"],"answer":1,"explanation":"3NF की परिभाषा यही है — संबंध 2NF में हो और कोई भी अकुंजी गुण कुंजी पर सकर्मक (transitive) रूप से निर्भर न हो।"},
-{"id":"progsr-pgm2-028","subject":"computer","exams":["prog-sr"],"question":"Which of the following is NOT a DDL command?","options":["CREATE","ALTER","DROP","UPDATE"],"answer":3,"explanation":"CREATE, ALTER, DROP और TRUNCATE ढाँचा बदलते हैं, इसलिए DDL में आते हैं। UPDATE ढाँचा नहीं, भीतर के आँकड़े बदलता है — वह DML है।"},
-{"id":"progsr-pgm2-029","subject":"computer","exams":["prog-sr"],"question":"A super key from which no attribute can be removed without losing uniqueness is called —","options":["Primary key","Foreign key","Candidate key","Alternate key"],"answer":2,"explanation":"जिस सुपर-कुंजी में से कोई भी गुण हटाते ही अद्वितीयता टूट जाए, वह न्यूनतम सुपर-कुंजी यानी कैंडिडेट की है। उन्हीं में से एक चुनकर प्राथमिक कुंजी बनती है और बाक़ी वैकल्पिक कुंजियाँ कहलाती हैं।"},
-{"id":"progsr-pgm2-030","subject":"computer","exams":["prog-sr"],"question":"Which property of a transaction ensures that either all operations are performed or none?","options":["Consistency","Atomicity","Isolation","Durability"],"answer":1,"explanation":"यह ACID की पहली कड़ी — परमाणुकता (atomicity) है: लेनदेन या तो पूरा होगा या बिलकुल नहीं। बीच में बिजली चली जाए तो अधूरा काम पलट दिया जाता है।"},
-{"id":"progsr-pgm2-031","subject":"computer","exams":["prog-sr"],"question":"The ability to change the conceptual schema without changing the external schema is called —","options":["Physical data independence","Logical data independence","Data abstraction","Data redundancy"],"answer":1,"explanation":"संकल्पनात्मक (तार्किक) स्तर बदलने पर बाह्य स्तर और अनुप्रयोगों को न बदलना पड़े — यही तार्किक आँकड़ा स्वतंत्रता है। भौतिक स्वतंत्रता भंडारण के स्तर से जुड़ी है।"},
-{"id":"progsr-pgm2-032","subject":"computer","exams":["prog-sr"],"question":"In SQL, which clause is used to filter groups formed by GROUP BY?","options":["WHERE","HAVING","ORDER BY","FILTER"],"answer":1,"explanation":"WHERE समूह बनने से पहले पंक्तियाँ छाँटता है। समूह बन जाने के बाद उन पर शर्त लगानी हो तो HAVING लगता है — इसीलिए समुच्चय फलन WHERE में नहीं चलते।"},
-{"id":"progsr-pgm2-033","subject":"computer","exams":["prog-sr"],"question":"Which aggregate function counts all rows including those with NULL values?","options":["COUNT(column)","COUNT(*)","SUM(*)","TOTAL( )"],"answer":1,"explanation":"COUNT(*) पंक्तियाँ गिनता है, इसलिए NULL वाली भी गिनती में आ जाती हैं। COUNT(column) उस स्तंभ के NULL छोड़ देता है।"},
-{"id":"progsr-pgm2-034","subject":"computer","exams":["prog-sr"],"question":"In MS-Access, which object is used to display and print data in a formatted layout?","options":["Table","Query","Form","Report"],"answer":3,"explanation":"तालिका आँकड़े रखती है, क्वेरी छाँटती है, फ़ॉर्म प्रविष्टि के लिए है और रिपोर्ट छपाई-योग्य सजी-सजाई प्रस्तुति देती है।"},
-{"id":"progsr-pgm2-035","subject":"computer","exams":["prog-sr"],"question":"In Oracle, which command permanently saves the changes made by a transaction?","options":["SAVE","COMMIT","ROLLBACK","GRANT"],"answer":1,"explanation":"COMMIT लेनदेन के परिवर्तन स्थायी कर देता है और ROLLBACK उन्हें पलट देता है। SAVE ओरेकल की कमांड नहीं, और GRANT अधिकार देने के लिए है।"},
-{"id":"progsr-pgm2-036","subject":"computer","exams":["prog-sr"],"question":"In PHP, every variable name must begin with —","options":["#","&","$","@"],"answer":2,"explanation":"PHP में हर चर $ से शुरू होता है, जैसे $name। यह भाषा का नियम है, शैली की बात नहीं।"},
-{"id":"progsr-pgm2-037","subject":"computer","exams":["prog-sr"],"question":"The default port number of HTTPS is —","options":["21","80","443","8080"],"answer":2,"explanation":"HTTP का डिफ़ॉल्ट पोर्ट 80 है और HTTPS का 443। 21 FTP का है और 8080 प्रायः वैकल्पिक वेब सर्वरों का।"},
-{"id":"progsr-pgm2-038","subject":"computer","exams":["prog-sr"],"question":"In the MVC architecture, the component that handles user input and updates the model is —","options":["Model","View","Controller","Router"],"answer":2,"explanation":"मॉडल आँकड़े और नियम रखता है, व्यू उन्हें दिखाता है, और उपयोगकर्ता का इनपुट लेकर मॉडल को बदलने का काम कंट्रोलर करता है।"},
-{"id":"progsr-pgm2-039","subject":"computer","exams":["prog-sr"],"question":"IIS (Internet Information Services) web server is developed by —","options":["Apache Software Foundation","Microsoft","Oracle","Sun Microsystems"],"answer":1,"explanation":"IIS माइक्रोसॉफ़्ट का वेब सर्वर है और विंडोज़ सर्वर के साथ आता है। अपाचे फ़ाउंडेशन का सर्वर Apache HTTP Server है।"},
-{"id":"progsr-pgm2-040","subject":"computer","exams":["prog-sr"],"question":"The default subnet mask of a Class C network is —","options":["255.0.0.0","255.255.0.0","255.255.255.0","255.255.255.255"],"answer":2,"explanation":"श्रेणी C में पहले तीन ऑक्टेट नेटवर्क के होते हैं, इसलिए डिफ़ॉल्ट मास्क 255.255.255.0 है। श्रेणी A का 255.0.0.0 और B का 255.255.0.0 होता है।"},
-{"id":"progsr-pgm2-041","subject":"computer","exams":["prog-sr"],"question":"Which protocol is used to retrieve e-mail from a mail server?","options":["SMTP","POP3","FTP","SNMP"],"answer":1,"explanation":"SMTP डाक भेजने का प्रोटोकॉल है। सर्वर से डाक उतारने के लिए POP3 है (या IMAP, जो प्रति सर्वर पर ही रहने देता है)।"},
-{"id":"progsr-pgm2-042","subject":"computer","exams":["prog-sr"],"question":"The main function of DNS is to —","options":["Convert IP address to MAC address","Convert domain name to IP address","Assign IP addresses dynamically","Encrypt data during transmission"],"answer":1,"explanation":"DNS का काम डोमेन नाम को IP पते में बदलना है। IP से MAC निकालना ARP का काम है और IP पते बाँटना DHCP का।"},
-{"id":"progsr-pgm2-043","subject":"computer","exams":["prog-sr"],"question":"SSL operates between which two layers of the TCP/IP model?","options":["Physical and Data link","Data link and Network","Application and Transport","Transport and Network"],"answer":2,"explanation":"SSL/TLS अनुप्रयोग परत और परिवहन परत के बीच बैठता है — यानी अनुप्रयोग के आँकड़े TCP तक पहुँचने से पहले ही एन्क्रिप्ट हो जाते हैं।"},
-{"id":"progsr-pgm2-044","subject":"computer","exams":["prog-sr"],"question":"In socket programming, connectionless communication is provided by —","options":["TCP","UDP","ICMP","ARP"],"answer":1,"explanation":"UDP संबंध-रहित है — हाथ मिलाए बिना डेटाग्राम भेज देता है, इसीलिए तेज़ पर अविश्वसनीय। TCP पहले संबंध बनाता है।"},
-{"id":"progsr-pgm2-045","subject":"computer","exams":["prog-sr"],"question":"Which HTML tag creates the largest heading?","options":["<h1>","<h6>","<head>","<big>"],"answer":0,"explanation":"शीर्षक <h1> से <h6> तक होते हैं — <h1> सबसे बड़ा और <h6> सबसे छोटा। <head> शीर्षक नहीं, दस्तावेज़ का सूचना-खंड है।"},
-{"id":"progsr-pgm2-046","subject":"computer","exams":["prog-sr"],"question":"Which attribute of the <a> tag specifies the destination of a link?","options":["src","link","href","target"],"answer":2,"explanation":"href (hypertext reference) बताता है कि कड़ी कहाँ ले जाएगी। target बताता है कि वह किस खिड़की में खुलेगी, और src चित्र या स्क्रिप्ट जैसे तत्वों में आता है।"},
-{"id":"progsr-pgm2-047","subject":"computer","exams":["prog-sr"],"question":"Which of the following HTML elements does NOT have a closing tag?","options":["<p>","<div>","<img>","<table>"],"answer":2,"explanation":"<img> रिक्त (void) तत्व है — उसमें कोई सामग्री नहीं होती, इसलिए समापन टैग भी नहीं। <br> और <hr> भी इसी तरह के हैं।"},
-{"id":"progsr-pgm2-048","subject":"computer","exams":["prog-sr"],"question":"In MS-Excel, $B$4 is an example of —","options":["Relative reference","Absolute reference","Mixed reference","Circular reference"],"answer":1,"explanation":"$ चिह्न स्तंभ या पंक्ति को जमा देता है। $B$4 में दोनों जमे हैं, इसलिए सूत्र कहीं भी नक़ल कीजिए, संदर्भ वही रहेगा — यही निरपेक्ष संदर्भ है। $B4 या B$4 मिश्रित संदर्भ होते।"},
-{"id":"progsr-pgm2-049","subject":"computer","exams":["prog-sr"],"question":"The keyboard shortcut to make selected text bold in MS-Word is —","options":["Ctrl + B","Ctrl + I","Ctrl + U","Ctrl + D"],"answer":0,"explanation":"Ctrl + B बोल्ड करता है, Ctrl + I तिरछा और Ctrl + U रेखांकित। Ctrl + D फ़ॉन्ट का संवाद खोलता है।"},
-{"id":"progsr-pgm2-050","subject":"computer","exams":["prog-sr"],"question":"In MS-PowerPoint, which view displays all slides as small thumbnails?","options":["Normal View","Slide Sorter View","Reading View","Outline View"],"answer":1,"explanation":"स्लाइड सॉर्टर व्यू में सारी स्लाइडें छोटी-छोटी दिखती हैं, इसलिए क्रम बदलना, नक़ल करना और हटाना आसान रहता है।"},
-{"id":"progsr-pgm2-051","subject":"reasoning","exams":["prog-sr"],"question":"What will come in place of the question mark?\n\nDCXW, FEVU, HGTS, ?","options":["JIRQ","IJQR","JKRS","KJQP"],"answer":0,"explanation":"पहले दो अक्षर आगे बढ़ते हैं — D, F, H के बाद J और C, E, G के बाद I। अंतिम दो पीछे लौटते हैं — X, V, T के बाद R और W, U, S के बाद Q। इसलिए अगला पद JIRQ है।"},
-{"id":"progsr-pgm2-052","subject":"reasoning","exams":["prog-sr"],"question":"If SHARP is coded as 58034 and PUSH is coded as 4658, then RUSH will be coded as —","options":["4658","3583","3658","3568"],"answer":2,"explanation":"SHARP = 58034 से S = 5, H = 8, A = 0, R = 3, P = 4। PUSH = 4658 से U = 6। अब RUSH = 3, 6, 5, 8 यानी 3658।"},
-{"id":"progsr-pgm2-053","subject":"reasoning","exams":["prog-sr"],"question":"Find the next term of the series : 2, 6, 12, 20, 30, ?","options":["36","40","42","46"],"answer":2,"explanation":"अंतर क्रमशः 4, 6, 8, 10 हैं, इसलिए अगला अंतर 12 होगा — 30 + 12 = 42। दूसरा तरीक़ा: पद n × (n + 1) के रूप में हैं, सो छठा पद 6 × 7 = 42।"},
-{"id":"progsr-pgm2-054","subject":"reasoning","exams":["prog-sr"],"question":"Find the odd one out.","options":["8","27","64","100"],"answer":3,"explanation":"8 = 2³, 27 = 3³ और 64 = 4³ — तीनों पूर्ण घन हैं। 100 पूर्ण घन नहीं है (वह पूर्ण वर्ग है), इसलिए वही विषम है।"},
-{"id":"progsr-pgm2-055","subject":"reasoning","exams":["prog-sr"],"question":"Pointing to a photograph, a man said, \"She is the daughter of my grandfather's only son.\" How is the girl related to the man?","options":["Daughter","Sister","Niece","Cousin"],"answer":1,"explanation":"दादा का इकलौता बेटा यानी उस व्यक्ति का अपना पिता। पिता की बेटी हुई उसकी बहन।"},
-{"id":"progsr-pgm2-056","subject":"reasoning","exams":["prog-sr"],"question":"A man walks 5 km towards North, then turns right and walks 3 km, then turns right again and walks 5 km. How far and in which direction is he from the starting point?","options":["3 km, East","3 km, West","5 km, East","8 km, North"],"answer":0,"explanation":"उत्तर की ओर 5 किमी, फिर दाएँ मुड़कर पूर्व की ओर 3 किमी, फिर दाएँ मुड़कर दक्षिण की ओर 5 किमी। उत्तर और दक्षिण कट गए; बचा केवल पूर्व की ओर 3 किमी।"},
-{"id":"progsr-pgm2-057","subject":"reasoning","exams":["prog-sr"],"question":"Statements : All programmers are analysts. Some analysts are managers.\n\nConclusions :\nI. Some programmers are managers.\nII. All analysts are programmers.","options":["Only I follows","Only II follows","Both follow","Neither I nor II follows"],"answer":3,"explanation":"जो विश्लेषक प्रबंधक हैं, वे प्रोग्रामर भी हों — यह ज़रूरी नहीं, इसलिए I नहीं निकलता। और 'सभी प्रोग्रामर विश्लेषक हैं' को उलटकर 'सभी विश्लेषक प्रोग्रामर हैं' नहीं कहा जा सकता, इसलिए II भी नहीं। कोई निष्कर्ष नहीं निकलता।"},
-{"id":"progsr-pgm2-058","subject":"reasoning","exams":["prog-sr"],"question":"What is the angle between the two hands of a clock at 4 : 45?","options":["120°","122½°","127½°","135°"],"answer":2,"explanation":"मिनट की सुई 45 मिनट पर, यानी 270° पर है। घंटे की सुई 4 × 30 + 45 × 0.5 = 142.5° पर। अंतर 270 − 142.5 = 127.5°, यानी 127½°।"},
-{"id":"progsr-pgm2-059","subject":"reasoning","exams":["prog-sr"],"question":"If 1 January 2026 is a Thursday, what day of the week will 1 March 2026 be?","options":["Friday","Saturday","Sunday","Monday"],"answer":2,"explanation":"1 जनवरी से 1 मार्च तक 31 + 28 = 59 दिन हैं, क्योंकि 2026 अधिवर्ष नहीं है। 59 को 7 से भाग देने पर शेष 3 बचता है — गुरुवार से तीन दिन आगे यानी रविवार।"},
-{"id":"progsr-pgm2-060","subject":"reasoning","exams":["prog-sr"],"question":"Five friends A, B, C, D and E are sitting in a row. B is to the right of A, C is to the left of A, D is at the extreme right and E is sitting between A and D. Who is sitting at the extreme left?","options":["A","B","C","E"],"answer":2,"explanation":"D सबसे दाएँ है और E, A तथा D के बीच बैठा है। B, A के दाएँ है और C, A के बाएँ — इसलिए क्रम बनता है C, A, B, E, D। सबसे बाएँ C है।"},
-{"id":"progsr-pgm2-061","subject":"reasoning","exams":["prog-sr"],"question":"Find the missing number.\n\n 7    8    6\n 4    9    5\n 3    2    ?\n\n25   70   29","options":["1","5","8","9"],"answer":0,"explanation":"हर स्तंभ में ऊपर के दो अंकों का गुणनफल निकालकर उसमें से तीसरा अंक घटाइए: 7 × 4 − 3 = 25 और 8 × 9 − 2 = 70। तीसरे स्तंभ में 6 × 5 − ? = 29, इसलिए ? = 1।"},
-{"id":"progsr-pgm2-062","subject":"reasoning","exams":["prog-sr"],"question":"Compiler : High-level language :: Assembler : ?","options":["Machine language","Assembly language","Bytecode","Object code"],"answer":1,"explanation":"जोड़ी 'अनुवादक और उसकी इनपुट भाषा' की है, आउटपुट की नहीं। कंपाइलर उच्च-स्तरीय भाषा पढ़ता है, वैसे ही असेंबलर असेंबली भाषा पढ़ता है।"},
-{"id":"progsr-pgm2-063","subject":"reasoning","exams":["prog-sr"],"question":"If 'A + B' means A is the father of B, and 'A - B' means A is the wife of B, then in the expression 'P + Q - R', how is P related to R?","options":["Father","Father-in-law","Brother","Uncle"],"answer":1,"explanation":"'P + Q' यानी P, Q का पिता है। 'Q − R' यानी Q, R की पत्नी है। तो R का विवाह Q से हुआ और Q के पिता P हैं — इसलिए P, R का ससुर हुआ।"},
-{"id":"progsr-pgm2-064","subject":"reasoning","exams":["prog-sr"],"question":"In a class of 40 students, Ravi's rank is 12th from the top. What is his rank from the bottom?","options":["28","29","30","27"],"answer":1,"explanation":"नीचे से स्थान = कुल विद्यार्थी − ऊपर से स्थान + 1 = 40 − 12 + 1 = 29। एक जोड़ना इसलिए ज़रूरी है कि रवि दोनों गिनतियों में आता है।"},
-{"id":"progsr-pgm2-065","subject":"reasoning","exams":["prog-sr"],"question":"Find the odd group out.","options":["BDF","CEG","DFH","EGJ"],"answer":3,"explanation":"BDF, CEG और DFH — तीनों में लगातार अक्षरों का अंतर 2 और 2 है। EGJ में अंतर 2 और 3 का है, इसलिए वही विषम है।"},
-{"id":"progsr-pgm2-066","subject":"ganit","exams":["prog-sr"],"question":"On selling a coat for ₹1,260 a shopkeeper gets 5% profit. If he sells the same coat for ₹1,500, his profit percentage would be —","options":["18%","20%","22%","25%"],"answer":3,"explanation":"5% लाभ पर विक्रय मूल्य ₹1,260 है, इसलिए क्रय मूल्य = 1260 ÷ 1.05 = ₹1,200। ₹1,500 पर लाभ ₹300 हुआ, यानी 300 ÷ 1200 = 25%।"},
-{"id":"progsr-pgm2-067","subject":"ganit","exams":["prog-sr"],"question":"The ratio of the present ages of x and y is 3 : 1. If after 15 years the ratio becomes 2 : 1, their present ages respectively are —","options":["30, 10","45, 15","60, 20","75, 25"],"answer":1,"explanation":"आयु 3k और k मानिए। 15 वर्ष बाद (3k + 15) : (k + 15) = 2 : 1, यानी 3k + 15 = 2k + 30, सो k = 15। वर्तमान आयु 45 और 15 वर्ष।"},
-{"id":"progsr-pgm2-068","subject":"ganit","exams":["prog-sr"],"question":"Two trains of equal length take 5 seconds and 6 seconds respectively to cross a pole. If both trains move in the same direction, how long will they take to cross each other?","options":["30 seconds","45 seconds","55 seconds","60 seconds"],"answer":3,"explanation":"दोनों की लंबाई L मानिए; तब चालें L/5 और L/6 हुईं। एक ही दिशा में सापेक्ष चाल = L/5 − L/6 = L/30। पार करनी है दोनों की कुल लंबाई 2L, इसलिए समय = 2L ÷ (L/30) = 60 सेकंड।"},
-{"id":"progsr-pgm2-069","subject":"ganit","exams":["prog-sr"],"question":"The selling price of an article including 18% GST is ₹1,298. If the shopkeeper earns a profit of 10%, the cost price of the article is —","options":["₹1,000","₹1,100","₹1,200","₹1,500"],"answer":0,"explanation":"GST सहित ₹1,298 है, इसलिए GST से पहले विक्रय मूल्य = 1298 ÷ 1.18 = ₹1,100। उसी पर 10% लाभ है, सो क्रय मूल्य = 1100 ÷ 1.1 = ₹1,000।"},
-{"id":"progsr-pgm2-070","subject":"ganit","exams":["prog-sr"],"question":"The average of 5 numbers is 20. If one number 18 is removed, the average of the remaining numbers is —","options":["20","20.5","21","22"],"answer":1,"explanation":"पाँच संख्याओं का योग = 5 × 20 = 100। 18 हटाने पर योग 82 बचा और संख्याएँ चार — औसत 82 ÷ 4 = 20.5।"},
-{"id":"progsr-pgm2-071","subject":"ganit","exams":["prog-sr"],"question":"A number is first increased by 20% and then decreased by 20%. The net change is —","options":["No change","4% increase","4% decrease","2% decrease"],"answer":2,"explanation":"100 लीजिए: 20% बढ़ने पर 120, फिर उसी का 20% घटने पर 120 − 24 = 96। यानी 4% की कमी। बराबर प्रतिशत की वृद्धि और कमी हमेशा घटा ही देती है।"},
-{"id":"progsr-pgm2-072","subject":"ganit","exams":["prog-sr"],"question":"A can complete a work in 12 days and B in 18 days. Working together, they will complete it in —","options":["6 days","7.2 days","7.5 days","9 days"],"answer":1,"explanation":"एक दिन का काम = 1/12 + 1/18 = 3/36 + 2/36 = 5/36। पूरा काम 36 ÷ 5 = 7.2 दिन में होगा।"},
-{"id":"progsr-pgm2-073","subject":"ganit","exams":["prog-sr"],"question":"The compound interest on ₹10,000 at 10% per annum for 2 years is —","options":["₹2,000","₹2,100","₹2,200","₹2,310"],"answer":1,"explanation":"मिश्रधन = 10,000 × (1.1)² = ₹12,100, इसलिए चक्रवृद्धि ब्याज ₹2,100। साधारण ब्याज ₹2,000 होता — ₹100 का अंतर पहले वर्ष के ब्याज पर लगा ब्याज है।"},
-{"id":"progsr-pgm2-074","subject":"ganit","exams":["prog-sr"],"question":"If 3^(x-y) = 27 and 3^(x+y) = 243, then the value of x is —","options":["2","3","4","5"],"answer":2,"explanation":"27 = 3³ और 243 = 3⁵, इसलिए x − y = 3 और x + y = 5। दोनों समीकरण जोड़ने पर 2x = 8, यानी x = 4।"},
-{"id":"progsr-pgm2-075","subject":"ganit","exams":["prog-sr"],"question":"The area of a circle whose radius is 7 cm is (take π = 22/7) —","options":["44 cm²","154 cm²","176 cm²","308 cm²"],"answer":1,"explanation":"क्षेत्रफल = πr² = (22/7) × 7 × 7 = 154 वर्ग सेमी। 44 सेमी तो परिधि (2πr) है — यही सबसे आम भूल है।"}
+ {
+  "id": "progsr-pgm2-001",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which binary number representations have two different patterns for zero (+0 and −0)?",
+  "options": [
+   "2's complement only",
+   "1's complement and 2's complement",
+   "Sign-magnitude and 1's complement",
+   "Only unsigned binary"
+  ],
+  "answer": 2,
+  "explanation": "8-बिट साइन-मैग्निट्यूड में 0000 0000 और 1000 0000; 1's complement में 0000 0000 और 1111 1111 — दोनों शून्य हैं। 2's complement में शून्य एक ही है, इसलिए उसकी सीमा −128 से +127 है (एक ऋणात्मक संख्या अधिक)।"
+ },
+ {
+  "id": "progsr-pgm2-002",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Using 4-bit 2's complement arithmetic, 0110 − 1001 (i.e. 6 − 9) gives —",
+  "options": [
+   "1101",
+   "0011",
+   "1111",
+   "1011"
+  ],
+  "answer": 0,
+  "explanation": "घटाव = जोड़ + 2's complement: 1001 का 2's complement 0111। 0110 + 0111 = 1101। 1101 का अर्थ −3 है (−8 + 4 + 1), जो 6 − 9 के बराबर है।"
+ },
+ {
+  "id": "progsr-pgm2-003",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The sum of the hexadecimal numbers 2F and 1A is —",
+  "options": [
+   "4A",
+   "59",
+   "3F",
+   "49"
+  ],
+  "answer": 3,
+  "explanation": "F + A = 15 + 10 = 25 = 16 + 9 → अंक 9, हासिल 1। 2 + 1 + 1 = 4। योग (49)₁₆। जाँच: 47 + 26 = 73 = 4 × 16 + 9।"
+ },
+ {
+  "id": "progsr-pgm2-004",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which addressing mode needs no memory access to obtain the operand, because the operand is part of the instruction itself?",
+  "options": [
+   "Indirect",
+   "Immediate",
+   "Direct",
+   "Indexed"
+  ],
+  "answer": 1,
+  "explanation": "इमीडिएट (जैसे MOV R1, #25) में ऑपरेण्ड निर्देश में ही है — कोई अतिरिक्त मेमोरी-पहुँच नहीं। डायरेक्ट में 1 पहुँच, इनडायरेक्ट में 2 (पहले पता, फिर ऑपरेण्ड), इंडेक्स्ड में पता जोड़कर 1।"
+ },
+ {
+  "id": "progsr-pgm2-005",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "With memory-indirect addressing, how many memory references are needed to fetch the operand (after the instruction itself has been fetched)?",
+  "options": [
+   "0",
+   "1",
+   "2",
+   "3"
+  ],
+  "answer": 2,
+  "explanation": "पहली पहुँच निर्देश में दिए पते से प्रभावी पता लाती है, दूसरी उस प्रभावी पते से ऑपरेण्ड। इसीलिए इनडायरेक्ट मोड लचीला (पॉइंटर जैसा) पर धीमा है।"
+ },
+ {
+  "id": "progsr-pgm2-006",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "During the instruction cycle, which register holds the instruction that is currently being decoded and executed?",
+  "options": [
+   "Instruction Register (IR)",
+   "Accumulator",
+   "Program Counter (PC)",
+   "Memory Address Register (MAR)"
+  ],
+  "answer": 0,
+  "explanation": "फ़ेच के बाद निर्देश IR में रहता है और कंट्रोल यूनिट उसे वहीं से डिकोड करती है। PC अगले निर्देश का पता, MAR मेमोरी को भेजा जाने वाला पता और MDR मेमोरी से आया/जाने वाला डेटा रखता है।"
+ },
+ {
+  "id": "progsr-pgm2-007",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which of the following is utility software rather than an operating system or application software?",
+  "options": [
+   "Linux kernel",
+   "Disk Defragmenter",
+   "MS-Word",
+   "Tally"
+  ],
+  "answer": 1,
+  "explanation": "यूटिलिटी सॉफ़्टवेयर कंप्यूटर के रखरखाव/अनुकूलन का काम करते हैं — डीफ़्रैगमेंटर, एंटीवायरस, बैकअप, फ़ाइल-कम्प्रेशन। कर्नेल ऑपरेटिंग सिस्टम का भाग है; Word और Tally एप्लिकेशन सॉफ़्टवेयर हैं।"
+ },
+ {
+  "id": "progsr-pgm2-008",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The value of the postfix expression  2 3 4 * + 5 −  is —",
+  "options": [
+   "−9",
+   "25",
+   "15",
+   "9"
+  ],
+  "answer": 3,
+  "explanation": "3 4 * = 12; 2 12 + = 14; 14 5 − = 9। मूल्यांकन के दौरान स्टैक में अधिकतम 3 तत्व (2, 3, 4) रहे।"
+ },
+ {
+  "id": "progsr-pgm2-009",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The value of the prefix expression  − * 2 3 4  is —",
+  "options": [
+   "2",
+   "−2",
+   "10",
+   "14"
+  ],
+  "answer": 0,
+  "explanation": "प्रीफ़िक्स में संचालक पहले आता है: − ( * 2 3 ) 4 = (2 × 3) − 4 = 2। प्रीफ़िक्स का मूल्यांकन दाएँ से बाएँ स्टैक से किया जाता है।"
+ },
+ {
+  "id": "progsr-pgm2-010",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A priority queue is implemented using a binary heap of n elements. The time complexity of inserting a new element is —",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n log n)",
+   "O(n)"
+  ],
+  "answer": 1,
+  "explanation": "नया तत्व अंत में डालकर ऊपर खिसकाया जाता है (heapify-up); हीप की ऊँचाई log n है, इसलिए O(log n)। सबसे ऊँची प्राथमिकता वाला तत्व देखना O(1) और निकालना O(log n)।"
+ },
+ {
+  "id": "progsr-pgm2-011",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "An input-restricted deque allows —",
+  "options": [
+   "insertion and deletion at only one end",
+   "insertion and deletion only in the middle",
+   "deletion at only one end, but insertion at both ends",
+   "insertion at only one end, but deletion at both ends"
+  ],
+  "answer": 3,
+  "explanation": "डेक (डबल-एंडेड क्यू) दोनों सिरों पर जोड़-घटाव देता है। इनपुट-प्रतिबंधित में डालना एक सिरे से, निकालना दोनों से; आउटपुट-प्रतिबंधित में उल्टा। एक ही सिरे वाला स्टैक, और एक सिरे पर डालना/दूसरे से निकालना कतार है।"
+ },
+ {
+  "id": "progsr-pgm2-012",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In a binary search tree, the node containing the minimum key is found by —",
+  "options": [
+   "checking only the root",
+   "following right-child pointers from the root",
+   "following left-child pointers from the root until a node with no left child is reached",
+   "visiting every node in level order"
+  ],
+  "answer": 2,
+  "explanation": "BST में हर नोड का बायाँ उप-वृक्ष उससे छोटे मान रखता है, इसलिए सबसे बाएँ पहुँचा नोड न्यूनतम है। अधिकतम के लिए दाएँ चलते जाइए। समय O(h)।"
+ },
+ {
+  "id": "progsr-pgm2-013",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The keys 40, 20, 60, 10, 30 are inserted in that order into an empty binary search tree. The pre-order traversal of the tree is —",
+  "options": [
+   "40, 20, 10, 30, 60",
+   "10, 30, 20, 60, 40",
+   "40, 20, 60, 10, 30",
+   "10, 20, 30, 40, 60"
+  ],
+  "answer": 0,
+  "explanation": "वृक्ष: 40 रूट; 20 बाएँ (उसके 10 बाएँ, 30 दाएँ); 60 दाएँ। प्री-ऑर्डर (रूट-बायाँ-दायाँ): 40, 20, 10, 30, 60। इन-ऑर्डर क्रमबद्ध सूची देता, और अंतिम विकल्प लेवल-ऑर्डर है।"
+ },
+ {
+  "id": "progsr-pgm2-014",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which of the following is NOT an advantage of a DBMS over a traditional file-processing system?",
+  "options": [
+   "It enforces integrity constraints centrally",
+   "It completely removes the need for taking backups",
+   "It reduces data redundancy and inconsistency",
+   "It allows controlled concurrent access by many users"
+  ],
+  "answer": 1,
+  "explanation": "DBMS अतिरेक घटाता है, एकरूपता बनाए रखता है, अखंडता-नियम लागू करता है, समवर्ती पहुँच व सुरक्षा देता है और रिकवरी-सुविधा भी देता है। फिर भी हार्डवेयर-ख़राबी या आपदा से बचने के लिए बैकअप हमेशा ज़रूरी है।"
+ },
+ {
+  "id": "progsr-pgm2-015",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In an ER diagram, how is the key attribute of an entity set shown?",
+  "options": [
+   "By a dashed ellipse",
+   "By a diamond",
+   "Its name is underlined inside the ellipse",
+   "By a double ellipse"
+  ],
+  "answer": 2,
+  "explanation": "कुंजी गुण का नाम रेखांकित होता है। कमज़ोर इकाई की आंशिक कुंजी (discriminator) बिंदीदार रेखा से रेखांकित होती है। दोहरा दीर्घवृत्त बहु-मानी और बिंदीदार दीर्घवृत्त व्युत्पन्न गुण है।"
+ },
+ {
+  "id": "progsr-pgm2-016",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which statement about a foreign key is correct?",
+  "options": [
+   "It must have the same name as the referenced column",
+   "It can never contain NULL",
+   "It must always be unique in its own table",
+   "It refers to the primary key (or a unique key) of another table and may contain NULL unless restricted"
+  ],
+  "answer": 3,
+  "explanation": "विदेशी कुंजी दो तालिकाओं को जोड़ती है; उसका मान संदर्भित तालिका में मौजूद होना चाहिए या NULL हो (जैसे अभी विभाग तय न हो)। वह अपनी तालिका में दोहराई जा सकती है (कई कर्मचारी एक विभाग में), और नाम मेल खाना ज़रूरी नहीं।"
+ },
+ {
+  "id": "progsr-pgm2-017",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In MS-Access, which type of action query creates a new table from the results of a query?",
+  "options": [
+   "Update query",
+   "Append query",
+   "Make-Table query",
+   "Crosstab query"
+  ],
+  "answer": 2,
+  "explanation": "एक्शन क्वेरी डेटा बदलती हैं: Make-Table (नई तालिका बनाना), Append (मौजूदा तालिका में पंक्तियाँ जोड़ना), Update (मान बदलना), Delete (पंक्तियाँ हटाना)। Crosstab सारांश-तालिका दिखाती है, डेटा नहीं बदलती।"
+ },
+ {
+  "id": "progsr-pgm2-018",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which MySQL command displays the column names, data types and keys of the table students?",
+  "options": [
+   "DESCRIBE students;",
+   "SHOW DATABASES;",
+   "USE students;",
+   "SELECT * FROM students;"
+  ],
+  "answer": 0,
+  "explanation": "DESCRIBE (या DESC) तालिका का ढाँचा दिखाता है। SHOW DATABASES सभी डेटाबेस, USE डेटाबेस चुनता है, और SELECT * डेटा दिखाता है, ढाँचा नहीं।"
+ },
+ {
+  "id": "progsr-pgm2-019",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following C code print?\n\nint x = 7;\nprintf(\"%d %d\", x >> 1, x << 2);",
+  "options": [
+   "14 28",
+   "3 28",
+   "3 14",
+   "6 28"
+  ],
+  "answer": 1,
+  "explanation": "7 = 0111। एक बिट दायाँ = 0011 = 3 (2 से पूर्णांक भाग)। दो बिट बायाँ = 11100 = 28 (4 से गुणा)।"
+ },
+ {
+  "id": "progsr-pgm2-020",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following C code print?\n\nint i = 10;\ndo { printf(\"%d\", i); } while (i < 5);",
+  "options": [
+   "5",
+   "An infinite loop",
+   "Nothing",
+   "10"
+  ],
+  "answer": 3,
+  "explanation": "do-while में शर्त अंत में जाँची जाती है, इसलिए शरीर कम से कम एक बार चलता है — 10 छपता है, फिर 10 < 5 असत्य होने से लूप रुकता है। साधारण while में कुछ नहीं छपता।"
+ },
+ {
+  "id": "progsr-pgm2-021",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following C code print?\n\nchar s[] = \"abc\";\nprintf(\"%c\", *(s + 2));",
+  "options": [
+   "a",
+   "b",
+   "c",
+   "An address"
+  ],
+  "answer": 2,
+  "explanation": "*(s + 2) वही है जो s[2] — तीसरा अक्षर 'c'। सरणी का नाम पहले तत्व के पॉइंटर की तरह व्यवहार करता है।"
+ },
+ {
+  "id": "progsr-pgm2-022",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In C++, memory allocated by  int *p = new int[5];  should be released with —",
+  "options": [
+   "delete[] p;",
+   "free(p);",
+   "p = NULL;",
+   "delete p;"
+  ],
+  "answer": 0,
+  "explanation": "new[] से बनी सरणी को delete[] से ही मुक्त करना चाहिए; delete p से अपरिभाषित व्यवहार होता है। malloc/free और new/delete को आपस में मिलाना भी ग़लत है। केवल p = NULL करने से मेमोरी लीक होती है।"
+ },
+ {
+  "id": "progsr-pgm2-023",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which of the following operators can NOT be overloaded in C++?",
+  "options": [
+   "[] (subscript)",
+   "<< (insertion)",
+   "+ (addition)",
+   ":: (scope resolution)"
+  ],
+  "answer": 3,
+  "explanation": "::, . (सदस्य-पहुँच), .*, ?: (टर्नरी) और sizeof ओवरलोड नहीं हो सकते। +, [], <<, ==, () आदि ओवरलोड होते हैं — cout << obj इसी से संभव है।"
+ },
+ {
+  "id": "progsr-pgm2-024",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following Java code print?\n\nint x = 5;\nx = x++ * 2;\nSystem.out.println(x);",
+  "options": [
+   "11",
+   "10",
+   "12",
+   "5"
+  ],
+  "answer": 1,
+  "explanation": "x++ पुराना मान 5 देता है और x को 6 करता है; फिर 5 × 2 = 10 x में लिखा जाता है, जो बढ़ोतरी (6) को ढक देता है। परिणाम 10।"
+ },
+ {
+  "id": "progsr-pgm2-025",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What happens when the Java statement  int a = 5 / 0;  is executed?",
+  "options": [
+   "a becomes Infinity",
+   "An ArithmeticException is thrown at run time",
+   "The program does not compile",
+   "a becomes 0"
+  ],
+  "answer": 1,
+  "explanation": "पूर्णांक को शून्य से भाग देना रन-टाइम पर ArithmeticException ('/ by zero') देता है। double में 5.0 / 0 का परिणाम Infinity होता है, अपवाद नहीं। try-catch से इसे सँभाला जा सकता है।"
+ },
+ {
+  "id": "progsr-pgm2-026",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following Python statement print?\n\nprint(len(set([1, 2, 2, 3, 3, 3])))",
+  "options": [
+   "1",
+   "6",
+   "3",
+   "An error"
+  ],
+  "answer": 2,
+  "explanation": "set दोहराव हटाकर केवल अद्वितीय मान रखता है: {1, 2, 3}। उसकी लंबाई 3। सूची से दोहराव हटाने का यह आम तरीक़ा है।"
+ },
+ {
+  "id": "progsr-pgm2-027",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following Python code print?\n\nfor i in range(2, 10, 3):\n    print(i, end=\" \")",
+  "options": [
+   "2 3 4 5 6 7 8 9",
+   "3 6 9",
+   "2 5 8 11",
+   "2 5 8"
+  ],
+  "answer": 3,
+  "explanation": "range(start, stop, step): 2 से शुरू, 3-3 बढ़ते हुए, 10 से पहले रुकना — 2, 5, 8। stop (10) कभी शामिल नहीं होता।"
+ },
+ {
+  "id": "progsr-pgm2-028",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A traditional landline telephone call, where a dedicated path is reserved for the whole call, is an example of —",
+  "options": [
+   "connection-oriented circuit switching",
+   "message switching",
+   "datagram routing",
+   "connectionless packet switching"
+  ],
+  "answer": 0,
+  "explanation": "सर्किट स्विचिंग में बात शुरू होने से पहले पूरा मार्ग आरक्षित होता है और कॉल भर रहता है — कनेक्शन-आधारित। इंटरनेट पैकेट स्विचिंग पर चलता है जहाँ हर पैकेट अलग रास्ता ले सकता है।"
+ },
+ {
+  "id": "progsr-pgm2-029",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The sizes of a MAC address, an IPv4 address and an IPv6 address are respectively —",
+  "options": [
+   "32, 48 and 128 bits",
+   "48, 64 and 128 bits",
+   "48, 32 and 128 bits",
+   "64, 32 and 256 bits"
+  ],
+  "answer": 2,
+  "explanation": "MAC (हार्डवेयर पता) 48 बिट — 6 बाइट, जैसे 00:1A:2B:3C:4D:5E। IPv4 32 बिट (4 अंक-समूह), IPv6 128 बिट (8 हेक्स-समूह)।"
+ },
+ {
+  "id": "progsr-pgm2-030",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A browser receives HTTP status code 404 from a server. This means —",
+  "options": [
+   "the page has moved permanently",
+   "the requested resource was not found on the server",
+   "the server had an internal error",
+   "the request succeeded"
+  ],
+  "answer": 1,
+  "explanation": "2xx = सफलता (200 OK); 3xx = पुनर्निर्देशन (301 स्थायी, 302 अस्थायी); 4xx = क्लाइंट-त्रुटि (403 वर्जित, 404 नहीं मिला); 5xx = सर्वर-त्रुटि (500)।"
+ },
+ {
+  "id": "progsr-pgm2-031",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A user reads e-mail on a phone and a laptop and wants read/unread status and folders to stay synchronised on both. Which protocol suits this best?",
+  "options": [
+   "SMTP",
+   "POP3",
+   "FTP",
+   "IMAP"
+  ],
+  "answer": 3,
+  "explanation": "IMAP मेल सर्वर पर रखता है और फ़ोल्डर/स्थिति सब उपकरणों में समन्वित रखता है। POP3 मेल एक उपकरण पर उतार लेता है (प्रायः सर्वर से हटाकर)। SMTP केवल भेजने के लिए है।"
+ },
+ {
+  "id": "progsr-pgm2-032",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The basic function of a modem is to —",
+  "options": [
+   "convert digital signals to analog for transmission and back to digital on reception",
+   "connect computers within one LAN by MAC address",
+   "encrypt data before sending",
+   "translate domain names into IP addresses"
+  ],
+  "answer": 0,
+  "explanation": "मॉडेम = MOdulator–DEModulator: कंप्यूटर के डिजिटल संकेत को टेलीफ़ोन/केबल लाइन के एनालॉग संकेत में बदलता है और प्राप्ति पर वापस। LAN में जोड़ना स्विच का काम है, नाम→पता DNS का।"
+ },
+ {
+  "id": "progsr-pgm2-033",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Wi-Fi networks commonly operate in which radio frequency bands?",
+  "options": [
+   "10 GHz only",
+   "900 MHz only",
+   "60 Hz and 50 Hz",
+   "2.4 GHz and 5 GHz"
+  ],
+  "answer": 3,
+  "explanation": "2.4 GHz की पहुँच अधिक है पर भीड़ और व्यवधान (ब्लूटूथ, माइक्रोवेव) ज़्यादा; 5 GHz तेज़ और कम भीड़ वाला पर दूरी कम। Wi-Fi 6E में 6 GHz भी जुड़ा है।"
+ },
+ {
+  "id": "progsr-pgm2-034",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which HTML code opens the linked page in a new browser tab or window?",
+  "options": [
+   "<a href=\"page.html\" target=\"_self\">",
+   "<a href=\"page.html\" target=\"_blank\">",
+   "<a href=\"page.html\" new=\"tab\">",
+   "<link href=\"page.html\" target=\"_blank\">"
+  ],
+  "answer": 1,
+  "explanation": "target=\"_blank\" नया टैब/विंडो खोलता है; _self (डिफ़ॉल्ट) उसी में। <link> टैग स्टाइलशीट आदि जोड़ने के लिए <head> में लगता है, क्लिक करने योग्य लिंक के लिए नहीं।"
+ },
+ {
+  "id": "progsr-pgm2-035",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which JavaScript dialog shows OK and Cancel buttons and returns true or false depending on the user's choice?",
+  "options": [
+   "confirm()",
+   "prompt()",
+   "alert()",
+   "console.log()"
+  ],
+  "answer": 0,
+  "explanation": "alert() केवल संदेश और OK दिखाता है; confirm() OK/Cancel देकर true/false लौटाता है (जैसे 'क्या आप हटाना चाहते हैं?'); prompt() उपयोगकर्ता से पाठ लेता है।"
+ },
+ {
+  "id": "progsr-pgm2-036",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following JavaScript code print?\n\nlet s = 0;\nfor (let i = 1; i <= 4; i++) s += i;\nconsole.log(s);",
+  "options": [
+   "15",
+   "4",
+   "10",
+   "6"
+  ],
+  "answer": 2,
+  "explanation": "s = 1 + 2 + 3 + 4 = 10। लूप i = 5 पर रुकता है क्योंकि शर्त i <= 4 असत्य हो जाती है।"
+ },
+ {
+  "id": "progsr-pgm2-037",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Before storing or reading values in the PHP superglobal $_SESSION, a script must normally call —",
+  "options": [
+   "setcookie()",
+   "header()",
+   "session_start()",
+   "session_destroy()"
+  ],
+  "answer": 2,
+  "explanation": "session_start() सत्र शुरू या पुनः आरंभ करता है (कुकी में सत्र-आईडी)। इसके बाद $_SESSION['user'] जैसे मान अनुरोधों के बीच सर्वर पर बने रहते हैं। लॉगआउट पर session_destroy()।"
+ },
+ {
+  "id": "progsr-pgm2-038",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which of the following XML fragments is well-formed?",
+  "options": [
+   "<A><b>text</b></a>",
+   "<a><b>text</b>",
+   "<a><b>text</a></b>",
+   "<a><b>text</b></a>"
+  ],
+  "answer": 3,
+  "explanation": "तत्व ठीक से नेस्ट होने चाहिए (जो बाद में खुला वह पहले बंद), हर टैग बंद होना चाहिए, और नाम केस-संवेदी हैं — <A> को </a> बंद नहीं करता। केवल पहला विकल्प तीनों नियम मानता है।"
+ },
+ {
+  "id": "progsr-pgm2-039",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which statement about the nature of software, compared with hardware, is correct?",
+  "options": [
+   "Software never needs maintenance once tested",
+   "Software does not wear out physically, but it deteriorates as repeated changes introduce new defects",
+   "Software is manufactured on an assembly line like hardware",
+   "Software wears out with use just like hardware"
+  ],
+  "answer": 1,
+  "explanation": "हार्डवेयर का विफलता-वक्र 'बाथटब' जैसा है — समय के साथ घिसाव से विफलता बढ़ती है। सॉफ़्टवेयर घिसता नहीं, पर हर बदलाव के साथ नई त्रुटियाँ आकर विफलता-दर बढ़ाती हैं, इसलिए वह 'बिगड़ता' (deteriorate) है। सॉफ़्टवेयर विकसित (engineered) होता है, निर्मित नहीं।"
+ },
+ {
+  "id": "progsr-pgm2-040",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "\"The system must display search results within 2 seconds for 1,000 concurrent users.\" This is a —",
+  "options": [
+   "non-functional (performance) requirement",
+   "functional requirement",
+   "user-interface layout requirement",
+   "design constraint on the database schema"
+  ],
+  "answer": 0,
+  "explanation": "फ़ंक्शनल आवश्यकता बताती है कि प्रणाली क्या करे (जैसे 'खोज करे')। नॉन-फ़ंक्शनल बताती है कि कितनी अच्छी तरह करे — प्रदर्शन, सुरक्षा, विश्वसनीयता, उपयोगिता।"
+ },
+ {
+  "id": "progsr-pgm2-041",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The usual order of testing levels is —",
+  "options": [
+   "Acceptance → System → Integration → Unit",
+   "Unit → Integration → System → Acceptance",
+   "Integration → Unit → System → Acceptance",
+   "System → Unit → Acceptance → Integration"
+  ],
+  "answer": 1,
+  "explanation": "पहले अलग-अलग मॉड्यूल (यूनिट), फिर उनका जुड़ना (इंटीग्रेशन), फिर पूरी प्रणाली आवश्यकताओं के विरुद्ध (सिस्टम), अंत में ग्राहक की स्वीकृति (एक्सेप्टेंस)।"
+ },
+ {
+  "id": "progsr-pgm2-042",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Selenium is a testing tool mainly used for —",
+  "options": [
+   "version control of source code",
+   "measuring code coverage of C programs",
+   "load testing of databases only",
+   "automating functional tests of web applications in a browser"
+  ],
+  "answer": 3,
+  "explanation": "Selenium WebDriver ब्राउज़र को प्रोग्राम से चलाता है — क्लिक, टाइप, जाँच — ताकि वेब-ऐप के कार्यात्मक और रिग्रेशन परीक्षण स्वचालित हों। यह Java, Python, C# आदि भाषाओं में लिखा जा सकता है।"
+ },
+ {
+  "id": "progsr-pgm2-043",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In the Capability Maturity Model Integration (CMMI), the highest maturity level is —",
+  "options": [
+   "Level 4 — Quantitatively Managed",
+   "Level 1 — Initial",
+   "Level 5 — Optimizing",
+   "Level 3 — Defined"
+  ],
+  "answer": 2,
+  "explanation": "CMMI स्तर: 1 आरंभिक (अव्यवस्थित), 2 प्रबंधित, 3 परिभाषित, 4 मात्रात्मक रूप से प्रबंधित, 5 अनुकूलनकारी (निरंतर सुधार)। भारत की कई IT कंपनियाँ स्तर 5 प्रमाणित हैं।"
+ },
+ {
+  "id": "progsr-pgm2-044",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Under the IT Act, 2000, cheating by personation using a computer resource (for example, a fake website pretending to be a bank) is punishable under —",
+  "options": [
+   "Section 66D",
+   "Section 72",
+   "Section 66C",
+   "Section 67A"
+  ],
+  "answer": 0,
+  "explanation": "66D = कंप्यूटर संसाधन से छद्म-रूप धारण कर ठगी; 66C = पहचान की चोरी (पासवर्ड/डिजिटल हस्ताक्षर का दुरुपयोग); 67A = यौन-स्पष्ट सामग्री; 72 = गोपनीयता भंग। 2008 के संशोधन में ये धाराएँ जुड़ीं।"
+ },
+ {
+  "id": "progsr-pgm2-045",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Malware that encrypts a victim's files and demands payment for the decryption key is called —",
+  "options": [
+   "ransomware",
+   "adware",
+   "a keylogger",
+   "spyware"
+  ],
+  "answer": 0,
+  "explanation": "रैनसमवेयर (जैसे WannaCry) फ़ाइलें बंधक बना लेता है। सबसे अच्छा बचाव: नियमित ऑफ़लाइन बैकअप, समय पर अपडेट, संदिग्ध अटैचमेंट न खोलना। एडवेयर विज्ञापन दिखाता है, स्पाइवेयर जासूसी करता है, कीलॉगर कुंजी-दबाव रिकॉर्ड करता है।"
+ },
+ {
+  "id": "progsr-pgm2-046",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A website shows a padlock icon and uses https://. What does this guarantee?",
+  "options": [
+   "The website can never contain malware",
+   "The website is a government website",
+   "The connection between the browser and the server is encrypted",
+   "The website is owned by a trustworthy organisation"
+  ],
+  "answer": 2,
+  "explanation": "ताला केवल बताता है कि डेटा रास्ते में TLS से एन्क्रिप्टेड है और प्रमाणपत्र उस डोमेन का है। फ़िशिंग साइटें भी मुफ़्त प्रमाणपत्र लेकर https दिखाती हैं — इसलिए डोमेन का नाम ध्यान से जाँचना ज़रूरी है।"
+ },
+ {
+  "id": "progsr-pgm2-047",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which Linux command copies the directory project, along with all its files and sub-directories, into backup?",
+  "options": [
+   "mv project backup",
+   "cp project backup",
+   "rm -r project backup",
+   "cp -r project backup"
+  ],
+  "answer": 3,
+  "explanation": "-r (recursive) के बिना cp डायरेक्टरी कॉपी नहीं करता। mv स्थानांतरित/नाम बदलता है (मूल नहीं बचता) और rm -r हटा देता है।"
+ },
+ {
+  "id": "progsr-pgm2-048",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the Linux command  wc -w notes.txt  display?",
+  "options": [
+   "The number of characters only",
+   "The number of words in notes.txt",
+   "The number of lines in notes.txt",
+   "The file's permissions"
+  ],
+  "answer": 1,
+  "explanation": "wc (word count): -l पंक्तियाँ, -w शब्द, -c बाइट, -m अक्षर। बिना विकल्प के तीनों (पंक्ति, शब्द, बाइट) दिखाता है।"
+ },
+ {
+  "id": "progsr-pgm2-049",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which Windows Security feature protects chosen folders from unauthorised changes by unknown apps, helping against ransomware?",
+  "options": [
+   "Controlled folder access",
+   "Disk Cleanup",
+   "Storage Sense",
+   "Remote Desktop"
+  ],
+  "answer": 0,
+  "explanation": "Windows Security → वायरस और ख़तरा सुरक्षा → रैनसमवेयर सुरक्षा में 'कंट्रोल्ड फ़ोल्डर एक्सेस' केवल विश्वसनीय ऐप को संरक्षित फ़ोल्डरों (Documents, Pictures आदि) में बदलाव करने देता है।"
+ },
+ {
+  "id": "progsr-pgm2-050",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What value does the Excel formula  =ROUND(123.456, -1)  return?",
+  "options": [
+   "123.46",
+   "100",
+   "120",
+   "123.5"
+  ],
+  "answer": 2,
+  "explanation": "ROUND का दूसरा तर्क ऋणात्मक हो तो दशमलव के बाईं ओर गोलाई होती है: −1 = निकटतम दहाई → 120। 1 देने पर 123.5, 2 पर 123.46, −2 पर 100।"
+ },
+ {
+  "id": "progsr-pgm2-051",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What will come in place of the question mark?\n\nDCXW, FEVU, HGTS, ?",
+  "options": [
+   "JIRQ",
+   "IJQR",
+   "JKRS",
+   "KJQP"
+  ],
+  "answer": 0,
+  "explanation": "पहले दो अक्षर आगे बढ़ते हैं — D, F, H के बाद J और C, E, G के बाद I। अंतिम दो पीछे लौटते हैं — X, V, T के बाद R और W, U, S के बाद Q। इसलिए अगला पद JIRQ है।"
+ },
+ {
+  "id": "progsr-pgm2-052",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "If SHARP is coded as 58034 and PUSH is coded as 4658, then RUSH will be coded as —",
+  "options": [
+   "4658",
+   "3583",
+   "3658",
+   "3568"
+  ],
+  "answer": 2,
+  "explanation": "SHARP = 58034 से S = 5, H = 8, A = 0, R = 3, P = 4। PUSH = 4658 से U = 6। अब RUSH = 3, 6, 5, 8 यानी 3658।"
+ },
+ {
+  "id": "progsr-pgm2-053",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Find the next term of the series : 2, 6, 12, 20, 30, ?",
+  "options": [
+   "36",
+   "40",
+   "42",
+   "46"
+  ],
+  "answer": 2,
+  "explanation": "अंतर क्रमशः 4, 6, 8, 10 हैं, इसलिए अगला अंतर 12 होगा — 30 + 12 = 42। दूसरा तरीक़ा: पद n × (n + 1) के रूप में हैं, सो छठा पद 6 × 7 = 42।"
+ },
+ {
+  "id": "progsr-pgm2-054",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Find the odd one out.",
+  "options": [
+   "8",
+   "27",
+   "64",
+   "100"
+  ],
+  "answer": 3,
+  "explanation": "8 = 2³, 27 = 3³ और 64 = 4³ — तीनों पूर्ण घन हैं। 100 पूर्ण घन नहीं है (वह पूर्ण वर्ग है), इसलिए वही विषम है।"
+ },
+ {
+  "id": "progsr-pgm2-055",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Pointing to a photograph, a man said, \"She is the daughter of my grandfather's only son.\" How is the girl related to the man?",
+  "options": [
+   "Daughter",
+   "Sister",
+   "Niece",
+   "Cousin"
+  ],
+  "answer": 1,
+  "explanation": "दादा का इकलौता बेटा यानी उस व्यक्ति का अपना पिता। पिता की बेटी हुई उसकी बहन।"
+ },
+ {
+  "id": "progsr-pgm2-056",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A man walks 5 km towards North, then turns right and walks 3 km, then turns right again and walks 5 km. How far and in which direction is he from the starting point?",
+  "options": [
+   "3 km, East",
+   "3 km, West",
+   "5 km, East",
+   "8 km, North"
+  ],
+  "answer": 0,
+  "explanation": "उत्तर की ओर 5 किमी, फिर दाएँ मुड़कर पूर्व की ओर 3 किमी, फिर दाएँ मुड़कर दक्षिण की ओर 5 किमी। उत्तर और दक्षिण कट गए; बचा केवल पूर्व की ओर 3 किमी।"
+ },
+ {
+  "id": "progsr-pgm2-057",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Statements : All programmers are analysts. Some analysts are managers.\n\nConclusions :\nI. Some programmers are managers.\nII. All analysts are programmers.",
+  "options": [
+   "Only I follows",
+   "Only II follows",
+   "Both follow",
+   "Neither I nor II follows"
+  ],
+  "answer": 3,
+  "explanation": "जो विश्लेषक प्रबंधक हैं, वे प्रोग्रामर भी हों — यह ज़रूरी नहीं, इसलिए I नहीं निकलता। और 'सभी प्रोग्रामर विश्लेषक हैं' को उलटकर 'सभी विश्लेषक प्रोग्रामर हैं' नहीं कहा जा सकता, इसलिए II भी नहीं। कोई निष्कर्ष नहीं निकलता।"
+ },
+ {
+  "id": "progsr-pgm2-058",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What is the angle between the two hands of a clock at 4 : 45?",
+  "options": [
+   "120°",
+   "122½°",
+   "127½°",
+   "135°"
+  ],
+  "answer": 2,
+  "explanation": "मिनट की सुई 45 मिनट पर, यानी 270° पर है। घंटे की सुई 4 × 30 + 45 × 0.5 = 142.5° पर। अंतर 270 − 142.5 = 127.5°, यानी 127½°।"
+ },
+ {
+  "id": "progsr-pgm2-059",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "If 1 January 2026 is a Thursday, what day of the week will 1 March 2026 be?",
+  "options": [
+   "Friday",
+   "Saturday",
+   "Sunday",
+   "Monday"
+  ],
+  "answer": 2,
+  "explanation": "1 जनवरी से 1 मार्च तक 31 + 28 = 59 दिन हैं, क्योंकि 2026 अधिवर्ष नहीं है। 59 को 7 से भाग देने पर शेष 3 बचता है — गुरुवार से तीन दिन आगे यानी रविवार।"
+ },
+ {
+  "id": "progsr-pgm2-060",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Five friends A, B, C, D and E are sitting in a row. B is to the right of A, C is to the left of A, D is at the extreme right and E is sitting between A and D. Who is sitting at the extreme left?",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "E"
+  ],
+  "answer": 2,
+  "explanation": "D सबसे दाएँ है और E, A तथा D के बीच बैठा है। B, A के दाएँ है और C, A के बाएँ — इसलिए क्रम बनता है C, A, B, E, D। सबसे बाएँ C है।"
+ },
+ {
+  "id": "progsr-pgm2-061",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Find the missing number.\n\n 7    8    6\n 4    9    5\n 3    2    ?\n\n25   70   29",
+  "options": [
+   "1",
+   "5",
+   "8",
+   "9"
+  ],
+  "answer": 0,
+  "explanation": "हर स्तंभ में ऊपर के दो अंकों का गुणनफल निकालकर उसमें से तीसरा अंक घटाइए: 7 × 4 − 3 = 25 और 8 × 9 − 2 = 70। तीसरे स्तंभ में 6 × 5 − ? = 29, इसलिए ? = 1।"
+ },
+ {
+  "id": "progsr-pgm2-062",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Compiler : High-level language :: Assembler : ?",
+  "options": [
+   "Machine language",
+   "Assembly language",
+   "Bytecode",
+   "Object code"
+  ],
+  "answer": 1,
+  "explanation": "जोड़ी 'अनुवादक और उसकी इनपुट भाषा' की है, आउटपुट की नहीं। कंपाइलर उच्च-स्तरीय भाषा पढ़ता है, वैसे ही असेंबलर असेंबली भाषा पढ़ता है।"
+ },
+ {
+  "id": "progsr-pgm2-063",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "If 'A + B' means A is the father of B, and 'A - B' means A is the wife of B, then in the expression 'P + Q - R', how is P related to R?",
+  "options": [
+   "Father",
+   "Father-in-law",
+   "Brother",
+   "Uncle"
+  ],
+  "answer": 1,
+  "explanation": "'P + Q' यानी P, Q का पिता है। 'Q − R' यानी Q, R की पत्नी है। तो R का विवाह Q से हुआ और Q के पिता P हैं — इसलिए P, R का ससुर हुआ।"
+ },
+ {
+  "id": "progsr-pgm2-064",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In a class of 40 students, Ravi's rank is 12th from the top. What is his rank from the bottom?",
+  "options": [
+   "28",
+   "29",
+   "30",
+   "27"
+  ],
+  "answer": 1,
+  "explanation": "नीचे से स्थान = कुल विद्यार्थी − ऊपर से स्थान + 1 = 40 − 12 + 1 = 29। एक जोड़ना इसलिए ज़रूरी है कि रवि दोनों गिनतियों में आता है।"
+ },
+ {
+  "id": "progsr-pgm2-065",
+  "subject": "reasoning",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Find the odd group out.",
+  "options": [
+   "BDF",
+   "CEG",
+   "DFH",
+   "EGJ"
+  ],
+  "answer": 3,
+  "explanation": "BDF, CEG और DFH — तीनों में लगातार अक्षरों का अंतर 2 और 2 है। EGJ में अंतर 2 और 3 का है, इसलिए वही विषम है।"
+ },
+ {
+  "id": "progsr-pgm2-066",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "On selling a coat for ₹1,260 a shopkeeper gets 5% profit. If he sells the same coat for ₹1,500, his profit percentage would be —",
+  "options": [
+   "18%",
+   "20%",
+   "22%",
+   "25%"
+  ],
+  "answer": 3,
+  "explanation": "5% लाभ पर विक्रय मूल्य ₹1,260 है, इसलिए क्रय मूल्य = 1260 ÷ 1.05 = ₹1,200। ₹1,500 पर लाभ ₹300 हुआ, यानी 300 ÷ 1200 = 25%।"
+ },
+ {
+  "id": "progsr-pgm2-067",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The ratio of the present ages of x and y is 3 : 1. If after 15 years the ratio becomes 2 : 1, their present ages respectively are —",
+  "options": [
+   "30, 10",
+   "45, 15",
+   "60, 20",
+   "75, 25"
+  ],
+  "answer": 1,
+  "explanation": "आयु 3k और k मानिए। 15 वर्ष बाद (3k + 15) : (k + 15) = 2 : 1, यानी 3k + 15 = 2k + 30, सो k = 15। वर्तमान आयु 45 और 15 वर्ष।"
+ },
+ {
+  "id": "progsr-pgm2-068",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Two trains of equal length take 5 seconds and 6 seconds respectively to cross a pole. If both trains move in the same direction, how long will they take to cross each other?",
+  "options": [
+   "30 seconds",
+   "45 seconds",
+   "55 seconds",
+   "60 seconds"
+  ],
+  "answer": 3,
+  "explanation": "दोनों की लंबाई L मानिए; तब चालें L/5 और L/6 हुईं। एक ही दिशा में सापेक्ष चाल = L/5 − L/6 = L/30। पार करनी है दोनों की कुल लंबाई 2L, इसलिए समय = 2L ÷ (L/30) = 60 सेकंड।"
+ },
+ {
+  "id": "progsr-pgm2-069",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The selling price of an article including 18% GST is ₹1,298. If the shopkeeper earns a profit of 10%, the cost price of the article is —",
+  "options": [
+   "₹1,000",
+   "₹1,100",
+   "₹1,200",
+   "₹1,500"
+  ],
+  "answer": 0,
+  "explanation": "GST सहित ₹1,298 है, इसलिए GST से पहले विक्रय मूल्य = 1298 ÷ 1.18 = ₹1,100। उसी पर 10% लाभ है, सो क्रय मूल्य = 1100 ÷ 1.1 = ₹1,000।"
+ },
+ {
+  "id": "progsr-pgm2-070",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The average of 5 numbers is 20. If one number 18 is removed, the average of the remaining numbers is —",
+  "options": [
+   "20",
+   "20.5",
+   "21",
+   "22"
+  ],
+  "answer": 1,
+  "explanation": "पाँच संख्याओं का योग = 5 × 20 = 100। 18 हटाने पर योग 82 बचा और संख्याएँ चार — औसत 82 ÷ 4 = 20.5।"
+ },
+ {
+  "id": "progsr-pgm2-071",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A number is first increased by 20% and then decreased by 20%. The net change is —",
+  "options": [
+   "No change",
+   "4% increase",
+   "4% decrease",
+   "2% decrease"
+  ],
+  "answer": 2,
+  "explanation": "100 लीजिए: 20% बढ़ने पर 120, फिर उसी का 20% घटने पर 120 − 24 = 96। यानी 4% की कमी। बराबर प्रतिशत की वृद्धि और कमी हमेशा घटा ही देती है।"
+ },
+ {
+  "id": "progsr-pgm2-072",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A can complete a work in 12 days and B in 18 days. Working together, they will complete it in —",
+  "options": [
+   "6 days",
+   "7.2 days",
+   "7.5 days",
+   "9 days"
+  ],
+  "answer": 1,
+  "explanation": "एक दिन का काम = 1/12 + 1/18 = 3/36 + 2/36 = 5/36। पूरा काम 36 ÷ 5 = 7.2 दिन में होगा।"
+ },
+ {
+  "id": "progsr-pgm2-073",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The compound interest on ₹10,000 at 10% per annum for 2 years is —",
+  "options": [
+   "₹2,000",
+   "₹2,100",
+   "₹2,200",
+   "₹2,310"
+  ],
+  "answer": 1,
+  "explanation": "मिश्रधन = 10,000 × (1.1)² = ₹12,100, इसलिए चक्रवृद्धि ब्याज ₹2,100। साधारण ब्याज ₹2,000 होता — ₹100 का अंतर पहले वर्ष के ब्याज पर लगा ब्याज है।"
+ },
+ {
+  "id": "progsr-pgm2-074",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "If 3^(x-y) = 27 and 3^(x+y) = 243, then the value of x is —",
+  "options": [
+   "2",
+   "3",
+   "4",
+   "5"
+  ],
+  "answer": 2,
+  "explanation": "27 = 3³ और 243 = 3⁵, इसलिए x − y = 3 और x + y = 5। दोनों समीकरण जोड़ने पर 2x = 8, यानी x = 4।"
+ },
+ {
+  "id": "progsr-pgm2-075",
+  "subject": "ganit",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The area of a circle whose radius is 7 cm is (take π = 22/7) —",
+  "options": [
+   "44 cm²",
+   "154 cm²",
+   "176 cm²",
+   "308 cm²"
+  ],
+  "answer": 1,
+  "explanation": "क्षेत्रफल = πr² = (22/7) × 7 × 7 = 154 वर्ग सेमी। 44 सेमी तो परिधि (2πr) है — यही सबसे आम भूल है।"
+ }
 ]

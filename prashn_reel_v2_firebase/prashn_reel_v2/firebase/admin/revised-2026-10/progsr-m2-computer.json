@@ -1,0 +1,802 @@
+[
+ {
+  "id": "progsr-m2-001",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The packed BCD representation of the decimal number 59 is —",
+  "options": [
+   "0011 1011",
+   "0101 1010",
+   "0101 1001",
+   "0110 1001"
+  ],
+  "answer": 2,
+  "explanation": "BCD में हर दशमलव अंक अलग 4 बिट में: 5 = 0101, 9 = 1001 → 0101 1001। शुद्ध बाइनरी में 59 = 0011 1011 होता — दोनों अलग हैं।"
+ },
+ {
+  "id": "progsr-m2-002",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The Gray code equivalent of the binary number 1011 is —",
+  "options": [
+   "1110",
+   "1101",
+   "1011",
+   "0111"
+  ],
+  "answer": 0,
+  "explanation": "पहला बिट वही (1); आगे हर बिट = पिछला बाइनरी बिट ⊕ वर्तमान बाइनरी बिट: 1⊕0 = 1, 0⊕1 = 1, 1⊕1 = 0। ग्रे कोड 1110 — इसमें क्रमागत संख्याओं में केवल एक बिट बदलता है।"
+ },
+ {
+  "id": "progsr-m2-003",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The minimum number of bits needed to give a unique binary code to each of 1000 different items is —",
+  "options": [
+   "1000",
+   "11",
+   "9",
+   "10"
+  ],
+  "answer": 3,
+  "explanation": "n बिट से 2ⁿ कोड बनते हैं। 2⁹ = 512 < 1000 ≤ 1024 = 2¹⁰, अतः 10 बिट।"
+ },
+ {
+  "id": "progsr-m2-004",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The instruction  LOAD R1, 2000(X)  uses indexed addressing, and index register X contains 24. The effective address of the operand is —",
+  "options": [
+   "24",
+   "2024",
+   "2000",
+   "48000"
+  ],
+  "answer": 1,
+  "explanation": "इंडेक्स्ड मोड: प्रभावी पता = निर्देश का आधार-पता + इंडेक्स रजिस्टर = 2000 + 24 = 2024। सरणी के तत्वों तक पहुँचने में यही मोड काम आता है — आधार सरणी का आरंभ, इंडेक्स ऑफ़सेट।"
+ },
+ {
+  "id": "progsr-m2-005",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A computer has 16-bit instructions consisting of a 4-bit opcode and a 12-bit direct address field. The maximum number of memory words it can address directly is —",
+  "options": [
+   "16",
+   "65536",
+   "4096",
+   "1024"
+  ],
+  "answer": 2,
+  "explanation": "12 बिट के पते से 2¹² = 4096 अलग स्थान। 4-बिट ऑपकोड से 2⁴ = 16 अलग निर्देश बन सकते हैं।"
+ },
+ {
+  "id": "progsr-m2-006",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which of the following is a characteristic of CISC processors?",
+  "options": [
+   "Many complex addressing modes and variable-length instructions",
+   "Most instructions complete in exactly one clock cycle",
+   "Only load/store instructions can access memory",
+   "A small set of fixed-length instructions"
+  ],
+  "answer": 0,
+  "explanation": "CISC (जैसे x86) में अनेक जटिल निर्देश, कई एड्रेसिंग मोड, अलग-अलग लंबाई और प्रायः माइक्रोप्रोग्राम्ड नियंत्रण होता है। बाक़ी तीनों RISC (जैसे ARM) की विशेषताएँ हैं।"
+ },
+ {
+  "id": "progsr-m2-007",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which of the following is a data-transfer instruction rather than a data-manipulation instruction?",
+  "options": [
+   "ADD",
+   "MOV",
+   "AND",
+   "SHL (shift left)"
+  ],
+  "answer": 1,
+  "explanation": "डेटा-ट्रांसफ़र निर्देश (MOV, LOAD, STORE, PUSH, POP, IN, OUT) डेटा को बिना बदले एक जगह से दूसरी जगह ले जाते हैं। मैनिपुलेशन निर्देश डेटा बदलते हैं: अंकगणितीय (ADD), तार्किक (AND) और शिफ़्ट (SHL)।"
+ },
+ {
+  "id": "progsr-m2-008",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The value of the postfix expression  5 3 + 8 2 − *  is —",
+  "options": [
+   "34",
+   "−48",
+   "16",
+   "48"
+  ],
+  "answer": 3,
+  "explanation": "5 3 + = 8; 8 2 − = 6; फिर 8 6 * = 48। स्टैक में संख्याएँ रखते जाइए और हर संचालक पर ऊपर की दो निकालकर परिणाम वापस रखिए।"
+ },
+ {
+  "id": "progsr-m2-009",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A stack is implemented in an array of size N, with TOP initialised to −1. The stack is full when —",
+  "options": [
+   "TOP = N − 1",
+   "TOP = N",
+   "TOP = −1",
+   "TOP = 0"
+  ],
+  "answer": 0,
+  "explanation": "सूचकांक 0 से N − 1 तक हैं। TOP = −1 ख़ाली स्टैक बताता है (इस पर pop = अंडरफ़्लो)। TOP = N − 1 पर अंतिम स्थान भरा है, इसलिए इस पर push = ओवरफ़्लो।"
+ },
+ {
+  "id": "progsr-m2-010",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "When a stack is implemented as a singly linked list, push and pop are done at the head of the list. Their time complexity is —",
+  "options": [
+   "O(n) each",
+   "O(1) each",
+   "O(1) for push and O(n) for pop",
+   "O(log n) each"
+  ],
+  "answer": 1,
+  "explanation": "हेड पर नया नोड जोड़ना या पहला नोड हटाना केवल एक-दो पॉइंटर बदलता है — सूची की लंबाई से फ़र्क़ नहीं पड़ता। लिंक्ड स्टैक का लाभ यह भी है कि मेमोरी रहते ओवरफ़्लो नहीं होता।"
+ },
+ {
+  "id": "progsr-m2-011",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "On an empty queue, the operations enqueue(10), enqueue(20), enqueue(30), dequeue(), enqueue(40) are performed. The element at the front is now —",
+  "options": [
+   "30",
+   "40",
+   "10",
+   "20"
+  ],
+  "answer": 3,
+  "explanation": "कतार FIFO है: [10, 20, 30] → dequeue 10 हटाता है → [20, 30] → enqueue 40 → [20, 30, 40]। आगे (front) 20, पीछे (rear) 40।"
+ },
+ {
+  "id": "progsr-m2-012",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A circular queue of size n keeps one slot empty to tell 'full' from 'empty'. With FRONT and REAR indices, the queue is full when —",
+  "options": [
+   "REAR = n − 1",
+   "REAR = FRONT",
+   "(REAR + 1) mod n = FRONT",
+   "FRONT = 0"
+  ],
+  "answer": 2,
+  "explanation": "REAR = FRONT ख़ाली कतार की शर्त है। अगर REAR का अगला स्थान (घुमाव के साथ) FRONT हो, तो एक और डालने पर दोनों बराबर हो जाएँगे और 'भरी' व 'ख़ाली' में भेद नहीं रहेगा — इसलिए उसे भरी मानते हैं।"
+ },
+ {
+  "id": "progsr-m2-013",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In the binary search tree with root 50, left subtree 30 (children 20, 40) and right subtree 70 (children 60, 80), the root 50 is deleted using the in-order successor. The new root is —",
+  "options": [
+   "60",
+   "70",
+   "30",
+   "40"
+  ],
+  "answer": 0,
+  "explanation": "दो बच्चों वाला नोड हटाने पर उसकी जगह इन-ऑर्डर उत्तराधिकारी (दाएँ उप-वृक्ष का सबसे छोटा = 60) या पूर्ववर्ती (बाएँ का सबसे बड़ा = 40) रखा जाता है। उत्तराधिकारी लेने पर नया रूट 60।"
+ },
+ {
+  "id": "progsr-m2-014",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which statement about PRIMARY KEY and UNIQUE constraints is correct?",
+  "options": [
+   "A PRIMARY KEY column may contain NULL",
+   "A table can have many UNIQUE constraints but only one PRIMARY KEY",
+   "A table can have many PRIMARY KEYs",
+   "A UNIQUE column can never contain NULL in any DBMS"
+  ],
+  "answer": 1,
+  "explanation": "प्राथमिक कुंजी एक ही होती है (भले कई स्तंभों की) और NULL नहीं ले सकती। UNIQUE कई स्तंभों पर लग सकता है और अधिकांश DBMS में NULL की अनुमति देता है — जैसे ई-मेल और मोबाइल दोनों अद्वितीय।"
+ },
+ {
+  "id": "progsr-m2-015",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In an ER diagram, a double line between an entity set and a relationship indicates —",
+  "options": [
+   "a multivalued attribute",
+   "a derived attribute",
+   "total participation — every entity must take part in the relationship",
+   "a weak entity set"
+  ],
+  "answer": 2,
+  "explanation": "दोहरी रेखा = पूर्ण भागीदारी (जैसे हर ऋण किसी ग्राहक से जुड़ा ही होगा); एकल रेखा = आंशिक भागीदारी। कमज़ोर इकाई सदैव पूर्ण भागीदारी में रहती है।"
+ },
+ {
+  "id": "progsr-m2-016",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A relation has 5 attributes and 20 tuples. Its degree and cardinality are respectively —",
+  "options": [
+   "100 and 20",
+   "5 and 5",
+   "20 and 5",
+   "5 and 20"
+  ],
+  "answer": 3,
+  "explanation": "डिग्री = स्तंभों (गुणों) की संख्या = 5; कार्डिनैलिटी = पंक्तियों (टपल) की संख्या = 20। डिग्री स्कीमा के साथ स्थिर रहती है, कार्डिनैलिटी डेटा के साथ बदलती है।"
+ },
+ {
+  "id": "progsr-m2-017",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "To fetch only the first 5 rows of a query result, MySQL uses ___ while Microsoft SQL Server uses ___.",
+  "options": [
+   "ROWNUM <= 5; LIMIT 5",
+   "SELECT TOP 5; LIMIT 5",
+   "LIMIT 5; SELECT TOP 5",
+   "FETCH 5; TOP 5"
+  ],
+  "answer": 2,
+  "explanation": "MySQL/PostgreSQL: SELECT … LIMIT 5। SQL Server: SELECT TOP 5 …। पुराना Oracle: WHERE ROWNUM <= 5 (नए में FETCH FIRST 5 ROWS ONLY)।"
+ },
+ {
+  "id": "progsr-m2-018",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which graphical tool is commonly used to create databases, write queries and manage users in Microsoft SQL Server?",
+  "options": [
+   "SQL Server Management Studio (SSMS)",
+   "Oracle SQL*Plus",
+   "MS-Access Report Wizard",
+   "phpMyAdmin"
+  ],
+  "answer": 0,
+  "explanation": "SSMS SQL Server का प्रबंधन उपकरण है। SQL*Plus Oracle का कमांड-लाइन उपकरण और phpMyAdmin MySQL का वेब-आधारित प्रबंधन उपकरण है।"
+ },
+ {
+  "id": "progsr-m2-019",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following C code print?\n\nint a = 10, b = 4;\nprintf(\"%d %d\", a / b, a % b);",
+  "options": [
+   "2 0",
+   "2 2",
+   "2.5 2",
+   "3 2"
+  ],
+  "answer": 1,
+  "explanation": "पूर्णांक भाग: 10 / 4 = 2 (दशमलव कट जाता है)। शेषफल: 10 % 4 = 2।"
+ },
+ {
+  "id": "progsr-m2-020",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "How many times does the body of this C loop execute?\n\nfor (i = 1; i <= 10; i *= 2) count++;",
+  "options": [
+   "3",
+   "10",
+   "5",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "i के मान 1, 2, 4, 8 — चारों ≤ 10, लूप चलता है। फिर i = 16 पर शर्त असत्य। कुल 4 बार; ऐसे लूप O(log n) होते हैं।"
+ },
+ {
+  "id": "progsr-m2-021",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following C code print?\n\n#define SQUARE(x) x * x\nprintf(\"%d\", SQUARE(2 + 3));",
+  "options": [
+   "10",
+   "25",
+   "11",
+   "13"
+  ],
+  "answer": 2,
+  "explanation": "मैक्रो केवल पाठ बदलता है: 2 + 3 * 2 + 3 = 2 + 6 + 3 = 11। सही परिभाषा #define SQUARE(x) ((x) * (x)) है, जिससे 25 आता।"
+ },
+ {
+  "id": "progsr-m2-022",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following C++ code print?\n\nint f(int a, int b = 5) { return a + b; }\nint main() { cout << f(3) << f(3, 4); return 0; }",
+  "options": [
+   "87",
+   "77",
+   "8 7 with a space",
+   "88"
+  ],
+  "answer": 0,
+  "explanation": "f(3) में b डिफ़ॉल्ट 5 लेता है: 8। f(3, 4) में b = 4: 7। cout दोनों को बिना अंतराल के जोड़कर छापता है: 87।"
+ },
+ {
+  "id": "progsr-m2-023",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In C++, if no access specifier is written, the members of a class and the members of a struct are respectively —",
+  "options": [
+   "both public",
+   "both private",
+   "public and private",
+   "private and public"
+  ],
+  "answer": 3,
+  "explanation": "C++ में class और struct का यही मुख्य अंतर है: class के सदस्य डिफ़ॉल्ट रूप से private, struct के public। वंशानुक्रम का डिफ़ॉल्ट भी इसी तरह (class: private, struct: public)।"
+ },
+ {
+  "id": "progsr-m2-024",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What happens when the following Java code is compiled?\n\nfinal int x = 5;\nx = 6;",
+  "options": [
+   "x stays 5 silently",
+   "A compilation error occurs because a final variable cannot be reassigned",
+   "x becomes 6",
+   "A runtime exception is thrown"
+  ],
+  "answer": 1,
+  "explanation": "final चर को एक बार ही मान दिया जा सकता है — उसे बदलने की कोशिश कंपाइलर ही पकड़ लेता है। final विधि ओवरराइड नहीं होती और final कक्षा का वंशानुक्रम नहीं होता।"
+ },
+ {
+  "id": "progsr-m2-025",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following Java code print?\n\nString s = \"abc\";\nSystem.out.println(s.length() + s.charAt(1));",
+  "options": [
+   "4",
+   "101",
+   "abc1",
+   "3b"
+  ],
+  "answer": 1,
+  "explanation": "s.length() = 3 (int) और s.charAt(1) = 'b' (char)। int + char संख्यात्मक जोड़ है, स्ट्रिंग-जुड़ाव नहीं: 3 + 98 ('b' का यूनिकोड) = 101।"
+ },
+ {
+  "id": "progsr-m2-026",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following Python code print?\n\na = [10, 20, 30, 40, 50]\nprint(a[::-2])",
+  "options": [
+   "[50, 40, 30, 20, 10]",
+   "[10, 30, 50]",
+   "[50, 30, 10]",
+   "[40, 20]"
+  ],
+  "answer": 2,
+  "explanation": "[start:stop:step] में step = −2 का अर्थ अंत से शुरू करके एक-एक छोड़ते हुए पीछे जाना: 50, 30, 10।"
+ },
+ {
+  "id": "progsr-m2-027",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following Python code print?\n\nd = {\"a\": 1, \"b\": 2}\nd[\"a\"] = 5\nprint(len(d), d[\"a\"])",
+  "options": [
+   "3 1",
+   "2 1",
+   "3 5",
+   "2 5"
+  ],
+  "answer": 3,
+  "explanation": "शब्दकोश में कुंजियाँ अद्वितीय होती हैं; मौजूदा कुंजी 'a' को नया मान देने से वह बदलता है, नई प्रविष्टि नहीं बनती। लंबाई 2, d['a'] = 5।"
+ },
+ {
+  "id": "progsr-m2-028",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which OSI layer is responsible for data translation, encryption and compression?",
+  "options": [
+   "Presentation layer",
+   "Transport layer",
+   "Data-link layer",
+   "Session layer"
+  ],
+  "answer": 0,
+  "explanation": "प्रस्तुति स्तर (6) डेटा का रूप बदलता है — वर्ण-कूट (ASCII/यूनिकोड), एन्क्रिप्शन और संपीडन। सत्र स्तर (5) संवाद/सत्र सँभालता है, परिवहन स्तर (4) अंत-से-अंत डिलीवरी।"
+ },
+ {
+  "id": "progsr-m2-029",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The Application layer of the TCP/IP model corresponds to which OSI layers?",
+  "options": [
+   "Application only",
+   "Transport and Network",
+   "Application, Presentation and Session",
+   "Session and Transport"
+  ],
+  "answer": 2,
+  "explanation": "TCP/IP के चार स्तर: एप्लिकेशन (OSI 5–7), ट्रांसपोर्ट (OSI 4), इंटरनेट (OSI 3), नेटवर्क एक्सेस (OSI 1–2)।"
+ },
+ {
+  "id": "progsr-m2-030",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which of the following is a private IPv4 address that cannot be routed on the public Internet?",
+  "options": [
+   "11.0.0.1",
+   "192.168.5.10",
+   "172.32.1.1",
+   "8.8.8.8"
+  ],
+  "answer": 1,
+  "explanation": "निजी पते (RFC 1918): 10.0.0.0/8, 172.16.0.0 से 172.31.255.255, और 192.168.0.0/16। 172.32.1.1 इस सीमा से बाहर है; 8.8.8.8 गूगल का सार्वजनिक DNS है।"
+ },
+ {
+  "id": "progsr-m2-031",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In which network topology does the failure of the central device bring down the entire network?",
+  "options": [
+   "Ring with dual paths",
+   "Mesh",
+   "Fully connected",
+   "Star"
+  ],
+  "answer": 3,
+  "explanation": "स्टार में हर कंप्यूटर केंद्रीय हब/स्विच से जुड़ा है — एक केबल टूटे तो केवल वही कंप्यूटर कटता है, पर केंद्र गिरे तो सब। मेश में कई वैकल्पिक मार्ग होते हैं, इसलिए वह सबसे विश्वसनीय है।"
+ },
+ {
+  "id": "progsr-m2-032",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Ignoring overheads, how long does it take to transfer a 10 MB file over an 8 Mbps link? (Take 1 MB = 10⁶ bytes and 1 Mbps = 10⁶ bits/s.)",
+  "options": [
+   "10 seconds",
+   "1.25 seconds",
+   "8 seconds",
+   "80 seconds"
+  ],
+  "answer": 0,
+  "explanation": "फ़ाइल = 10 × 10⁶ × 8 = 80 × 10⁶ बिट। समय = 80 × 10⁶ / 8 × 10⁶ = 10 सेकंड। ध्यान: MB बाइट में और Mbps बिट में होता है — 8 का गुणा भूलना आम ग़लती है।"
+ },
+ {
+  "id": "progsr-m2-033",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In the URL  https://www.example.com:8080/docs/index.html  the port number is —",
+  "options": [
+   "There is no port in this URL",
+   "443",
+   "80",
+   "8080"
+  ],
+  "answer": 3,
+  "explanation": "URL का ढाँचा: प्रोटोकॉल (https) :// होस्ट (www.example.com) :पोर्ट (8080) /पथ (/docs/index.html)। पोर्ट स्पष्ट लिखा हो तो वही लागू होता है; न लिखा होता तो HTTPS का डिफ़ॉल्ट 443 होता।"
+ },
+ {
+  "id": "progsr-m2-034",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In  <img src=\"logo.png\" alt=\"Company logo\">,  the alt attribute is used to —",
+  "options": [
+   "set the width of the image",
+   "show alternative text if the image cannot be displayed, and to describe it for screen readers",
+   "give the image a hyperlink",
+   "specify the image file format"
+  ],
+  "answer": 1,
+  "explanation": "चित्र न खुले तो alt का पाठ दिखता है; दृष्टिबाधित उपयोगकर्ताओं के स्क्रीन-रीडर भी यही पढ़ते हैं, और सर्च-इंजन भी इसका उपयोग करते हैं। आकार के लिए width/height गुण हैं।"
+ },
+ {
+  "id": "progsr-m2-035",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which HTML input type lets the user choose exactly one option from a group of options sharing the same name?",
+  "options": [
+   "radio",
+   "text",
+   "checkbox",
+   "submit"
+  ],
+  "answer": 0,
+  "explanation": "एक ही name वाले radio बटनों में से एक ही चुना जा सकता है (जैसे लिंग)। checkbox में कितने भी चुने जा सकते हैं (जैसे रुचियाँ)।"
+ },
+ {
+  "id": "progsr-m2-036",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In JavaScript, what are the values of  \"5\" * 2  and  \"5\" + 2  respectively?",
+  "options": [
+   "NaN and \"52\"",
+   "\"52\" and 10",
+   "10 and \"52\"",
+   "10 and 7"
+  ],
+  "answer": 2,
+  "explanation": "* केवल संख्याओं पर चलता है, इसलिए \"5\" संख्या 5 में बदलता है: 10। + में एक स्ट्रिंग हो तो जुड़ाव होता है: \"52\"। यही JavaScript का अंतर्निहित प्रकार-परिवर्तन (type coercion) है।"
+ },
+ {
+  "id": "progsr-m2-037",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What happens when the following PHP code runs?\n\n$x = 10;\nfunction show() { echo $x; }\nshow();",
+  "options": [
+   "An infinite loop starts",
+   "The script prints $x literally",
+   "Nothing useful is printed (with an 'undefined variable' warning), because $x is not visible inside the function",
+   "10 is printed"
+  ],
+  "answer": 2,
+  "explanation": "PHP में फ़ंक्शन के भीतर बाहरी (global) चर अपने आप नहीं दिखते। उपयोग के लिए फ़ंक्शन में global $x; लिखें या $GLOBALS['x'] का उपयोग करें, या मान तर्क के रूप में भेजें।"
+ },
+ {
+  "id": "progsr-m2-038",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which of the following defines the allowed elements, attributes and structure of an XML document so that it can be validated?",
+  "options": [
+   "The XML declaration line",
+   "XSLT only",
+   "CSS",
+   "A DTD or an XML Schema (XSD)"
+  ],
+  "answer": 3,
+  "explanation": "DTD या XSD नियम बताते हैं कि कौन-से तत्व, किस क्रम में, किन गुणों के साथ आ सकते हैं; उनके अनुरूप दस्तावेज़ 'वैध' (valid) कहलाता है। CSS/XSLT प्रदर्शन या रूपांतरण के लिए हैं।"
+ },
+ {
+  "id": "progsr-m2-039",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The Waterfall model is most suitable when —",
+  "options": [
+   "the customer wants a working prototype every week",
+   "the requirements are clear, well understood and unlikely to change",
+   "the project is very risky and needs repeated risk analysis",
+   "the requirements are expected to change frequently"
+  ],
+  "answer": 1,
+  "explanation": "वॉटरफ़ॉल में हर चरण पूरा होकर ही अगला शुरू होता है और पीछे लौटना महँगा है। इसलिए यह स्थिर, स्पष्ट आवश्यकताओं वाले प्रोजेक्ट के लिए ठीक है। बदलती आवश्यकताओं में एजाइल/इन्क्रीमेंटल और जोखिम-भरे प्रोजेक्ट में स्पाइरल बेहतर।"
+ },
+ {
+  "id": "progsr-m2-040",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which statement correctly distinguishes alpha testing from beta testing?",
+  "options": [
+   "Alpha testing is done by users at the developer's site; beta testing is done by real users in their own environment",
+   "Alpha testing is done after release; beta testing before coding",
+   "Beta testing is a form of unit testing",
+   "Both are performed only by developers"
+  ],
+  "answer": 0,
+  "explanation": "अल्फ़ा = डेवलपर की देखरेख में, उसके परिसर पर, नियंत्रित वातावरण में। बीटा = रिलीज़ से पहले चुने हुए वास्तविक उपयोगकर्ता अपने वातावरण में चलाकर प्रतिक्रिया देते हैं। दोनों स्वीकृति-परीक्षण के रूप हैं।"
+ },
+ {
+  "id": "progsr-m2-041",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "After fixing a bug, the team re-runs previously passed test cases to make sure nothing else broke. This is called —",
+  "options": [
+   "stress testing",
+   "regression testing",
+   "acceptance testing",
+   "smoke testing"
+  ],
+  "answer": 1,
+  "explanation": "रिग्रेशन परीक्षण जाँचता है कि नए बदलाव ने पुरानी काम करने वाली सुविधाएँ तो नहीं तोड़ीं — इसलिए इसे प्रायः स्वचालित किया जाता है। स्मोक-परीक्षण बिल्ड की प्राथमिक जाँच है, स्ट्रेस सीमा से अधिक भार।"
+ },
+ {
+  "id": "progsr-m2-042",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which statement best describes the relationship between testing and debugging?",
+  "options": [
+   "Testing fixes errors; debugging only reports them",
+   "Debugging is done before any testing",
+   "They are exactly the same activity",
+   "Testing reveals that a failure exists; debugging locates its cause and fixes it"
+  ],
+  "answer": 3,
+  "explanation": "परीक्षण का उद्देश्य त्रुटि का होना दिखाना है; डीबगिंग उस विफलता का कारण खोजकर सुधारती है। डीबगिंग के तरीक़े: बैकट्रैकिंग, कारण-निवारण (cause elimination), ब्रूट-फ़ोर्स (प्रिंट/डिबगर)।"
+ },
+ {
+  "id": "progsr-m2-043",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A function contains three simple, separate if statements and no loops. Its cyclomatic complexity is —",
+  "options": [
+   "1",
+   "8",
+   "4",
+   "3"
+  ],
+  "answer": 2,
+  "explanation": "V(G) = निर्णय-बिंदु + 1 = 3 + 1 = 4। इसका अर्थ है कि हर शाखा ढकने के लिए कम से कम 4 स्वतंत्र पथ परखने होंगे। 10 से अधिक जटिलता वाले मॉड्यूल को प्रायः तोड़ने की सलाह दी जाती है।"
+ },
+ {
+  "id": "progsr-m2-044",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A 'white-hat' hacker is a person who —",
+  "options": [
+   "tests systems for security weaknesses with the owner's permission and reports them",
+   "spreads viruses for fun",
+   "breaks into systems to steal data for profit",
+   "defaces websites for political reasons"
+  ],
+  "answer": 0,
+  "explanation": "व्हाइट-हैट (नैतिक हैकर) अनुमति लेकर पेनिट्रेशन-टेस्ट करते हैं और कमज़ोरियाँ बताते हैं। ब्लैक-हैट अवैध लाभ के लिए घुसपैठ करते हैं; ग्रे-हैट बिना अनुमति घुसते हैं पर नुक़सान का इरादा नहीं रखते। बिना अनुमति पहुँच IT अधिनियम की धारा 43/66 के तहत दंडनीय है।"
+ },
+ {
+  "id": "progsr-m2-045",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which measure best protects a social-media account even if its password is stolen?",
+  "options": [
+   "Enabling two-factor authentication (2FA)",
+   "Using the same password on all sites",
+   "Keeping the profile picture private",
+   "Sharing the password with a trusted friend"
+  ],
+  "answer": 0,
+  "explanation": "2FA में पासवर्ड के साथ दूसरा प्रमाण (फ़ोन पर OTP, ऑथेंटिकेटर ऐप, सुरक्षा-कुंजी) भी चाहिए — केवल चुराया पासवर्ड पर्याप्त नहीं। हर साइट पर एक ही पासवर्ड रखना एक रिसाव से सब खाते खोल देता है।"
+ },
+ {
+  "id": "progsr-m2-046",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Forging the 'From' address of an e-mail so that it appears to come from someone else is called —",
+  "options": [
+   "spamming",
+   "cyber stalking",
+   "e-mail spoofing",
+   "e-mail bombing"
+  ],
+  "answer": 2,
+  "explanation": "स्पूफ़िंग में प्रेषक का पता नक़ली होता है — प्रायः फ़िशिंग के लिए। ई-मेल बॉम्बिंग = एक पते पर भारी मात्रा में मेल भेजकर उसे जाम करना; स्पैम = अनचाहे थोक संदेश। SPF, DKIM, DMARC जैसी तकनीकें स्पूफ़िंग पकड़ती हैं।"
+ },
+ {
+  "id": "progsr-m2-047",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which Linux command lists all files in the current directory, including hidden files whose names begin with a dot?",
+  "options": [
+   "pwd",
+   "ls -l",
+   "ls -h",
+   "ls -a"
+  ],
+  "answer": 3,
+  "explanation": "-a (all) छिपी फ़ाइलें (.bashrc आदि) भी दिखाता है; -l लंबी सूची (अनुमति, मालिक, आकार); -h आकार को पढ़ने योग्य (K, M) बनाता है। pwd वर्तमान डायरेक्टरी का पथ बताता है।"
+ },
+ {
+  "id": "progsr-m2-048",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Why can purely signature-based antivirus software fail to detect a brand-new (zero-day) virus?",
+  "options": [
+   "Because it works only when the internet is off",
+   "Because no signature for the new virus exists yet in its database",
+   "Because it scans only text files",
+   "Because it deletes the operating system"
+  ],
+  "answer": 1,
+  "explanation": "सिग्नेचर-आधारित पहचान ज्ञात मालवेयर के 'फ़िंगरप्रिंट' से मिलान करती है — नया मालवेयर तब तक नहीं पकड़ा जाता जब तक उसका सिग्नेचर न जुड़े। इसलिए आधुनिक एंटीवायरस ह्यूरिस्टिक और व्यवहार-आधारित पहचान भी करते हैं; नियमित अपडेट ज़रूरी हैं।"
+ },
+ {
+  "id": "progsr-m2-049",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which built-in Windows feature encrypts an entire drive so that its data cannot be read if the laptop is stolen?",
+  "options": [
+   "BitLocker",
+   "Disk Defragmenter",
+   "System Restore",
+   "Windows Update"
+  ],
+  "answer": 0,
+  "explanation": "BitLocker पूरी ड्राइव एन्क्रिप्ट करता है (प्रायः TPM चिप के साथ) — ड्राइव निकालकर दूसरे कंप्यूटर में लगाने पर भी बिना कुंजी डेटा नहीं पढ़ा जा सकता। System Restore सिस्टम-सेटिंग पुराने बिंदु पर लौटाता है।"
+ },
+ {
+  "id": "progsr-m2-050",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In the Excel formula  =VLOOKUP(101, A2:C50, 3, FALSE),  what do the arguments 3 and FALSE mean?",
+  "options": [
+   "Search 3 rows only, approximately",
+   "Return 3 values and ignore errors",
+   "Return the value from the 3rd column of the range, and find an exact match only",
+   "Look in column C3 and return FALSE if not found"
+  ],
+  "answer": 2,
+  "explanation": "VLOOKUP पहले स्तंभ (A) में 101 खोजता है और उसी पंक्ति के तीसरे स्तंभ (C) का मान देता है। FALSE = सटीक मिलान (न मिले तो #N/A); TRUE/छोड़ने पर निकटतम मिलान, जिसके लिए पहला स्तंभ क्रमबद्ध होना चाहिए।"
+ }
+]

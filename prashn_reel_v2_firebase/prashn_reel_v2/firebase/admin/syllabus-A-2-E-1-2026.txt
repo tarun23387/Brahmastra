@@ -1,0 +1,106 @@
+UPPSC विज्ञापन A-2/E-1/2026 — परिशिष्ट-3 (पाठ्यक्रम), पाठ जस का तस
+स्रोत: विज्ञापन की PDF (7 पन्ने), 22 अक्टू॰ 2026 को निकाला
+
+Syllabus for Manager (System)
+Sub : Computer Application
+1. Computer Fundamentals & Computer Organisation: Classification of computers,
+Elements of Computer Processing System, Hardware, Software, CPU, Peripherals,
+Storage Media, General organization of a digital computer, Data Representation, fixed
+and floating point decimal arithmetic, Bit slice microprocessor, Adders & its types,
+Generators & its types, multiplication and division circuits, an arithmetic unit, Instruction
+cycle, Instruction sequencing, formats and its interpretation, micro program concepts and
+control unit design. Semiconductor memory and memory organization, virtual memory,
+segments, pages, paged segments, cache memory and interleaved memory. Concepts of
+I/O organization, data transfer methods, programmed I/O, DMA, interrupt-based transfer,
+I/O channels, I/O processors, serial transmission and synchronization.
+2. Data Structure & Algorithms: Algorithm Complexity, Data structure and its Types,
+Array, Representation and Analysis, Single and Multidimensional Arrays and its
+Application, Ordered List, Sparse Matrices and Vectors, Representation and
+Implementation of Singly lists, Two way Header list, Traversing and Searching of Linked
+List, Overflow and Underflow, Insertion and deletion to / from Linked Lists, Doubly linked
+list, Linked List in Array, Polynomial representation and addition, Garbage Collection and
+Compaction. Stacks, Queues, Array Representation and Implementation of Stack,
+Operations on Stacks : Push & Pop, Array and Linked representation and implementation
+of Queues, Operations on Queue: Create, add, Delete, Full and Empty, Circular queue,
+De-queue and Priority Queue. Recursion, Principles of Recursion, Tower of Hanoi
+Problem, Simulating Recursion, Backtracking Recursive algorithms, tail Recursion,
+Removal of Recursion. Tree representation evaluation and Traversel, Binary tree
+representation, Algebraic Expressions, Complete Binary Tree, Extended Binary Tree,
+Array and Linked Representation of Binary trees, Threaded Binary trees, Traversing
+Page- 6
+Threaded Binary trees, Huffman algorithm. Sequential search, Binary search, comparison and analysis, Hash Table, Hash Functions, Collision Resolution Strategies, Hash Table Implementation. 3. Programming languages: Concepts and Application of C, C++, Java, Python, Free and Open Source Software 4. Database Management System: Data independence, Architecture for a Database system. Storage structures, Relational approach, Hierarchical approach, Network and Distributed Approach. Relations, Domains and attributes, Keys, Extensions and Intentions, Relational Algebra, Set operations, Relational operations, Relational calculus. Normal Forms, Functional Dependency, 1NF, 2NF, 3NF and BCNF. SQL, Query and Optimizer, Security, Concurrency and Recovery. 5. Operating Systems: Functions, Multiprogramming, Multiprocessing & Multitasking, Processes, Threads, Memory Management, Virtual memory, Paging, Fragmentation, Mutual exclusion, Critical regions. CPU scheduling, I/O scheduling, Scheduling algorithms, Deadlock avoidance & prevention; UNIX/LINUX: Structure & Commands, Interfacing, Editors & Compilers, LEX & YACC, File system, System calls, Filters, Shell programming. 6. Data Communication and Computer Networks: Communication channels, Measure of information, Source coding techniques like Huffman code, Block Code & Cyclic Redundancy codes. Modulations and Demodulations, Networks structure and architecture, OSI Model, Topology, Transmission media, Switching, Multiplexing, ClientServer model, IEEE standards, FDDI, TCP/IP Model, Integrated services digital networks, Multipoint Protocol Layer Switching (MPLS). Physical Layer, Data Link Layer, Network Layer, Routing algorithms, Congestion control algorithms. Internetworking, IP addressing, Subnetting, IPv4. Transport Layer, Application layer, Compression Techniques, IPv6, DNS System. Security Concepts-Attacks, Services & Mechanisms, Cipher Principles and Cryptography. 7. Artificial Intelligence: Intelligent agents, Structure of agents and its 'functions, Problem spaces and search, Heuristic Search techniques- Best first search, Problem reduction, Constraint satisfaction, Means Ends Analysis. Knowledge Representation: Approaches and issues in knowledge representation, Knowledge Based Agent, Propositional Logic, Predicate logic - Unification and Resolution. 8. Introduction to RMI (Remote Method Invocation): Client-server application using RMI. Java Servlet, Servlet API, Life Cycle of a Servlet, Running Servlet, Debugging Servlets, Thread-safe Servlets, HTTP Redirects, Cookies, Java Server pages (JSP), HTML, URL, FTP, HTTP, PH P and ASP.net 9. System Security: Authentication, Service Electronic Mail Security, Web Security: Secure Socket Layer Security, Secure Electronic Transaction (SET). System Security: Intruders, Viruses, Firewall Design Principles. Internet: Basics, Various types of internet connections, ISP, Mail Services concepts, Voice and Video Conferencing, Web Browsers and Web Servers, VPN, Voice Over Internet Protocol (VOIP ). 10. Software Engineering and MIS: Importance of Software and its characteristics, Software Development Life Cycle, Software Process. Software Requirement Specification, Water Fall Model, The Incremental Model, Prototyping, Spiral Model, Role of management in software development, Role of metrics and Measurement, Problem analysis, Requirement specification, Monitoring and Control, Software design principles, Abstraction, Cohesiveness, Coupling, Software testing, Verification & validation, Software Project Management, Software Quality and Reliability, Concepts of MIS and ERP. 11. Advanced Computing: Basics Concepts of Mobile Computing, Cloud Computing, Grid Computing, Big Data, Internet of Things and Machine Learning.
+SYLLABUS FOR SENIOR PROGRAMER SUBJECT: COMPUTER APPLICATION 1. Computer Fundamental and Computer Organization : (a) Computer Fundamentals: Definition and Characteristics, Types, Components, Hardware, Software, Operating Systems and Utilities. (b) Computer Organization: Number systems, Instruction Codes, Instruction Cycle, Addressing Modes, Data Transfer and Manipulation, Complex Instruction Set Computer (CISC) and Reduced Instruction set Computer (RISC). 2. Data Structure: Basics of Data Structures, Stack Operations, Array and Linked Representation of Stack, Stack Application, Queue Operations and their Array and Linked Representation, Basics of Search Trees. 3. DBMS: Basics of Data Base Management Systems, Data Models, ER Diagram, Exposure to MS Access, Oracle, MY SQL, SQL Server. 4. Programming Languages: Programming Concepts, Knowledge of C, C++, Java and Python programming and their Applications. 5. Network: Definition, Types (LAN, WAN, MAN) and Network Components, OSI, TCP/IP, Connection Oriented Network, Wireless Communication, Intranet, Internet (Services and Applications), Web Browsers and Email. 6. Web Technology: Fundamentals of Web Technology, Basic knowledge of HTML, XML, PHP and Java Script. 7. Software Engineering: The Evolving Role of Software, Changing Nature of Software, Software Development Life Cycle, Requirement Engineering Process, Knowledge of Testing Technique and Testing Tools, Debugging, Software Quality and Metrics. 8. Cyber Law and Security Policy: Cyber Crime, Forgery, Hacking, Software Privacy, Data Fraud, Phishing and Identity Theft, Web Security, Email Security, Social Media Security, ITAct. 9. Windows/Unix/Linux: Understanding Operating Systems, Its Features and applications, Working with Windows firewall, Windows firewall with Advanced Security, Password Security, Antivirus Security, Knowledge of Unix/Linux Commands. 10. Document Preparations: Working Knowledge of Office Suite. SYLLABUS FOR PROGRAMMER GRADE-2 SUBJECT: COMPUTER APPLICATION 1. Operating System Fundamentals of Operating System: Basics of Operating System, Types, Functions and Services of Operating Systems, System Calls, Interface, Interrupts. Process: Process Management, Process Control Block, Process States, Threads, Scheduling, Spooling, Scheduling Algorithms and their Evaluation, Process Synchronization, Inter-process Communication, Concurrent Execution, Race Condition, Mutual Exclusion, Bounded Waiting, � Semaphores, Hardware Synchronization, Classical Problems of Synchronization (Readers-Writers, Dining Philosophers) Deadlock: Introduction of Deadlocks, Deadlock Characteristics, Deadlock Prevention, Detection andAvoidance, Wait-for-Graph, Banker'sAlgorithm, Safe Condition, Deadlock Recovery Memory Management: Basics of Memory Management, Static Allocation, Dynamic Allocation, Swapping, Compaction, Contiguous Vs. Non-Contiguous Allocation, Paging,
+Segmentation, Virtual Memory, Demand Paging, Page Replacement Algorithms, Frame
+Allocation Methods, Thrashing.
+File Management: Structure and Functions of File System, I/O Operations, Device
+Drivers, Access Methods, File System Organization, Design Techniques, File Allocation
+Methods, File Security and Protection
+Unix and Windows: Overview of Unix Shell Environment, Interface, Common
+Commands, System Utilities, Windows Environment Subsystem, Control Panel and
+System Configuration, Security and Protection.
+2. Programming Language:
+Problem Solving Techniques: Algorithms, Flowcharts, Programming Paradigms (Top-
+Down, Bottom-Up), Introduction to Object Oriented Programming and Structured
+Programming Concepts.
+C Programming: Importance and evolution of C Language, Structure of C Program,
+Character Set, Tokens, Keywords, Identifiers, Constants, Variables, Data Types,
+Operators, Decision Making Statements, loops, Arrays, Strings, Functions, Structures.
+Object Oriented Programming: Classes, Objects, Encapsulation, Data Abstraction,
+Inheritance, Reusability and Modularity, Polymorphism, Friend Functions, Virtual
+Functions, Constructors and Destructors
+Java: Java Source File Structure, JVM Architecture, Primitive Data Types, Operators,
+Type Casting, Arrays, Conditional Statements, Loop constructs, Abstract Classes and
+Interfaces, Method Overloading and Overriding, Packages and Access Modifiers.
+3. Scripting Languages
+Definition and Characteristics of Scripting Languages, Uses of Scripting Languages for
+Web Based Applications, Client Side vs. Server Side Scripting.
+JavaScript: Overview of JavaScript, Syntax, Variables, Expressions, Control Structure
+(Branching and Looping), Functions, Events, Document Object Model (DOM) manipulations.
+Perl: Syntax, Data Types, Variables, Operators, Conditional and Looping Statements,
+Array, Strings, Hashes, built-in Functions and Subroutines.
+4. Database
+Characteristics of DBMS, Types of database models, ER Diagrams, DDL, DML, Data
+Abstraction and Data Independence, DBMS Architecture, Schema, Views, Functional
+Dependencies, Integrity Constraints, Normal Forms (1NF, 2NF, 3NF and BCNF),
+Concepts Of Transactions and Concurrency.
+5. Database Packages
+Structured Query Language (SQL): SELECT Queries, JOINS, Subqueries, Aggregate
+Functions, Set Operations, Data Manipulations (INSERT, UPDATE, DELETE, WHERE,
+ORDER BY, GROUP BY), Indices and Triggers.
+MS-ACCESS: Introduction to MS-Access GUI and Structure, Reports, Queries, Macros,
+Built-in Functions, Data Import/Export queries, Table Relationships.
+Oracle: Introduction and Installation, Backup and Recovery Manager, SQL Server Basics,
+Functions of SQLServer, Server Configuration, User Management, Basic Concepts of MYSQL.
+6. Web Server
+PHP: Introduction to PHP, Variables, Data Types, Conditional and Looping Statements,
+Indexed and Associative Arrays, Built-in Functions, Embedding PHP in HTML, Form
+Handling.
+Web Server: Overview and Concepts of Web Server, Types of Web Servers, HTTP and
+HTTPS Protocol, Client-side and Server-side Scripting, Introduction to the .NET Platform
+and Framework, MVC Architecture and its implementation, API Development, Remote
+Access and Server Management, Deployment and Publishing ASP.NET, Understating IIS
+and Apache Servers, Basics of Web Hosting and Domain management.
+7. Network
+Basics of the Internet, Web Browser, Search Engine, URL Structure, Protocols and
+Services, FTP, TCP/IP, DNS, POP, SMTP, ICMP, RARP, UDP, ARP, IP Addressing,
+Subnetting concepts, Remote Login, Web Uploading/Downloading, Web Publishing,
+Hosting Services, SSL, Internet Safety Practices, Social Media Networking, Fundamentals
+of Socket Programming, Client ServerArchitecture, TCP and UDP Socket communication.
+8. Web Content Development
+Concepts of Hypertext and Hypermedia, Structure of HTML Documents, Head and Body
+Sections, Different Tags, Text Formatting, Inserting Images, Creating Links, Using Tables
+and Lists, Frames and Form Handling.
+9. Document Preparation
+MS-Word: Introduction to MS --WORD and its features, Creating, Saving and Opening
+Documents, Interface, Toolbars, Ruler, Menus, Keyboard Shortcuts, Paragraph
+formatting, Alignment, Borders and Shading, Headers and Footers, Columns, Tables.
+MS-Excel: Creating Worksheets, Defining Cells, Columns and Rows, Entering, Editing,
+Saving and Protecting Data, Toolbars, Functions, and Keyboard Shortcuts. Cell
+Formatting, Alignment, Character Styles, Adjusting Column Width and Row Height,
+Date/Time Formatting, Applying Boarders, Colors, Basic Formulas, Cell Referencing
+(Relative, Absolute, Mixed)
+MS-PowerPoint: Overview of MS-PowerPoint and its applications in presentations,
+Creating, Duplicating, Moving, Copying, and Deleting Slides, Using Themes, Slide
+Layouts, Design Tools, Editing and Formatting Text, Applying Styles, Using Bullets and
+Numbering, Inserting and Formatting Images, Charts, Smart-art and Multimedia, Applying
+Visual Effects, Custom Animation, Notes, Handouts, Slide Sorter View, Rehearse Timing.

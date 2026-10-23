@@ -1,0 +1,802 @@
+[
+ {
+  "id": "progsr-pgm2-001",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which binary number representations have two different patterns for zero (+0 and −0)?",
+  "options": [
+   "2's complement only",
+   "1's complement and 2's complement",
+   "Sign-magnitude and 1's complement",
+   "Only unsigned binary"
+  ],
+  "answer": 2,
+  "explanation": "8-बिट साइन-मैग्निट्यूड में 0000 0000 और 1000 0000; 1's complement में 0000 0000 और 1111 1111 — दोनों शून्य हैं। 2's complement में शून्य एक ही है, इसलिए उसकी सीमा −128 से +127 है (एक ऋणात्मक संख्या अधिक)।"
+ },
+ {
+  "id": "progsr-pgm2-002",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Using 4-bit 2's complement arithmetic, 0110 − 1001 (i.e. 6 − 9) gives —",
+  "options": [
+   "1101",
+   "0011",
+   "1111",
+   "1011"
+  ],
+  "answer": 0,
+  "explanation": "घटाव = जोड़ + 2's complement: 1001 का 2's complement 0111। 0110 + 0111 = 1101। 1101 का अर्थ −3 है (−8 + 4 + 1), जो 6 − 9 के बराबर है।"
+ },
+ {
+  "id": "progsr-pgm2-003",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The sum of the hexadecimal numbers 2F and 1A is —",
+  "options": [
+   "4A",
+   "59",
+   "3F",
+   "49"
+  ],
+  "answer": 3,
+  "explanation": "F + A = 15 + 10 = 25 = 16 + 9 → अंक 9, हासिल 1। 2 + 1 + 1 = 4। योग (49)₁₆। जाँच: 47 + 26 = 73 = 4 × 16 + 9।"
+ },
+ {
+  "id": "progsr-pgm2-004",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which addressing mode needs no memory access to obtain the operand, because the operand is part of the instruction itself?",
+  "options": [
+   "Indirect",
+   "Immediate",
+   "Direct",
+   "Indexed"
+  ],
+  "answer": 1,
+  "explanation": "इमीडिएट (जैसे MOV R1, #25) में ऑपरेण्ड निर्देश में ही है — कोई अतिरिक्त मेमोरी-पहुँच नहीं। डायरेक्ट में 1 पहुँच, इनडायरेक्ट में 2 (पहले पता, फिर ऑपरेण्ड), इंडेक्स्ड में पता जोड़कर 1।"
+ },
+ {
+  "id": "progsr-pgm2-005",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "With memory-indirect addressing, how many memory references are needed to fetch the operand (after the instruction itself has been fetched)?",
+  "options": [
+   "0",
+   "1",
+   "2",
+   "3"
+  ],
+  "answer": 2,
+  "explanation": "पहली पहुँच निर्देश में दिए पते से प्रभावी पता लाती है, दूसरी उस प्रभावी पते से ऑपरेण्ड। इसीलिए इनडायरेक्ट मोड लचीला (पॉइंटर जैसा) पर धीमा है।"
+ },
+ {
+  "id": "progsr-pgm2-006",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "During the instruction cycle, which register holds the instruction that is currently being decoded and executed?",
+  "options": [
+   "Instruction Register (IR)",
+   "Accumulator",
+   "Program Counter (PC)",
+   "Memory Address Register (MAR)"
+  ],
+  "answer": 0,
+  "explanation": "फ़ेच के बाद निर्देश IR में रहता है और कंट्रोल यूनिट उसे वहीं से डिकोड करती है। PC अगले निर्देश का पता, MAR मेमोरी को भेजा जाने वाला पता और MDR मेमोरी से आया/जाने वाला डेटा रखता है।"
+ },
+ {
+  "id": "progsr-pgm2-007",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which of the following is utility software rather than an operating system or application software?",
+  "options": [
+   "Linux kernel",
+   "Disk Defragmenter",
+   "MS-Word",
+   "Tally"
+  ],
+  "answer": 1,
+  "explanation": "यूटिलिटी सॉफ़्टवेयर कंप्यूटर के रखरखाव/अनुकूलन का काम करते हैं — डीफ़्रैगमेंटर, एंटीवायरस, बैकअप, फ़ाइल-कम्प्रेशन। कर्नेल ऑपरेटिंग सिस्टम का भाग है; Word और Tally एप्लिकेशन सॉफ़्टवेयर हैं।"
+ },
+ {
+  "id": "progsr-pgm2-008",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The value of the postfix expression  2 3 4 * + 5 −  is —",
+  "options": [
+   "−9",
+   "25",
+   "15",
+   "9"
+  ],
+  "answer": 3,
+  "explanation": "3 4 * = 12; 2 12 + = 14; 14 5 − = 9। मूल्यांकन के दौरान स्टैक में अधिकतम 3 तत्व (2, 3, 4) रहे।"
+ },
+ {
+  "id": "progsr-pgm2-009",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The value of the prefix expression  − * 2 3 4  is —",
+  "options": [
+   "2",
+   "−2",
+   "10",
+   "14"
+  ],
+  "answer": 0,
+  "explanation": "प्रीफ़िक्स में संचालक पहले आता है: − ( * 2 3 ) 4 = (2 × 3) − 4 = 2। प्रीफ़िक्स का मूल्यांकन दाएँ से बाएँ स्टैक से किया जाता है।"
+ },
+ {
+  "id": "progsr-pgm2-010",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A priority queue is implemented using a binary heap of n elements. The time complexity of inserting a new element is —",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n log n)",
+   "O(n)"
+  ],
+  "answer": 1,
+  "explanation": "नया तत्व अंत में डालकर ऊपर खिसकाया जाता है (heapify-up); हीप की ऊँचाई log n है, इसलिए O(log n)। सबसे ऊँची प्राथमिकता वाला तत्व देखना O(1) और निकालना O(log n)।"
+ },
+ {
+  "id": "progsr-pgm2-011",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "An input-restricted deque allows —",
+  "options": [
+   "insertion and deletion at only one end",
+   "insertion and deletion only in the middle",
+   "deletion at only one end, but insertion at both ends",
+   "insertion at only one end, but deletion at both ends"
+  ],
+  "answer": 3,
+  "explanation": "डेक (डबल-एंडेड क्यू) दोनों सिरों पर जोड़-घटाव देता है। इनपुट-प्रतिबंधित में डालना एक सिरे से, निकालना दोनों से; आउटपुट-प्रतिबंधित में उल्टा। एक ही सिरे वाला स्टैक, और एक सिरे पर डालना/दूसरे से निकालना कतार है।"
+ },
+ {
+  "id": "progsr-pgm2-012",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In a binary search tree, the node containing the minimum key is found by —",
+  "options": [
+   "checking only the root",
+   "following right-child pointers from the root",
+   "following left-child pointers from the root until a node with no left child is reached",
+   "visiting every node in level order"
+  ],
+  "answer": 2,
+  "explanation": "BST में हर नोड का बायाँ उप-वृक्ष उससे छोटे मान रखता है, इसलिए सबसे बाएँ पहुँचा नोड न्यूनतम है। अधिकतम के लिए दाएँ चलते जाइए। समय O(h)।"
+ },
+ {
+  "id": "progsr-pgm2-013",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The keys 40, 20, 60, 10, 30 are inserted in that order into an empty binary search tree. The pre-order traversal of the tree is —",
+  "options": [
+   "40, 20, 10, 30, 60",
+   "10, 30, 20, 60, 40",
+   "40, 20, 60, 10, 30",
+   "10, 20, 30, 40, 60"
+  ],
+  "answer": 0,
+  "explanation": "वृक्ष: 40 रूट; 20 बाएँ (उसके 10 बाएँ, 30 दाएँ); 60 दाएँ। प्री-ऑर्डर (रूट-बायाँ-दायाँ): 40, 20, 10, 30, 60। इन-ऑर्डर क्रमबद्ध सूची देता, और अंतिम विकल्प लेवल-ऑर्डर है।"
+ },
+ {
+  "id": "progsr-pgm2-014",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which of the following is NOT an advantage of a DBMS over a traditional file-processing system?",
+  "options": [
+   "It enforces integrity constraints centrally",
+   "It completely removes the need for taking backups",
+   "It reduces data redundancy and inconsistency",
+   "It allows controlled concurrent access by many users"
+  ],
+  "answer": 1,
+  "explanation": "DBMS अतिरेक घटाता है, एकरूपता बनाए रखता है, अखंडता-नियम लागू करता है, समवर्ती पहुँच व सुरक्षा देता है और रिकवरी-सुविधा भी देता है। फिर भी हार्डवेयर-ख़राबी या आपदा से बचने के लिए बैकअप हमेशा ज़रूरी है।"
+ },
+ {
+  "id": "progsr-pgm2-015",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In an ER diagram, how is the key attribute of an entity set shown?",
+  "options": [
+   "By a dashed ellipse",
+   "By a diamond",
+   "Its name is underlined inside the ellipse",
+   "By a double ellipse"
+  ],
+  "answer": 2,
+  "explanation": "कुंजी गुण का नाम रेखांकित होता है। कमज़ोर इकाई की आंशिक कुंजी (discriminator) बिंदीदार रेखा से रेखांकित होती है। दोहरा दीर्घवृत्त बहु-मानी और बिंदीदार दीर्घवृत्त व्युत्पन्न गुण है।"
+ },
+ {
+  "id": "progsr-pgm2-016",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which statement about a foreign key is correct?",
+  "options": [
+   "It must have the same name as the referenced column",
+   "It can never contain NULL",
+   "It must always be unique in its own table",
+   "It refers to the primary key (or a unique key) of another table and may contain NULL unless restricted"
+  ],
+  "answer": 3,
+  "explanation": "विदेशी कुंजी दो तालिकाओं को जोड़ती है; उसका मान संदर्भित तालिका में मौजूद होना चाहिए या NULL हो (जैसे अभी विभाग तय न हो)। वह अपनी तालिका में दोहराई जा सकती है (कई कर्मचारी एक विभाग में), और नाम मेल खाना ज़रूरी नहीं।"
+ },
+ {
+  "id": "progsr-pgm2-017",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In MS-Access, which type of action query creates a new table from the results of a query?",
+  "options": [
+   "Update query",
+   "Append query",
+   "Make-Table query",
+   "Crosstab query"
+  ],
+  "answer": 2,
+  "explanation": "एक्शन क्वेरी डेटा बदलती हैं: Make-Table (नई तालिका बनाना), Append (मौजूदा तालिका में पंक्तियाँ जोड़ना), Update (मान बदलना), Delete (पंक्तियाँ हटाना)। Crosstab सारांश-तालिका दिखाती है, डेटा नहीं बदलती।"
+ },
+ {
+  "id": "progsr-pgm2-018",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which MySQL command displays the column names, data types and keys of the table students?",
+  "options": [
+   "DESCRIBE students;",
+   "SHOW DATABASES;",
+   "USE students;",
+   "SELECT * FROM students;"
+  ],
+  "answer": 0,
+  "explanation": "DESCRIBE (या DESC) तालिका का ढाँचा दिखाता है। SHOW DATABASES सभी डेटाबेस, USE डेटाबेस चुनता है, और SELECT * डेटा दिखाता है, ढाँचा नहीं।"
+ },
+ {
+  "id": "progsr-pgm2-019",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following C code print?\n\nint x = 7;\nprintf(\"%d %d\", x >> 1, x << 2);",
+  "options": [
+   "14 28",
+   "3 28",
+   "3 14",
+   "6 28"
+  ],
+  "answer": 1,
+  "explanation": "7 = 0111। एक बिट दायाँ = 0011 = 3 (2 से पूर्णांक भाग)। दो बिट बायाँ = 11100 = 28 (4 से गुणा)।"
+ },
+ {
+  "id": "progsr-pgm2-020",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following C code print?\n\nint i = 10;\ndo { printf(\"%d\", i); } while (i < 5);",
+  "options": [
+   "5",
+   "An infinite loop",
+   "Nothing",
+   "10"
+  ],
+  "answer": 3,
+  "explanation": "do-while में शर्त अंत में जाँची जाती है, इसलिए शरीर कम से कम एक बार चलता है — 10 छपता है, फिर 10 < 5 असत्य होने से लूप रुकता है। साधारण while में कुछ नहीं छपता।"
+ },
+ {
+  "id": "progsr-pgm2-021",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following C code print?\n\nchar s[] = \"abc\";\nprintf(\"%c\", *(s + 2));",
+  "options": [
+   "a",
+   "b",
+   "c",
+   "An address"
+  ],
+  "answer": 2,
+  "explanation": "*(s + 2) वही है जो s[2] — तीसरा अक्षर 'c'। सरणी का नाम पहले तत्व के पॉइंटर की तरह व्यवहार करता है।"
+ },
+ {
+  "id": "progsr-pgm2-022",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In C++, memory allocated by  int *p = new int[5];  should be released with —",
+  "options": [
+   "delete[] p;",
+   "free(p);",
+   "p = NULL;",
+   "delete p;"
+  ],
+  "answer": 0,
+  "explanation": "new[] से बनी सरणी को delete[] से ही मुक्त करना चाहिए; delete p से अपरिभाषित व्यवहार होता है। malloc/free और new/delete को आपस में मिलाना भी ग़लत है। केवल p = NULL करने से मेमोरी लीक होती है।"
+ },
+ {
+  "id": "progsr-pgm2-023",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which of the following operators can NOT be overloaded in C++?",
+  "options": [
+   "[] (subscript)",
+   "<< (insertion)",
+   "+ (addition)",
+   ":: (scope resolution)"
+  ],
+  "answer": 3,
+  "explanation": "::, . (सदस्य-पहुँच), .*, ?: (टर्नरी) और sizeof ओवरलोड नहीं हो सकते। +, [], <<, ==, () आदि ओवरलोड होते हैं — cout << obj इसी से संभव है।"
+ },
+ {
+  "id": "progsr-pgm2-024",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following Java code print?\n\nint x = 5;\nx = x++ * 2;\nSystem.out.println(x);",
+  "options": [
+   "11",
+   "10",
+   "12",
+   "5"
+  ],
+  "answer": 1,
+  "explanation": "x++ पुराना मान 5 देता है और x को 6 करता है; फिर 5 × 2 = 10 x में लिखा जाता है, जो बढ़ोतरी (6) को ढक देता है। परिणाम 10।"
+ },
+ {
+  "id": "progsr-pgm2-025",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What happens when the Java statement  int a = 5 / 0;  is executed?",
+  "options": [
+   "a becomes Infinity",
+   "An ArithmeticException is thrown at run time",
+   "The program does not compile",
+   "a becomes 0"
+  ],
+  "answer": 1,
+  "explanation": "पूर्णांक को शून्य से भाग देना रन-टाइम पर ArithmeticException ('/ by zero') देता है। double में 5.0 / 0 का परिणाम Infinity होता है, अपवाद नहीं। try-catch से इसे सँभाला जा सकता है।"
+ },
+ {
+  "id": "progsr-pgm2-026",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following Python statement print?\n\nprint(len(set([1, 2, 2, 3, 3, 3])))",
+  "options": [
+   "1",
+   "6",
+   "3",
+   "An error"
+  ],
+  "answer": 2,
+  "explanation": "set दोहराव हटाकर केवल अद्वितीय मान रखता है: {1, 2, 3}। उसकी लंबाई 3। सूची से दोहराव हटाने का यह आम तरीक़ा है।"
+ },
+ {
+  "id": "progsr-pgm2-027",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following Python code print?\n\nfor i in range(2, 10, 3):\n    print(i, end=\" \")",
+  "options": [
+   "2 3 4 5 6 7 8 9",
+   "3 6 9",
+   "2 5 8 11",
+   "2 5 8"
+  ],
+  "answer": 3,
+  "explanation": "range(start, stop, step): 2 से शुरू, 3-3 बढ़ते हुए, 10 से पहले रुकना — 2, 5, 8। stop (10) कभी शामिल नहीं होता।"
+ },
+ {
+  "id": "progsr-pgm2-028",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A traditional landline telephone call, where a dedicated path is reserved for the whole call, is an example of —",
+  "options": [
+   "connection-oriented circuit switching",
+   "message switching",
+   "datagram routing",
+   "connectionless packet switching"
+  ],
+  "answer": 0,
+  "explanation": "सर्किट स्विचिंग में बात शुरू होने से पहले पूरा मार्ग आरक्षित होता है और कॉल भर रहता है — कनेक्शन-आधारित। इंटरनेट पैकेट स्विचिंग पर चलता है जहाँ हर पैकेट अलग रास्ता ले सकता है।"
+ },
+ {
+  "id": "progsr-pgm2-029",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The sizes of a MAC address, an IPv4 address and an IPv6 address are respectively —",
+  "options": [
+   "32, 48 and 128 bits",
+   "48, 64 and 128 bits",
+   "48, 32 and 128 bits",
+   "64, 32 and 256 bits"
+  ],
+  "answer": 2,
+  "explanation": "MAC (हार्डवेयर पता) 48 बिट — 6 बाइट, जैसे 00:1A:2B:3C:4D:5E। IPv4 32 बिट (4 अंक-समूह), IPv6 128 बिट (8 हेक्स-समूह)।"
+ },
+ {
+  "id": "progsr-pgm2-030",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A browser receives HTTP status code 404 from a server. This means —",
+  "options": [
+   "the page has moved permanently",
+   "the requested resource was not found on the server",
+   "the server had an internal error",
+   "the request succeeded"
+  ],
+  "answer": 1,
+  "explanation": "2xx = सफलता (200 OK); 3xx = पुनर्निर्देशन (301 स्थायी, 302 अस्थायी); 4xx = क्लाइंट-त्रुटि (403 वर्जित, 404 नहीं मिला); 5xx = सर्वर-त्रुटि (500)।"
+ },
+ {
+  "id": "progsr-pgm2-031",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A user reads e-mail on a phone and a laptop and wants read/unread status and folders to stay synchronised on both. Which protocol suits this best?",
+  "options": [
+   "SMTP",
+   "POP3",
+   "FTP",
+   "IMAP"
+  ],
+  "answer": 3,
+  "explanation": "IMAP मेल सर्वर पर रखता है और फ़ोल्डर/स्थिति सब उपकरणों में समन्वित रखता है। POP3 मेल एक उपकरण पर उतार लेता है (प्रायः सर्वर से हटाकर)। SMTP केवल भेजने के लिए है।"
+ },
+ {
+  "id": "progsr-pgm2-032",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The basic function of a modem is to —",
+  "options": [
+   "convert digital signals to analog for transmission and back to digital on reception",
+   "connect computers within one LAN by MAC address",
+   "encrypt data before sending",
+   "translate domain names into IP addresses"
+  ],
+  "answer": 0,
+  "explanation": "मॉडेम = MOdulator–DEModulator: कंप्यूटर के डिजिटल संकेत को टेलीफ़ोन/केबल लाइन के एनालॉग संकेत में बदलता है और प्राप्ति पर वापस। LAN में जोड़ना स्विच का काम है, नाम→पता DNS का।"
+ },
+ {
+  "id": "progsr-pgm2-033",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Wi-Fi networks commonly operate in which radio frequency bands?",
+  "options": [
+   "10 GHz only",
+   "900 MHz only",
+   "60 Hz and 50 Hz",
+   "2.4 GHz and 5 GHz"
+  ],
+  "answer": 3,
+  "explanation": "2.4 GHz की पहुँच अधिक है पर भीड़ और व्यवधान (ब्लूटूथ, माइक्रोवेव) ज़्यादा; 5 GHz तेज़ और कम भीड़ वाला पर दूरी कम। Wi-Fi 6E में 6 GHz भी जुड़ा है।"
+ },
+ {
+  "id": "progsr-pgm2-034",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which HTML code opens the linked page in a new browser tab or window?",
+  "options": [
+   "<a href=\"page.html\" target=\"_self\">",
+   "<a href=\"page.html\" target=\"_blank\">",
+   "<a href=\"page.html\" new=\"tab\">",
+   "<link href=\"page.html\" target=\"_blank\">"
+  ],
+  "answer": 1,
+  "explanation": "target=\"_blank\" नया टैब/विंडो खोलता है; _self (डिफ़ॉल्ट) उसी में। <link> टैग स्टाइलशीट आदि जोड़ने के लिए <head> में लगता है, क्लिक करने योग्य लिंक के लिए नहीं।"
+ },
+ {
+  "id": "progsr-pgm2-035",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which JavaScript dialog shows OK and Cancel buttons and returns true or false depending on the user's choice?",
+  "options": [
+   "confirm()",
+   "prompt()",
+   "alert()",
+   "console.log()"
+  ],
+  "answer": 0,
+  "explanation": "alert() केवल संदेश और OK दिखाता है; confirm() OK/Cancel देकर true/false लौटाता है (जैसे 'क्या आप हटाना चाहते हैं?'); prompt() उपयोगकर्ता से पाठ लेता है।"
+ },
+ {
+  "id": "progsr-pgm2-036",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following JavaScript code print?\n\nlet s = 0;\nfor (let i = 1; i <= 4; i++) s += i;\nconsole.log(s);",
+  "options": [
+   "15",
+   "4",
+   "10",
+   "6"
+  ],
+  "answer": 2,
+  "explanation": "s = 1 + 2 + 3 + 4 = 10। लूप i = 5 पर रुकता है क्योंकि शर्त i <= 4 असत्य हो जाती है।"
+ },
+ {
+  "id": "progsr-pgm2-037",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Before storing or reading values in the PHP superglobal $_SESSION, a script must normally call —",
+  "options": [
+   "setcookie()",
+   "header()",
+   "session_start()",
+   "session_destroy()"
+  ],
+  "answer": 2,
+  "explanation": "session_start() सत्र शुरू या पुनः आरंभ करता है (कुकी में सत्र-आईडी)। इसके बाद $_SESSION['user'] जैसे मान अनुरोधों के बीच सर्वर पर बने रहते हैं। लॉगआउट पर session_destroy()।"
+ },
+ {
+  "id": "progsr-pgm2-038",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which of the following XML fragments is well-formed?",
+  "options": [
+   "<A><b>text</b></a>",
+   "<a><b>text</b>",
+   "<a><b>text</a></b>",
+   "<a><b>text</b></a>"
+  ],
+  "answer": 3,
+  "explanation": "तत्व ठीक से नेस्ट होने चाहिए (जो बाद में खुला वह पहले बंद), हर टैग बंद होना चाहिए, और नाम केस-संवेदी हैं — <A> को </a> बंद नहीं करता। केवल पहला विकल्प तीनों नियम मानता है।"
+ },
+ {
+  "id": "progsr-pgm2-039",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which statement about the nature of software, compared with hardware, is correct?",
+  "options": [
+   "Software never needs maintenance once tested",
+   "Software does not wear out physically, but it deteriorates as repeated changes introduce new defects",
+   "Software is manufactured on an assembly line like hardware",
+   "Software wears out with use just like hardware"
+  ],
+  "answer": 1,
+  "explanation": "हार्डवेयर का विफलता-वक्र 'बाथटब' जैसा है — समय के साथ घिसाव से विफलता बढ़ती है। सॉफ़्टवेयर घिसता नहीं, पर हर बदलाव के साथ नई त्रुटियाँ आकर विफलता-दर बढ़ाती हैं, इसलिए वह 'बिगड़ता' (deteriorate) है। सॉफ़्टवेयर विकसित (engineered) होता है, निर्मित नहीं।"
+ },
+ {
+  "id": "progsr-pgm2-040",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "\"The system must display search results within 2 seconds for 1,000 concurrent users.\" This is a —",
+  "options": [
+   "non-functional (performance) requirement",
+   "functional requirement",
+   "user-interface layout requirement",
+   "design constraint on the database schema"
+  ],
+  "answer": 0,
+  "explanation": "फ़ंक्शनल आवश्यकता बताती है कि प्रणाली क्या करे (जैसे 'खोज करे')। नॉन-फ़ंक्शनल बताती है कि कितनी अच्छी तरह करे — प्रदर्शन, सुरक्षा, विश्वसनीयता, उपयोगिता।"
+ },
+ {
+  "id": "progsr-pgm2-041",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The usual order of testing levels is —",
+  "options": [
+   "Acceptance → System → Integration → Unit",
+   "Unit → Integration → System → Acceptance",
+   "Integration → Unit → System → Acceptance",
+   "System → Unit → Acceptance → Integration"
+  ],
+  "answer": 1,
+  "explanation": "पहले अलग-अलग मॉड्यूल (यूनिट), फिर उनका जुड़ना (इंटीग्रेशन), फिर पूरी प्रणाली आवश्यकताओं के विरुद्ध (सिस्टम), अंत में ग्राहक की स्वीकृति (एक्सेप्टेंस)।"
+ },
+ {
+  "id": "progsr-pgm2-042",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Selenium is a testing tool mainly used for —",
+  "options": [
+   "version control of source code",
+   "measuring code coverage of C programs",
+   "load testing of databases only",
+   "automating functional tests of web applications in a browser"
+  ],
+  "answer": 3,
+  "explanation": "Selenium WebDriver ब्राउज़र को प्रोग्राम से चलाता है — क्लिक, टाइप, जाँच — ताकि वेब-ऐप के कार्यात्मक और रिग्रेशन परीक्षण स्वचालित हों। यह Java, Python, C# आदि भाषाओं में लिखा जा सकता है।"
+ },
+ {
+  "id": "progsr-pgm2-043",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In the Capability Maturity Model Integration (CMMI), the highest maturity level is —",
+  "options": [
+   "Level 4 — Quantitatively Managed",
+   "Level 1 — Initial",
+   "Level 5 — Optimizing",
+   "Level 3 — Defined"
+  ],
+  "answer": 2,
+  "explanation": "CMMI स्तर: 1 आरंभिक (अव्यवस्थित), 2 प्रबंधित, 3 परिभाषित, 4 मात्रात्मक रूप से प्रबंधित, 5 अनुकूलनकारी (निरंतर सुधार)। भारत की कई IT कंपनियाँ स्तर 5 प्रमाणित हैं।"
+ },
+ {
+  "id": "progsr-pgm2-044",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Under the IT Act, 2000, cheating by personation using a computer resource (for example, a fake website pretending to be a bank) is punishable under —",
+  "options": [
+   "Section 66D",
+   "Section 72",
+   "Section 66C",
+   "Section 67A"
+  ],
+  "answer": 0,
+  "explanation": "66D = कंप्यूटर संसाधन से छद्म-रूप धारण कर ठगी; 66C = पहचान की चोरी (पासवर्ड/डिजिटल हस्ताक्षर का दुरुपयोग); 67A = यौन-स्पष्ट सामग्री; 72 = गोपनीयता भंग। 2008 के संशोधन में ये धाराएँ जुड़ीं।"
+ },
+ {
+  "id": "progsr-pgm2-045",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Malware that encrypts a victim's files and demands payment for the decryption key is called —",
+  "options": [
+   "ransomware",
+   "adware",
+   "a keylogger",
+   "spyware"
+  ],
+  "answer": 0,
+  "explanation": "रैनसमवेयर (जैसे WannaCry) फ़ाइलें बंधक बना लेता है। सबसे अच्छा बचाव: नियमित ऑफ़लाइन बैकअप, समय पर अपडेट, संदिग्ध अटैचमेंट न खोलना। एडवेयर विज्ञापन दिखाता है, स्पाइवेयर जासूसी करता है, कीलॉगर कुंजी-दबाव रिकॉर्ड करता है।"
+ },
+ {
+  "id": "progsr-pgm2-046",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A website shows a padlock icon and uses https://. What does this guarantee?",
+  "options": [
+   "The website can never contain malware",
+   "The website is a government website",
+   "The connection between the browser and the server is encrypted",
+   "The website is owned by a trustworthy organisation"
+  ],
+  "answer": 2,
+  "explanation": "ताला केवल बताता है कि डेटा रास्ते में TLS से एन्क्रिप्टेड है और प्रमाणपत्र उस डोमेन का है। फ़िशिंग साइटें भी मुफ़्त प्रमाणपत्र लेकर https दिखाती हैं — इसलिए डोमेन का नाम ध्यान से जाँचना ज़रूरी है।"
+ },
+ {
+  "id": "progsr-pgm2-047",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which Linux command copies the directory project, along with all its files and sub-directories, into backup?",
+  "options": [
+   "mv project backup",
+   "cp project backup",
+   "rm -r project backup",
+   "cp -r project backup"
+  ],
+  "answer": 3,
+  "explanation": "-r (recursive) के बिना cp डायरेक्टरी कॉपी नहीं करता। mv स्थानांतरित/नाम बदलता है (मूल नहीं बचता) और rm -r हटा देता है।"
+ },
+ {
+  "id": "progsr-pgm2-048",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the Linux command  wc -w notes.txt  display?",
+  "options": [
+   "The number of characters only",
+   "The number of words in notes.txt",
+   "The number of lines in notes.txt",
+   "The file's permissions"
+  ],
+  "answer": 1,
+  "explanation": "wc (word count): -l पंक्तियाँ, -w शब्द, -c बाइट, -m अक्षर। बिना विकल्प के तीनों (पंक्ति, शब्द, बाइट) दिखाता है।"
+ },
+ {
+  "id": "progsr-pgm2-049",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which Windows Security feature protects chosen folders from unauthorised changes by unknown apps, helping against ransomware?",
+  "options": [
+   "Controlled folder access",
+   "Disk Cleanup",
+   "Storage Sense",
+   "Remote Desktop"
+  ],
+  "answer": 0,
+  "explanation": "Windows Security → वायरस और ख़तरा सुरक्षा → रैनसमवेयर सुरक्षा में 'कंट्रोल्ड फ़ोल्डर एक्सेस' केवल विश्वसनीय ऐप को संरक्षित फ़ोल्डरों (Documents, Pictures आदि) में बदलाव करने देता है।"
+ },
+ {
+  "id": "progsr-pgm2-050",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What value does the Excel formula  =ROUND(123.456, -1)  return?",
+  "options": [
+   "123.46",
+   "100",
+   "120",
+   "123.5"
+  ],
+  "answer": 2,
+  "explanation": "ROUND का दूसरा तर्क ऋणात्मक हो तो दशमलव के बाईं ओर गोलाई होती है: −1 = निकटतम दहाई → 120। 1 देने पर 123.5, 2 पर 123.46, −2 पर 100।"
+ }
+]

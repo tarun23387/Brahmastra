@@ -1,87 +1,1362 @@
 [
-{"id":"progfin-m3-001","subject":"computer","exams":["prog-fin"],"question":"Which of the following is NOT a function of an operating system?","options":["Memory management","Process management","Compiling source code into machine code","File management"],"answer":2,"explanation":"संकलन (compilation) कंपाइलर का काम है, ऑपरेटिंग सिस्टम का नहीं। OS के मुख्य कार्य: प्रक्रिया प्रबंधन, मेमोरी प्रबंधन, फाइल प्रबंधन, उपकरण प्रबंधन, सुरक्षा तथा उपयोगकर्ता इंटरफेस। कंपाइलर एक अनुप्रयोग सॉफ़्टवेयर है जो OS के ऊपर चलता है।"},
-{"id":"progfin-m3-002","subject":"computer","exams":["prog-fin"],"question":"The Dining Philosophers problem is a classic example of —","options":["Memory fragmentation","Process synchronization and deadlock","Disk scheduling","Page replacement"],"answer":1,"explanation":"पाँच दार्शनिक, पाँच काँटे; प्रत्येक को खाने के लिए दो काँटे चाहिए। यदि सभी एक साथ बायाँ काँटा उठा लें तो कोई भी दायाँ नहीं पा सकेगा — डेडलॉक। यह सिंक्रोनाइज़ेशन की चिरपरिचित समस्या है, जिसका समाधान semaphore या \"एक दार्शनिक उल्टे क्रम में उठाए\" जैसी युक्तियों से होता है।"},
-{"id":"progfin-m3-003","subject":"computer","exams":["prog-fin"],"question":"A wait-for graph is used in —","options":["Page replacement","CPU scheduling","Deadlock detection","File allocation"],"answer":2,"explanation":"Wait-for graph में प्रत्येक शीर्ष एक प्रक्रिया है और तीर Pᵢ → Pⱼ का अर्थ है कि Pᵢ, Pⱼ द्वारा रोके गए संसाधन की प्रतीक्षा में है। ग्राफ़ में चक्र (cycle) = डेडलॉक — किंतु यह नियम केवल तभी लागू है जब हर संसाधन का एक ही इंस्टेंस हो।"},
-{"id":"progfin-m3-004","subject":"computer","exams":["prog-fin"],"question":"The standard file system of Windows is —","options":["ext4","NTFS","HFS+","XFS"],"answer":1,"explanation":"ext4 लिनक्स का, HFS+ मैक का, XFS भी लिनक्स का फाइल सिस्टम है। NTFS की विशेषताएँ: जर्नलिंग, फाइल-स्तरीय अनुमतियाँ, एन्क्रिप्शन, बड़ी फाइलों का समर्थन (FAT32 की 4 GB सीमा से मुक्त)।"},
-{"id":"progfin-m3-005","subject":"computer","exams":["prog-fin"],"question":"Compaction is a solution to which problem?","options":["Internal fragmentation","Thrashing","Deadlock","External fragmentation"],"answer":3,"explanation":"संघनन में सभी आवंटित खंडों को एक ओर सरकाकर सारे खाली स्थान को एक बड़े ब्लॉक में जोड़ दिया जाता है। ध्यान दें: आंतरिक विखंडन का समाधान संघनन नहीं है — वह तो आवंटित ब्लॉक के भीतर की बर्बादी है, जिसे केवल छोटा ब्लॉक आकार रखकर घटाया जा सकता है।"},
-{"id":"progfin-m3-006","subject":"computer","exams":["prog-fin"],"question":"Which UNIX command displays the last 10 lines of a file?","options":["head","tail","more","cat"],"answer":1,"explanation":"tail file अंतिम 10 पंक्तियाँ, head file पहली 10 पंक्तियाँ देता है। tail -n 20 से संख्या बदली जा सकती है और tail -f से लॉग फाइल को वास्तविक समय में देखा जाता है — यह सिस्टम प्रशासन का सबसे उपयोगी प्रयोग है।"},
-{"id":"progfin-m3-007","subject":"computer","exams":["prog-fin"],"question":"First-fit, Best-fit and Worst-fit are related to —","options":["CPU scheduling","Memory allocation","Disk scheduling","Page replacement"],"answer":1,"explanation":"ये तीनों सतत मेमोरी आवंटन की रणनीतियाँ हैं: First-fit — पहला पर्याप्त बड़ा होल (सबसे तेज़); Best-fit — सबसे छोटा पर्याप्त होल (सबसे कम बर्बादी, पर खोज धीमी); Worst-fit — सबसे बड़ा होल (व्यवहार में सबसे खराब)।"},
-{"id":"progfin-m3-008","subject":"computer","exams":["prog-fin"],"question":"In a flowchart, a parallelogram represents —","options":["Decision","Process","Input/Output","Start/End"],"answer":2,"explanation":"फ्लोचार्ट के चिह्न: दीर्घवृत्त (oval) — आरंभ/अंत; समांतर चतुर्भुज — निवेश/निर्गत; आयत — प्रक्रिया/गणना; समचतुर्भुज (diamond) — निर्णय; तीर — प्रवाह की दिशा।"},
-{"id":"progfin-m3-009","subject":"computer","exams":["prog-fin"],"question":"The basic feature of top-down programming is —","options":["Building up from small modules towards a large program","Dividing a large problem successively into sub-problems","It is possible only in OOP","It has no structure at all"],"answer":1,"explanation":"Top-down में मुख्य समस्या को क्रमशः छोटे मॉड्यूलों में तोड़ा जाता है (संरचित प्रोग्रामिंग का आधार, C में प्रयुक्त)। इसका विपरीत Bottom-up है, जिसमें छोटे घटक पहले बनाकर जोड़े जाते हैं — यह OOP की शैली है। पहला विकल्प ठीक bottom-up की परिभाषा है, इसीलिए वह जाल है।"},
-{"id":"progfin-m3-010","subject":"computer","exams":["prog-fin"],"question":"In C, the difference between break and continue is —","options":["Both are the same","break terminates the loop; continue skips the remaining statements and goes to the next iteration","break goes to the next iteration; continue terminates the loop","continue exits the function"],"answer":1,"explanation":"break लूप या switch से तुरंत बाहर निकाल देता है; continue केवल उस चक्र के शेष कथन छोड़कर अगले चक्र पर चला जाता है, लूप चलता रहता है।"},
-{"id":"progfin-m3-011","subject":"computer","exams":["prog-fin"],"question":"What will be the output of the following C code?\n\nint a = 2, b = 3; printf(\"%d\", a > b ? a : b);","options":["2","3","1","0"],"answer":1,"explanation":"त्रिक (ternary) ऑपरेटर का रूप है — शर्त ? सत्य_मान : असत्य_मान। यहाँ 2 > 3 असत्य है, अतः b का मान अर्थात् 3 छपेगा।"},
-{"id":"progfin-m3-012","subject":"computer","exams":["prog-fin"],"question":"Which function is used to find the length of a string in C?","options":["strcpy()","strcat()","strcmp()","strlen()"],"answer":3,"explanation":"strlen(s) — लंबाई (नल वर्ण को छोड़कर); strcpy(a,b) — प्रतिलिपि; strcat(a,b) — जोड़ना; strcmp(a,b) — तुलना (समान होने पर 0)। ये सभी <string.h> में हैं।"},
-{"id":"progfin-m3-013","subject":"computer","exams":["prog-fin"],"question":"In OOP, encapsulation means —","options":["binding data and the methods that operate on it into a single unit","creating one class from another","having many forms of the same name","making the program faster"],"answer":0,"explanation":"एनकैप्सुलेशन डेटा और विधियों को एक क्लास में बाँधता है और डेटा को private रखकर बाहर से सीधी पहुँच रोकता है। दूसरा विकल्प इनहेरिटेंस की और तीसरा पॉलीमॉर्फ़िज़्म की परिभाषा है — तीनों एक साथ पूछकर भ्रम पैदा किया जाता है।"},
-{"id":"progfin-m3-014","subject":"computer","exams":["prog-fin"],"question":"The purpose of a package in Java is —","options":["to increase program speed","to save memory","to group related classes and prevent name clashes","to handle exceptions"],"answer":2,"explanation":"पैकेज संबंधित क्लासों को नामस्थान (namespace) देता है, जिससे दो अलग पुस्तकालयों में एक ही नाम की क्लास होने पर टकराव नहीं होता (जैसे java.util.Date बनाम java.sql.Date)। साथ ही यह पहुँच नियंत्रण भी देता है।"},
-{"id":"progfin-m3-015","subject":"computer","exams":["prog-fin"],"question":"The block used to handle an exception in Java is —","options":["try-catch","if-else","switch-case","do-while"],"answer":0,"explanation":"संदिग्ध कोड try में रखा जाता है, अपवाद आने पर catch उसे संभालता है, और finally ब्लॉक अपवाद आए या न आए — सदैव चलता है (प्रायः संसाधन बंद करने के लिए)।"},
-{"id":"progfin-m3-016","subject":"computer","exams":["prog-fin"],"question":"The identifying feature of a constructor in C++ is —","options":["its return type is void","its name is the same as the class and it has no return type","it runs when the object is destroyed","it is always static"],"answer":1,"explanation":"कंस्ट्रक्टर के नियम: नाम क्लास जैसा, कोई वापसी प्रकार नहीं (void भी नहीं), ऑब्जेक्ट बनते ही स्वतः चलता है, ओवरलोड किया जा सकता है। तीसरा विकल्प डिस्ट्रक्टर का वर्णन है।"},
-{"id":"progfin-m3-017","subject":"computer","exams":["prog-fin"],"question":"In JavaScript, what does the === operator do?","options":["compares value only","compares both value and data type","assigns a value","negation"],"answer":1,"explanation":"== केवल मान देखता है और आवश्यकता पड़ने पर प्रकार बदल देता है, जबकि === मान और प्रकार दोनों देखता है, अतः 5 === \"5\" असत्य होता है। अच्छी शैली में सदैव === का प्रयोग होता है।"},
-{"id":"progfin-m3-018","subject":"computer","exams":["prog-fin"],"question":"In an HTML page, JavaScript code is written inside which tag?","options":["<script>","<style>","<link>","<meta>"],"answer":0,"explanation":"यह <head> या <body> में कहीं भी रखा जा सकता है; बाहरी फाइल के लिए <script src=\"app.js\"></script>। <style> CSS के लिए है।"},
-{"id":"progfin-m3-019","subject":"computer","exams":["prog-fin"],"question":"In Perl, a hash variable begins with which symbol?","options":["$","@","%","#"],"answer":2,"explanation":"Perl के तीन मूल चिह्न: $scalar, @array, %hash। स्मरण-युक्ति: % में दो गोले हैं — कुंजी और मान का युग्म।"},
-{"id":"progfin-m3-020","subject":"computer","exams":["prog-fin"],"question":"In JavaScript, the function of alert() is —","options":["to save a file","to display a message box","to reload the page","to send data to the server"],"answer":1,"explanation":"alert() संदेश दिखाता है, prompt() उपयोगकर्ता से निवेश लेता है, confirm() ठीक/रद्द का विकल्प देता है।"},
-{"id":"progfin-m3-021","subject":"computer","exams":["prog-fin"],"question":"A major advantage of client-side scripting is —","options":["it reduces load on the server and gives a faster response","data stays more secure","it can connect directly to the database","it removes the need for a server"],"answer":0,"explanation":"क्लाइंट-साइड कोड उपयोगकर्ता के ब्राउज़र में चलता है, अतः हर छोटी जाँच के लिए सर्वर तक जाना नहीं पड़ता। किंतु सुरक्षा इसका लाभ नहीं है — क्लाइंट-साइड कोड उपयोगकर्ता देख और बदल सकता है, इसलिए मान्यकरण (validation) सर्वर पर दोबारा करना अनिवार्य होता है।"},
-{"id":"progfin-m3-022","subject":"computer","exams":["prog-fin"],"question":"In an ER diagram, an ellipse represents —","options":["entity","relationship","attribute","cardinality"],"answer":2,"explanation":"ER आरेख के चिह्न: आयत — इकाई; दोहरा आयत — कमज़ोर इकाई; दीर्घवृत्त — गुण; दोहरा दीर्घवृत्त — बहुमान गुण; रेखांकित दीर्घवृत्त — कुंजी गुण; समचतुर्भुज — संबंध।"},
-{"id":"progfin-m3-023","subject":"computer","exams":["prog-fin"],"question":"In an ER diagram, a diamond represents —","options":["entity","attribute","relationship","weak entity"],"answer":2,"explanation":"समचतुर्भुज संबंध (relationship) दर्शाता है — जैसे \"कर्मचारी विभाग में काम करता है\" में \"काम करता है\"। कमज़ोर इकाई दोहरे आयत से दिखाई जाती है।"},
-{"id":"progfin-m3-024","subject":"computer","exams":["prog-fin"],"question":"A relation is in 2NF if it is in 1NF and —","options":["there is no transitive dependency","there is no partial dependency","every determinant is a superkey","there is no multivalued dependency"],"answer":1,"explanation":"1NF: सभी मान परमाणविक हों। 2NF: 1NF + कोई ग़ैर-प्रमुख गुण मिश्रित कुंजी के भाग पर निर्भर न हो। 3NF: 2NF + कोई संक्रामक निर्भरता न हो। BCNF: प्रत्येक निर्धारक अधिकुंजी हो। ध्यान: यदि प्राथमिक कुंजी एकल स्तंभ की हो तो आंशिक निर्भरता संभव ही नहीं — ऐसी तालिका 1NF में होते ही स्वतः 2NF में आ जाती है।"},
-{"id":"progfin-m3-025","subject":"computer","exams":["prog-fin"],"question":"The Atomicity of a transaction means —","options":["the transaction either completes fully or does not happen at all","the data always stays consistent","transactions run independently of one another","the changes made remain permanent"],"answer":0,"explanation":"ACID: Atomicity — सब कुछ या कुछ भी नहीं; Consistency — डेटाबेस एक वैध अवस्था से दूसरी वैध अवस्था में जाए; Isolation — समवर्ती लेनदेन एक-दूसरे को प्रभावित न करें; Durability — commit के बाद परिवर्तन स्थायी, क्रैश में भी सुरक्षित।"},
-{"id":"progfin-m3-026","subject":"computer","exams":["prog-fin"],"question":"Compared with a DBMS, the major drawback of a traditional file system is —","options":["fast access","data redundancy and inconsistency","low cost","simple structure"],"answer":1,"explanation":"फाइल प्रणाली में हर अनुप्रयोग अपनी अलग फाइल रखता है, अतः एक ही सूचना कई जगह दोहराई जाती है (redundancy) और एक जगह बदलने पर दूसरी जगह पुरानी रह जाती है (inconsistency)। DBMS एक केंद्रीय भंडार रखकर यही दूर करता है। अन्य दोष: डेटा पृथक्करण, अखंडता की समस्या, समवर्ती पहुँच की कठिनाई।"},
-{"id":"progfin-m3-027","subject":"computer","exams":["prog-fin"],"question":"The purpose of a foreign key is —","options":["to make rows unique","to maintain referential integrity between two tables","to sort the data","to encrypt the data"],"answer":1,"explanation":"विदेशी कुंजी एक तालिका का वह स्तंभ है जो दूसरी तालिका की प्राथमिक कुंजी को संदर्भित करता है। संदर्भात्मक अखंडता का अर्थ है कि विदेशी कुंजी में वही मान आ सकते हैं जो मूल तालिका में मौजूद हों (या NULL)। इसीलिए संदर्भित पंक्ति को हटाने पर ON DELETE CASCADE/SET NULL जैसे नियम लगते हैं।"},
-{"id":"progfin-m3-028","subject":"computer","exams":["prog-fin"],"question":"What will the following query return?\n\nSELECT name FROM emp ORDER BY salary DESC LIMIT 1;","options":["the lowest-paid employee","the highest-paid employee","the names of all employees","an error"],"answer":1,"explanation":"ORDER BY salary DESC सबसे अधिक वेतन को पहले लाता है, और LIMIT 1 केवल पहली पंक्ति देता है → सर्वाधिक वेतन पाने वाला कर्मचारी। (Oracle में यही काम ROWNUM या FETCH FIRST 1 ROW ONLY से होता है — LIMIT MySQL/PostgreSQL में है।)"},
-{"id":"progfin-m3-029","subject":"computer","exams":["prog-fin"],"question":"The operation that combines the results of two queries and removes duplicate rows is —","options":["UNION","UNION ALL","INTERSECT","MINUS"],"answer":0,"explanation":"UNION परिणाम जोड़कर दोहरी पंक्तियाँ हटा देता है (इसीलिए धीमा, क्योंकि क्रमबद्धता करनी पड़ती है)। UNION ALL दोहरी पंक्तियाँ रखता है और तेज़ है। INTERSECT उभयनिष्ठ पंक्तियाँ, MINUS/EXCEPT अंतर देता है।"},
-{"id":"progfin-m3-030","subject":"computer","exams":["prog-fin"],"question":"Which of the following is NOT an aggregate function?","options":["AVG","MAX","UPPER","SUM"],"answer":2,"explanation":"समुच्चय फंक्शन कई पंक्तियों पर एक मान देते हैं: SUM, AVG, COUNT, MAX, MIN। UPPER एक स्ट्रिंग फंक्शन है जो प्रत्येक पंक्ति पर अलग से लागू होता है (scalar function)।"},
-{"id":"progfin-m3-031","subject":"computer","exams":["prog-fin"],"question":"The main purpose of creating an index in a database is —","options":["to reduce storage space","to speed up search and retrieval","to increase security","to encrypt the data"],"answer":1,"explanation":"इंडेक्स प्रायः B-tree संरचना में बनता है, जिससे पूरी तालिका स्कैन किए बिना पंक्ति मिल जाती है। क़ीमत: इंडेक्स अतिरिक्त स्थान लेता है और INSERT/UPDATE/DELETE धीमे कर देता है, क्योंकि इंडेक्स भी अद्यतन करना पड़ता है। इसलिए पहला विकल्प उल्टा है।"},
-{"id":"progfin-m3-032","subject":"computer","exams":["prog-fin"],"question":"When is a trigger executed?","options":["when it is called by the user","automatically when an INSERT/UPDATE/DELETE happens on the table","at a fixed time every day","when the server starts"],"answer":1,"explanation":"ट्रिगर एक विशेष संग्रहीत प्रक्रिया है जो निर्दिष्ट घटना पर स्वतः चलती है — BEFORE/AFTER INSERT, UPDATE या DELETE। इसका प्रयोग अंकेक्षण (audit trail), व्यावसायिक नियम लागू करने और स्वतः गणना में होता है।"},
-{"id":"progfin-m3-033","subject":"computer","exams":["prog-fin"],"question":"In Oracle, the dummy table that returns exactly one row is —","options":["DUAL","TEMP","SYS","ROOT"],"answer":0,"explanation":"Oracle में हर SELECT को किसी तालिका की आवश्यकता होती है, इसलिए SELECT SYSDATE FROM DUAL; या SELECT 2+2 FROM DUAL; जैसी क्वेरियों के लिए यह एक-पंक्ति वाली छद्म-तालिका दी गई है।"},
-{"id":"progfin-m3-034","subject":"computer","exams":["prog-fin"],"question":"The fundamental difference between HTTP and HTTPS is —","options":["HTTPS runs on port 80","in HTTPS the data travels encrypted","HTTP is more secure","there is no difference between the two"],"answer":1,"explanation":"HTTPS = HTTP + TLS, पोर्ट 443 (HTTP पोर्ट 80)। यह गोपनीयता, अखंडता तथा सर्वर की प्रामाणिकता (प्रमाणपत्र द्वारा) — तीनों देता है। पहले विकल्प में पोर्ट जानबूझकर ग़लत दिया गया है।"},
-{"id":"progfin-m3-035","subject":"computer","exams":["prog-fin"],"question":"In the MVC architecture, the role of the Model is —","options":["to show the interface to the user","to handle the data and business logic","to route the requests","to apply CSS styling"],"answer":1,"explanation":"Model — डेटा एवं व्यावसायिक तर्क (डेटाबेस से अन्तःक्रिया); View — उपयोगकर्ता को दिखने वाला इंटरफेस; Controller — अनुरोध लेकर Model और View के बीच समन्वय। लाभ: चिंताओं का पृथक्करण, जिससे परीक्षण और रखरखाव सरल।"},
-{"id":"progfin-m3-036","subject":"computer","exams":["prog-fin"],"question":"The full form of API is —","options":["Application Programming Interface","Applied Program Instruction","Automatic Process Integration","Advanced Protocol Interface"],"answer":0,"explanation":"यह नियमों का वह समुच्चय है जिससे एक सॉफ़्टवेयर दूसरे की सेवाएँ प्रयोग करता है। REST API आजकल HTTP विधियों (GET/POST/PUT/DELETE) और JSON पर आधारित होती हैं।"},
-{"id":"progfin-m3-037","subject":"computer","exams":["prog-fin"],"question":"IIS is a web server from which company?","options":["Apache Foundation","Google","Oracle","Microsoft"],"answer":3,"explanation":"IIS (Internet Information Services) विंडोज़ सर्वर पर चलता है और ASP.NET अनुप्रयोगों का स्वाभाविक मंच है। Apache और Nginx मुक्त-स्रोत विकल्प हैं।"},
-{"id":"progfin-m3-038","subject":"computer","exams":["prog-fin"],"question":"The correct statement to start a session in PHP is —","options":["start_session()","session_start()","begin_session()","session_begin()"],"answer":1,"explanation":"यह किसी भी निर्गत से पहले लिखा जाना चाहिए, अन्यथा \"headers already sent\" त्रुटि आती है। इसके बाद $_SESSION['user'] = 'X'; से मान रखे जाते हैं।"},
-{"id":"progfin-m3-039","subject":"computer","exams":["prog-fin"],"question":"The identifying feature of shared hosting is —","options":["many websites share resources on a single server","an entire physical server is given to a single customer","it needs no server at all","only static pages can be kept on it"],"answer":0,"explanation":"साझा होस्टिंग में एक भौतिक सर्वर पर सैकड़ों वेबसाइटें CPU, RAM और बैंडविड्थ साझा करती हैं — सबसे सस्ता, पर प्रदर्शन पड़ोसी साइटों से प्रभावित होता है। दूसरा विकल्प समर्पित (dedicated) होस्टिंग का वर्णन है; बीच का रास्ता VPS है।"},
-{"id":"progfin-m3-040","subject":"computer","exams":["prog-fin"],"question":"The protocol used to send email is —","options":["POP3","IMAP","SMTP","SNMP"],"answer":2,"explanation":"SMTP भेजने के लिए (पोर्ट 25), POP3 (110) तथा IMAP (143) प्राप्त करने के लिए। POP3 बनाम IMAP: POP3 संदेश डाउनलोड कर सर्वर से हटा देता है; IMAP सर्वर पर रखता है और कई उपकरणों से समन्वय करता है।"},
-{"id":"progfin-m3-041","subject":"computer","exams":["prog-fin"],"question":"ICMP is used for —","options":["file transfer","error reporting and sending diagnostic messages","sending email","encryption"],"answer":1,"explanation":"ICMP डेटा नहीं भेजता, बल्कि त्रुटि व नियंत्रण संदेश भेजता है — \"गंतव्य अगम्य\", \"समय समाप्त\", \"echo request/reply\"। ping और traceroute इसी पर आधारित हैं।"},
-{"id":"progfin-m3-042","subject":"computer","exams":["prog-fin"],"question":"The function of RARP is —","options":["to find the MAC address from an IP address","to find the IP address from a MAC address","to resolve a domain name","to build a routing table"],"answer":1,"explanation":"ARP: IP → MAC (सामान्य स्थिति)। RARP: MAC → IP, जब किसी डिस्क-रहित मशीन को अपना IP नहीं पता होता। आजकल RARP का स्थान BOOTP और DHCP ने ले लिया है।"},
-{"id":"progfin-m3-043","subject":"computer","exams":["prog-fin"],"question":"A socket is made up of —","options":["only an IP address","only a port number","an IP address + a port number","a MAC address + an IP address"],"answer":2,"explanation":"सॉकेट संचार का अंतिम बिंदु है। एक पूर्ण TCP संबंध चार बातों से पहचाना जाता है: स्रोत IP, स्रोत पोर्ट, गंतव्य IP, गंतव्य पोर्ट।"},
-{"id":"progfin-m3-044","subject":"computer","exams":["prog-fin"],"question":"In client-server architecture, the role of the server is —","options":["to send requests","to provide services and answer requests","only to display results","to build the network"],"answer":1,"explanation":"क्लाइंट अनुरोध भेजता है, सर्वर सेवा देकर उत्तर लौटाता है। सर्वर सदैव सुनने की अवस्था (listening) में रहता है। इसका विकल्प P2P वास्तुकला है, जिसमें हर नोड दोनों भूमिकाएँ निभाता है।"},
-{"id":"progfin-m3-045","subject":"computer","exams":["prog-fin"],"question":"The CIDR form of the subnet mask 255.255.255.240 is —","options":["/26","/27","/28","/30"],"answer":2,"explanation":"240 का द्विआधारी रूप = 11110000 → चार 1 बिट। कुल नेटवर्क बिट = 8 + 8 + 8 + 4 = 28 → /28। इसमें होस्ट = 2⁴ − 2 = 14। याद रखने योग्य: 128→/25, 192→/26, 224→/27, 240→/28, 248→/29, 252→/30।"},
-{"id":"progfin-m3-046","subject":"computer","exams":["prog-fin"],"question":"The tag used to create an unordered list in HTML is —","options":["<ol>","<ul>","<li>","<dl>"],"answer":1,"explanation":"<ul> क्रमरहित सूची (गोलियों वाली) बनाता है और <ol> क्रमित (संख्या वाली)। <li> प्रत्येक मद के लिए है और <dl> परिभाषा सूची के लिए।"},
-{"id":"progfin-m3-047","subject":"computer","exams":["prog-fin"],"question":"The tag that creates one row in an HTML table is —","options":["<td>","<th>","<tr>","<table>"],"answer":2,"explanation":"<tr> (table row) एक पंक्ति बनाता है; उसके भीतर <td> (table data) से कोष्ठ और <th> (table header) से शीर्ष-कोष्ठ बनते हैं। <table> पूरी तालिका का घेरा है।"},
-{"id":"progfin-m3-048","subject":"computer","exams":["prog-fin"],"question":"The attribute that specifies the method (GET/POST) for sending data in an HTML form is —","options":["action","method","type","name"],"answer":1,"explanation":"method गुण बताता है कि डेटा GET से जाएगा या POST से; action बताता है कि किस URL पर जाएगा। GET में डेटा URL में दिखता है और लंबाई सीमित है, POST में शरीर (body) में जाता है — इसीलिए पासवर्ड सदैव POST से भेजे जाते हैं।"},
-{"id":"progfin-m3-049","subject":"computer","exams":["prog-fin"],"question":"In MS-Excel the formula =IF(A1>50,\"Pass\",\"Fail\") is used and cell A1 contains the value 45. The result will be —","options":["Pass","Fail","#ERROR","45"],"answer":1,"explanation":"IF की रचना है =IF(शर्त, सत्य होने पर, असत्य होने पर)। यहाँ शर्त 45 > 50 असत्य है, अतः तीसरा तर्क \"फेल\" लौटेगा।"},
-{"id":"progfin-m3-050","subject":"computer","exams":["prog-fin"],"question":"The shortcut key to start a slide show in MS-PowerPoint is —","options":["F2","F5","F7","F12"],"answer":1,"explanation":"F5 पहली स्लाइड से शो आरंभ करता है; Shift+F5 वर्तमान स्लाइड से। F7 वर्तनी जाँच और F12 \"इस रूप में सहेजें\" के लिए है।"},
-{"id":"progfin-m3-051","subject":"reasoning","exams":["prog-fin"],"question":"शृंखला पूर्ण कीजिए: 1, 4, 9, 16, 25, ?","options":["30","36","42","49"],"answer":1,"explanation":"ये क्रमागत पूर्ण वर्ग हैं: 1², 2², 3², 4², 5² → अगला 6² = 36।"},
-{"id":"progfin-m3-052","subject":"reasoning","exams":["prog-fin"],"question":"यदि RED = 27 हो, तो BLUE = ?","options":["38","40","42","44"],"answer":1,"explanation":"अक्षरों की स्थिति का योग: R(18) + E(5) + D(4) = 27 ✓। अतः BLUE = B(2) + L(12) + U(21) + E(5) = 40।"},
-{"id":"progfin-m3-053","subject":"reasoning","exams":["prog-fin"],"question":"सूरज पूर्व की ओर 8 किमी चलकर बाएँ मुड़ता है और 6 किमी चलता है। प्रारंभिक बिंदु से उसकी सीधी दूरी है —","options":["10 किमी","12 किमी","14 किमी","8 किमी"],"answer":0,"explanation":"पूर्व 8 किमी, फिर बाएँ मुड़ने पर उत्तर 6 किमी → दोनों परस्पर लंब। दूरी = √(8² + 6²) = √100 = 10 किमी (3-4-5 त्रिक का दोगुना)।"},
-{"id":"progfin-m3-054","subject":"reasoning","exams":["prog-fin"],"question":"एक कक्षा में 30 विद्यार्थी हैं। मीना ऊपर से 12वें स्थान पर है। नीचे से उसका स्थान होगा —","options":["17वाँ","18वाँ","19वाँ","20वाँ"],"answer":2,"explanation":"नीचे से स्थान = कुल − ऊपर से स्थान + 1 = 30 − 12 + 1 = 19।"},
-{"id":"progfin-m3-055","subject":"reasoning","exams":["prog-fin"],"question":"विषम को पहचानिए —","options":["सोमवार","बुधवार","जनवरी","शुक्रवार"],"answer":2,"explanation":"शेष तीनों सप्ताह के दिन हैं; जनवरी एक माह है।"},
-{"id":"progfin-m3-056","subject":"reasoning","exams":["prog-fin"],"question":"सादृश्य पूर्ण कीजिए: घड़ी : समय :: थर्मामीटर : ?","options":["पारा","तापमान","मौसम","चिकित्सक"],"answer":1,"explanation":"संबंध \"उपकरण : जो वह मापता है\" का है। घड़ी समय मापती है, थर्मामीटर तापमान। पारा उसमें भरा पदार्थ है, माप्य राशि नहीं।"},
-{"id":"progfin-m3-057","subject":"reasoning","exams":["prog-fin"],"question":"A का पुत्र B है तथा B की बहन C है। C का A से क्या संबंध है?","options":["पुत्री","बहन","माता","भतीजी"],"answer":0,"explanation":"B, A का पुत्र है → A उसका माता/पिता। C, B की बहन है → C भी A की संतान → A की पुत्री।"},
-{"id":"progfin-m3-058","subject":"reasoning","exams":["prog-fin"],"question":"शृंखला में अगला अक्षर होगा: Z, X, V, T, ?","options":["S","R","Q","P"],"answer":1,"explanation":"स्थिति: Z(26), X(24), V(22), T(20) — प्रत्येक बार 2 की कमी → 20 − 2 = 18 = R।"},
-{"id":"progfin-m3-059","subject":"reasoning","exams":["prog-fin"],"question":"पाँच मित्र एक पंक्ति में बैठे हैं। A, B के बाएँ है; C, B के दाएँ किंतु D के बाएँ है; E सबसे दाएँ छोर पर है। ठीक बीच में कौन बैठा है?","options":["A","B","C","D"],"answer":2,"explanation":"शर्तें लगाइए: E सबसे दाएँ (5वाँ)। C, B के दाएँ पर D के बाएँ → B … C … D। A, B के बाएँ → क्रम बनता है A, B, C, D, E। पाँच स्थानों में ठीक बीच तीसरा है → C।"},
-{"id":"progfin-m3-060","subject":"reasoning","exams":["prog-fin"],"question":"एक घड़ी 12 बजे सही समय दिखाती है, किंतु वह प्रति घंटे 5 मिनट तेज़ चलती है। 4 वास्तविक घंटे बाद वह क्या समय दिखाएगी?","options":["4:15","4:20","4:25","4:30"],"answer":1,"explanation":"घड़ी प्रति घंटे 5 मिनट तेज़ → 4 घंटे में 20 मिनट अधिक। वास्तविक समय 4:00 → घड़ी दिखाएगी 4:20।"},
-{"id":"progfin-m3-061","subject":"reasoning","exams":["prog-fin"],"question":"कथन: सभी फूल सुंदर हैं। गुलाब एक फूल है।\nनिष्कर्ष: गुलाब सुंदर है।","options":["निष्कर्ष निश्चित रूप से सही है","निष्कर्ष ग़लत है","कहा नहीं जा सकता","निष्कर्ष आंशिक रूप से सही है"],"answer":0,"explanation":"यह मानक निगमनात्मक न्यायवाक्य है: सभी F, B हैं; R एक F है → R, B है। दोनों आधार-वाक्य सार्वभौमिक व सकारात्मक हैं, अतः निष्कर्ष अनिवार्य रूप से निकलता है।"},
-{"id":"progfin-m3-062","subject":"reasoning","exams":["prog-fin"],"question":"यदि किसी माह का तीसरा शनिवार 18 तारीख को पड़ता है, तो उस माह की पहली तारीख को कौन-सा दिन था?","options":["मंगलवार","बुधवार","गुरुवार","शुक्रवार"],"answer":1,"explanation":"शनिवार 7 दिन के अंतराल पर आते हैं। तीसरा शनिवार 18 → दूसरा 11 → पहला शनिवार 4 तारीख़। 4 तारीख़ शनिवार → 3 शुक्रवार, 2 गुरुवार, 1 तारीख़ बुधवार।"},
-{"id":"progfin-m3-063","subject":"reasoning","exams":["prog-fin"],"question":"संख्या शृंखला: 2, 5, 11, 23, ?","options":["45","46","47","48"],"answer":2,"explanation":"पैटर्न: × 2 + 1 → 2 → 5 → 11 → 23 → 47।"},
-{"id":"progfin-m3-064","subject":"reasoning","exams":["prog-fin"],"question":"एक घन में 6 फलक तथा 12 किनारे होते हैं। शीर्षों की संख्या है —","options":["6","8","10","12"],"answer":1,"explanation":"ऑयलर का सूत्र: V − E + F = 2 → V − 12 + 6 = 2 → V = 8। (घन के 8 कोने होते हैं — प्रत्यक्ष रूप से भी सत्यापित।)"},
-{"id":"progfin-m3-065","subject":"reasoning","exams":["prog-fin"],"question":"यदि 'लाल' को 'नीला', 'नीला' को 'हरा' तथा 'हरा' को 'पीला' कहा जाए, तो स्वच्छ आकाश का रंग क्या कहलाएगा?","options":["नीला","हरा","पीला","लाल"],"answer":1,"explanation":"स्वच्छ आकाश वास्तव में नीला होता है; दी गई भाषा में नीले को \"हरा\" कहा जाता है → उत्तर हरा। तरकीब: ऐसे प्रश्नों में पहले वास्तविक रंग/नाम पहचानिए, फिर प्रतिस्थापन नियम लागू कीजिए।"},
-{"id":"progfin-m3-066","subject":"ganit","exams":["prog-fin"],"question":"15 का 20% + 40 का 25% = ?","options":["11","12","13","14"],"answer":2,"explanation":"15 का 20% = 3; 40 का 25% = 10 → 3 + 10 = 13।"},
-{"id":"progfin-m3-067","subject":"ganit","exams":["prog-fin"],"question":"एक वस्तु ₹500 में खरीदकर ₹450 में बेची गई। हानि प्रतिशत है —","options":["8%","10%","11%","12%"],"answer":1,"explanation":"हानि = 500 − 450 = ₹50। हानि% = (हानि ÷ क्रय मूल्य) × 100 = (50 ÷ 500) × 100 = 10%। ध्यान: लाभ/हानि प्रतिशत सदैव क्रय मूल्य पर निकाला जाता है, विक्रय मूल्य पर नहीं।"},
-{"id":"progfin-m3-068","subject":"ganit","exams":["prog-fin"],"question":"तीन संख्याओं का औसत 24 है। यदि दो संख्याएँ 20 तथा 26 हों, तो तीसरी संख्या है —","options":["22","24","26","28"],"answer":2,"explanation":"तीनों का योग = 24 × 3 = 72। तीसरी संख्या = 72 − (20 + 26) = 72 − 46 = 26।"},
-{"id":"progfin-m3-069","subject":"ganit","exams":["prog-fin"],"question":"20 व्यक्ति किसी कार्य को 10 दिन में पूरा करते हैं। 25 व्यक्ति उसी कार्य को कितने दिन में पूरा करेंगे?","options":["8 दिन","9 दिन","12 दिन","12.5 दिन"],"answer":0,"explanation":"कुल कार्य = 20 × 10 = 200 व्यक्ति-दिन। 25 व्यक्तियों को लगने वाला समय = 200 ÷ 25 = 8 दिन। (व्यक्ति और दिन में व्युत्क्रम अनुपात होता है — अधिक व्यक्ति, कम दिन।)"},
-{"id":"progfin-m3-070","subject":"ganit","exams":["prog-fin"],"question":"एक कार 180 किमी की दूरी 3 घंटे में तय करती है। उसकी औसत चाल है —","options":["50 किमी/घं","55 किमी/घं","60 किमी/घं","65 किमी/घं"],"answer":2,"explanation":"चाल = दूरी ÷ समय = 180 ÷ 3 = 60 किमी/घंटा।"},
-{"id":"progfin-m3-071","subject":"ganit","exams":["prog-fin"],"question":"यदि x/4 = 3/2 हो, तो x का मान है —","options":["4","5","6","8"],"answer":2,"explanation":"x/4 = 3/2 → 2x = 12 → x = 6।"},
-{"id":"progfin-m3-072","subject":"ganit","exams":["prog-fin"],"question":"एक आयत की लंबाई 15 सेमी तथा चौड़ाई 8 सेमी है। उसके विकर्ण की लंबाई है —","options":["15 सेमी","16 सेमी","17 सेमी","18 सेमी"],"answer":2,"explanation":"विकर्ण = √(लंबाई² + चौड़ाई²) = √(225 + 64) = √289 = 17 सेमी (8-15-17 पाइथागोरस त्रिक)।"},
-{"id":"progfin-m3-073","subject":"ganit","exams":["prog-fin"],"question":"144 के वर्गमूल तथा 27 के घनमूल का योग है —","options":["12","15","18","21"],"answer":1,"explanation":"√144 = 12; ∛27 = 3 → 12 + 3 = 15।"},
-{"id":"progfin-m3-074","subject":"ganit","exams":["prog-fin"],"question":"दो पासे एक साथ फेंके गए। दोनों पर समान अंक आने की प्रायिकता है —","options":["1/6","1/12","1/36","1/3"],"answer":0,"explanation":"कुल परिणाम = 36। समान अंक वाले युग्म: (1,1), (2,2), (3,3), (4,4), (5,5), (6,6) = 6। प्रायिकता = 6/36 = 1/6।"},
-{"id":"progfin-m3-075","subject":"ganit","exams":["prog-fin"],"question":"₹6,000 पर 5% वार्षिक दर से 3 वर्ष का साधारण ब्याज है —","options":["₹800","₹900","₹950","₹1,000"],"answer":1,"explanation":"साधारण ब्याज = (मूलधन × दर × समय) ÷ 100 = (6000 × 5 × 3) ÷ 100 = ₹900।"},
-{"id":"progfin-m3-076","subject":"english","exams":["prog-fin"],"question":"Read the passage and answer the question that follows.\n\n\"Most people learn the value of a backup only after losing something. A modern rule of thumb, often called the 3-2-1 rule, suggests keeping three copies of important data on two different types of media, with one copy stored away from the primary location. The last part matters more than it appears. A fire, a flood or a stolen laptop can destroy every copy that sits in the same room, however carefully those copies were made. Cloud storage has made the off-site copy easy and inexpensive, but it introduces a dependence on a provider and on a working internet connection. Prudent users therefore treat the cloud as one leg of the rule, never as the whole of it.\"\n\nThe 3-2-1 rule recommends keeping —","options":["three copies on one medium","two copies on three media","three copies on two types of media with one stored off-site","one copy in the cloud only"],"answer":2,"explanation":"\"…keeping three copies of important data on two different types of media, with one copy stored away from the primary location.\" तीनों अंक एक ही वाक्य में हैं — नाम ही 3-2-1 है।"},
-{"id":"progfin-m3-077","subject":"english","exams":["prog-fin"],"question":"Read the passage and answer the question that follows.\n\n\"Most people learn the value of a backup only after losing something. A modern rule of thumb, often called the 3-2-1 rule, suggests keeping three copies of important data on two different types of media, with one copy stored away from the primary location. The last part matters more than it appears. A fire, a flood or a stolen laptop can destroy every copy that sits in the same room, however carefully those copies were made. Cloud storage has made the off-site copy easy and inexpensive, but it introduces a dependence on a provider and on a working internet connection. Prudent users therefore treat the cloud as one leg of the rule, never as the whole of it.\"\n\n\"The last part\" in the passage refers to —","options":["keeping three copies","using two different media","storing one copy away from the primary location","using cloud storage"],"answer":2,"explanation":"\"The last part\" उस वाक्य के अंतिम भाग की ओर संकेत करता है, अर्थात् off-site प्रति। अगला वाक्य (\"A fire, a flood or a stolen laptop…\") इसी की पुष्टि करता है।"},
-{"id":"progfin-m3-078","subject":"english","exams":["prog-fin"],"question":"Read the passage and answer the question that follows.\n\n\"Most people learn the value of a backup only after losing something. A modern rule of thumb, often called the 3-2-1 rule, suggests keeping three copies of important data on two different types of media, with one copy stored away from the primary location. The last part matters more than it appears. A fire, a flood or a stolen laptop can destroy every copy that sits in the same room, however carefully those copies were made. Cloud storage has made the off-site copy easy and inexpensive, but it introduces a dependence on a provider and on a working internet connection. Prudent users therefore treat the cloud as one leg of the rule, never as the whole of it.\"\n\nAccording to the passage, a fire or a stolen laptop can destroy —","options":["only the original file","every copy kept in the same room","cloud backups","nothing, if copies were made carefully"],"answer":1,"explanation":"\"…can destroy every copy that sits in the same room, however carefully those copies were made.\" — 'however carefully' यह जताता है कि सावधानी से भी बचाव नहीं होता, अतः अंतिम विकल्प ग़लत है।"},
-{"id":"progfin-m3-079","subject":"english","exams":["prog-fin"],"question":"Read the passage and answer the question that follows.\n\n\"Most people learn the value of a backup only after losing something. A modern rule of thumb, often called the 3-2-1 rule, suggests keeping three copies of important data on two different types of media, with one copy stored away from the primary location. The last part matters more than it appears. A fire, a flood or a stolen laptop can destroy every copy that sits in the same room, however carefully those copies were made. Cloud storage has made the off-site copy easy and inexpensive, but it introduces a dependence on a provider and on a working internet connection. Prudent users therefore treat the cloud as one leg of the rule, never as the whole of it.\"\n\nThe drawback of cloud storage mentioned by the author is —","options":["its high cost","its slow speed","dependence on a provider and on a working internet connection","its small capacity"],"answer":2,"explanation":"\"…it introduces a dependence on a provider and on a working internet connection.\" लागत तो घटती है (\"easy and inexpensive\"), इसलिए पहला विकल्प ग़लत है।"},
-{"id":"progfin-m3-080","subject":"english","exams":["prog-fin"],"question":"Read the passage and answer the question that follows.\n\n\"Most people learn the value of a backup only after losing something. A modern rule of thumb, often called the 3-2-1 rule, suggests keeping three copies of important data on two different types of media, with one copy stored away from the primary location. The last part matters more than it appears. A fire, a flood or a stolen laptop can destroy every copy that sits in the same room, however carefully those copies were made. Cloud storage has made the off-site copy easy and inexpensive, but it introduces a dependence on a provider and on a working internet connection. Prudent users therefore treat the cloud as one leg of the rule, never as the whole of it.\"\n\nPrudent users, according to the author, treat the cloud as —","options":["the complete solution","one leg of the rule","an unnecessary expense","a replacement for local copies"],"answer":1,"explanation":"\"Prudent users therefore treat the cloud as one leg of the rule, never as the whole of it.\" — 'never as the whole' के कारण पहला विकल्प सीधे कट जाता है।"},
-{"id":"progfin-m3-081","subject":"english","exams":["prog-fin"],"question":"Read the passage and answer the question that follows.\n\n\"Programmers often treat documentation as a chore to be finished after the real work is done. This ordering is precisely backwards. A function whose purpose cannot be stated in a single sentence is usually a function that does too much, and the difficulty of writing that sentence is a signal worth listening to. Comments that merely restate the code add noise; the useful comment explains why a decision was made, not what the line does. Six months later, the author of the code is a stranger to it, and that stranger will thank whoever recorded the reasoning behind an odd-looking condition or a hard-coded limit.\"\n\nThe author's view of documentation is that it —","options":["should be done after the coding is complete","should not be left until after the real work is done","is unnecessary for good programmers","should be written by a separate team"],"answer":1,"explanation":"लेखक कहता है कि दस्तावेज़ीकरण को बाद का काम मानना \"precisely backwards\" है, अर्थात् बिल्कुल उल्टी बात। अतः वह इसे बाद तक टालने के विरुद्ध है। पहला विकल्प ठीक वही है जिसका लेखक खंडन कर रहा है।"},
-{"id":"progfin-m3-082","subject":"english","exams":["prog-fin"],"question":"Read the passage and answer the question that follows.\n\n\"Programmers often treat documentation as a chore to be finished after the real work is done. This ordering is precisely backwards. A function whose purpose cannot be stated in a single sentence is usually a function that does too much, and the difficulty of writing that sentence is a signal worth listening to. Comments that merely restate the code add noise; the useful comment explains why a decision was made, not what the line does. Six months later, the author of the code is a stranger to it, and that stranger will thank whoever recorded the reasoning behind an odd-looking condition or a hard-coded limit.\"\n\nDifficulty in describing a function in one sentence usually signals that —","options":["the programmer is inexperienced","the language is poorly chosen","the function does too much","the documentation is too long"],"answer":2,"explanation":"\"A function whose purpose cannot be stated in a single sentence is usually a function that does too much.\""},
-{"id":"progfin-m3-083","subject":"english","exams":["prog-fin"],"question":"Read the passage and answer the question that follows.\n\n\"Programmers often treat documentation as a chore to be finished after the real work is done. This ordering is precisely backwards. A function whose purpose cannot be stated in a single sentence is usually a function that does too much, and the difficulty of writing that sentence is a signal worth listening to. Comments that merely restate the code add noise; the useful comment explains why a decision was made, not what the line does. Six months later, the author of the code is a stranger to it, and that stranger will thank whoever recorded the reasoning behind an odd-looking condition or a hard-coded limit.\"\n\nAccording to the passage, a useful comment explains —","options":["what each line of code does","why a decision was made","who wrote the code","how long the code took"],"answer":1,"explanation":"\"…the useful comment explains why a decision was made, not what the line does.\" — यहाँ भी 'not X but Y' की तर्ज़ पर उत्तर 'why' है।"},
-{"id":"progfin-m3-084","subject":"english","exams":["prog-fin"],"question":"Read the passage and answer the question that follows.\n\n\"Programmers often treat documentation as a chore to be finished after the real work is done. This ordering is precisely backwards. A function whose purpose cannot be stated in a single sentence is usually a function that does too much, and the difficulty of writing that sentence is a signal worth listening to. Comments that merely restate the code add noise; the useful comment explains why a decision was made, not what the line does. Six months later, the author of the code is a stranger to it, and that stranger will thank whoever recorded the reasoning behind an odd-looking condition or a hard-coded limit.\"\n\n\"The author of the code is a stranger to it\" implies that —","options":["someone else has rewritten the code","the original author forgets the reasoning over time","the code has been stolen","the author never understood the code"],"answer":1,"explanation":"आशय यह है कि छह महीने बाद स्वयं लिखने वाला भी अपने कोड का तर्क भूल जाता है, मानो वह किसी और का लिखा हो। यह लाक्षणिक (figurative) प्रयोग है, शाब्दिक नहीं — इसीलिए पहला और तीसरा विकल्प ग़लत हैं।"},
-{"id":"progfin-m3-085","subject":"english","exams":["prog-fin"],"question":"Read the passage and answer the question that follows.\n\n\"Programmers often treat documentation as a chore to be finished after the real work is done. This ordering is precisely backwards. A function whose purpose cannot be stated in a single sentence is usually a function that does too much, and the difficulty of writing that sentence is a signal worth listening to. Comments that merely restate the code add noise; the useful comment explains why a decision was made, not what the line does. Six months later, the author of the code is a stranger to it, and that stranger will thank whoever recorded the reasoning behind an odd-looking condition or a hard-coded limit.\"\n\nThe tone of the passage is best described as —","options":["instructive","sarcastic","indifferent","apologetic"],"answer":0,"explanation":"लेखक सलाह और मार्गदर्शन दे रहा है (क्या करें, क्या न करें)। न व्यंग्य है, न उदासीनता, न क्षमायाचना।"}
+ {
+  "id": "progfin-m3-001",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Processes P1, P2, P3, P4 arrive at times 0, 1, 2, 3 with CPU bursts 5, 3, 8, 6. Under FCFS scheduling, the average turnaround time is —",
+  "options": [
+   "10.5",
+   "12",
+   "11.25",
+   "9.75"
+  ],
+  "answer": 2,
+  "explanation": "पूर्णता-समय: P1 = 5, P2 = 8, P3 = 16, P4 = 22। टर्नअराउंड = पूर्णता − आगमन: 5, 7, 14, 19। औसत = 45 / 4 = 11.25।"
+ },
+ {
+  "id": "progfin-m3-002",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Processes P1, P2, P3, P4 arrive at times 0, 2, 4, 5 with bursts 7, 4, 1, 4. Under non-preemptive SJF, the average waiting time is —",
+  "options": [
+   "4",
+   "3",
+   "5",
+   "6"
+  ],
+  "answer": 0,
+  "explanation": "0 पर केवल P1 — वह 0–7 चलता है। 7 पर P2 (4), P3 (1), P4 (4) तैयार: P3 7–8, फिर बराबरी में पहले आया P2 8–12, P4 12–16। प्रतीक्षा: P1 = 0, P2 = 6, P3 = 3, P4 = 7; औसत = 16 / 4 = 4।"
+ },
+ {
+  "id": "progfin-m3-003",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In priority scheduling, low-priority processes may wait indefinitely. The standard technique that solves this is —",
+  "options": [
+   "reducing the time quantum to zero",
+   "swapping out the high-priority processes permanently",
+   "spooling",
+   "aging — gradually raising the priority of waiting processes"
+  ],
+  "answer": 3,
+  "explanation": "समस्या 'स्टार्वेशन' (अनिश्चित प्रतीक्षा) है। एजिंग में जो प्रक्रिया जितनी देर से प्रतीक्षा कर रही है उसकी प्राथमिकता उतनी बढ़ाई जाती है — अंततः वह भी CPU पा लेती है।"
+ },
+ {
+  "id": "progfin-m3-004",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which process-state transition is NOT possible in the standard five-state model?",
+  "options": [
+   "Waiting → Ready",
+   "Ready → Waiting (Blocked)",
+   "Running → Waiting",
+   "Running → Ready"
+  ],
+  "answer": 1,
+  "explanation": "कोई प्रक्रिया I/O या घटना की प्रतीक्षा तभी शुरू करती है जब वह चल रही हो और स्वयं अनुरोध करे। तैयार (Ready) प्रक्रिया चल ही नहीं रही, इसलिए सीधे Waiting में नहीं जा सकती।"
+ },
+ {
+  "id": "progfin-m3-005",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which of the following is NOT stored in a Process Control Block (PCB)?",
+  "options": [
+   "The process state",
+   "The program counter and CPU registers",
+   "The source code of the program",
+   "Memory-management information such as page-table pointers"
+  ],
+  "answer": 2,
+  "explanation": "PCB में प्रक्रिया की स्थिति, PC, रजिस्टर, शेड्यूलिंग प्राथमिकता, मेमोरी व खुली फ़ाइलों की जानकारी रहती है — संदर्भ-परिवर्तन (context switch) के लिए जो चाहिए। प्रोग्राम का स्रोत-कोड उसमें नहीं होता।"
+ },
+ {
+  "id": "progfin-m3-006",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In the first readers–writers problem (readers have priority), which process can starve?",
+  "options": [
+   "A writer",
+   "Both readers and writers equally",
+   "A reader",
+   "Neither — it is starvation-free"
+  ],
+  "answer": 0,
+  "explanation": "जब तक एक भी पाठक भीतर है, नए पाठक आते रहते हैं; लगातार पाठक आते रहें तो लेखक को कभी प्रवेश नहीं मिलता। दूसरे readers–writers समाधान में लेखक को प्राथमिकता देकर उल्टी स्थिति बनती है।"
+ },
+ {
+  "id": "progfin-m3-007",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In the dining philosophers problem with 5 philosophers, each philosopher picks up the left fork and then the right fork. Allowing at most how many philosophers at the table at a time guarantees there is no deadlock?",
+  "options": [
+   "5",
+   "4",
+   "3",
+   "2"
+  ],
+  "answer": 1,
+  "explanation": "अगर पाँचों एक साथ बायाँ काँटा उठाएँ तो सब दाएँ के लिए रुके — चक्रीय प्रतीक्षा। अधिकतम 4 बैठें तो 5 काँटों में से कम से कम एक दार्शनिक को दोनों काँटे मिलेंगे; वह खाकर छोड़ेगा और श्रृंखला टूटेगी।"
+ },
+ {
+  "id": "progfin-m3-008",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "If every resource type has exactly one instance, a deadlock exists if and only if —",
+  "options": [
+   "some process holds more than one resource",
+   "the Banker's algorithm reports an unsafe state",
+   "the wait-for graph is a tree",
+   "the wait-for graph contains a cycle"
+  ],
+  "answer": 3,
+  "explanation": "एक-एक इंस्टेंस वाले संसाधनों में वेट-फ़ॉर ग्राफ़ का चक्र डेडलॉक के लिए आवश्यक भी है और पर्याप्त भी। कई इंस्टेंस हों तो चक्र केवल आवश्यक है, पर्याप्त नहीं। असुरक्षित अवस्था का अर्थ डेडलॉक नहीं होता।"
+ },
+ {
+  "id": "progfin-m3-009",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "For the reference string 1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5, the number of page faults with FIFO replacement and 4 frames (initially empty) is —",
+  "options": [
+   "10",
+   "9",
+   "8",
+   "12"
+  ],
+  "answer": 0,
+  "explanation": "इसी स्ट्रिंग पर FIFO से 3 फ़्रेम में 9 फ़ॉल्ट और 4 फ़्रेम में 10 फ़ॉल्ट आते हैं — फ़्रेम बढ़ाने पर फ़ॉल्ट बढ़ना 'बेलेडी की विसंगति' है। LRU और Optimal में यह विसंगति नहीं होती (स्टैक एल्गोरिद्म)।"
+ },
+ {
+  "id": "progfin-m3-010",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "A UNIX-style i-node has 10 direct block pointers and 1 single-indirect pointer. The block size is 1 KB and each block address is 4 bytes. The maximum file size is —",
+  "options": [
+   "10 KB",
+   "266 KB",
+   "522 KB",
+   "256 KB"
+  ],
+  "answer": 1,
+  "explanation": "सीधे: 10 × 1 KB = 10 KB। एक इनडायरेक्ट ब्लॉक में 1024 / 4 = 256 पते → 256 × 1 KB = 256 KB। कुल = 266 KB।"
+ },
+ {
+  "id": "progfin-m3-011",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "The command  kill -9 1234  sends which signal to process 1234?",
+  "options": [
+   "SIGHUP",
+   "SIGSTOP, which pauses the process",
+   "SIGTERM, which the process may handle",
+   "SIGKILL, which the process cannot catch or ignore"
+  ],
+  "answer": 3,
+  "explanation": "सिग्नल 9 = SIGKILL — कर्नेल सीधे प्रक्रिया ख़त्म कर देता है, प्रक्रिया इसे पकड़ या अनदेखा नहीं कर सकती। साधारण kill डिफ़ॉल्ट रूप से SIGTERM (15) भेजता है, जिसमें प्रक्रिया सफ़ाई करके बंद हो सकती है।"
+ },
+ {
+  "id": "progfin-m3-012",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which Windows utility is used to manage startup items, boot options and services for troubleshooting (the 'System Configuration' tool)?",
+  "options": [
+   "ipconfig",
+   "regedit",
+   "msconfig",
+   "chkdsk"
+  ],
+  "answer": 2,
+  "explanation": "msconfig (सिस्टम कॉन्फ़िगरेशन) से बूट विकल्प, सेवाएँ और सेफ़-मोड चुने जाते हैं। regedit रजिस्ट्री संपादक है, ipconfig नेटवर्क सेटिंग दिखाता है, chkdsk डिस्क की त्रुटियाँ जाँचता है।"
+ },
+ {
+  "id": "progfin-m3-013",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which statement about top-down and bottom-up design is correct?",
+  "options": [
+   "Top-down design breaks the whole problem into smaller sub-problems; bottom-up builds the system by combining small, already-built components",
+   "Bottom-up is used only in structured programming",
+   "Both mean exactly the same thing",
+   "Top-down starts by writing the lowest-level functions first"
+  ],
+  "answer": 0,
+  "explanation": "टॉप-डाउन (संरचित प्रोग्रामिंग, जैसे C) मुख्य समस्या से शुरू कर उसे मॉड्यूल में तोड़ता है। बॉटम-अप (OOP की आम शैली) पहले छोटी कक्षाएँ/घटक बनाकर उन्हें जोड़ता है।"
+ },
+ {
+  "id": "progfin-m3-014",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following C statement print?\n\nprintf(\"%d\", 10 / 3 * 3 + 10 % 3);",
+  "options": [
+   "11",
+   "10",
+   "9",
+   "13"
+  ],
+  "answer": 1,
+  "explanation": "/, *, % बराबर प्राथमिकता, बाएँ से दाएँ: 10 / 3 = 3 (पूर्णांक भाग), 3 * 3 = 9; 10 % 3 = 1; 9 + 1 = 10। यह पहचान (a / b) * b + a % b = a हमेशा सही रहती है।"
+ },
+ {
+  "id": "progfin-m3-015",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following C code print?\n\nint i;\nfor (i = 0; i < 5; i++);\nprintf(\"%d\", i);",
+  "options": [
+   "4",
+   "6",
+   "5",
+   "01234"
+  ],
+  "answer": 2,
+  "explanation": "for के तुरंत बाद ; लूप का शरीर ख़ाली कर देता है — लूप अकेला चलता है और i = 5 पर रुकता है। printf केवल एक बार चलता है और 5 छापता है।"
+ },
+ {
+  "id": "progfin-m3-016",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following C code print?\n\nchar str[] = \"hello\";\nprintf(\"%d %d\", (int)sizeof(str), (int)strlen(str));",
+  "options": [
+   "6 6",
+   "5 6",
+   "5 5",
+   "6 5"
+  ],
+  "answer": 3,
+  "explanation": "sizeof पूरी सरणी का आकार देता है जिसमें अंत का '\\0' भी शामिल है = 6। strlen '\\0' से पहले के अक्षर गिनता है = 5।"
+ },
+ {
+  "id": "progfin-m3-017",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following C code print?\n\nint x = 2;\nswitch (x) {\n  case 1: printf(\"A\");\n  case 2: printf(\"B\");\n  case 3: printf(\"C\"); break;\n  default: printf(\"D\");\n}",
+  "options": [
+   "BCD",
+   "B",
+   "BC",
+   "ABC"
+  ],
+  "answer": 2,
+  "explanation": "x = 2 पर नियंत्रण case 2 पर जाता है और B छापता है। break न होने से अगले case में 'गिर' जाता है (fall-through) — C छापकर break पर रुकता है। परिणाम BC।"
+ },
+ {
+  "id": "progfin-m3-018",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In C++, which of the following can NOT be declared virtual?",
+  "options": [
+   "A constructor",
+   "A destructor",
+   "A function that overrides a base-class function",
+   "A member function"
+  ],
+  "answer": 0,
+  "explanation": "वर्चुअल कॉल वस्तु के vptr से होती है, जो कंस्ट्रक्टर ही बनाता है — इसलिए कंस्ट्रक्टर वर्चुअल नहीं हो सकता। उल्टे, आधार-कक्षा का डिस्ट्रक्टर वर्चुअल रखना चाहिए ताकि base पॉइंटर से delete पर व्युत्पन्न का डिस्ट्रक्टर भी चले।"
+ },
+ {
+  "id": "progfin-m3-019",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Function overloading and virtual-function overriding are examples of, respectively —",
+  "options": [
+   "encapsulation and inheritance",
+   "compile-time polymorphism and run-time polymorphism",
+   "run-time polymorphism and compile-time polymorphism",
+   "both compile-time polymorphism"
+  ],
+  "answer": 1,
+  "explanation": "ओवरलोडिंग में कौन-सा फ़ंक्शन चलेगा यह तर्कों के प्रकार से कंपाइलर तय कर देता है (स्टैटिक बाइंडिंग)। ओवरराइडिंग में वर्चुअल फ़ंक्शन रन-टाइम पर वस्तु के प्रकार से तय होता है (डायनेमिक बाइंडिंग)।"
+ },
+ {
+  "id": "progfin-m3-020",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following Java code print?\n\nint x = 7;\nSystem.out.println(x++ + ++x);",
+  "options": [
+   "14",
+   "17",
+   "15",
+   "16"
+  ],
+  "answer": 3,
+  "explanation": "Java में मूल्यांकन बाएँ से दाएँ तय है: x++ मान 7 देता है और x = 8; फिर ++x x को 9 कर 9 देता है। 7 + 9 = 16। (C में यही अभिव्यक्ति अपरिभाषित व्यवहार है।)"
+ },
+ {
+  "id": "progfin-m3-021",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What is the value of b after the Java statement  byte b = (byte) 200;  ?",
+  "options": [
+   "127",
+   "200",
+   "−56",
+   "Compilation error"
+  ],
+  "answer": 2,
+  "explanation": "byte 8-बिट हस्ताक्षरित है (−128 से 127)। 200 = 1100 1000 — 2's complement में इसका मान 200 − 256 = −56। स्पष्ट कास्ट के कारण कंपाइल-त्रुटि नहीं होती; ऊपरी बिट कट जाते हैं।"
+ },
+ {
+  "id": "progfin-m3-022",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which statement about Java is correct?",
+  "options": [
+   "A class can implement several interfaces but can extend only one class",
+   "An interface can have a constructor",
+   "An abstract class cannot have any concrete (implemented) methods",
+   "A class can extend several classes"
+  ],
+  "answer": 0,
+  "explanation": "Java कक्षाओं में बहु-वंशानुक्रम नहीं देता (डायमंड समस्या से बचाव), पर कई इंटरफ़ेस लागू किए जा सकते हैं। एब्स्ट्रैक्ट कक्षा में कंस्ट्रक्टर और सामान्य विधियाँ हो सकती हैं; इंटरफ़ेस में कंस्ट्रक्टर नहीं।"
+ },
+ {
+  "id": "progfin-m3-023",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following JavaScript statement print?\n\nconsole.log(typeof null);",
+  "options": [
+   "\"undefined\"",
+   "\"number\"",
+   "\"null\"",
+   "\"object\""
+  ],
+  "answer": 3,
+  "explanation": "यह JavaScript की पुरानी, जानी-मानी त्रुटि है जिसे संगतता के लिए कभी ठीक नहीं किया गया — typeof null \"object\" देता है। null जाँचने के लिए x === null लिखिए।"
+ },
+ {
+  "id": "progfin-m3-024",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following JavaScript statement print?\n\nconsole.log(1 + 2 + \"3\");",
+  "options": [
+   "6",
+   "\"33\"",
+   "\"123\"",
+   "\"15\""
+  ],
+  "answer": 1,
+  "explanation": "+ बाएँ से दाएँ: 1 + 2 = 3 (दोनों संख्या), फिर 3 + \"3\" में एक स्ट्रिंग है तो जोड़ नहीं, जुड़ाव होता है — \"33\"। 1 + \"2\" + 3 होता तो \"123\" आता।"
+ },
+ {
+  "id": "progfin-m3-025",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In JavaScript, what are the values of  0 == \"0\"  and  0 === \"0\"  respectively?",
+  "options": [
+   "true and true",
+   "true and false",
+   "false and false",
+   "false and true"
+  ],
+  "answer": 1,
+  "explanation": "== तुलना से पहले प्रकार बदलता है (\"0\" → 0), अतः true। === प्रकार भी जाँचता है — number और string अलग हैं, अतः false। सुरक्षित कोड में === ही लिखिए।"
+ },
+ {
+  "id": "progfin-m3-026",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following Perl code print?\n\nmy @a = (10, 20, 30);\nmy $n = @a;\nprint $n;",
+  "options": [
+   "30",
+   "10",
+   "3",
+   "102030"
+  ],
+  "answer": 2,
+  "explanation": "Perl में सरणी को स्केलर चर में देने पर 'स्केलर संदर्भ' बनता है, जिसमें सरणी अपने तत्वों की संख्या देती है = 3। पहला तत्व चाहिए तो $a[0], अंतिम सूचकांक $#a।"
+ },
+ {
+  "id": "progfin-m3-027",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which of the following runs on the client side (in the browser) rather than on the server?",
+  "options": [
+   "A Perl CGI script",
+   "An ASP.NET code-behind file",
+   "A PHP script that queries a MySQL database",
+   "JavaScript code that validates a form before submission"
+  ],
+  "answer": 3,
+  "explanation": "ब्राउज़र HTML, CSS और JavaScript चलाता है — फ़ॉर्म भेजने से पहले जाँच क्लाइंट पर हो सकती है। PHP, ASP.NET और CGI-Perl सर्वर पर चलते हैं और ब्राउज़र को केवल उनका HTML परिणाम मिलता है।"
+ },
+ {
+  "id": "progfin-m3-028",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In an ER diagram, a weak entity set and its identifying relationship are shown respectively by —",
+  "options": [
+   "a double rectangle and a double diamond",
+   "a single rectangle and a double ellipse",
+   "a double ellipse and a dashed rectangle",
+   "a dashed ellipse and a single diamond"
+  ],
+  "answer": 0,
+  "explanation": "कमज़ोर इकाई (जिसकी अपनी प्राथमिक कुंजी नहीं) = दोहरा आयत; उसका पहचान-संबंध = दोहरा हीरा। दोहरा दीर्घवृत्त बहु-मानी गुण है और बिंदीदार दीर्घवृत्त व्युत्पन्न गुण।"
+ },
+ {
+  "id": "progfin-m3-029",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Two entity sets E1 and E2 (with only simple attributes) are linked by a many-to-many relationship R. The minimum number of tables needed in the relational schema is —",
+  "options": [
+   "2",
+   "1",
+   "3",
+   "4"
+  ],
+  "answer": 2,
+  "explanation": "M:N संबंध को किसी एक इकाई की तालिका में विदेशी कुंजी से नहीं दिखाया जा सकता — उसके लिए अलग तालिका चाहिए जिसकी कुंजी दोनों इकाइयों की कुंजियों का संयोजन हो। अतः E1, E2, R = 3 तालिकाएँ। 1:N में 2 पर्याप्त हैं।"
+ },
+ {
+  "id": "progfin-m3-030",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Table Orders has a foreign key cust_id referencing Customers(id) with ON DELETE CASCADE. When a row in Customers is deleted —",
+  "options": [
+   "nothing happens to Orders",
+   "all Orders rows referencing that customer are deleted automatically",
+   "the matching cust_id values are set to NULL",
+   "the delete is rejected if any order references it"
+  ],
+  "answer": 1,
+  "explanation": "CASCADE संदर्भ-अखंडता बनाए रखने के लिए जुड़ी पंक्तियाँ भी हटा देता है। डिफ़ॉल्ट (RESTRICT/NO ACTION) हटाना रोकता है; SET NULL विदेशी कुंजी को NULL कर देता है।"
+ },
+ {
+  "id": "progfin-m3-031",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Relation R(A, B, C) has key A and the FDs A → B and B → C. The highest normal form of R is —",
+  "options": [
+   "3NF",
+   "1NF",
+   "BCNF",
+   "2NF"
+  ],
+  "answer": 3,
+  "explanation": "कुंजी एक ही गुण है, इसलिए आंशिक निर्भरता संभव नहीं — 2NF सही। पर A → B → C संक्रामक निर्भरता है (B कुंजी नहीं, C अप्राइम), जो 3NF तोड़ती है। हल: R1(A, B), R2(B, C)।"
+ },
+ {
+  "id": "progfin-m3-032",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which DBMS component is chiefly responsible for ensuring the Atomicity of transactions?",
+  "options": [
+   "The recovery manager (using the log to undo incomplete transactions)",
+   "The query optimizer",
+   "The data dictionary",
+   "The concurrency-control manager"
+  ],
+  "answer": 0,
+  "explanation": "परमाणुता = 'सब या कुछ नहीं'। अधूरा लेन-देन विफल हो तो रिकवरी मैनेजर लॉग से उसके बदलाव वापस (undo) करता है। अलगाव (Isolation) समवर्तिता-नियंत्रण देता है; स्थायित्व (Durability) भी रिकवरी से।"
+ },
+ {
+  "id": "progfin-m3-033",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "A view is defined as  SELECT dept, AVG(salary) FROM Emp GROUP BY dept.  An UPDATE on this view is generally —",
+  "options": [
+   "automatically converted into an INSERT",
+   "allowed and changes every employee's salary",
+   "allowed only for the dept column",
+   "not allowed, because each view row is an aggregate of many base rows"
+  ],
+  "answer": 3,
+  "explanation": "GROUP BY या समुच्चय फ़ंक्शन वाले व्यू की एक पंक्ति कई मूल पंक्तियों से बनती है — 'औसत बदलो' का कोई एक अर्थ नहीं निकलता। इसलिए ऐसे व्यू अद्यतन-योग्य नहीं होते।"
+ },
+ {
+  "id": "progfin-m3-034",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Table A has 3 rows and table B has 4 rows. How many rows does  SELECT * FROM A CROSS JOIN B;  return?",
+  "options": [
+   "7",
+   "12",
+   "4",
+   "3"
+  ],
+  "answer": 1,
+  "explanation": "CROSS JOIN कार्टेशियन गुणनफल है — A की हर पंक्ति B की हर पंक्ति से जुड़ती है: 3 × 4 = 12। WHERE में शर्त न लगाने पर साधारण जोड़ भी यही करता है।"
+ },
+ {
+  "id": "progfin-m3-035",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Table Emp has salaries 10, 20, 30, 40 and 50 (thousand). How many rows does this query return?\n\nSELECT name FROM Emp WHERE salary > (SELECT AVG(salary) FROM Emp);",
+  "options": [
+   "2",
+   "5",
+   "3",
+   "1"
+  ],
+  "answer": 0,
+  "explanation": "उप-क्वेरी पहले चलती है: औसत = 150 / 5 = 30। 30 से अधिक केवल 40 और 50 — 2 पंक्तियाँ।"
+ },
+ {
+  "id": "progfin-m3-036",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Query A returns the values {1, 2, 3} and query B returns {2, 3, 4}. How many rows does  A UNION B  return?",
+  "options": [
+   "3",
+   "6",
+   "4",
+   "2"
+  ],
+  "answer": 2,
+  "explanation": "UNION दोहराव हटाता है: {1, 2, 3, 4} = 4 पंक्तियाँ। UNION ALL सब रखता है = 6; INTERSECT = {2, 3} = 2।"
+ },
+ {
+  "id": "progfin-m3-037",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "A database trigger is —",
+  "options": [
+   "a procedure that runs only when a user calls it explicitly",
+   "a constraint that makes a column unique",
+   "a stored block of code that runs automatically when a specified event (such as INSERT, UPDATE or DELETE) occurs on a table",
+   "a type of index"
+  ],
+  "answer": 2,
+  "explanation": "ट्रिगर घटना-संचालित होता है — BEFORE या AFTER किसी DML पर अपने आप चलता है, जैसे हर वेतन-परिवर्तन का ऑडिट-लॉग लिखना। स्टोर्ड प्रोसीजर को स्पष्ट रूप से CALL/EXEC करना पड़ता है।"
+ },
+ {
+  "id": "progfin-m3-038",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In MS-Access, which object automates a sequence of actions (such as opening a form and running a query) without writing VBA code?",
+  "options": [
+   "Query",
+   "Table",
+   "Report",
+   "Macro"
+  ],
+  "answer": 3,
+  "explanation": "मैक्रो पहले से बनी क्रियाओं (OpenForm, RunQuery, MessageBox आदि) को क्रम से चलाता है। रिपोर्ट छापने/सारांश के लिए, क्वेरी डेटा निकालने के लिए, तालिका डेटा रखने के लिए होती है।"
+ },
+ {
+  "id": "progfin-m3-039",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In Oracle, RMAN (Recovery Manager) is used for —",
+  "options": [
+   "tuning SQL query syntax",
+   "backing up and recovering the database",
+   "managing network listeners only",
+   "creating user interface forms"
+  ],
+  "answer": 1,
+  "explanation": "RMAN Oracle का अंतर्निहित उपकरण है जो डेटाफ़ाइलों, कंट्रोल फ़ाइलों और आर्काइव लॉग का बैकअप, इंक्रीमेंटल बैकअप और पुनर्स्थापन (restore/recover) करता है।"
+ },
+ {
+  "id": "progfin-m3-040",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following PHP code output?\n\n$a = \"5\"; $b = 3;\necho $a . $b;",
+  "options": [
+   "53",
+   "8",
+   "An error",
+   "5"
+  ],
+  "answer": 0,
+  "explanation": "PHP में . (बिंदु) स्ट्रिंग जोड़ने का संचालक है, इसलिए 3 भी स्ट्रिंग बनकर \"53\" बनता है। $a + $b लिखते तो \"5\" संख्या में बदलकर 8 आता।"
+ },
+ {
+  "id": "progfin-m3-041",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "An HTML form is declared as  <form action=\"save.php\" method=\"post\">  with an input named email. In save.php, the value is read from —",
+  "options": [
+   "$_SERVER['email']",
+   "$_POST['email']",
+   "$email only",
+   "$_GET['email']"
+  ],
+  "answer": 1,
+  "explanation": "method=\"post\" होने पर डेटा अनुरोध के शरीर में आता है और PHP उसे $_POST सुपरग्लोबल में रखता है। GET में डेटा URL में आता है ($_GET)। $_REQUEST दोनों देखता है।"
+ },
+ {
+  "id": "progfin-m3-042",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In the MVC (Model–View–Controller) architecture, the component that receives the user's request, works with the model and selects the view to display is the —",
+  "options": [
+   "View",
+   "Model",
+   "Router table in the database",
+   "Controller"
+  ],
+  "answer": 3,
+  "explanation": "मॉडल = डेटा और व्यावसायिक नियम; व्यू = प्रस्तुति (HTML); कंट्रोलर = अनुरोध लेकर मॉडल से काम करवाना और सही व्यू चुनना। ASP.NET MVC, Laravel आदि इसी पर बने हैं।"
+ },
+ {
+  "id": "progfin-m3-043",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which statement about web servers is correct?",
+  "options": [
+   "IIS is open-source software",
+   "HTTPS uses port 80 by default",
+   "IIS is Microsoft's web server for Windows, while Apache HTTP Server is open-source and cross-platform",
+   "Apache runs only on Windows"
+  ],
+  "answer": 2,
+  "explanation": "IIS (Internet Information Services) विंडोज़ के साथ आता है और ASP.NET के लिए स्वाभाविक है। Apache मुक्त-स्रोत है, Linux/Windows दोनों पर चलता है। डिफ़ॉल्ट पोर्ट: HTTP 80, HTTPS 443।"
+ },
+ {
+  "id": "progfin-m3-044",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "The network address of the host 192.168.1.130/26 is —",
+  "options": [
+   "192.168.1.128",
+   "192.168.1.192",
+   "192.168.1.0",
+   "192.168.1.64"
+  ],
+  "answer": 0,
+  "explanation": "/26 = 255.255.255.192, ब्लॉक-आकार 64: सबनेट 0, 64, 128, 192। 130, 128–191 वाले सबनेट में है — नेटवर्क पता .128, ब्रॉडकास्ट .191।"
+ },
+ {
+  "id": "progfin-m3-045",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which protocol is used by a diskless workstation to find its own IP address from its known MAC address?",
+  "options": [
+   "RARP",
+   "ARP",
+   "DNS",
+   "ICMP"
+  ],
+  "answer": 0,
+  "explanation": "ARP: IP पता ज्ञात, MAC पता खोजना। RARP उल्टा: अपना MAC ज्ञात, अपना IP पूछना। आज यह काम BOOTP/DHCP करते हैं। ICMP त्रुटि-संदेश (ping) के लिए है।"
+ },
+ {
+  "id": "progfin-m3-046",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which pair is correct about e-mail protocols?",
+  "options": [
+   "SMTP and POP3 both only download mail",
+   "FTP is used to send e-mail",
+   "SMTP sends mail between servers; POP3 downloads mail from the server to the client",
+   "POP3 sends mail; SMTP downloads mail"
+  ],
+  "answer": 2,
+  "explanation": "SMTP (पोर्ट 25/587) मेल भेजने और सर्वरों के बीच पहुँचाने के लिए। POP3 (110) मेल क्लाइंट पर उतारकर सामान्यतः सर्वर से हटा देता है; IMAP (143) मेल सर्वर पर रखकर फ़ोल्डर समन्वित करता है।"
+ },
+ {
+  "id": "progfin-m3-047",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In TCP socket programming, which server-side call blocks until a client connection arrives and then returns a new socket for that client?",
+  "options": [
+   "listen()",
+   "bind()",
+   "socket()",
+   "accept()"
+  ],
+  "answer": 3,
+  "explanation": "सर्वर का क्रम: socket() → bind() (पता/पोर्ट जोड़ना) → listen() (कतार तैयार) → accept() (क्लाइंट आने तक रुकना, फिर उसके लिए नया सॉकेट)। क्लाइंट connect() करता है। UDP में listen/accept नहीं होते।"
+ },
+ {
+  "id": "progfin-m3-048",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which attribute of the HTML <form> tag specifies the URL to which the form data is sent?",
+  "options": [
+   "target",
+   "action",
+   "method",
+   "enctype"
+  ],
+  "answer": 1,
+  "explanation": "action = डेटा कहाँ जाए (जैसे save.php); method = कैसे (GET/POST); enctype = एन्कोडिंग (फ़ाइल अपलोड के लिए multipart/form-data); target = परिणाम किस विंडो/फ़्रेम में खुले।"
+ },
+ {
+  "id": "progfin-m3-049",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In MS-Excel, cell C3 contains the formula  =A$1+$B2.  If it is copied to cell D5, the formula becomes —",
+  "options": [
+   "=B$1+$B4",
+   "=A$1+$B2",
+   "=B$3+$C4",
+   "=B$1+$C4"
+  ],
+  "answer": 0,
+  "explanation": "C3 से D5: एक स्तंभ दाएँ, दो पंक्ति नीचे। A$1: स्तंभ सापेक्ष (A → B), पंक्ति स्थिर (1) → B$1। $B2: स्तंभ स्थिर (B), पंक्ति सापेक्ष (2 → 4) → $B4।"
+ },
+ {
+  "id": "progfin-m3-050",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In MS-PowerPoint, the 'Rehearse Timings' feature is used to —",
+  "options": [
+   "reorder slides in Slide Sorter view",
+   "compress the images in a presentation",
+   "record how long each slide is shown during a practice run, for automatic timing in the slide show",
+   "check the spelling of all slides"
+  ],
+  "answer": 2,
+  "explanation": "रिहर्स टाइमिंग्स में अभ्यास करते हुए हर स्लाइड पर बिताया समय रिकॉर्ड होता है; बाद में स्लाइड शो उन्हीं समयों पर अपने आप आगे बढ़ता है — कियोस्क या स्वचालित प्रस्तुति के लिए उपयोगी।"
+ },
+ {
+  "id": "progfin-m3-051",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "शृंखला पूर्ण कीजिए: 1, 4, 9, 16, 25, ?",
+  "options": [
+   "30",
+   "36",
+   "42",
+   "49"
+  ],
+  "answer": 1,
+  "explanation": "ये क्रमागत पूर्ण वर्ग हैं: 1², 2², 3², 4², 5² → अगला 6² = 36।"
+ },
+ {
+  "id": "progfin-m3-052",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "यदि RED = 27 हो, तो BLUE = ?",
+  "options": [
+   "38",
+   "40",
+   "42",
+   "44"
+  ],
+  "answer": 1,
+  "explanation": "अक्षरों की स्थिति का योग: R(18) + E(5) + D(4) = 27 ✓। अतः BLUE = B(2) + L(12) + U(21) + E(5) = 40।"
+ },
+ {
+  "id": "progfin-m3-053",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "सूरज पूर्व की ओर 8 किमी चलकर बाएँ मुड़ता है और 6 किमी चलता है। प्रारंभिक बिंदु से उसकी सीधी दूरी है —",
+  "options": [
+   "10 किमी",
+   "12 किमी",
+   "14 किमी",
+   "8 किमी"
+  ],
+  "answer": 0,
+  "explanation": "पूर्व 8 किमी, फिर बाएँ मुड़ने पर उत्तर 6 किमी → दोनों परस्पर लंब। दूरी = √(8² + 6²) = √100 = 10 किमी (3-4-5 त्रिक का दोगुना)।"
+ },
+ {
+  "id": "progfin-m3-054",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "एक कक्षा में 30 विद्यार्थी हैं। मीना ऊपर से 12वें स्थान पर है। नीचे से उसका स्थान होगा —",
+  "options": [
+   "17वाँ",
+   "18वाँ",
+   "19वाँ",
+   "20वाँ"
+  ],
+  "answer": 2,
+  "explanation": "नीचे से स्थान = कुल − ऊपर से स्थान + 1 = 30 − 12 + 1 = 19।"
+ },
+ {
+  "id": "progfin-m3-055",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "विषम को पहचानिए —",
+  "options": [
+   "सोमवार",
+   "बुधवार",
+   "जनवरी",
+   "शुक्रवार"
+  ],
+  "answer": 2,
+  "explanation": "शेष तीनों सप्ताह के दिन हैं; जनवरी एक माह है।"
+ },
+ {
+  "id": "progfin-m3-056",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "सादृश्य पूर्ण कीजिए: घड़ी : समय :: थर्मामीटर : ?",
+  "options": [
+   "पारा",
+   "तापमान",
+   "मौसम",
+   "चिकित्सक"
+  ],
+  "answer": 1,
+  "explanation": "संबंध \"उपकरण : जो वह मापता है\" का है। घड़ी समय मापती है, थर्मामीटर तापमान। पारा उसमें भरा पदार्थ है, माप्य राशि नहीं।"
+ },
+ {
+  "id": "progfin-m3-057",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "A का पुत्र B है तथा B की बहन C है। C का A से क्या संबंध है?",
+  "options": [
+   "पुत्री",
+   "बहन",
+   "माता",
+   "भतीजी"
+  ],
+  "answer": 0,
+  "explanation": "B, A का पुत्र है → A उसका माता/पिता। C, B की बहन है → C भी A की संतान → A की पुत्री।"
+ },
+ {
+  "id": "progfin-m3-058",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "शृंखला में अगला अक्षर होगा: Z, X, V, T, ?",
+  "options": [
+   "S",
+   "R",
+   "Q",
+   "P"
+  ],
+  "answer": 1,
+  "explanation": "स्थिति: Z(26), X(24), V(22), T(20) — प्रत्येक बार 2 की कमी → 20 − 2 = 18 = R।"
+ },
+ {
+  "id": "progfin-m3-059",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "पाँच मित्र एक पंक्ति में बैठे हैं। A, B के बाएँ है; C, B के दाएँ किंतु D के बाएँ है; E सबसे दाएँ छोर पर है। ठीक बीच में कौन बैठा है?",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "answer": 2,
+  "explanation": "शर्तें लगाइए: E सबसे दाएँ (5वाँ)। C, B के दाएँ पर D के बाएँ → B … C … D। A, B के बाएँ → क्रम बनता है A, B, C, D, E। पाँच स्थानों में ठीक बीच तीसरा है → C।"
+ },
+ {
+  "id": "progfin-m3-060",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "एक घड़ी 12 बजे सही समय दिखाती है, किंतु वह प्रति घंटे 5 मिनट तेज़ चलती है। 4 वास्तविक घंटे बाद वह क्या समय दिखाएगी?",
+  "options": [
+   "4:15",
+   "4:20",
+   "4:25",
+   "4:30"
+  ],
+  "answer": 1,
+  "explanation": "घड़ी प्रति घंटे 5 मिनट तेज़ → 4 घंटे में 20 मिनट अधिक। वास्तविक समय 4:00 → घड़ी दिखाएगी 4:20।"
+ },
+ {
+  "id": "progfin-m3-061",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "कथन: सभी फूल सुंदर हैं। गुलाब एक फूल है।\nनिष्कर्ष: गुलाब सुंदर है।",
+  "options": [
+   "निष्कर्ष निश्चित रूप से सही है",
+   "निष्कर्ष ग़लत है",
+   "कहा नहीं जा सकता",
+   "निष्कर्ष आंशिक रूप से सही है"
+  ],
+  "answer": 0,
+  "explanation": "यह मानक निगमनात्मक न्यायवाक्य है: सभी F, B हैं; R एक F है → R, B है। दोनों आधार-वाक्य सार्वभौमिक व सकारात्मक हैं, अतः निष्कर्ष अनिवार्य रूप से निकलता है।"
+ },
+ {
+  "id": "progfin-m3-062",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "यदि किसी माह का तीसरा शनिवार 18 तारीख को पड़ता है, तो उस माह की पहली तारीख को कौन-सा दिन था?",
+  "options": [
+   "मंगलवार",
+   "बुधवार",
+   "गुरुवार",
+   "शुक्रवार"
+  ],
+  "answer": 1,
+  "explanation": "शनिवार 7 दिन के अंतराल पर आते हैं। तीसरा शनिवार 18 → दूसरा 11 → पहला शनिवार 4 तारीख़। 4 तारीख़ शनिवार → 3 शुक्रवार, 2 गुरुवार, 1 तारीख़ बुधवार।"
+ },
+ {
+  "id": "progfin-m3-063",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "संख्या शृंखला: 2, 5, 11, 23, ?",
+  "options": [
+   "45",
+   "46",
+   "47",
+   "48"
+  ],
+  "answer": 2,
+  "explanation": "पैटर्न: × 2 + 1 → 2 → 5 → 11 → 23 → 47।"
+ },
+ {
+  "id": "progfin-m3-064",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "एक घन में 6 फलक तथा 12 किनारे होते हैं। शीर्षों की संख्या है —",
+  "options": [
+   "6",
+   "8",
+   "10",
+   "12"
+  ],
+  "answer": 1,
+  "explanation": "ऑयलर का सूत्र: V − E + F = 2 → V − 12 + 6 = 2 → V = 8। (घन के 8 कोने होते हैं — प्रत्यक्ष रूप से भी सत्यापित।)"
+ },
+ {
+  "id": "progfin-m3-065",
+  "subject": "reasoning",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "यदि 'लाल' को 'नीला', 'नीला' को 'हरा' तथा 'हरा' को 'पीला' कहा जाए, तो स्वच्छ आकाश का रंग क्या कहलाएगा?",
+  "options": [
+   "नीला",
+   "हरा",
+   "पीला",
+   "लाल"
+  ],
+  "answer": 1,
+  "explanation": "स्वच्छ आकाश वास्तव में नीला होता है; दी गई भाषा में नीले को \"हरा\" कहा जाता है → उत्तर हरा। तरकीब: ऐसे प्रश्नों में पहले वास्तविक रंग/नाम पहचानिए, फिर प्रतिस्थापन नियम लागू कीजिए।"
+ },
+ {
+  "id": "progfin-m3-066",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "15 का 20% + 40 का 25% = ?",
+  "options": [
+   "11",
+   "12",
+   "13",
+   "14"
+  ],
+  "answer": 2,
+  "explanation": "15 का 20% = 3; 40 का 25% = 10 → 3 + 10 = 13।"
+ },
+ {
+  "id": "progfin-m3-067",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "एक वस्तु ₹500 में खरीदकर ₹450 में बेची गई। हानि प्रतिशत है —",
+  "options": [
+   "8%",
+   "10%",
+   "11%",
+   "12%"
+  ],
+  "answer": 1,
+  "explanation": "हानि = 500 − 450 = ₹50। हानि% = (हानि ÷ क्रय मूल्य) × 100 = (50 ÷ 500) × 100 = 10%। ध्यान: लाभ/हानि प्रतिशत सदैव क्रय मूल्य पर निकाला जाता है, विक्रय मूल्य पर नहीं।"
+ },
+ {
+  "id": "progfin-m3-068",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "तीन संख्याओं का औसत 24 है। यदि दो संख्याएँ 20 तथा 26 हों, तो तीसरी संख्या है —",
+  "options": [
+   "22",
+   "24",
+   "26",
+   "28"
+  ],
+  "answer": 2,
+  "explanation": "तीनों का योग = 24 × 3 = 72। तीसरी संख्या = 72 − (20 + 26) = 72 − 46 = 26।"
+ },
+ {
+  "id": "progfin-m3-069",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "20 व्यक्ति किसी कार्य को 10 दिन में पूरा करते हैं। 25 व्यक्ति उसी कार्य को कितने दिन में पूरा करेंगे?",
+  "options": [
+   "8 दिन",
+   "9 दिन",
+   "12 दिन",
+   "12.5 दिन"
+  ],
+  "answer": 0,
+  "explanation": "कुल कार्य = 20 × 10 = 200 व्यक्ति-दिन। 25 व्यक्तियों को लगने वाला समय = 200 ÷ 25 = 8 दिन। (व्यक्ति और दिन में व्युत्क्रम अनुपात होता है — अधिक व्यक्ति, कम दिन।)"
+ },
+ {
+  "id": "progfin-m3-070",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "एक कार 180 किमी की दूरी 3 घंटे में तय करती है। उसकी औसत चाल है —",
+  "options": [
+   "50 किमी/घं",
+   "55 किमी/घं",
+   "60 किमी/घं",
+   "65 किमी/घं"
+  ],
+  "answer": 2,
+  "explanation": "चाल = दूरी ÷ समय = 180 ÷ 3 = 60 किमी/घंटा।"
+ },
+ {
+  "id": "progfin-m3-071",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "यदि x/4 = 3/2 हो, तो x का मान है —",
+  "options": [
+   "4",
+   "5",
+   "6",
+   "8"
+  ],
+  "answer": 2,
+  "explanation": "x/4 = 3/2 → 2x = 12 → x = 6।"
+ },
+ {
+  "id": "progfin-m3-072",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "एक आयत की लंबाई 15 सेमी तथा चौड़ाई 8 सेमी है। उसके विकर्ण की लंबाई है —",
+  "options": [
+   "15 सेमी",
+   "16 सेमी",
+   "17 सेमी",
+   "18 सेमी"
+  ],
+  "answer": 2,
+  "explanation": "विकर्ण = √(लंबाई² + चौड़ाई²) = √(225 + 64) = √289 = 17 सेमी (8-15-17 पाइथागोरस त्रिक)।"
+ },
+ {
+  "id": "progfin-m3-073",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "144 के वर्गमूल तथा 27 के घनमूल का योग है —",
+  "options": [
+   "12",
+   "15",
+   "18",
+   "21"
+  ],
+  "answer": 1,
+  "explanation": "√144 = 12; ∛27 = 3 → 12 + 3 = 15।"
+ },
+ {
+  "id": "progfin-m3-074",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "दो पासे एक साथ फेंके गए। दोनों पर समान अंक आने की प्रायिकता है —",
+  "options": [
+   "1/6",
+   "1/12",
+   "1/36",
+   "1/3"
+  ],
+  "answer": 0,
+  "explanation": "कुल परिणाम = 36। समान अंक वाले युग्म: (1,1), (2,2), (3,3), (4,4), (5,5), (6,6) = 6। प्रायिकता = 6/36 = 1/6।"
+ },
+ {
+  "id": "progfin-m3-075",
+  "subject": "ganit",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "₹6,000 पर 5% वार्षिक दर से 3 वर्ष का साधारण ब्याज है —",
+  "options": [
+   "₹800",
+   "₹900",
+   "₹950",
+   "₹1,000"
+  ],
+  "answer": 1,
+  "explanation": "साधारण ब्याज = (मूलधन × दर × समय) ÷ 100 = (6000 × 5 × 3) ÷ 100 = ₹900।"
+ },
+ {
+  "id": "progfin-m3-076",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Most people learn the value of a backup only after losing something. A modern rule of thumb, often called the 3-2-1 rule, suggests keeping three copies of important data on two different types of media, with one copy stored away from the primary location. The last part matters more than it appears. A fire, a flood or a stolen laptop can destroy every copy that sits in the same room, however carefully those copies were made. Cloud storage has made the off-site copy easy and inexpensive, but it introduces a dependence on a provider and on a working internet connection. Prudent users therefore treat the cloud as one leg of the rule, never as the whole of it.\"\n\nThe 3-2-1 rule recommends keeping —",
+  "options": [
+   "three copies on one medium",
+   "two copies on three media",
+   "three copies on two types of media with one stored off-site",
+   "one copy in the cloud only"
+  ],
+  "answer": 2,
+  "explanation": "\"…keeping three copies of important data on two different types of media, with one copy stored away from the primary location.\" तीनों अंक एक ही वाक्य में हैं — नाम ही 3-2-1 है।"
+ },
+ {
+  "id": "progfin-m3-077",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Most people learn the value of a backup only after losing something. A modern rule of thumb, often called the 3-2-1 rule, suggests keeping three copies of important data on two different types of media, with one copy stored away from the primary location. The last part matters more than it appears. A fire, a flood or a stolen laptop can destroy every copy that sits in the same room, however carefully those copies were made. Cloud storage has made the off-site copy easy and inexpensive, but it introduces a dependence on a provider and on a working internet connection. Prudent users therefore treat the cloud as one leg of the rule, never as the whole of it.\"\n\n\"The last part\" in the passage refers to —",
+  "options": [
+   "keeping three copies",
+   "using two different media",
+   "storing one copy away from the primary location",
+   "using cloud storage"
+  ],
+  "answer": 2,
+  "explanation": "\"The last part\" उस वाक्य के अंतिम भाग की ओर संकेत करता है, अर्थात् off-site प्रति। अगला वाक्य (\"A fire, a flood or a stolen laptop…\") इसी की पुष्टि करता है।"
+ },
+ {
+  "id": "progfin-m3-078",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Most people learn the value of a backup only after losing something. A modern rule of thumb, often called the 3-2-1 rule, suggests keeping three copies of important data on two different types of media, with one copy stored away from the primary location. The last part matters more than it appears. A fire, a flood or a stolen laptop can destroy every copy that sits in the same room, however carefully those copies were made. Cloud storage has made the off-site copy easy and inexpensive, but it introduces a dependence on a provider and on a working internet connection. Prudent users therefore treat the cloud as one leg of the rule, never as the whole of it.\"\n\nAccording to the passage, a fire or a stolen laptop can destroy —",
+  "options": [
+   "only the original file",
+   "every copy kept in the same room",
+   "cloud backups",
+   "nothing, if copies were made carefully"
+  ],
+  "answer": 1,
+  "explanation": "\"…can destroy every copy that sits in the same room, however carefully those copies were made.\" — 'however carefully' यह जताता है कि सावधानी से भी बचाव नहीं होता, अतः अंतिम विकल्प ग़लत है।"
+ },
+ {
+  "id": "progfin-m3-079",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Most people learn the value of a backup only after losing something. A modern rule of thumb, often called the 3-2-1 rule, suggests keeping three copies of important data on two different types of media, with one copy stored away from the primary location. The last part matters more than it appears. A fire, a flood or a stolen laptop can destroy every copy that sits in the same room, however carefully those copies were made. Cloud storage has made the off-site copy easy and inexpensive, but it introduces a dependence on a provider and on a working internet connection. Prudent users therefore treat the cloud as one leg of the rule, never as the whole of it.\"\n\nThe drawback of cloud storage mentioned by the author is —",
+  "options": [
+   "its high cost",
+   "its slow speed",
+   "dependence on a provider and on a working internet connection",
+   "its small capacity"
+  ],
+  "answer": 2,
+  "explanation": "\"…it introduces a dependence on a provider and on a working internet connection.\" लागत तो घटती है (\"easy and inexpensive\"), इसलिए पहला विकल्प ग़लत है।"
+ },
+ {
+  "id": "progfin-m3-080",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Most people learn the value of a backup only after losing something. A modern rule of thumb, often called the 3-2-1 rule, suggests keeping three copies of important data on two different types of media, with one copy stored away from the primary location. The last part matters more than it appears. A fire, a flood or a stolen laptop can destroy every copy that sits in the same room, however carefully those copies were made. Cloud storage has made the off-site copy easy and inexpensive, but it introduces a dependence on a provider and on a working internet connection. Prudent users therefore treat the cloud as one leg of the rule, never as the whole of it.\"\n\nPrudent users, according to the author, treat the cloud as —",
+  "options": [
+   "the complete solution",
+   "one leg of the rule",
+   "an unnecessary expense",
+   "a replacement for local copies"
+  ],
+  "answer": 1,
+  "explanation": "\"Prudent users therefore treat the cloud as one leg of the rule, never as the whole of it.\" — 'never as the whole' के कारण पहला विकल्प सीधे कट जाता है।"
+ },
+ {
+  "id": "progfin-m3-081",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Programmers often treat documentation as a chore to be finished after the real work is done. This ordering is precisely backwards. A function whose purpose cannot be stated in a single sentence is usually a function that does too much, and the difficulty of writing that sentence is a signal worth listening to. Comments that merely restate the code add noise; the useful comment explains why a decision was made, not what the line does. Six months later, the author of the code is a stranger to it, and that stranger will thank whoever recorded the reasoning behind an odd-looking condition or a hard-coded limit.\"\n\nThe author's view of documentation is that it —",
+  "options": [
+   "should be done after the coding is complete",
+   "should not be left until after the real work is done",
+   "is unnecessary for good programmers",
+   "should be written by a separate team"
+  ],
+  "answer": 1,
+  "explanation": "लेखक कहता है कि दस्तावेज़ीकरण को बाद का काम मानना \"precisely backwards\" है, अर्थात् बिल्कुल उल्टी बात। अतः वह इसे बाद तक टालने के विरुद्ध है। पहला विकल्प ठीक वही है जिसका लेखक खंडन कर रहा है।"
+ },
+ {
+  "id": "progfin-m3-082",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Programmers often treat documentation as a chore to be finished after the real work is done. This ordering is precisely backwards. A function whose purpose cannot be stated in a single sentence is usually a function that does too much, and the difficulty of writing that sentence is a signal worth listening to. Comments that merely restate the code add noise; the useful comment explains why a decision was made, not what the line does. Six months later, the author of the code is a stranger to it, and that stranger will thank whoever recorded the reasoning behind an odd-looking condition or a hard-coded limit.\"\n\nDifficulty in describing a function in one sentence usually signals that —",
+  "options": [
+   "the programmer is inexperienced",
+   "the language is poorly chosen",
+   "the function does too much",
+   "the documentation is too long"
+  ],
+  "answer": 2,
+  "explanation": "\"A function whose purpose cannot be stated in a single sentence is usually a function that does too much.\""
+ },
+ {
+  "id": "progfin-m3-083",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Programmers often treat documentation as a chore to be finished after the real work is done. This ordering is precisely backwards. A function whose purpose cannot be stated in a single sentence is usually a function that does too much, and the difficulty of writing that sentence is a signal worth listening to. Comments that merely restate the code add noise; the useful comment explains why a decision was made, not what the line does. Six months later, the author of the code is a stranger to it, and that stranger will thank whoever recorded the reasoning behind an odd-looking condition or a hard-coded limit.\"\n\nAccording to the passage, a useful comment explains —",
+  "options": [
+   "what each line of code does",
+   "why a decision was made",
+   "who wrote the code",
+   "how long the code took"
+  ],
+  "answer": 1,
+  "explanation": "\"…the useful comment explains why a decision was made, not what the line does.\" — यहाँ भी 'not X but Y' की तर्ज़ पर उत्तर 'why' है।"
+ },
+ {
+  "id": "progfin-m3-084",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Programmers often treat documentation as a chore to be finished after the real work is done. This ordering is precisely backwards. A function whose purpose cannot be stated in a single sentence is usually a function that does too much, and the difficulty of writing that sentence is a signal worth listening to. Comments that merely restate the code add noise; the useful comment explains why a decision was made, not what the line does. Six months later, the author of the code is a stranger to it, and that stranger will thank whoever recorded the reasoning behind an odd-looking condition or a hard-coded limit.\"\n\n\"The author of the code is a stranger to it\" implies that —",
+  "options": [
+   "someone else has rewritten the code",
+   "the original author forgets the reasoning over time",
+   "the code has been stolen",
+   "the author never understood the code"
+  ],
+  "answer": 1,
+  "explanation": "आशय यह है कि छह महीने बाद स्वयं लिखने वाला भी अपने कोड का तर्क भूल जाता है, मानो वह किसी और का लिखा हो। यह लाक्षणिक (figurative) प्रयोग है, शाब्दिक नहीं — इसीलिए पहला और तीसरा विकल्प ग़लत हैं।"
+ },
+ {
+  "id": "progfin-m3-085",
+  "subject": "english",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Read the passage and answer the question that follows.\n\n\"Programmers often treat documentation as a chore to be finished after the real work is done. This ordering is precisely backwards. A function whose purpose cannot be stated in a single sentence is usually a function that does too much, and the difficulty of writing that sentence is a signal worth listening to. Comments that merely restate the code add noise; the useful comment explains why a decision was made, not what the line does. Six months later, the author of the code is a stranger to it, and that stranger will thank whoever recorded the reasoning behind an odd-looking condition or a hard-coded limit.\"\n\nThe tone of the passage is best described as —",
+  "options": [
+   "instructive",
+   "sarcastic",
+   "indifferent",
+   "apologetic"
+  ],
+  "answer": 0,
+  "explanation": "लेखक सलाह और मार्गदर्शन दे रहा है (क्या करें, क्या न करें)। न व्यंग्य है, न उदासीनता, न क्षमायाचना।"
+ }
 ]

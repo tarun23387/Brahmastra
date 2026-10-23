@@ -1,52 +1,852 @@
 [
-{"id":"progsr-m1-001","subject":"computer","exams":["prog-sr"],"question":"Which of the following is a volatile memory?","options":["ROM","PROM","SRAM","Flash memory"],"answer":2,"explanation":"वाष्पशील मेमोरी वह है जिसका डेटा बिजली जाते ही मिट जाता है — RAM (SRAM व DRAM दोनों)। ROM, PROM, EPROM और फ्लैश अवाष्पशील हैं, इसीलिए BIOS ROM में और डेटा पेन ड्राइव में सुरक्षित रहता है। SRAM फ्लिप-फ़्लॉप से बनती है (तेज़, महँगी, कैश में), DRAM कैपेसिटर से (धीमी, सस्ती, मुख्य मेमोरी में, बार-बार रिफ़्रेश चाहिए)।","difficulty":"moderate"},
-{"id":"progsr-m1-002","subject":"computer","exams":["prog-sr"],"question":"The clock frequency of a computer is 2 GHz and an instruction takes 4 cycles on an average. How many instructions will be executed in one second?","options":["2 × 10⁸","5 × 10⁸","8 × 10⁹","4 × 10⁹"],"answer":1,"explanation":"2 GHz = 2 × 10⁹ चक्र प्रति सेकंड। निर्देश प्रति सेकंड = घड़ी आवृत्ति ÷ CPI = (2 × 10⁹) ÷ 4 = 5 × 10⁸। सूत्र: निष्पादन समय = (निर्देशों की संख्या × CPI) ÷ घड़ी आवृत्ति।","difficulty":"moderate"},
-{"id":"progsr-m1-003","subject":"computer","exams":["prog-sr"],"question":"Cache memory is placed between the CPU and the main memory because —","options":["it is the cheapest of all","it is faster than the main memory and takes advantage of locality of reference","it provides permanent storage","its capacity is the largest"],"answer":1,"explanation":"कैश तेज़ पर महँगी होती है, इसलिए छोटी रखी जाती है। इसका पूरा तर्क locality of reference पर टिका है — प्रोग्राम थोड़े समय में मेमोरी के थोड़े हिस्से को ही बार-बार छूता है (temporal locality), और पास-पास के पतों को छूता है (spatial locality)। पहला विकल्प ग़लत है क्योंकि कैश प्रति बाइट सबसे महँगी मेमोरी है।","difficulty":"moderate"},
-{"id":"progsr-m1-004","subject":"computer","exams":["prog-sr"],"question":"Which of the following is both an input and an output device?","options":["Printer","Scanner","Touch screen","Plotter"],"answer":2,"explanation":"टच स्क्रीन प्रदर्शित भी करती है (आउटपुट) और स्पर्श ग्रहण भी करती है (इनपुट)। स्कैनर केवल इनपुट, प्रिंटर व प्लॉटर केवल आउटपुट। अन्य उदाहरण: मोडेम, नेटवर्क कार्ड, हार्ड डिस्क।","difficulty":"moderate"},
-{"id":"progsr-m1-005","subject":"computer","exams":["prog-sr"],"question":"The decimal equivalent of (2AF)₁₆ is —","options":["687","675","559","703"],"answer":0,"explanation":"2AF₁₆ = 2 × 16² + A × 16¹ + F × 16⁰ = 2 × 256 + 10 × 16 + 15 = 512 + 160 + 15 = 687। तरकीब: A = 10, B = 11, C = 12, D = 13, E = 14, F = 15।","difficulty":"moderate"},
-{"id":"progsr-m1-006","subject":"computer","exams":["prog-sr"],"question":"In UNIX/Linux, the command to know the full path of the current working directory is —","options":["ls","cd","pwd","dir"],"answer":2,"explanation":"pwd = print working directory। ls सामग्री सूचीबद्ध करता है, cd डायरेक्टरी बदलता है, dir DOS/Windows की कमांड है।","difficulty":"moderate"},
-{"id":"progsr-m1-007","subject":"computer","exams":["prog-sr"],"question":"In Linux, the command to change the permissions of a file is —","options":["chown","chmod","chgrp","umask"],"answer":1,"explanation":"chmod = change mode (अनुमतियाँ), chown = स्वामी बदलना, chgrp = समूह बदलना, umask = नई फाइलों की डिफ़ॉल्ट अनुमति तय करना। उदाहरण: chmod 755 a.sh ⇒ स्वामी rwx, समूह r-x, अन्य r-x।","difficulty":"moderate"},
-{"id":"progsr-m1-008","subject":"computer","exams":["prog-sr"],"question":"Which of the following is NOT a state in the life cycle of a process?","options":["New","Ready","Compiled","Terminated"],"answer":2,"explanation":"प्रक्रिया की पाँच अवस्थाएँ: New → Ready → Running → Waiting/Blocked → Terminated। \"Compiled\" प्रोग्राम की अवस्था है, प्रक्रिया की नहीं — यही इस प्रश्न का जाल है।","difficulty":"moderate"},
-{"id":"progsr-m1-009","subject":"computer","exams":["prog-sr"],"question":"The main objective of multiprogramming is —","options":["to maximise CPU utilisation","to save memory","to reduce the number of users","to increase the speed of the disk"],"answer":0,"explanation":"मल्टीप्रोग्रामिंग में जब एक प्रक्रिया I/O की प्रतीक्षा करती है, CPU दूसरी प्रक्रिया चला लेता है। इससे CPU निष्क्रिय (idle) नहीं रहता। मेमोरी बचाना उद्देश्य नहीं — उल्टे अधिक मेमोरी चाहिए।","difficulty":"moderate"},
-{"id":"progsr-m1-010","subject":"computer","exams":["prog-sr"],"question":"In Windows, what is typed in Run to launch the System Configuration utility?","options":["regedit","msconfig","cmd","taskmgr"],"answer":1,"explanation":"msconfig = System Configuration (स्टार्टअप प्रोग्राम, बूट विकल्प)। regedit = रजिस्ट्री संपादक, taskmgr = टास्क मैनेजर, cmd = कमांड प्रॉम्प्ट। अन्य उपयोगी: dxdiag, services.msc, diskmgmt.msc।","difficulty":"moderate"},
-{"id":"progsr-m1-011","subject":"computer","exams":["prog-sr"],"question":"The full form of SPOOLING is —","options":["Simultaneous Peripheral Operations On-Line","System Peripheral Output Line","Serial Processing Of Online Logs","Shared Processing On Line"],"answer":0,"explanation":"स्पूलिंग में धीमे उपकरण (जैसे प्रिंटर) के लिए कार्य पहले डिस्क बफर में कतारबद्ध होते हैं, जिससे CPU प्रतीक्षा नहीं करता। प्रिंट कतार इसका सबसे परिचित उदाहरण है।","difficulty":"moderate"},
-{"id":"progsr-m1-012","subject":"computer","exams":["prog-sr"],"question":"The following operations are performed on an empty stack : PUSH(A), PUSH(B), POP, PUSH(C), PUSH(D), POP, POP. What will be left in the stack at the end?","options":["A","C","The stack will be empty","A and C"],"answer":0,"explanation":"PUSH(A) ⇒ A; PUSH(B) ⇒ A, B; POP ⇒ A; PUSH(C) ⇒ A, C; PUSH(D) ⇒ A, C, D; POP ⇒ A, C; POP ⇒ A। स्टैक LIFO है — अंतिम डाला गया पहले निकलता है। शेष: A।","difficulty":"moderate"},
-{"id":"progsr-m1-013","subject":"computer","exams":["prog-sr"],"question":"In an unsorted array of n elements, the number of comparisons made by linear search in the worst case is —","options":["log n","n","n/2","n²"],"answer":1,"explanation":"सबसे खराब स्थिति में तत्व अंतिम स्थान पर हो या उपस्थित ही न हो ⇒ सभी n तत्व जाँचने पड़ते हैं। log n केवल क्रमित ऐरे पर बाइनरी सर्च की जटिलता है — प्रश्न में \"अक्रमित\" कहा गया है, यही निर्णायक शब्द है।","difficulty":"moderate"},
-{"id":"progsr-m1-014","subject":"computer","exams":["prog-sr"],"question":"Which of the following data structures works on the FIFO principle?","options":["Stack","Queue","Tree","Graph"],"answer":1,"explanation":"Queue = FIFO (पहले आओ पहले जाओ), Stack = LIFO। कतार में पहले खड़ा व्यक्ति पहले निकलता है; बर्तनों के ढेर में ऊपर वाला पहले उठता है।","difficulty":"moderate"},
-{"id":"progsr-m1-015","subject":"computer","exams":["prog-sr"],"question":"In a binary tree every internal node has exactly 2 children and the number of leaves is 10. The number of internal nodes is —","options":["9","10","11","20"],"answer":0,"explanation":"पूर्ण (strictly) बाइनरी ट्री में पत्तियाँ = आंतरिक नोड + 1 ⇒ 10 = I + 1 ⇒ I = 9। कुल नोड = 9 + 10 = 19 (सदैव विषम होंगे)।","difficulty":"moderate"},
-{"id":"progsr-m1-016","subject":"computer","exams":["prog-sr"],"question":"Compared with a linked list, the main advantage of an array is —","options":["insertion is easier","the size is dynamic","random access in O(1) through the index","it takes less memory"],"answer":2,"explanation":"ऐरे में तत्व सतत मेमोरी में होते हैं, अतः पता = आधार पता + (सूचकांक × तत्व का आकार) — यह गणना O(1) में हो जाती है। लिंक्ड लिस्ट में n-वें तत्व तक पहुँचने के लिए n कड़ियाँ चलनी पड़ती हैं ⇒ O(n)। सम्मिलन/हटाना और गतिशील आकार लिंक्ड लिस्ट के लाभ हैं।","difficulty":"moderate"},
-{"id":"progsr-m1-017","subject":"computer","exams":["prog-sr"],"question":"What will be the output of the following C code?\n\nint a = 5, b = 2;\nprintf(\"%d\", a / b);","options":["2.5","2","3","Compilation error"],"answer":1,"explanation":"C में दो पूर्णांकों का भाग पूर्णांक भाग होता है, दशमलव भाग काट दिया जाता है। 5/2 = 2.5 ⇒ 2। दशमलव चाहिए तो कम-से-कम एक संख्या float बनाएँ: (float)a/b ⇒ 2.5।","difficulty":"moderate"},
-{"id":"progsr-m1-018","subject":"computer","exams":["prog-sr"],"question":"In the C language, the value of sizeof(char) is —","options":["1","2","4","Machine dependent"],"answer":0,"explanation":"C मानक के अनुसार sizeof(char) सदैव 1 होता है (परिभाषा से)। int, float, pointer का आकार मशीन/कंपाइलर पर निर्भर करता है (सामान्यतः int = 4 बाइट, 64-बिट पर pointer = 8 बाइट)।","difficulty":"moderate"},
-{"id":"progsr-m1-019","subject":"computer","exams":["prog-sr"],"question":"Which of the following is NOT a pillar of object oriented programming?","options":["Encapsulation","Inheritance","Compilation","Polymorphism"],"answer":2,"explanation":"OOP के चार स्तंभ: एनकैप्सुलेशन, एब्स्ट्रैक्शन, इनहेरिटेंस, पॉलीमॉर्फ़िज़्म। कंपाइलेशन एक प्रक्रिया है, OOP की अवधारणा नहीं।","difficulty":"moderate"},
-{"id":"progsr-m1-020","subject":"computer","exams":["prog-sr"],"question":"Which statement about a destructor in C++ is correct?","options":["It can have parameters","It returns a value","It can be overloaded","A class has only one destructor"],"answer":3,"explanation":"डिस्ट्रक्टर के नियम: नाम ~ClassName, कोई पैरामीटर नहीं, कोई वापसी मान नहीं, ओवरलोड नहीं किया जा सकता, प्रति क्लास केवल एक। ऑब्जेक्ट का दायरा समाप्त होने पर स्वतः चलता है। इसके ठीक उलट कंस्ट्रक्टर ओवरलोड किया जा सकता है।","difficulty":"moderate"},
-{"id":"progsr-m1-021","subject":"computer","exams":["prog-sr"],"question":"What makes a Java program platform-independent is —","options":["the compiler","execution of bytecode by the JVM","the garbage collector","packages"],"answer":1,"explanation":"जावा कंपाइलर स्रोत कोड को मशीन कोड नहीं, बाइटकोड (.class) में बदलता है। प्रत्येक प्लेटफ़ॉर्म का अपना JVM उस बाइटकोड को चलाता है — यही \"Write Once, Run Anywhere\" का आधार है।","difficulty":"moderate"},
-{"id":"progsr-m1-022","subject":"computer","exams":["prog-sr"],"question":"The correct signature of the main method in Java is —","options":["public void main(String args)","public static void main(String[] args)","static void main()","void main(String[] args)"],"answer":1,"explanation":"public — JVM बाहर से बुलाए; static — ऑब्जेक्ट बनाए बिना बुलाया जा सके; void — कुछ नहीं लौटाता; String[] args — कमांड लाइन तर्क। इनमें से कोई भी शब्द हटाने पर प्रोग्राम चलेगा नहीं (main not found त्रुटि)।","difficulty":"moderate"},
-{"id":"progsr-m1-023","subject":"computer","exams":["prog-sr"],"question":"How many times will the following loop be executed?\n\nfor (i = 0; i < 5; i += 2)\n    printf(\"*\");","options":["2","3","4","5"],"answer":1,"explanation":"i के मान: 0 (छपा), 2 (छपा), 4 (छपा), फिर i = 6 ⇒ शर्त 6 < 5 असत्य ⇒ लूप समाप्त। कुल 3 बार। सूत्र: पुनरावृत्तियाँ = ⌈(अंतिम − आरंभ) ÷ वृद्धि⌉ = ⌈5/2⌉ = 3।","difficulty":"moderate"},
-{"id":"progsr-m1-024","subject":"computer","exams":["prog-sr"],"question":"In JavaScript, the operator used to check the data type of a variable is —","options":["typeof","checktype","vartype","datatype"],"answer":0,"explanation":"typeof 5 ⇒ \"number\", typeof \"a\" ⇒ \"string\"। instanceof भी मौजूद है पर वह ऑब्जेक्ट के प्रोटोटाइप की जाँच करता है, आदिम प्रकार की नहीं — इसीलिए विकल्पों में उसे नहीं रखा गया।","difficulty":"moderate"},
-{"id":"progsr-m1-025","subject":"computer","exams":["prog-sr"],"question":"In Perl, a scalar variable begins with which symbol?","options":["@","%","$","&"],"answer":2,"explanation":"Perl के तीन मूल चिह्न: $scalar (एकल मान), @array (सूची), %hash (कुंजी-मान युग्म)। यह Perl का सबसे अधिक पूछा जाने वाला तथ्य है।","difficulty":"moderate"},
-{"id":"progsr-m1-026","subject":"computer","exams":["prog-sr"],"question":"In JavaScript, the DOM is used —","options":["to connect to a database","to reach the elements of an HTML document and change them","to run a server","for file compression"],"answer":1,"explanation":"DOM (Document Object Model) HTML दस्तावेज़ को वृक्ष संरचना के रूप में प्रस्तुत करता है, जिससे जावास्क्रिप्ट getElementById, querySelector आदि से तत्वों को पढ़/बदल सकती है। यही वेब पेज को गतिशील बनाता है।","difficulty":"moderate"},
-{"id":"progsr-m1-027","subject":"computer","exams":["prog-sr"],"question":"In SQL, the keyword used to remove duplicate rows from the result is —","options":["UNIQUE","DISTINCT","REMOVE","FILTER"],"answer":1,"explanation":"SELECT DISTINCT city FROM emp; — दोहरे मान हटाकर अद्वितीय सूची देता है। UNIQUE एक बाधा (constraint) है जो तालिका बनाते समय लगाई जाती है — दोनों में यही अंतर पूछा जाता है।","difficulty":"moderate"},
-{"id":"progsr-m1-028","subject":"computer","exams":["prog-sr"],"question":"The table emp has 10 rows in all, of which 3 have NULL in salary. The result of SELECT COUNT(*) FROM emp; will be —","options":["7","10","3","Error"],"answer":1,"explanation":"COUNT(*) सभी पंक्तियाँ गिनता है, चाहे उनमें NULL हो। यदि COUNT(salary) लिखा होता तो NULL छोड़कर 7 आता। नियम: समुच्चय फलन (SUM, AVG, COUNT(column)) NULL को नज़रअंदाज़ करते हैं; केवल COUNT(*) नहीं करता।","difficulty":"moderate"},
-{"id":"progsr-m1-029","subject":"computer","exams":["prog-sr"],"question":"The join that returns only the matching rows of two tables is —","options":["LEFT JOIN","RIGHT JOIN","INNER JOIN","FULL OUTER JOIN"],"answer":2,"explanation":"INNER JOIN केवल दोनों तालिकाओं में मिलान वाली पंक्तियाँ देता है। LEFT JOIN बाईं तालिका की सभी पंक्तियाँ (बिना मिलान वाली में NULL), RIGHT JOIN दाईं की सभी, FULL OUTER दोनों की सभी।","difficulty":"moderate"},
-{"id":"progsr-m1-030","subject":"computer","exams":["prog-sr"],"question":"In MS-Access, data is actually stored in which object?","options":["Form","Report","Table","Macro"],"answer":2,"explanation":"MS-Access में डेटा केवल टेबल में संग्रहीत होता है। फॉर्म डेटा दर्ज करने का इंटरफ़ेस है, क्वेरी डेटा निकालती है, रिपोर्ट छपाई हेतु प्रस्तुति है, मैक्रो कार्य स्वचालित करता है।","difficulty":"moderate"},
-{"id":"progsr-m1-031","subject":"computer","exams":["prog-sr"],"question":"In Oracle, the command to make a transaction permanent is —","options":["SAVE","COMMIT","WRITE","FLUSH"],"answer":1,"explanation":"COMMIT से लेनदेन के परिवर्तन स्थायी हो जाते हैं; ROLLBACK से उन्हें पलटा जाता है; SAVEPOINT से बीच में निशान लगाया जाता है। ये तीनों TCL (Transaction Control Language) कमांड हैं।","difficulty":"moderate"},
-{"id":"progsr-m1-032","subject":"computer","exams":["prog-sr"],"question":"Which statement about the Primary Key is correct?","options":["It can take a NULL value","Its value can be repeated","It is unique and cannot be NULL","Every table has two primary keys"],"answer":2,"explanation":"प्राथमिक कुंजी = UNIQUE + NOT NULL। एक तालिका में केवल एक प्राथमिक कुंजी होती है (यद्यपि वह कई स्तंभों की मिश्रित कुंजी हो सकती है)। UNIQUE बाधा एक NULL मान की अनुमति दे देती है — यही दोनों का मुख्य अंतर है।","difficulty":"moderate"},
-{"id":"progsr-m1-033","subject":"computer","exams":["prog-sr"],"question":"The ALTER TABLE command falls in which category?","options":["DML","DDL","DCL","TCL"],"answer":1,"explanation":"DDL: CREATE, ALTER, DROP, TRUNCATE, RENAME (संरचना बदलते हैं)। DML: SELECT, INSERT, UPDATE, DELETE (डेटा बदलते हैं)। DCL: GRANT, REVOKE। TCL: COMMIT, ROLLBACK, SAVEPOINT।","difficulty":"moderate"},
-{"id":"progsr-m1-034","subject":"computer","exams":["prog-sr"],"question":"The heading tag of the largest size in HTML is —","options":["<h1>","<h6>","<head>","<title>"],"answer":0,"explanation":"HTML में h1 से h6 तक शीर्षक होते हैं — h1 सबसे बड़ा, h6 सबसे छोटा। <head> और <title> शीर्षक नहीं, दस्तावेज़ के मेटा-भाग हैं।","difficulty":"moderate"},
-{"id":"progsr-m1-035","subject":"computer","exams":["prog-sr"],"question":"The tag that creates a hyperlink in a web page is —","options":["<link>","<a>","<href>","<url>"],"answer":1,"explanation":"<a href=\"url\">पाठ</a> — anchor टैग। <link> टैग बाहरी संसाधन (जैसे CSS) जोड़ने के लिए <head> में प्रयुक्त होता है, दृश्य लिंक बनाने के लिए नहीं।","difficulty":"moderate"},
-{"id":"progsr-m1-036","subject":"computer","exams":["prog-sr"],"question":"PHP code is written between which delimiters?","options":["<php> </php>","<?php ... ?>","<% ... %>","{php} {/php}"],"answer":1,"explanation":"PHP सर्वर-साइड भाषा है; सर्वर इन्हीं चिह्नों के बीच का कोड चलाकर परिणाम को HTML के रूप में ब्राउज़र को भेजता है। <% %> ASP का और { } टेम्पलेट इंजनों का प्रारूप है।","difficulty":"moderate"},
-{"id":"progsr-m1-037","subject":"computer","exams":["prog-sr"],"question":"Apache is mainly a —","options":["Database","Web server","Programming language","Browser"],"answer":1,"explanation":"Apache HTTP Server दुनिया का सबसे प्रचलित मुक्त-स्रोत वेब सर्वर है। ध्यान: Apache Foundation के अन्य उत्पाद (Hadoop, Tomcat, Kafka) अलग चीज़ें हैं — प्रश्न में \"मुख्यतः\" शब्द इसीलिए है।","difficulty":"moderate"},
-{"id":"progsr-m1-038","subject":"computer","exams":["prog-sr"],"question":"In HTTPS, security is provided by —","options":["IPSec","SSL/TLS","WEP","SSH"],"answer":1,"explanation":"HTTPS = HTTP + SSL/TLS। यह पोर्ट 443 पर चलता है और डेटा को एन्क्रिप्ट करके भेजता है। SSH दूरस्थ लॉगिन के लिए, IPSec नेटवर्क परत की सुरक्षा के लिए, WEP पुरानी (और असुरक्षित) वायरलेस सुरक्षा है।","difficulty":"moderate"},
-{"id":"progsr-m1-039","subject":"computer","exams":["prog-sr"],"question":"Which of the following devices connects different networks and forwards packets on the basis of the IP address?","options":["Hub","Repeater","Router","Bridge"],"answer":2,"explanation":"राउटर परत-3 (नेटवर्क) उपकरण है और IP पते देखकर पैकेट अग्रेषित करता है। हब व रिपीटर परत-1, ब्रिज व स्विच परत-2 (MAC पते पर) कार्य करते हैं।","difficulty":"moderate"},
-{"id":"progsr-m1-040","subject":"computer","exams":["prog-sr"],"question":"The topology most widely used in a modern LAN is —","options":["Bus","Star","Ring","Mesh"],"answer":1,"explanation":"आधुनिक ईथरनेट LAN में सभी उपकरण एक केंद्रीय स्विच से जुड़ते हैं — यह स्टार टोपोलॉजी है। लाभ: एक तार टूटने पर केवल वही नोड प्रभावित होता है। दोष: केंद्रीय स्विच विफल हुआ तो पूरा नेटवर्क बैठ जाता है।","difficulty":"moderate"},
-{"id":"progsr-m1-041","subject":"computer","exams":["prog-sr"],"question":"Which port numbers does FTP use by default?","options":["20 and 21","22 and 23","25 and 110","80 and 443"],"answer":0,"explanation":"पोर्ट 21 नियंत्रण (कमांड) के लिए, 20 डेटा स्थानांतरण के लिए। अन्य आवश्यक: SSH 22, Telnet 23, SMTP 25, DNS 53, HTTP 80, POP3 110, IMAP 143, HTTPS 443।","difficulty":"moderate"},
-{"id":"progsr-m1-042","subject":"computer","exams":["prog-sr"],"question":"Which layer of the OSI model performs encryption and conversion of data format?","options":["Session","Presentation","Transport","Application"],"answer":1,"explanation":"प्रस्तुति परत के तीन मुख्य कार्य: अनुवाद (कोड रूपांतरण), एन्क्रिप्शन/डिक्रिप्शन, संपीड़न। इसे \"नेटवर्क का अनुवादक\" कहा जाता है। सत्र परत संवाद नियंत्रण व तुल्यकालन बिंदु का काम करती है।","difficulty":"moderate"},
-{"id":"progsr-m1-043","subject":"computer","exams":["prog-sr"],"question":"The IP address 10.0.0.0 with the subnet mask 255.0.0.0 belongs to which class?","options":["A","B","C","D"],"answer":0,"explanation":"प्रथम ऑक्टेट 10 है ⇒ 1–126 की परास ⇒ श्रेणी A (डिफ़ॉल्ट मास्क 255.0.0.0)। श्रेणी B: 128–191 (255.255.0.0), C: 192–223 (255.255.255.0), D: 224–239 (मल्टीकास्ट), E: 240–255 (प्रायोगिक)।","difficulty":"moderate"},
-{"id":"progsr-m1-044","subject":"computer","exams":["prog-sr"],"question":"The main function of a Gateway is —","options":["to work only at the physical layer","to connect two networks that use different protocols","to make a weak signal strong again","to prevent collisions"],"answer":1,"explanation":"गेटवे OSI की सभी सात परतों पर कार्य कर सकता है और भिन्न प्रोटोकॉल वाले नेटवर्कों के बीच अनुवाद करता है (जैसे TCP/IP और SNA)। राउटर केवल समान प्रोटोकॉल वाले नेटवर्क जोड़ता है — यही दोनों का अंतर है।","difficulty":"moderate"},
-{"id":"progsr-m1-045","subject":"computer","exams":["prog-sr"],"question":"The correct order of the phases of SDLC is —","options":["Design → Analysis → Coding → Testing","Requirement analysis → Design → Coding → Testing → Maintenance","Coding → Design → Testing → Analysis","Testing → Coding → Design → Analysis"],"answer":1,"explanation":"SDLC का मानक क्रम: आवश्यकता विश्लेषण → डिज़ाइन → कोडिंग → परीक्षण → परिनियोजन → रखरखाव। ध्यान दें कि परियोजना की कुल लागत का सबसे बड़ा हिस्सा (लगभग 60%) रखरखाव में जाता है — यह भी पूछा जाता है।","difficulty":"moderate"},
-{"id":"progsr-m1-046","subject":"computer","exams":["prog-sr"],"question":"The chief limitation of the Waterfall model is —","options":["it is extremely expensive","going back to an earlier phase is difficult, so it is not flexible for changing requirements","it involves no documentation","it is wholly unsuitable for large projects"],"answer":1,"explanation":"Waterfall में प्रत्येक चरण पूरा होने के बाद ही अगला आरंभ होता है और पीछे लौटना कठिन है। अतः यह तभी उपयुक्त है जब आवश्यकताएँ आरंभ में स्पष्ट और स्थिर हों। बदलती आवश्यकताओं के लिए Spiral या Agile उपयुक्त हैं।","difficulty":"moderate"},
-{"id":"progsr-m1-047","subject":"computer","exams":["prog-sr"],"question":"The Act that gives legal recognition to electronic records and digital signatures in India is —","options":["The Right to Information Act, 2005","The Information Technology Act, 2000","The Indian Telegraph Act, 1885","The Copyright Act, 1957"],"answer":1,"explanation":"यह अधिनियम इलेक्ट्रॉनिक अभिलेख व डिजिटल हस्ताक्षर को कानूनी मान्यता देता है, साइबर अपराधों को परिभाषित करता है और प्रमाणन प्राधिकारी नियंत्रक का प्रावधान करता है। 2008 के संशोधन से धारा 66A व 66F जोड़ी गईं (66A को उच्चतम न्यायालय ने श्रेया सिंघल मामले में निरस्त कर दिया)।","difficulty":"moderate"},
-{"id":"progsr-m1-048","subject":"computer","exams":["prog-sr"],"question":"Phishing is —","options":["measuring the speed of a network","extracting confidential information through fake e-mails or websites","taking a backup of data","removing a virus"],"answer":1,"explanation":"फ़िशिंग में हमलावर किसी विश्वसनीय संस्था (बैंक, आयोग) के रूप में नकली ईमेल/लिंक भेजकर पासवर्ड, OTP या कार्ड विवरण निकाल लेता है। संबंधित शब्द: विशिंग (फोन कॉल से), स्मिशिंग (SMS से), स्पीयर फ़िशिंग (किसी एक व्यक्ति को लक्ष्य करके), फार्मिंग (नकली वेबसाइट पर पुनर्निर्देशन)।","difficulty":"moderate"},
-{"id":"progsr-m1-049","subject":"computer","exams":["prog-sr"],"question":"The shortcut to make selected text bold in MS-Word is —","options":["Ctrl + B","Ctrl + I","Ctrl + U","Ctrl + D"],"answer":0,"explanation":"Ctrl + B = बोल्ड, Ctrl + I = इटैलिक, Ctrl + U = रेखांकित। अन्य: Ctrl+S सहेजना, Ctrl+P छापना, Ctrl+F खोजना, Ctrl+H बदलना, Ctrl+Z पूर्ववत करना।","difficulty":"moderate"},
-{"id":"progsr-m1-050","subject":"computer","exams":["prog-sr"],"question":"In MS-Excel, the correct formula to add cells A1 to A5 is —","options":["=TOTAL(A1:A5)","=SUM(A1:A5)","=ADD(A1+A5)","=PLUS(A1:A5)"],"answer":1,"explanation":"Excel में प्रत्येक सूत्र = से आरंभ होता है। कोलन ( : ) परास सूचित करता है। अन्य महत्त्वपूर्ण: AVERAGE, COUNT, COUNTA, MAX, MIN, IF, VLOOKUP, CONCATENATE।","difficulty":"moderate"}
+ {
+  "id": "progsr-m1-001",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The 8-bit 2's complement representation of −37 is —",
+  "options": [
+   "1101 1010",
+   "1010 0101",
+   "1101 1011",
+   "0010 0101"
+  ],
+  "answer": 2,
+  "explanation": "37 = 0010 0101। सभी बिट उलटें (1's complement): 1101 1010। 1 जोड़ें: 1101 1011। जाँच: −128 + 64 + 16 + 8 + 2 + 1 = −37।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-002",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The decimal value of the binary number (101101.101)₂ is —",
+  "options": [
+   "45.625",
+   "45.5",
+   "44.625",
+   "45.375"
+  ],
+  "answer": 0,
+  "explanation": "पूर्णांक भाग: 32 + 8 + 4 + 1 = 45। भिन्न भाग: 1×½ + 0×¼ + 1×⅛ = 0.5 + 0.125 = 0.625। कुल 45.625।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-003",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The octal equivalent of the hexadecimal number (3AF)₁₆ is —",
+  "options": [
+   "1567",
+   "3517",
+   "1757",
+   "1657"
+  ],
+  "answer": 3,
+  "explanation": "पहले बाइनरी: 3 = 0011, A = 1010, F = 1111 → 0011 1010 1111। दाएँ से तीन-तीन के समूह: 001 110 101 111 = 1 6 5 7। अतः (1657)₈।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-004",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Memory location 500 contains 800 and location 800 contains 1200. The instruction  LOAD R1, 500  uses indirect addressing. After execution, R1 contains —",
+  "options": [
+   "500",
+   "1200",
+   "800",
+   "1300"
+  ],
+  "answer": 1,
+  "explanation": "इनडायरेक्ट मोड में निर्देश का पता (500) ऑपरेण्ड का पता बताने वाली जगह है: M[500] = 800 प्रभावी पता, ऑपरेण्ड = M[800] = 1200। डायरेक्ट मोड होता तो 800, इमीडिएट होता तो 500।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-005",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "During which phase of the instruction cycle is the Program Counter normally incremented to point to the next instruction?",
+  "options": [
+   "Execute",
+   "Decode",
+   "Fetch",
+   "Write-back"
+  ],
+  "answer": 2,
+  "explanation": "फ़ेच चरण में PC का पता MAR में जाता है, निर्देश IR में आता है और PC आगे बढ़ा दिया जाता है। जंप/ब्रांच निर्देश बाद में एक्ज़ीक्यूट चरण में PC को फिर बदल सकते हैं।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-006",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In a RISC (load/store) architecture —",
+  "options": [
+   "only load and store instructions access memory; arithmetic works on registers",
+   "the control unit must be microprogrammed",
+   "every arithmetic instruction can take operands directly from memory",
+   "instructions have highly variable lengths"
+  ],
+  "answer": 0,
+  "explanation": "RISC में ALU निर्देश केवल रजिस्टर पर चलते हैं; मेमोरी से लाने-ले जाने का काम अलग LOAD/STORE करते हैं। इससे निर्देश सरल, एक लंबाई के और पाइपलाइन-अनुकूल रहते हैं। CISC (जैसे x86) में ADD सीधे मेमोरी से ऑपरेण्ड ले सकता है।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-007",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "An arithmetic shift right by one position is applied to the 8-bit register value 1001 0110. The result is —",
+  "options": [
+   "0100 1011",
+   "1100 1011",
+   "0010 1101",
+   "1001 0111"
+  ],
+  "answer": 1,
+  "explanation": "अंकगणितीय दायाँ शिफ़्ट चिह्न-बिट (MSB) को दोहराता है ताकि ऋणात्मक संख्या ऋणात्मक रहे: 1 | 1001 011 → 1100 1011। यह 2 से भाग देने जैसा है (−106 → −53)। तार्किक शिफ़्ट में बाएँ 0 आता।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-008",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "On an empty stack the operations push(1), push(2), pop(), push(3), push(4), pop(), pop(), push(5) are performed. The elements popped, in order, are —",
+  "options": [
+   "1, 3, 4",
+   "4, 3, 2",
+   "2, 3, 4",
+   "2, 4, 3"
+  ],
+  "answer": 3,
+  "explanation": "[1, 2] → pop 2 → [1] → [1, 3, 4] → pop 4 → pop 3 → [1] → [1, 5]। निकाले गए: 2, 4, 3; अंत में स्टैक में 1 और 5 (शीर्ष 5)।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-009",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The postfix form of the infix expression  (A + B) * C − D / E  is —",
+  "options": [
+   "A B + C * D E / −",
+   "A B C + * D E / −",
+   "A B + C D E / * −",
+   "A B + C * D − E /"
+  ],
+  "answer": 0,
+  "explanation": "कोष्ठक: A B +। फिर * C: A B + C *। D / E: D E /। अंत में दोनों के बीच −: A B + C * D E / −। पोस्टफ़िक्स में कोष्ठक की ज़रूरत नहीं रहती।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-010",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A simple (linear, non-circular) queue is stored in an array of size 5. After 5 insertions and 2 deletions, an attempt is made to insert another element without shifting. What happens?",
+  "options": [
+   "The element goes into the first free slot automatically",
+   "Overflow is reported even though two slots at the front are free",
+   "The two deleted elements are restored",
+   "The queue size doubles automatically"
+  ],
+  "answer": 1,
+  "explanation": "रैखिक कतार में REAR अंतिम स्थान (4) पर पहुँच चुका है, इसलिए REAR = MAX − 1 की जाँच 'ओवरफ़्लो' कहती है, भले ही आगे की दो जगह ख़ाली हों। सर्कुलर कतार REAR को घुमाकर शुरुआत पर लाती है और यह बर्बादी रोकती है।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-011",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which of the following is NOT an application of the stack data structure?",
+  "options": [
+   "Managing function calls and recursion",
+   "Evaluating a postfix expression",
+   "Checking balanced parentheses in an expression",
+   "Breadth-first traversal of a graph"
+  ],
+  "answer": 3,
+  "explanation": "BFS स्तर-दर-स्तर चलता है, इसलिए कतार (FIFO) चाहिए। कोष्ठक-जाँच, फ़ंक्शन-कॉल (एक्टिवेशन रिकॉर्ड) और पोस्टफ़िक्स मूल्यांकन — तीनों स्टैक (LIFO) पर चलते हैं; DFS भी स्टैक से होता है।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-012",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The keys 50, 30, 70, 20, 40, 60, 80 are inserted in that order into an empty binary search tree. How many key comparisons are needed to find 60?",
+  "options": [
+   "4",
+   "2",
+   "3",
+   "6"
+  ],
+  "answer": 2,
+  "explanation": "वृक्ष: रूट 50; बाएँ 30 (20, 40), दाएँ 70 (60, 80)। 60 खोजने के लिए: 50 (बड़ा, दाएँ), 70 (छोटा, बाएँ), 60 (मिला) = 3 तुलनाएँ।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-013",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The keys 10, 20, 30, 40, 50 are inserted in that order into an empty binary search tree. The worst-case search in this tree takes —",
+  "options": [
+   "5 comparisons, because the tree has become a linear chain",
+   "1 comparison",
+   "log₂5 comparisons",
+   "3 comparisons, because the tree is balanced"
+  ],
+  "answer": 0,
+  "explanation": "क्रमबद्ध कुंजियाँ डालने पर हर नई कुंजी दाएँ बच्चे बनती है — वृक्ष लिंक्ड-लिस्ट जैसा तिरछा (skewed) हो जाता है; 50 खोजने में 5 तुलनाएँ, यानी O(n)। AVL/रेड-ब्लैक जैसे संतुलित वृक्ष इसे O(log n) रखते हैं।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-014",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "IBM's IMS, which stores records in a parent–child tree structure, is an example of which data model?",
+  "options": [
+   "Relational",
+   "Hierarchical",
+   "Network",
+   "Object-oriented"
+  ],
+  "answer": 1,
+  "explanation": "पदानुक्रमित मॉडल में हर बच्चे का एक ही माता-पिता होता है (वृक्ष)। नेटवर्क मॉडल (CODASYL) में एक रिकॉर्ड के कई 'माता-पिता' हो सकते हैं (ग्राफ़)। संबंधपरक मॉडल तालिकाओं पर आधारित है।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-015",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In an ER diagram, the attribute Age, which is calculated from Date_of_Birth, is a —",
+  "options": [
+   "key attribute, shown underlined",
+   "composite attribute, shown by a double rectangle",
+   "derived attribute, shown by a dashed ellipse",
+   "multivalued attribute, shown by a double ellipse"
+  ],
+  "answer": 2,
+  "explanation": "व्युत्पन्न गुण संग्रहीत नहीं होता, दूसरे गुण से गणना होता है — बिंदीदार दीर्घवृत्त। बहु-मानी (जैसे कई फ़ोन नंबर) = दोहरा दीर्घवृत्त; कुंजी गुण रेखांकित।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-016",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "One Department has many Employees, and each Employee belongs to one Department. When converting to tables, the foreign key is placed in —",
+  "options": [
+   "both tables",
+   "a separate third table only",
+   "the Department table, referring to Employee",
+   "the Employee table, referring to Department"
+  ],
+  "answer": 3,
+  "explanation": "1:N संबंध में विदेशी कुंजी 'N' (बहुत) वाले पक्ष में जाती है — हर कर्मचारी पंक्ति में उसका dept_id। उल्टा करने पर एक विभाग पंक्ति में कई कर्मचारी-आईडी रखनी पड़तीं, जो 1NF तोड़ता।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-017",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In Oracle, the query  SELECT SYSDATE FROM DUAL;  uses DUAL, which is —",
+  "options": [
+   "a system backup table",
+   "a table that stores two copies of every row",
+   "a special one-row, one-column dummy table",
+   "a view that joins two tables"
+  ],
+  "answer": 2,
+  "explanation": "Oracle में SELECT के साथ FROM अनिवार्य है। जब किसी तालिका का डेटा नहीं, केवल कोई मान (तारीख़, गणना) चाहिए, तब एक-पंक्ति वाली DUAL तालिका काम आती है। MySQL और SQL Server में FROM छोड़ा जा सकता है।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-018",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In MS-Access, which data type automatically generates a unique sequential number for each new record and is commonly used as a primary key?",
+  "options": [
+   "AutoNumber",
+   "Number",
+   "Lookup Wizard",
+   "Short Text"
+  ],
+  "answer": 0,
+  "explanation": "AutoNumber हर नए रिकॉर्ड पर अपने आप बढ़ता मान देता है और उसे बदला नहीं जा सकता — कृत्रिम प्राथमिक कुंजी के लिए आदर्श। SQL Server में इसका समकक्ष IDENTITY, MySQL में AUTO_INCREMENT है।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-019",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following C statement print?\n\nprintf(\"%d\", 5 > 3 && 2 > 4 || 1);",
+  "options": [
+   "5",
+   "1",
+   "0",
+   "An error"
+  ],
+  "answer": 1,
+  "explanation": "&& की प्राथमिकता || से अधिक: (5 > 3 && 2 > 4) = (1 && 0) = 0। फिर 0 || 1 = 1। C में तार्किक संचालक 0 या 1 लौटाते हैं।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-020",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following C code print?\n\nint i = 0;\nwhile (i < 5) { printf(\"%d\", i); i += 2; }",
+  "options": [
+   "13",
+   "0246",
+   "01234",
+   "024"
+  ],
+  "answer": 3,
+  "explanation": "i = 0 छपा, 2 छपा, 4 छपा; फिर i = 6 पर शर्त 6 < 5 असत्य — लूप रुका। परिणाम 024।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-021",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following C code print?\n\nchar c = 'A' + 2;\nprintf(\"%c %d\", c, c);",
+  "options": [
+   "A 67",
+   "C 65",
+   "C 67",
+   "B 66"
+  ],
+  "answer": 2,
+  "explanation": "'A' का ASCII मान 65; 65 + 2 = 67, जो 'C' है। %c अक्षर छापता है और %d उसका संख्यात्मक मान — 'C 67'।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-022",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following C++ statement print?\n\ncout << 7 / 2 << \" \" << 7 / 2.0;",
+  "options": [
+   "3 3.5",
+   "3 3",
+   "3.5 3",
+   "3.5 3.5"
+  ],
+  "answer": 0,
+  "explanation": "7 / 2 में दोनों पूर्णांक हैं, इसलिए पूर्णांक भाग 3। 7 / 2.0 में एक double है, अतः परिणाम double 3.5।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-023",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following C++ code print?\n\nint a = 10;\nint &r = a;\nr = 20;\ncout << a;",
+  "options": [
+   "An address",
+   "Compilation error",
+   "10",
+   "20"
+  ],
+  "answer": 3,
+  "explanation": "r, a का संदर्भ (उपनाम) है — दोनों एक ही मेमोरी हैं। r = 20 लिखना a = 20 लिखना है, इसलिए 20 छपता है।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-024",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following Java code print?\n\nint[] a = new int[3];\nSystem.out.println(a[1]);",
+  "options": [
+   "A garbage value",
+   "0",
+   "null",
+   "An exception"
+  ],
+  "answer": 1,
+  "explanation": "Java में new से बनी सरणी के तत्व अपने आप डिफ़ॉल्ट मान पाते हैं: संख्यात्मक प्रकार = 0, boolean = false, वस्तु-संदर्भ = null। कचरा मान Java में कभी नहीं होता।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-025",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following Java statement print?\n\nSystem.out.println(10 + 20 + \"Hi\" + 10 + 20);",
+  "options": [
+   "1020Hi1020",
+   "30Hi1020",
+   "Hi3030",
+   "30Hi30"
+  ],
+  "answer": 1,
+  "explanation": "बाएँ से दाएँ: 10 + 20 = 30 (संख्याएँ); 30 + \"Hi\" = \"30Hi\" (अब स्ट्रिंग); फिर हर + जुड़ाव है: \"30Hi10\", \"30Hi1020\"।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-026",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following Python statement print?\n\nprint(7 // 2, 7 % 2, 7 / 2)",
+  "options": [
+   "3 1 3",
+   "3.5 1 3",
+   "3 1 3.5",
+   "3 0 3.5"
+  ],
+  "answer": 2,
+  "explanation": "// फ़्लोर-भाग (3), % शेषफल (1), और Python 3 में / हमेशा दशमलव भाग देता है (3.5)।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-027",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following Python code print?\n\ns = \"PYTHON\"\nprint(s[1:4], s[-1])",
+  "options": [
+   "YTH O",
+   "YTHO P",
+   "PYT N",
+   "YTH N"
+  ],
+  "answer": 3,
+  "explanation": "स्लाइस s[1:4] सूचकांक 1, 2, 3 लेता है (4 नहीं) = 'YTH'। ऋणात्मक सूचकांक अंत से गिनता है: s[-1] = 'N'।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-028",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which device operates at the Network layer (Layer 3) of the OSI model and forwards packets based on IP addresses?",
+  "options": [
+   "Router",
+   "Hub",
+   "Repeater",
+   "Switch"
+  ],
+  "answer": 0,
+  "explanation": "हब और रिपीटर भौतिक स्तर (1) पर केवल संकेत दोहराते हैं; स्विच डेटा-लिंक स्तर (2) पर MAC पते से फ़्रेम भेजता है; राउटर नेटवर्क स्तर (3) पर IP पते और राउटिंग-टेबल से अलग नेटवर्कों को जोड़ता है।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-029",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which statement about TCP is correct?",
+  "options": [
+   "It is connectionless and does not guarantee delivery",
+   "It works at the Network layer",
+   "It is connection-oriented and establishes a connection with a three-way handshake before sending data",
+   "It is used by DNS for every query"
+  ],
+  "answer": 2,
+  "explanation": "TCP SYN → SYN-ACK → ACK से कनेक्शन बनाता है, फिर क्रम, पावती (ACK), पुनः-प्रेषण और प्रवाह-नियंत्रण से विश्वसनीय डिलीवरी देता है। UDP कनेक्शन-रहित है — DNS और वीडियो-स्ट्रीमिंग प्रायः UDP पर चलते हैं।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-030",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A network that connects the offices of a government department spread across one city (about 30 km) is best classified as a —",
+  "options": [
+   "WAN spanning continents",
+   "MAN",
+   "PAN",
+   "LAN"
+  ],
+  "answer": 1,
+  "explanation": "PAN = कुछ मीटर (ब्लूटूथ); LAN = एक भवन/परिसर; MAN = एक शहर (कुछ दसियों किमी); WAN = देश या महाद्वीप। शहर-भर के कार्यालय जोड़ने वाला नेटवर्क MAN है।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-031",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Wi-Fi wireless LANs are based on which IEEE standard family?",
+  "options": [
+   "IEEE 802.15",
+   "IEEE 802.3",
+   "IEEE 802.5",
+   "IEEE 802.11"
+  ],
+  "answer": 3,
+  "explanation": "802.11 = वायरलेस LAN (Wi-Fi: a/b/g/n/ac/ax); 802.3 = तार वाला ईथरनेट; 802.15 = वायरलेस PAN (ब्लूटूथ, ज़िगबी); 802.5 = टोकन रिंग।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-032",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A company's private network that uses Internet technologies (web servers, browsers, TCP/IP) but is accessible only to its own employees is called —",
+  "options": [
+   "an intranet",
+   "an extranet",
+   "a VPN tunnel only",
+   "the Internet"
+  ],
+  "answer": 0,
+  "explanation": "इंट्रानेट = संगठन के भीतर का निजी नेटवर्क, इंटरनेट-तकनीक से। एक्स्ट्रानेट = इंट्रानेट का वह भाग जो चुने हुए बाहरी साझेदारों (आपूर्तिकर्ता, ग्राहक) को भी उपलब्ध हो।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-033",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "An e-mail is sent To: A, Cc: B, Bcc: C. Which statement is correct?",
+  "options": [
+   "B receives the mail only after A replies",
+   "C's address is visible to A and B",
+   "A cannot see B's address",
+   "A and B can see each other's addresses but cannot see that C received the mail"
+  ],
+  "answer": 3,
+  "explanation": "To और Cc के पते सभी प्राप्तकर्ताओं को दिखते हैं। Bcc (ब्लाइंड कार्बन कॉपी) के प्राप्तकर्ता छिपे रहते हैं — गोपनीयता के लिए या बड़ी सूची में सबके पते न दिखाने के लिए उपयोगी।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-034",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which HTML code creates an ordered list numbered with lowercase Roman numerals (i, ii, iii)?",
+  "options": [
+   "<ul type=\"i\">",
+   "<ol type=\"i\">",
+   "<ol type=\"I\">",
+   "<ol style=\"roman\">"
+  ],
+  "answer": 1,
+  "explanation": "<ol> क्रमांकित सूची है; type = \"1\" (संख्या), \"A\"/\"a\" (अक्षर), \"I\"/\"i\" (बड़े/छोटे रोमन)। <ul> बिना क्रम की (बुलेट) सूची है।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-035",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which statement about XML is NOT true?",
+  "options": [
+   "XML tags are predefined, like HTML tags",
+   "XML tag names are case-sensitive",
+   "An XML document must have exactly one root element",
+   "Every opening tag must have a matching closing tag"
+  ],
+  "answer": 0,
+  "explanation": "XML में टैग लेखक स्वयं बनाता है (जैसे <student>, <marks>) — वह डेटा का वर्णन करती है, प्रदर्शन का नहीं। 'वेल-फ़ॉर्म्ड' XML के नियम: एक रूट, सही नेस्टिंग, हर टैग बंद, केस-संवेदी नाम, गुण-मान उद्धरण में।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-036",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the PHP statement  echo strlen(\"Hello World\");  print?",
+  "options": [
+   "Hello World",
+   "10",
+   "11",
+   "12"
+  ],
+  "answer": 2,
+  "explanation": "strlen बीच के रिक्त-स्थान सहित सभी वर्ण गिनता है: 'Hello' (5) + ' ' (1) + 'World' (5) = 11।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-037",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "In JavaScript, what do  parseInt(\"12abc\")  and  Number(\"12abc\")  return respectively?",
+  "options": [
+   "12 and 12",
+   "NaN and NaN",
+   "12 and NaN",
+   "NaN and 12"
+  ],
+  "answer": 2,
+  "explanation": "parseInt शुरू से जितने अंक मिलें उतने पढ़कर रुक जाता है = 12। Number() पूरी स्ट्रिंग को संख्या मानता है; एक भी अमान्य वर्ण हो तो NaN (Not a Number)।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-038",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "What does the following JavaScript code print?\n\nvar a = [1, 2, 3];\na[5] = 6;\nconsole.log(a.length);",
+  "options": [
+   "5",
+   "3",
+   "4",
+   "6"
+  ],
+  "answer": 3,
+  "explanation": "JavaScript सरणी की length = सबसे बड़ा सूचकांक + 1 = 5 + 1 = 6। सूचकांक 3 और 4 'ख़ाली' (undefined) रह जाते हैं।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-039",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Over the whole life of a typical software product, which SDLC phase usually consumes the largest share of total cost?",
+  "options": [
+   "Requirement analysis",
+   "Maintenance",
+   "Unit testing",
+   "Coding"
+  ],
+  "answer": 1,
+  "explanation": "सॉफ़्टवेयर वर्षों चलता है — त्रुटि-सुधार, नई आवश्यकताएँ, नए प्लेटफ़ॉर्म के अनुसार बदलाव। अध्ययनों में रखरखाव कुल लागत का 60–70% तक पाया गया है; इसीलिए पठनीय और मॉड्यूलर डिज़ाइन पर ज़ोर है।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-040",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "The main output document of the requirement engineering process, which is later used to validate the delivered system, is —",
+  "options": [
+   "the Software Requirements Specification (SRS)",
+   "the source code",
+   "the user's invoice",
+   "the test log"
+  ],
+  "answer": 0,
+  "explanation": "आवश्यकता-अभियांत्रिकी: व्यवहार्यता अध्ययन → आवश्यकताएँ जुटाना → विश्लेषण → विनिर्देशन (SRS) → सत्यापन। SRS ग्राहक और डेवलपर के बीच 'अनुबंध' जैसा है; स्वीकृति-परीक्षण इसी के विरुद्ध होता है।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-041",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "An input field accepts ages from 18 to 60 (inclusive). Using equivalence partitioning, how many equivalence classes are there?",
+  "options": [
+   "4",
+   "3",
+   "43",
+   "2"
+  ],
+  "answer": 1,
+  "explanation": "तीन वर्ग: 18 से कम (अमान्य), 18–60 (मान्य), 60 से अधिक (अमान्य)। हर वर्ग से एक प्रतिनिधि मान लेना पर्याप्त माना जाता है — यह ब्लैक-बॉक्स तकनीक है। सीमाओं (17, 18, 60, 61) की जाँच बाउंड्री वैल्यू एनालिसिस करती है।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-042",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which tool is mainly used for load and performance testing of web applications?",
+  "options": [
+   "Git",
+   "JUnit",
+   "Eclipse",
+   "Apache JMeter"
+  ],
+  "answer": 3,
+  "explanation": "JMeter हज़ारों आभासी उपयोगकर्ता बनाकर सर्वर पर भार डालता है और प्रतिक्रिया-समय मापता है। JUnit Java का यूनिट-परीक्षण ढाँचा है, Selenium ब्राउज़र-स्वचालन, Git संस्करण-नियंत्रण, Eclipse IDE।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-043",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A module of 15,000 lines of code was found to contain 30 defects. Its defect density is —",
+  "options": [
+   "20 defects per KLOC",
+   "30 defects per KLOC",
+   "2 defects per KLOC",
+   "0.5 defects per KLOC"
+  ],
+  "answer": 2,
+  "explanation": "दोष-घनत्व = दोष / हज़ार पंक्तियाँ = 30 / 15 = 2 प्रति KLOC। यह गुणवत्ता-मीट्रिक मॉड्यूलों की तुलना और परीक्षण-संसाधन बाँटने में काम आता है।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-044",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which section of the Information Technology Act, 2000 punishes identity theft, i.e. fraudulent use of another person's password, electronic signature or other unique identification feature?",
+  "options": [
+   "Section 66C",
+   "Section 65",
+   "Section 43A",
+   "Section 67"
+  ],
+  "answer": 0,
+  "explanation": "66C = पहचान की चोरी; 66D = कंप्यूटर संसाधन से छद्म-रूप धारण कर ठगी (जैसे फ़िशिंग); 65 = स्रोत-दस्तावेज़ से छेड़छाड़; 67 = अश्लील सामग्री का इलेक्ट्रॉनिक प्रकाशन; 43A = संवेदनशील डेटा की सुरक्षा न करने पर कंपनी द्वारा क्षतिपूर्ति।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-045",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "A person receives an e-mail that looks like it is from their bank, asking them to click a link and enter their net-banking password and OTP to 'avoid account suspension'. This is an example of —",
+  "options": [
+   "phishing",
+   "software piracy",
+   "data backup",
+   "a denial-of-service attack"
+  ],
+  "answer": 0,
+  "explanation": "फ़िशिंग में हमलावर विश्वसनीय संस्था बनकर नक़ली लिंक/वेबसाइट से पासवर्ड, OTP, कार्ड विवरण चुराता है। पहचान: तात्कालिकता का दबाव, मिलता-जुलता डोमेन, गोपनीय जानकारी माँगना। बैंक कभी ई-मेल पर OTP नहीं माँगते।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-046",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Installing one licensed copy of a software product on many computers in an office, beyond what the licence allows, is —",
+  "options": [
+   "phishing",
+   "spoofing",
+   "software piracy (softlifting)",
+   "cyber stalking"
+  ],
+  "answer": 2,
+  "explanation": "लाइसेंस की शर्तों से अधिक प्रतियाँ बनाना या लगाना सॉफ़्टवेयर पायरेसी है; संगठन के भीतर ऐसा करना 'सॉफ़्टलिफ़्टिंग' कहलाता है। यह कॉपीराइट अधिनियम के तहत अपराध है।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-047",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which Windows tool lets an administrator create separate inbound and outbound rules for a specific program, port or IP address?",
+  "options": [
+   "Task Manager",
+   "Disk Cleanup",
+   "Device Manager",
+   "Windows Defender Firewall with Advanced Security"
+  ],
+  "answer": 3,
+  "explanation": "साधारण फ़ायरवॉल पैनल केवल ऐप को अनुमति/रोक देता है। 'Advanced Security' (wf.msc) में इनबाउंड/आउटबाउंड नियम, पोर्ट-आधारित नियम, IP-सीमा और कनेक्शन-सुरक्षा (IPsec) नियम बनते हैं।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-048",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which Linux command gives the owner of script.sh permission to execute it, without changing other permissions?",
+  "options": [
+   "chown u+x script.sh",
+   "chmod u+x script.sh",
+   "chmod 777 script.sh",
+   "chmod -x script.sh"
+  ],
+  "answer": 1,
+  "explanation": "u = मालिक, g = समूह, o = अन्य; +x निष्पादन जोड़ता है। 777 सबको सब अनुमतियाँ दे देता है (असुरक्षित), chown मालिक बदलता है, -x निष्पादन हटाता है।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-049",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Which of the following is the strongest password?",
+  "options": [
+   "T9#vQ2!mLx7$",
+   "password123",
+   "Ramesh1985",
+   "12345678"
+  ],
+  "answer": 0,
+  "explanation": "मज़बूत पासवर्ड लंबा होता है और उसमें बड़े-छोटे अक्षर, अंक और विशेष चिह्न मिले होते हैं; उसमें नाम, जन्म-वर्ष या शब्दकोश के शब्द नहीं होते। बाक़ी तीनों डिक्शनरी या ब्रूट-फ़ोर्स हमले से जल्दी टूट जाते हैं।",
+  "difficulty": "moderate"
+ },
+ {
+  "id": "progsr-m1-050",
+  "subject": "computer",
+  "exams": [
+   "prog-sr"
+  ],
+  "question": "Cells A1:A6 contain 45, 72, 50, 88, 30 and 91. What does  =COUNTIF(A1:A6, \">50\")  return?",
+  "options": [
+   "2",
+   "6",
+   "3",
+   "4"
+  ],
+  "answer": 2,
+  "explanation": "शर्त '>50' (50 से अधिक, 50 नहीं): 72, 88, 91 = 3। '>=50' होता तो 50 भी गिना जाता = 4।",
+  "difficulty": "moderate"
+ }
 ]

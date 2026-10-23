@@ -1,0 +1,802 @@
+[
+ {
+  "id": "progfin-m3-001",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Processes P1, P2, P3, P4 arrive at times 0, 1, 2, 3 with CPU bursts 5, 3, 8, 6. Under FCFS scheduling, the average turnaround time is —",
+  "options": [
+   "10.5",
+   "12",
+   "11.25",
+   "9.75"
+  ],
+  "answer": 2,
+  "explanation": "पूर्णता-समय: P1 = 5, P2 = 8, P3 = 16, P4 = 22। टर्नअराउंड = पूर्णता − आगमन: 5, 7, 14, 19। औसत = 45 / 4 = 11.25।"
+ },
+ {
+  "id": "progfin-m3-002",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Processes P1, P2, P3, P4 arrive at times 0, 2, 4, 5 with bursts 7, 4, 1, 4. Under non-preemptive SJF, the average waiting time is —",
+  "options": [
+   "4",
+   "3",
+   "5",
+   "6"
+  ],
+  "answer": 0,
+  "explanation": "0 पर केवल P1 — वह 0–7 चलता है। 7 पर P2 (4), P3 (1), P4 (4) तैयार: P3 7–8, फिर बराबरी में पहले आया P2 8–12, P4 12–16। प्रतीक्षा: P1 = 0, P2 = 6, P3 = 3, P4 = 7; औसत = 16 / 4 = 4।"
+ },
+ {
+  "id": "progfin-m3-003",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In priority scheduling, low-priority processes may wait indefinitely. The standard technique that solves this is —",
+  "options": [
+   "reducing the time quantum to zero",
+   "swapping out the high-priority processes permanently",
+   "spooling",
+   "aging — gradually raising the priority of waiting processes"
+  ],
+  "answer": 3,
+  "explanation": "समस्या 'स्टार्वेशन' (अनिश्चित प्रतीक्षा) है। एजिंग में जो प्रक्रिया जितनी देर से प्रतीक्षा कर रही है उसकी प्राथमिकता उतनी बढ़ाई जाती है — अंततः वह भी CPU पा लेती है।"
+ },
+ {
+  "id": "progfin-m3-004",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which process-state transition is NOT possible in the standard five-state model?",
+  "options": [
+   "Waiting → Ready",
+   "Ready → Waiting (Blocked)",
+   "Running → Waiting",
+   "Running → Ready"
+  ],
+  "answer": 1,
+  "explanation": "कोई प्रक्रिया I/O या घटना की प्रतीक्षा तभी शुरू करती है जब वह चल रही हो और स्वयं अनुरोध करे। तैयार (Ready) प्रक्रिया चल ही नहीं रही, इसलिए सीधे Waiting में नहीं जा सकती।"
+ },
+ {
+  "id": "progfin-m3-005",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which of the following is NOT stored in a Process Control Block (PCB)?",
+  "options": [
+   "The process state",
+   "The program counter and CPU registers",
+   "The source code of the program",
+   "Memory-management information such as page-table pointers"
+  ],
+  "answer": 2,
+  "explanation": "PCB में प्रक्रिया की स्थिति, PC, रजिस्टर, शेड्यूलिंग प्राथमिकता, मेमोरी व खुली फ़ाइलों की जानकारी रहती है — संदर्भ-परिवर्तन (context switch) के लिए जो चाहिए। प्रोग्राम का स्रोत-कोड उसमें नहीं होता।"
+ },
+ {
+  "id": "progfin-m3-006",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In the first readers–writers problem (readers have priority), which process can starve?",
+  "options": [
+   "A writer",
+   "Both readers and writers equally",
+   "A reader",
+   "Neither — it is starvation-free"
+  ],
+  "answer": 0,
+  "explanation": "जब तक एक भी पाठक भीतर है, नए पाठक आते रहते हैं; लगातार पाठक आते रहें तो लेखक को कभी प्रवेश नहीं मिलता। दूसरे readers–writers समाधान में लेखक को प्राथमिकता देकर उल्टी स्थिति बनती है।"
+ },
+ {
+  "id": "progfin-m3-007",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In the dining philosophers problem with 5 philosophers, each philosopher picks up the left fork and then the right fork. Allowing at most how many philosophers at the table at a time guarantees there is no deadlock?",
+  "options": [
+   "5",
+   "4",
+   "3",
+   "2"
+  ],
+  "answer": 1,
+  "explanation": "अगर पाँचों एक साथ बायाँ काँटा उठाएँ तो सब दाएँ के लिए रुके — चक्रीय प्रतीक्षा। अधिकतम 4 बैठें तो 5 काँटों में से कम से कम एक दार्शनिक को दोनों काँटे मिलेंगे; वह खाकर छोड़ेगा और श्रृंखला टूटेगी।"
+ },
+ {
+  "id": "progfin-m3-008",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "If every resource type has exactly one instance, a deadlock exists if and only if —",
+  "options": [
+   "some process holds more than one resource",
+   "the Banker's algorithm reports an unsafe state",
+   "the wait-for graph is a tree",
+   "the wait-for graph contains a cycle"
+  ],
+  "answer": 3,
+  "explanation": "एक-एक इंस्टेंस वाले संसाधनों में वेट-फ़ॉर ग्राफ़ का चक्र डेडलॉक के लिए आवश्यक भी है और पर्याप्त भी। कई इंस्टेंस हों तो चक्र केवल आवश्यक है, पर्याप्त नहीं। असुरक्षित अवस्था का अर्थ डेडलॉक नहीं होता।"
+ },
+ {
+  "id": "progfin-m3-009",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "For the reference string 1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5, the number of page faults with FIFO replacement and 4 frames (initially empty) is —",
+  "options": [
+   "10",
+   "9",
+   "8",
+   "12"
+  ],
+  "answer": 0,
+  "explanation": "इसी स्ट्रिंग पर FIFO से 3 फ़्रेम में 9 फ़ॉल्ट और 4 फ़्रेम में 10 फ़ॉल्ट आते हैं — फ़्रेम बढ़ाने पर फ़ॉल्ट बढ़ना 'बेलेडी की विसंगति' है। LRU और Optimal में यह विसंगति नहीं होती (स्टैक एल्गोरिद्म)।"
+ },
+ {
+  "id": "progfin-m3-010",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "A UNIX-style i-node has 10 direct block pointers and 1 single-indirect pointer. The block size is 1 KB and each block address is 4 bytes. The maximum file size is —",
+  "options": [
+   "10 KB",
+   "266 KB",
+   "522 KB",
+   "256 KB"
+  ],
+  "answer": 1,
+  "explanation": "सीधे: 10 × 1 KB = 10 KB। एक इनडायरेक्ट ब्लॉक में 1024 / 4 = 256 पते → 256 × 1 KB = 256 KB। कुल = 266 KB।"
+ },
+ {
+  "id": "progfin-m3-011",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "The command  kill -9 1234  sends which signal to process 1234?",
+  "options": [
+   "SIGHUP",
+   "SIGSTOP, which pauses the process",
+   "SIGTERM, which the process may handle",
+   "SIGKILL, which the process cannot catch or ignore"
+  ],
+  "answer": 3,
+  "explanation": "सिग्नल 9 = SIGKILL — कर्नेल सीधे प्रक्रिया ख़त्म कर देता है, प्रक्रिया इसे पकड़ या अनदेखा नहीं कर सकती। साधारण kill डिफ़ॉल्ट रूप से SIGTERM (15) भेजता है, जिसमें प्रक्रिया सफ़ाई करके बंद हो सकती है।"
+ },
+ {
+  "id": "progfin-m3-012",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which Windows utility is used to manage startup items, boot options and services for troubleshooting (the 'System Configuration' tool)?",
+  "options": [
+   "ipconfig",
+   "regedit",
+   "msconfig",
+   "chkdsk"
+  ],
+  "answer": 2,
+  "explanation": "msconfig (सिस्टम कॉन्फ़िगरेशन) से बूट विकल्प, सेवाएँ और सेफ़-मोड चुने जाते हैं। regedit रजिस्ट्री संपादक है, ipconfig नेटवर्क सेटिंग दिखाता है, chkdsk डिस्क की त्रुटियाँ जाँचता है।"
+ },
+ {
+  "id": "progfin-m3-013",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which statement about top-down and bottom-up design is correct?",
+  "options": [
+   "Top-down design breaks the whole problem into smaller sub-problems; bottom-up builds the system by combining small, already-built components",
+   "Bottom-up is used only in structured programming",
+   "Both mean exactly the same thing",
+   "Top-down starts by writing the lowest-level functions first"
+  ],
+  "answer": 0,
+  "explanation": "टॉप-डाउन (संरचित प्रोग्रामिंग, जैसे C) मुख्य समस्या से शुरू कर उसे मॉड्यूल में तोड़ता है। बॉटम-अप (OOP की आम शैली) पहले छोटी कक्षाएँ/घटक बनाकर उन्हें जोड़ता है।"
+ },
+ {
+  "id": "progfin-m3-014",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following C statement print?\n\nprintf(\"%d\", 10 / 3 * 3 + 10 % 3);",
+  "options": [
+   "11",
+   "10",
+   "9",
+   "13"
+  ],
+  "answer": 1,
+  "explanation": "/, *, % बराबर प्राथमिकता, बाएँ से दाएँ: 10 / 3 = 3 (पूर्णांक भाग), 3 * 3 = 9; 10 % 3 = 1; 9 + 1 = 10। यह पहचान (a / b) * b + a % b = a हमेशा सही रहती है।"
+ },
+ {
+  "id": "progfin-m3-015",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following C code print?\n\nint i;\nfor (i = 0; i < 5; i++);\nprintf(\"%d\", i);",
+  "options": [
+   "4",
+   "6",
+   "5",
+   "01234"
+  ],
+  "answer": 2,
+  "explanation": "for के तुरंत बाद ; लूप का शरीर ख़ाली कर देता है — लूप अकेला चलता है और i = 5 पर रुकता है। printf केवल एक बार चलता है और 5 छापता है।"
+ },
+ {
+  "id": "progfin-m3-016",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following C code print?\n\nchar str[] = \"hello\";\nprintf(\"%d %d\", (int)sizeof(str), (int)strlen(str));",
+  "options": [
+   "6 6",
+   "5 6",
+   "5 5",
+   "6 5"
+  ],
+  "answer": 3,
+  "explanation": "sizeof पूरी सरणी का आकार देता है जिसमें अंत का '\\0' भी शामिल है = 6। strlen '\\0' से पहले के अक्षर गिनता है = 5।"
+ },
+ {
+  "id": "progfin-m3-017",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following C code print?\n\nint x = 2;\nswitch (x) {\n  case 1: printf(\"A\");\n  case 2: printf(\"B\");\n  case 3: printf(\"C\"); break;\n  default: printf(\"D\");\n}",
+  "options": [
+   "BCD",
+   "B",
+   "BC",
+   "ABC"
+  ],
+  "answer": 2,
+  "explanation": "x = 2 पर नियंत्रण case 2 पर जाता है और B छापता है। break न होने से अगले case में 'गिर' जाता है (fall-through) — C छापकर break पर रुकता है। परिणाम BC।"
+ },
+ {
+  "id": "progfin-m3-018",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In C++, which of the following can NOT be declared virtual?",
+  "options": [
+   "A constructor",
+   "A destructor",
+   "A function that overrides a base-class function",
+   "A member function"
+  ],
+  "answer": 0,
+  "explanation": "वर्चुअल कॉल वस्तु के vptr से होती है, जो कंस्ट्रक्टर ही बनाता है — इसलिए कंस्ट्रक्टर वर्चुअल नहीं हो सकता। उल्टे, आधार-कक्षा का डिस्ट्रक्टर वर्चुअल रखना चाहिए ताकि base पॉइंटर से delete पर व्युत्पन्न का डिस्ट्रक्टर भी चले।"
+ },
+ {
+  "id": "progfin-m3-019",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Function overloading and virtual-function overriding are examples of, respectively —",
+  "options": [
+   "encapsulation and inheritance",
+   "compile-time polymorphism and run-time polymorphism",
+   "run-time polymorphism and compile-time polymorphism",
+   "both compile-time polymorphism"
+  ],
+  "answer": 1,
+  "explanation": "ओवरलोडिंग में कौन-सा फ़ंक्शन चलेगा यह तर्कों के प्रकार से कंपाइलर तय कर देता है (स्टैटिक बाइंडिंग)। ओवरराइडिंग में वर्चुअल फ़ंक्शन रन-टाइम पर वस्तु के प्रकार से तय होता है (डायनेमिक बाइंडिंग)।"
+ },
+ {
+  "id": "progfin-m3-020",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following Java code print?\n\nint x = 7;\nSystem.out.println(x++ + ++x);",
+  "options": [
+   "14",
+   "17",
+   "15",
+   "16"
+  ],
+  "answer": 3,
+  "explanation": "Java में मूल्यांकन बाएँ से दाएँ तय है: x++ मान 7 देता है और x = 8; फिर ++x x को 9 कर 9 देता है। 7 + 9 = 16। (C में यही अभिव्यक्ति अपरिभाषित व्यवहार है।)"
+ },
+ {
+  "id": "progfin-m3-021",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What is the value of b after the Java statement  byte b = (byte) 200;  ?",
+  "options": [
+   "127",
+   "200",
+   "−56",
+   "Compilation error"
+  ],
+  "answer": 2,
+  "explanation": "byte 8-बिट हस्ताक्षरित है (−128 से 127)। 200 = 1100 1000 — 2's complement में इसका मान 200 − 256 = −56। स्पष्ट कास्ट के कारण कंपाइल-त्रुटि नहीं होती; ऊपरी बिट कट जाते हैं।"
+ },
+ {
+  "id": "progfin-m3-022",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which statement about Java is correct?",
+  "options": [
+   "A class can implement several interfaces but can extend only one class",
+   "An interface can have a constructor",
+   "An abstract class cannot have any concrete (implemented) methods",
+   "A class can extend several classes"
+  ],
+  "answer": 0,
+  "explanation": "Java कक्षाओं में बहु-वंशानुक्रम नहीं देता (डायमंड समस्या से बचाव), पर कई इंटरफ़ेस लागू किए जा सकते हैं। एब्स्ट्रैक्ट कक्षा में कंस्ट्रक्टर और सामान्य विधियाँ हो सकती हैं; इंटरफ़ेस में कंस्ट्रक्टर नहीं।"
+ },
+ {
+  "id": "progfin-m3-023",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following JavaScript statement print?\n\nconsole.log(typeof null);",
+  "options": [
+   "\"undefined\"",
+   "\"number\"",
+   "\"null\"",
+   "\"object\""
+  ],
+  "answer": 3,
+  "explanation": "यह JavaScript की पुरानी, जानी-मानी त्रुटि है जिसे संगतता के लिए कभी ठीक नहीं किया गया — typeof null \"object\" देता है। null जाँचने के लिए x === null लिखिए।"
+ },
+ {
+  "id": "progfin-m3-024",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following JavaScript statement print?\n\nconsole.log(1 + 2 + \"3\");",
+  "options": [
+   "6",
+   "\"33\"",
+   "\"123\"",
+   "\"15\""
+  ],
+  "answer": 1,
+  "explanation": "+ बाएँ से दाएँ: 1 + 2 = 3 (दोनों संख्या), फिर 3 + \"3\" में एक स्ट्रिंग है तो जोड़ नहीं, जुड़ाव होता है — \"33\"। 1 + \"2\" + 3 होता तो \"123\" आता।"
+ },
+ {
+  "id": "progfin-m3-025",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In JavaScript, what are the values of  0 == \"0\"  and  0 === \"0\"  respectively?",
+  "options": [
+   "true and true",
+   "true and false",
+   "false and false",
+   "false and true"
+  ],
+  "answer": 1,
+  "explanation": "== तुलना से पहले प्रकार बदलता है (\"0\" → 0), अतः true। === प्रकार भी जाँचता है — number और string अलग हैं, अतः false। सुरक्षित कोड में === ही लिखिए।"
+ },
+ {
+  "id": "progfin-m3-026",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following Perl code print?\n\nmy @a = (10, 20, 30);\nmy $n = @a;\nprint $n;",
+  "options": [
+   "30",
+   "10",
+   "3",
+   "102030"
+  ],
+  "answer": 2,
+  "explanation": "Perl में सरणी को स्केलर चर में देने पर 'स्केलर संदर्भ' बनता है, जिसमें सरणी अपने तत्वों की संख्या देती है = 3। पहला तत्व चाहिए तो $a[0], अंतिम सूचकांक $#a।"
+ },
+ {
+  "id": "progfin-m3-027",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which of the following runs on the client side (in the browser) rather than on the server?",
+  "options": [
+   "A Perl CGI script",
+   "An ASP.NET code-behind file",
+   "A PHP script that queries a MySQL database",
+   "JavaScript code that validates a form before submission"
+  ],
+  "answer": 3,
+  "explanation": "ब्राउज़र HTML, CSS और JavaScript चलाता है — फ़ॉर्म भेजने से पहले जाँच क्लाइंट पर हो सकती है। PHP, ASP.NET और CGI-Perl सर्वर पर चलते हैं और ब्राउज़र को केवल उनका HTML परिणाम मिलता है।"
+ },
+ {
+  "id": "progfin-m3-028",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In an ER diagram, a weak entity set and its identifying relationship are shown respectively by —",
+  "options": [
+   "a double rectangle and a double diamond",
+   "a single rectangle and a double ellipse",
+   "a double ellipse and a dashed rectangle",
+   "a dashed ellipse and a single diamond"
+  ],
+  "answer": 0,
+  "explanation": "कमज़ोर इकाई (जिसकी अपनी प्राथमिक कुंजी नहीं) = दोहरा आयत; उसका पहचान-संबंध = दोहरा हीरा। दोहरा दीर्घवृत्त बहु-मानी गुण है और बिंदीदार दीर्घवृत्त व्युत्पन्न गुण।"
+ },
+ {
+  "id": "progfin-m3-029",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Two entity sets E1 and E2 (with only simple attributes) are linked by a many-to-many relationship R. The minimum number of tables needed in the relational schema is —",
+  "options": [
+   "2",
+   "1",
+   "3",
+   "4"
+  ],
+  "answer": 2,
+  "explanation": "M:N संबंध को किसी एक इकाई की तालिका में विदेशी कुंजी से नहीं दिखाया जा सकता — उसके लिए अलग तालिका चाहिए जिसकी कुंजी दोनों इकाइयों की कुंजियों का संयोजन हो। अतः E1, E2, R = 3 तालिकाएँ। 1:N में 2 पर्याप्त हैं।"
+ },
+ {
+  "id": "progfin-m3-030",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Table Orders has a foreign key cust_id referencing Customers(id) with ON DELETE CASCADE. When a row in Customers is deleted —",
+  "options": [
+   "nothing happens to Orders",
+   "all Orders rows referencing that customer are deleted automatically",
+   "the matching cust_id values are set to NULL",
+   "the delete is rejected if any order references it"
+  ],
+  "answer": 1,
+  "explanation": "CASCADE संदर्भ-अखंडता बनाए रखने के लिए जुड़ी पंक्तियाँ भी हटा देता है। डिफ़ॉल्ट (RESTRICT/NO ACTION) हटाना रोकता है; SET NULL विदेशी कुंजी को NULL कर देता है।"
+ },
+ {
+  "id": "progfin-m3-031",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Relation R(A, B, C) has key A and the FDs A → B and B → C. The highest normal form of R is —",
+  "options": [
+   "3NF",
+   "1NF",
+   "BCNF",
+   "2NF"
+  ],
+  "answer": 3,
+  "explanation": "कुंजी एक ही गुण है, इसलिए आंशिक निर्भरता संभव नहीं — 2NF सही। पर A → B → C संक्रामक निर्भरता है (B कुंजी नहीं, C अप्राइम), जो 3NF तोड़ती है। हल: R1(A, B), R2(B, C)।"
+ },
+ {
+  "id": "progfin-m3-032",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which DBMS component is chiefly responsible for ensuring the Atomicity of transactions?",
+  "options": [
+   "The recovery manager (using the log to undo incomplete transactions)",
+   "The query optimizer",
+   "The data dictionary",
+   "The concurrency-control manager"
+  ],
+  "answer": 0,
+  "explanation": "परमाणुता = 'सब या कुछ नहीं'। अधूरा लेन-देन विफल हो तो रिकवरी मैनेजर लॉग से उसके बदलाव वापस (undo) करता है। अलगाव (Isolation) समवर्तिता-नियंत्रण देता है; स्थायित्व (Durability) भी रिकवरी से।"
+ },
+ {
+  "id": "progfin-m3-033",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "A view is defined as  SELECT dept, AVG(salary) FROM Emp GROUP BY dept.  An UPDATE on this view is generally —",
+  "options": [
+   "automatically converted into an INSERT",
+   "allowed and changes every employee's salary",
+   "allowed only for the dept column",
+   "not allowed, because each view row is an aggregate of many base rows"
+  ],
+  "answer": 3,
+  "explanation": "GROUP BY या समुच्चय फ़ंक्शन वाले व्यू की एक पंक्ति कई मूल पंक्तियों से बनती है — 'औसत बदलो' का कोई एक अर्थ नहीं निकलता। इसलिए ऐसे व्यू अद्यतन-योग्य नहीं होते।"
+ },
+ {
+  "id": "progfin-m3-034",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Table A has 3 rows and table B has 4 rows. How many rows does  SELECT * FROM A CROSS JOIN B;  return?",
+  "options": [
+   "7",
+   "12",
+   "4",
+   "3"
+  ],
+  "answer": 1,
+  "explanation": "CROSS JOIN कार्टेशियन गुणनफल है — A की हर पंक्ति B की हर पंक्ति से जुड़ती है: 3 × 4 = 12। WHERE में शर्त न लगाने पर साधारण जोड़ भी यही करता है।"
+ },
+ {
+  "id": "progfin-m3-035",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Table Emp has salaries 10, 20, 30, 40 and 50 (thousand). How many rows does this query return?\n\nSELECT name FROM Emp WHERE salary > (SELECT AVG(salary) FROM Emp);",
+  "options": [
+   "2",
+   "5",
+   "3",
+   "1"
+  ],
+  "answer": 0,
+  "explanation": "उप-क्वेरी पहले चलती है: औसत = 150 / 5 = 30। 30 से अधिक केवल 40 और 50 — 2 पंक्तियाँ।"
+ },
+ {
+  "id": "progfin-m3-036",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Query A returns the values {1, 2, 3} and query B returns {2, 3, 4}. How many rows does  A UNION B  return?",
+  "options": [
+   "3",
+   "6",
+   "4",
+   "2"
+  ],
+  "answer": 2,
+  "explanation": "UNION दोहराव हटाता है: {1, 2, 3, 4} = 4 पंक्तियाँ। UNION ALL सब रखता है = 6; INTERSECT = {2, 3} = 2।"
+ },
+ {
+  "id": "progfin-m3-037",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "A database trigger is —",
+  "options": [
+   "a procedure that runs only when a user calls it explicitly",
+   "a constraint that makes a column unique",
+   "a stored block of code that runs automatically when a specified event (such as INSERT, UPDATE or DELETE) occurs on a table",
+   "a type of index"
+  ],
+  "answer": 2,
+  "explanation": "ट्रिगर घटना-संचालित होता है — BEFORE या AFTER किसी DML पर अपने आप चलता है, जैसे हर वेतन-परिवर्तन का ऑडिट-लॉग लिखना। स्टोर्ड प्रोसीजर को स्पष्ट रूप से CALL/EXEC करना पड़ता है।"
+ },
+ {
+  "id": "progfin-m3-038",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In MS-Access, which object automates a sequence of actions (such as opening a form and running a query) without writing VBA code?",
+  "options": [
+   "Query",
+   "Table",
+   "Report",
+   "Macro"
+  ],
+  "answer": 3,
+  "explanation": "मैक्रो पहले से बनी क्रियाओं (OpenForm, RunQuery, MessageBox आदि) को क्रम से चलाता है। रिपोर्ट छापने/सारांश के लिए, क्वेरी डेटा निकालने के लिए, तालिका डेटा रखने के लिए होती है।"
+ },
+ {
+  "id": "progfin-m3-039",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In Oracle, RMAN (Recovery Manager) is used for —",
+  "options": [
+   "tuning SQL query syntax",
+   "backing up and recovering the database",
+   "managing network listeners only",
+   "creating user interface forms"
+  ],
+  "answer": 1,
+  "explanation": "RMAN Oracle का अंतर्निहित उपकरण है जो डेटाफ़ाइलों, कंट्रोल फ़ाइलों और आर्काइव लॉग का बैकअप, इंक्रीमेंटल बैकअप और पुनर्स्थापन (restore/recover) करता है।"
+ },
+ {
+  "id": "progfin-m3-040",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "What does the following PHP code output?\n\n$a = \"5\"; $b = 3;\necho $a . $b;",
+  "options": [
+   "53",
+   "8",
+   "An error",
+   "5"
+  ],
+  "answer": 0,
+  "explanation": "PHP में . (बिंदु) स्ट्रिंग जोड़ने का संचालक है, इसलिए 3 भी स्ट्रिंग बनकर \"53\" बनता है। $a + $b लिखते तो \"5\" संख्या में बदलकर 8 आता।"
+ },
+ {
+  "id": "progfin-m3-041",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "An HTML form is declared as  <form action=\"save.php\" method=\"post\">  with an input named email. In save.php, the value is read from —",
+  "options": [
+   "$_SERVER['email']",
+   "$_POST['email']",
+   "$email only",
+   "$_GET['email']"
+  ],
+  "answer": 1,
+  "explanation": "method=\"post\" होने पर डेटा अनुरोध के शरीर में आता है और PHP उसे $_POST सुपरग्लोबल में रखता है। GET में डेटा URL में आता है ($_GET)। $_REQUEST दोनों देखता है।"
+ },
+ {
+  "id": "progfin-m3-042",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In the MVC (Model–View–Controller) architecture, the component that receives the user's request, works with the model and selects the view to display is the —",
+  "options": [
+   "View",
+   "Model",
+   "Router table in the database",
+   "Controller"
+  ],
+  "answer": 3,
+  "explanation": "मॉडल = डेटा और व्यावसायिक नियम; व्यू = प्रस्तुति (HTML); कंट्रोलर = अनुरोध लेकर मॉडल से काम करवाना और सही व्यू चुनना। ASP.NET MVC, Laravel आदि इसी पर बने हैं।"
+ },
+ {
+  "id": "progfin-m3-043",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which statement about web servers is correct?",
+  "options": [
+   "IIS is open-source software",
+   "HTTPS uses port 80 by default",
+   "IIS is Microsoft's web server for Windows, while Apache HTTP Server is open-source and cross-platform",
+   "Apache runs only on Windows"
+  ],
+  "answer": 2,
+  "explanation": "IIS (Internet Information Services) विंडोज़ के साथ आता है और ASP.NET के लिए स्वाभाविक है। Apache मुक्त-स्रोत है, Linux/Windows दोनों पर चलता है। डिफ़ॉल्ट पोर्ट: HTTP 80, HTTPS 443।"
+ },
+ {
+  "id": "progfin-m3-044",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "The network address of the host 192.168.1.130/26 is —",
+  "options": [
+   "192.168.1.128",
+   "192.168.1.192",
+   "192.168.1.0",
+   "192.168.1.64"
+  ],
+  "answer": 0,
+  "explanation": "/26 = 255.255.255.192, ब्लॉक-आकार 64: सबनेट 0, 64, 128, 192। 130, 128–191 वाले सबनेट में है — नेटवर्क पता .128, ब्रॉडकास्ट .191।"
+ },
+ {
+  "id": "progfin-m3-045",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which protocol is used by a diskless workstation to find its own IP address from its known MAC address?",
+  "options": [
+   "RARP",
+   "ARP",
+   "DNS",
+   "ICMP"
+  ],
+  "answer": 0,
+  "explanation": "ARP: IP पता ज्ञात, MAC पता खोजना। RARP उल्टा: अपना MAC ज्ञात, अपना IP पूछना। आज यह काम BOOTP/DHCP करते हैं। ICMP त्रुटि-संदेश (ping) के लिए है।"
+ },
+ {
+  "id": "progfin-m3-046",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which pair is correct about e-mail protocols?",
+  "options": [
+   "SMTP and POP3 both only download mail",
+   "FTP is used to send e-mail",
+   "SMTP sends mail between servers; POP3 downloads mail from the server to the client",
+   "POP3 sends mail; SMTP downloads mail"
+  ],
+  "answer": 2,
+  "explanation": "SMTP (पोर्ट 25/587) मेल भेजने और सर्वरों के बीच पहुँचाने के लिए। POP3 (110) मेल क्लाइंट पर उतारकर सामान्यतः सर्वर से हटा देता है; IMAP (143) मेल सर्वर पर रखकर फ़ोल्डर समन्वित करता है।"
+ },
+ {
+  "id": "progfin-m3-047",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In TCP socket programming, which server-side call blocks until a client connection arrives and then returns a new socket for that client?",
+  "options": [
+   "listen()",
+   "bind()",
+   "socket()",
+   "accept()"
+  ],
+  "answer": 3,
+  "explanation": "सर्वर का क्रम: socket() → bind() (पता/पोर्ट जोड़ना) → listen() (कतार तैयार) → accept() (क्लाइंट आने तक रुकना, फिर उसके लिए नया सॉकेट)। क्लाइंट connect() करता है। UDP में listen/accept नहीं होते।"
+ },
+ {
+  "id": "progfin-m3-048",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "Which attribute of the HTML <form> tag specifies the URL to which the form data is sent?",
+  "options": [
+   "target",
+   "action",
+   "method",
+   "enctype"
+  ],
+  "answer": 1,
+  "explanation": "action = डेटा कहाँ जाए (जैसे save.php); method = कैसे (GET/POST); enctype = एन्कोडिंग (फ़ाइल अपलोड के लिए multipart/form-data); target = परिणाम किस विंडो/फ़्रेम में खुले।"
+ },
+ {
+  "id": "progfin-m3-049",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In MS-Excel, cell C3 contains the formula  =A$1+$B2.  If it is copied to cell D5, the formula becomes —",
+  "options": [
+   "=B$1+$B4",
+   "=A$1+$B2",
+   "=B$3+$C4",
+   "=B$1+$C4"
+  ],
+  "answer": 0,
+  "explanation": "C3 से D5: एक स्तंभ दाएँ, दो पंक्ति नीचे। A$1: स्तंभ सापेक्ष (A → B), पंक्ति स्थिर (1) → B$1। $B2: स्तंभ स्थिर (B), पंक्ति सापेक्ष (2 → 4) → $B4।"
+ },
+ {
+  "id": "progfin-m3-050",
+  "subject": "computer",
+  "exams": [
+   "prog-fin"
+  ],
+  "question": "In MS-PowerPoint, the 'Rehearse Timings' feature is used to —",
+  "options": [
+   "reorder slides in Slide Sorter view",
+   "compress the images in a presentation",
+   "record how long each slide is shown during a practice run, for automatic timing in the slide show",
+   "check the spelling of all slides"
+  ],
+  "answer": 2,
+  "explanation": "रिहर्स टाइमिंग्स में अभ्यास करते हुए हर स्लाइड पर बिताया समय रिकॉर्ड होता है; बाद में स्लाइड शो उन्हीं समयों पर अपने आप आगे बढ़ता है — कियोस्क या स्वचालित प्रस्तुति के लिए उपयोगी।"
+ }
+]
