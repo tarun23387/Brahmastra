@@ -205,15 +205,40 @@ async function main() {
     return;
   }
 
-  const batch = db.batch();
-  for (const w of writes) batch.set(db.collection(PACKS).doc(w.id), w.data);
-  for (const id of deletes) batch.delete(db.collection(PACKS).doc(id));
-  batch.set(
-    manRef,
-    { papers: newVer, updatedAt: admin.firestore.FieldValue.serverTimestamp() },
-    { merge: true }
-  );
-  await batch.commit();
+  // ── लिखना: हर pack अपनी अलग request में ──
+  //
+  // पहले सब pack + manifest एक ही batch में जाते थे. 23 अक्टू॰ 2026 को
+  // ~3.2 MB का वह batch 60 सेकंड की सीमा पर DEADLINE_EXCEEDED से गिरा, और
+  // batch की 10 MB की हद भी कुछ ही हज़ार प्रश्न दूर थी. अब एक request में
+  // एक pack (≤ 700 KB) जाता है, इसलिए प्रश्न कितने भी बढ़ें, request छोटी रहती है.
+  //
+  // क्रम सोचकर रखा है: पहले नए pack, फिर पुराने हटाना, manifest सबसे आख़िर
+  // में. ऐप manifest का संस्करण बदलने पर ही दोबारा उतारता है. बीच में किसी
+  // छात्र को नए-पुराने टुकड़ों का मेल मिल भी जाए तो वह पुराने संस्करण के नाम
+  // से सहेजा जाता है, और manifest बढ़ते ही ठीक pack फिर से उतर आते हैं.
+  // बीच में गिरे तो manifest नहीं बढ़ता — बस यही लिपि दोबारा चला दीजिए.
+  let step = '';
+  try {
+    for (const [i, w] of writes.entries()) {
+      step = `pack ${w.id}`;
+      await db.collection(PACKS).doc(w.id).set(w.data);
+      console.log(`  ✓ ${w.id}  (${i + 1}/${writes.length})`);
+    }
+    for (const id of deletes) {
+      step = `पुराना pack ${id} हटाना`;
+      await db.collection(PACKS).doc(id).delete();
+      console.log(`  ✗ ${id} हटाया`);
+    }
+    step = 'manifest';
+    await manRef.set(
+      { papers: newVer, updatedAt: admin.firestore.FieldValue.serverTimestamp() },
+      { merge: true }
+    );
+  } catch (e) {
+    console.error(`\n❌ ${step} पर रुक गया. manifest नहीं बढ़ा, इसलिए ऐप पुराने`);
+    console.error('   संस्करण पर ही टिके रहेंगे. यही लिपि --commit के साथ दोबारा चलाइए.\n');
+    throw e;
+  }
 
   console.log('\n✅ packs बन गए और manifest भी बढ़ गया.');
   console.log('   छात्रों के ऐप अगली बार खुलते ही नए प्रश्न उतार लेंगे.');
