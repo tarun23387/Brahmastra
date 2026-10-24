@@ -1,0 +1,7868 @@
+[
+ {
+  "id": "imp-0025",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "मौलिक कर्तव्यों को संविधान में किस संशोधन द्वारा जोड़ा गया?",
+  "subject": "polity",
+  "options": [
+   "42वाँ (1976)",
+   "44वाँ (1978)",
+   "52वाँ (1985)",
+   "73वाँ (1992)"
+  ],
+  "source": "import",
+  "explanation": "स्वर्ण सिंह समिति की सिफारिश पर, अनुच्छेद 51क, भाग IV-क।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:20:36.851Z"
+ },
+ {
+  "id": "imp-0319",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "मौलिक कर्तव्यों को संविधान में किस संशोधन द्वारा जोड़ा गया?",
+  "subject": "polity",
+  "options": [
+   "24वाँ",
+   "42वाँ",
+   "44वाँ",
+   "73वाँ"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0031",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "प्रस्तावना में 'समाजवादी', 'पंथनिरपेक्ष' एवं 'अखण्डता' शब्द कब जोड़े गए?",
+  "subject": "polity",
+  "options": [
+   "1971",
+   "1976",
+   "1978",
+   "1985"
+  ],
+  "source": "import",
+  "explanation": "42वें संविधान संशोधन, 1976 द्वारा।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0506",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारतीय संविधान की प्रस्तावना में ‘समाजवादी’ और ‘पंथनिरपेक्ष’ शब्द किस संशोधन से जोड़े गए?",
+  "subject": "polity",
+  "options": [
+   "24वाँ",
+   "42वाँ",
+   "44वाँ",
+   "52वाँ"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "seed-024",
+  "difficulty": "moderate",
+  "answer": 1,
+  "question": "प्रस्तावना में \"समाजवादी\", \"पंथनिरपेक्ष\" और \"अखंडता\" शब्द कब जोड़े गए?",
+  "subject": "polity",
+  "options": [
+   "1971",
+   "1976",
+   "1978",
+   "1985"
+  ],
+  "source": "seed",
+  "explanation": "42वें संविधान संशोधन (1976) द्वारा — इसे \"लघु संविधान\" भी कहा जाता है।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0330",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "राष्ट्रपति शासन किस अनुच्छेद के अंतर्गत लगाया जाता है?",
+  "subject": "polity",
+  "options": [
+   "352",
+   "356",
+   "360",
+   "370"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0505",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "राष्ट्रपति शासन किस अनुच्छेद के अंतर्गत लगाया जाता है?",
+  "subject": "polity",
+  "options": [
+   "352",
+   "356",
+   "360",
+   "365"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0033",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "वित्त आयोग का गठन किस अनुच्छेद के अन्तर्गत होता है?",
+  "subject": "polity",
+  "options": [
+   "अनुच्छेद 263",
+   "अनुच्छेद 280",
+   "अनुच्छेद 315",
+   "अनुच्छेद 324"
+  ],
+  "source": "import",
+  "explanation": "16वें वित्त आयोग के अध्यक्ष डॉ. अरविन्द पनगढ़िया हैं।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0213",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत के राष्ट्रपति प्रत्येक 5 वर्ष में किस अनुच्छेद के तहत वित्त आयोग का गठन करते हैं?",
+  "subject": "polity",
+  "options": [
+   "अनुच्छेद 263",
+   "अनुच्छेद 280",
+   "अनुच्छेद 312",
+   "अनुच्छेद 356"
+  ],
+  "source": "import",
+  "explanation": "अनुच्छेद 280 के अंतर्गत वित्त आयोग का गठन होता है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0325",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "वित्त आयोग का गठन किस अनुच्छेद के अंतर्गत होता है?",
+  "subject": "polity",
+  "options": [
+   "280",
+   "281",
+   "300",
+   "312"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0326",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "निर्वाचन आयोग का संवैधानिक आधार कौन-सा अनुच्छेद है?",
+  "subject": "polity",
+  "options": [
+   "324",
+   "326",
+   "338",
+   "368"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0427",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "निर्वाचन आयोग का संवैधानिक आधार कौन-सा अनुच्छेद है?",
+  "subject": "polity",
+  "options": [
+   "320",
+   "324",
+   "326",
+   "368"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0029",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "राज्य के नीति निदेशक तत्त्व किस देश के संविधान से लिए गए हैं?",
+  "subject": "polity",
+  "options": [
+   "ब्रिटेन",
+   "आयरलैंड",
+   "अमेरिका",
+   "कनाडा"
+  ],
+  "source": "import",
+  "explanation": "भाग IV, अनुच्छेद 36–51।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0422",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारतीय संविधान को संविधान सभा ने कब अंगीकृत किया?",
+  "subject": "polity",
+  "options": [
+   "15 अगस्त 1947",
+   "26 नवम्बर 1949",
+   "26 जनवरी 1950",
+   "9 दिसम्बर 1946"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0423",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "अनुच्छेद 14 मुख्यतः किससे संबंधित है?",
+  "subject": "polity",
+  "options": [
+   "स्वतंत्रता का अधिकार",
+   "समानता का अधिकार",
+   "धार्मिक स्वतंत्रता",
+   "संवैधानिक उपचार"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0424",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "राज्य के नीति-निदेशक तत्व संविधान के किस भाग में हैं?",
+  "subject": "polity",
+  "options": [
+   "भाग III",
+   "भाग IV",
+   "भाग IVA",
+   "भाग V"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0425",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत के राष्ट्रपति का निर्वाचन किसके द्वारा होता है?",
+  "subject": "polity",
+  "options": [
+   "प्रत्यक्ष जनता द्वारा",
+   "निर्वाचक मंडल द्वारा",
+   "केवल लोकसभा द्वारा",
+   "केवल राज्यसभा द्वारा"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0426",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "धन विधेयक होने का प्रमाणन कौन करता है?",
+  "subject": "polity",
+  "options": [
+   "राष्ट्रपति",
+   "राज्यसभा के सभापति",
+   "लोकसभा अध्यक्ष",
+   "वित्त मंत्री"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0504",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "राज्यसभा के एक सदस्य का सामान्य कार्यकाल कितना है?",
+  "subject": "polity",
+  "options": [
+   "4 वर्ष",
+   "5 वर्ष",
+   "6 वर्ष",
+   "7 वर्ष"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "seed-019",
+  "difficulty": "moderate",
+  "answer": 2,
+  "question": "उत्तर प्रदेश विधान सभा में निर्वाचित सदस्यों की कुल संख्या कितनी है?",
+  "subject": "polity",
+  "options": [
+   "350",
+   "375",
+   "403",
+   "425"
+  ],
+  "source": "seed",
+  "explanation": "403 निर्वाचित सदस्य; विधान परिषद में 100 सदस्य हैं, जो देश की सबसे बड़ी विधान परिषद है।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0207",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत के नियंत्रक एवं महालेखा परीक्षक (CAG) की नियुक्ति किस अनुच्छेद के तहत की जाती है?",
+  "subject": "polity",
+  "options": [
+   "अनुच्छेद 76",
+   "अनुच्छेद 148",
+   "अनुच्छेद 280",
+   "अनुच्छेद 324"
+  ],
+  "source": "import",
+  "explanation": "अनुच्छेद 148 CAG के पद का प्रावधान करता है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0317",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "संवैधानिक उपचार का अधिकार किस अनुच्छेद में है?",
+  "subject": "polity",
+  "options": [
+   "19",
+   "21",
+   "32",
+   "44"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0327",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "73वाँ संविधान संशोधन मुख्यतः किससे संबंधित है?",
+  "subject": "polity",
+  "options": [
+   "नगरपालिकाएँ",
+   "पंचायती राज",
+   "न्यायपालिका",
+   "सहकारी समितियाँ"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0467",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "उत्तर प्रदेश उच्च न्यायालय की मुख्य पीठ कहाँ स्थित है?",
+  "subject": "polity",
+  "options": [
+   "लखनऊ",
+   "प्रयागराज",
+   "कानपुर",
+   "आगरा"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0037",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "नीति आयोग की स्थापना कब हुई?",
+  "subject": "arth",
+  "options": [
+   "1 जनवरी 2015",
+   "15 अगस्त 2014",
+   "1 अप्रैल 2015",
+   "26 जनवरी 2015"
+  ],
+  "source": "import",
+  "explanation": "योजना आयोग (1950) के स्थान पर; पदेन अध्यक्ष प्रधानमंत्री।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-24T04:25:00.626Z"
+ },
+ {
+  "id": "imp-0447",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "GST किस प्रकार का कर है?",
+  "subject": "arth",
+  "options": [
+   "प्रत्यक्ष",
+   "अप्रत्यक्ष",
+   "संपत्ति कर",
+   "कृषि आयकर"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0340",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "GST परिषद का अध्यक्ष कौन होता है?",
+  "subject": "arth",
+  "options": [
+   "प्रधानमंत्री",
+   "केंद्रीय वित्त मंत्री",
+   "RBI गवर्नर",
+   "नीति आयोग के CEO"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0334",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारतीय रिजर्व बैंक की स्थापना किस वर्ष हुई?",
+  "subject": "arth",
+  "options": [
+   "1930",
+   "1935",
+   "1947",
+   "1950"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0336",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "रेपो दर का संबंध मुख्यतः किससे है?",
+  "subject": "arth",
+  "options": [
+   "RBI द्वारा बैंकों को अल्पकालिक ऋण",
+   "सरकार द्वारा किसानों को अनुदान",
+   "निर्यात शुल्क",
+   "आयकर"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0449",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "SEBI का प्रमुख कार्य क्या है?",
+  "subject": "arth",
+  "options": [
+   "बीमा विनियमन",
+   "प्रतिभूति बाजार का विनियमन",
+   "मौद्रिक नीति",
+   "जनगणना"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0450",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत में मौद्रिक नीति समिति में कितने सदस्य होते हैं?",
+  "subject": "arth",
+  "options": [
+   "4",
+   "6",
+   "8",
+   "10"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0379",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "भारत में श्वेत क्रांति मुख्यतः किससे संबंधित है?",
+  "subject": "arth",
+  "options": [
+   "दूध उत्पादन",
+   "मछली उत्पादन",
+   "अंडा उत्पादन",
+   "तेलहन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0456",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "भारत में श्वेत क्रांति मुख्यतः किससे संबंधित है?",
+  "subject": "arth",
+  "options": [
+   "दूध उत्पादन",
+   "मत्स्य उत्पादन",
+   "अंडा उत्पादन",
+   "तेलहन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0380",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "नीली क्रांति मुख्यतः किस क्षेत्र से संबंधित है?",
+  "subject": "arth",
+  "options": [
+   "मत्स्य उत्पादन",
+   "दुग्ध उत्पादन",
+   "गेहूँ उत्पादन",
+   "रेशम उत्पादन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0457",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "नीली क्रांति मुख्यतः किससे संबंधित है?",
+  "subject": "arth",
+  "options": [
+   "मत्स्य उत्पादन",
+   "दुग्ध उत्पादन",
+   "गेहूँ उत्पादन",
+   "रेशम उत्पादन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0453",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "खरीफ फसलों की बुवाई सामान्यतः कब की जाती है?",
+  "subject": "arth",
+  "options": [
+   "मानसून के आरम्भ के साथ",
+   "शीत ऋतु में",
+   "वसंत के अंत में",
+   "सालभर समान रूप से"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0455",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "ड्रिप सिंचाई का प्रमुख लाभ क्या है?",
+  "subject": "arth",
+  "options": [
+   "जल उपयोग दक्षता बढ़ाना",
+   "मृदा को पूरी तरह सुखाना",
+   "वर्षा पर निर्भरता बढ़ाना",
+   "खाद की आवश्यकता समाप्त करना"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0454",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "दलहनी फसलें मिट्टी की उर्वरता में किस प्रकार सहायता करती हैं?",
+  "subject": "bhugol",
+  "options": [
+   "नाइट्रोजन स्थिरीकरण द्वारा",
+   "सारा जल सोखकर",
+   "मृदा को अम्लीय बनाकर",
+   "सभी पोषक तत्व हटाकर"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0452",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "व्यापार संतुलन किसका अंतर है?",
+  "subject": "arth",
+  "options": [
+   "निर्यात और आयात के मूल्य का",
+   "कर और व्यय का",
+   "बचत और निवेश का",
+   "राजस्व और पूंजी व्यय का"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0069",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "न्यूनतम समर्थन मूल्य (MSP) की संस्तुति कौन करता है?",
+  "subject": "arth",
+  "options": [
+   "नीति आयोग",
+   "कृषि लागत एवं मूल्य आयोग (CACP)",
+   "भारतीय खाद्य निगम",
+   "वित्त आयोग"
+  ],
+  "source": "import",
+  "explanation": "अन्तिम निर्णय आर्थिक मामलों की मंत्रिमण्डलीय समिति लेती है।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0259",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारतीय कृषि अनुसंधान परिषद (ICAR) का मुख्यालय कहाँ स्थित है?",
+  "subject": "vigyan",
+  "options": [
+   "कानपुर",
+   "नई दिल्ली",
+   "देहरादून",
+   "नागपुर"
+  ],
+  "source": "import",
+  "explanation": "ICAR का मुख्यालय नई दिल्ली में स्थित है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0045",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 2,
+  "question": "थोक मूल्य सूचकांक (WPI) पर आधारित मुद्रास्फीति के आँकड़े कौन जारी करता है?",
+  "subject": "arth",
+  "options": [
+   "भारतीय रिजर्व बैंक",
+   "सांख्यिकी एवं कार्यक्रम कार्यान्वयन मंत्रालय",
+   "वाणिज्य एवं उद्योग मंत्रालय",
+   "नीति आयोग"
+  ],
+  "source": "import",
+  "explanation": "जबकि CPI के आँकड़े NSO (MoSPI) जारी करता है।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0470",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "फिरोजाबाद किस उद्योग के लिए प्रसिद्ध है?",
+  "subject": "arth",
+  "options": [
+   "कांच एवं चूड़ी",
+   "चमड़ा",
+   "कालीन",
+   "पीतल"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0396",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "भदोही किस उद्योग के लिए प्रसिद्ध है?",
+  "subject": "arth",
+  "options": [
+   "कालीन",
+   "हीरा",
+   "कागज",
+   "चाय"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0397",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "मुरादाबाद किस उद्योग के लिए प्रसिद्ध है?",
+  "subject": "arth",
+  "options": [
+   "पीतल शिल्प",
+   "कालीन",
+   "रेशम",
+   "कांच"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0471",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "उत्तर प्रदेश में ‘पीतल नगरी’ किस नगर को कहा जाता है?",
+  "subject": "up",
+  "options": [
+   "मुरादाबाद",
+   "अलीगढ़",
+   "वाराणसी",
+   "सहारनपुर"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0473",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "उत्तर प्रदेश का 2026-27 बजट किसने प्रस्तुत किया?",
+  "subject": "arth",
+  "options": [
+   "सुरेश कुमार खन्ना",
+   "योगी आदित्यनाथ",
+   "केशव प्रसाद मौर्य",
+   "ब्रजेश पाठक"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0502",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "2026-27 के उत्तर प्रदेश बजट में AI एवं नई उभरती प्रौद्योगिकियों से संबंधित क्या प्रस्तावित है?",
+  "subject": "arth",
+  "options": [
+   "मिशन शुरू करना",
+   "इन पर कर लगाना",
+   "इनका आयात बंद करना",
+   "इनके उपयोग पर प्रतिबंध लगाना"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0098",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 2,
+  "question": "उत्तर प्रदेश बजट 2026-27 में राज्य का सकल राज्य घरेलू उत्पाद (GSDP) लगभग कितना आँका गया?",
+  "subject": "ca",
+  "options": [
+   "₹22.5 लाख करोड़",
+   "₹26.0 लाख करोड़",
+   "₹30.25 लाख करोड़",
+   "₹35.0 लाख करोड़"
+  ],
+  "source": "import",
+  "explanation": "लगभग 13.4% वृद्धि के अनुमान के साथ।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:33.865Z"
+ },
+ {
+  "id": "imp-0346",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "मानव विकास सूचकांक (HDI) किस संस्था द्वारा प्रकाशित किया जाता है?",
+  "subject": "vigyan",
+  "options": [
+   "विश्व बैंक",
+   "UNDP",
+   "WTO",
+   "IMF"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0451",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "मानव विकास सूचकांक किस संस्था द्वारा प्रकाशित किया जाता है?",
+  "subject": "vigyan",
+  "options": [
+   "विश्व बैंक",
+   "UNDP",
+   "WTO",
+   "IMF"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0476",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "UP Budget 2026-27 में कृषि विपणन और निर्यात के लिए क्या प्रस्तावित है?",
+  "subject": "arth",
+  "options": [
+   "एक कार्यक्रम",
+   "केवल कर वृद्धि",
+   "कृषि भूमि अधिग्रहण योजना",
+   "निर्यात पर पूर्ण प्रतिबंध"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0503",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "2026 में वैश्विक स्तर पर AI, सेमीकंडक्टर और क्वांटम तकनीक क्यों महत्वपूर्ण हैं?",
+  "subject": "ca",
+  "options": [
+   "रणनीतिक, आर्थिक और तकनीकी प्रतिस्पर्धा के कारण",
+   "केवल खेलों के कारण",
+   "केवल पर्यटन के कारण",
+   "केवल कृषि उत्पादन के कारण"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0046",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "भारत की मानक समय रेखा (82°30' पूर्व) उत्तर प्रदेश के किस स्थान से गुजरती है?",
+  "subject": "bhugol",
+  "options": [
+   "इलाहाबाद",
+   "मिर्जापुर",
+   "वाराणसी",
+   "गोरखपुर"
+  ],
+  "source": "import",
+  "explanation": "यह रेखा 5 राज्यों से होकर गुजरती है।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-24T04:25:00.626Z"
+ },
+ {
+  "id": "imp-0444",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत का मानक समय किस देशांतर पर आधारित है?",
+  "subject": "bhugol",
+  "options": [
+   "68°7′ पूर्व",
+   "82°30′ पूर्व",
+   "90° पूर्व",
+   "77°30′ पूर्व"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0355",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "कर्क रेखा भारत के कितने राज्यों से होकर गुजरती है?",
+  "subject": "bhugol",
+  "options": [
+   "6",
+   "8",
+   "10",
+   "12"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0357",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "दक्कन का पठार मुख्यतः किस प्रकार की चट्टानों से बना है?",
+  "subject": "bhugol",
+  "options": [
+   "बेसाल्टिक ज्वालामुखीय चट्टानें",
+   "चूना पत्थर",
+   "बलुआ पत्थर",
+   "ग्रेनाइट ही केवल"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0445",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "सुंदरबन डेल्टा मुख्यतः किन नदी-तंत्रों से संबंधित है?",
+  "subject": "bhugol",
+  "options": [
+   "गंगा-ब्रह्मपुत्र-मेघना",
+   "नर्मदा-ताप्ती",
+   "गोदावरी-कृष्णा",
+   "सिंधु-झेलम"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0446",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भूकंप की तीव्रता मापने के लिए प्रसिद्ध पारंपरिक पैमाना कौन-सा है?",
+  "subject": "bhugol",
+  "options": [
+   "मर्केली",
+   "रिक्टर",
+   "ब्यूफोर्ट",
+   "सेल्सियस"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0299",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "सिंधु सभ्यता का प्रसिद्ध बंदरगाह नगर कौन-सा था?",
+  "subject": "bhugol",
+  "options": [
+   "हड़प्पा",
+   "लोथल",
+   "कालीबंगा",
+   "राखीगढ़ी"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0428",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "सिंधु सभ्यता का प्रसिद्ध बंदरगाह नगर कौन-सा था?",
+  "subject": "bhugol",
+  "options": [
+   "हड़प्पा",
+   "लोथल",
+   "कालीबंगा",
+   "धौलावीरा"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0448",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "राजकोषीय घाटा सामान्यतः किसका संकेतक है?",
+  "subject": "bhugol",
+  "options": [
+   "सरकार की उधार-पूर्व कुल प्राप्तियों से अधिक कुल व्यय",
+   "केवल निर्यात-आयात का अंतर",
+   "बैंक जमा का अंतर",
+   "जनसंख्या वृद्धि"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0294",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "ओजोन परत मुख्यतः किस मंडल में स्थित है?",
+  "subject": "vigyan",
+  "options": [
+   "क्षोभमंडल",
+   "समतापमंडल",
+   "मध्यमंडल",
+   "तापमंडल"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "seed-032",
+  "difficulty": "moderate",
+  "answer": 2,
+  "question": "दुधवा राष्ट्रीय उद्यान किस जिले में स्थित है?",
+  "subject": "bhugol",
+  "options": [
+   "पीलीभीत",
+   "बहराइच",
+   "लखीमपुर खीरी",
+   "बिजनौर"
+  ],
+  "source": "seed",
+  "explanation": "दुधवा टाइगर रिजर्व नेपाल सीमा से लगा है और बारहसिंगा तथा बाघ के लिए प्रसिद्ध है।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0083",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "दुधवा राष्ट्रीय उद्यान किस जिले में स्थित है?",
+  "subject": "up",
+  "options": [
+   "पीलीभीत",
+   "लखीमपुर खीरी",
+   "बहराइच",
+   "श्रावस्ती"
+  ],
+  "source": "import",
+  "explanation": "स्थापना 1977; 1987-88 में इसे टाइगर रिजर्व बनाया गया।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0389",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "दुधवा राष्ट्रीय उद्यान किस क्षेत्र में स्थित है?",
+  "subject": "up",
+  "options": [
+   "लखीमपुर खीरी",
+   "मथुरा",
+   "बांदा",
+   "मेरठ"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0468",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "दुधवा राष्ट्रीय उद्यान किस जिले में स्थित है?",
+  "subject": "up",
+  "options": [
+   "लखीमपुर खीरी",
+   "मथुरा",
+   "बांदा",
+   "मेरठ"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0230",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "गोमती नदी का उद्गम स्थल 'फुलहर झील' उत्तर प्रदेश के किस जिले में स्थित है?",
+  "subject": "up",
+  "options": [
+   "पीलीभीत",
+   "शाहजहाँपुर",
+   "लखीमपुर खीरी",
+   "सीतापुर"
+  ],
+  "source": "import",
+  "explanation": "फुलहर झील पीलीभीत जिले में है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0092",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "बुन्देलखण्ड एक्सप्रेसवे किन जिलों के मध्य है?",
+  "subject": "up",
+  "options": [
+   "चित्रकूट–इटावा",
+   "झाँसी–कानपुर",
+   "बाँदा–आगरा",
+   "महोबा–लखनऊ"
+  ],
+  "source": "import",
+  "explanation": "लगभग 296 किमी लम्बा।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "seed-038",
+  "difficulty": "moderate",
+  "answer": 1,
+  "question": "गंगा एक्सप्रेसवे किन दो शहरों के बीच बनाया जा रहा है?",
+  "subject": "bhugol",
+  "options": [
+   "लखनऊ से गाजीपुर",
+   "मेरठ से प्रयागराज",
+   "आगरा से वाराणसी",
+   "नोएडा से कानपुर"
+  ],
+  "source": "seed",
+  "explanation": "लगभग 594 किमी लंबा गंगा एक्सप्रेसवे मेरठ से प्रयागराज तक — यह प्रदेश का सबसे लंबा एक्सप्रेसवे है।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "seed-039",
+  "difficulty": "moderate",
+  "answer": 0,
+  "question": "पूर्वांचल एक्सप्रेसवे का प्रारंभ तथा अंतिम बिंदु है—",
+  "subject": "bhugol",
+  "options": [
+   "लखनऊ – गाजीपुर",
+   "वाराणसी – गोरखपुर",
+   "कानपुर – बलिया",
+   "प्रयागराज – आजमगढ़"
+  ],
+  "source": "seed",
+  "explanation": "लगभग 341 किमी लंबा यह एक्सप्रेसवे लखनऊ (चाँदसराय) से गाजीपुर (हैदरिया) तक है।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0246",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "उत्तर प्रदेश का पूर्वांचल एक्सप्रेस-वे लखनऊ को किस जिले से जोड़ता है?",
+  "subject": "up",
+  "options": [
+   "बलिया",
+   "गाजीपुर",
+   "आजमगढ़",
+   "वाराणसी"
+  ],
+  "source": "import",
+  "explanation": "पूर्वांचल एक्सप्रेस-वे लखनऊ से गाजीपुर तक जाता है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0079",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "उत्तर प्रदेश में मण्डलों एवं जिलों की संख्या क्रमशः कितनी है?",
+  "subject": "up",
+  "options": [
+   "17 और 70",
+   "18 और 75",
+   "18 और 71",
+   "20 और 75"
+  ],
+  "source": "import",
+  "explanation": "क्षेत्रफल 2,40,928 वर्ग किमी।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:20:36.851Z"
+ },
+ {
+  "id": "imp-0385",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "उत्तर प्रदेश का राजकीय पक्षी कौन-सा है?",
+  "subject": "up",
+  "options": [
+   "सारस क्रेन",
+   "मोर",
+   "तोता",
+   "हंस"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0017",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "चौरी-चौरा की घटना कब और कहाँ घटित हुई?",
+  "subject": "itihas",
+  "options": [
+   "4 फरवरी 1922, गोरखपुर",
+   "9 अगस्त 1925, लखनऊ",
+   "13 अप्रैल 1919, अमृतसर",
+   "5 फरवरी 1922, देवरिया"
+  ],
+  "source": "import",
+  "explanation": "इसी के बाद गांधीजी ने असहयोग आन्दोलन वापस ले लिया।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0391",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "चौरी-चौरा घटना किस जिले के क्षेत्र से संबंधित थी?",
+  "subject": "up",
+  "options": [
+   "गोरखपुर",
+   "झाँसी",
+   "कानपुर",
+   "मेरठ"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0469",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "चौरी-चौरा घटना किस क्षेत्र से संबंधित थी?",
+  "subject": "up",
+  "options": [
+   "गोरखपुर",
+   "झाँसी",
+   "कानपुर",
+   "मेरठ"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0392",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "काकोरी कांड किस वर्ष हुआ?",
+  "subject": "up",
+  "options": [
+   "1919",
+   "1922",
+   "1925",
+   "1930"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0161",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "प्रसिद्ध 'काकोरी ट्रेन एक्शन' (1925) को किस क्रांतिकारी संगठन के सदस्यों ने अंजाम दिया था?",
+  "subject": "itihas",
+  "options": [
+   "अनुशीलन समिति",
+   "हिंदुस्तान रिपब्लिकन एसोसिएशन (HRA)",
+   "अभिनव भारत",
+   "गदर पार्टी"
+  ],
+  "source": "import",
+  "explanation": "काकोरी कांड हिंदुस्तान रिपब्लिकन एसोसिएशन (HRA) ने किया।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0472",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "उत्तर प्रदेश का प्रमुख गन्ना उत्पादक क्षेत्र कौन-सा है?",
+  "subject": "up",
+  "options": [
+   "पश्चिमी उत्तर प्रदेश",
+   "बुंदेलखंड ही",
+   "पूर्वांचल ही",
+   "विंध्य क्षेत्र ही"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0072",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 2,
+  "question": "2011 की जनगणना के अनुसार उत्तर प्रदेश का लिंगानुपात कितना था?",
+  "subject": "vigyan",
+  "options": [
+   "898",
+   "908",
+   "912",
+   "930"
+  ],
+  "source": "import",
+  "explanation": "राष्ट्रीय औसत 943 था।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0074",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 2,
+  "question": "2011 की जनगणना के अनुसार उत्तर प्रदेश का जनसंख्या घनत्व कितना है?",
+  "subject": "vigyan",
+  "options": [
+   "690",
+   "768",
+   "829",
+   "904"
+  ],
+  "source": "import",
+  "explanation": "प्रति वर्ग किमी; राष्ट्रीय औसत 382।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0232",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भगवान बुद्ध ने अपना पहला धर्मोपदेश (धर्मचक्रप्रवर्तन) उत्तर प्रदेश के किस स्थान पर दिया था?",
+  "subject": "up",
+  "options": [
+   "कुशीनगर",
+   "सारनाथ",
+   "श्रावस्ती",
+   "संकिसा"
+  ],
+  "source": "import",
+  "explanation": "भगवान बुद्ध ने पहला उपदेश सारनाथ में दिया था।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0096",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "महाकुम्भ 2025 का आयोजन कहाँ हुआ था?",
+  "subject": "ca",
+  "options": [
+   "हरिद्वार",
+   "प्रयागराज",
+   "उज्जैन",
+   "नासिक"
+  ],
+  "source": "import",
+  "explanation": "13 जनवरी से 26 फरवरी 2025 तक त्रिवेणी संगम पर।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-24T04:25:00.626Z"
+ },
+ {
+  "id": "imp-0007",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "जैन धर्म के 23वें तीर्थंकर पार्श्वनाथ का जन्मस्थान था –",
+  "subject": "itihas",
+  "options": [
+   "वैशाली",
+   "वाराणसी",
+   "कुण्डग्राम",
+   "राजगृह"
+  ],
+  "source": "import",
+  "explanation": "वाराणसी; उनके चार महाव्रत थे।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0009",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "'प्रयाग प्रशस्ति' के रचयिता कौन थे?",
+  "subject": "itihas",
+  "options": [
+   "हरिषेण",
+   "वीरसेन",
+   "रविकीर्ति",
+   "वसुबन्धु"
+  ],
+  "source": "import",
+  "explanation": "समुद्रगुप्त के दरबारी कवि हरिषेण; यह प्रयागराज के अशोक स्तम्भ पर उत्कीर्ण है।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0010",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "हर्षवर्धन ने अपनी राजधानी थानेश्वर से किस नगर में स्थानान्तरित की थी?",
+  "subject": "itihas",
+  "options": [
+   "पाटलिपुत्र",
+   "कन्नौज",
+   "उज्जयिनी",
+   "मथुरा"
+  ],
+  "source": "import",
+  "explanation": "कन्नौज (उ.प्र.); चीनी यात्री ह्वेनसांग उसके दरबार में आया था।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "seed-004",
+  "difficulty": "moderate",
+  "answer": 1,
+  "question": "1857 के विद्रोह की शुरुआत 10 मई 1857 को कहाँ से हुई?",
+  "subject": "itihas",
+  "options": [
+   "कानपुर",
+   "मेरठ",
+   "झाँसी",
+   "बैरकपुर"
+  ],
+  "source": "seed",
+  "explanation": "मेरठ छावनी के सिपाहियों ने विद्रोह कर दिल्ली की ओर कूच किया और बहादुर शाह ज़फ़र को नेता घोषित किया।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0016",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 2,
+  "question": "'लखनऊ समझौता' (कांग्रेस–मुस्लिम लीग) किस वर्ष हुआ?",
+  "subject": "itihas",
+  "options": [
+   "1906",
+   "1911",
+   "1916",
+   "1919"
+  ],
+  "source": "import",
+  "explanation": "1916 के लखनऊ अधिवेशन में; अध्यक्ष अम्बिका चरण मजूमदार।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0441",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "‘करो या मरो’ का नारा किस आंदोलन से जुड़ा है?",
+  "subject": "itihas",
+  "options": [
+   "असहयोग",
+   "सविनय अवज्ञा",
+   "भारत छोड़ो",
+   "स्वदेशी"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0175",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "मुग़ल शासक अकबर ने गुजरात विजय की स्मृति में किस भव्य द्वार का निर्माण फतेहपुर सीकरी में करवाया था?",
+  "subject": "itihas",
+  "options": [
+   "अलाई दरवाजा",
+   "बुलंद दरवाजा",
+   "रूमी दरवाजा",
+   "इंडिया गेट"
+  ],
+  "source": "import",
+  "explanation": "अकबर ने गुजरात विजय की याद में बुलंद दरवाजा बनवाया।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0429",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "मौर्य साम्राज्य का संस्थापक कौन था?",
+  "subject": "itihas",
+  "options": [
+   "बिंदुसार",
+   "चन्द्रगुप्त मौर्य",
+   "अशोक",
+   "पुष्यमित्र शुंग"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0430",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "अशोक के अधिकांश अभिलेख किस लिपि में हैं?",
+  "subject": "itihas",
+  "options": [
+   "ब्राह्मी",
+   "देवनागरी",
+   "शारदा",
+   "ग्रंथ"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0431",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "गुप्त काल को सामान्यतः किस नाम से जाना जाता है?",
+  "subject": "itihas",
+  "options": [
+   "लौह युग",
+   "स्वर्ण युग",
+   "औद्योगिक युग",
+   "वैदिक युग"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0432",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "कुतुब मीनार का निर्माण किसने आरम्भ कराया?",
+  "subject": "itihas",
+  "options": [
+   "इल्तुतमिश",
+   "कुतुबुद्दीन ऐबक",
+   "अलाउद्दीन खिलजी",
+   "फिरोज तुगलक"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0305",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "विजयनगर साम्राज्य की स्थापना किन भाइयों ने की?",
+  "subject": "itihas",
+  "options": [
+   "हरिहर और बुक्का",
+   "कृष्णदेवराय और अच्युतराय",
+   "राजराज और राजेंद्र",
+   "नरेंद्र और भोज"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0433",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "विजयनगर साम्राज्य की स्थापना किन भाइयों ने की?",
+  "subject": "itihas",
+  "options": [
+   "हरिहर और बुक्का",
+   "कृष्णदेवराय और अच्युतराय",
+   "राजराज और राजेन्द्र",
+   "नरेंद्र और भोज"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0435",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "स्थायी बंदोबस्त किस गवर्नर-जनरल से संबंधित है?",
+  "subject": "itihas",
+  "options": [
+   "वारेन हेस्टिंग्स",
+   "लॉर्ड कॉर्नवालिस",
+   "लॉर्ड वेलेजली",
+   "लॉर्ड डलहौजी"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0436",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "सती प्रथा के उन्मूलन से प्रमुख रूप से किस समाज सुधारक का नाम जुड़ा है?",
+  "subject": "itihas",
+  "options": [
+   "ईश्वरचन्द्र विद्यासागर",
+   "राजा राममोहन राय",
+   "स्वामी दयानन्द",
+   "ज्योतिबा फुले"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0437",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "बंगाल विभाजन 1905 किस वायसराय के समय हुआ?",
+  "subject": "itihas",
+  "options": [
+   "लॉर्ड कर्जन",
+   "लॉर्ड रिपन",
+   "लॉर्ड इरविन",
+   "लॉर्ड हार्डिंग"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0222",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "विटामिन 'C' की कमी से मानव शरीर में कौन-सा रोग होता है?",
+  "subject": "vigyan",
+  "options": [
+   "बेरी-बेरी",
+   "स्कर्वी",
+   "रिकेट्स",
+   "रतौंधी"
+  ],
+  "source": "import",
+  "explanation": "विटामिन 'C' (एस्कॉर्बिक एसिड) की कमी से स्कर्वी होता है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "seed-055",
+  "difficulty": "moderate",
+  "answer": 0,
+  "question": "रक्त समूह (ब्लड ग्रुप) की खोज किसने की थी?",
+  "subject": "vigyan",
+  "options": [
+   "कार्ल लैंडस्टीनर",
+   "विलियम हार्वे",
+   "अलेक्जेंडर फ्लेमिंग",
+   "रॉबर्ट कोच"
+  ],
+  "source": "seed",
+  "explanation": "कार्ल लैंडस्टीनर ने ABO रक्त समूह की खोज की, जिसके लिए उन्हें 1930 का नोबेल पुरस्कार मिला।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "seed-054",
+  "difficulty": "moderate",
+  "answer": 3,
+  "question": "ध्वनि की गति सबसे अधिक किसमें होती है?",
+  "subject": "vigyan",
+  "options": [
+   "निर्वात",
+   "गैस",
+   "द्रव",
+   "ठोस"
+  ],
+  "source": "seed",
+  "explanation": "ठोस में कणों की निकटता अधिक होने से ध्वनि सबसे तेज़ चलती है; निर्वात में ध्वनि चल ही नहीं सकती।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0062",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "'शुष्क बर्फ' (Dry Ice) क्या है?",
+  "subject": "vigyan",
+  "options": [
+   "ठोस जल",
+   "ठोस कार्बन डाइऑक्साइड",
+   "ठोस नाइट्रोजन",
+   "ठोस अमोनिया"
+  ],
+  "source": "import",
+  "explanation": "यह ऊर्ध्वपातन द्वारा सीधे गैस में बदल जाती है।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0217",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "खाने वाले सोडे (बेकिंग सोडा) का रासायनिक नाम/सूत्र क्या है?",
+  "subject": "vigyan",
+  "options": [
+   "$Na_2CO_3$",
+   "$NaHCO_3$",
+   "$CaOCl_2$",
+   "$NaOH$"
+  ],
+  "source": "import",
+  "explanation": "सोडियम बाइकार्बोनेट ($NaHCO_3$)।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0064",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "एल.पी.जी. (LPG) का मुख्य संघटक क्या है?",
+  "subject": "vigyan",
+  "options": [
+   "मेथेन",
+   "ब्यूटेन एवं प्रोपेन",
+   "एथेन",
+   "हाइड्रोजन"
+  ],
+  "source": "import",
+  "explanation": "गंध हेतु एथिल मर्केप्टन मिलाया जाता है।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0220",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "एलपीजी (LPG) गैस सिलेंडरों में मुख्य रूप से कौन-सी गैसे भरी होती हैं?",
+  "subject": "vigyan",
+  "options": [
+   "मीथेन और एथेन",
+   "प्रोपेन और ब्यूटेन",
+   "ब्यूटेन और मीथेन",
+   "हाइड्रोजन और हेक्सेन"
+  ],
+  "source": "import",
+  "explanation": "LPG में प्रोपेन और ब्यूटेन का मुख्य मिश्रण होता है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0465",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 3,
+  "question": "सूर्य के प्रकाश की उपस्थिति में त्वचा में किस विटामिन का निर्माण होता है?",
+  "subject": "vigyan",
+  "options": [
+   "A",
+   "B12",
+   "C",
+   "D"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0466",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "ध्वनि निर्वात में क्यों नहीं चल सकती?",
+  "subject": "vigyan",
+  "options": [
+   "उसकी आवृत्ति शून्य होती है",
+   "उसे भौतिक माध्यम की आवश्यकता होती है",
+   "उसकी गति अनंत होती है",
+   "वह केवल प्रकाश के साथ चलती है"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0297",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "सौर ऊर्जा का मूल स्रोत क्या है?",
+  "subject": "vigyan",
+  "options": [
+   "रासायनिक दहन",
+   "नाभिकीय संलयन",
+   "नाभिकीय विखंडन",
+   "भूतापीय ऊर्जा"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0405",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "विश्व पर्यावरण दिवस कब मनाया जाता है?",
+  "subject": "vigyan",
+  "options": [
+   "22 अप्रैल",
+   "5 जून",
+   "16 सितंबर",
+   "2 अक्टूबर"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0272",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "अंतर्राष्ट्रीय स्तर पर प्रतिवर्ष विश्व पर्यावरण दिवस किस तिथि को मनाया जाता है?",
+  "subject": "ca",
+  "options": [
+   "22 अप्रैल",
+   "5 जून",
+   "16 सितंबर",
+   "1 दिसंबर"
+  ],
+  "source": "import",
+  "explanation": "5 जून को विश्व पर्यावरण दिवस मनाया जाता है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0460",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "राष्ट्रीय हरित अधिकरण (NGT) की स्थापना किस वर्ष हुई?",
+  "subject": "vigyan",
+  "options": [
+   "2005",
+   "2008",
+   "2010",
+   "2012"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0370",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "वन्यजीव संरक्षण अधिनियम भारत में किस वर्ष पारित हुआ?",
+  "subject": "vigyan",
+  "options": [
+   "1962",
+   "1972",
+   "1980",
+   "1986"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0461",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "वन्यजीव संरक्षण अधिनियम किस वर्ष पारित हुआ?",
+  "subject": "vigyan",
+  "options": [
+   "1962",
+   "1972",
+   "1980",
+   "1986"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0251",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत सरकार द्वारा 'प्रोजेक्ट टाइगर' का शुभारंभ किस वर्ष किया गया था?",
+  "subject": "vigyan",
+  "options": [
+   "1971",
+   "1973",
+   "1992",
+   "2005"
+  ],
+  "source": "import",
+  "explanation": "प्रोजेक्ट टाइगर 1973 में जिम कॉर्बेट से शुरू हुआ।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0369",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "प्रोजेक्ट टाइगर भारत में कब शुरू हुआ?",
+  "subject": "vigyan",
+  "options": [
+   "1969",
+   "1973",
+   "1980",
+   "1986"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0371",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "ओजोन क्षरण से संबंधित प्रमुख रसायन समूह कौन-सा है?",
+  "subject": "vigyan",
+  "options": [
+   "CFCs",
+   "कार्बोहाइड्रेट",
+   "प्रोटीन",
+   "सिलिकेट"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0462",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "ओजोन क्षरण से प्रमुख रूप से कौन-से रसायन जुड़े हैं?",
+  "subject": "vigyan",
+  "options": [
+   "CFCs",
+   "कार्बोहाइड्रेट",
+   "प्रोटीन",
+   "सिलिकेट"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0364",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "जैव विविधता का अर्थ क्या है?",
+  "subject": "vigyan",
+  "options": [
+   "केवल पौधों की संख्या",
+   "जीवों और पारिस्थितिक तंत्रों की विविधता",
+   "केवल वन क्षेत्र",
+   "केवल जलीय जीव"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0463",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "सतत विकास का मूल विचार क्या है?",
+  "subject": "vigyan",
+  "options": [
+   "वर्तमान जरूरतें पूरी करते हुए भविष्य की क्षमता बनाए रखना",
+   "केवल औद्योगिक विकास",
+   "केवल वन संरक्षण",
+   "केवल आर्थिक वृद्धि"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0464",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "जैव आवर्धन किस प्रक्रिया को दर्शाता है?",
+  "subject": "vigyan",
+  "options": [
+   "खाद्य शृंखला में कुछ विषैले पदार्थों की सांद्रता बढ़ना",
+   "वर्षा में वृद्धि",
+   "मृदा अपरदन",
+   "वन विस्तार"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0365",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "रामसर स्थल मुख्यतः किससे संबंधित हैं?",
+  "subject": "vigyan",
+  "options": [
+   "आर्द्रभूमियाँ",
+   "मरुस्थल",
+   "पर्वत",
+   "कृषि मंडियाँ"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0481",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "आदित्य-L1 मिशन का प्रमुख उद्देश्य क्या है?",
+  "subject": "vigyan",
+  "options": [
+   "सूर्य का अध्ययन",
+   "मंगल पर रोवर उतारना",
+   "पृथ्वी के महासागरों का अध्ययन",
+   "शुक्र के वातावरण का अध्ययन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0497",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "राष्ट्रीय शिक्षा नीति (NEP) किस वर्ष घोषित हुई थी?",
+  "subject": "ca",
+  "options": [
+   "2018",
+   "2019",
+   "2020",
+   "2021"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0498",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "राष्ट्रीय मतदाता दिवस कब मनाया जाता है?",
+  "subject": "ca",
+  "options": [
+   "25 जनवरी",
+   "26 जनवरी",
+   "15 अगस्त",
+   "2 अक्टूबर"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0416",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "‘ब्लू इकॉनमी’ का संबंध मुख्यतः किससे है?",
+  "subject": "reasoning",
+  "options": [
+   "समुद्री संसाधनों के सतत आर्थिक उपयोग",
+   "केवल अंतरिक्ष",
+   "केवल कृषि",
+   "केवल वन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0417",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 3,
+  "question": "भारत का राष्ट्रीय खेल आधिकारिक रूप से कौन-सा घोषित है?",
+  "subject": "reasoning",
+  "options": [
+   "हॉकी",
+   "क्रिकेट",
+   "कबड्डी",
+   "कोई आधिकारिक राष्ट्रीय खेल नहीं"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0489",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "यदि किसी संख्या का 20% = 50 है, तो संख्या क्या होगी?",
+  "subject": "reasoning",
+  "options": [
+   "200",
+   "250",
+   "300",
+   "400"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0490",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "एक व्यक्ति उत्तर की ओर 5 किमी जाता है और फिर दाएँ मुड़कर 3 किमी जाता है। वह प्रारम्भिक बिंदु से किस दिशा में है?",
+  "subject": "reasoning",
+  "options": [
+   "उत्तर-पश्चिम",
+   "उत्तर-पूर्व",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0491",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "एक कक्षा में रवि ऊपर से 12वें और नीचे से 18वें स्थान पर है। कुल विद्यार्थी कितने हैं?",
+  "subject": "reasoning",
+  "options": [
+   "29",
+   "30",
+   "31",
+   "32"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0492",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "3 पेन की कीमत 45 रुपये है। 8 पेन की कीमत कितनी होगी?",
+  "subject": "reasoning",
+  "options": [
+   "100",
+   "110",
+   "120",
+   "135"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0493",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "घड़ी में 3 बजे घंटे और मिनट की सुई के बीच कोण कितना होता है?",
+  "subject": "reasoning",
+  "options": [
+   "60°",
+   "90°",
+   "120°",
+   "180°"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0133",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "'दूध' का तत्सम रूप है –",
+  "subject": "hindi",
+  "options": [
+   "दुग्ध",
+   "दुध",
+   "दोग्ध",
+   "दुग्धम्"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "seed-090",
+  "difficulty": "moderate",
+  "answer": 1,
+  "question": "\"सूर्योदय\" में कौन-सी संधि है?",
+  "subject": "hindi",
+  "options": [
+   "दीर्घ संधि",
+   "गुण संधि",
+   "वृद्धि संधि",
+   "यण् संधि"
+  ],
+  "source": "seed",
+  "explanation": "सूर्य + उदय = सूर्योदय; अ/आ के बाद उ/ऊ आने पर \"ओ\" बनता है — यह गुण संधि है।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "seed-097",
+  "difficulty": "moderate",
+  "answer": 2,
+  "question": "\"चारु चंद्र की चंचल किरणें\" पंक्ति में कौन-सा अलंकार है?",
+  "subject": "hindi",
+  "options": [
+   "यमक",
+   "श्लेष",
+   "अनुप्रास",
+   "उपमा"
+  ],
+  "source": "seed",
+  "explanation": "एक ही वर्ण \"च\" की बार-बार आवृत्ति होने से यहाँ अनुप्रास अलंकार है।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "seed-087",
+  "difficulty": "moderate",
+  "answer": 0,
+  "question": "\"आँख का तारा\" मुहावरे का अर्थ है—",
+  "subject": "hindi",
+  "options": [
+   "बहुत प्रिय",
+   "बहुत चालाक",
+   "अत्यंत क्रोधित",
+   "दृष्टिहीन"
+  ],
+  "source": "seed",
+  "explanation": "यह मुहावरा किसी अत्यंत प्रिय व्यक्ति के लिए प्रयुक्त होता है, जैसे— \"इकलौता पुत्र माँ की आँख का तारा है।\"",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "seed-088",
+  "difficulty": "moderate",
+  "answer": 1,
+  "question": "\"चतुर्भुज\" में कौन-सा समास है?",
+  "subject": "hindi",
+  "options": [
+   "द्वंद्व",
+   "बहुव्रीहि",
+   "कर्मधारय",
+   "अव्ययीभाव"
+  ],
+  "source": "seed",
+  "explanation": "चतुर्भुज = चार भुजाओं वाला (विष्णु) — जहाँ दोनों पद छोड़कर तीसरा अर्थ प्रधान हो, वहाँ बहुव्रीहि समास होता है।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "seed-089",
+  "difficulty": "moderate",
+  "answer": 0,
+  "question": "\"महात्मा\" शब्द में कौन-सा समास है?",
+  "subject": "hindi",
+  "options": [
+   "कर्मधारय",
+   "तत्पुरुष",
+   "द्विगु",
+   "बहुव्रीहि"
+  ],
+  "source": "seed",
+  "explanation": "महात्मा = महान् है जो आत्मा — विशेषण-विशेष्य संबंध होने से कर्मधारय समास है।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "seed-091",
+  "difficulty": "moderate",
+  "answer": 1,
+  "question": "\"विद्यालय\" का सही संधि-विच्छेद है—",
+  "subject": "hindi",
+  "options": [
+   "विद्या + लय",
+   "विद्या + आलय",
+   "विद् + आलय",
+   "विद्या + अलय"
+  ],
+  "source": "seed",
+  "explanation": "विद्या + आलय = विद्यालय; आ + आ = आ होने के कारण यह दीर्घ संधि है।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "seed-092",
+  "difficulty": "moderate",
+  "answer": 1,
+  "question": "\"निरोग\" शब्द में प्रयुक्त उपसर्ग कौन-सा है?",
+  "subject": "hindi",
+  "options": [
+   "नि",
+   "निर्",
+   "निस्",
+   "न"
+  ],
+  "source": "seed",
+  "explanation": "निर् + रोग = निरोग। \"निर्\" उपसर्ग अभाव या नकार का बोध कराता है, जैसे— निर्धन, निर्जल।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "seed-096",
+  "difficulty": "moderate",
+  "answer": 1,
+  "question": "\"श्रृंगार रस\" का स्थायी भाव क्या है?",
+  "subject": "hindi",
+  "options": [
+   "हास",
+   "रति",
+   "शोक",
+   "उत्साह"
+  ],
+  "source": "seed",
+  "explanation": "श्रृंगार का स्थायी भाव रति है। हास्य का हास, करुण का शोक तथा वीर रस का स्थायी भाव उत्साह है।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "seed-099",
+  "difficulty": "moderate",
+  "answer": 0,
+  "question": "\"लड़ाई\" शब्द में प्रयुक्त प्रत्यय कौन-सा है?",
+  "subject": "hindi",
+  "options": [
+   "आई",
+   "ई",
+   "लड़",
+   "आ"
+  ],
+  "source": "seed",
+  "explanation": "लड़ + आई = लड़ाई। \"आई\" कृत् प्रत्यय है, जैसे— पढ़ाई, चढ़ाई, सिलाई।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "seed-100",
+  "difficulty": "moderate",
+  "answer": 1,
+  "question": "हिंदी वर्णमाला में \"ट, ठ, ड, ढ, ण\" किस वर्ग के व्यंजन हैं?",
+  "subject": "hindi",
+  "options": [
+   "तवर्ग",
+   "टवर्ग",
+   "चवर्ग",
+   "पवर्ग"
+  ],
+  "source": "seed",
+  "explanation": "ये मूर्धन्य ध्वनियाँ हैं और टवर्ग कहलाती हैं, क्योंकि उच्चारण में जिह्वा मूर्धा को स्पर्श करती है।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0153",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "'वह अपनी सारी जमा-पूँजी खो बैठा' – इस वाक्य में 'खो बैठा' है –",
+  "subject": "hindi",
+  "options": [
+   "संयुक्त क्रिया",
+   "प्रेरणार्थक क्रिया",
+   "नामधातु क्रिया",
+   "अकर्मक क्रिया"
+  ],
+  "source": "import",
+  "explanation": "दो क्रियाओं के मेल से बनी क्रिया संयुक्त क्रिया कहलाती है।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0341",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "राजकोषीय घाटा किसका संकेतक है?",
+  "subject": "bhugol",
+  "options": [
+   "सरकार के कुल व्यय और उधार को छोड़कर कुल प्राप्तियों के बीच अंतर",
+   "केवल निर्यात-आयात का अंतर",
+   "बैंक जमा का अंतर",
+   "जनसंख्या वृद्धि"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0474",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "2026-27 में उत्तर प्रदेश का लक्षित राजकोषीय घाटा GSDP का लगभग कितना है?",
+  "subject": "bhugol",
+  "options": [
+   "1%",
+   "2%",
+   "3%",
+   "5%"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0073",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 2,
+  "question": "2011 की जनगणना के अनुसार उत्तर प्रदेश की साक्षरता दर कितनी थी?",
+  "subject": "vigyan",
+  "options": [
+   "61.20%",
+   "65.38%",
+   "67.68%",
+   "74.04%"
+  ],
+  "source": "import",
+  "explanation": "पुरुष 77.28%, महिला 57.18%।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0077",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "जनसंख्या की दृष्टि से भारत का सबसे बड़ा एवं सबसे छोटा राज्य क्रमशः है –",
+  "subject": "vigyan",
+  "options": [
+   "उत्तर प्रदेश एवं सिक्किम",
+   "महाराष्ट्र एवं गोवा",
+   "उत्तर प्रदेश एवं गोवा",
+   "बिहार एवं सिक्किम"
+  ],
+  "source": "import",
+  "explanation": "2011 की जनगणना के अनुसार।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0271",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "मानव विकास सूचकांक (HDI) रिपोर्ट प्रतिवर्ष किस अंतर्राष्ट्रीय संस्था द्वारा प्रकाशित की जाती है?",
+  "subject": "ca",
+  "options": [
+   "विश्व बैंक",
+   "UNDP",
+   "IMF",
+   "विश्व आर्थिक मंच"
+  ],
+  "source": "import",
+  "explanation": "HDI रिपोर्ट UNDP द्वारा प्रतिवर्ष जारी की जाती है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0414",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत में जनगणना सामान्यतः कितने वर्षों के अंतराल पर होती है?",
+  "subject": "reasoning",
+  "options": [
+   "5",
+   "10",
+   "15",
+   "20"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0415",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "नीति आयोग ने किस संस्था का स्थान लिया?",
+  "subject": "reasoning",
+  "options": [
+   "योजना आयोग",
+   "वित्त आयोग",
+   "निर्वाचन आयोग",
+   "UPSC"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0244",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "जनगणना 2011 के अनुसार, भारत के किस राज्य का लिंगानुपात सर्वाधिक है?",
+  "subject": "up",
+  "options": [
+   "केरल",
+   "तमिलनाडु",
+   "आंध्र प्रदेश",
+   "हरियाणा"
+  ],
+  "source": "import",
+  "explanation": "केरल का लिंगानुपात (1084) सर्वाधिक है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0245",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "भारत के किस राज्य में अनुसूचित जनजाति (ST) की जनसंख्या आधिकारिक रूप से शून्य/अनुपस्थित है?",
+  "subject": "up",
+  "options": [
+   "पंजाब और हरियाणा",
+   "मध्य प्रदेश",
+   "ओडिशा",
+   "राजस्थान"
+  ],
+  "source": "import",
+  "explanation": "पंजाब एवं हरियाणा में कोई भी अनुसूचित जनजाति नहीं है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0263",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "राष्ट्रीय कृषि और ग्रामीण विकास बैंक (नाबार्ड) की स्थापना किस समिति की सिफारिश पर हुई थी?",
+  "subject": "ca",
+  "options": [
+   "हिल्टन यंग आयोग",
+   "बी० शिवरामन समिति",
+   "नरसिम्हम समिति",
+   "गाडगिल समिति"
+  ],
+  "source": "import",
+  "explanation": "बी० शिवरामन समिति की सिफारिश पर नाबार्ड बना।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0264",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "भारतीय लघु उद्योग विकास बैंक (SIDBI) का मुख्यालय कहाँ स्थित है?",
+  "subject": "ca",
+  "options": [
+   "मुंबई",
+   "नई दिल्ली",
+   "लखनऊ",
+   "कोलकाता"
+  ],
+  "source": "import",
+  "explanation": "सिडबी (SIDBI) का मुख्यालय लखनऊ में स्थित है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0265",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "भारत में थोक मूल्य सूचकांक (WPI) के आंकड़े किस कार्यालय द्वारा जारी किए जाते हैं?",
+  "subject": "ca",
+  "options": [
+   "भारतीय रिजर्व बैंक",
+   "नीति आयोग",
+   "आर्थिक सलाहकार कार्यालय",
+   "NSO"
+  ],
+  "source": "import",
+  "explanation": "थोक मूल्य सूचकांक आर्थिक सलाहकार कार्यालय जारी करता है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0268",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "जीएसटी (GST) परिषद की अध्यक्षता किसके द्वारा की जाती है?",
+  "subject": "ca",
+  "options": [
+   "प्रधानमंत्री",
+   "केंद्रीय वित्त मंत्री",
+   "गवर्नर, RBI",
+   "वित्त सचिव"
+  ],
+  "source": "import",
+  "explanation": "जीएसटी परिषद के अध्यक्ष केंद्रीय वित्त मंत्री होते हैं।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0269",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "'मनरेगा' योजना के तहत ग्रामीण परिवारों को एक वित्तीय वर्ष में न्यूनतम कितने दिनों के रोजगार की गारंटी दी जाती है?",
+  "subject": "ca",
+  "options": [
+   "50 दिन",
+   "100 दिन",
+   "150 दिन",
+   "200 दिन"
+  ],
+  "source": "import",
+  "explanation": "मनरेगा में 100 दिनों के काम की कानूनी गारंटी है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0274",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "केंद्र और राज्यों के बीच करों के बंटवारे की सिफारिश करने वाला संवैधानिक निकाय कौन-सा है?",
+  "subject": "ca",
+  "options": [
+   "नीति आयोग",
+   "वित्त आयोग",
+   "अंतर-राज्यीय परिषद",
+   "नियंत्रक एवं महालेखा परीक्षक"
+  ],
+  "source": "import",
+  "explanation": "अनुच्छेद 280 के तहत वित्त आयोग करों का बंटवारा तय करता है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0275",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "नकद आरक्षित अनुपात (CRR) के तहत वाणिज्यिक बैंकों को अपनी जमा राशि का एक निश्चित भाग कहाँ रखना होता है?",
+  "subject": "ca",
+  "options": [
+   "स्वयं के पास नकद",
+   "भारतीय रिजर्व बैंक (RBI) के पास",
+   "सोने के रूप में",
+   "सरकारी प्रतिभूतियों में"
+  ],
+  "source": "import",
+  "explanation": "CRR का नकद हिस्सा बैंकों को RBI के पास रखना होता है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0508",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "हरित क्रांति के संदर्भ में ‘उच्च उपज वाली किस्में’ किसका प्रमुख घटक थीं?",
+  "subject": "ca",
+  "options": [
+   "HYV बीज",
+   "केवल जैविक खाद",
+   "केवल वर्षा जल",
+   "केवल पशुपालन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0499",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "‘ब्लू इकॉनमी’ का संबंध मुख्यतः किससे है?",
+  "subject": "ca",
+  "options": [
+   "समुद्री संसाधनों के सतत आर्थिक उपयोग से",
+   "केवल अंतरिक्ष से",
+   "केवल कृषि से",
+   "केवल वन से"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0398",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "फिरोजाबाद किस उद्योग के लिए प्रसिद्ध है?",
+  "subject": "arth",
+  "options": [
+   "कांच/चूड़ी",
+   "चमड़ा",
+   "कालीन",
+   "पीतल"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "seed-035",
+  "difficulty": "moderate",
+  "answer": 1,
+  "question": "उत्तर प्रदेश का राजकीय पक्षी कौन-सा है?",
+  "subject": "bhugol",
+  "options": [
+   "मोर",
+   "सारस क्रेन (क्रौंच)",
+   "बगुला",
+   "कठफोड़वा"
+  ],
+  "source": "seed",
+  "explanation": "राजकीय पशु बारहसिंगा, राजकीय वृक्ष अशोक तथा राजकीय पुष्प पलाश है।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0267",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत की किस पंचवर्षीय योजना में मुख्य रूप से 'गरीबी हटाओ' का नारा दिया गया था?",
+  "subject": "ca",
+  "options": [
+   "दूसरी योजना",
+   "तीसरी योजना",
+   "पाँचवीं योजना",
+   "सातवीं योजना"
+  ],
+  "source": "import",
+  "explanation": "अबुल फ़ज़ल ने अकबरनामा लिखी।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0066",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "'हरित क्रांति' के जनक किसे कहा जाता है?",
+  "subject": "arth",
+  "options": [
+   "एम.एस. स्वामीनाथन",
+   "नॉर्मन बोरलॉग",
+   "वर्गीज कुरियन",
+   "डॉ. वी. शान्ता"
+  ],
+  "source": "import",
+  "explanation": "भारत में हरित क्रांति के जनक डॉ. एम.एस. स्वामीनाथन हैं।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "seed-013",
+  "difficulty": "moderate",
+  "answer": 0,
+  "question": "भारत का प्रथम गवर्नर जनरल तथा स्वतंत्र भारत का प्रथम भारतीय गवर्नर जनरल क्रमशः थे—",
+  "subject": "itihas",
+  "options": [
+   "वारेन हेस्टिंग्स और सी. राजगोपालाचारी",
+   "लॉर्ड कैनिंग और राजेंद्र प्रसाद",
+   "विलियम बेंटिक और माउंटबेटन",
+   "लॉर्ड डलहौजी और नेहरू"
+  ],
+  "source": "seed",
+  "explanation": "विलियम बेंटिक \"भारत का प्रथम गवर्नर जनरल\" (1833 चार्टर एक्ट) था; बंगाल का प्रथम गवर्नर जनरल वारेन हेस्टिंग्स था तथा सी. राजगोपालाचारी अंतिम एवं एकमात्र भारतीय गवर्नर जनरल रहे।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0019",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "असहयोग आन्दोलन को किस कांग्रेस अधिवेशन में स्वीकृति मिली?",
+  "subject": "itihas",
+  "options": [
+   "कलकत्ता (1920)",
+   "नागपुर (1920)",
+   "अहमदाबाद (1921)",
+   "गया (1922)"
+  ],
+  "source": "import",
+  "explanation": "नागपुर अधिवेशन, दिसम्बर 1920।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "seed-033",
+  "difficulty": "moderate",
+  "answer": 2,
+  "question": "उत्तर प्रदेश की सीमा कितने राज्यों से लगती है?",
+  "subject": "bhugol",
+  "options": [
+   "7",
+   "8",
+   "9",
+   "10"
+  ],
+  "source": "seed",
+  "explanation": "उत्तराखंड, हिमाचल प्रदेश, हरियाणा, दिल्ली, राजस्थान, मध्य प्रदेश, छत्तीसगढ़, झारखंड व बिहार — साथ ही नेपाल की अंतरराष्ट्रीय सीमा।",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0197",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "विश्व का सबसे ऊँचा सक्रिय ज्वालामुखी पर्वत 'कोटोपैक्सी' किस देश में स्थित है?",
+  "subject": "bhugol",
+  "options": [
+   "जापान",
+   "इटली",
+   "इक्वाडोर",
+   "फिलीपींस"
+  ],
+  "source": "import",
+  "explanation": "कोटोपैक्सी ज्वालामुखी इक्वाडोर देश में स्थित है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0233",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 3,
+  "question": "उत्तर प्रदेश के निम्नलिखित नम भूमियों (Wetlands) में से कौन-सा रामसर स्थल में शामिल नहीं है?",
+  "subject": "up",
+  "options": [
+   "बखिरा वन्यजीव अभयारण्य",
+   "पार्वती अरगा",
+   "सुर सरोवर",
+   "केवलादेव राष्ट्रीय उद्यान"
+  ],
+  "source": "import",
+  "explanation": "केवलादेव राष्ट्रीय उद्यान राजस्थान में है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0141",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "'नगर' का विशेषण है –",
+  "subject": "hindi",
+  "options": [
+   "नगरीय",
+   "नागरिक",
+   "नगरिक",
+   "नागर"
+  ],
+  "source": "import",
+  "explanation": "'नागरिक' एवं 'नगरीय' दोनों प्रचलित हैं; परीक्षा में 'नागरिक' अपेक्षित है।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0170",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "मुग़ल सम्राट अकबर के प्रसिद्ध दरबारी इतिहासकार कौन थे, जिन्होंने 'अकबरनामा' की रचना की?",
+  "subject": "itihas",
+  "options": [
+   "अब्दुल कादिर बदायूंनी",
+   "अबुल फ़ज़ल",
+   "फ़ैज़ी",
+   "निज़ामाबाद अहमद"
+  ],
+  "source": "import",
+  "explanation": "अबुल फ़ज़ल ने अकबरनामा लिखी।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "brahm-116",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-21T11:08:54.309Z",
+  "answer": 0,
+  "question": "प्रश्न 116. (कला एवं संस्कृति - मन्दिर वास्तुकला) प्राचीन एवं मध्यकालीन भारतीय मंदिर वास्तुकला के संदर्भ में निम्नलिखित युग्मों पर विचार कीजिए:",
+  "subject": "itihas",
+  "options": [
+   "केवल 1 और 2",
+   "केवल 2 और 3",
+   "केवल 1 और 3",
+   "1, 2 और 3 तीनों"
+  ],
+  "source": "seed",
+  "explanation": "कथन 3 गलत है क्योंकि भुवनेश्वर का लिंगराज मंदिर नागर शैली (विशेषकर कलिंग वास्तुकला) का महान प्रतीक है, न कि बेसर शैली का।",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-24T04:25:00.626Z"
+ },
+ {
+  "id": "imp-0154",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "हड़प्पा सभ्यता के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए: धोलावीरा नगर तीन मुख्य भागों (दुर्ग, मध्य नगर और निचला नगर) में विभाजित था। लोथल से एक विशाल गोदीवाड़ा (Dockyard) के साक्ष्य प्राप्त हुए हैं।",
+  "subject": "itihas",
+  "options": [
+   "केवल 1",
+   "केवल 2",
+   "1 और 2 दोनों",
+   "न तो 1, न ही 2"
+  ],
+  "source": "import",
+  "explanation": "धोलावीरा 3 भागों में बंटा था; लोथल में गोदीवाड़ा (डॉकयार्ड) मिला।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0159",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "निम्नलिखित घटनाओं को कालानुक्रम में व्यवस्थित कीजिए: लखनऊ समझौता रोलेट सत्याग्रह चौरी-चौरा कांड साइमन कमीशन का भारत आगमन",
+  "subject": "itihas",
+  "options": [
+   "1 - 2 - 3 - 4",
+   "2 - 1 - 3 - 4",
+   "1 - 3 - 2 - 4",
+   "4 - 3 - 2 - 1"
+  ],
+  "source": "import",
+  "explanation": "लखनऊ समझौता (1916) $\\rightarrow$ रोलेट (1919) $\\rightarrow$ चौरी-चौरा (1922) $\\rightarrow$ साइमन (1927)।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0178",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "उत्तर से दक्षिण दिशा की ओर हिमालय की श्रेणियों का सही क्रम चुनिए: जास्कर श्रेणी काराकोरम श्रेणी लद्दाख श्रेणी पीर पंजाल श्रेणी",
+  "subject": "bhugol",
+  "options": [
+   "2 - 3 - 1 - 4",
+   "1 - 2 - 3 - 4",
+   "2 - 1 - 3 - 4",
+   "3 - 2 - 1 - 4"
+  ],
+  "source": "import",
+  "explanation": "काराकोरम $\\rightarrow$ लद्दाख $\\rightarrow$ जास्कर $\\rightarrow$ पीर पंजाल।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0176",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारतीय मानक समय रेखा ($82^\\circ 30'$ पूर्वी देशांतर) भारत के कितने राज्यों से होकर गुजरती है?",
+  "subject": "bhugol",
+  "options": [
+   "4",
+   "5",
+   "6",
+   "7"
+  ],
+  "source": "import",
+  "explanation": "5 राज्यों से (UP, MP, छत्तीसगढ़, ओडिशा, आंध्र प्रदेश)।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0227",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "परमाणु भट्टी (Nuclear Reactor) में भारी जल ($D_2O$) का उपयोग किस रूप में किया जाता है?",
+  "subject": "vigyan",
+  "options": [
+   "ईंधन",
+   "मंदक (Moderator)",
+   "नियंत्रक छड़",
+   "शीतलक"
+  ],
+  "source": "import",
+  "explanation": "न्यूट्रॉन की गति मंद करने हेतु (Moderator)।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0254",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "लाइकेन (Lichens) किस प्रकार के पर्यावरण प्रदूषण के सबसे अच्छे सूचक (Bio-indicators) माने जाते हैं?",
+  "subject": "vigyan",
+  "options": [
+   "जल प्रदूषण",
+   "वायु प्रदूषण ($SO_2$)",
+   "ध्वनि प्रदूषण",
+   "मृदा प्रदूषण"
+  ],
+  "source": "import",
+  "explanation": "लाइकेन वायु प्रदूषण ($SO_2$) के प्रति अति संवेदनशील हैं।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0192",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "सौरमंडल के किस ग्रह का औसत घनत्व सबसे अधिक है?",
+  "subject": "bhugol",
+  "options": [
+   "बृहस्पति",
+   "शनि",
+   "पृथ्वी",
+   "बुध"
+  ],
+  "source": "import",
+  "explanation": "पृथ्वी का घनत्व सौरमंडल में सर्वाधिक ($5.51\\text{ g/cm}^3$) है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0216",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "पृथ्वी की सतह से किसी वस्तु का पलायन वेग (Escape Velocity) कितना होता है?",
+  "subject": "vigyan",
+  "options": [
+   "9.8 km/s",
+   "11.2 km/s",
+   "42 km/s",
+   "2.4 km/s"
+  ],
+  "source": "import",
+  "explanation": "पृथ्वी का पलायन वेग $11.2\\text{ km/s}$ है।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0276",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "यदि किसी सांकेतिक भाषा में 'ROAM' को 'SPSN' लिखा जाता है, तो 'LUCKNOW' को क्या लिखा जाएगा?",
+  "subject": "reasoning",
+  "options": [
+   "MVDLPPX",
+   "MVDLKPX",
+   "MWDLPQX",
+   "MVDLOMX"
+  ],
+  "source": "import",
+  "explanation": "प्रत्येक अक्षर में $+1$ का अंतर: L $\\rightarrow$ M, U $\\rightarrow$ V...",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0278",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "एक व्यक्ति पूर्व दिशा में 4 किमी चलता है, फिर दाएँ मुड़कर 3 किमी चलता है। प्रारंभिक बिंदु से उसकी न्यूनतम दूरी क्या है?",
+  "subject": "reasoning",
+  "options": [
+   "5 किमी",
+   "7 किमी",
+   "6 किमी",
+   "4 किमी"
+  ],
+  "source": "import",
+  "explanation": "पाइथागोरस प्रमेय: $\\sqrt{4^2 + 3^2} = \\sqrt{16+9} = 5$ किमी।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0279",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "40 विद्यार्थियों की एक पंक्ति में राहुल का स्थान ऊपर से 15वाँ है। नीचे से उसका स्थान क्या होगा?",
+  "subject": "reasoning",
+  "options": [
+   "25वाँ",
+   "26वाँ",
+   "27वाँ",
+   "24वाँ"
+  ],
+  "source": "import",
+  "explanation": "नीचे से स्थान $= (40 - 15) + 1 = 26$वाँ।",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0280",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "घड़ी में 3:30 बजे घंटे तथा मिनट की सुइयों के बीच कितने अंश ($^\\circ$) का कोण बनेगा?",
+  "subject": "reasoning",
+  "options": [
+   "$75^\\circ$",
+   "$85^\\circ$",
+   "$90^\\circ$",
+   "$105^\\circ$"
+  ],
+  "source": "import",
+  "explanation": "कोण सूत्र: $",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0420",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "यदि ‘कल’ रविवार था, तो ‘परसों’ कौन-सा दिन होगा?",
+  "subject": "reasoning",
+  "options": [
+   "सोमवार",
+   "मंगलवार",
+   "बुधवार",
+   "गुरुवार"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0362",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भूकंप की तीव्रता मापने के लिए पारंपरिक रूप से कौन-सा पैमाना प्रसिद्ध है?",
+  "subject": "bhugol",
+  "options": [
+   "मर्केली",
+   "रिक्टर",
+   "ब्यूफोर्ट",
+   "सेल्सियस"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0129",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "'जो पहले कभी न हुआ हो' – के लिए एक शब्द है –",
+  "subject": "hindi",
+  "options": [
+   "अद्वितीय",
+   "अभूतपूर्व",
+   "अपूर्व",
+   "अनुपम"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0283",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 3,
+  "question": "विषम संख्या युग्म चुनिए:",
+  "subject": "reasoning",
+  "options": [
+   "8 - 64",
+   "6 - 36",
+   "9 - 81",
+   "7 - 50"
+  ],
+  "source": "import",
+  "explanation": "बाकी सभी $x \\rightarrow x^2$ ($8^2=64, 6^2=36$), परंतु $7^2 = 49 \\neq 50$",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0284",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "मानव शरीर में ऑक्सीजन का परिवहन मुख्यतः किसके द्वारा होता है?",
+  "subject": "vigyan",
+  "options": [
+   "हीमोग्लोबिन",
+   "प्लाज्मा प्रोटीन",
+   "श्वेत रक्त कणिकाएँ",
+   "प्लेटलेट्स"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0285",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 3,
+  "question": "निम्नलिखित में से किस विटामिन का निर्माण त्वचा में सूर्य के प्रकाश की उपस्थिति में होता है?",
+  "subject": "vigyan",
+  "options": [
+   "विटामिन A",
+   "विटामिन B12",
+   "विटामिन C",
+   "विटामिन D"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0286",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "जल का अधिकतम घनत्व लगभग किस तापमान पर होता है?",
+  "subject": "vigyan",
+  "options": [
+   "0°C",
+   "4°C",
+   "25°C",
+   "100°C"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0287",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "विद्युत धारा की SI इकाई क्या है?",
+  "subject": "vigyan",
+  "options": [
+   "वोल्ट",
+   "ओम",
+   "एम्पियर",
+   "कूलॉम"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0288",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "प्रकाश संश्लेषण में पौधे मुख्यतः किस गैस का उपयोग करते हैं?",
+  "subject": "vigyan",
+  "options": [
+   "ऑक्सीजन",
+   "नाइट्रोजन",
+   "कार्बन डाइऑक्साइड",
+   "हाइड्रोजन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0289",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "pH का मान 7 से कम होने पर विलयन सामान्यतः कैसा होता है?",
+  "subject": "vigyan",
+  "options": [
+   "क्षारीय",
+   "अम्लीय",
+   "उदासीन",
+   "लवणीय"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0290",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "न्यूटन का प्रथम गति नियम किस अवधारणा से संबंधित है?",
+  "subject": "vigyan",
+  "options": [
+   "संवेग",
+   "जड़त्व",
+   "गुरुत्वाकर्षण",
+   "ऊष्मा"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0291",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "परमाणु के नाभिक में कौन-से कण पाए जाते हैं?",
+  "subject": "vigyan",
+  "options": [
+   "केवल इलेक्ट्रॉन",
+   "प्रोटॉन और न्यूट्रॉन",
+   "इलेक्ट्रॉन और प्रोटॉन",
+   "केवल न्यूट्रॉन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0292",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "ध्वनि निर्वात में क्यों नहीं चल सकती?",
+  "subject": "vigyan",
+  "options": [
+   "उसकी आवृत्ति शून्य होती है",
+   "उसे माध्यम की आवश्यकता होती है",
+   "उसकी गति अनंत होती है",
+   "वह केवल प्रकाश के साथ चलती है"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0293",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "रक्त का थक्का बनने में कौन-सा घटक प्रमुख भूमिका निभाता है?",
+  "subject": "vigyan",
+  "options": [
+   "लाल रक्त कणिकाएँ",
+   "प्लेटलेट्स",
+   "लसीका",
+   "हीमोग्लोबिन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0295",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "किस धातु को सामान्य तापमान पर तरल अवस्था में पाया जाता है?",
+  "subject": "vigyan",
+  "options": [
+   "लोहा",
+   "तांबा",
+   "पारा",
+   "एल्युमिनियम"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0296",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "इंसुलिन का स्राव अग्न्याशय की किस कोशिकाओं से होता है?",
+  "subject": "vigyan",
+  "options": [
+   "अल्फा कोशिकाएँ",
+   "बीटा कोशिकाएँ",
+   "डेल्टा कोशिकाएँ",
+   "न्यूरॉन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0298",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "जंग लगने की प्रक्रिया में लोहे का मुख्यतः किसके साथ अभिक्रिया करना आवश्यक है?",
+  "subject": "vigyan",
+  "options": [
+   "नाइट्रोजन और हाइड्रोजन",
+   "ऑक्सीजन और नमी",
+   "कार्बन डाइऑक्साइड और नाइट्रोजन",
+   "केवल जलवाष्प"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0363",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "वायुमंडल में सर्वाधिक मात्रा में कौन-सी गैस है?",
+  "subject": "vigyan",
+  "options": [
+   "ऑक्सीजन",
+   "नाइट्रोजन",
+   "कार्बन डाइऑक्साइड",
+   "आर्गन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0366",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "ग्रीनहाउस गैसों में कौन-सी प्रमुख गैस है?",
+  "subject": "vigyan",
+  "options": [
+   "कार्बन डाइऑक्साइड",
+   "हीलियम",
+   "नियॉन",
+   "हाइड्रोजन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0367",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "अम्लीय वर्षा मुख्यतः किन गैसों के कारण होती है?",
+  "subject": "vigyan",
+  "options": [
+   "SO₂ और NOx",
+   "O₂ और N₂",
+   "H₂ और He",
+   "CO और Ar"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0368",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "पर्यावरण संरक्षण अधिनियम भारत में किस वर्ष बना?",
+  "subject": "vigyan",
+  "options": [
+   "1972",
+   "1986",
+   "1991",
+   "2002"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0372",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "सतत विकास का मूल विचार क्या है?",
+  "subject": "vigyan",
+  "options": [
+   "वर्तमान जरूरतों की पूर्ति करते हुए भविष्य की क्षमता बनाए रखना",
+   "केवल औद्योगिक विकास",
+   "केवल वन संरक्षण",
+   "केवल आर्थिक वृद्धि"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0373",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "जैव आवर्धन (Biomagnification) किससे संबंधित है?",
+  "subject": "vigyan",
+  "options": [
+   "खाद्य शृंखला में कुछ विषैले पदार्थों की सांद्रता बढ़ना",
+   "वर्षा में वृद्धि",
+   "मृदा अपरदन",
+   "वन विस्तार"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0459",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "जैव विविधता का अर्थ क्या है?",
+  "subject": "vigyan",
+  "options": [
+   "जीवों, जीन और पारिस्थितिक तंत्रों की विविधता",
+   "केवल पौधों की संख्या",
+   "केवल वन क्षेत्र",
+   "केवल जलीय जीव"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0479",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "ISRO का पूर्ण रूप क्या है?",
+  "subject": "vigyan",
+  "options": [
+   "Indian Space Research Organisation",
+   "Indian Science Research Office",
+   "International Space Research Organisation",
+   "Indian Satellite Research Organisation"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0480",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "चंद्रयान-3 की सफल सॉफ्ट लैंडिंग किस खगोलीय पिंड पर हुई?",
+  "subject": "vigyan",
+  "options": [
+   "मंगल",
+   "चन्द्रमा",
+   "शुक्र",
+   "बुध"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0482",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "क्वांटम कंप्यूटिंग में ‘क्यूबिट’ किसका समतुल्य है?",
+  "subject": "vigyan",
+  "options": [
+   "क्लासिकल बिट का क्वांटम रूप",
+   "सिर्फ मेमोरी चिप",
+   "सेंसर",
+   "नेटवर्क प्रोटोकॉल"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0483",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "कृत्रिम बुद्धिमत्ता (AI) का मूल संबंध किससे है?",
+  "subject": "vigyan",
+  "options": [
+   "मशीनों की सीखने/निर्णय लेने जैसी क्षमताएँ",
+   "केवल बिजली उत्पादन",
+   "केवल उपग्रह प्रक्षेपण",
+   "केवल जैविक खेती"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0484",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "सेमीकंडक्टर का प्रमुख उपयोग किसमें है?",
+  "subject": "vigyan",
+  "options": [
+   "इलेक्ट्रॉनिक उपकरणों में",
+   "केवल खाद निर्माण में",
+   "केवल भवन निर्माण में",
+   "केवल वस्त्र उद्योग में"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0485",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "DNA का पूर्ण रूप क्या है?",
+  "subject": "vigyan",
+  "options": [
+   "Deoxyribonucleic Acid",
+   "Dinitrogen Acid",
+   "Dynamic Nucleic Array",
+   "Deoxygenated Nucleic Acid"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0486",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "CRISPR तकनीक मुख्यतः किससे संबंधित है?",
+  "subject": "vigyan",
+  "options": [
+   "जीन संपादन",
+   "रॉकेट प्रणोदन",
+   "जल शोधन",
+   "भूकंप मापन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0487",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "5G में ‘G’ किसका द्योतक है?",
+  "subject": "vigyan",
+  "options": [
+   "Generation",
+   "Geography",
+   "Gateway",
+   "Grid"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0488",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "डिजिटल सार्वजनिक अवसंरचना का उदाहरण कौन-सा है?",
+  "subject": "vigyan",
+  "options": [
+   "UPI",
+   "केवल डाक टिकट",
+   "केवल कागजी पासबुक",
+   "केवल रेडियो प्रसारण"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0300",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "बौद्ध धर्म के संस्थापक कौन थे?",
+  "subject": "itihas",
+  "options": [
+   "महावीर",
+   "गौतम बुद्ध",
+   "अशोक",
+   "कनिष्क"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0301",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "मौर्य साम्राज्य के संस्थापक कौन थे?",
+  "subject": "itihas",
+  "options": [
+   "बिंदुसार",
+   "चंद्रगुप्त मौर्य",
+   "अशोक",
+   "पुष्यमित्र शुंग"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0302",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "अशोक के अधिकांश अभिलेख किस लिपि में लिखे गए थे?",
+  "subject": "itihas",
+  "options": [
+   "ब्राह्मी",
+   "देवनागरी",
+   "शारदा",
+   "ग्रंथ"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0303",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "गुप्त काल को प्रायः किस नाम से जाना जाता है?",
+  "subject": "itihas",
+  "options": [
+   "भारत का लौह युग",
+   "भारत का स्वर्ण युग",
+   "भारत का औद्योगिक युग",
+   "भारत का वैदिक युग"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0304",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "कुतुब मीनार का निर्माण आरंभ किसने कराया?",
+  "subject": "itihas",
+  "options": [
+   "इल्तुतमिश",
+   "कुतुबुद्दीन ऐबक",
+   "अलाउद्दीन खिलजी",
+   "फिरोज तुगलक"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0306",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "अकबर की धार्मिक नीति में ‘सुलह-ए-कुल’ का अर्थ क्या था?",
+  "subject": "itihas",
+  "options": [
+   "सर्वधर्म समभाव/सार्वभौमिक शांति",
+   "केवल इस्लामी शासन",
+   "कर वृद्धि",
+   "सैन्य विस्तार"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0434",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "‘सुलह-ए-कुल’ नीति किस मुगल शासक से विशेष रूप से जुड़ी है?",
+  "subject": "itihas",
+  "options": [
+   "बाबर",
+   "हुमायूँ",
+   "अकबर",
+   "औरंगजेब"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0307",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "स्थायी बंदोबस्त (Permanent Settlement) किस गवर्नर-जनरल से संबंधित है?",
+  "subject": "itihas",
+  "options": [
+   "वारेन हेस्टिंग्स",
+   "लॉर्ड कॉर्नवालिस",
+   "लॉर्ड वेलेजली",
+   "लॉर्ड डलहौजी"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0308",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "सती प्रथा के उन्मूलन से प्रमुख रूप से किस समाज सुधारक का नाम जुड़ा है?",
+  "subject": "itihas",
+  "options": [
+   "ईश्वरचंद्र विद्यासागर",
+   "राजा राममोहन राय",
+   "स्वामी दयानंद",
+   "ज्योतिबा फुले"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0309",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "भारतीय राष्ट्रीय कांग्रेस की स्थापना किस वर्ष हुई?",
+  "subject": "itihas",
+  "options": [
+   "1885",
+   "1890",
+   "1905",
+   "1911"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0310",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "बंगाल विभाजन 1905 में किस वायसराय के समय हुआ?",
+  "subject": "itihas",
+  "options": [
+   "लॉर्ड कर्जन",
+   "लॉर्ड रिपन",
+   "लॉर्ड इरविन",
+   "लॉर्ड हार्डिंग"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0311",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "जलियांवाला बाग हत्याकांड किस वर्ष हुआ?",
+  "subject": "itihas",
+  "options": [
+   "1917",
+   "1919",
+   "1921",
+   "1922"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0312",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "दांडी मार्च किस आंदोलन से संबंधित था?",
+  "subject": "itihas",
+  "options": [
+   "असहयोग आंदोलन",
+   "सविनय अवज्ञा आंदोलन",
+   "भारत छोड़ो आंदोलन",
+   "खिलाफत आंदोलन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0313",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "भारत छोड़ो आंदोलन का प्रस्ताव किस वर्ष पारित हुआ?",
+  "subject": "itihas",
+  "options": [
+   "1939",
+   "1940",
+   "1942",
+   "1946"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0438",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "स्वदेशी आंदोलन का तत्कालीन प्रमुख कारण क्या था?",
+  "subject": "itihas",
+  "options": [
+   "रॉलेट एक्ट",
+   "बंगाल विभाजन",
+   "साइमन कमीशन",
+   "क्रिप्स मिशन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0439",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "असहयोग आंदोलन किस घटना के बाद वापस लिया गया?",
+  "subject": "itihas",
+  "options": [
+   "जलियांवाला बाग",
+   "चौरी-चौरा",
+   "काकोरी",
+   "दांडी मार्च"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0440",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "सविनय अवज्ञा आंदोलन का प्रतीकात्मक आरम्भ किससे हुआ?",
+  "subject": "itihas",
+  "options": [
+   "चम्पारण सत्याग्रह",
+   "दांडी मार्च",
+   "खेड़ा सत्याग्रह",
+   "भारत छोड़ो आंदोलन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0442",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "क्रिप्स मिशन भारत कब आया?",
+  "subject": "itihas",
+  "options": [
+   "1940",
+   "1942",
+   "1945",
+   "1946"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0443",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "कैबिनेट मिशन भारत किस वर्ष आया?",
+  "subject": "itihas",
+  "options": [
+   "1942",
+   "1945",
+   "1946",
+   "1947"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0314",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारतीय संविधान को संविधान सभा ने कब अंगीकृत किया?",
+  "subject": "polity",
+  "options": [
+   "15 अगस्त 1947",
+   "26 नवंबर 1949",
+   "26 जनवरी 1950",
+   "9 दिसंबर 1946"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0315",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारतीय संविधान में मौलिक अधिकार किस भाग में हैं?",
+  "subject": "polity",
+  "options": [
+   "भाग II",
+   "भाग III",
+   "भाग IV",
+   "भाग V"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0316",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "संविधान का अनुच्छेद 14 किससे संबंधित है?",
+  "subject": "polity",
+  "options": [
+   "जीवन का अधिकार",
+   "समानता का अधिकार",
+   "धर्म की स्वतंत्रता",
+   "संवैधानिक उपचार"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0318",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "राज्य के नीति-निदेशक तत्व किस भाग में हैं?",
+  "subject": "polity",
+  "options": [
+   "भाग III",
+   "भाग IV",
+   "भाग IVA",
+   "भाग V"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0320",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत के राष्ट्रपति का चुनाव किस प्रकार होता है?",
+  "subject": "polity",
+  "options": [
+   "प्रत्यक्ष चुनाव",
+   "निर्वाचक मंडल द्वारा अप्रत्यक्ष चुनाव",
+   "केवल संसद द्वारा",
+   "केवल राज्य विधानसभाओं द्वारा"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0321",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "राष्ट्रपति को पद की शपथ कौन दिलाता है?",
+  "subject": "polity",
+  "options": [
+   "प्रधानमंत्री",
+   "उपराष्ट्रपति",
+   "भारत के मुख्य न्यायाधीश",
+   "लोकसभा अध्यक्ष"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0322",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "राज्यसभा के एक सदस्य का सामान्य कार्यकाल कितना होता है?",
+  "subject": "polity",
+  "options": [
+   "4 वर्ष",
+   "5 वर्ष",
+   "6 वर्ष",
+   "7 वर्ष"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0323",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "धन विधेयक को धन विधेयक प्रमाणित करने का अधिकार किसके पास है?",
+  "subject": "polity",
+  "options": [
+   "राष्ट्रपति",
+   "राज्यसभा सभापति",
+   "लोकसभा अध्यक्ष",
+   "प्रधानमंत्री"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0324",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत में संघ लोक सेवा आयोग का उल्लेख किस अनुच्छेद में है?",
+  "subject": "polity",
+  "options": [
+   "280",
+   "315",
+   "324",
+   "356"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0328",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "74वाँ संविधान संशोधन किससे संबंधित है?",
+  "subject": "polity",
+  "options": [
+   "पंचायतें",
+   "नगरपालिकाएँ",
+   "अनुसूचित क्षेत्र",
+   "आपातकाल"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0329",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "राष्ट्रीय आपातकाल किस अनुच्छेद के अंतर्गत घोषित किया जाता है?",
+  "subject": "polity",
+  "options": [
+   "352",
+   "356",
+   "360",
+   "365"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0331",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "वित्तीय आपातकाल किस अनुच्छेद से संबंधित है?",
+  "subject": "polity",
+  "options": [
+   "352",
+   "356",
+   "360",
+   "365"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0332",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "संविधान संशोधन की सामान्य प्रक्रिया किस अनुच्छेद में है?",
+  "subject": "polity",
+  "options": [
+   "123",
+   "226",
+   "368",
+   "395"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0333",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत में न्यायिक पुनरावलोकन (Judicial Review) का मुख्य उद्देश्य क्या है?",
+  "subject": "polity",
+  "options": [
+   "कार्यपालिका को समाप्त करना",
+   "कानूनों की संवैधानिकता की जाँच करना",
+   "संसद को भंग करना",
+   "राज्यों को समाप्त करना"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0401",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "उत्तर प्रदेश में त्रिस्तरीय पंचायती राज व्यवस्था में जिला स्तर की संस्था कौन-सी है?",
+  "subject": "polity",
+  "options": [
+   "ग्राम पंचायत",
+   "क्षेत्र पंचायत",
+   "जिला पंचायत",
+   "नगर पालिका"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0413",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "‘लोकसभा’ में ‘लोक’ शब्द किसका संकेत करता है?",
+  "subject": "polity",
+  "options": [
+   "जनता",
+   "न्यायपालिका",
+   "कार्यपालिका",
+   "राज्यपाल"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0335",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "RBI का मुख्यालय कहाँ है?",
+  "subject": "arth",
+  "options": [
+   "नई दिल्ली",
+   "मुंबई",
+   "कोलकाता",
+   "चेन्नई"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0337",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "मुद्रास्फीति का सामान्य अर्थ क्या है?",
+  "subject": "arth",
+  "options": [
+   "सामान्य मूल्य स्तर में लगातार वृद्धि",
+   "बेरोजगारी में कमी",
+   "उत्पादन में वृद्धि",
+   "मुद्रा आपूर्ति का समाप्त होना"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0338",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत में राष्ट्रीय आय का आधिकारिक अनुमान वर्तमान में कौन जारी करता है?",
+  "subject": "arth",
+  "options": [
+   "RBI",
+   "NSO",
+   "SEBI",
+   "NITI आयोग"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0339",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "GST भारत में किस प्रकार का कर है?",
+  "subject": "arth",
+  "options": [
+   "प्रत्यक्ष कर",
+   "अप्रत्यक्ष कर",
+   "संपत्ति कर",
+   "कृषि आयकर"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0342",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "भुगतान संतुलन (Balance of Payments) किससे संबंधित है?",
+  "subject": "arth",
+  "options": [
+   "देश के बाह्य आर्थिक लेन-देन",
+   "केवल कृषि उत्पादन",
+   "केवल सरकारी वेतन",
+   "केवल घरेलू बचत"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0343",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "SEBI का प्रमुख कार्य क्या है?",
+  "subject": "arth",
+  "options": [
+   "बीमा नियमन",
+   "प्रतिभूति बाजार का विनियमन",
+   "मौद्रिक नीति",
+   "जनगणना"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0344",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत में मौद्रिक नीति समिति (MPC) में कुल कितने सदस्य होते हैं?",
+  "subject": "arth",
+  "options": [
+   "4",
+   "6",
+   "8",
+   "10"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0345",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "प्राथमिक क्षेत्र का प्रमुख उदाहरण कौन-सा है?",
+  "subject": "arth",
+  "options": [
+   "कृषि",
+   "बैंकिंग",
+   "सॉफ्टवेयर",
+   "बीमा"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0347",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "भारत में हरित क्रांति का सबसे अधिक संबंध किस फसल समूह से रहा?",
+  "subject": "arth",
+  "options": [
+   "गेहूँ और चावल",
+   "चाय और कॉफी",
+   "कपास और जूट",
+   "गन्ना और तंबाकू"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0348",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "किसी देश की GDP में सेवाक्षेत्र के बढ़ते योगदान का अर्थ सामान्यतः क्या है?",
+  "subject": "arth",
+  "options": [
+   "अर्थव्यवस्था में सेवा गतिविधियों का महत्व बढ़ना",
+   "कृषि का पूर्ण अंत",
+   "निर्यात का अंत",
+   "मुद्रा का अवमूल्यन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0374",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "खरीफ फसलों की बुवाई सामान्यतः किस मौसम में होती है?",
+  "subject": "arth",
+  "options": [
+   "मानसून के आरंभ के साथ",
+   "शीत ऋतु",
+   "वसंत के अंत में ही",
+   "सालभर समान"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0375",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "रबी की प्रमुख फसल कौन-सी है?",
+  "subject": "arth",
+  "options": [
+   "गेहूँ",
+   "धान",
+   "कपास",
+   "जूट"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0376",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "दलहनी फसलों का एक प्रमुख गुण क्या है?",
+  "subject": "arth",
+  "options": [
+   "नाइट्रोजन स्थिरीकरण में सहायता",
+   "मिट्टी से सारा जल निकालना",
+   "केवल अम्लीय मिट्टी में उगना",
+   "किसी पोषक तत्व की आवश्यकता न होना"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0377",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "MSP का पूर्ण रूप क्या है?",
+  "subject": "arth",
+  "options": [
+   "Minimum Support Price",
+   "Maximum Selling Price",
+   "Market Supply Plan",
+   "Minimum Storage Policy"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0378",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "कृषि में ड्रिप सिंचाई का प्रमुख लाभ क्या है?",
+  "subject": "arth",
+  "options": [
+   "जल उपयोग दक्षता बढ़ाना",
+   "मृदा को पूरी तरह सुखाना",
+   "केवल वर्षा पर निर्भरता",
+   "खाद की आवश्यकता समाप्त करना"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0381",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "भारत का विदेशी व्यापार किस संस्था के नीति-निर्देशन से मुख्यतः जुड़ा है?",
+  "subject": "arth",
+  "options": [
+   "वाणिज्य मंत्रालय/DGFT",
+   "निर्वाचन आयोग",
+   "UPSC",
+   "NITI आयोग ही अकेले"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0382",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "WTO का मुख्यालय कहाँ है?",
+  "subject": "arth",
+  "options": [
+   "जेनेवा",
+   "पेरिस",
+   "रोम",
+   "वियना"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0383",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "निर्यात और आयात के मूल्य के अंतर को क्या कहा जाता है?",
+  "subject": "arth",
+  "options": [
+   "व्यापार संतुलन",
+   "राजकोषीय घाटा",
+   "प्राथमिक घाटा",
+   "राजस्व अधिशेष"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0458",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "कृषि में जैव उर्वरक का उद्देश्य क्या है?",
+  "subject": "arth",
+  "options": [
+   "उपयोगी सूक्ष्मजीवों द्वारा पोषक तत्व उपलब्धता बढ़ाना",
+   "सभी सूक्ष्मजीव नष्ट करना",
+   "सिंचाई समाप्त करना",
+   "मृदा अपरदन बढ़ाना"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0501",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "2026-27 के उत्तर प्रदेश बजट में GSDP का अनुमान लगभग कितना रखा गया?",
+  "subject": "arth",
+  "options": [
+   "19.8 लाख करोड़ रुपये",
+   "29.8 लाख करोड़ रुपये",
+   "39.8 लाख करोड़ रुपये",
+   "49.8 लाख करोड़ रुपये"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0507",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "भारत में पहली पंचवर्षीय योजना का मुख्य जोर किस पर था?",
+  "subject": "arth",
+  "options": [
+   "कृषि एवं सिंचाई",
+   "भारी उद्योग",
+   "IT क्षेत्र",
+   "रक्षा निर्यात"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0349",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत में मानसून की मुख्य दिशा किस महासागरीय क्षेत्र से आती है?",
+  "subject": "bhugol",
+  "options": [
+   "अटलांटिक महासागर",
+   "हिंद महासागर",
+   "प्रशांत महासागर",
+   "आर्कटिक महासागर"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0350",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत की सबसे लंबी नदी कौन-सी मानी जाती है?",
+  "subject": "bhugol",
+  "options": [
+   "यमुना",
+   "गंगा",
+   "गोदावरी",
+   "नर्मदा"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0351",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "नर्मदा नदी किस प्रकार की घाटी से होकर बहती है?",
+  "subject": "bhugol",
+  "options": [
+   "रिफ्ट घाटी",
+   "हिमानी घाटी",
+   "कार्स्ट घाटी",
+   "डेल्टा घाटी"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0352",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "काली मिट्टी किस फसल के लिए विशेष रूप से उपयुक्त है?",
+  "subject": "bhugol",
+  "options": [
+   "कपास",
+   "चाय",
+   "जूट",
+   "केसर"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0353",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत में सर्वाधिक वर्षा वाला क्षेत्र किस राज्य में स्थित है?",
+  "subject": "bhugol",
+  "options": [
+   "राजस्थान",
+   "मेघालय",
+   "गुजरात",
+   "हरियाणा"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0354",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत का मानक समय किस देशांतर पर आधारित है?",
+  "subject": "bhugol",
+  "options": [
+   "68°7' पूर्व",
+   "82°30' पूर्व",
+   "90° पूर्व",
+   "77°30' पूर्व"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0356",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "सुंदरबन डेल्टा मुख्यतः किन नदियों से संबंधित है?",
+  "subject": "bhugol",
+  "options": [
+   "गंगा-ब्रह्मपुत्र-मेघना",
+   "नर्मदा-ताप्ती",
+   "गोदावरी-कृष्णा",
+   "सिंधु-झेलम"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0358",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "भारत का सबसे बड़ा मरुस्थल कौन-सा है?",
+  "subject": "bhugol",
+  "options": [
+   "गोबी",
+   "थार",
+   "कालाहारी",
+   "सहारा"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0359",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "प्रायद्वीपीय भारत की अधिकांश नदियाँ किस दिशा में बहकर बंगाल की खाड़ी में गिरती हैं?",
+  "subject": "bhugol",
+  "options": [
+   "पूर्व",
+   "पश्चिम",
+   "उत्तर",
+   "दक्षिण"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0360",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "पश्चिमी घाट और पूर्वी घाट कहाँ मिलते हैं?",
+  "subject": "bhugol",
+  "options": [
+   "अरावली",
+   "नीलगिरि",
+   "शिवालिक",
+   "विंध्य"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0361",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "विश्व का सबसे बड़ा महासागर कौन-सा है?",
+  "subject": "bhugol",
+  "options": [
+   "अटलांटिक",
+   "हिंद",
+   "प्रशांत",
+   "आर्कटिक"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0384",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "उत्तर प्रदेश की राजधानी कौन-सी है?",
+  "subject": "up",
+  "options": [
+   "कानपुर",
+   "लखनऊ",
+   "प्रयागराज",
+   "वाराणसी"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0386",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "उत्तर प्रदेश का राजकीय पशु कौन-सा है?",
+  "subject": "up",
+  "options": [
+   "बारहसिंगा",
+   "बाघ",
+   "हाथी",
+   "नीलगाय"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0387",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "उत्तर प्रदेश में कुम्भ का प्रमुख आयोजन किस नगर से संबंधित है?",
+  "subject": "up",
+  "options": [
+   "अयोध्या",
+   "प्रयागराज",
+   "झाँसी",
+   "मेरठ"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0388",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "सारनाथ किस जिले के निकट स्थित है?",
+  "subject": "up",
+  "options": [
+   "वाराणसी",
+   "लखनऊ",
+   "गोरखपुर",
+   "आगरा"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0390",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "उत्तर प्रदेश का प्रमुख गन्ना उत्पादक क्षेत्र मुख्यतः किस भौगोलिक भाग में है?",
+  "subject": "up",
+  "options": [
+   "पश्चिमी उत्तर प्रदेश",
+   "बुंदेलखंड ही केवल",
+   "पूर्वांचल ही केवल",
+   "विंध्य क्षेत्र ही केवल"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0393",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "काकोरी कांड किससे संबंधित था?",
+  "subject": "up",
+  "options": [
+   "सरकारी खजाना ले जा रही ट्रेन की क्रांतिकारी कार्रवाई",
+   "नमक कानून",
+   "किसान आंदोलन",
+   "साइमन कमीशन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0394",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "आगरा किस ऐतिहासिक स्मारक के लिए विश्व प्रसिद्ध है?",
+  "subject": "up",
+  "options": [
+   "ताजमहल",
+   "साँची स्तूप",
+   "कोणार्क मंदिर",
+   "चारमीनार"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0395",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "कानपुर का प्रमुख पारंपरिक औद्योगिक क्षेत्र किससे जुड़ा रहा है?",
+  "subject": "up",
+  "options": [
+   "चमड़ा और वस्त्र",
+   "चाय",
+   "जूट ही केवल",
+   "जहाज निर्माण"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0399",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "लखनऊ की प्रसिद्ध चिकनकारी किस प्रकार की कला है?",
+  "subject": "up",
+  "options": [
+   "कढ़ाई",
+   "धातु शिल्प",
+   "लकड़ी नक्काशी",
+   "मिट्टी कला"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0400",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "नोएडा किस जिले में स्थित है?",
+  "subject": "up",
+  "options": [
+   "गौतम बुद्ध नगर",
+   "गाजियाबाद",
+   "मेरठ",
+   "बुलंदशहर"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0402",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "उत्तर प्रदेश का कौन-सा नगर ‘पीतल नगरी’ के नाम से प्रसिद्ध है?",
+  "subject": "up",
+  "options": [
+   "मुरादाबाद",
+   "अलीगढ़",
+   "वाराणसी",
+   "सहारनपुर"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0475",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "UP Budget 2026-27 में नई पहल के रूप में किस क्षेत्र के मिशन का उल्लेख है?",
+  "subject": "up",
+  "options": [
+   "नई एवं उभरती प्रौद्योगिकी तथा AI",
+   "केवल मत्स्य पालन",
+   "केवल पर्यटन",
+   "केवल खनन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0477",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "ODOP का मूल उद्देश्य क्या है?",
+  "subject": "up",
+  "options": [
+   "जिलों के विशिष्ट उत्पादों को बढ़ावा देना",
+   "केवल कृषि कर लगाना",
+   "केवल सरकारी खरीद बंद करना",
+   "केवल आयात बढ़ाना"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0478",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "उत्तर प्रदेश डिफेन्स इंडस्ट्रियल कॉरिडोर का प्रमुख उद्देश्य क्या है?",
+  "subject": "up",
+  "options": [
+   "रक्षा विनिर्माण एवं निवेश को बढ़ावा देना",
+   "केवल पर्यटन बढ़ाना",
+   "केवल कृषि निर्यात रोकना",
+   "केवल शिक्षा संस्थान खोलना"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0403",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "भारत में राष्ट्रीय शिक्षा नीति (NEP) 2020 किस वर्ष घोषित हुई?",
+  "subject": "ca",
+  "options": [
+   "2018",
+   "2019",
+   "2020",
+   "2021"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0404",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "अंतरराष्ट्रीय योग दिवस कब मनाया जाता है?",
+  "subject": "ca",
+  "options": [
+   "21 जून",
+   "5 जून",
+   "11 जुलाई",
+   "29 अगस्त"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0406",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "संयुक्त राष्ट्र दिवस कब मनाया जाता है?",
+  "subject": "ca",
+  "options": [
+   "24 अक्टूबर",
+   "10 दिसंबर",
+   "5 जून",
+   "1 मई"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0407",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "राष्ट्रीय मतदाता दिवस भारत में कब मनाया जाता है?",
+  "subject": "ca",
+  "options": [
+   "25 जनवरी",
+   "26 जनवरी",
+   "15 अगस्त",
+   "2 अक्टूबर"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0500",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 3,
+  "question": "भारत का आधिकारिक ‘राष्ट्रीय खेल’ कौन-सा है?",
+  "subject": "ca",
+  "options": [
+   "हॉकी",
+   "क्रिकेट",
+   "कबड्डी",
+   "कोई आधिकारिक राष्ट्रीय खेल घोषित नहीं है"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0408",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "यदि किसी संख्या का 20% = 50 है, तो वह संख्या क्या होगी?",
+  "subject": "reasoning",
+  "options": [
+   "200",
+   "250",
+   "300",
+   "400"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0409",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "श्रृंखला 2, 6, 12, 20, 30, ? में अगली संख्या क्या होगी?",
+  "subject": "reasoning",
+  "options": [
+   "40",
+   "42",
+   "44",
+   "46"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0410",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "यदि सभी गुलाब फूल हैं और कुछ फूल लाल हैं, तो निश्चित रूप से कौन-सा कथन सही है?",
+  "subject": "reasoning",
+  "options": [
+   "सभी गुलाब लाल हैं",
+   "कुछ गुलाब लाल हैं",
+   "सभी गुलाब फूल हैं",
+   "कोई फूल लाल नहीं है"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0411",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "एक व्यक्ति उत्तर की ओर 5 किमी जाता है, फिर दाएँ मुड़कर 3 किमी जाता है। वह प्रारंभिक बिंदु से किस दिशा में है?",
+  "subject": "reasoning",
+  "options": [
+   "उत्तर-पश्चिम",
+   "उत्तर-पूर्व",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0412",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "यदि A, B से लंबा है और B, C से लंबा है, तो सबसे छोटा कौन है?",
+  "subject": "reasoning",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "निर्धारित नहीं"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0418",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 2,
+  "question": "यदि 3 पेन की कीमत 45 रुपये है, तो 8 पेन की कीमत कितनी होगी?",
+  "subject": "reasoning",
+  "options": [
+   "100",
+   "110",
+   "120",
+   "135"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0419",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "एक कक्षा में रवि ऊपर से 12वें और नीचे से 18वें स्थान पर है। कक्षा में कुल कितने विद्यार्थी हैं?",
+  "subject": "reasoning",
+  "options": [
+   "29",
+   "30",
+   "31",
+   "32"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0421",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "एक घड़ी में 3 बजे घंटे और मिनट की सुई के बीच कोण कितना होता है?",
+  "subject": "reasoning",
+  "options": [
+   "60°",
+   "90°",
+   "120°",
+   "180°"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0494",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "यदि सभी गुलाब फूल हैं और सभी फूल पौधे हैं, तो कौन-सा निष्कर्ष निश्चित है?",
+  "subject": "reasoning",
+  "options": [
+   "सभी गुलाब पौधे हैं",
+   "सभी पौधे गुलाब हैं",
+   "कुछ पौधे गुलाब नहीं हैं",
+   "कोई गुलाब फूल नहीं है"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0495",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 1,
+  "question": "एक व्यक्ति 4 किमी पूर्व और फिर 4 किमी उत्तर जाता है। प्रारम्भिक बिंदु से उसकी दिशा क्या होगी?",
+  "subject": "reasoning",
+  "options": [
+   "दक्षिण-पश्चिम",
+   "उत्तर-पूर्व",
+   "दक्षिण-पूर्व",
+   "उत्तर-पश्चिम"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0496",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-23T05:10:06.051Z",
+  "exams": [
+   "roaro"
+  ],
+  "answer": 0,
+  "question": "यदि BOOK के प्रत्येक अक्षर को अगला अक्षर लिखकर कोड किया जाए, तो कोड क्या होगा?",
+  "subject": "reasoning",
+  "options": [
+   "CPPL",
+   "CQQM",
+   "BNNJ",
+   "DQQM"
+  ],
+  "source": "import",
+  "explanation": "",
+  "papers": [
+   "roaro-gs"
+  ],
+  "updatedAt": "2026-08-23T05:10:06.051Z"
+ },
+ {
+  "id": "imp-0116",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "'उत्कर्ष' का विलोम है –",
+  "subject": "hindi",
+  "options": [
+   "अपकर्ष",
+   "विकर्ष",
+   "निष्कर्ष",
+   "संकर्ष"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0117",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "'आदान' का विलोम है –",
+  "subject": "hindi",
+  "options": [
+   "विदान",
+   "प्रदान",
+   "अवदान",
+   "संदान"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0118",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "'संयोग' का विलोम है –",
+  "subject": "hindi",
+  "options": [
+   "दुर्योग",
+   "वियोग",
+   "अयोग",
+   "प्रयोग"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0120",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "'मूक' का विलोम है –",
+  "subject": "hindi",
+  "options": [
+   "वाचाल",
+   "बधिर",
+   "श्रवण",
+   "मौन"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0122",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "'अनुरक्त' का विलोम है –",
+  "subject": "hindi",
+  "options": [
+   "विरक्त",
+   "आसक्त",
+   "संसक्त",
+   "प्रतिरक्त"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0123",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "'कृतज्ञ' का विलोम है –",
+  "subject": "hindi",
+  "options": [
+   "कृतार्थ",
+   "कृतघ्न",
+   "अकृत",
+   "विकृत"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0124",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "'जिसकी कभी मृत्यु न हो' – के लिए एक शब्द है –",
+  "subject": "hindi",
+  "options": [
+   "अजर",
+   "अमर",
+   "अजेय",
+   "अक्षय"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0125",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "'जो सब कुछ जानता हो' – के लिए एक शब्द है –",
+  "subject": "hindi",
+  "options": [
+   "सर्वव्यापी",
+   "सर्वज्ञ",
+   "विद्वान",
+   "बहुज्ञ"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0126",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "'जिसका कोई शत्रु न हो' – के लिए एक शब्द है –",
+  "subject": "hindi",
+  "options": [
+   "अजातशत्रु",
+   "निर्द्वन्द्व",
+   "निर्विरोध",
+   "अरिहन्त"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0128",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "'रात में विचरण करने वाला' – के लिए एक शब्द है –",
+  "subject": "hindi",
+  "options": [
+   "निशाचर",
+   "नभचर",
+   "जलचर",
+   "खेचर"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0130",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 3,
+  "question": "'जिसकी उपमा न हो' – के लिए एक शब्द है –",
+  "subject": "hindi",
+  "options": [
+   "अनुपम",
+   "अतुल",
+   "निरुपम",
+   "उपर्युक्त सभी"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0132",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "'आग' शब्द का तत्सम रूप है –",
+  "subject": "hindi",
+  "options": [
+   "अग्नि",
+   "अनल",
+   "आगि",
+   "अग्नी"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0134",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "'कान' का तत्सम रूप है –",
+  "subject": "hindi",
+  "options": [
+   "कर्ण",
+   "कान्त",
+   "करण",
+   "कणु"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0135",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "'खेत' का तत्सम रूप है –",
+  "subject": "hindi",
+  "options": [
+   "क्षेत्र",
+   "क्षेत",
+   "खेट",
+   "क्षत्र"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0136",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "'ऊँट' का तत्सम रूप है –",
+  "subject": "hindi",
+  "options": [
+   "उष्ट्र",
+   "ऊष्ट्र",
+   "उन्ट",
+   "उष्ण"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0138",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "'आम्र' का तद्भव रूप है –",
+  "subject": "hindi",
+  "options": [
+   "आमला",
+   "आम",
+   "अमिय",
+   "आमी"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0139",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "'प्रान्त' शब्द का विशेषण है –",
+  "subject": "hindi",
+  "options": [
+   "प्रान्तक",
+   "प्रान्तीय",
+   "प्रान्तिक",
+   "प्रान्तज"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0140",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "'इतिहास' का विशेषण रूप है –",
+  "subject": "hindi",
+  "options": [
+   "ऐतिहासिक",
+   "इतिहासिक",
+   "ऐतिहास",
+   "इतिहासीय"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0142",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 0,
+  "question": "'सप्ताह' का विशेषण है –",
+  "subject": "hindi",
+  "options": [
+   "साप्ताहिक",
+   "सप्ताहिक",
+   "सप्तक",
+   "साप्तिक"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0143",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "'पिता' का विशेषण रूप है –",
+  "subject": "hindi",
+  "options": [
+   "पितृत्व",
+   "पैतृक",
+   "पितामह",
+   "पितरी"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0146",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "शुद्ध वर्तनी वाला शब्द है –",
+  "subject": "hindi",
+  "options": [
+   "उज्जवल",
+   "उज्ज्वल",
+   "उजज्वल",
+   "उज्वल"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0147",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "शुद्ध वर्तनी वाला शब्द है –",
+  "subject": "hindi",
+  "options": [
+   "अनुग्रहीत",
+   "अनुगृहीत",
+   "अनुगृहित",
+   "अनुग्रहित"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0148",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "शुद्ध वर्तनी वाला शब्द है –",
+  "subject": "hindi",
+  "options": [
+   "कवियित्री",
+   "कवयित्री",
+   "कवयत्री",
+   "कवियत्री"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0149",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 1,
+  "question": "शुद्ध वर्तनी वाला शब्द है –",
+  "subject": "hindi",
+  "options": [
+   "द्वन्द",
+   "द्वन्द्व",
+   "द्वंद",
+   "द्धन्द्व"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ },
+ {
+  "id": "imp-0150",
+  "difficulty": "moderate",
+  "createdAt": "2026-08-22T19:53:20.777Z",
+  "answer": 2,
+  "question": "शुद्ध वर्तनी वाला शब्द है –",
+  "subject": "hindi",
+  "options": [
+   "आर्शीवाद",
+   "आशिर्वाद",
+   "आशीर्वाद",
+   "आशीरवाद"
+  ],
+  "source": "import",
+  "explanation": "",
+  "exams": [
+   "roaro"
+  ],
+  "papers": [
+   "roaro-hindi"
+  ],
+  "updatedAt": "2026-08-22T20:05:58.315Z"
+ }
+]
