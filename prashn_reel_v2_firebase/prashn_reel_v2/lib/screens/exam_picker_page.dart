@@ -134,7 +134,10 @@ class _ExamPickerPageState extends State<ExamPickerPage> {
                             color: c,
                             height: 1.3)),
                     const SizedBox(height: 2),
-                    Text('गलत जवाब पर ${exam.negative} अंक कटता है',
+                    Text(
+                        exam.negative == '0'
+                            ? 'गलत जवाब पर अंक नहीं कटता'
+                            : 'गलत जवाब पर ${exam.negative} अंक कटता है',
                         style: TextStyle(fontSize: 11.5, color: P.muted)),
                   ],
                 ),

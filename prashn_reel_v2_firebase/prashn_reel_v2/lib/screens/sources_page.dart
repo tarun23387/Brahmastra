@@ -84,7 +84,8 @@ class SourcesPage extends StatelessWidget {
                     'ब्रह्मास्त्र एक निजी ऐप है, जिसे परीक्षा की तैयारी करने वालों के '
                     'अभ्यास के लिए बनाया गया है। यह किसी सरकारी संस्था का ऐप नहीं है। '
                     'यह उत्तर प्रदेश सरकार, भारत सरकार, उत्तर प्रदेश लोक सेवा आयोग '
-                    '(UPPSC), उत्तर प्रदेश अधीनस्थ सेवा चयन आयोग (UPSSSC) या किसी भी '
+                    '(UPPSC), उत्तर प्रदेश अधीनस्थ सेवा चयन आयोग (UPSSSC), राष्ट्रीय '
+                    'परीक्षा एजेंसी (NTA), विश्वविद्यालय अनुदान आयोग (UGC) या किसी भी '
                     'अन्य सरकारी विभाग, आयोग या एजेंसी का प्रतिनिधित्व नहीं करता, न '
                     'उनसे जुड़ा है, न उनके द्वारा समर्थित या अधिकृत है।',
                     style: TextStyle(fontSize: 13.5, height: 1.6, color: P.ink),
@@ -125,6 +126,16 @@ class SourcesPage extends StatelessWidget {
               'द्वारा जारी किए गए हैं।',
               style: TextStyle(fontSize: 13.5, height: 1.65, color: P.muted),
             ),
+            const SizedBox(height: 10),
+            const Text(
+              'UGC NET (कंप्यूटर साइंस और भूगोल) के प्रश्न भी पिछले वर्षों के '
+              'प्रश्नपत्र नहीं हैं। ये NTA की UGC-NET दिसंबर 2026 सूचना-पुस्तिका '
+              'की परीक्षा योजना और UGC के प्रकाशित पाठ्यक्रम '
+              '(ugcnetonline.in) को देखकर अभ्यास के लिए स्वयं तैयार किए गए '
+              'प्रश्न हैं। ये NTA या UGC के वास्तविक प्रश्न नहीं हैं और न ही '
+              'उनके द्वारा जारी किए गए हैं।',
+              style: TextStyle(fontSize: 13.5, height: 1.65, color: P.muted),
+            ),
             const SizedBox(height: 14),
 
             ..._authorities.map((e) => _SourceCard(
@@ -137,6 +148,11 @@ class SourcesPage extends StatelessWidget {
                 )),
 
             const SizedBox(height: 10),
+            const _SourceCard(
+              authority: 'विश्वविद्यालय अनुदान आयोग (UGC) — NET ब्यूरो',
+              exams: 'UGC NET — सभी विषयों का आधिकारिक पाठ्यक्रम',
+              url: 'https://www.ugcnetonline.in/syllabus-new.php',
+            ),
             const _SourceCard(
               authority: 'भारत सरकार का राष्ट्रीय पोर्टल',
               exams: 'सामान्य अध्ययन — विभागों और योजनाओं की आधिकारिक जानकारी',

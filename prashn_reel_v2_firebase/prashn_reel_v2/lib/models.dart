@@ -177,6 +177,13 @@ const Map<String, Subject> kSubjects = {
   // फीका स्लेटी रखा है: बाक़ी सारे विषय चटख हैं, और यह उनसे अलग दिखे.
   'computer':
       Subject('कंप्यूटर अनुप्रयोग', Color(0xFF334155), Icons.memory_outlined),
+
+  // UGC NET का प्रथम प्रश्नपत्र — शिक्षण, शोध, संप्रेषण, तर्क, ICT, उच्च
+  // शिक्षा. ⚠️ पुराने ऐप में यह विषय नहीं है, और fromMap अनजान विषय को
+  // 'ca' बना देता है — पर पुराने ऐप में NET की परीक्षा ही नहीं दिखती,
+  // इसलिए ये प्रश्न वहाँ तक पहुँचते ही नहीं.
+  'shikshan': Subject(
+      'शिक्षण व शोध अभिरुचि', Color(0xFF8A3B12), Icons.school_outlined),
 };
 
 Subject subjectOf(String id) => kSubjects[id] ?? kSubjects['ca']!;

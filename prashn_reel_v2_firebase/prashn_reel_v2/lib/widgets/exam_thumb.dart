@@ -41,6 +41,10 @@ const Map<String, ExamLook> kExamLooks = {
       FontAwesomeIcons.server, 'Manager (System)', 'सिस्टम · नेटवर्क · DB'),
   'prog-fin': ExamLook([Color(0xFF7C3AED), Color(0xFF34116E)],
       FontAwesomeIcons.chartLine, 'Programmer (Finance)', 'कंप्यूटर · वित्त'),
+  'net-cs': ExamLook([Color(0xFF0F766E), Color(0xFF053B37)],
+      FontAwesomeIcons.laptopCode, 'UGC NET', 'प्रथम प्रश्नपत्र + कंप्यूटर साइंस'),
+  'net-geo': ExamLook([Color(0xFF15803D), Color(0xFF0A3D1F)],
+      FontAwesomeIcons.earthAsia, 'UGC NET', 'प्रथम प्रश्नपत्र + भूगोल'),
 };
 
 /// thumbnail की चौड़ाई÷ऊँचाई — grid भी यही लेते हैं (landing, dashboard).

@@ -45,6 +45,14 @@ function paperFor(exam, subject) {
     case 'prog-fin':
       return 'prog-fin-main';
 
+    // UGC NET — प्रथम प्रश्नपत्र (विषय 'shikshan') सब विषयों में साझा है:
+    // ऐसे प्रश्न पर exams: ['net-cs', 'net-geo'] लगाइए, तो वह दोनों के
+    // प्रथम प्रश्नपत्र में चला जाएगा. द्वितीय प्रश्नपत्र विषय से तय होता है.
+    case 'net-cs':
+      return subject === 'shikshan' ? 'net-cs-p1' : subject === 'computer' ? 'net-cs-p2' : null;
+    case 'net-geo':
+      return subject === 'shikshan' ? 'net-geo-p1' : subject === 'bhugol' ? 'net-geo-p2' : null;
+
     default:
       return null;
   }

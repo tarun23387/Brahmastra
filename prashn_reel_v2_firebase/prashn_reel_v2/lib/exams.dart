@@ -143,6 +143,38 @@ const Map<String, Exam> kExams = {
     paperIds: ['prog-fin-main'],
     ready: true, // 85 प्रश्न — मॉक टेस्ट-3
   ),
+
+  // ── UGC NET (NTA) — दिसंबर 2026 की सूचना-पुस्तिका के अनुसार ──
+  //
+  // हर विषय की अपनी परीक्षा है, क्योंकि सदस्यता परीक्षा-वार बिकती है और
+  // कंप्यूटर वाले छात्र को भूगोल के प्रश्न देना बेमतलब है. प्रथम प्रश्नपत्र
+  // (शिक्षण व शोध अभिरुचि) सब विषयों में एक जैसा है, इसलिए उसके प्रश्न
+  // दोनों परीक्षाओं में साझा हैं — हर एक का अपना पेपर-id बस इसलिए है कि
+  // Paper का examId एक ही हो सकता है.
+  //
+  // NET में ग़लत उत्तर पर अंक नहीं कटते — negative '0' है.
+  'net-cs': Exam(
+    id: 'net-cs',
+    label: 'UGC NET — कंप्यूटर साइंस एवं एप्लिकेशन्स',
+    shortLabel: 'NET कंप्यूटर',
+    authority: 'NTA',
+    authorityFullName: 'राष्ट्रीय परीक्षा एजेंसी (NTA)',
+    sourceUrl: 'https://ugcnet.nta.nic.in',
+    negative: '0',
+    paperIds: ['net-cs-p1', 'net-cs-p2'],
+    ready: true, // 50 प्रथम प्रश्नपत्र + 100 कंप्यूटर साइंस
+  ),
+  'net-geo': Exam(
+    id: 'net-geo',
+    label: 'UGC NET — भूगोल',
+    shortLabel: 'NET भूगोल',
+    authority: 'NTA',
+    authorityFullName: 'राष्ट्रीय परीक्षा एजेंसी (NTA)',
+    sourceUrl: 'https://ugcnet.nta.nic.in',
+    negative: '0',
+    paperIds: ['net-geo-p1', 'net-geo-p2'],
+    ready: true, // 50 प्रथम प्रश्नपत्र + 100 भूगोल
+  ),
 };
 
 const Map<String, Paper> kPapers = {
@@ -225,6 +257,44 @@ const Map<String, Paper> kPapers = {
     // कंप्यूटर 100 · तार्किक 30 · गणित 20 · अंग्रेज़ी 20
     subjects: ['computer', 'reasoning', 'ganit', 'english'],
   ),
+
+  // UGC NET — दोनों पेपर एक ही बैठक में, कुल 3 घंटे, बीच में विराम नहीं.
+  'net-cs-p1': Paper(
+    id: 'net-cs-p1',
+    examId: 'net-cs',
+    label: 'प्रथम प्रश्नपत्र — शिक्षण व शोध अभिरुचि',
+    questions: 50,
+    marks: 100,
+    note: '10 इकाइयाँ, हर इकाई से 5 प्रश्न',
+    subjects: ['shikshan'],
+  ),
+  'net-cs-p2': Paper(
+    id: 'net-cs-p2',
+    examId: 'net-cs',
+    label: 'द्वितीय प्रश्नपत्र — कंप्यूटर साइंस',
+    questions: 100,
+    marks: 200,
+    note: 'विषय कोड 87, 10 इकाइयाँ',
+    subjects: ['computer'],
+  ),
+  'net-geo-p1': Paper(
+    id: 'net-geo-p1',
+    examId: 'net-geo',
+    label: 'प्रथम प्रश्नपत्र — शिक्षण व शोध अभिरुचि',
+    questions: 50,
+    marks: 100,
+    note: '10 इकाइयाँ, हर इकाई से 5 प्रश्न',
+    subjects: ['shikshan'],
+  ),
+  'net-geo-p2': Paper(
+    id: 'net-geo-p2',
+    examId: 'net-geo',
+    label: 'द्वितीय प्रश्नपत्र — भूगोल',
+    questions: 100,
+    marks: 200,
+    note: 'विषय कोड 80, 10 इकाइयाँ',
+    subjects: ['bhugol'],
+  ),
 };
 
 Exam? examOf(String id) => kExams[id];
@@ -248,7 +318,7 @@ const Set<String> kEmptySubjects = {};
 const Map<String, List<String>> kSubjectToPapers = {
   'itihas': ['uppcs-gs1', 'roaro-gs', 'pet-main'],
   'polity': ['uppcs-gs1', 'roaro-gs', 'pet-main'],
-  'bhugol': ['uppcs-gs1', 'roaro-gs', 'pet-main'],
+  'bhugol': ['uppcs-gs1', 'roaro-gs', 'pet-main', 'net-geo-p2'],
   'arth': ['uppcs-gs1', 'roaro-gs', 'pet-main'],
   'vigyan': ['uppcs-gs1', 'roaro-gs', 'pet-main'],
   'up': ['uppcs-gs1', 'roaro-gs', 'pet-main'],
@@ -262,7 +332,10 @@ const Map<String, List<String>> kSubjectToPapers = {
 
   // तकनीकी पदों का अपना विषय — इन्हीं तीन पेपरों में जाता है, ऊपर वाली
   // सामान्य अध्ययन की परीक्षाओं में कहीं नहीं.
-  'computer': ['prog-sr-main', 'mgr-system-main', 'prog-fin-main'],
+  'computer': ['prog-sr-main', 'mgr-system-main', 'prog-fin-main', 'net-cs-p2'],
+
+  // UGC NET का प्रथम प्रश्नपत्र — सब विषयों में एक जैसा.
+  'shikshan': ['net-cs-p1', 'net-geo-p1'],
 };
 
 /// नए रंग — `models.dart` के kSubjects में जो विषय नहीं हैं उनके लिए.
