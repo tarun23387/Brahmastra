@@ -1,0 +1,731 @@
+[
+ {
+  "c": "c",
+  "u": 3,
+  "items": 23,
+  "w": 18.2,
+  "sess": 5,
+  "fmts": 5,
+  "score": 47.3
+ },
+ {
+  "c": "io",
+  "u": 2,
+  "items": 13,
+  "w": 11.6,
+  "sess": 5,
+  "fmts": 5,
+  "score": 37.4
+ },
+ {
+  "c": "oop",
+  "u": 3,
+  "items": 13,
+  "w": 10.45,
+  "sess": 5,
+  "fmts": 6,
+  "score": 36.675
+ },
+ {
+  "c": "logic",
+  "u": 1,
+  "items": 16,
+  "w": 12.1,
+  "sess": 5,
+  "fmts": 3,
+  "score": 36.15
+ },
+ {
+  "c": "metrics",
+  "u": 6,
+  "items": 15,
+  "w": 13.95,
+  "sess": 4,
+  "fmts": 3,
+  "score": 35.925
+ },
+ {
+  "c": "ann",
+  "u": 10,
+  "items": 12,
+  "w": 9.2,
+  "sess": 5,
+  "fmts": 5,
+  "score": 33.8
+ },
+ {
+  "c": "sdlc",
+  "u": 6,
+  "items": 11,
+  "w": 8.45,
+  "sess": 5,
+  "fmts": 5,
+  "score": 32.675
+ },
+ {
+  "c": "cg",
+  "u": 3,
+  "items": 12,
+  "w": 10.1,
+  "sess": 4,
+  "fmts": 4,
+  "score": 31.15
+ },
+ {
+  "c": "disk",
+  "u": 5,
+  "items": 11,
+  "w": 9.149999999999999,
+  "sess": 4,
+  "fmts": 5,
+  "score": 30.724999999999998
+ },
+ {
+  "c": "fa",
+  "u": 8,
+  "items": 12,
+  "w": 9.5,
+  "sess": 4,
+  "fmts": 4,
+  "score": 30.25
+ },
+ {
+  "c": "tree",
+  "u": 7,
+  "items": 9,
+  "w": 7.75,
+  "sess": 5,
+  "fmts": 2,
+  "score": 28.625
+ },
+ {
+  "c": "digi",
+  "u": 2,
+  "items": 10,
+  "w": 8.25,
+  "sess": 4,
+  "fmts": 4,
+  "score": 28.375
+ },
+ {
+  "c": "asym",
+  "u": 7,
+  "items": 8,
+  "w": 6.85,
+  "sess": 5,
+  "fmts": 3,
+  "score": 28.275
+ },
+ {
+  "c": "mem",
+  "u": 2,
+  "items": 10,
+  "w": 8.05,
+  "sess": 4,
+  "fmts": 4,
+  "score": 28.075000000000003
+ },
+ {
+  "c": "mac",
+  "u": 9,
+  "items": 7,
+  "w": 5.85,
+  "sess": 5,
+  "fmts": 4,
+  "score": 27.775
+ },
+ {
+  "c": "pagemem",
+  "u": 5,
+  "items": 8,
+  "w": 6.3,
+  "sess": 5,
+  "fmts": 3,
+  "score": 27.45
+ },
+ {
+  "c": "pipe",
+  "u": 2,
+  "items": 7,
+  "w": 5.55,
+  "sess": 5,
+  "fmts": 4,
+  "score": 27.325
+ },
+ {
+  "c": "phys",
+  "u": 9,
+  "items": 9,
+  "w": 8.05,
+  "sess": 4,
+  "fmts": 3,
+  "score": 27.075000000000003
+ },
+ {
+  "c": "tm",
+  "u": 8,
+  "items": 8,
+  "w": 7.25,
+  "sess": 4,
+  "fmts": 4,
+  "score": 26.875
+ },
+ {
+  "c": "parse",
+  "u": 8,
+  "items": 9,
+  "w": 7.85,
+  "sess": 4,
+  "fmts": 3,
+  "score": 26.775
+ },
+ {
+  "c": "txn",
+  "u": 4,
+  "items": 6,
+  "w": 5.15,
+  "sess": 5,
+  "fmts": 4,
+  "score": 26.725
+ },
+ {
+  "c": "ip",
+  "u": 9,
+  "items": 9,
+  "w": 7.1,
+  "sess": 4,
+  "fmts": 4,
+  "score": 26.65
+ },
+ {
+  "c": "norm",
+  "u": 4,
+  "items": 10,
+  "w": 7.649999999999999,
+  "sess": 4,
+  "fmts": 2,
+  "score": 25.474999999999998
+ },
+ {
+  "c": "design",
+  "u": 6,
+  "items": 7,
+  "w": 6,
+  "sess": 4,
+  "fmts": 4,
+  "score": 25
+ },
+ {
+  "c": "rel",
+  "u": 1,
+  "items": 6,
+  "w": 5.3,
+  "sess": 4,
+  "fmts": 5,
+  "score": 24.95
+ },
+ {
+  "c": "ml",
+  "u": 10,
+  "items": 6,
+  "w": 5.3,
+  "sess": 4,
+  "fmts": 5,
+  "score": 24.95
+ },
+ {
+  "c": "sched",
+  "u": 5,
+  "items": 7,
+  "w": 6.4,
+  "sess": 4,
+  "fmts": 2,
+  "score": 23.6
+ },
+ {
+  "c": "grp",
+  "u": 1,
+  "items": 6,
+  "w": 5.45,
+  "sess": 4,
+  "fmts": 3,
+  "score": 23.175
+ },
+ {
+  "c": "graph",
+  "u": 1,
+  "items": 7,
+  "w": 6,
+  "sess": 4,
+  "fmts": 2,
+  "score": 23
+ },
+ {
+  "c": "cfl",
+  "u": 8,
+  "items": 6,
+  "w": 5.25,
+  "sess": 4,
+  "fmts": 3,
+  "score": 22.875
+ },
+ {
+  "c": "graphalg",
+  "u": 7,
+  "items": 6,
+  "w": 5.55,
+  "sess": 3,
+  "fmts": 5,
+  "score": 22.325
+ },
+ {
+  "c": "comp",
+  "u": 8,
+  "items": 8,
+  "w": 6.2,
+  "sess": 3,
+  "fmts": 4,
+  "score": 22.3
+ },
+ {
+  "c": "testing",
+  "u": 6,
+  "items": 5,
+  "w": 4,
+  "sess": 4,
+  "fmts": 4,
+  "score": 22
+ },
+ {
+  "c": "design7",
+  "u": 7,
+  "items": 7,
+  "w": 6.25,
+  "sess": 3,
+  "fmts": 3,
+  "score": 21.375
+ },
+ {
+  "c": "ra",
+  "u": 4,
+  "items": 9,
+  "w": 6.85,
+  "sess": 3,
+  "fmts": 2,
+  "score": 21.275
+ },
+ {
+  "c": "er",
+  "u": 4,
+  "items": 6,
+  "w": 4.699999999999999,
+  "sess": 4,
+  "fmts": 2,
+  "score": 21.049999999999997
+ },
+ {
+  "c": "transport",
+  "u": 9,
+  "items": 6,
+  "w": 4.6,
+  "sess": 4,
+  "fmts": 2,
+  "score": 20.9
+ },
+ {
+  "c": "prob",
+  "u": 1,
+  "items": 5,
+  "w": 3.8499999999999996,
+  "sess": 4,
+  "fmts": 3,
+  "score": 20.775
+ },
+ {
+  "c": "ds",
+  "u": 7,
+  "items": 5,
+  "w": 4.3,
+  "sess": 4,
+  "fmts": 2,
+  "score": 20.45
+ },
+ {
+  "c": "lpp",
+  "u": 1,
+  "items": 7,
+  "w": 5,
+  "sess": 3,
+  "fmts": 3,
+  "score": 19.5
+ },
+ {
+  "c": "nlp",
+  "u": 10,
+  "items": 5,
+  "w": 4.6,
+  "sess": 3,
+  "fmts": 3,
+  "score": 18.9
+ },
+ {
+  "c": "netsec",
+  "u": 9,
+  "items": 5,
+  "w": 3.9,
+  "sess": 3,
+  "fmts": 4,
+  "score": 18.85
+ },
+ {
+  "c": "sync",
+  "u": 5,
+  "items": 4,
+  "w": 3.15,
+  "sess": 4,
+  "fmts": 2,
+  "score": 18.725
+ },
+ {
+  "c": "instcyc",
+  "u": 2,
+  "items": 4,
+  "w": 3.15,
+  "sess": 4,
+  "fmts": 2,
+  "score": 18.725
+ },
+ {
+  "c": "ga",
+  "u": 10,
+  "items": 6,
+  "w": 4.45,
+  "sess": 3,
+  "fmts": 3,
+  "score": 18.675
+ },
+ {
+  "c": "quality",
+  "u": 6,
+  "items": 5,
+  "w": 4.25,
+  "sess": 3,
+  "fmts": 3,
+  "score": 18.375
+ },
+ {
+  "c": "osi",
+  "u": 9,
+  "items": 6,
+  "w": 6,
+  "sess": 2,
+  "fmts": 3,
+  "score": 18
+ },
+ {
+  "c": "sortsearch",
+  "u": 7,
+  "items": 4,
+  "w": 3.7,
+  "sess": 3,
+  "fmts": 3,
+  "score": 17.55
+ },
+ {
+  "c": "proc",
+  "u": 5,
+  "items": 4,
+  "w": 3,
+  "sess": 3,
+  "fmts": 3,
+  "score": 16.5
+ },
+ {
+  "c": "dll",
+  "u": 9,
+  "items": 4,
+  "w": 3.45,
+  "sess": 3,
+  "fmts": 2,
+  "score": 16.175
+ },
+ {
+  "c": "java",
+  "u": 3,
+  "items": 3,
+  "w": 2.55,
+  "sess": 3,
+  "fmts": 3,
+  "score": 15.825
+ },
+ {
+  "c": "linux",
+  "u": 5,
+  "items": 4,
+  "w": 3.05,
+  "sess": 3,
+  "fmts": 2,
+  "score": 15.575
+ },
+ {
+  "c": "hash",
+  "u": 7,
+  "items": 4,
+  "w": 3.05,
+  "sess": 3,
+  "fmts": 2,
+  "score": 15.575
+ },
+ {
+  "c": "datarep",
+  "u": 2,
+  "items": 4,
+  "w": 3,
+  "sess": 3,
+  "fmts": 2,
+  "score": 15.5
+ },
+ {
+  "c": "bool",
+  "u": 1,
+  "items": 3,
+  "w": 2.85,
+  "sess": 3,
+  "fmts": 2,
+  "score": 15.275
+ },
+ {
+  "c": "comb",
+  "u": 1,
+  "items": 4,
+  "w": 3.4,
+  "sess": 3,
+  "fmts": 1,
+  "score": 15.1
+ },
+ {
+  "c": "app",
+  "u": 9,
+  "items": 3,
+  "w": 2.55,
+  "sess": 3,
+  "fmts": 2,
+  "score": 14.825
+ },
+ {
+  "c": "mas",
+  "u": 10,
+  "items": 3,
+  "w": 2.45,
+  "sess": 3,
+  "fmts": 2,
+  "score": 14.675
+ },
+ {
+  "c": "numth",
+  "u": 1,
+  "items": 3,
+  "w": 2.45,
+  "sess": 3,
+  "fmts": 2,
+  "score": 14.675
+ },
+ {
+  "c": "req",
+  "u": 6,
+  "items": 3,
+  "w": 2.45,
+  "sess": 3,
+  "fmts": 1,
+  "score": 13.675
+ },
+ {
+  "c": "kr",
+  "u": 10,
+  "items": 3,
+  "w": 2.85,
+  "sess": 2,
+  "fmts": 3,
+  "score": 13.275
+ },
+ {
+  "c": "osbasic",
+  "u": 5,
+  "items": 3,
+  "w": 2.7,
+  "sess": 2,
+  "fmts": 2,
+  "score": 12.05
+ },
+ {
+  "c": "fuzzy",
+  "u": 10,
+  "items": 3,
+  "w": 2.3,
+  "sess": 2,
+  "fmts": 2,
+  "score": 11.45
+ },
+ {
+  "c": "icg",
+  "u": 8,
+  "items": 3,
+  "w": 2.2,
+  "sess": 2,
+  "fmts": 2,
+  "score": 11.3
+ },
+ {
+  "c": "vm",
+  "u": 5,
+  "items": 2,
+  "w": 1.85,
+  "sess": 2,
+  "fmts": 2,
+  "score": 10.775
+ },
+ {
+  "c": "plan",
+  "u": 10,
+  "items": 2,
+  "w": 1.85,
+  "sess": 2,
+  "fmts": 2,
+  "score": 10.775
+ },
+ {
+  "c": "dw",
+  "u": 4,
+  "items": 2,
+  "w": 1.85,
+  "sess": 2,
+  "fmts": 2,
+  "score": 10.775
+ },
+ {
+  "c": "sql",
+  "u": 4,
+  "items": 2,
+  "w": 1.7,
+  "sess": 2,
+  "fmts": 2,
+  "score": 10.55
+ },
+ {
+  "c": "opt",
+  "u": 8,
+  "items": 5,
+  "w": 4.25,
+  "sess": 1,
+  "fmts": 1,
+  "score": 10.375
+ },
+ {
+  "c": "switching",
+  "u": 9,
+  "items": 2,
+  "w": 1.45,
+  "sess": 2,
+  "fmts": 2,
+  "score": 10.175
+ },
+ {
+  "c": "idx",
+  "u": 4,
+  "items": 2,
+  "w": 1.6,
+  "sess": 2,
+  "fmts": 1,
+  "score": 9.4
+ },
+ {
+  "c": "routing",
+  "u": 9,
+  "items": 2,
+  "w": 1.6,
+  "sess": 2,
+  "fmts": 1,
+  "score": 9.4
+ },
+ {
+  "c": "dead",
+  "u": 5,
+  "items": 5,
+  "w": 3.5,
+  "sess": 1,
+  "fmts": 1,
+  "score": 9.25
+ },
+ {
+  "c": "string",
+  "u": 7,
+  "items": 2,
+  "w": 1.45,
+  "sess": 2,
+  "fmts": 1,
+  "score": 9.175
+ },
+ {
+  "c": "bigdata",
+  "u": 4,
+  "items": 2,
+  "w": 2,
+  "sess": 1,
+  "fmts": 2,
+  "score": 8
+ },
+ {
+  "c": "aibasic",
+  "u": 10,
+  "items": 2,
+  "w": 2,
+  "sess": 1,
+  "fmts": 2,
+  "score": 8
+ },
+ {
+  "c": "rtl",
+  "u": 2,
+  "items": 3,
+  "w": 1.7999999999999998,
+  "sess": 1,
+  "fmts": 2,
+  "score": 7.699999999999999
+ },
+ {
+  "c": "search",
+  "u": 10,
+  "items": 3,
+  "w": 1.7999999999999998,
+  "sess": 1,
+  "fmts": 2,
+  "score": 7.699999999999999
+ },
+ {
+  "c": "npc",
+  "u": 7,
+  "items": 1,
+  "w": 1,
+  "sess": 1,
+  "fmts": 1,
+  "score": 5.5
+ },
+ {
+  "c": "sysw",
+  "u": 5,
+  "items": 1,
+  "w": 1,
+  "sess": 1,
+  "fmts": 1,
+  "score": 5.5
+ },
+ {
+  "c": "mobile",
+  "u": 9,
+  "items": 1,
+  "w": 0.85,
+  "sess": 1,
+  "fmts": 1,
+  "score": 5.275
+ }
+]

@@ -1,0 +1,1857 @@
+[
+ {
+  "id": "net-cs-001",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Read the passage and answer the question.\n\nPassage: An organisation estimates the size of a new payroll system at 32 KLOC and classifies it as an organic project. It uses Basic COCOMO, with Effort E = 2.4 (KLOC)^1.05 person-months and Development time D = 2.5 (E)^0.38 months. The average cost of one person-month is ₹1,20,000.\n\nWhat is the estimated effort E?",
+  "options": [
+   "About 76.8 person-months",
+   "About 145.5 person-months",
+   "About 91.3 person-months",
+   "About 38.1 person-months"
+  ],
+  "answer": 2,
+  "explanation": "E = 2.4 × 32^1.05 = 2.4 × 38.06 ≈ 91.3 PM। जाल: घातांक भूलकर 2.4 × 32 = 76.8; semi-detached के मान (3.0, 1.12) लेकर 145.5; और गुणांक 2.4 छोड़कर केवल 32^1.05 = 38.1।"
+ },
+ {
+  "id": "net-cs-002",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Read the passage and answer the question.\n\nPassage: An organisation estimates the size of a new payroll system at 32 KLOC and classifies it as an organic project. It uses Basic COCOMO, with Effort E = 2.4 (KLOC)^1.05 person-months and Development time D = 2.5 (E)^0.38 months. The average cost of one person-month is ₹1,20,000.\n\nWhat is the estimated development time D?",
+  "options": [
+   "About 13.9 months",
+   "About 12.1 months",
+   "About 9.3 months",
+   "About 20.5 months"
+  ],
+  "answer": 0,
+  "explanation": "पहले E ≈ 91.3 PM, फिर D = 2.5 × 91.3^0.38 ≈ 13.9 माह। जाल: semi-detached का घातांक 0.35 लेने पर 12.1, और E की जगह KLOC (32) रख देने पर 2.5 × 32^0.38 ≈ 9.3।"
+ },
+ {
+  "id": "net-cs-003",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Read the passage and answer the question.\n\nPassage: An organisation estimates the size of a new payroll system at 32 KLOC and classifies it as an organic project. It uses Basic COCOMO, with Effort E = 2.4 (KLOC)^1.05 person-months and Development time D = 2.5 (E)^0.38 months. The average cost of one person-month is ₹1,20,000.\n\nWhat is the average staffing level implied by the estimate?",
+  "options": [
+   "About 13.9 persons",
+   "About 2.3 persons",
+   "About 7.5 persons",
+   "About 6.6 persons"
+  ],
+  "answer": 3,
+  "explanation": "औसत स्टाफ़ = E / D = 91.3 / 13.9 ≈ 6.6 व्यक्ति। 7.5 ग़लत D (12.1) से, 2.3 = KLOC / D, और 13.9 तो स्वयं D है — इन्हीं भूलों से विकल्प बने हैं।"
+ },
+ {
+  "id": "net-cs-004",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Read the passage and answer the question.\n\nPassage: An organisation estimates the size of a new payroll system at 32 KLOC and classifies it as an organic project. It uses Basic COCOMO, with Effort E = 2.4 (KLOC)^1.05 person-months and Development time D = 2.5 (E)^0.38 months. The average cost of one person-month is ₹1,20,000.\n\nWhat is the productivity of the project?",
+  "options": [
+   "About 2.85 LOC per person-month",
+   "About 350 LOC per person-month",
+   "About 2302 LOC per person-month",
+   "About 435 LOC per person-month"
+  ],
+  "answer": 1,
+  "explanation": "उत्पादकता = आकार / प्रयास = 32,000 LOC / 91.3 PM ≈ 350 LOC/PM। 2302 = 32,000 / 13.9 (प्रयास की जगह समय से भाग), 2.85 = 91.3 / 32 (उल्टा अनुपात)।"
+ },
+ {
+  "id": "net-cs-005",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Read the passage and answer the question.\n\nPassage: An organisation estimates the size of a new payroll system at 32 KLOC and classifies it as an organic project. It uses Basic COCOMO, with Effort E = 2.4 (KLOC)^1.05 person-months and Development time D = 2.5 (E)^0.38 months. The average cost of one person-month is ₹1,20,000.\n\nWhat is the estimated labour cost of the project?",
+  "options": [
+   "About ₹38.4 lakh",
+   "About ₹16.7 lakh",
+   "About ₹1.10 crore",
+   "About ₹1.50 crore"
+  ],
+  "answer": 2,
+  "explanation": "लागत = प्रयास × प्रति पर्सन-मंथ दर = 91.3 × ₹1.2 लाख ≈ ₹109.6 लाख ≈ ₹1.10 करोड़। 16.7 लाख = D × दर (महीने को पर्सन-मंथ मान लेना) और 38.4 लाख = KLOC × दर — दोनों आम भूलें।"
+ },
+ {
+  "id": "net-cs-006",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Read the passage and answer the question.\n\nPassage: A company makes two products P and Q. Each unit of P needs 1 hour of machining and 3 hours of assembly; each unit of Q needs 2 hours of machining and 2 hours of assembly. At most 8 machining hours and 12 assembly hours are available. The profit is ₹3 per unit of P and ₹4 per unit of Q. Let x and y be the numbers of units of P and Q produced.\n\nWhich is the correct formulation of the constraints?",
+  "options": [
+   "x + 2y ≤ 8, 3x + 2y ≤ 12, x ≥ 0, y ≥ 0",
+   "x + 2y ≥ 8, 3x + 2y ≥ 12, x ≥ 0, y ≥ 0",
+   "2x + y ≤ 8, 2x + 3y ≤ 12, x ≥ 0, y ≥ 0",
+   "x + 3y ≤ 8, 2x + 2y ≤ 12, x ≥ 0, y ≥ 0"
+  ],
+  "answer": 0,
+  "explanation": "मशीनिंग: P के 1 घंटा, Q के 2 घंटे → x + 2y ≤ 8। असेंबली: P के 3, Q के 2 → 3x + 2y ≤ 12। उपलब्ध संसाधन ऊपरी सीमा हैं, इसलिए ≤ । बाक़ी विकल्पों में गुणांक की पंक्ति-स्तंभ उलट दी गई है या असमिका का चिह्न उल्टा है।"
+ },
+ {
+  "id": "net-cs-007",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Read the passage and answer the question.\n\nPassage: A company makes two products P and Q. Each unit of P needs 1 hour of machining and 3 hours of assembly; each unit of Q needs 2 hours of machining and 2 hours of assembly. At most 8 machining hours and 12 assembly hours are available. The profit is ₹3 per unit of P and ₹4 per unit of Q. Let x and y be the numbers of units of P and Q produced.\n\nThe corner points of the feasible region are —",
+  "options": [
+   "(0, 0), (8, 0), (2, 3), (0, 6)",
+   "(0, 0), (4, 0), (2, 3), (0, 4)",
+   "(0, 0), (4, 0), (0, 6)",
+   "(0, 0), (8, 0), (0, 4)"
+  ],
+  "answer": 1,
+  "explanation": "x + 2y = 8 अक्षों को (8, 0) और (0, 4) पर, 3x + 2y = 12 अक्षों को (4, 0) और (0, 6) पर काटती है। दोनों का प्रतिच्छेद: 2x = 4 → (2, 3)। संभाव्य क्षेत्र दोनों सीमाओं के भीतर है, इसलिए (8, 0) और (0, 6) बाहर पड़ते हैं; कोने (0, 0), (4, 0), (2, 3), (0, 4)।"
+ },
+ {
+  "id": "net-cs-008",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Read the passage and answer the question.\n\nPassage: A company makes two products P and Q. Each unit of P needs 1 hour of machining and 3 hours of assembly; each unit of Q needs 2 hours of machining and 2 hours of assembly. At most 8 machining hours and 12 assembly hours are available. The profit is ₹3 per unit of P and ₹4 per unit of Q. Let x and y be the numbers of units of P and Q produced.\n\nThe optimal production plan and maximum profit are —",
+  "options": [
+   "x = 4, y = 0, maximum profit ₹12",
+   "x = 2, y = 3, maximum profit ₹17",
+   "x = 0, y = 4, maximum profit ₹16",
+   "x = 2, y = 3, maximum profit ₹18"
+  ],
+  "answer": 3,
+  "explanation": "Z = 3x + 4y कोनों पर: (0, 0) = 0, (4, 0) = 12, (0, 4) = 16, (2, 3) = 6 + 12 = 18। अधिकतम ₹18, बिंदु (2, 3) पर — LPP का इष्टतम हल सदा किसी कोने पर होता है।"
+ },
+ {
+  "id": "net-cs-009",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Read the passage and answer the question.\n\nPassage: A company makes two products P and Q. Each unit of P needs 1 hour of machining and 3 hours of assembly; each unit of Q needs 2 hours of machining and 2 hours of assembly. At most 8 machining hours and 12 assembly hours are available. The profit is ₹3 per unit of P and ₹4 per unit of Q. Let x and y be the numbers of units of P and Q produced.\n\nWith dual variables u (machining) and v (assembly), the dual of this LPP is —",
+  "options": [
+   "Minimize W = 8u + 12v subject to u + 3v ≥ 3, 2u + 2v ≥ 4, u, v ≥ 0",
+   "Minimize W = 3u + 4v subject to u + 2v ≥ 8, 3u + 2v ≥ 12, u, v ≥ 0",
+   "Maximize W = 8u + 12v subject to u + 3v ≤ 3, 2u + 2v ≤ 4, u, v ≥ 0",
+   "Minimize W = 8u + 12v subject to u + 2v ≥ 3, 3u + 2v ≥ 4, u, v ≥ 0"
+  ],
+  "answer": 0,
+  "explanation": "मूल (max, ≤) का दुहरा (min, ≥) होता है: उद्देश्य में दाहिने पक्ष (8, 12), और बाधाएँ गुणांक-आव्यूह के ट्रांसपोज़ से — x का स्तंभ (1, 3) → u + 3v ≥ 3; y का स्तंभ (2, 2) → 2u + 2v ≥ 4। अंतिम विकल्प ट्रांसपोज़ भूल जाने की भूल है।"
+ },
+ {
+  "id": "net-cs-010",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Read the passage and answer the question.\n\nPassage: A company makes two products P and Q. Each unit of P needs 1 hour of machining and 3 hours of assembly; each unit of Q needs 2 hours of machining and 2 hours of assembly. At most 8 machining hours and 12 assembly hours are available. The profit is ₹3 per unit of P and ₹4 per unit of Q. Let x and y be the numbers of units of P and Q produced.\n\nAt the optimal solution, the slack in the machining constraint (s1) and in the assembly constraint (s2) are —",
+  "options": [
+   "s1 = 2 and s2 = 0",
+   "s1 = 0 and s2 = 0",
+   "s1 = 2 and s2 = 4",
+   "s1 = 0 and s2 = 4"
+  ],
+  "answer": 1,
+  "explanation": "(2, 3) पर मशीनिंग = 2 + 6 = 8 (पूरा उपयोग) और असेंबली = 6 + 6 = 12 (पूरा उपयोग) — दोनों बाधाएँ बंधनकारी (binding) हैं, स्लैक शून्य। इसीलिए दोनों संसाधनों की 'छाया-कीमत' (dual मान) धनात्मक होती है।"
+ },
+ {
+  "id": "net-cs-011",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following are tautologies?\nA. (p → q) ↔ (¬q → ¬p)\nB. (p ∧ (p → q)) → q\nC. (p → q) → (q → p)\nD. ¬(p ∨ q) ↔ (¬p ∧ ¬q)\nE. (p ∨ q) → p\nChoose the correct answer from the options given below:",
+  "options": [
+   "B, D and E only",
+   "A, C and D only",
+   "A, B and C only",
+   "A, B and D only"
+  ],
+  "answer": 3,
+  "explanation": "A प्रतिधनात्मक (contrapositive) तुल्यता है, B मोडस पोनेन्स, D डी-मॉर्गन का नियम — तीनों सदा सत्य। C में p असत्य और q सत्य लें तो (T) → (F) = F। E में p = F, q = T पर F। अतः A, B, D।"
+ },
+ {
+  "id": "net-cs-012",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I (Rule of inference)\nA. Modus ponens\nB. Modus tollens\nC. Hypothetical syllogism\nD. Disjunctive syllogism\nLIST-II (Form)\nI. (p → q) ∧ (q → r) ⊢ (p → r)\nII. (p ∨ q) ∧ ¬p ⊢ q\nIII. p ∧ (p → q) ⊢ q\nIV. ¬q ∧ (p → q) ⊢ ¬p\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-III, B-IV, C-II, D-I",
+   "A-IV, B-III, C-I, D-II",
+   "A-III, B-IV, C-I, D-II",
+   "A-I, B-IV, C-III, D-II"
+  ],
+  "answer": 2,
+  "explanation": "मोडस पोनेन्स: p और p → q से q। मोडस टोलेन्स: ¬q और p → q से ¬p। हाइपोथेटिकल सिलॉजिज़्म: श्रृंखला p → q → r। डिसजंक्टिव सिलॉजिज़्म: 'p या q' और 'p नहीं' से q।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I (Rule of inference)",
+   "rightTitle": "LIST-II (Form)",
+   "left": [
+    "A. Modus ponens",
+    "B. Modus tollens",
+    "C. Hypothetical syllogism",
+    "D. Disjunctive syllogism"
+   ],
+   "right": [
+    "I. (p → q) ∧ (q → r) ⊢ (p → r)",
+    "II. (p ∨ q) ∧ ¬p ⊢ q",
+    "III. p ∧ (p → q) ⊢ q",
+    "IV. ¬q ∧ (p → q) ⊢ ¬p"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-013",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "If the universe of discourse is the set of all integers, which of the following statements is TRUE?",
+  "options": [
+   "∀n ∃m (n + m = 0)",
+   "∀n ∀m (n · m ≥ 0)",
+   "∃n (n² < 0)",
+   "∃n ∀m (n + m = 0)"
+  ],
+  "answer": 0,
+  "explanation": "हर n के लिए m = −n लेने से n + m = 0 — सत्य। दूसरे में एक ही n सब m के लिए काम करे, यह असंभव (क्वांटिफ़ायर का क्रम बदलते ही अर्थ बदलता है)। तीसरा n = 1, m = −1 पर असत्य; चौथा पूर्णांकों में कभी सत्य नहीं।"
+ },
+ {
+  "id": "net-cs-014",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Let R = {(1, 1), (2, 2), (3, 3), (1, 2), (2, 1)} be a relation on the set {1, 2, 3}. Which of the following statements are correct?\nA. R is reflexive.\nB. R is symmetric.\nC. R is transitive.\nD. R is antisymmetric.\nE. R is an equivalence relation.\nChoose the correct answer from the options given below:",
+  "options": [
+   "A, B and C only",
+   "A, B, C and E only",
+   "A, B and D only",
+   "B, C and E only"
+  ],
+  "answer": 1,
+  "explanation": "तीनों (a, a) मौजूद — स्वतुल्य। (1, 2) और (2, 1) दोनों — सममित। (1, 2), (2, 1) से (1, 1) और (2, 1), (1, 2) से (2, 2) मौजूद — संक्रामक। अतः तुल्यता संबंध (वर्ग {1, 2} और {3})। (1, 2) और (2, 1) दोनों होने से 1 ≠ 2 होते हुए — प्रति-सममित नहीं।"
+ },
+ {
+  "id": "net-cs-015",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R.\nAssertion A: The group of non-zero integers modulo 7 under multiplication is cyclic.\nReason R: Every group of prime order is cyclic.\nIn the light of the above statements, choose the most appropriate answer from the options given below:",
+  "options": [
+   "Both A and R are correct and R is the correct explanation of A",
+   "Both A and R are correct but R is NOT the correct explanation of A",
+   "A is correct but R is not correct",
+   "A is not correct but R is correct"
+  ],
+  "answer": 1,
+  "explanation": "A सत्य है: 3 की घातें mod 7 — 3, 2, 6, 4, 5, 1 — सभी 6 तत्व देती हैं, अतः 3 जनक है। R भी सत्य है (लैग्रांज से)। पर यह समूह 6 क्रम का है, अभाज्य नहीं — इसलिए R, A का कारण नहीं। (वास्तविक कारण: p अभाज्य हो तो Zₚ* सदैव चक्रीय होता है।)"
+ },
+ {
+  "id": "net-cs-016",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "A simple connected planar graph has 12 vertices, and every face (including the outer face) is bounded by exactly 3 edges. The number of edges is —",
+  "options": [
+   "18",
+   "24",
+   "30",
+   "36"
+  ],
+  "answer": 2,
+  "explanation": "हर फलक 3 किनारों से घिरा और हर किनारा 2 फलकों में गिना जाता है: 3f = 2e। यूलर: v − e + f = 2 → 12 − e + 2e/3 = 2 → e = 30। यह सरल समतलीय ग्राफ़ की अधिकतम सीमा e = 3v − 6 के बराबर है।"
+ },
+ {
+  "id": "net-cs-017",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Machine M1 produces 60% of a factory's items, of which 2% are defective; machine M2 produces 40%, of which 5% are defective. An item chosen at random is found defective. The probability that it was produced by M2 is —",
+  "options": [
+   "1/2",
+   "3/8",
+   "2/5",
+   "5/8"
+  ],
+  "answer": 3,
+  "explanation": "P(D) = 0.6 × 0.02 + 0.4 × 0.05 = 0.012 + 0.020 = 0.032। बेयज़: P(M2 | D) = 0.020 / 0.032 = 5/8। जाल: 2/5 केवल पूर्व-संभावना (prior) है, और 3/8 = P(M1 | D)।"
+ },
+ {
+  "id": "net-cs-018",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I (I/O technique)\nA. Programmed I/O\nB. Interrupt-driven I/O\nC. DMA (cycle stealing)\nD. I/O processor\nLIST-II (Characteristic)\nI. The CPU does other work while the device gets ready; on an interrupt, the CPU itself transfers the data\nII. A separate processor executes its own channel programs and manages several devices\nIII. The CPU repeatedly tests the device's status flag (busy waiting)\nIV. The controller takes the bus one word at a time and moves data directly between the device and memory\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-III, B-IV, C-I, D-II",
+   "A-I, B-III, C-IV, D-II",
+   "A-III, B-I, C-IV, D-II",
+   "A-II, B-I, C-IV, D-III"
+  ],
+  "answer": 2,
+  "explanation": "प्रोग्राम्ड I/O में CPU बार-बार फ़्लैग जाँचता है (समय बर्बाद)। इंटरप्ट-ड्रिवन में प्रतीक्षा बचती है पर डेटा फिर भी CPU ही भेजता है। DMA में कंट्रोलर सीधे मेमोरी से डेटा ले-जाता है। IOP/चैनल अपने प्रोग्राम चलाकर कई उपकरण सँभालता है।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I (I/O technique)",
+   "rightTitle": "LIST-II (Characteristic)",
+   "left": [
+    "A. Programmed I/O",
+    "B. Interrupt-driven I/O",
+    "C. DMA (cycle stealing)",
+    "D. I/O processor"
+   ],
+   "right": [
+    "I. The CPU does other work while the device gets ready; on an interrupt, the CPU itself transfers the data",
+    "II. A separate processor executes its own channel programs and manages several devices",
+    "III. The CPU repeatedly tests the device's status flag (busy waiting)",
+    "IV. The controller takes the bus one word at a time and moves data directly between the device and memory"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-019",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Arrange the following events in the order in which they occur when an interrupt is serviced:\nA. The interrupt service routine (ISR) services the device.\nB. The saved PC and status register are restored and the interrupted program resumes.\nC. The CPU saves the program counter and the status register.\nD. The CPU completes execution of the current instruction.\nE. The interrupt vector is fetched and control transfers to the ISR.\nChoose the correct answer from the options given below:",
+  "options": [
+   "D, C, E, A, B",
+   "C, D, E, A, B",
+   "D, C, A, E, B",
+   "D, E, C, A, B"
+  ],
+  "answer": 0,
+  "explanation": "CPU चल रहा निर्देश पूरा करता है, फिर लौटने के लिए PC और स्टेटस सहेजता है, फिर वेक्टर से ISR का पता लेकर वहाँ जाता है, ISR उपकरण सँभालता है, और अंत में सहेजी अवस्था बहाल होती है (RETI/IRET)।"
+ },
+ {
+  "id": "net-cs-020",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "A device transfers 40,000 words per second to memory using cycle-stealing DMA, one word per stolen cycle. The memory cycle time is 2 µs. The fraction of memory cycles stolen from the CPU is —",
+  "options": [
+   "16%",
+   "8%",
+   "4%",
+   "0.8%"
+  ],
+  "answer": 1,
+  "explanation": "हर सेकंड 40,000 चक्र चुराए जाते हैं, हर एक 2 µs का: 40,000 × 2 × 10⁻⁶ = 0.08 सेकंड, यानी 8%। बाक़ी 92% समय CPU मेमोरी-बस का उपयोग कर सकता है।"
+ },
+ {
+  "id": "net-cs-021",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "A cache has an access time of 2 ns and a hit ratio of 0.9; main memory has an access time of 50 ns. On a miss, the cache is checked first and then main memory is accessed. The average memory access time is —",
+  "options": [
+   "52 ns",
+   "5.2 ns",
+   "6.8 ns",
+   "7 ns"
+  ],
+  "answer": 3,
+  "explanation": "पदानुक्रमिक पहुँच: हिट पर 2 ns, मिस पर 2 + 50 = 52 ns। औसत = 0.9 × 2 + 0.1 × 52 = 1.8 + 5.2 = 7 ns। अगर कैश और मेमोरी एक साथ देखे जाते तो 0.9 × 2 + 0.1 × 50 = 6.8 ns आता।"
+ },
+ {
+  "id": "net-cs-022",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Arrange the following storage units in increasing order of access time (fastest first):\nA. Main memory (DRAM)\nB. CPU registers\nC. L2 cache\nD. Magnetic disk\nE. L1 cache\nChoose the correct answer from the options given below:",
+  "options": [
+   "E, B, C, A, D",
+   "B, C, E, A, D",
+   "B, E, C, A, D",
+   "B, E, A, C, D"
+  ],
+  "answer": 2,
+  "explanation": "रजिस्टर (CPU के भीतर) < L1 < L2 < मुख्य मेमोरी < डिस्क। ऊपर जाते हुए गति और प्रति-बाइट लागत बढ़ती है, क्षमता घटती है — यही स्मृति-पदानुक्रम का आधार है।"
+ },
+ {
+  "id": "net-cs-023",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Using a Karnaugh map, the minimal sum-of-products form of F(A, B, C, D) = Σm(0, 2, 8, 10) is —",
+  "options": [
+   "B′D′",
+   "B′D",
+   "C′D′",
+   "A′B′"
+  ],
+  "answer": 0,
+  "explanation": "मिन्टर्म 0000, 0010, 1000, 1010 — चारों में B = 0 और D = 0, जबकि A और C दोनों मान लेते हैं। K-मैप के चारों कोने एक समूह बनाते हैं: F = B′D′।"
+ },
+ {
+  "id": "net-cs-024",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following statements are correct?\nA. In a JK flip-flop, J = K = 1 makes the output toggle on the clock edge.\nB. A D flip-flop is used to remove the race-around condition of a JK flip-flop.\nC. A ripple counter is an asynchronous counter.\nD. A mod-10 counter needs at least 4 flip-flops.\nE. A Johnson (twisted-ring) counter with n flip-flops has 2n states.\nChoose the correct answer from the options given below:",
+  "options": [
+   "C, D and E only",
+   "A, B, D and E only",
+   "A, B and C only",
+   "A, C, D and E only"
+  ],
+  "answer": 3,
+  "explanation": "रेस-अराउंड दूर करने का उपाय मास्टर-स्लेव JK (या एज-ट्रिगरिंग) है, D फ़्लिप-फ़्लॉप नहीं — B ग़लत। रिपल काउंटर में घड़ियाँ एक-दूसरे से जुड़ी होती हैं — असिंक्रोनस। 2³ = 8 < 10 ≤ 16, अतः 4 फ़्लिप-फ़्लॉप। जॉनसन काउंटर 2n अवस्थाएँ देता है (साधारण रिंग काउंटर n)।"
+ },
+ {
+  "id": "net-cs-025",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "80% of a program can be parallelised and the rest is strictly serial. By Amdahl's law, the maximum speedup on 4 processors is —",
+  "options": [
+   "3.2",
+   "2.5",
+   "4.0",
+   "2.0"
+  ],
+  "answer": 1,
+  "explanation": "S = 1 / [(1 − f) + f / p] = 1 / (0.2 + 0.8 / 4) = 1 / 0.4 = 2.5। प्रोसेसर अनंत भी हों तो सीमा 1 / 0.2 = 5 — क्रमिक भाग ही गति की छत तय करता है।"
+ },
+ {
+  "id": "net-cs-026",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R.\nAssertion A: Instruction pipelining increases the throughput of a processor.\nReason R: Pipelining reduces the time taken to execute each individual instruction.\nIn the light of the above statements, choose the most appropriate answer from the options given below:",
+  "options": [
+   "Both A and R are correct and R is the correct explanation of A",
+   "Both A and R are correct but R is NOT the correct explanation of A",
+   "A is correct but R is not correct",
+   "A is not correct but R is correct"
+  ],
+  "answer": 2,
+  "explanation": "पाइपलाइनिंग कई निर्देशों को अलग-अलग चरणों में एक साथ चलाकर प्रति इकाई समय पूरे होने वाले निर्देश बढ़ाती है — A सत्य। पर एक निर्देश का कुल समय (latency) घटता नहीं, बल्कि लैच-विलंब से थोड़ा बढ़ ही जाता है — R असत्य।"
+ },
+ {
+  "id": "net-cs-027",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following are characteristics of a RISC architecture?\nA. Variable-length instructions\nB. Load/store architecture — only load and store instructions access memory\nC. Mostly hardwired control unit\nD. A large number of general-purpose registers\nE. A large number of complex addressing modes\nChoose the correct answer from the options given below:",
+  "options": [
+   "A, D and E only",
+   "B, C and D only",
+   "B, C, D and E only",
+   "A, B and C only"
+  ],
+  "answer": 1,
+  "explanation": "RISC: निश्चित लंबाई के सरल निर्देश, लोड/स्टोर, हार्डवायर्ड नियंत्रण, अनेक रजिस्टर, अधिकांश निर्देश एक चक्र में। परिवर्ती लंबाई और अनेक जटिल एड्रेसिंग मोड CISC के लक्षण हैं।"
+ },
+ {
+  "id": "net-cs-028",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "What is the output of the following C code?\n\nint a[] = {5, 10, 15, 20, 25};\nint *p = a + 1;\nint x = *p++;\nint y = *(p + 1);\nint z = ++*p;\nprintf(\"%d %d %d\", x, y, z);",
+  "options": [
+   "15 20 16",
+   "10 15 16",
+   "10 20 16",
+   "10 20 15"
+  ],
+  "answer": 2,
+  "explanation": "p = a + 1 (मान 10)। *p++: पहले 10 देता है, फिर p को a[2] पर ले जाता है → x = 10। *(p + 1) = a[3] = 20 → y = 20। ++*p, a[2] को 15 से 16 करता है → z = 16। जाल: p++ से पॉइंटर आगे बढ़ना भूल जाना।"
+ },
+ {
+  "id": "net-cs-029",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "What is the output of the following C code?\n\n#define CUBE(x) x * x * x\nint main() {\n    int a = 2;\n    printf(\"%d\", CUBE(a + 1));\n    return 0;\n}",
+  "options": [
+   "11",
+   "9",
+   "27",
+   "7"
+  ],
+  "answer": 3,
+  "explanation": "मैक्रो केवल पाठ बदलता है: a + 1 * a + 1 * a + 1 = 2 + 2 + 2 + 1 = 7 (गुणा पहले)। सही परिभाषा #define CUBE(x) ((x) * (x) * (x)) होती तो 27 आता।"
+ },
+ {
+  "id": "net-cs-030",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "What is the output of the following C code?\n\nint f(void) {\n    static int n = 1;\n    n = n * 2;\n    return n;\n}\nint main() {\n    int s = 0, i;\n    for (i = 0; i < 3; i++)\n        s = s + f();\n    printf(\"%d\", s);\n    return 0;\n}",
+  "options": [
+   "14",
+   "8",
+   "12",
+   "6"
+  ],
+  "answer": 0,
+  "explanation": "static चर एक बार ही 1 से आरंभ होता है और कॉल के बीच मान रखता है: f() क्रमशः 2, 4, 8 लौटाता है; s = 2 + 4 + 8 = 14। अगर n साधारण (auto) होता तो हर बार 2 मिलता और s = 6।"
+ },
+ {
+  "id": "net-cs-031",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following declares p as a pointer to a function that takes an int argument and returns a pointer to int?",
+  "options": [
+   "int (*p)(int);",
+   "int *p(int);",
+   "int *(*p)(int);",
+   "int (*p)(int *);"
+  ],
+  "answer": 2,
+  "explanation": "(*p) बताता है कि p पॉइंटर है; उसके बाद (int) — वह int लेने वाले फ़ंक्शन की ओर इशारा करता है; आगे का int * — फ़ंक्शन int का पॉइंटर लौटाता है। int *p(int) तो फ़ंक्शन की घोषणा है, पॉइंटर नहीं।"
+ },
+ {
+  "id": "net-cs-032",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following statements about C++ are correct?\nA. A constructor can be overloaded.\nB. A constructor can be declared virtual.\nC. A base-class destructor can be virtual, and should be when derived objects are deleted through a base pointer.\nD. If a class declares any constructor, the compiler still generates a default no-argument constructor.\nE. A copy constructor is invoked when an object is passed to a function by value.\nChoose the correct answer from the options given below:",
+  "options": [
+   "A, C, D and E only",
+   "A, C and E only",
+   "B, D and E only",
+   "A, B and C only"
+  ],
+  "answer": 1,
+  "explanation": "वर्चुअल कॉल vptr से होती है जो कंस्ट्रक्टर ही बनाता है — इसलिए कंस्ट्रक्टर वर्चुअल नहीं हो सकता (B ग़लत)। कोई भी कंस्ट्रक्टर लिखते ही कंपाइलर डिफ़ॉल्ट कंस्ट्रक्टर बनाना बंद कर देता है (D ग़लत) — यही सबसे बड़ा जाल है।"
+ },
+ {
+  "id": "net-cs-033",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I\nA. Function overloading\nB. Overriding a virtual function\nC. Friend function\nD. Pure virtual function\nLIST-II\nI. Makes the class abstract\nII. The call is resolved at run time through the virtual table\nIII. A non-member function that can access private members\nIV. The call is resolved at compile time\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-IV, B-II, C-I, D-III",
+   "A-II, B-IV, C-III, D-I",
+   "A-IV, B-III, C-II, D-I",
+   "A-IV, B-II, C-III, D-I"
+  ],
+  "answer": 3,
+  "explanation": "ओवरलोडिंग = स्थैतिक (कंपाइल-टाइम) बहुरूपता; वर्चुअल ओवरराइडिंग = डायनेमिक (रन-टाइम) बंधन; friend फ़ंक्शन सदस्य न होकर भी private तक पहुँचता है; एक भी pure virtual फ़ंक्शन (= 0) कक्षा को abstract बना देता है।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I",
+   "rightTitle": "LIST-II",
+   "left": [
+    "A. Function overloading",
+    "B. Overriding a virtual function",
+    "C. Friend function",
+    "D. Pure virtual function"
+   ],
+   "right": [
+    "I. Makes the class abstract",
+    "II. The call is resolved at run time through the virtual table",
+    "III. A non-member function that can access private members",
+    "IV. The call is resolved at compile time"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-034",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "In C++, which statement about a class that contains at least one pure virtual function is correct?",
+  "options": [
+   "Objects of the class cannot be created, but pointers and references to it can be declared",
+   "Objects of the class can be created, but its pure virtual function cannot be called",
+   "Every derived class automatically becomes abstract, even if it overrides all pure virtual functions",
+   "The class cannot have any data members"
+  ],
+  "answer": 0,
+  "explanation": "ऐसी कक्षा abstract होती है — उसका ऑब्जेक्ट नहीं बनता, पर उसका पॉइंटर/रेफ़रेंस व्युत्पन्न ऑब्जेक्टों को संभालने के लिए बनाया जाता है (यही रन-टाइम बहुरूपता का आधार है)। व्युत्पन्न कक्षा सभी pure virtual फ़ंक्शन लिख दे तो वह ठोस (concrete) बन जाती है।"
+ },
+ {
+  "id": "net-cs-035",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "A window with corners (0, 0) and (10, 10) is mapped onto a viewport with corners (100, 100) and (300, 200). The window point (5, 4) maps to the viewport point —",
+  "options": [
+   "(250, 140)",
+   "(150, 140)",
+   "(200, 120)",
+   "(200, 140)"
+  ],
+  "answer": 3,
+  "explanation": "Sx = (300 − 100) / (10 − 0) = 20, Sy = (200 − 100) / (10 − 0) = 10। xv = 100 + (5 − 0) × 20 = 200; yv = 100 + (4 − 0) × 10 = 140। दोनों अक्षों के अलग स्केल-गुणांक भूल जाना आम ग़लती है।"
+ },
+ {
+  "id": "net-cs-036",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following statements are correct?\nA. The Z-buffer (depth-buffer) algorithm is an image-space method.\nB. The painter's algorithm is also called the depth-sort algorithm.\nC. Gouraud shading interpolates intensity values across a polygon.\nD. Phong shading interpolates surface normal vectors across a polygon.\nE. Back-face detection alone removes all hidden surfaces in any scene.\nChoose the correct answer from the options given below:",
+  "options": [
+   "A, B and E only",
+   "A, B, C and D only",
+   "B, C, D and E only",
+   "A, C and E only"
+  ],
+  "answer": 1,
+  "explanation": "Z-बफ़र हर पिक्सेल की गहराई तुलना करता है (image space); पेंटर दूर से पास की ओर रँगता है (depth sort); गौरॉड तीव्रता का, फ़ोंग नॉर्मल का अंतर्वेशन करता है (स्पेक्युलर हाइलाइट बेहतर)। बैक-फ़ेस हटाना केवल उत्तल वस्तुओं के लिए पर्याप्त है — एक वस्तु दूसरी को ढके तो नहीं।"
+ },
+ {
+  "id": "net-cs-037",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "In the life cycle of a Java servlet, which method is called only once, when the servlet is first loaded by the container?",
+  "options": [
+   "init()",
+   "doGet()",
+   "service()",
+   "doPost()"
+  ],
+  "answer": 0,
+  "explanation": "कंटेनर सर्वलेट लोड करते ही एक बार init() चलाता है; फिर हर अनुरोध पर service() (जो doGet/doPost बुलाता है); अनलोड होने पर एक बार destroy()। इसीलिए DB-कनेक्शन जैसी एक-बारी तैयारी init() में रखी जाती है।"
+ },
+ {
+  "id": "net-cs-038",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Relation R(A, B, C, D, E) has the functional dependencies A → B, BC → D, D → E and E → A. How many candidate keys does R have?",
+  "options": [
+   "3",
+   "1",
+   "4",
+   "2"
+  ],
+  "answer": 2,
+  "explanation": "C किसी FD के दाएँ नहीं है, अतः हर कुंजी में होगा, पर (C)+ = C। (AC)+: A → B, BC → D, D → E — सब मिलते हैं। इसी तरह (BC)+, (CD)+ और (CE)+ भी पूरे R देते हैं (A → B → … का चक्र)। कुंजियाँ AC, BC, CD, CE — कुल 4।"
+ },
+ {
+  "id": "net-cs-039",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following statements are correct?\nA. Every relation in BCNF is also in 3NF.\nB. Any relation with exactly two attributes is in BCNF.\nC. Every relation has a decomposition into BCNF that is both lossless-join and dependency-preserving.\nD. A lossless-join decomposition into BCNF always exists.\nE. 4NF removes non-trivial multivalued dependencies.\nChoose the correct answer from the options given below:",
+  "options": [
+   "A, C, D and E only",
+   "B, C and E only",
+   "A, B, D and E only",
+   "A, B and C only"
+  ],
+  "answer": 2,
+  "explanation": "BCNF, 3NF से कड़ा है (A सही)। दो गुणों वाली हर तालिका BCNF में रहती है (B)। BCNF में लॉसलेस विघटन तो सदा संभव है (D), पर निर्भरता-संरक्षण सदा नहीं — जैसे R(A, B, C) में AB → C, C → B (C ग़लत); यह गारंटी 3NF देता है। 4NF बहु-मानी निर्भरता हटाता है (E)।"
+ },
+ {
+  "id": "net-cs-040",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Consider the schedule S: r1(A), w2(A), r2(B), w1(B), commit1, commit2. Which statement is correct?",
+  "options": [
+   "S is a serial schedule",
+   "S is conflict-equivalent to the serial schedule T2, T1",
+   "S is conflict-equivalent to the serial schedule T1, T2",
+   "S is not conflict-serializable"
+  ],
+  "answer": 3,
+  "explanation": "r1(A) फिर w2(A) → T1 → T2। r2(B) फिर w1(B) → T2 → T1। प्रेसिडेंस ग्राफ़ में चक्र है, इसलिए कोई क्रमिक (serial) क्रम इसके बराबर नहीं — यह कॉन्फ़्लिक्ट-सीरियलाइज़ेबल नहीं।"
+ },
+ {
+  "id": "net-cs-041",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I (Locking protocol)\nA. Basic two-phase locking\nB. Strict two-phase locking\nC. Rigorous two-phase locking\nD. Conservative two-phase locking\nLIST-II (Property)\nI. All locks, shared and exclusive, are held until the transaction commits or aborts\nII. All required locks are acquired before the transaction begins, so it is deadlock-free\nIII. Exclusive locks are held until commit or abort, giving cascadeless schedules\nIV. Guarantees conflict serializability but can cause cascading rollbacks\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-IV, B-I, C-III, D-II",
+   "A-IV, B-III, C-I, D-II",
+   "A-II, B-III, C-I, D-IV",
+   "A-III, B-IV, C-I, D-II"
+  ],
+  "answer": 1,
+  "explanation": "बेसिक 2PL: बढ़ने और घटने के दो चरण — सीरियलाइज़ेबिलिटी मिलती है पर असमर्पित डेटा पढ़ा जा सकता है। स्ट्रिक्ट: X-लॉक कमिट तक। रिगरस: सभी लॉक कमिट तक। कंज़र्वेटिव: शुरू में ही सब लॉक, इसलिए डेडलॉक नहीं।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I (Locking protocol)",
+   "rightTitle": "LIST-II (Property)",
+   "left": [
+    "A. Basic two-phase locking",
+    "B. Strict two-phase locking",
+    "C. Rigorous two-phase locking",
+    "D. Conservative two-phase locking"
+   ],
+   "right": [
+    "I. All locks, shared and exclusive, are held until the transaction commits or aborts",
+    "II. All required locks are acquired before the transaction begins, so it is deadlock-free",
+    "III. Exclusive locks are held until commit or abort, giving cascadeless schedules",
+    "IV. Guarantees conflict serializability but can cause cascading rollbacks"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-042",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "R(A, B) = {(a1, 1), (a2, 1), (a3, 2), (a4, 3)} and S(B, C) = {(1, c1), (2, c2), (4, c3)}. How many tuples are there in the FULL OUTER JOIN of R and S on B?",
+  "options": [
+   "5",
+   "3",
+   "12",
+   "4"
+  ],
+  "answer": 0,
+  "explanation": "मेल वाले: B = 1 से दो, B = 2 से एक — 3 टपल (यही natural join है)। R का बिना मेल वाला (a4, 3, NULL) और S का बिना मेल वाला (NULL, 4, c3) जुड़ते हैं — कुल 5। 12 कार्टेशियन गुणनफल होता।"
+ },
+ {
+  "id": "net-cs-043",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which relational-algebra expression is equivalent to the SQL query  SELECT DISTINCT A FROM R WHERE B = 5 ?",
+  "options": [
+   "σ_{B=5}(π_A(R))",
+   "π_A(σ_{B=5}(R))",
+   "π_{B=5}(σ_A(R))",
+   "σ_A(π_{B=5}(R))"
+  ],
+  "answer": 1,
+  "explanation": "WHERE → चयन σ (पंक्तियाँ), SELECT के स्तंभ → प्रक्षेपण π। पहले σ_{B=5} फिर π_A। तीसरे विकल्प में पहले A पर प्रक्षेपण से B स्तंभ ही ग़ायब हो जाता है, फिर B = 5 की जाँच संभव नहीं। संबंधपरक बीजगणित समुच्चय-आधारित है, इसलिए DISTINCT अपने आप लागू है।"
+ },
+ {
+  "id": "net-cs-044",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Arrange the following phases of database design in the correct order:\nA. Physical design\nB. Requirements collection and analysis\nC. Logical design (mapping to a relational schema)\nD. Conceptual design (ER model)\nE. Implementation and tuning\nChoose the correct answer from the options given below:",
+  "options": [
+   "D, B, C, A, E",
+   "B, C, D, A, E",
+   "B, D, A, C, E",
+   "B, D, C, A, E"
+  ],
+  "answer": 3,
+  "explanation": "पहले आवश्यकताएँ, फिर DBMS-स्वतंत्र अवधारणात्मक मॉडल (ER), फिर उसे चुने गए डेटा-मॉडल (संबंधपरक स्कीमा) में बदलना, फिर भौतिक डिज़ाइन (इंडेक्स, संग्रहण), और अंत में कार्यान्वयन व ट्यूनिंग।"
+ },
+ {
+  "id": "net-cs-045",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Column x of table T contains the values 10, NULL, 20, 30, NULL. What does  SELECT AVG(x), SUM(x) / COUNT(*) FROM T;  return?",
+  "options": [
+   "20 and 20",
+   "12 and 20",
+   "20 and 12",
+   "12 and 12"
+  ],
+  "answer": 2,
+  "explanation": "AVG और SUM, NULL को छोड़ देते हैं: SUM = 60, गिनती 3 → AVG = 20। COUNT(*) सभी 5 पंक्तियाँ गिनता है → 60 / 5 = 12। AVG(x) और SUM(x)/COUNT(*) में यही अंतर परीक्षा का पसंदीदा जाल है।"
+ },
+ {
+  "id": "net-cs-046",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I (OLAP operation)\nA. Roll-up\nB. Drill-down\nC. Slice\nD. Dice\nLIST-II (Effect)\nI. Fixes one dimension at a single value, giving a sub-cube of lower dimension\nII. Selects a sub-cube by choosing values on two or more dimensions\nIII. Moves from summarised data to more detailed data\nIV. Aggregates data by climbing up a concept hierarchy\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-IV, B-III, C-I, D-II",
+   "A-I, B-III, C-IV, D-II",
+   "A-III, B-IV, C-I, D-II",
+   "A-IV, B-III, C-II, D-I"
+  ],
+  "answer": 0,
+  "explanation": "रोल-अप: माह → तिमाही → वर्ष (सारांश)। ड्रिल-डाउन उल्टा। स्लाइस: एक आयाम एक मान पर स्थिर (जैसे वर्ष = 2025)। डाइस: कई आयामों पर मानों का उप-घन। पिवट आयाम घुमाता है।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I (OLAP operation)",
+   "rightTitle": "LIST-II (Effect)",
+   "left": [
+    "A. Roll-up",
+    "B. Drill-down",
+    "C. Slice",
+    "D. Dice"
+   ],
+   "right": [
+    "I. Fixes one dimension at a single value, giving a sub-cube of lower dimension",
+    "II. Selects a sub-cube by choosing values on two or more dimensions",
+    "III. Moves from summarised data to more detailed data",
+    "IV. Aggregates data by climbing up a concept hierarchy"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-047",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "A disk has cylinders 0–199. The head is at cylinder 60 and is moving towards higher-numbered cylinders. The pending requests are: A. 30  B. 150  C. 75  D. 10  E. 185. Arrange the requests in the order in which they are served under SCAN scheduling.\nChoose the correct answer from the options given below:",
+  "options": [
+   "C, B, E, A, D",
+   "C, B, E, D, A",
+   "B, C, E, A, D",
+   "C, A, D, B, E"
+  ],
+  "answer": 0,
+  "explanation": "SCAN ऊपर जाते हुए 75, 150, 185 पूरा करता है, 199 तक जाकर लौटता है और 30, फिर 10 पूरा करता है: C, B, E, A, D। विकल्प 2 C-SCAN का क्रम है (0 पर कूदकर 10, 30) और विकल्प 3 SSTF का (75, 30, 10, 150, 185) — NTA एक ही queue पर अलग नीतियों के उत्तर विकल्पों में रखता है।"
+ },
+ {
+  "id": "net-cs-048",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "A UNIX-style i-node has 12 direct block pointers, one single-indirect pointer and one double-indirect pointer. The block size is 1 KB and a block address takes 4 bytes. The maximum file size is —",
+  "options": [
+   "65,536 KB",
+   "65,792 KB",
+   "65,804 KB",
+   "268 KB"
+  ],
+  "answer": 2,
+  "explanation": "एक ब्लॉक में 1024 / 4 = 256 पते। सीधे: 12 KB; सिंगल-इनडायरेक्ट: 256 KB; डबल-इनडायरेक्ट: 256 × 256 = 65,536 KB। कुल 12 + 256 + 65,536 = 65,804 KB। 65,792 वह है जब 12 सीधे ब्लॉक भूल जाएँ।"
+ },
+ {
+  "id": "net-cs-049",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "For the page reference string 1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5 with 3 frames (initially empty), the number of page faults under LRU replacement is —",
+  "options": [
+   "8",
+   "9",
+   "12",
+   "10"
+  ],
+  "answer": 3,
+  "explanation": "LRU हर बार सबसे लंबे समय से अप्रयुक्त पेज हटाता है; गिनने पर 10 फ़ॉल्ट। इसी स्ट्रिंग पर FIFO से 9 और OPT से 7 — यहाँ LRU, FIFO से भी बुरा निकलता है। (यही स्ट्रिंग FIFO में बेलेडी की विसंगति दिखाने के लिए प्रसिद्ध है।)"
+ },
+ {
+  "id": "net-cs-050",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I\nA. Inverted page table\nB. Multi-level (hierarchical) page table\nC. Hashed page table\nD. Translation look-aside buffer (TLB)\nLIST-II\nI. Hashes the virtual page number into a table of chained entries\nII. A small associative cache of recent page-number-to-frame translations\nIII. Has one entry for each physical frame of memory\nIV. Pages the page table itself by dividing it into levels\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-III, B-IV, C-II, D-I",
+   "A-III, B-IV, C-I, D-II",
+   "A-IV, B-III, C-I, D-II",
+   "A-I, B-IV, C-III, D-II"
+  ],
+  "answer": 1,
+  "explanation": "इनवर्टेड तालिका भौतिक फ़्रेमों के अनुसार (एक तालिका पूरे सिस्टम के लिए) — स्मृति बचती है, खोज धीमी। बहु-स्तरीय तालिका बड़े पता-स्थान में पेज-टेबल को पेज करती है। हैश्ड तालिका 32 बिट से बड़े पतों में आम। TLB अनुवाद का कैश है।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I",
+   "rightTitle": "LIST-II",
+   "left": [
+    "A. Inverted page table",
+    "B. Multi-level (hierarchical) page table",
+    "C. Hashed page table",
+    "D. Translation look-aside buffer (TLB)"
+   ],
+   "right": [
+    "I. Hashes the virtual page number into a table of chained entries",
+    "II. A small associative cache of recent page-number-to-frame translations",
+    "III. Has one entry for each physical frame of memory",
+    "IV. Pages the page table itself by dividing it into levels"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-051",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Processes P1, P2, P3 and P4 arrive at times 0, 2, 4 and 5 with CPU bursts 7, 4, 1 and 4 respectively. Under preemptive Shortest Remaining Time First (SRTF) scheduling, the average waiting time is —",
+  "options": [
+   "3",
+   "4",
+   "2.75",
+   "5"
+  ],
+  "answer": 0,
+  "explanation": "गैंट: P1 0–2, P2 2–4, P3 4–5, P2 5–7, P4 7–11, P1 11–16। प्रतीक्षा = पूर्णता − आगमन − बर्स्ट: P1 = 16 − 0 − 7 = 9, P2 = 7 − 2 − 4 = 1, P3 = 5 − 4 − 1 = 0, P4 = 11 − 5 − 4 = 2। औसत = 12 / 4 = 3। (अप्रीएम्प्टिव SJF से 4 आता है।)"
+ },
+ {
+  "id": "net-cs-052",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I\nA. Long-term scheduler\nB. Short-term scheduler\nC. Medium-term scheduler\nD. Dispatcher\nLIST-II\nI. Selects which ready process runs next on the CPU\nII. Swaps processes out of and back into memory to control the degree of multiprogramming\nIII. Performs the context switch and transfers control to the selected process\nIV. Selects which new jobs are admitted into the ready queue\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-IV, B-I, C-III, D-II",
+   "A-II, B-I, C-IV, D-III",
+   "A-IV, B-I, C-II, D-III",
+   "A-I, B-IV, C-II, D-III"
+  ],
+  "answer": 2,
+  "explanation": "दीर्घ-अवधि (जॉब) शेड्यूलर बहुप्रोग्रामन का स्तर तय करता है; अल्प-अवधि (CPU) शेड्यूलर बहुत बार चलता है; मध्य-अवधि स्वैपिंग करता है; डिस्पैचर चुनी गई प्रक्रिया को वास्तव में CPU देता है (उसका समय 'डिस्पैच लेटेंसी')।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I",
+   "rightTitle": "LIST-II",
+   "left": [
+    "A. Long-term scheduler",
+    "B. Short-term scheduler",
+    "C. Medium-term scheduler",
+    "D. Dispatcher"
+   ],
+   "right": [
+    "I. Selects which ready process runs next on the CPU",
+    "II. Swaps processes out of and back into memory to control the degree of multiprogramming",
+    "III. Performs the context switch and transfers control to the selected process",
+    "IV. Selects which new jobs are admitted into the ready queue"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-053",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following statements are correct?\nA. A binary semaphore can be used to implement mutual exclusion.\nB. Spinlocks use busy waiting.\nC. Spinlocks are the best choice when locks are held for long periods on a single-processor system.\nD. A counting semaphore can take only the values 0 and 1.\nE. The wait() and signal() operations must be executed atomically.\nChoose the correct answer from the options given below:",
+  "options": [
+   "B, D and E only",
+   "A, B and C only",
+   "A, C and E only",
+   "A, B and E only"
+  ],
+  "answer": 3,
+  "explanation": "स्पिनलॉक लॉक के लिए घूमता रहता है — एकल प्रोसेसर पर लंबी प्रतीक्षा में वह CPU बर्बाद करता है, क्योंकि लॉक रखने वाला चल ही नहीं पाता (C ग़लत); बहु-प्रोसेसर पर छोटे लॉक के लिए वह उपयोगी है। काउंटिंग सेमाफ़ोर कोई भी अऋणात्मक मान ले सकता है (D ग़लत)।"
+ },
+ {
+  "id": "net-cs-054",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following is shared among the threads of the same process?",
+  "options": [
+   "The stack",
+   "Global variables and open files",
+   "The program counter",
+   "The register set"
+  ],
+  "answer": 1,
+  "explanation": "एक प्रक्रिया के थ्रेड कोड, डेटा (ग्लोबल चर, हीप) और खुली फ़ाइलें साझा करते हैं। हर थ्रेड का अपना स्टैक, प्रोग्राम काउंटर और रजिस्टर होते हैं — इसलिए वे स्वतंत्र रूप से चल पाते हैं।"
+ },
+ {
+  "id": "net-cs-055",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Given below are two statements:\nStatement I: A system call switches the processor from user mode to kernel mode.\nStatement II: A user program can directly execute privileged instructions such as disabling interrupts.\nIn the light of the above statements, choose the correct answer from the options given below:",
+  "options": [
+   "Both Statement I and Statement II are correct",
+   "Both Statement I and Statement II are incorrect",
+   "Statement I is correct but Statement II is incorrect",
+   "Statement I is incorrect but Statement II is correct"
+  ],
+  "answer": 2,
+  "explanation": "सिस्टम कॉल ट्रैप के ज़रिये कर्नेल मोड में जाता है (I सही)। विशेषाधिकार वाले निर्देश (इंटरप्ट बंद करना, I/O, टाइमर बदलना) यूज़र मोड में चलाने पर ट्रैप होकर OS को नियंत्रण मिलता है — उपयोगकर्ता प्रोग्राम उन्हें सीधे नहीं चला सकता (II ग़लत)।"
+ },
+ {
+  "id": "net-cs-056",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R.\nAssertion A: A system that is in an unsafe state will necessarily reach a deadlock.\nReason R: The Banker's algorithm grants a resource request only if the resulting state is safe.\nIn the light of the above statements, choose the most appropriate answer from the options given below:",
+  "options": [
+   "Both A and R are correct and R is the correct explanation of A",
+   "Both A and R are correct but R is NOT the correct explanation of A",
+   "A is correct but R is not correct",
+   "A is not correct but R is correct"
+  ],
+  "answer": 3,
+  "explanation": "असुरक्षित अवस्था का अर्थ है कि डेडलॉक संभव है, निश्चित नहीं — प्रक्रियाएँ अपनी अधिकतम माँग से कम लेकर भी पूरी हो सकती हैं (A ग़लत)। बैंकर का एल्गोरिद्म अनुरोध तभी देता है जब परिणामी अवस्था सुरक्षित रहे (R सही) — यह डेडलॉक-परिहार (avoidance) है।"
+ },
+ {
+  "id": "net-cs-057",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I (Process model)\nA. Waterfall model\nB. Spiral model\nC. Throw-away prototyping\nD. Incremental model\nLIST-II (Feature)\nI. Risk analysis is carried out in every cycle\nII. Linear sequential phases, each completed before the next starts\nIII. Delivers working functionality in successive releases\nIV. A quick model is built to clarify unclear requirements and is then discarded\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-II, B-I, C-III, D-IV",
+   "A-I, B-II, C-IV, D-III",
+   "A-II, B-I, C-IV, D-III",
+   "A-II, B-IV, C-I, D-III"
+  ],
+  "answer": 2,
+  "explanation": "वॉटरफ़ॉल: स्थिर आवश्यकताओं के लिए रैखिक क्रम। स्पाइरल (बोहेम): हर चक्र में जोखिम-विश्लेषण। प्रोटोटाइप: अस्पष्ट आवश्यकताएँ समझने के लिए जल्दी बना मॉडल। इन्क्रीमेंटल: चालू सॉफ़्टवेयर टुकड़ों में।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I (Process model)",
+   "rightTitle": "LIST-II (Feature)",
+   "left": [
+    "A. Waterfall model",
+    "B. Spiral model",
+    "C. Throw-away prototyping",
+    "D. Incremental model"
+   ],
+   "right": [
+    "I. Risk analysis is carried out in every cycle",
+    "II. Linear sequential phases, each completed before the next starts",
+    "III. Delivers working functionality in successive releases",
+    "IV. A quick model is built to clarify unclear requirements and is then discarded"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-058",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following statements about agile methods are correct?\nA. Scrum organises work into fixed-length iterations called sprints.\nB. Extreme Programming (XP) practices include pair programming and test-driven development.\nC. Agile methods require complete, frozen requirements documentation before coding starts.\nD. Feature Driven Development (FDD) starts by developing an overall model.\nE. Kanban limits the amount of work in progress.\nChoose the correct answer from the options given below:",
+  "options": [
+   "A, D and E only",
+   "A, B, D and E only",
+   "B, C and D only",
+   "A, B and C only"
+  ],
+  "answer": 1,
+  "explanation": "एजाइल बदलती आवश्यकताओं को स्वीकार करता है और 'विस्तृत दस्तावेज़ से अधिक चालू सॉफ़्टवेयर' को महत्व देता है — इसलिए C ग़लत। FDD के चरण: समग्र मॉडल → फ़ीचर-सूची → फ़ीचर-अनुसार योजना → डिज़ाइन → निर्माण।"
+ },
+ {
+  "id": "net-cs-059",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Arrange the following types of coupling from the lowest (best) to the highest (worst):\nA. Content coupling\nB. Data coupling\nC. Control coupling\nD. Common coupling\nE. Stamp coupling\nChoose the correct answer from the options given below:",
+  "options": [
+   "B, E, C, D, A",
+   "E, B, C, D, A",
+   "B, C, E, D, A",
+   "B, E, D, C, A"
+  ],
+  "answer": 0,
+  "explanation": "डेटा (केवल आवश्यक मान) < स्टैम्प (पूरी संरचना) < कंट्रोल (फ़्लैग से दूसरे का तर्क चलाना) < [एक्सटर्नल] < कॉमन (साझा वैश्विक डेटा) < कंटेंट (दूसरे मॉड्यूल के भीतर सीधे हाथ डालना)। अच्छा डिज़ाइन = कम कपलिंग, ऊँची कोहेज़न।"
+ },
+ {
+  "id": "net-cs-060",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I (Testing technique)\nA. Equivalence partitioning\nB. Boundary value analysis\nC. Basis path testing\nD. Regression testing\nLIST-II (Description)\nI. Re-runs earlier tests after a change to check that nothing else broke\nII. Uses cyclomatic complexity to derive independent paths through the code\nIII. Divides the input domain into classes expected to behave alike\nIV. Selects test values at and just beyond the edges of input ranges\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-III, B-II, C-IV, D-I",
+   "A-IV, B-III, C-II, D-I",
+   "A-III, B-IV, C-I, D-II",
+   "A-III, B-IV, C-II, D-I"
+  ],
+  "answer": 3,
+  "explanation": "समतुल्य विभाजन और सीमा-मान विश्लेषण ब्लैक-बॉक्स तकनीकें हैं; बेसिस-पाथ (मैक्केब) व्हाइट-बॉक्स है जिसमें V(G) स्वतंत्र पथों की संख्या देता है; रिग्रेशन परीक्षण हर बदलाव के बाद पुराने परीक्षण दोहराता है।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I (Testing technique)",
+   "rightTitle": "LIST-II (Description)",
+   "left": [
+    "A. Equivalence partitioning",
+    "B. Boundary value analysis",
+    "C. Basis path testing",
+    "D. Regression testing"
+   ],
+   "right": [
+    "I. Re-runs earlier tests after a change to check that nothing else broke",
+    "II. Uses cyclomatic complexity to derive independent paths through the code",
+    "III. Divides the input domain into classes expected to behave alike",
+    "IV. Selects test values at and just beyond the edges of input ranges"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-061",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "The in-order and pre-order traversals of a binary tree are:\nIn-order: D, H, B, E, A, F, C\nPre-order: A, B, D, H, E, C, F\nIts post-order traversal is —",
+  "options": [
+   "D, E, H, B, F, C, A",
+   "H, D, E, B, F, C, A",
+   "H, D, B, E, F, C, A",
+   "D, H, E, B, F, C, A"
+  ],
+  "answer": 1,
+  "explanation": "प्री-ऑर्डर का पहला A रूट है; इन-ऑर्डर में A के बाएँ D H B E, दाएँ F C। बाएँ भाग का रूट B (प्री-ऑर्डर में अगला); B के बाएँ D H — D रूट और H उसका दायाँ बच्चा; B का दायाँ E। दाएँ भाग में C रूट, F बायाँ। पोस्ट-ऑर्डर: H D E B, F C, A।"
+ },
+ {
+  "id": "net-cs-062",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Taking the height of a single-node tree as 0, the minimum number of nodes in an AVL tree of height 4 is —",
+  "options": [
+   "12",
+   "7",
+   "15",
+   "31"
+  ],
+  "answer": 0,
+  "explanation": "न्यूनतम नोड N(h) = N(h − 1) + N(h − 2) + 1, N(0) = 1, N(1) = 2। N(2) = 4, N(3) = 7, N(4) = 12। 31 = 2⁵ − 1 उसी ऊँचाई के पूर्ण बाइनरी ट्री के अधिकतम नोड हैं।"
+ },
+ {
+  "id": "net-cs-063",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "The solution of the recurrence T(n) = 7T(n/2) + n² is —",
+  "options": [
+   "Θ(n³)",
+   "Θ(n²)",
+   "Θ(n^(log₂7)), i.e. about Θ(n^2.81)",
+   "Θ(n² log n)"
+  ],
+  "answer": 2,
+  "explanation": "a = 7, b = 2: n^(log₂7) ≈ n^2.81, जो f(n) = n² से बहुपद-रूप में बड़ा है — मास्टर प्रमेय केस 1, T(n) = Θ(n^(log₂7))। यही स्ट्रासेन के आव्यूह-गुणन की जटिलता है (सामान्य विधि Θ(n³))।"
+ },
+ {
+  "id": "net-cs-064",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following arranges the functions in increasing order of asymptotic growth?",
+  "options": [
+   "2^(log₂ n) < (log n)^10 < n log n < n^1.5",
+   "(log n)^10 < n log n < 2^(log₂ n) < n^1.5",
+   "(log n)^10 < 2^(log₂ n) < n^1.5 < n log n",
+   "(log n)^10 < 2^(log₂ n) < n log n < n^1.5"
+  ],
+  "answer": 3,
+  "explanation": "log की कोई भी घात किसी भी nᵋ से धीमी बढ़ती है, इसलिए (log n)^10 सबसे नीचे। 2^(log₂ n) = n। फिर n log n, और n^1.5 = n × √n, जहाँ √n, log n से तेज़ बढ़ता है।"
+ },
+ {
+  "id": "net-cs-065",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following statements are correct?\nA. Depth-first search can detect cycles in a graph.\nB. Depth-first search can be used to obtain a topological ordering of a directed acyclic graph.\nC. Breadth-first search finds shortest paths (in number of edges) in an unweighted graph.\nD. Depth-first search uses a FIFO queue.\nE. With an adjacency matrix, breadth-first search runs in O(V + E) time.\nChoose the correct answer from the options given below:",
+  "options": [
+   "A, B and C only",
+   "B, C, D and E only",
+   "A, C and E only",
+   "A, B and D only"
+  ],
+  "answer": 0,
+  "explanation": "DFS बैक-एज से चक्र पकड़ता है और फ़िनिश-समय के उल्टे क्रम से टोपोलॉजिकल क्रम देता है; BFS स्तर-दर-स्तर चलकर अभारित ग्राफ़ में न्यूनतम किनारों वाला पथ देता है। DFS स्टैक (या रिकर्शन) से चलता है, क्यू BFS में। एडजेसेंसी मैट्रिक्स पर BFS Θ(V²) लेता है; O(V + E) एडजेसेंसी लिस्ट पर।"
+ },
+ {
+  "id": "net-cs-066",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R.\nAssertion A: Merge sort is a stable sorting algorithm.\nReason R: When two keys are equal, the merge step takes the element from the left sub-array first, so equal keys keep their original relative order.\nIn the light of the above statements, choose the most appropriate answer from the options given below:",
+  "options": [
+   "Both A and R are correct and R is the correct explanation of A",
+   "Both A and R are correct but R is NOT the correct explanation of A",
+   "A is correct but R is not correct",
+   "A is not correct but R is correct"
+  ],
+  "answer": 0,
+  "explanation": "स्थिरता का अर्थ है बराबर कुंजियों का मूल क्रम बना रहना। मर्ज में बराबरी पर बाएँ उप-सरणी (जो मूल क्रम में पहले था) का तत्व पहले लिया जाता है — यही मर्ज सॉर्ट की स्थिरता का कारण है। (क्विक सॉर्ट और हीप सॉर्ट स्थिर नहीं।)"
+ },
+ {
+  "id": "net-cs-067",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I (Design technique)\nA. Divide and conquer\nB. Greedy method\nC. Dynamic programming\nD. Backtracking\nLIST-II (Problem / algorithm)\nI. N-Queens problem\nII. Merge sort\nIII. 0/1 knapsack in pseudo-polynomial time\nIV. Huffman coding\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-II, B-IV, C-I, D-III",
+   "A-II, B-IV, C-III, D-I",
+   "A-IV, B-II, C-III, D-I",
+   "A-II, B-III, C-IV, D-I"
+  ],
+  "answer": 1,
+  "explanation": "मर्ज सॉर्ट समस्या को आधा-आधा बाँटता है; हफ़मैन हर बार दो न्यूनतम आवृत्तियाँ जोड़ता है (लालची); 0/1 नैपसैक O(nW) तालिका से (DP) — लालची तरीक़ा यहाँ इष्टतम नहीं देता; N-क्वीन्स में आंशिक हल असफल होने पर पीछे लौटा जाता है।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I (Design technique)",
+   "rightTitle": "LIST-II (Problem / algorithm)",
+   "left": [
+    "A. Divide and conquer",
+    "B. Greedy method",
+    "C. Dynamic programming",
+    "D. Backtracking"
+   ],
+   "right": [
+    "I. N-Queens problem",
+    "II. Merge sort",
+    "III. 0/1 knapsack in pseudo-polynomial time",
+    "IV. Huffman coding"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-068",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Matrices A1 (10 × 30), A2 (30 × 5) and A3 (5 × 60) are to be multiplied. The minimum number of scalar multiplications required is —",
+  "options": [
+   "18000",
+   "9000",
+   "4500",
+   "27000"
+  ],
+  "answer": 2,
+  "explanation": "(A1A2)A3: 10 × 30 × 5 + 10 × 5 × 60 = 1500 + 3000 = 4500। A1(A2A3): 30 × 5 × 60 + 10 × 30 × 60 = 9000 + 18000 = 27000। कोष्ठक का क्रम 6 गुना अंतर ला देता है — मैट्रिक्स-शृंखला DP इसी को चुनता है।"
+ },
+ {
+  "id": "net-cs-069",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "The value of the prefix expression  * + 2 3 − 8 4  is —",
+  "options": [
+   "24",
+   "9",
+   "16",
+   "20"
+  ],
+  "answer": 3,
+  "explanation": "प्रीफ़िक्स को दाएँ से बाएँ स्टैक से हल करें: − 8 4 = 4; + 2 3 = 5; * 5 4 = 20। यानी (2 + 3) × (8 − 4)।"
+ },
+ {
+  "id": "net-cs-070",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Keys 22, 33, 44, 13 and 24 are inserted in that order into an empty hash table of size 11 using h(k) = k mod 11 and linear probing. In which slot is 24 stored?",
+  "options": [
+   "4",
+   "3",
+   "2",
+   "5"
+  ],
+  "answer": 0,
+  "explanation": "22 → 0; 33 → 0 भरा → 1; 44 → 0, 1 भरे → 2; 13 → 2 भरा → 3; 24 → 2, 3 भरे → 4। लगातार भरे खाने 'प्राइमरी क्लस्टरिंग' बनाते हैं — यही लीनियर प्रोबिंग की कमज़ोरी है।"
+ },
+ {
+  "id": "net-cs-071",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "The minimum number of states in a DFA over {0, 1} that accepts exactly the strings containing an even number of 0s and an even number of 1s is —",
+  "options": [
+   "8",
+   "2",
+   "3",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "DFA को दो बातें याद रखनी हैं: 0s की संख्या सम/विषम और 1s की संख्या सम/विषम — 2 × 2 = 4 अवस्थाएँ। आरंभ (सम, सम) ही स्वीकार्य अवस्था है। ये चारों आपस में अलग पहचानी जाती हैं, इसलिए घटकर कम नहीं होतीं।"
+ },
+ {
+  "id": "net-cs-072",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following statements about regular languages are correct?\nA. Regular languages are not closed under complement.\nB. Regular languages are closed under intersection.\nC. Regular languages are closed under Kleene star.\nD. Regular languages are closed under homomorphism.\nE. Regular languages are closed under reversal.\nChoose the correct answer from the options given below:",
+  "options": [
+   "B, C and D only",
+   "A, C and E only",
+   "B, C, D and E only",
+   "A, B, C and D only"
+  ],
+  "answer": 2,
+  "explanation": "नियमित भाषाएँ संघ, प्रतिच्छेद, पूरक, संयोजन, क्लीन-स्टार, उलटाव, होमोमॉर्फ़िज़्म — सब में बंद हैं। पूरक के लिए पूर्ण DFA की अंतिम और गैर-अंतिम अवस्थाएँ अदल-बदल दें — इसलिए A ग़लत। (CFL पूरक और प्रतिच्छेद में बंद नहीं होतीं — यही अंतर अक्सर पूछा जाता है।)"
+ },
+ {
+  "id": "net-cs-073",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R.\nAssertion A: If L is a regular language, then its complement is also regular.\nReason R: A DFA for the complement is obtained from a complete DFA for L by interchanging its final and non-final states.\nIn the light of the above statements, choose the most appropriate answer from the options given below:",
+  "options": [
+   "Both A and R are correct and R is the correct explanation of A",
+   "Both A and R are correct but R is NOT the correct explanation of A",
+   "A is correct but R is not correct",
+   "A is not correct but R is correct"
+  ],
+  "answer": 0,
+  "explanation": "R ठीक वही रचना है जिससे A सिद्ध होता है: पूर्ण DFA (हर अवस्था से हर प्रतीक पर संक्रमण) में स्वीकार्य और अस्वीकार्य अवस्थाएँ बदल दें तो वह ठीक पूरक भाषा स्वीकार करता है। ध्यान: NFA पर यह अदला-बदली काम नहीं करती।"
+ },
+ {
+  "id": "net-cs-074",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Arrange the following classes of languages from the smallest (most restricted) to the largest:\nA. Context-sensitive languages\nB. Regular languages\nC. Recursively enumerable languages\nD. Context-free languages\nE. Recursive (decidable) languages\nChoose the correct answer from the options given below:",
+  "options": [
+   "B, D, E, A, C",
+   "B, D, A, E, C",
+   "D, B, A, E, C",
+   "B, A, D, E, C"
+  ],
+  "answer": 1,
+  "explanation": "चॉम्स्की पदानुक्रम: नियमित ⊂ संदर्भ-मुक्त ⊂ संदर्भ-संवेदी ⊂ पुनरावर्ती (decidable) ⊂ पुनरावर्ती-गणनीय। हर संदर्भ-संवेदी भाषा LBA से निर्णीत होती है, इसलिए वह पुनरावर्ती के भीतर है।"
+ },
+ {
+  "id": "net-cs-075",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following problems is decidable?",
+  "options": [
+   "Whether a given DFA accepts at least one string",
+   "Whether a given context-free grammar is ambiguous",
+   "Whether a given Turing machine halts on a given input",
+   "Whether an instance of the Post Correspondence Problem has a solution"
+  ],
+  "answer": 0,
+  "explanation": "DFA की अरिक्तता: आरंभ से कोई अंतिम अवस्था पहुँच-योग्य है या नहीं — ग्राफ़-खोज से तय हो जाता है। हॉल्टिंग समस्या, CFG की अस्पष्टता और PCP — तीनों अनिर्णेय हैं (CFG-अस्पष्टता की अनिर्णेयता PCP से घटाकर सिद्ध होती है)।"
+ },
+ {
+  "id": "net-cs-076",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "For the grammar\nS → A a | b A c\nA → d | ε\nFOLLOW(A) is —",
+  "options": [
+   "{ a, c, $ }",
+   "{ c, $ }",
+   "{ a, c }",
+   "{ a }"
+  ],
+  "answer": 2,
+  "explanation": "S → A a में A के बाद a आता है; S → b A c में A के बाद c। A किसी नियम के अंत में नहीं है, इसलिए FOLLOW(S) से $ नहीं आता। FOLLOW(A) = {a, c}। (FOLLOW में ε कभी नहीं होता।)"
+ },
+ {
+  "id": "net-cs-077",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Arrange the following parsers in increasing order of the class of grammars they can handle:\nA. LALR(1)\nB. LR(0)\nC. Canonical LR(1)\nD. SLR(1)\nChoose the correct answer from the options given below:",
+  "options": [
+   "B, D, C, A",
+   "B, A, D, C",
+   "D, B, A, C",
+   "B, D, A, C"
+  ],
+  "answer": 3,
+  "explanation": "LR(0) बिना लुक-अहेड; SLR(1) FOLLOW-सेट से; LALR(1) समान कोर वाली LR(1) अवस्थाएँ मिलाकर (YACC यही बनाता है); कैनोनिकल LR(1) सबसे शक्तिशाली पर अवस्थाएँ सबसे अधिक।"
+ },
+ {
+  "id": "net-cs-078",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following languages are context-free?\nA. { aⁿbⁿ | n ≥ 0 }\nB. { aⁿbⁿcⁿ | n ≥ 0 }\nC. { w wᴿ | w ∈ {a, b}* }\nD. { w w | w ∈ {a, b}* }\nE. { aⁱbʲ | i ≠ j }\nChoose the correct answer from the options given below:",
+  "options": [
+   "A, B and C only",
+   "A, C and E only",
+   "A, C and D only",
+   "B, D and E only"
+  ],
+  "answer": 1,
+  "explanation": "PDA एक स्टैक से एक गिनती/मिलान कर सकता है: aⁿbⁿ, पैलिंड्रोम-जैसा w wᴿ और aⁱbʲ (i ≠ j) संदर्भ-मुक्त हैं। aⁿbⁿcⁿ में दो मिलान एक साथ चाहिए, और w w में मिलान उल्टे नहीं, सीधे क्रम में — दोनों संदर्भ-संवेदी हैं।"
+ },
+ {
+  "id": "net-cs-079",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I\nA. Chomsky Normal Form\nB. Greibach Normal Form\nC. Right-linear (regular) grammar\nD. Unrestricted grammar\nLIST-II (Form of productions)\nI. A → aB or A → a\nII. α → β, where α contains at least one variable\nIII. A → BC or A → a\nIV. A → aα, where α is a string of variables\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-III, B-IV, C-I, D-II",
+   "A-IV, B-III, C-I, D-II",
+   "A-III, B-I, C-IV, D-II",
+   "A-III, B-IV, C-II, D-I"
+  ],
+  "answer": 0,
+  "explanation": "CNF: दो चर या एक टर्मिनल। GNF: एक टर्मिनल के बाद केवल चर। दायाँ-रैखिक (टाइप-3): टर्मिनल के बाद अधिक से अधिक एक चर। अप्रतिबंधित (टाइप-0): बाएँ पक्ष में कम से कम एक चर, और कोई बंधन नहीं।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I",
+   "rightTitle": "LIST-II (Form of productions)",
+   "left": [
+    "A. Chomsky Normal Form",
+    "B. Greibach Normal Form",
+    "C. Right-linear (regular) grammar",
+    "D. Unrestricted grammar"
+   ],
+   "right": [
+    "I. A → aB or A → a",
+    "II. α → β, where α contains at least one variable",
+    "III. A → BC or A → a",
+    "IV. A → aα, where α is a string of variables"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-080",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II according to the compiler phase that takes each as its input:\nLIST-I (Input)\nA. Character stream\nB. Token stream\nC. Syntax tree\nD. Intermediate code\nLIST-II (Phase)\nI. Semantic analyser\nII. Code optimiser\nIII. Lexical analyser\nIV. Syntax analyser\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-III, B-I, C-IV, D-II",
+   "A-IV, B-III, C-I, D-II",
+   "A-III, B-IV, C-II, D-I",
+   "A-III, B-IV, C-I, D-II"
+  ],
+  "answer": 3,
+  "explanation": "लेक्सिकल एनालाइज़र अक्षर-धारा से टोकन बनाता है; पार्सर टोकन से सिंटैक्स-ट्री; सिमैंटिक एनालाइज़र ट्री पर प्रकार-जाँच करता है; फिर इंटरमीडिएट कोड बनकर ऑप्टिमाइज़र के पास जाता है।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II according to the compiler phase that takes each as its input:",
+   "leftTitle": "LIST-I (Input)",
+   "rightTitle": "LIST-II (Phase)",
+   "left": [
+    "A. Character stream",
+    "B. Token stream",
+    "C. Syntax tree",
+    "D. Intermediate code"
+   ],
+   "right": [
+    "I. Semantic analyser",
+    "II. Code optimiser",
+    "III. Lexical analyser",
+    "IV. Syntax analyser"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-081",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "A 10 Mbps CSMA/CD network has a maximum cable length of 2500 m, and signals propagate at 2 × 10⁸ m/s. The minimum frame size needed to detect every collision is —",
+  "options": [
+   "64 bits",
+   "125 bits",
+   "250 bits",
+   "500 bits"
+  ],
+  "answer": 2,
+  "explanation": "Tp = 2500 / (2 × 10⁸) = 12.5 µs। टक्कर पकड़ने के लिए संचरण-समय ≥ 2Tp = 25 µs। न्यूनतम फ़्रेम = 25 × 10⁻⁶ × 10⁷ = 250 बिट। (केवल Tp लेने पर 125 बिट — आम भूल।)"
+ },
+ {
+  "id": "net-cs-082",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following are controlled-access (collision-free) multiple-access protocols?\nA. CSMA/CA\nB. Polling\nC. Token passing\nD. Reservation\nE. Slotted ALOHA\nChoose the correct answer from the options given below:",
+  "options": [
+   "A, B and C only",
+   "B, C and D only",
+   "B, C, D and E only",
+   "A, D and E only"
+  ],
+  "answer": 1,
+  "explanation": "नियंत्रित पहुँच में स्टेशन अनुमति मिलने पर ही भेजते हैं: रिज़र्वेशन, पोलिंग, टोकन पासिंग। CSMA/CA और ALOHA 'रैंडम एक्सेस' हैं जिनमें टक्कर संभव है; FDMA/TDMA/CDMA 'चैनलाइज़ेशन' वर्ग में आते हैं।"
+ },
+ {
+  "id": "net-cs-083",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "A channel has a bandwidth of 3 kHz and a signal-to-noise ratio of 255. By Shannon's theorem, its capacity is —",
+  "options": [
+   "12 kbps",
+   "48 kbps",
+   "8 kbps",
+   "24 kbps"
+  ],
+  "answer": 3,
+  "explanation": "C = B log₂(1 + S/N) = 3000 × log₂256 = 3000 × 8 = 24,000 bps। शोर-रहित चैनल पर नाइक्विस्ट सूत्र (2B log₂L) लगता है; शोर-युक्त पर शैनन।"
+ },
+ {
+  "id": "net-cs-084",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Arrange the following digital carrier services in increasing order of data rate:\nA. T3\nB. ISDN Basic Rate Interface\nC. OC-3\nD. E1\nE. T1\nChoose the correct answer from the options given below:",
+  "options": [
+   "E, B, D, A, C",
+   "B, E, D, A, C",
+   "B, D, E, A, C",
+   "B, E, A, D, C"
+  ],
+  "answer": 1,
+  "explanation": "ISDN BRI = 144 kbps (2B + D) < T1 = 1.544 Mbps < E1 = 2.048 Mbps < T3 = 44.736 Mbps < OC-3 = 155.52 Mbps। T1 और E1 का क्रम सबसे आम जाल है।"
+ },
+ {
+  "id": "net-cs-085",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "The network address of the host 172.16.45.14/20 is —",
+  "options": [
+   "172.16.0.0",
+   "172.16.40.0",
+   "172.16.32.0",
+   "172.16.45.0"
+  ],
+  "answer": 2,
+  "explanation": "/20 = 255.255.240.0; तीसरे ऑक्टेट में ब्लॉक-आकार 256 − 240 = 16: सबनेट 0, 16, 32, 48 … 45, 32–47 वाले ब्लॉक में है — नेटवर्क 172.16.32.0, ब्रॉडकास्ट 172.16.47.255।"
+ },
+ {
+  "id": "net-cs-086",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I (IPv4 address)\nA. 10.1.2.3\nB. 191.255.1.1\nC. 223.1.1.1\nD. 239.10.10.10\nLIST-II (Class)\nI. Class C\nII. Class D\nIII. Class A\nIV. Class B\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-III, B-IV, C-I, D-II",
+   "A-IV, B-III, C-I, D-II",
+   "A-III, B-IV, C-II, D-I",
+   "A-III, B-I, C-IV, D-II"
+  ],
+  "answer": 0,
+  "explanation": "पहले ऑक्टेट से वर्ग: 1–126 A, 128–191 B, 192–223 C, 224–239 D (मल्टीकास्ट), 240–255 E। सीमा पर बैठे 191 और 223 ही इस प्रश्न का असली जाल हैं।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I (IPv4 address)",
+   "rightTitle": "LIST-II (Class)",
+   "left": [
+    "A. 10.1.2.3",
+    "B. 191.255.1.1",
+    "C. 223.1.1.1",
+    "D. 239.10.10.10"
+   ],
+   "right": [
+    "I. Class C",
+    "II. Class D",
+    "III. Class A",
+    "IV. Class B"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-087",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I (OSI layer)\nA. Session layer\nB. Network layer\nC. Data link layer\nD. Physical layer\nLIST-II (Function)\nI. Framing and physical (MAC) addressing\nII. Bit synchronisation and signal encoding\nIII. Dialog control and synchronisation points\nIV. Logical addressing and routing\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-III, B-IV, C-II, D-I",
+   "A-III, B-IV, C-I, D-II",
+   "A-IV, B-III, C-I, D-II",
+   "A-III, B-I, C-IV, D-II"
+  ],
+  "answer": 1,
+  "explanation": "सत्र स्तर: संवाद-नियंत्रण और चेकपॉइंट; नेटवर्क: IP पता और राउटिंग; डेटा-लिंक: फ़्रेम, MAC पता, त्रुटि-पहचान; भौतिक: बिट, संकेत, समकालिकता।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I (OSI layer)",
+   "rightTitle": "LIST-II (Function)",
+   "left": [
+    "A. Session layer",
+    "B. Network layer",
+    "C. Data link layer",
+    "D. Physical layer"
+   ],
+   "right": [
+    "I. Framing and physical (MAC) addressing",
+    "II. Bit synchronisation and signal encoding",
+    "III. Dialog control and synchronisation points",
+    "IV. Logical addressing and routing"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-088",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Data passes down the TCP/IP stack from the application to the wire. Arrange the protocol data units in the order in which they are formed:\nA. Frame\nB. Segment\nC. Bits\nD. Packet (datagram)\nE. Message (data)\nChoose the correct answer from the options given below:",
+  "options": [
+   "E, B, D, A, C",
+   "B, E, D, A, C",
+   "E, B, A, D, C",
+   "E, D, B, A, C"
+  ],
+  "answer": 0,
+  "explanation": "एप्लिकेशन संदेश → ट्रांसपोर्ट हेडर जुड़कर सेगमेंट → IP हेडर से पैकेट/डेटाग्राम → लिंक हेडर-ट्रेलर से फ़्रेम → भौतिक स्तर पर बिट। प्राप्तकर्ता पर यही उल्टे क्रम में खुलता है।"
+ },
+ {
+  "id": "net-cs-089",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following statements are correct?\nA. UDP is a connectionless protocol.\nB. TCP provides flow control using a sliding window.\nC. The UDP header contains a sequence-number field.\nD. TCP establishes a connection using a three-way handshake.\nE. UDP guarantees in-order delivery of datagrams.\nChoose the correct answer from the options given below:",
+  "options": [
+   "A, B, D and E only",
+   "A, C and D only",
+   "B, C and E only",
+   "A, B and D only"
+  ],
+  "answer": 3,
+  "explanation": "UDP का हेडर केवल 8 बाइट का है — स्रोत पोर्ट, गंतव्य पोर्ट, लंबाई, चेकसम; इसमें क्रमांक नहीं, इसलिए न क्रम की गारंटी न पुनः-प्रेषण। TCP क्रमांक, ACK, स्लाइडिंग विंडो और 3-वे हैंडशेक से विश्वसनीयता देता है।"
+ },
+ {
+  "id": "net-cs-090",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Given below are two statements:\nStatement I: Asymmetric-key encryption is generally much slower than symmetric-key encryption.\nStatement II: To create a digital signature, the sender signs the message digest with the sender's own private key.\nIn the light of the above statements, choose the correct answer from the options given below:",
+  "options": [
+   "Both Statement I and Statement II are correct",
+   "Both Statement I and Statement II are incorrect",
+   "Statement I is correct but Statement II is incorrect",
+   "Statement I is incorrect but Statement II is correct"
+  ],
+  "answer": 0,
+  "explanation": "RSA जैसे असममित एल्गोरिद्म बड़े अंकगणित पर चलते हैं — AES से सैकड़ों-हज़ारों गुना धीमे; इसलिए व्यवहार में सत्र-कुंजी असममित से और डेटा सममित से भेजा जाता है। हस्ताक्षर निजी कुंजी से बनता और सार्वजनिक कुंजी से जाँचा जाता है।"
+ },
+ {
+  "id": "net-cs-091",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "The data 101101 is to be sent using CRC with the generator polynomial x³ + x² + 1. The CRC remainder appended to the data is —",
+  "options": [
+   "011",
+   "110",
+   "010",
+   "101"
+  ],
+  "answer": 2,
+  "explanation": "जनक = 1101 (घात 3), इसलिए डेटा के पीछे तीन 0: 101101000। इसे 1101 से मॉड्यूलो-2 (XOR) भाग देने पर शेष 010 आता है। भेजा जाने वाला फ़्रेम: 101101010 — प्राप्तकर्ता इसे 1101 से भाग दे तो शेष 0 आएगा।"
+ },
+ {
+  "id": "net-cs-092",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "A perceptron with a step activation has weights w = (0.2, −0.1) and no bias. For the input x = (1, 1) with target t = 1, its output is y = 0. Using the perceptron learning rule with learning rate η = 0.5, the updated weights are —",
+  "options": [
+   "(0.2, −0.1)",
+   "(0.7, 0.4)",
+   "(−0.3, −0.6)",
+   "(0.7, −0.1)"
+  ],
+  "answer": 1,
+  "explanation": "नियम: w_new = w + η(t − y)x = (0.2, −0.1) + 0.5 × (1 − 0) × (1, 1) = (0.7, 0.4)। (t − y) का चिह्न उल्टा लेने पर (−0.3, −0.6); केवल पहला भार बदलने पर (0.7, −0.1)।"
+ },
+ {
+  "id": "net-cs-093",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Arrange the following steps of training a neural network with backpropagation in the correct order (for one iteration):\nA. Update the weights\nB. Forward pass to compute the output\nC. Compute the loss (error)\nD. Initialise the weights\nE. Back-propagate the error gradients\nChoose the correct answer from the options given below:",
+  "options": [
+   "B, D, C, E, A",
+   "D, C, B, E, A",
+   "D, B, E, C, A",
+   "D, B, C, E, A"
+  ],
+  "answer": 3,
+  "explanation": "भार आरंभ → आगे का पास (आउटपुट) → हानि की गणना → चेन-नियम से ग्रेडिएंट पीछे भेजना → भार अद्यतन; फिर अगले बैच/एपॉक के लिए आगे के पास से दोहराव।"
+ },
+ {
+  "id": "net-cs-094",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following statements are correct?\nA. A single-layer perceptron can learn the XOR function.\nB. The output of the sigmoid function lies between −1 and 1.\nC. The output of the tanh function lies between −1 and 1.\nD. Backpropagation computes gradients using the chain rule.\nE. Dropout is a regularisation technique that helps reduce overfitting.\nChoose the correct answer from the options given below:",
+  "options": [
+   "B, C and E only",
+   "A, B, D and E only",
+   "C, D and E only",
+   "A, C and D only"
+  ],
+  "answer": 2,
+  "explanation": "XOR रैखिक रूप से अलग नहीं होता, इसलिए एकल परसेप्ट्रॉन उसे नहीं सीख सकता (A ग़लत)। सिग्मॉइड का परास (0, 1) है, (−1, 1) tanh का (B ग़लत, C सही)। बैकप्रॉप चेन-नियम पर टिका है; ड्रॉपआउट प्रशिक्षण में न्यूरॉन यादृच्छिक रूप से बंद कर ओवरफ़िटिंग घटाता है।"
+ },
+ {
+  "id": "net-cs-095",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I (Learning paradigm)\nA. Supervised learning\nB. Unsupervised learning\nC. Reinforcement learning\nD. Semi-supervised learning\nLIST-II (Example)\nI. An agent learns to play a game from rewards and penalties\nII. Training on a small labelled set together with a large unlabelled set\nIII. Classifying e-mails as spam using labelled examples\nIV. Grouping customers into segments without any labels\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-III, B-IV, C-I, D-II",
+   "A-IV, B-III, C-I, D-II",
+   "A-III, B-I, C-IV, D-II",
+   "A-III, B-IV, C-II, D-I"
+  ],
+  "answer": 0,
+  "explanation": "लेबल वाले उदाहरण = पर्यवेक्षित (वर्गीकरण, प्रतिगमन); बिना लेबल समूह बनाना = अपर्यवेक्षित (क्लस्टरिंग); पुरस्कार-दंड से नीति सीखना = रीइन्फ़ोर्समेंट; थोड़े लेबल और बहुत बिना लेबल = अर्ध-पर्यवेक्षित।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I (Learning paradigm)",
+   "rightTitle": "LIST-II (Example)",
+   "left": [
+    "A. Supervised learning",
+    "B. Unsupervised learning",
+    "C. Reinforcement learning",
+    "D. Semi-supervised learning"
+   ],
+   "right": [
+    "I. An agent learns to play a game from rewards and penalties",
+    "II. Training on a small labelled set together with a large unlabelled set",
+    "III. Classifying e-mails as spam using labelled examples",
+    "IV. Grouping customers into segments without any labels"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-096",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "A classifier produces 40 true positives, 10 false positives and 20 false negatives. Its precision and recall are respectively —",
+  "options": [
+   "0.67 and 0.80",
+   "0.80 and 0.67",
+   "0.40 and 0.67",
+   "0.80 and 0.80"
+  ],
+  "answer": 1,
+  "explanation": "प्रिसिज़न = TP / (TP + FP) = 40 / 50 = 0.80 — जिन्हें धनात्मक कहा उनमें कितने सही। रिकॉल = TP / (TP + FN) = 40 / 60 ≈ 0.67 — असली धनात्मकों में कितने पकड़े। दोनों को उलट देना सबसे आम भूल है।"
+ },
+ {
+  "id": "net-cs-097",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Arrange the steps of one generation of a genetic algorithm in the correct order:\nA. Crossover\nB. Create the initial population\nC. Evaluate the fitness of each individual\nD. Mutation\nE. Selection of parents\nChoose the correct answer from the options given below:",
+  "options": [
+   "B, C, A, E, D",
+   "B, E, C, A, D",
+   "C, B, E, A, D",
+   "B, C, E, A, D"
+  ],
+  "answer": 3,
+  "explanation": "आरंभिक जनसंख्या → फ़िटनेस मूल्यांकन → उसी के आधार पर माता-पिता का चयन → क्रॉसओवर → म्यूटेशन; नई पीढ़ी के साथ यह चक्र तब तक दोहराया जाता है जब तक समाप्ति-शर्त पूरी न हो।"
+ },
+ {
+  "id": "net-cs-098",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following statements about natural language processing are correct?\nA. Morphological analysis deals with the internal structure of words.\nB. Syntactic analysis checks the grammatical structure of a sentence.\nC. Pragmatic analysis interprets meaning using context and the speaker's intention.\nD. Semantic analysis is concerned only with the spelling of words.\nE. The CYK parsing algorithm requires the grammar to be in Chomsky Normal Form.\nChoose the correct answer from the options given below:",
+  "options": [
+   "B, C, D and E only",
+   "A, C and E only",
+   "A, B, C and E only",
+   "A, B and D only"
+  ],
+  "answer": 2,
+  "explanation": "NLP के स्तर: रूपिम (शब्द-रचना) → वाक्य-रचना → अर्थ (शब्दों और वाक्य का अर्थ — वर्तनी नहीं, इसलिए D ग़लत) → प्रसंग → व्यावहारिक (आशय)। CYK, CNF व्याकरण पर O(n³) समय में पार्स करता है।"
+ },
+ {
+  "id": "net-cs-099",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Fuzzy set A on {x1, x2, x3} has membership values 0.2, 0.7 and 1.0. Using the standard complement and intersection, A ∩ Aᶜ is —",
+  "options": [
+   "{0.2, 0.3, 0.0}",
+   "{0.0, 0.0, 0.0}",
+   "{0.2, 0.7, 0.0}",
+   "{0.8, 0.7, 1.0}"
+  ],
+  "answer": 0,
+  "explanation": "Aᶜ = 1 − μ = {0.8, 0.3, 0.0}; प्रतिच्छेद = न्यूनतम: min(0.2, 0.8) = 0.2, min(0.7, 0.3) = 0.3, min(1, 0) = 0। परिणाम रिक्त नहीं — फ़ज़ी तर्क में 'विरोध का नियम' (A ∩ Aᶜ = ∅) लागू नहीं होता।"
+ },
+ {
+  "id": "net-cs-100",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following statements about Horn clauses are correct?\nA. A Horn clause has at most one positive literal.\nB. A definite clause has exactly one positive literal.\nC. A goal clause has no positive literal.\nD. Inference with Horn clauses can be carried out by forward or backward chaining.\nE. Every propositional formula can be written as a conjunction of Horn clauses.\nChoose the correct answer from the options given below:",
+  "options": [
+   "A, B, C and D only",
+   "A, B and E only",
+   "B, C, D and E only",
+   "A, C and E only"
+  ],
+  "answer": 0,
+  "explanation": "हॉर्न खंड में अधिकतम एक धनात्मक लिटरल; ठीक एक हो तो definite clause (नियम/तथ्य), शून्य हो तो goal clause। इन पर फ़ॉरवर्ड और बैकवर्ड चेनिंग रैखिक समय में चलती है — यही PROLOG का आधार है। पर p ∨ q जैसे सूत्र (दो धनात्मक) हॉर्न रूप में नहीं लिखे जा सकते (E ग़लत)।"
+ }
+]
