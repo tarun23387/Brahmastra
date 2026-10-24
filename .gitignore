@@ -62,4 +62,6 @@ desktop.ini
 # ═════════ Claude Code का स्थानीय config ═════════
 # `.claude/launch.json` में अक्सर इसी मशीन के पूरे पथ होते हैं (जैसे PDF
 # वाला फ़ोल्डर), इसलिए इसे साझा करने का कोई मतलब नहीं.
-.claude/
+# पर `.claude/skills/` (जैसे question-prep) काम का ज्ञान है, वह git में रहे.
+.claude/*
+!.claude/skills/

@@ -1,0 +1,222 @@
+---
+name: question-prep
+description: "Brahmastra exam-question pipeline — writing, extracting, checking and uploading MCQs to Firestore for UP state exams (UPPCS, RO/ARO, UPSSSC PET), UPPSC technical posts (prog-sr, mgr-system, prog-fin) and UGC NET (net-cs, net-geo). Use whenever the user wants questions made, revised, translated or extracted from a PDF, docx or PYQ paper; wants them imported (import.js, build-packs.js), removed or re-tagged; or wants a new exam, subject, paper or question field added — even when asked casually in Hindi/Hinglish, e.g. 'NET geography ke 100 questions bana do', 'is PDF se prashn nikaal ke chadha do', 'UPPCS ke sawal sudhaaro', 'naya course jodo'. It holds the Firestore read-budget rules that stop the Spark plan from shutting the app down for every student."
+---
+
+# प्रश्न तैयार करना — ब्रह्मास्त्र
+
+यह पूरा क्रम है: **स्रोत → पाठ निकालना → प्रश्न लिखना → जाँच → चढ़ाना → packs**।
+यहाँ लिखी हर बात किसी असली चूक से निकली है; हर नियम के साथ उसकी वजह
+दी है, ताकि नई स्थिति में भी सही फ़ैसला हो सके।
+
+रास्ते (repo की जड़ `D:\MYApp` से):
+
+- `APP` = `prashn_reel_v2_firebase/prashn_reel_v2`
+- `ADMIN` = `APP/firebase/admin` — सारी `node …` लिपियाँ यहीं से चलती हैं
+
+Firestore वाली लिपियाँ (`import.js`, `build-packs.js`, `count-bank.js`) सामान्य
+Bash/sandbox में चल जाती हैं। उन्हें चलाने का काम उपयोगकर्ता को वापस मत
+सौंपिए; चलाकर देखिए।
+
+## 0. शुरू करने से पहले
+
+1. **कौन-सी परीक्षा और कौन-सा paper?** `APP/firebase/shared/exams.json` में
+   `exams`, `papers` और `subjects` देखिए। वही सच है, यहाँ की कोई सूची नहीं।
+2. **Syllabus हाथ में है?** `ADMIN/syllabus-*.txt` देखिए। नई परीक्षा हो तो
+   आयोग की अधिसूचना से पाठ्यक्रम का पाठ इसी नाम-ढंग से सहेजिए। स्तर
+   syllabus से तय होता है (देखिए §2)।
+3. **Read-लागत बताइए।** काम बड़ा हो तो उपयोगकर्ता को पहले बताइए कि कितने
+   पूरे-collection scan लगेंगे (§5)। यह वही बजट है जिससे छात्रों का ऐप
+   चलता है।
+
+## 1. स्रोत से पाठ निकालना
+
+| स्रोत | तरीक़ा |
+|---|---|
+| द्विभाषी पुस्तिका (बाएँ अंग्रेज़ी, दाएँ हिंदी) | `pdftotext -layout -marginr 290 file.pdf left.txt`। A4 पर 290 बिंदु दायाँ स्तंभ काट देता है। उत्तर-कुंजी आम तौर पर आख़िरी पन्ने पर होती है। **पहले यही आज़माइए।** |
+| हिंदी PDF जिसका पाठ टूटकर निकले ("कैश" → "ै कश") | font का ToUnicode नक़्शा अधूरा है; अंदाज़े से हिंदी भरना मना है। `node APP/tools/pdfserve.js "<फ़ोल्डर>"` चलाकर (या `.claude/launch.json` का `pdf-server`, जिसका फ़ोल्डर बदलना पड़ेगा) browser pane में `http://localhost:8099/<फ़ाइल>?from=2&to=2&scale=1.7` खोलिए और पन्ना आँख से पढ़िए। पन्ने से बाहर बहता पाठ `?extra=` / `?up=` से दिखता है। Browser pane `file://` नहीं खोलता, इसलिए localhost ज़रूरी है। |
+| स्कैन PDF (पाठ की परत ही नहीं), अंग्रेज़ी | `powershell -NoProfile -ExecutionPolicy Bypass -File .claude/skills/question-prep/scripts/ocr-pdf.ps1 -Pdf <file.pdf> -Out <out.txt>`। यह Windows OCR है (150 dpi; `-Dpi`, `-From`, `-To` भी चलते हैं)। Tesseract इस मशीन पर नहीं है। OCR की भाषाएँ सिर्फ़ en-US/en-GB हैं, **हिंदी नहीं**: हिंदी स्कैन के लिए ऊपर वाला `pdfserve.js` रास्ता लीजिए। |
+| `.docx` | सादा पाठ निकालकर `ADMIN/<नाम>.txt` में रखिए (जैसे `brahmastra-qbank-571.txt`), फिर उससे JSON बनाइए। मिले-जुले विषयों वाले हिस्सों में विषय **हाथ से** तय कीजिए; शब्द गिनकर लगाया अंदाज़ा "खिलजी" को करेंट अफेयर्स बता रहा था। |
+| पुराने PYQ (NET) | Testbook का `cdn.testbook.com` और Adda247 की response sheet काम आई थीं। NTA की final key सिर्फ़ candidate login से दिखती है। |
+
+**निकालने के बाद हर बार:**
+
+- **चिह्न उड़ जाते हैं:** ₹, π, °, ½, ², ³ और घातांक। `3^(x−y) = 27` बस
+  `3(x-y) = 27` बनकर निकला था। हर गणित/संख्या वाले प्रश्न को ख़ुद हल करके
+  कुंजी से मिलाइए; मेल न खाए तो प्रश्न का पाठ टूटा है।
+- **OCR की ख़ास गड़बड़ियाँ:** `1`↔`I`, `0`↔`O`, और `^` अक्सर `A` बन जाता है
+  (`(KLOC)^1.05` → `(KLOC)AI .05`)। code और सूत्र अक्षर-अक्षर जाँचिए।
+- निकाला हुआ पाठ और उसे JSON बनाने वाली लिपि `ADMIN/` में (या उसके
+  उप-फ़ोल्डर में) रखिए, scratchpad में नहीं। scratchpad अगले session तक
+  नहीं बचता, और दोबारा सुधार करना पड़े तो स्रोत फिर से निकालना पड़ता है।
+
+## 2. प्रश्न लिखना
+
+**पहले असली pattern गिनिए, फिर लिखिए।** जिस परीक्षा के PYQ मिलें, उनमें
+format (सीधा, code, बहु-कथन, सूची-मिलान, क्रम, Assertion-Reason, Statement
+I/II, गद्यांश) और unit का हिस्सा गिनिए। NET CS का उदाहरण
+`ADMIN/ugc-net/pyq-cs/` (`classify.js`, `analyze.js`) में है। वहाँ structured
+formats 44–48% निकले (एक paper में 66%), हर paper में 10 गद्यांश-प्रश्न थे,
+और C code का output पाँचों papers में आया। सेट वही अनुपात दिखाए, बराबर
+बँटवारा नहीं।
+
+**स्तर syllabus से।** UPPSC तकनीकी पदों में प्रबंधक (सिस्टम) GATE जैसा है,
+प्रोग्रामर ग्रेड-2 बीच का, और वरिष्ठ प्रोग्रामर हल्का (applied/output
+वाले)। एक ही विषय होने से स्तर एक नहीं हो जाता।
+
+**भाषा।** UP की परीक्षाएँ हिंदी में। NET CS में प्रश्न और विकल्प अंग्रेज़ी में,
+व्याख्या हिंदी में (उपयोगकर्ता की पसंद)। दोनों भाषाएँ एक साथ (bilingual)
+अभी बना ही नहीं है; उसके लिए अपनी ओर से नई फ़ील्ड मत गढ़िए (§6 देखिए)।
+
+**व्याख्या।** पहला वाक्य सीधे उत्तर बताए; फिर वह जुड़ा तथ्य जो दोबारा पूछा
+जा सकता है। गणित/आकलन में हिसाब दिखाइए और हर ग़लत विकल्प का "जाल"
+बताइए (कौन-सी चूक उस विकल्प तक ले जाती है)। "सुमेलित नहीं है" वाले में बाक़ी
+युग्म सही क्यों हैं, यह भी लिखिए। **व्याख्या में विकल्प को अक्षर से मत
+बुलाइए** ("विकल्प (D) असत्य है", "option (b)") बल्कि उसकी बात से बुलाइए:
+फेंटने के बाद अक्षर बदल जाता है और व्याख्या झूठी हो जाती है।
+
+**विशेष ढाँचे:**
+
+- **सूची-मिलान:** `match: {intro, leftTitle, rightTitle, left[], right[]}`
+  दीजिए, ऐप सारणी बनाता है। दोनों सूचियाँ `question` के सादे पाठ में भी
+  रखिए, वरना पुरानी APK में प्रश्न अधूरा दिखता है। दोनों सूचियाँ बराबर
+  लंबी हों।
+- **गद्यांश:** अलग फ़ील्ड नहीं है। गद्यांश `question` के पाठ में ही जाता है
+  ("गद्यांश पढ़कर उत्तर दीजिए —\n'…'\n\nप्रश्न: …" या "Read the passage…"),
+  और हर उप-प्रश्न अपनी पंक्ति है। भाषा वाली परीक्षाओं में विषय
+  `comprehension` है; NET CS के गद्यांश-प्रश्न `computer` में ही रहते हैं।
+- **Assertion-Reason और Statement I/II:** विकल्पों का मानक क्रम वैसा ही रखिए
+  जैसा NTA छापता है; ये फेंटे नहीं जाते (§4)।
+- **`year`** सिर्फ़ असली PYQ पर लगाइए। कार्ड पर साल का ठप्पा इसी से लगता है।
+
+**तथ्य की जाँच लिखते समय ही।** जोखिम वाले तीन तरह के दावे: (1) संस्था,
+योजना या अधिनियम का वर्ष, (2) गिनती (अनुच्छेद, अनुसूची, सदस्य, प्रतिशत),
+(3) "सबसे बड़ा / पहला / एकमात्र"। इन्हें वेब से मिलाइए; सामयिकी (`ca`) का
+**हर** प्रश्न मिलाइए। स्रोत आपस में भिन्न हों तो प्रश्न छोड़ दीजिए (GDP रैंक
+इसी वजह से छोड़ी गई थी)। छाँटने के लिए
+`node risky-facts.js <file.json> --list`, और नतीजा `ADMIN/VERIFY-LOG.md` में।
+
+**ईमानदारी।** अपने बनाए अभ्यास-प्रश्न आयोग के प्रश्न नहीं हैं। उन पर `year`
+मत लगाइए, और कहीं "PYQ"/"आधिकारिक" मत कहिए; Play ने Misleading Claims में
+ऐप एक बार इसी तरह की बात पर रोका था। जो व्याख्याएँ स्रोत में नहीं थीं और
+आपने लिखीं, उनकी गिनती रिपोर्ट में बताइए।
+
+## 3. JSON का ढाँचा
+
+फ़ाइल एक array है। `import.js` सिर्फ़ ये फ़ील्ड आगे भेजता है, **बाक़ी
+चुपचाप गिर जाती हैं**:
+
+```json
+{
+  "id": "net-cs-001",
+  "subject": "computer",
+  "exams": ["net-cs"],
+  "question": "…",
+  "options": ["…", "…", "…", "…"],
+  "answer": 2,
+  "explanation": "…",
+  "difficulty": "moderate",
+  "match": { "...": "सिर्फ़ सूची-मिलान में" },
+  "year": 2024
+}
+```
+
+- **ठीक 4 विकल्प**, सब अलग, कोई ख़ाली नहीं; `answer` 0–3।
+- **`exams` हमेशा साफ़-साफ़ लिखिए।** न लिखें तो `taxonomy.js` इसे `roaro`
+  मान लेता है। paper विषय से तय होता है (`taxonomy.js` का `paperFor`): जैसे
+  `net-cs` में सिर्फ़ `shikshan` → P1 और `computer` → P2 जाते हैं, कोई और
+  विषय हो तो **कोई paper नहीं लगता और प्रश्न ऐप में कहीं नहीं दिखता**।
+  Paper-1 (`shikshan`) के प्रश्न पर `exams: ["net-cs", "net-geo"]` लगता है।
+  dry-run की "प्रश्नपत्र-वार" गिनती से इसकी पुष्टि कीजिए।
+- **`subject`** `exams.json` के `subjects` में से हो। ऐप अनजान विषय को
+  चुपचाप `ca` (करेंट अफेयर्स) बना देता है।
+- **`id` देना अच्छा है** जब सेट आगे सुधारा जा सकता हो (`net-cs-001` जैसा)।
+  वही id दोबारा चढ़ाने पर प्रश्न बदलता है। बिना id के दोहराव की पहचान
+  प्रश्न + विकल्पों से होती है, इसलिए पाठ थोड़ा भी बदलकर दोबारा चढ़ाया तो
+  **नया दोहरा प्रश्न** बन जाता है।
+
+## 4. जाँच (Firestore को छुए बिना)
+
+1. `node check-questions.js f.json` से बाहरी अक्षर (देवनागरी में अरबी "د"),
+   मिली-जुली लिपि ("समिti"), अधूरा वाक्य, दोहराव और बिना व्याख्या वाले
+   प्रश्न पकड़ में आते हैं; साथ में सही उत्तर की जगहों की गिनती भी दिखती है।
+2. `node shuffle-answers.js f.json` विकल्प फेंटकर सही उत्तर चारों जगह
+   बराबर बाँटता है (एक बार 62% उत्तर (A) पर थे)। यह **फ़ाइल को वहीं बदल
+   देता है**। जिन प्रश्नों का क्रम मायने रखता है, उन्हें यह छोड़ देता है:
+   हिंदी के क्रम-संवेदी विकल्प (तीनों/सभी/उपर्युक्त/कोई नहीं), अंग्रेज़ी के
+   Assertion-Reason, Statement I/II, "All/None of the above/these" और
+   "Both (a) and (b)", और वे प्रश्न जिनकी व्याख्या विकल्प का नाम लेती है
+   ("विकल्प (D)", "विकल्प 2", "option (b)")। "क्रम-संवेदी छोड़े" की गिनती देख
+   लीजिए। कोई नया क्रम-संवेदी ढाँचा आए (जैसे "Only I") तो उसे लिपि के
+   `ORDER_SENSITIVE_EN` में जोड़िए।
+3. **हर गणित/code प्रश्न दोबारा हल कीजिए**, बेहतर हो तो छोटी node लिपि से,
+   और देखिए कि `answer` का सूचकांक फेंटने के बाद भी सही विकल्प पर है।
+4. जोखिम वाले तथ्य (§2) मिलाए गए या नहीं, देख लीजिए।
+
+## 5. चढ़ाना (read का बजट!)
+
+Project **Spark plan** पर है: पूरे दिन में 50,000 reads, सबके लिए साझा। सीमा
+पार हुई तो Firestore असली छात्रों के लिए भी आधी रात (Pacific) तक बंद हो
+जाता है: PDT में 12:30 IST, PST में 13:30 IST। `import.js` (dry-run भी),
+`build-packs.js` और `count-bank.js`, तीनों हर बार **पूरा `questions`
+collection** पढ़ते हैं (अक्टूबर 2026 में ~3.5k docs)। 22 अक्टू॰ 2026 को सात
+फ़ाइलों पर अलग-अलग dry-run और commit (14 runs) से दिन का पूरा बजट ख़त्म हो
+गया था।
+
+**सही क्रम, कुल ~3 scan:**
+
+```bash
+cd prashn_reel_v2_firebase/prashn_reel_v2/firebase/admin
+# सारी नई फ़ाइलें पहले एक ही फ़ाइल में जोड़िए
+node import.js all.json             # dry-run: नए / बदले / छोड़े, विषय-वार, प्रश्नपत्र-वार
+node import.js all.json --commit
+node subscriptions.js free-pet --commit   # सिर्फ़ तब, जब नए PET प्रश्न मुफ़्त करने हों
+node build-packs.js --commit        # सबसे आख़िर में, एक बार; manifest भी यही बढ़ाता है
+```
+
+- `build-packs.js --commit` भूल गए तो नए प्रश्न छात्रों तक 30 दिन तक नहीं
+  पहुँचते। सफलता `packs/<paper>-1` के `version` और `updatedAt` से जाँचिए।
+  यह pack-वार लिखता है, इसलिए deadline पर गिरे तो दोबारा चलाना सुरक्षित है।
+- `import.js` सब-या-कुछ-नहीं है: एक भी ख़राब पंक्ति पूरी फ़ाइल रोक देती है।
+  इसीलिए पहले §4 की जाँचें, जो Firestore नहीं छूतीं।
+- **पूरा paper बदलना हो** तो `node remove-paper.js <paper>` (दिखाता है), फिर
+  `--commit`। यह `backup-<paper>-<तारीख़>.json` बनाकर हटाता है, और जो प्रश्न
+  किसी दूसरे paper में भी लगे हों उन्हें नहीं छूता। वापस लाना हो तो
+  `node import.js backup-….json --commit`।
+- live प्रश्नों को बदलने से पहले उनका बैकअप JSON रखिए
+  (`backup-<क्या>-<तारीख़>.json`)।
+- नई परीक्षाएँ अपने आप **सदस्यता वाली** होती हैं; `import.js` `free` झंडा
+  छूता नहीं। मुफ़्त सेट बदले तो `node gen-seed.js --write` भी चलाइए (ऐप के
+  बंडल वाले प्रश्न), जो अगली release में जाएगा।
+- `RESOURCE_EXHAUSTED` आए तो रुक जाइए; दोबारा कोशिश करने से और reads जलती
+  हैं। उपयोगकर्ता को reset का समय बताइए।
+
+## 6. नई परीक्षा, विषय या फ़ील्ड
+
+- **नई परीक्षा/paper:** `APP/lib/exams.dart` (Exam, Paper, `kSubjectToPapers`),
+  `APP/firebase/shared/exams.json` और `ADMIN/taxonomy.js` का `paperFor`,
+  तीनों बदलने पड़ते हैं। परीक्षा की सूची ऐप में compiled है, इसलिए
+  **नई release के बिना course नहीं दिखेगा**; यह उपयोगकर्ता को बताइए।
+- **नया आयोग/स्रोत-लिंक:** `sourceUrl` `exams.dart` और `exams.json` दोनों में,
+  और Play listing (`APP/play-listing/LISTING.md`), `lib/screens/sources_page.dart`
+  और `firebase/public/sources.html` के स्रोत-खंड में। लिंक विदेशी node से जाँचिए
+  (check-host.net, us1/de1): `upsssc.gov.in` और `*.up.gov.in` भारत के बाहर
+  नहीं खुलते, उनकी जगह `igod.gov.in` लगाना पड़ा था।
+- **परीक्षा की तारीख़ें:** `node exam-dates.js set <exam> --notif … --last … --exam …`;
+  नई build नहीं चाहिए। आयोग की अपनी सूचना से मिलाकर भरिए।
+- **नया विषय:** `exams.json` के `subjects`, `lib/models.dart` का `kSubjects`,
+  `lib/exams.dart` का `kSubjectToPapers`, और admin पैनल (`ADMIN/server.js`)
+  का `SUBJECTS`।
+- **प्रश्न की नई फ़ील्ड:** चार जगह जोड़नी पड़ती है: `lib/models.dart`
+  (`Question.fromMap`), `lib/question_card.dart`, `ADMIN/import.js` का
+  `check()` और `ADMIN/build-packs.js` का `slim()`। एक भी छूटी तो फ़ील्ड pack
+  तक पहुँचती ही नहीं।
+
+## 7. काम ख़त्म होने पर
+
+- उपयोगकर्ता को बताइए: विषय-वार और paper-वार गिनती; कितनी व्याख्याएँ स्रोत
+  की थीं और कितनी आपकी; क्या-क्या मिलाया गया और क्या नहीं; कितने scan
+  लगे; release चाहिए या नहीं।
+- कोई नई, ग़ैर-ज़ाहिर बात सीखी हो तो memory में लिखिए, और अगर इस skill का
+  कोई नियम बदल गया हो तो यह फ़ाइल भी सुधारिए।
+- Commit तभी कीजिए जब उपयोगकर्ता कहे।

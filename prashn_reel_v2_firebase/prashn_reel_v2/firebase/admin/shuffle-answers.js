@@ -16,13 +16,33 @@ const rows = JSON.parse(fs.readFileSync(file, 'utf8'));
 const ORDER_SENSITIVE = /(तीनों|चारों|दोनों|सभी|उपरोक्त|इनमें से कोई|कोई नहीं|उपर्युक्त)/;
 
 /**
- * जिन प्रश्नों की व्याख्या विकल्प के अक्षर का नाम लेती है — "विकल्प (D)
- * असत्य है" — उन्हें भी नहीं फेंटा जाता. फेंटने पर उत्तर तो सही रहता है
- * पर व्याख्या झूठी हो जाती है, और छात्र को वही सबसे ज़्यादा भ्रमित करता है.
+ * अंग्रेज़ी में वही बात. NET के Assertion-Reason और Statement I/II वाले
+ * प्रश्नों के चारों विकल्प NTA हमेशा एक ही क्रम में छापता है, और छात्र उसी
+ * क्रम का अभ्यस्त होता है. पहले ऊपर की सूची ही थी, इसलिए ऐसे अंग्रेज़ी
+ * प्रश्न चुपचाप फेंटे जा रहे थे.
+ *
+ * अकेला 'neither' इसमें नहीं है — 'neither lossless nor dependency-preserving'
+ * जैसा विकल्प अपने आप में पूरा है, दूसरे विकल्पों की ओर इशारा नहीं करता.
+ */
+const ORDER_SENSITIVE_EN = [
+  /\bA and R\b|\b[AR] is (not )?(correct|true|false)/, // Assertion-Reason
+  /\bStatements? ?(I|II|1|2)\b/, // Statement I/II
+  /\b(all|none|any|both) of (the )?(above|these|them)\b/i,
+  /\b(both|neither) \(?[a-d1-4]\)? (and|nor) \(?[a-d1-4]\)?/i,
+];
+
+/**
+ * जिन प्रश्नों की व्याख्या विकल्प का नाम लेती है — "विकल्प (D) असत्य है",
+ * "विकल्प 2 C-SCAN का क्रम है", "option (b)" — उन्हें भी नहीं फेंटा जाता.
+ * फेंटने पर उत्तर तो सही रहता है पर व्याख्या झूठी हो जाती है, और छात्र को
+ * वही सबसे ज़्यादा भ्रमित करता है.
  *
  * "कथन (A)" इसमें नहीं आता — वह प्रश्न के भीतर का कथन है, विकल्प नहीं.
+ * अक्षर/अंक के बाद कोई और अक्षर हो ("विकल्प सही", "option buttons") तो वह
+ * विकल्प का नाम नहीं, साधारण शब्द है.
  */
-const NAMES_OPTION = /विकल्प\s*\(?[A-D]\)?/;
+const NAMES_OPTION =
+  /(विकल्प|\boptions?)\s*\(?([A-Da-d1-4]|[अबसद])\)?(?![\p{L}\p{M}\d])/iu;
 
 // तय बीज — दोबारा चलाने पर वही नतीजा
 let seed = 20260824;
@@ -37,7 +57,9 @@ let skipped = 0;
 
 for (const q of rows) {
   if (
-    q.options.some((o) => ORDER_SENSITIVE.test(o)) ||
+    q.options.some(
+      (o) => ORDER_SENSITIVE.test(o) || ORDER_SENSITIVE_EN.some((re) => re.test(o))
+    ) ||
     NAMES_OPTION.test(String(q.explanation ?? ''))
   ) {
     placed[q.answer]++;
