@@ -1853,5 +1853,570 @@
   ],
   "answer": 0,
   "explanation": "हॉर्न खंड में अधिकतम एक धनात्मक लिटरल; ठीक एक हो तो definite clause (नियम/तथ्य), शून्य हो तो goal clause। इन पर फ़ॉरवर्ड और बैकवर्ड चेनिंग रैखिक समय में चलती है — यही PROLOG का आधार है। पर p ∨ q जैसे सूत्र (दो धनात्मक) हॉर्न रूप में नहीं लिखे जा सकते (E ग़लत)।"
+ },
+ {
+  "id": "net-cs-101",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Arrange the following levels of interrupt protection in the Linux kernel in increasing order of priority:\nA. Top-half interrupt handlers\nB. User-mode programs (preemptible)\nC. Bottom-half interrupt handlers\nD. Kernel-system service routines (not preemptible)\nChoose the correct answer from the options given below:",
+  "options": [
+   "B, C, D, A",
+   "D, B, C, A",
+   "B, D, C, A",
+   "B, D, A, C"
+  ],
+  "answer": 2,
+  "explanation": "Silberschatz के Linux अध्याय के अनुसार सबसे नीचे यूज़र-मोड प्रोग्राम (पूर्व-ग्रहणीय), फिर कर्नेल की सिस्टम-सर्विस रूटीन, फिर बॉटम-हाफ़ हैंडलर, और सबसे ऊपर टॉप-हाफ़ हैंडलर — जो इंटरप्ट आते ही तुरंत चलते हैं और बाक़ी काम बॉटम-हाफ़ पर छोड़ देते हैं। यही परिवार दिसंबर 2023 और जून 2025 दोनों में पूछा गया।"
+ },
+ {
+  "id": "net-cs-102",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "In the Linux Virtual File System (VFS), which object type represents an individual directory entry, linking a name to an inode?",
+  "options": [
+   "Dentry object",
+   "Superblock object",
+   "File object",
+   "Inode object"
+  ],
+  "answer": 0,
+  "explanation": "VFS के चार मुख्य ऑब्जेक्ट: superblock = पूरा माउंट किया हुआ फ़ाइल-सिस्टम; inode = एक फ़ाइल; file = खुली फ़ाइल (प्रक्रिया की दृष्टि से, ऑफ़सेट सहित); dentry = डायरेक्टरी की एक प्रविष्टि (नाम → inode), पथ-खोज तेज़ करने के लिए dentry-cache में रखी जाती है।"
+ },
+ {
+  "id": "net-cs-103",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following statements about Windows are correct?\nA. Windows uses a Hardware Abstraction Layer (HAL) to isolate the kernel from hardware differences.\nB. NTFS supports file-level security through access-control lists.\nC. NTFS keeps information about every file in a Master File Table (MFT).\nD. FAT32 supports per-file access-control permissions.\nE. Fast user switching allows several users to remain logged on to one console at the same time.\nChoose the correct answer from the options given below:",
+  "options": [
+   "A, C and D only",
+   "B, C, D and E only",
+   "A, B and D only",
+   "A, B, C and E only"
+  ],
+  "answer": 3,
+  "explanation": "HAL हार्डवेयर के अंतर छिपाती है; NTFS में हर फ़ाइल की प्रविष्टि MFT में रहती है और ACL से अनुमति मिलती है; फ़ास्ट यूज़र स्विचिंग में पिछले उपयोगकर्ता का सत्र चलता रहता है। FAT32 में फ़ाइल-स्तरीय अनुमतियाँ होती ही नहीं — इसलिए D ग़लत।"
+ },
+ {
+  "id": "net-cs-104",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I (C++ file-open mode)\nA. ios::app\nB. ios::trunc\nC. ios::ate\nD. ios::binary\nLIST-II (Meaning)\nI. Opens the file and moves to its end initially, but data may later be written anywhere\nII. Opens the file in binary rather than text mode\nIII. Every output operation is appended at the end of the file\nIV. Discards the existing contents of the file when it is opened\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-III, B-II, C-I, D-IV",
+   "A-III, B-IV, C-I, D-II",
+   "A-I, B-IV, C-III, D-II",
+   "A-IV, B-III, C-I, D-II"
+  ],
+  "answer": 1,
+  "explanation": "app (append) में हर लेखन अपने आप अंत में जाता है; ate (at end) केवल खोलते समय पॉइंटर अंत पर रखता है, बाद में seek करके कहीं भी लिखा जा सकता है — app और ate का यही अंतर पूछा जाता है। trunc पुरानी सामग्री मिटाता है; binary में पंक्ति-अंत का अनुवाद नहीं होता।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I (C++ file-open mode)",
+   "rightTitle": "LIST-II (Meaning)",
+   "left": [
+    "A. ios::app",
+    "B. ios::trunc",
+    "C. ios::ate",
+    "D. ios::binary"
+   ],
+   "right": [
+    "I. Opens the file and moves to its end initially, but data may later be written anywhere",
+    "II. Opens the file in binary rather than text mode",
+    "III. Every output operation is appended at the end of the file",
+    "IV. Discards the existing contents of the file when it is opened"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-105",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I (Projection)\nA. Cavalier projection\nB. Cabinet projection\nC. Isometric projection\nD. Perspective projection\nLIST-II (Property)\nI. All three principal axes are equally foreshortened\nII. Lines perpendicular to the projection plane are drawn at half their true length\nIII. Parallel lines converge towards vanishing points, so distant objects look smaller\nIV. Lines perpendicular to the projection plane are drawn at their full true length\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-IV, B-II, C-III, D-I",
+   "A-II, B-IV, C-I, D-III",
+   "A-IV, B-II, C-I, D-III",
+   "A-I, B-II, C-IV, D-III"
+  ],
+  "answer": 2,
+  "explanation": "कैवलियर और कैबिनेट तिरछे (oblique) प्रक्षेप हैं: कैवलियर में गहराई की रेखाएँ पूरी लंबाई (गुणक 1, लगभग 45°), कैबिनेट में आधी लंबाई (गुणक ½, लगभग 63.4°) — इसलिए कैबिनेट अधिक स्वाभाविक दिखता है। आइसोमेट्रिक में तीनों अक्ष बराबर छोटे होते हैं; परिप्रेक्ष्य में समानांतर रेखाएँ विलोपन-बिंदु पर मिलती हैं।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I (Projection)",
+   "rightTitle": "LIST-II (Property)",
+   "left": [
+    "A. Cavalier projection",
+    "B. Cabinet projection",
+    "C. Isometric projection",
+    "D. Perspective projection"
+   ],
+   "right": [
+    "I. All three principal axes are equally foreshortened",
+    "II. Lines perpendicular to the projection plane are drawn at half their true length",
+    "III. Parallel lines converge towards vanishing points, so distant objects look smaller",
+    "IV. Lines perpendicular to the projection plane are drawn at their full true length"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-106",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "A raster system has a resolution of 1024 × 768 and stores 24 bits per pixel. The size of its frame buffer is —",
+  "options": [
+   "2.25 MB (2,359,296 bytes)",
+   "3 MB",
+   "768 KB",
+   "18 MB"
+  ],
+  "answer": 0,
+  "explanation": "पिक्सेल = 1024 × 768 = 7,86,432; हर पिक्सेल 24 बिट = 3 बाइट। कुल = 7,86,432 × 3 = 23,59,296 बाइट = 2.25 MB। 18 MB बिट और बाइट मिला देने पर (18 Mbit) आता है, 768 KB तब जब हर पिक्सेल 1 बाइट मानें।"
+ },
+ {
+  "id": "net-cs-107",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "In Pressman's design pyramid for WebApps, arrange the following design layers from the top (closest to the user) to the bottom (closest to the technology):\nA. Content design\nB. Interface design\nC. Architecture design\nD. Aesthetic design\nE. Navigation design\nChoose the correct answer from the options given below:",
+  "options": [
+   "D, B, A, E, C",
+   "B, D, A, E, C",
+   "B, D, E, A, C",
+   "B, A, D, E, C"
+  ],
+  "answer": 1,
+  "explanation": "Pressman का WebApp डिज़ाइन-पिरामिड ऊपर से: इंटरफ़ेस → सौंदर्य (aesthetic) → सामग्री → नेविगेशन → आर्किटेक्चर → घटक (component)। ऊपर की परतें उपयोगकर्ता को दिखती हैं, नीचे की तकनीक से जुड़ी हैं। दिसंबर 2025 में यही परिवार पूछा गया था।"
+ },
+ {
+  "id": "net-cs-108",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II according to the ISO 9126 quality model:\nLIST-I (Sub-characteristic)\nA. Fault tolerance\nB. Learnability\nC. Analysability\nD. Accuracy\nLIST-II (Characteristic)\nI. Maintainability\nII. Functionality\nIII. Reliability\nIV. Usability\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-III, B-II, C-I, D-IV",
+   "A-IV, B-III, C-I, D-II",
+   "A-I, B-IV, C-III, D-II",
+   "A-III, B-IV, C-I, D-II"
+  ],
+  "answer": 3,
+  "explanation": "ISO 9126 की छह विशेषताएँ: कार्यक्षमता (suitability, accuracy, security), विश्वसनीयता (maturity, fault tolerance, recoverability), उपयोगिता (understandability, learnability, operability), दक्षता, रखरखाव-योग्यता (analysability, changeability, stability, testability) और सुवाह्यता।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II according to the ISO 9126 quality model:",
+   "leftTitle": "LIST-I (Sub-characteristic)",
+   "rightTitle": "LIST-II (Characteristic)",
+   "left": [
+    "A. Fault tolerance",
+    "B. Learnability",
+    "C. Analysability",
+    "D. Accuracy"
+   ],
+   "right": [
+    "I. Maintainability",
+    "II. Functionality",
+    "III. Reliability",
+    "IV. Usability"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-109",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Arrange the messages exchanged when a client first obtains an IP address from a DHCP server in the correct order:\nA. DHCPREQUEST\nB. DHCPOFFER\nC. DHCPACK\nD. DHCPDISCOVER\nChoose the correct answer from the options given below:",
+  "options": [
+   "D, B, A, C",
+   "D, A, B, C",
+   "B, D, A, C",
+   "D, B, C, A"
+  ],
+  "answer": 0,
+  "explanation": "DORA: क्लाइंट ब्रॉडकास्ट से Discover भेजता है, सर्वर Offer देता है, क्लाइंट उस ऑफ़र के लिए Request करता है, सर्वर Ack से पता पक्का करता है। लीज़ नवीनीकरण में केवल Request और Ack होते हैं।"
+ },
+ {
+  "id": "net-cs-110",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "The ZigBee low-power wireless personal area network technology is based on which IEEE standard?",
+  "options": [
+   "IEEE 802.15.1",
+   "IEEE 802.15.4",
+   "IEEE 802.11",
+   "IEEE 802.16"
+  ],
+  "answer": 1,
+  "explanation": "802.15.4 = कम दर, कम ऊर्जा वाला WPAN (ZigBee का आधार, IoT सेंसरों में); 802.15.1 = ब्लूटूथ; 802.16 = WiMAX; 802.11 = Wi-Fi।"
+ },
+ {
+  "id": "net-cs-111",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following statements about GSM are correct?\nA. GSM uses a combination of FDMA and TDMA.\nB. Each GSM carrier frequency is divided into 8 time slots.\nC. The Home Location Register (HLR) stores permanent subscriber information.\nD. The Visitor Location Register (VLR) is the permanent master database of all subscribers of the network.\nE. The SIM card stores the subscriber's IMSI.\nChoose the correct answer from the options given below:",
+  "options": [
+   "B, C, D and E only",
+   "A, C and D only",
+   "A, B and D only",
+   "A, B, C and E only"
+  ],
+  "answer": 3,
+  "explanation": "VLR अस्थायी डेटाबेस है — उस क्षेत्र में इस समय घूम रहे (visiting) ग्राहकों की जानकारी, जो HLR से माँगकर रखी जाती है। स्थायी ग्राहक-जानकारी HLR में होती है (D ग़लत)। IMSI सिम में रहता है; हर 200 kHz वाहक 8 टाइम-स्लॉट में बँटता है।"
+ },
+ {
+  "id": "net-cs-112",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I (Knowledge representation)\nA. Frames\nB. Scripts\nC. Conceptual dependency\nD. Semantic network\nLIST-II (Feature)\nI. Represents meaning using primitive acts such as PTRANS and ATRANS\nII. Nodes connected by labelled arcs such as is-a and part-of\nIII. Slots and fillers describing a stereotyped object or situation\nIV. A stereotyped sequence of events, such as going to a restaurant\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-III, B-I, C-IV, D-II",
+   "A-IV, B-III, C-I, D-II",
+   "A-III, B-IV, C-I, D-II",
+   "A-II, B-IV, C-I, D-III"
+  ],
+  "answer": 2,
+  "explanation": "मिंस्की के फ़्रेम = स्लॉट और फ़िलर; शैंक के स्क्रिप्ट = घटनाओं का रूढ़ क्रम (रेस्तराँ स्क्रिप्ट); शैंक की कॉन्सेप्चुअल डिपेंडेंसी = PTRANS (भौतिक स्थानांतरण), ATRANS (स्वामित्व का स्थानांतरण) जैसे मूल कर्म; सिमैंटिक नेटवर्क = नोड और लेबल वाले आर्क।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I (Knowledge representation)",
+   "rightTitle": "LIST-II (Feature)",
+   "left": [
+    "A. Frames",
+    "B. Scripts",
+    "C. Conceptual dependency",
+    "D. Semantic network"
+   ],
+   "right": [
+    "I. Represents meaning using primitive acts such as PTRANS and ATRANS",
+    "II. Nodes connected by labelled arcs such as is-a and part-of",
+    "III. Slots and fillers describing a stereotyped object or situation",
+    "IV. A stereotyped sequence of events, such as going to a restaurant"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-113",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "A fuzzy set is A = {0.3/x1, 0.5/x2, 0.8/x3, 1.0/x4}. Its α-cut at α = 0.5 is —",
+  "options": [
+   "{x2, x3, x4}",
+   "{x4}",
+   "{x1, x2}",
+   "{x3, x4}"
+  ],
+  "answer": 0,
+  "explanation": "α-कट में वे तत्व आते हैं जिनकी सदस्यता ≥ α है: 0.5, 0.8, 1.0 → {x2, x3, x4}। 'स्ट्रॉन्ग' α-कट में > α लिया जाता है, तब {x3, x4} आता — इसी अंतर पर विकल्प बने हैं।"
+ },
+ {
+  "id": "net-cs-114",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "In partial-order planning, a step C threatens a causal link from step A to step B. Resolving the threat by ordering C before A is called —",
+  "options": [
+   "Goal regression",
+   "Demotion",
+   "Promotion",
+   "Means-ends analysis"
+  ],
+  "answer": 1,
+  "explanation": "कारण-कड़ी A —p→ B को ख़तरा तब है जब C, p को हटा सकता हो और A और B के बीच आ सकता हो। हल: C को A से पहले रखना (demotion) या B के बाद रखना (promotion)। इसके बाद भी p सुरक्षित रहता है।"
+ },
+ {
+  "id": "net-cs-115",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "For a fixed grammar in Chomsky Normal Form, the time complexity of the CYK parsing algorithm on an input of length n is —",
+  "options": [
+   "O(n log n)",
+   "O(2ⁿ)",
+   "O(n³)",
+   "O(n²)"
+  ],
+  "answer": 2,
+  "explanation": "CYK की तालिका में O(n²) खाने हैं और हर खाने के लिए O(n) विभाजन-बिंदु देखने होते हैं — कुल O(n³) (व्याकरण के आकार से गुणा)। यह गतिशील प्रोग्रामिंग है और व्याकरण का CNF में होना ज़रूरी है।"
+ },
+ {
+  "id": "net-cs-116",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Match LIST-I with LIST-II:\nLIST-I (Optimisation)\nA. Constant folding\nB. Code motion\nC. Strength reduction\nD. Dead-code elimination\nLIST-II (Example)\nI. Moving a loop-invariant computation out of the loop\nII. Removing statements whose results are never used\nIII. Evaluating 3 * 4 at compile time and using 12\nIV. Replacing i * 4 inside a loop by repeated addition of 4\nChoose the correct answer from the options given below:",
+  "options": [
+   "A-III, B-I, C-II, D-IV",
+   "A-III, B-IV, C-I, D-II",
+   "A-I, B-III, C-IV, D-II",
+   "A-III, B-I, C-IV, D-II"
+  ],
+  "answer": 3,
+  "explanation": "कॉन्स्टैंट फ़ोल्डिंग: स्थिर अभिव्यक्ति संकलन में ही। कोड मोशन: लूप में न बदलने वाली गणना बाहर। स्ट्रेंथ रिडक्शन: महँगा गुणा सस्ते जोड़/शिफ़्ट से (इंडक्शन-चर पर)। डेड-कोड: जिसका परिणाम कभी उपयोग न हो उसे हटाना।",
+  "match": {
+   "intro": "Match LIST-I with LIST-II:",
+   "leftTitle": "LIST-I (Optimisation)",
+   "rightTitle": "LIST-II (Example)",
+   "left": [
+    "A. Constant folding",
+    "B. Code motion",
+    "C. Strength reduction",
+    "D. Dead-code elimination"
+   ],
+   "right": [
+    "I. Moving a loop-invariant computation out of the loop",
+    "II. Removing statements whose results are never used",
+    "III. Evaluating 3 * 4 at compile time and using 12",
+    "IV. Replacing i * 4 inside a loop by repeated addition of 4"
+   ]
+  }
+ },
+ {
+  "id": "net-cs-117",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "In multiple-granularity locking, transaction T1 holds an intention-exclusive (IX) lock on a node. Which of the following lock modes can another transaction T2 also obtain on the same node?",
+  "options": [
+   "SIX (shared and intention-exclusive)",
+   "S (shared)",
+   "IS (intention-shared)",
+   "X (exclusive)"
+  ],
+  "answer": 2,
+  "explanation": "IX का अर्थ है नीचे कहीं X लॉक लिए जाएँगे। इसके साथ केवल इरादे वाले लॉक (IS, IX) चल सकते हैं। S पूरे उप-वृक्ष को पढ़ने का दावा है — नीचे के X से टकराता है; SIX और X तो और भी कड़े हैं।"
+ },
+ {
+  "id": "net-cs-118",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "The ARIES recovery algorithm processes the log in three passes. Their correct order is —",
+  "options": [
+   "Analysis, Redo, Undo",
+   "Redo, Analysis, Undo",
+   "Undo, Redo, Analysis",
+   "Analysis, Undo, Redo"
+  ],
+  "answer": 0,
+  "explanation": "ARIES पहले विश्लेषण (कौन-से लेन-देन सक्रिय थे, कौन-से पेज गंदे थे), फिर 'इतिहास दोहराना' — क्रैश से पहले की पूरी अवस्था REDO से बहाल करना, और अंत में अधूरे लेन-देनों का UNDO (CLR लॉग लिखते हुए)।"
+ },
+ {
+  "id": "net-cs-119",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "In the IEEE 754 double-precision (64-bit) format, the exponent bias is —",
+  "options": [
+   "1024",
+   "1023",
+   "127",
+   "2047"
+  ],
+  "answer": 1,
+  "explanation": "डबल प्रिसिज़न: 1 चिह्न-बिट, 11 घातांक-बिट, 52 मैन्टिसा-बिट; बायस = 2¹⁰ − 1 = 1023। सिंगल प्रिसिज़न (8 घातांक-बिट) का बायस 127 है।"
+ },
+ {
+  "id": "net-cs-120",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "How many structurally distinct binary search trees can be built from 4 distinct keys?",
+  "options": [
+   "5",
+   "16",
+   "24",
+   "14"
+  ],
+  "answer": 3,
+  "explanation": "n कुंजियों से भिन्न BST की संख्या कैटलन संख्या C(n) = (2n)! / ((n + 1)! n!) है। C₄ = 8! / (5! × 4!) = 14। 24 = 4! (क्रम-परिवर्तन) और 5 = C₃।"
+ },
+ {
+  "id": "net-cs-121",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "How many non-isomorphic simple undirected graphs are there on 3 vertices?",
+  "options": [
+   "3",
+   "8",
+   "4",
+   "6"
+  ],
+  "answer": 2,
+  "explanation": "3 शीर्षों पर किनारे 0, 1, 2 या 3 हो सकते हैं, और हर किनारा-संख्या पर आकृति एक ही बनती है (कोई किनारा नहीं, एक किनारा, एक पथ, त्रिभुज) — कुल 4। 8 = 2³ लेबल वाले ग्राफ़ हैं, आइसोमॉर्फ़िज़्म न देखें तो।"
+ },
+ {
+  "id": "net-cs-122",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "The SQL commands CREATE, ALTER and DROP belong to which category?",
+  "options": [
+   "Data Definition Language (DDL)",
+   "Data Control Language (DCL)",
+   "Transaction Control Language (TCL)",
+   "Data Manipulation Language (DML)"
+  ],
+  "answer": 0,
+  "explanation": "DDL तालिका का ढाँचा बनाती और बदलती है। DML डेटा बदलती है (SELECT, INSERT, UPDATE, DELETE); DCL अधिकार देती है (GRANT, REVOKE); TCL लेन-देन सँभालती है (COMMIT, ROLLBACK)।"
+ },
+ {
+  "id": "net-cs-123",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following logic gates is called a universal gate?",
+  "options": [
+   "AND",
+   "OR",
+   "XOR",
+   "NAND"
+  ],
+  "answer": 3,
+  "explanation": "केवल NAND (या केवल NOR) गेटों से कोई भी बूलियन फ़ंक्शन बनाया जा सकता है, इसलिए ये सार्वत्रिक कहलाते हैं। AND, OR या XOR अकेले NOT नहीं बना सकते।"
+ },
+ {
+  "id": "net-cs-124",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which network device forwards packets between different networks using IP addresses?",
+  "options": [
+   "Repeater",
+   "Router",
+   "Hub",
+   "Bridge"
+  ],
+  "answer": 1,
+  "explanation": "राउटर नेटवर्क-स्तर (3) पर IP पते और राउटिंग-तालिका से काम करता है। हब और रिपीटर भौतिक स्तर (1) पर केवल संकेत आगे बढ़ाते हैं; ब्रिज/स्विच डेटा-लिंक स्तर (2) पर MAC पते से।"
+ },
+ {
+  "id": "net-cs-125",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which UNIX system call creates a new process?",
+  "options": [
+   "wait()",
+   "fork()",
+   "exit()",
+   "exec()"
+  ],
+  "answer": 1,
+  "explanation": "fork() चालू प्रक्रिया की प्रति बनाकर नई (child) प्रक्रिया देता है। exec() नई प्रक्रिया नहीं बनाता, वर्तमान प्रक्रिया में नया प्रोग्राम लोड करता है; wait() child के ख़त्म होने तक रुकता है; exit() प्रक्रिया समाप्त करता है।"
+ },
+ {
+  "id": "net-cs-126",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which UML diagram shows the actors and the functions (use cases) that a system provides to them?",
+  "options": [
+   "Sequence diagram",
+   "Class diagram",
+   "Use case diagram",
+   "Deployment diagram"
+  ],
+  "answer": 2,
+  "explanation": "यूज़-केस डायग्राम बाहरी उपयोगकर्ता (actor) और प्रणाली की सेवाएँ दिखाता है — आवश्यकता-विश्लेषण का पहला चित्र। क्लास डायग्राम = ढाँचा, सीक्वेंस डायग्राम = समय-क्रम में संदेश, डिप्लॉयमेंट डायग्राम = हार्डवेयर पर तैनाती।"
+ },
+ {
+  "id": "net-cs-127",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which of the following is NOT a keyword in C?",
+  "options": [
+   "volatile",
+   "register",
+   "auto",
+   "constant"
+  ],
+  "answer": 3,
+  "explanation": "C का कीवर्ड const है, constant नहीं। auto, register और volatile मानक कीवर्ड हैं — पहले दो स्टोरेज-क्लास हैं, और volatile बताता है कि चर का मान प्रोग्राम के बाहर से भी बदल सकता है।"
+ },
+ {
+  "id": "net-cs-128",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which data structure is used to implement breadth-first search of a graph?",
+  "options": [
+   "Queue",
+   "Heap",
+   "Hash table",
+   "Stack"
+  ],
+  "answer": 0,
+  "explanation": "BFS स्तर-दर-स्तर चलता है, इसलिए जो शीर्ष पहले खोजा गया उसे पहले फैलाना है — FIFO कतार। DFS स्टैक (या रिकर्शन) से चलता है।"
+ },
+ {
+  "id": "net-cs-129",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "The output of the lexical analysis phase of a compiler is —",
+  "options": [
+   "A parse tree",
+   "Three-address code",
+   "A stream of tokens",
+   "Target machine code"
+  ],
+  "answer": 2,
+  "explanation": "लेक्सिकल एनालाइज़र अक्षरों को पढ़कर टोकन (कीवर्ड, पहचानकर्ता, संख्या, संचालक) बनाता है और सिंबल-टेबल में प्रविष्टि करता है। पार्स-ट्री सिंटैक्स विश्लेषण से, थ्री-एड्रेस कोड इंटरमीडिएट कोड जनरेशन से बनता है।"
+ },
+ {
+  "id": "net-cs-130",
+  "subject": "computer",
+  "exams": [
+   "net-cs"
+  ],
+  "question": "Which search algorithm selects the next node using the evaluation function f(n) = g(n) + h(n)?",
+  "options": [
+   "Uniform-cost search",
+   "A* search",
+   "Breadth-first search",
+   "Greedy best-first search"
+  ],
+  "answer": 1,
+  "explanation": "A* तय की गई लागत g(n) और शेष अनुमान h(n) दोनों जोड़ता है। ग्रीडी बेस्ट-फ़र्स्ट केवल h(n) देखता है, यूनिफ़ॉर्म-कॉस्ट केवल g(n), और BFS किसी लागत को नहीं।"
  }
 ]
