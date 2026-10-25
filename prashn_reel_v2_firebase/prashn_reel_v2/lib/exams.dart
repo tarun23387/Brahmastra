@@ -202,7 +202,7 @@ const Map<String, Paper> kPapers = {
     label: 'सामान्य अध्ययन',
     questions: 140,
     marks: 140,
-    subjects: ['itihas', 'polity', 'bhugol', 'arth', 'vigyan', 'paryavaran', 'up', 'ca'],
+    subjects: ['itihas', 'polity', 'bhugol', 'arth', 'vigyan', 'paryavaran', 'up', 'ca', 'reasoning'],
   ),
   'roaro-hindi': Paper(
     id: 'roaro-hindi',
@@ -326,7 +326,7 @@ const Map<String, List<String>> kSubjectToPapers = {
   'hindi': ['roaro-hindi', 'pet-main', 'uppcs-csat'],
   'english': ['pet-main', 'uppcs-csat'],
   'ganit': ['pet-main', 'uppcs-csat'],
-  'reasoning': ['pet-main', 'uppcs-csat'],
+  'reasoning': ['roaro-gs', 'pet-main', 'uppcs-csat'],
   'comprehension': ['pet-main', 'uppcs-csat'],
   'graph': ['pet-main'],
 
