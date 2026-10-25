@@ -17,6 +17,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const admin = require('firebase-admin');
 
 const COLLECTION = 'lessons';
@@ -120,9 +121,27 @@ function check(lesson, file) {
   const oldVer = (manSnap.exists && manSnap.data().papers) || {};
   const newVer = { ...oldVer };
 
+  // जो पाठ बदला ही नहीं, उसका संस्करण बढ़ाने पर हर छात्र उसे दोबारा उतारता
+  // है — पहले हर run सारे पाठ बढ़ा देता था. इसलिए हर doc में सामग्री का hash
+  // रखते हैं और वही मिला तो पाठ छोड़ देते हैं. इसकी क़ीमत पाठ-गिनती जितने reads.
+  const docId = (key) => key.replace(/[:/]/g, '_');
+  const hashOf = (l) =>
+    crypto
+      .createHash('sha1')
+      .update(JSON.stringify([l.paper, l.subject, l.title, l.subtitle ?? null, l.free, l.chapters]))
+      .digest('hex')
+      .slice(0, 12);
+  const snaps = await db.getAll(...lessons.map((l) => db.collection(COLLECTION).doc(docId(l.key))));
+  const oldHash = new Map(snaps.map((s) => [s.id, s.exists ? s.data().hash : null]));
+
   const writes = [];
 
   for (const l of lessons) {
+    const hash = hashOf(l);
+    if (oldHash.get(docId(l.key)) === hash) {
+      console.log(`  ${l.key.padEnd(28)} बदला नहीं — छोड़ा (संस्करण ${oldVer[l.key] ?? '—'})`);
+      continue;
+    }
     const version = (typeof oldVer[l.key] === 'number' ? oldVer[l.key] : 0) + 1;
     newVer[l.key] = version;
 
@@ -150,7 +169,7 @@ function check(lesson, file) {
     }));
 
     writes.push({
-      id: l.key.replace(/[:/]/g, '_'),
+      id: docId(l.key),
       data: {
         key: l.key,
         paper: l.paper,
@@ -159,6 +178,7 @@ function check(lesson, file) {
         subtitle: l.subtitle ?? null,
         free: l.free,
         version,
+        hash,
         count: l.chapters.length,
         chapters,
         updatedAt: admin.firestore.FieldValue.serverTimestamp(),
@@ -167,6 +187,8 @@ function check(lesson, file) {
   }
 
   console.log(`\n${writes.length} पाठ लिखे जाएँगे.`);
+
+  if (writes.length === 0) return;
 
   if (!commit) {
     console.log('\n(जाँच भर थी — कुछ लिखा नहीं.)');
