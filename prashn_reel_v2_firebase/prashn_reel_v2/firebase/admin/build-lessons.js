@@ -110,6 +110,33 @@ function check(lesson, file) {
   lessons.length = 0;
   lessons.push(...merged.values());
 
+  // ── अभ्यास और छूटे तथ्य (map-practice.js से) ──
+  //
+  // हर अध्याय को `practice` (उससे जुड़े प्रश्नों की ids) मिलती है, जिससे ऐप
+  // अध्याय के अंत में "अभ्यास करें" दिखाता है. जिन प्रश्नों का उत्तर अध्याय के
+  // पाठ में नहीं था, उनका सवाल-उत्तर "और ज़रूरी तथ्य" सारणी में जाता है —
+  // "परीक्षा में यह ऐसे आया" से ठीक पहले, ताकि वह अंतिम सारणी बनी रहे.
+  // फ़ाइल न हो तो पाठ वैसे ही चढ़ते हैं.
+  const mapFile = path.join(dir, 'practice-map.json');
+  if (fs.existsSync(mapFile)) {
+    const pm = JSON.parse(fs.readFileSync(mapFile, 'utf8'));
+    for (const l of lessons) {
+      l.chapters = l.chapters.map((c) => {
+        const out = { ...c, tables: [...(c.tables ?? [])] };
+        const ids = pm.practice?.[c.id];
+        if (ids?.length) out.practice = ids;
+        const facts = pm.facts?.[c.id];
+        if (facts?.length) {
+          const table = { title: 'और ज़रूरी तथ्य', columns: ['सवाल', 'उत्तर और तथ्य'], rows: facts };
+          const last = out.tables[out.tables.length - 1];
+          if (last && last.title === 'परीक्षा में यह ऐसे आया') out.tables.splice(out.tables.length - 1, 0, table);
+          else out.tables.push(table);
+        }
+        return out;
+      });
+    }
+  }
+
   if (bad) {
     console.log('\nपहले ये ठीक कीजिए — कुछ नहीं चढ़ा.');
     process.exit(1);

@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../auth.dart';
 import '../models.dart';
 import '../repository.dart';
+import 'practice_page.dart';
 
 /// एक विषय की पढ़ने वाली सामग्री — अध्यायों की सूची.
 ///
@@ -112,6 +113,7 @@ class _LearnPageState extends State<LearnPage> {
                     chapter: c,
                     accent: sub.color,
                     subjectLabel: sub.label,
+                    paperId: widget.paperId,
                   ),
                 )),
               )),
@@ -242,19 +244,22 @@ class _ChapterTile extends StatelessWidget {
 
 /// एक अध्याय पढ़ने का परदा.
 ///
-/// यहाँ जानबूझकर कुछ नहीं है — न बटन, न चित्र, न रंगीन डिब्बे. लंबा पढ़ना
-/// तभी टिकता है जब परदा शांत हो. फ़ॉन्ट का आकार बड़ा और पंक्तियों के बीच
-/// खुली जगह इसी वजह से है.
+/// पढ़ते समय यहाँ जानबूझकर कुछ नहीं है — न बटन, न चित्र, न रंगीन डिब्बे.
+/// लंबा पढ़ना तभी टिकता है जब परदा शांत हो. फ़ॉन्ट का आकार बड़ा और पंक्तियों
+/// के बीच खुली जगह इसी वजह से है. एक ही बटन है, और वह अध्याय ख़त्म होने के
+/// बाद: उसी अध्याय के प्रश्नों का अभ्यास.
 class ChapterPage extends StatelessWidget {
   final LessonChapter chapter;
   final Color accent;
   final String subjectLabel;
+  final String paperId;
 
   const ChapterPage({
     super.key,
     required this.chapter,
     required this.accent,
     required this.subjectLabel,
+    required this.paperId,
   });
 
   @override
@@ -312,6 +317,37 @@ class ChapterPage extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 12.5, color: P.muted.withOpacity(0.7))),
             ),
+            if (chapter.practice.isNotEmpty) ...[
+              const SizedBox(height: 22),
+              SizedBox(
+                height: 52,
+                child: FilledButton.icon(
+                  style: FilledButton.styleFrom(
+                    backgroundColor: accent,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16)),
+                  ),
+                  icon: const FaIcon(FontAwesomeIcons.penToSquare, size: 16),
+                  label: Text(
+                      'अभ्यास करें · ${chapter.practice.length} प्रश्न',
+                      style: const TextStyle(
+                          fontSize: 15.5, fontWeight: FontWeight.w800)),
+                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => PracticePage(
+                      paperId: paperId,
+                      ids: chapter.practice,
+                      title: chapter.title,
+                      accent: accent,
+                    ),
+                  )),
+                ),
+              ),
+              const SizedBox(height: 8),
+              Center(
+                child: Text('इसी अध्याय से जुड़े प्रश्न',
+                    style: TextStyle(fontSize: 12, color: P.muted)),
+              ),
+            ],
           ],
         ),
       ),

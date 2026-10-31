@@ -246,6 +246,10 @@ class LessonChapter {
   final int minutes;
   final List<LessonTable> tables;
 
+  /// इस अध्याय से जुड़े प्रश्नों की ids (map-practice.js बनाता है). ख़ाली हो
+  /// तो अध्याय के अंत में "अभ्यास करें" नहीं दिखता.
+  final List<String> practice;
+
   const LessonChapter({
     required this.id,
     required this.era,
@@ -254,6 +258,7 @@ class LessonChapter {
     required this.body,
     required this.minutes,
     required this.tables,
+    this.practice = const [],
   });
 
   /// अधूरा अध्याय चुपचाप छोड़ दिया जाता है — आधा पाठ दिखाने से बेहतर है
@@ -274,6 +279,9 @@ class LessonChapter {
       body: body,
       minutes: mins is num ? mins.toInt() : 0,
       tables: _tablesOf(m['tables']),
+      practice: m['practice'] is List
+          ? (m['practice'] as List).map((e) => '$e').where((e) => e.isNotEmpty).toList()
+          : const [],
     );
   }
 
