@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../auth.dart';
+import '../build_flags.dart';
 import '../exams.dart';
 import '../models.dart';
 import '../widgets/exam_thumb.dart';
@@ -94,12 +95,15 @@ class DashboardPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                IconButton(
-                  tooltip: 'लॉगआउट',
-                  onPressed: onSignOut,
-                  icon: FaIcon(FontAwesomeIcons.rightFromBracket,
-                      size: 16, color: P.muted),
-                ),
+                // सब मुफ़्त हो तो बिना लॉगिन भी यही पन्ना दिखता है —
+                // तब लॉगआउट का बटन बेमानी है
+                if (Session.isLoggedIn)
+                  IconButton(
+                    tooltip: 'लॉगआउट',
+                    onPressed: onSignOut,
+                    icon: FaIcon(FontAwesomeIcons.rightFromBracket,
+                        size: 16, color: P.muted),
+                  ),
               ],
             ),
 
@@ -127,7 +131,7 @@ class DashboardPage extends StatelessWidget {
                       // "दिन बचे" नहीं — thumbnail पर अब परीक्षा के बचे दिन
                       // भी दिखते हैं, दोनों उलझते
                       footnote: '${kExams[c.examId]!.papers.length} पेपर · '
-                          'सदस्यता ${c.daysLeft} दिन',
+                          '${kAllFree ? 'मुफ़्त' : 'सदस्यता ${c.daysLeft} दिन'}',
                       onTap: () => Navigator.of(context).push(MaterialPageRoute(
                         builder: (_) => PaperPickerPage(
                           exam: kExams[c.examId]!,
@@ -179,14 +183,17 @@ class DashboardPage extends StatelessWidget {
               ]),
             ],
 
-            // ── मुफ़्त नमूना ──
-            const SizedBox(height: 22),
-            TextButton.icon(
-              onPressed: onFreeSample,
-              icon: FaIcon(FontAwesomeIcons.bookOpen, size: 14, color: P.muted),
-              label: Text('मुफ़्त पीईटी देखें',
-                  style: TextStyle(fontSize: 13.5, color: P.muted)),
-            ),
+            // ── मुफ़्त नमूना ── (सब मुफ़्त हो तो PET ऊपर ही है)
+            if (!kAllFree) ...[
+              const SizedBox(height: 22),
+              TextButton.icon(
+                onPressed: onFreeSample,
+                icon:
+                    FaIcon(FontAwesomeIcons.bookOpen, size: 14, color: P.muted),
+                label: Text('मुफ़्त पीईटी देखें',
+                    style: TextStyle(fontSize: 13.5, color: P.muted)),
+              ),
+            ],
           ],
         ),
       ),

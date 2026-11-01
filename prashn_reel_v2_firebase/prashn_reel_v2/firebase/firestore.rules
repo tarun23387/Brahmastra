@@ -25,6 +25,14 @@ service cloud.firestore {
         && get(userPath()).data.maxExpiresAt > request.time;
     }
 
+    // अभी सारे courses सबके लिए मुफ़्त हैं (ऐप में build_flags.dart का
+    // `kAllFree`). इसलिए प्रश्न, packs, पाठ और नक़्शे बिना लॉगिन पढ़े जा सकते
+    // हैं. सदस्यता लौटानी हो तो नीचे के चारों `allOpen()` हटाकर पहले वाली
+    // शर्त (`resource.data.free == true || isSubscribed()`) ही रखिए.
+    function allOpen() {
+      return true;
+    }
+
     // Free sample questions are readable by anyone (free: true).
     // Everything else needs an active subscription.
     //
@@ -32,7 +40,7 @@ service cloud.firestore {
     //   free:       .where('free', isEqualTo: true)
     //   subscriber: full collection, allowed by isSubscribed()
     match /questions/{questionId} {
-      allow read: if resource.data.free == true || isSubscribed();
+      allow read: if allOpen() || resource.data.free == true || isSubscribed();
       allow write: if false;
     }
 
@@ -46,7 +54,7 @@ service cloud.firestore {
     // `build-packs.js` मुफ़्त pack सिर्फ़ तभी बनाता है जब उसका हर प्रश्न
     // मुफ़्त हो — आधा-अधूरा मुफ़्त pack बिना सदस्यता के बँट जाता.
     match /packs/{packId} {
-      allow read: if resource.data.free == true || isSubscribed();
+      allow read: if allOpen() || resource.data.free == true || isSubscribed();
       allow write: if false;
     }
 
@@ -56,12 +64,12 @@ service cloud.firestore {
     // अपने लिखे के अलावा हर doc मिटा देता है, इसलिए पाठ वहाँ रखते ही
     // अगली बार प्रश्न बनाने पर उड़ जाता.
     match /lessons/{lessonId} {
-      allow read: if resource.data.free == true || isSubscribed();
+      allow read: if allOpen() || resource.data.free == true || isSubscribed();
       allow write: if false;
     }
 
     match /maps/{mapId} {
-      allow read: if resource.data.free == true || isSubscribed();
+      allow read: if allOpen() || resource.data.free == true || isSubscribed();
       allow write: if false;
     }
 

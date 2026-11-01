@@ -3,7 +3,9 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
+import 'build_flags.dart';
 import 'device.dart';
+import 'exams.dart';
 import 'repository.dart';
 
 /// एक परीक्षा की सदस्यता — अपनी अलग एक्सपायरी के साथ.
@@ -66,6 +68,25 @@ class Entitlement {
     active: false,
     deviceId: '',
   );
+
+  /// यही खाता, पर हर परीक्षा चालू — `kAllFree` वाले दौर के लिए.
+  ///
+  /// नाम, uid और फ़ोन वैसे ही रहते हैं, ताकि लॉगिन वाले छात्र का नाम दिखे
+  /// और फ़ोन वाली जाँच पहले जैसी चले.
+  Entitlement withEverything() {
+    final forever = DateTime(2100);
+    return Entitlement(
+      uid: uid,
+      name: name,
+      phone: phone,
+      courses: {
+        for (final id in kExams.keys)
+          id: Course(examId: id, expiresAt: forever),
+      },
+      active: true,
+      deviceId: deviceId,
+    );
+  }
 
   /// जो परीक्षाएँ अभी चालू हैं.
   List<Course> get activeCourses {
@@ -164,7 +185,8 @@ class Entitlement {
 /// ज़रूरी: Firebase न जुड़ा हो (ऑफ़लाइन APK, google-services.json नदारद) तो
 /// यह चुपचाप "मेहमान" मोड में चला जाता है, ताकि ऐप पहले जैसी ही चलती रहे.
 class Session {
-  static Entitlement entitlement = Entitlement.none;
+  static Entitlement entitlement =
+      kAllFree ? Entitlement.none.withEverything() : Entitlement.none;
   static User? user;
 
   static final StreamController<Entitlement> _stream =
@@ -334,7 +356,7 @@ class Session {
   }
 
   static void _set(Entitlement e) {
-    entitlement = e;
+    entitlement = kAllFree ? e.withEverything() : e;
     if (!_stream.isClosed) _stream.add(e);
   }
 

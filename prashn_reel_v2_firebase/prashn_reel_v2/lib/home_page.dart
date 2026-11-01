@@ -908,15 +908,22 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(paid ? e.name : 'UPPET Exam',
+                        Text(
+                            kAllFree
+                                ? (e.name.isEmpty ? 'ब्रह्मास्त्र' : e.name)
+                                : paid
+                                    ? e.name
+                                    : 'UPPET Exam',
                             style: const TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w800,
                                 height: 1.25)),
                         const SizedBox(height: 2),
                         Text(
-                          paid
-                              ? '${e.daysLeft} दिन बचे'
+                          kAllFree
+                              ? 'सारे courses मुफ़्त'
+                              : paid
+                                  ? '${e.daysLeft} दिन बचे'
                               // Play वाली build में न्योता नहीं दिया जाता —
                               // वहाँ ऐप के बाहर ख़रीदने की तरफ़ इशारा करना भी
                               // नीति के ख़िलाफ़ है, सिर्फ़ बटन नहीं. इसलिए यहाँ
@@ -926,8 +933,10 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
                                   : 'UPPCS · RO/ARO के लिए सदस्यता लीजिए',
                           style: TextStyle(
                             fontSize: 12.5,
-                            color: paid && e.isExpiringSoon ? P.wrong : P.muted,
-                            fontWeight: paid && e.isExpiringSoon
+                            color: !kAllFree && paid && e.isExpiringSoon
+                                ? P.wrong
+                                : P.muted,
+                            fontWeight: !kAllFree && paid && e.isExpiringSoon
                                 ? FontWeight.w700
                                 : FontWeight.w400,
                           ),
@@ -992,7 +1001,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
                 );
               },
             ),
-            if (paid)
+            if (paid && Session.isLoggedIn)
               _menuRow(
                 icon: FontAwesomeIcons.rightFromBracket,
                 label: 'लॉगआउट',

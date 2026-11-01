@@ -21,3 +21,14 @@ const String kStore = String.fromEnvironment('STORE', defaultValue: 'direct');
 
 /// Play Store वाली build है या नहीं.
 const bool kIsPlayBuild = kStore == 'play';
+
+/// सारे courses सबके लिए मुफ़्त — न लॉगिन, न सदस्यता.
+///
+/// चालू रहते हर उपयोगकर्ता को `Session` हर परीक्षा की पहुँच देता है
+/// (auth.dart का `Entitlement.withEverything`), इसलिए ताले, "सदस्यता लीजिए"
+/// और नमूना-मोड अपने आप हट जाते हैं. सर्वर भी यही माने, इसके लिए
+/// firebase/firestore.rules में questions/packs/lessons/maps सबके लिए खुले
+/// होने चाहिए — सिर्फ़ यह flag बदलने से paid प्रश्न नहीं आएँगे.
+///
+/// सदस्यता वापस लानी हो तो इसे false कीजिए और नियम पहले जैसे कर दीजिए.
+const bool kAllFree = true;
