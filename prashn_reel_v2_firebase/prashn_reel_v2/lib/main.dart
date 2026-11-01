@@ -49,6 +49,8 @@ Future<void> main() async {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
     statusBarIconBrightness: Brightness.dark,
+    systemNavigationBarColor: P.bg,
+    systemNavigationBarIconBrightness: Brightness.dark,
   ));
 
   runApp(const PrashnReelApp());
@@ -147,17 +149,121 @@ class _PrashnReelAppState extends State<PrashnReelApp> {
       ).copyWith(surface: P.bg),
     );
 
+    // बटनों का एक ही ढंग — हर पन्ने पर अलग-अलग गोलाई और गाढ़ापन था
+    final btnShape =
+        RoundedRectangleBorder(borderRadius: BorderRadius.circular(14));
+    const btnText = TextStyle(
+        fontFamily: 'Mukta', fontSize: 14.5, fontWeight: FontWeight.w700);
+
     return MaterialApp(
       navigatorKey: _nav,
       title: 'Brahmastra',
       debugShowCheckedModeBanner: false,
       theme: base.copyWith(
         textTheme: base.textTheme.apply(bodyColor: P.ink, displayColor: P.ink),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: P.card,
+          surfaceTintColor: P.card,
+          foregroundColor: P.ink,
+          elevation: 0,
+          scrolledUnderElevation: 0,
+          centerTitle: false,
+          shape: Border(bottom: BorderSide(color: P.line)),
+          titleTextStyle: TextStyle(
+              fontFamily: 'Mukta',
+              fontSize: 17,
+              fontWeight: FontWeight.w800,
+              color: P.ink),
+        ),
+        filledButtonTheme: FilledButtonThemeData(
+          style: FilledButton.styleFrom(
+            backgroundColor: P.brand,
+            foregroundColor: Colors.white,
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+            shape: btnShape,
+            textStyle: btnText,
+            elevation: 0,
+          ),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: P.goldBright,
+            foregroundColor: P.onSaffron,
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+            shape: btnShape,
+            textStyle: btnText,
+            elevation: 0,
+          ),
+        ),
+        outlinedButtonTheme: OutlinedButtonThemeData(
+          style: OutlinedButton.styleFrom(
+            foregroundColor: P.brand,
+            side: const BorderSide(color: P.line, width: 1.2),
+            padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 13),
+            shape: btnShape,
+            textStyle: btnText,
+          ),
+        ),
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            foregroundColor: P.brand,
+            textStyle: btnText.copyWith(fontWeight: FontWeight.w600),
+          ),
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          filled: true,
+          fillColor: P.card,
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(14),
+            borderSide: const BorderSide(color: P.line),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(14),
+            borderSide: const BorderSide(color: P.line),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(14),
+            borderSide: const BorderSide(color: P.brand, width: 1.6),
+          ),
+          labelStyle: const TextStyle(color: P.muted),
+          hintStyle: TextStyle(color: P.muted.withOpacity(0.7)),
+        ),
+        cardTheme: CardThemeData(
+          color: P.card,
+          surfaceTintColor: P.card,
+          elevation: 0,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18),
+            side: const BorderSide(color: P.line),
+          ),
+        ),
+        bottomSheetTheme: const BottomSheetThemeData(
+          backgroundColor: P.card,
+          surfaceTintColor: P.card,
+          showDragHandle: false,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+          ),
+        ),
+        dialogTheme: DialogThemeData(
+          backgroundColor: P.card,
+          surfaceTintColor: P.card,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
+        ),
+        dividerTheme: const DividerThemeData(color: P.line, thickness: 1),
+        progressIndicatorTheme:
+            const ProgressIndicatorThemeData(color: P.brand),
+        listTileTheme: const ListTileThemeData(iconColor: P.brand),
         snackBarTheme: SnackBarThemeData(
           behavior: SnackBarBehavior.floating,
-          backgroundColor: P.ink,
-          contentTextStyle: const TextStyle(color: Colors.white, fontSize: 14),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          backgroundColor: P.brandDeep,
+          actionTextColor: P.goldBright,
+          contentTextStyle: const TextStyle(
+              fontFamily: 'Mukta', color: Colors.white, fontSize: 14),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
         ),
       ),
       home: const AppGate(),

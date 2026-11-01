@@ -212,7 +212,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
         seconds: 6,
         action: SnackBarAction(
           label: 'अभी जोड़ें',
-          textColor: const Color(0xFFFFC46B),
+          textColor: P.goldBright,
           onPressed: _sync,
         ),
       );
@@ -293,7 +293,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
       'रीसेट हो गया',
       action: SnackBarAction(
         label: 'वापस लाएँ',
-        textColor: const Color(0xFFFFC46B),
+        textColor: P.goldBright,
         onPressed: () {
           setState(() => answers = backup);
           AnswerStore.save(answers);
@@ -662,7 +662,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
               _iconBtn(
                 tip: 'पहले पन्ने पर',
                 icon: FontAwesomeIcons.house,
-                color: const Color(0xFFC2680C),
+                color: P.gold,
                 onTap: widget.onExit,
               ),
               _iconBtn(
@@ -1071,7 +1071,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
         label = 'लाइव';
         break;
       case SourceKind.cache:
-        c = const Color(0xFFC2680C);
+        c = P.gold;
         label = 'सेव';
         break;
       case SourceKind.seed:

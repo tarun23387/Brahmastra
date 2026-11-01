@@ -111,15 +111,15 @@ class QuestionCard extends StatelessWidget {
                   border: Border.all(color: sub.color.withOpacity(0.18)),
                   boxShadow: [
                     BoxShadow(
-                      color: sub.color.withOpacity(0.10),
-                      blurRadius: 18,
-                      offset: const Offset(0, 6),
+                      color: sub.color.withOpacity(0.12),
+                      blurRadius: 20,
+                      offset: const Offset(0, 8),
                     ),
                   ],
                 ),
                 child: Text.rich(
                   TextSpan(children: [
-                    _chip('Q.$number', sub.color),
+                    _chip('Q.$number', sub.color, solid: true),
                     // PYQ का ठप्पा — "यह सचमुच परीक्षा में आया था" वाली बात
                     // छात्र को पहली नज़र में दिखनी चाहिए. सोना, ताकि विषय के
                     // रंग वाले Q.N से अलग पढ़ा जाए.
@@ -160,9 +160,9 @@ class QuestionCard extends StatelessWidget {
                   border: Border.all(color: sub.color.withOpacity(0.14)),
                   boxShadow: [
                     BoxShadow(
-                      color: sub.color.withOpacity(0.08),
-                      blurRadius: 16,
-                      offset: const Offset(0, 6),
+                      color: P.shadow.withOpacity(0.07),
+                      blurRadius: 18,
+                      offset: const Offset(0, 8),
                     ),
                   ],
                 ),
@@ -183,11 +183,11 @@ class QuestionCard extends StatelessWidget {
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Expanded(child: _option(i, answered)),
+                            Expanded(child: _option(i, answered, sub.color)),
                             const SizedBox(width: 8),
                             Expanded(
                               child: i + 1 < q.options.length
-                                  ? _option(i + 1, answered)
+                                  ? _option(i + 1, answered, sub.color)
                                   : const SizedBox.shrink(),
                             ),
                           ],
@@ -289,15 +289,17 @@ class QuestionCard extends StatelessWidget {
     );
   }
 
-  Widget _option(int i, bool answered) {
+  Widget _option(int i, bool answered, Color accent) {
     final isAnswer = i == q.answer;
     final isPicked = selected == i;
 
+    // बिना चुने विकल्प सफ़ेद कार्ड पर हल्की छाँव वाले डिब्बे — सफ़ेद पर
+    // सफ़ेद रखने से वे बटन जैसे दिखते ही नहीं थे. अक्षर-गोला विषय के रंग में.
     Color border = P.line;
-    Color bg = P.card;
-    Color bubble = P.card;
-    Color bubbleBorder = P.line;
-    Color letterColor = P.muted;
+    Color bg = P.cardLow;
+    Color bubble = accent.withOpacity(0.10);
+    Color bubbleBorder = accent.withOpacity(0.30);
+    Color letterColor = accent;
     Color textColor = P.ink;
     FontWeight weight = FontWeight.w500;
 
@@ -320,6 +322,9 @@ class QuestionCard extends StatelessWidget {
         weight = FontWeight.w600;
       } else {
         textColor = P.muted;
+        bubble = P.card;
+        bubbleBorder = P.line;
+        letterColor = P.muted;
       }
     }
 
@@ -399,20 +404,24 @@ class QuestionCard extends StatelessWidget {
 
   /// प्रश्न के पाठ से पहले लगने वाला छोटा ठप्पा — Q.N और PYQ का वर्ष.
   /// पाठ के बीच में बैठता है, इसलिए WidgetSpan.
-  static InlineSpan _chip(String text, Color color) => WidgetSpan(
+  /// [solid] — भरा हुआ ठप्पा (Q.N), वरना हल्की छाँव (वर्ष).
+  static InlineSpan _chip(String text, Color color, {bool solid = false}) =>
+      WidgetSpan(
         alignment: PlaceholderAlignment.middle,
         child: Padding(
           padding: const EdgeInsets.only(right: 8, bottom: 3),
           child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
             decoration: BoxDecoration(
-              color: color.withOpacity(0.13),
-              borderRadius: BorderRadius.circular(7),
+              color: solid ? color : color.withOpacity(0.13),
+              borderRadius: BorderRadius.circular(8),
             ),
             child: Text(
               text,
               style: TextStyle(
-                  fontSize: 11.5, fontWeight: FontWeight.w700, color: color),
+                  fontSize: 11.5,
+                  fontWeight: FontWeight.w800,
+                  color: solid ? Colors.white : color),
             ),
           ),
         ),

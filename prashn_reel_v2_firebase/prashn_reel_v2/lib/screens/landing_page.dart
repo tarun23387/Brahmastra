@@ -96,7 +96,11 @@ class LandingPage extends StatelessWidget {
               //   motif: StudyMotif.book,
               // ),
 
-              const SizedBox(height: 18),
+              // नए छात्र के लिए — एक नज़र में क्या मिलेगा, और सीधा मुफ़्त PET
+              if (onContinue == null) ...[
+                _Hero(onStart: onFreeSample),
+                const SizedBox(height: 18),
+              ],
 
               // सदस्य के लिए पहला कार्ड — "ख़रीदिए" वाला उसे दिखाना बेमतलब है
               if (onContinue != null) ...[
@@ -207,20 +211,20 @@ class LandingPage extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFC2680C).withOpacity(0.08),
+                    color: P.gold.withOpacity(0.08),
                     borderRadius: BorderRadius.circular(11),
                   ),
                   child: Row(
                     children: [
                       const FaIcon(FontAwesomeIcons.wifi,
-                          size: 13, color: Color(0xFFC2680C)),
+                          size: 13, color: P.gold),
                       const SizedBox(width: 9),
                       Expanded(
                         child: Text(
                           'अभी सर्वर से जुड़ नहीं पाए — लॉगिन के लिए इंटरनेट चाहिए।',
                           style: TextStyle(
                               fontSize: 12.5,
-                              color: const Color(0xFFC2680C),
+                              color: P.gold,
                               height: 1.4),
                         ),
                       ),
@@ -241,6 +245,68 @@ class LandingPage extends StatelessWidget {
 /// छूने पर `SourcesPage` खुलता है, जहाँ पूरा अस्वीकरण और हर आयोग की
 /// आधिकारिक वेबसाइट है. दोनों एक ही नीति-रोक के जवाब में बने हैं —
 /// वजह `sources_page.dart` की टिप्पणी में लिखी है.
+/// पहले पन्ने का इंडिगो बैनर — केसरिया बटन से सीधा मुफ़्त UP PET.
+class _Hero extends StatelessWidget {
+  final VoidCallback onStart;
+  const _Hero({required this.onStart});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.fromLTRB(18, 18, 18, 16),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(22),
+        gradient: const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [P.brand, P.brandDeep],
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: P.brand.withOpacity(0.30),
+            blurRadius: 22,
+            offset: const Offset(0, 10),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 3),
+            decoration: BoxDecoration(
+              color: P.goldBright.withOpacity(0.18),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: const Text('UP PET · पूरा मुफ़्त',
+                style: TextStyle(
+                    fontSize: 11.5,
+                    fontWeight: FontWeight.w800,
+                    color: Color(0xFFFCD34D))),
+          ),
+          const SizedBox(height: 10),
+          const Text('रील की तरह स्क्रॉल कीजिए,\nहर प्रश्न से कुछ सीखिए',
+              style: TextStyle(
+                  fontSize: 20,
+                  height: 1.3,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white)),
+          const SizedBox(height: 6),
+          Text('व्याख्या, तरकीब और "पढ़िए" के पाठ — सब हिंदी में',
+              style: TextStyle(
+                  fontSize: 13, color: Colors.white.withOpacity(0.8))),
+          const SizedBox(height: 14),
+          ElevatedButton.icon(
+            onPressed: onStart,
+            icon: const FaIcon(FontAwesomeIcons.play, size: 13),
+            label: const Text('अभ्यास शुरू करें'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class _NotGovernmentStrip extends StatelessWidget {
   const _NotGovernmentStrip();
 
@@ -318,7 +384,7 @@ class _Card extends StatelessWidget {
         gradient: const LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Color(0xFFFFFEFB), Color(0xFFFBF6EC)],
+          colors: [P.card, P.cardLow],
         ),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(color: accent.withOpacity(filled ? 0.34 : 0.16)),
@@ -329,7 +395,7 @@ class _Card extends StatelessWidget {
             offset: const Offset(0, 10),
           ),
           BoxShadow(
-            color: const Color(0xFF3B2A17).withOpacity(0.05),
+            color: P.shadow.withOpacity(0.05),
             blurRadius: 6,
             offset: const Offset(0, 2),
           ),

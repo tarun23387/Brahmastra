@@ -15,11 +15,11 @@ class Tint {
   static const mint = Color(0xFFE7F4EC); // हल्का हरा
   static const mintInk = Color(0xFF2E7D57);
   static const peach = Color(0xFFFDEDE1); // हल्का आड़ू
-  static const peachInk = Color(0xFFC2680C);
+  static const peachInk = Color(0xFFC2410C);
   static const lilac = Color(0xFFEFEAF7); // हल्का बैंगनी
   static const lilacInk = Color(0xFF6A54A8);
   static const cream = Color(0xFFFBF5E9); // हल्की सुनहरी क्रीम
-  static const goldInk = Color(0xFF9C7A16);
+  static const goldInk = Color(0xFFB45309);
 }
 
 /// कौन-सा वेक्टर चित्र बनाना है.
@@ -59,7 +59,7 @@ class RaisedCard extends StatelessWidget {
         gradient: const LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Color(0xFFFFFEFB), Color(0xFFFBF6EC)],
+          colors: [P.card, P.cardLow],
         ),
         border: Border.all(color: accent.withOpacity(elevated ? 0.30 : 0.14)),
         boxShadow: [
@@ -71,7 +71,7 @@ class RaisedCard extends StatelessWidget {
           ),
           // पास की मुलायम परछाई — किनारे को ज़मीन से जोड़ती
           BoxShadow(
-            color: const Color(0xFF3B2A17).withOpacity(0.05),
+            color: P.shadow.withOpacity(0.05),
             blurRadius: 6,
             offset: const Offset(0, 2),
           ),

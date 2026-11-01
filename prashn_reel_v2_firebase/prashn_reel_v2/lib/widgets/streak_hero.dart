@@ -101,7 +101,7 @@ class StreakHero extends StatelessWidget {
                             'सबसे लंबी लय: ${Engage.bestStreak} दिन',
                             style: TextStyle(
                               fontSize: 11,
-                              color: const Color(0xFFF2CF6E).withOpacity(0.9),
+                              color: const Color(0xFFFCD34D).withOpacity(0.9),
                             ),
                           ),
                       ],
@@ -170,7 +170,7 @@ class _Flame extends StatelessWidget {
     }
     return flame
         .animate(onPlay: (c) => c.repeat())
-        .shimmer(duration: 2200.ms, color: const Color(0xFFFFE08A));
+        .shimmer(duration: 2200.ms, color: const Color(0xFFFDE68A));
   }
 }
 
@@ -199,7 +199,7 @@ class _GoalRing extends StatelessWidget {
                 strokeCap: StrokeCap.round,
                 backgroundColor: Colors.white.withOpacity(0.14),
                 valueColor: AlwaysStoppedAnimation(
-                  t >= 1 ? const Color(0xFF7BE0A8) : const Color(0xFFF2CF6E),
+                  t >= 1 ? const Color(0xFF7BE0A8) : const Color(0xFFFCD34D),
                 ),
               ),
             ),
@@ -247,7 +247,7 @@ class _DayDot extends StatelessWidget {
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: done
-                ? const Color(0xFFF2CF6E)
+                ? const Color(0xFFFCD34D)
                 : Colors.white.withOpacity(0.10),
             border: today
                 ? Border.all(color: Colors.white.withOpacity(0.85), width: 1.6)

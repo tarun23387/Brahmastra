@@ -264,7 +264,7 @@ class _Tile extends StatelessWidget {
               gradient: const LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [Color(0xFFFFFEFB), Color(0xFFFBF6EC)],
+                colors: [P.card, P.cardLow],
               ),
               borderRadius: BorderRadius.circular(16),
               border: Border.all(color: accent.withOpacity(0.22)),
@@ -275,7 +275,7 @@ class _Tile extends StatelessWidget {
                   offset: const Offset(0, 8),
                 ),
                 BoxShadow(
-                  color: const Color(0xFF3B2A17).withOpacity(0.05),
+                  color: P.shadow.withOpacity(0.05),
                   blurRadius: 6,
                   offset: const Offset(0, 2),
                 ),

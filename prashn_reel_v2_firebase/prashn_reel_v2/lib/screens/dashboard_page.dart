@@ -54,13 +54,26 @@ class DashboardPage extends StatelessWidget {
             // ── ऊपर: कौन हैं ──
             Row(
               children: [
+                // नाम का पहला अक्षर — इंडिगो गोले में केसरिया किनारा
                 Container(
-                  width: 4,
-                  height: 36,
+                  width: 44,
+                  height: 44,
+                  alignment: Alignment.center,
                   decoration: BoxDecoration(
-                      color: P.brand, borderRadius: BorderRadius.circular(3)),
+                    color: P.brand,
+                    shape: BoxShape.circle,
+                    border: Border.all(color: P.goldBright, width: 2),
+                  ),
+                  child: Text(
+                    e.name.isEmpty ? 'ब्र' : e.name.characters.first,
+                    style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.white,
+                        height: 1.1),
+                  ),
                 ),
-                const SizedBox(width: 11),
+                const SizedBox(width: 12),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -127,19 +140,14 @@ class DashboardPage extends StatelessWidget {
               const SizedBox(height: 4),
 
               const SizedBox(height: 8),
-              OutlinedButton.icon(
+              // पन्ने का मुख्य बटन — केसरिया (ElevatedButton का theme)
+              ElevatedButton.icon(
                 onPressed: onPractiseAll,
-                style: OutlinedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 13),
-                  side: const BorderSide(color: P.line),
-                  foregroundColor: P.muted,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(13)),
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(vertical: 15),
                 ),
                 icon: const FaIcon(FontAwesomeIcons.shuffle, size: 14),
-                label: const Text('सब मिलाकर हल करें',
-                    style:
-                        TextStyle(fontSize: 13.5, fontWeight: FontWeight.w700)),
+                label: const Text('सब मिलाकर हल करें'),
               ),
             ],
 
@@ -195,12 +203,23 @@ class DashboardPage extends StatelessWidget {
         children: children,
       );
 
-  Widget _heading(String t) => Text(t,
-      style: TextStyle(
-          fontSize: 12.5,
-          fontWeight: FontWeight.w800,
-          color: P.muted,
-          letterSpacing: 0.3));
+  Widget _heading(String t) => Row(
+        children: [
+          Container(
+            width: 4,
+            height: 16,
+            decoration: BoxDecoration(
+                color: P.goldBright, borderRadius: BorderRadius.circular(2)),
+          ),
+          const SizedBox(width: 8),
+          Text(t,
+              style: const TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w800,
+                  color: P.ink,
+                  letterSpacing: 0.2)),
+        ],
+      );
 
   // ───────────── अवधि पूरी ─────────────
 
@@ -216,13 +235,13 @@ class DashboardPage extends StatelessWidget {
           gradient: const LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Color(0xFFFFFEFB), Color(0xFFFBF6EC)],
+            colors: [P.card, P.cardLow],
           ),
           borderRadius: BorderRadius.circular(16),
           border: Border.all(color: P.line),
           boxShadow: [
             BoxShadow(
-              color: const Color(0xFF3B2A17).withOpacity(0.06),
+              color: P.shadow.withOpacity(0.06),
               blurRadius: 12,
               offset: const Offset(0, 6),
             ),

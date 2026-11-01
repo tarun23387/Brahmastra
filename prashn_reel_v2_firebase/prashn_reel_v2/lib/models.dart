@@ -188,46 +188,58 @@ const Map<String, Subject> kSubjects = {
 
 Subject subjectOf(String id) => kSubjects[id] ?? kSubjects['ca']!;
 
-/// काग़ज़ जैसा गर्म पैलेट.
+/// नील-केसरिया पैलेट (नवंबर 2026).
 ///
-/// पहले यह ठंडा नीला-धूसर था और सब कुछ सफ़ेद पर सफ़ेद लगता था. क्रीम
-/// पृष्ठभूमि पर हाथीदाँती कार्ड रखने से गहराई अपने आप बनती है, और लंबी
-/// पढ़ाई में आँखें कम थकती हैं — छपी किताब की तरह.
+/// पहले यह क्रीम-नीला काग़ज़ी पैलेट था; छात्रों के फ़ोन पर वह कुछ फीका और
+/// पुराना लगता था. अब गहरा इंडिगो ऐप की पहचान है और केसरिया मुख्य बटनों
+/// और ख़ास चीज़ों (PYQ वर्ष, तरकीब, सदस्यता) का रंग. पृष्ठभूमि हल्की
+/// बैंगनी-सफ़ेद है और कार्ड शुद्ध सफ़ेद — इसी अंतर से गहराई बनती है.
 ///
 /// पूरे ऐप के रंग यहीं से आते हैं. यहाँ बदलिए, हर स्क्रीन बदल जाएगी.
 class P {
-  /// पृष्ठभूमि — हल्की क्रीम
-  static const bg = Color(0xFFF7F3EC);
+  /// पृष्ठभूमि — इंडिगो की बहुत हल्की झलक वाला सफ़ेद
+  static const bg = Color(0xFFF5F4FB);
 
-  /// कार्ड और हेडर — हाथीदाँती, पृष्ठभूमि से थोड़ा हल्का
-  static const card = Color(0xFFFFFCF6);
+  /// कार्ड और हेडर — सफ़ेद
+  static const card = Color(0xFFFFFFFF);
 
-  /// मुख्य पाठ — गर्म काला (शुद्ध काला कठोर लगता है)
-  static const ink = Color(0xFF231B14);
+  /// कार्ड के gradient का निचला सिरा — सफ़ेद से ज़रा-सा इंडिगो
+  static const cardLow = Color(0xFFF8F7FD);
+
+  /// मुख्य पाठ — इंडिगो की ओर झुका काला (शुद्ध काला कठोर लगता है)
+  static const ink = Color(0xFF1A1830);
 
   /// गौण पाठ
-  static const muted = Color(0xFF7A6A58);
+  static const muted = Color(0xFF65628A);
 
   /// किनारे और बँटवारे की रेखाएँ
-  static const line = Color(0xFFE3D9C8);
+  static const line = Color(0xFFE3E1F2);
 
-  static const right = Color(0xFF1B7A50);
-  static const wrong = Color(0xFFA83228);
+  /// कार्डों की छाया का रंग — काली नहीं, इंडिगो; तभी छाया मैली नहीं लगती
+  static const shadow = Color(0xFF2A2770);
 
-  /// सदस्यता और ख़ास चीज़ों के लिए — सोना. यह क्रीम पर पढ़ने लायक़ गहरा
-  /// सोना है; चमक (बैज, घेरे, गहरी पृष्ठभूमि पर) के लिए [goldBright].
-  static const gold = Color(0xFF9C7A16);
-  static const goldBright = Color(0xFFC9A227);
+  static const right = Color(0xFF047857);
+  static const wrong = Color(0xFFC62828);
 
-  /// ऐप का अपना रंग — गहरा नीला. जहाँ किसी विषय का रंग न हो वहाँ यही.
+  /// ख़ास चीज़ों के लिए — केसरिया. नाम `gold` पुराना है (पहले यह सोना था),
+  /// पर काम वही: PYQ वर्ष, तरकीब, सदस्यता. यह सफ़ेद पर पढ़ने लायक़ गहरा
+  /// केसरिया है; भरे हुए बटन और गहरी पृष्ठभूमि पर चमक के लिए [goldBright].
+  static const gold = Color(0xFFB45309);
+  static const goldBright = Color(0xFFF59E0B);
+
+  /// केसरिया बटन पर लिखावट — सफ़ेद वहाँ पढ़ा नहीं जाता
+  static const onSaffron = Color(0xFF3B1F00);
+
+  /// ऐप का अपना रंग — गहरा इंडिगो. जहाँ किसी विषय का रंग न हो वहाँ यही.
   ///
-  /// अक्टूबर 2026 तक यह मैरून (#8C3A1E) था. नया लोगो भूरे-मैरून रेखाओं
-  /// का है, तो ऐप भी वही रंग रखता तो सब एक-सा भूरा लगता — नीला उसके साथ
-  /// विरोधी पर मेल खाता रंग है, और पढ़ाई-परीक्षा में भरोसे का भाव देता है.
-  static const brand = Color(0xFF1F3A68);
+  /// अक्टूबर 2026 तक यह मैरून (#8C3A1E), फिर नवंबर तक नेवी (#1F3A68) था.
+  static const brand = Color(0xFF3730A3);
 
   /// [brand] का गहरा रूप — gradient के निचले सिरे के लिए.
-  static const brandDeep = Color(0xFF12254A);
+  static const brandDeep = Color(0xFF1E1B4B);
+
+  /// [brand] की हल्की छाँव — चुने हुए चिप, अक्षर-गोले, हल्के डिब्बे
+  static const brandSoft = Color(0xFFEDEBFF);
 }
 
 const List<String> kLetters = ['अ', 'ब', 'स', 'द'];

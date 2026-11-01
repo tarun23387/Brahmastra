@@ -175,34 +175,45 @@ class _ChapterTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
-      child: Material(
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: P.shadow.withOpacity(0.06),
+              blurRadius: 14,
+              offset: const Offset(0, 5),
+            ),
+          ],
+        ),
+        child: Material(
         color: P.card,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(16),
         child: InkWell(
-          borderRadius: BorderRadius.circular(14),
+          borderRadius: BorderRadius.circular(16),
           onTap: onTap,
           child: Container(
             padding: const EdgeInsets.all(14),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(14),
+              borderRadius: BorderRadius.circular(16),
               border: Border.all(color: P.line),
             ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  width: 26,
-                  height: 26,
+                  width: 30,
+                  height: 30,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    color: accent.withOpacity(0.10),
-                    borderRadius: BorderRadius.circular(8),
+                    color: accent,
+                    borderRadius: BorderRadius.circular(10),
                   ),
                   child: Text('$index',
-                      style: TextStyle(
-                          fontSize: 12.5,
+                      style: const TextStyle(
+                          fontSize: 13,
                           fontWeight: FontWeight.w800,
-                          color: accent)),
+                          color: Colors.white)),
                 ),
                 const SizedBox(width: 12),
                 Expanded(
@@ -237,6 +248,7 @@ class _ChapterTile extends StatelessWidget {
             ),
           ),
         ),
+      ),
       ),
     );
   }

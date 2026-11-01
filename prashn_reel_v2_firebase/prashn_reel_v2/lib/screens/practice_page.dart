@@ -179,12 +179,14 @@ class _PracticePageState extends State<PracticePage> {
             ),
         ],
         const SizedBox(height: 26),
-        OutlinedButton(
+        FilledButton.icon(
+          style: FilledButton.styleFrom(backgroundColor: widget.accent),
           onPressed: () {
             setState(_answers.clear);
             pc.jumpToPage(0);
           },
-          child: const Text('फिर से अभ्यास करें'),
+          icon: const FaIcon(FontAwesomeIcons.arrowRotateLeft, size: 14),
+          label: const Text('फिर से अभ्यास करें'),
         ),
         const SizedBox(height: 8),
         TextButton(
