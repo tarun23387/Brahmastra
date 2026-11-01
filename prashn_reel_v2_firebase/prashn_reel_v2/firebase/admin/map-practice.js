@@ -37,7 +37,10 @@ const norm = (s) =>
   String(s ?? '')
     .replace(/[़ँ]/g, '')
     .replace(/ं/g, '')
-    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    // \p{M} ज़रूरी है: हिंदी की मात्राएँ और हलंत (ा ि ्) Unicode में "चिह्न" हैं,
+    // अक्षर नहीं. इनके बिना "उच्चारण" टूटकर "उच च रण" बन जाता था और लगभग
+    // हर हिंदी शब्द तीन अक्षर से छोटा होकर गिनती से बाहर हो जाता था (1 नव॰ 2026 तक).
+    .replace(/[^\p{L}\p{M}\p{N}]+/gu, ' ')
     .toLowerCase();
 const STOP = new Set(
   ('निम्नलिखित में से कौन किस किसे किसके किसकी किसने कहाँ कब क्या है हैं था थी थे की का के को और या एक पर ' +
@@ -47,6 +50,7 @@ const STOP = new Set(
 const toks = (s) => norm(s).split(' ').filter((w) => w.length > 2 && !STOP.has(w));
 
 const STRUCTURED = /^(A-\d|[IV]+,|केवल|1, 2|1 और 2|न तो|\(A\)|I और II|उपर्युक्त)/;
+const METHOD = new Set(['reasoning', 'ganit', 'comprehension']);
 const ORD = '(पहला|दूसरा|तीसरा|चौथा|पहले|दूसरे|तीसरे)';
 
 /**
@@ -59,7 +63,9 @@ const ORD = '(पहला|दूसरा|तीसरा|चौथा|पह�
  */
 function factOf(q) {
   const lines = String(q.question).split('\n').map((s) => s.trim()).filter(Boolean);
-  const generic = /^(नीचे दो कथन|सूची-I को|निम्नलिखित कथनों|उपर्युक्त|कूट|नीचे दिए गए)/;
+  // अंग्रेज़ी के प्रश्नों की पहली पंक्ति केवल निर्देश होती है ("Choose the word…:"),
+  // असली शब्द या वाक्य उसके बाद की पंक्ति में.
+  const generic = /^(नीचे दो कथन|सूची-I को|निम्नलिखित कथनों|उपर्युक्त|कूट|नीचे दिए गए|Choose the|Fill in the|Read the|Find the)/;
   let ask =
     lines.find((s) => /^कथन \(A\)/.test(s)) ??
     lines.find((s) => !generic.test(s) && !/^(\d|[A-D]\.|[IV]+\.)/.test(s)) ??
@@ -116,10 +122,18 @@ function factOf(q) {
   const report = {};
 
   for (const [key, l] of lessons) {
+    // फ़ाइलें नाम के क्रम में पढ़ी जाती हैं ("arthvyavastha" order 2 पहले, "krishi"
+    // order 1 बाद में), इसलिए अध्याय `order` से लगाइए, जैसे build-lessons.js लगाता है.
+    // 1 नव॰ 2026 तक यह छूटा था और "पहला अध्याय छोड़ो" वाला नियम असल में बैंक-
+    // रिज़र्व बैंक वाले अध्याय को अभ्यास से बाहर कर रहा था.
+    l.chapters.sort((a, b) => a.order - b.order);
     const chapters = l.chapters.map((c) => {
       const text = norm([c.title, c.summary, c.body, ...(c.tables ?? []).map((t) => t.rows.flat().join(' '))].join(' '));
-      return { id: c.id, text, set: new Set(text.split(' ')) };
+      return { id: c.id, text, set: new Set(text.split(' ')), intro: /को कैसे पढ़ें/.test(c.title) };
     });
+    // "…को कैसे पढ़ें" वाला अध्याय अभ्यास के लिए नहीं; जिस पाठ में ऐसा अध्याय नहीं
+    // (UPPCS इतिहास), उसके सारे अध्याय उम्मीदवार हैं
+    const pool = chapters.some((c) => !c.intro) ? chapters.filter((c) => !c.intro) : chapters;
     // IDF: जो शब्द कम अध्यायों में है, उसका वज़न अधिक
     const df = new Map();
     for (const c of chapters) for (const w of c.set) df.set(w, (df.get(w) ?? 0) + 1);
@@ -130,12 +144,13 @@ function factOf(q) {
     const r = (report[key] = { total: mine.length, covered: 0, facts: 0 });
 
     for (const q of mine) {
+      // भाषा के पाठ में गद्यांश वाले प्रश्न किसी अध्याय के नहीं (वे गद्यांश के पाठ के हैं)
+      if (subject !== 'comprehension' && /गद्यांश|passage/i.test(q.question)) { r.total--; continue; }
       const ans = String(q.options[q.answer]);
       const T = [...new Set(toks(`${q.question} ${ans} ${String(q.explanation).split('।')[0]}`))];
-      let best = chapters[0];
+      let best = pool[0];
       let bs = -1;
-      // पहला अध्याय ("कैसे पढ़ें") अभ्यास के लिए नहीं; बाक़ी में सबसे अच्छा
-      for (const c of chapters.slice(chapters.length > 1 ? 1 : 0)) {
+      for (const c of pool) {
         let s = 0;
         for (const w of T) if (c.set.has(w)) s += idf(w);
         if (s > bs) { bs = s; best = c; }
@@ -147,7 +162,10 @@ function factOf(q) {
       const A = structured ? toks(String(q.explanation).split('।')[0]) : toks(ans);
       const hit = A.filter((w) => best.text.includes(w)).length;
       const ok = A.length === 0 || hit / A.length >= (structured ? 0.7 : 0.6);
-      if (ok || subject === 'reasoning') { r.covered++; continue; }
+      // तर्कशक्ति, गणित और गद्यांश तरीक़े के विषय हैं: उनके प्रश्न का "तथ्य" नहीं
+      // होता, और गद्यांश का प्रश्न गद्यांश के बिना सारणी में अर्थहीन है. इनके लिए
+      // केवल "अभ्यास करें" वाला जोड़ बनता है.
+      if (ok || METHOD.has(subject) || /गद्यांश|passage/i.test(q.question)) { r.covered++; continue; }
       const fact = factOf(q);
       if (!fact) continue;
       const list = (map.facts[best.id] ??= []);
