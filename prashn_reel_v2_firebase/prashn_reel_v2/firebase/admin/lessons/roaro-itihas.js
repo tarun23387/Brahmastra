@@ -114,6 +114,8 @@ module.exports = {
       ],
     },
 
+    // मौर्य साम्राज्य (3 नव॰ 2026), कालक्रम से यहीं
+    require('../lesson-parts/roaro-itihas-maurya'),
     // ─────────────────────────── 3 ───────────────────────────
     {
       id: 'roaro-itihas-03',
@@ -249,6 +251,8 @@ module.exports = {
       ],
     },
 
+    // भक्ति और सूफ़ी (3 नव॰ 2026), सल्तनत के बाद
+    require('../lesson-parts/roaro-itihas-bhakti'),
     // ─────────────────────────── 5 ───────────────────────────
     {
       id: 'roaro-itihas-05',
